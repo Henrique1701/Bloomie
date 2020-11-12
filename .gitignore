@@ -138,5 +138,6 @@ iOSInjectionProject/
 !*.xcodeproj/xcshareddata/
 !*.xcworkspace/contents.xcworkspacedata
 **/xcshareddata/WorkspaceSettings.xcsettings
+!*.xcworkspace/xcshareddata/
 
 # End of https://www.toptal.com/developers/gitignore/api/cocoapods,swift,xcode,macos
