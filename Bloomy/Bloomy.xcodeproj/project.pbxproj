@@ -141,14 +141,10 @@
 		BEC461C4255DABD8003C1D1A /* Bloomy */ = {
 			isa = PBXGroup;
 			children = (
-				BEC461C5255DABD8003C1D1A /* AppDelegate.swift */,
-				BEC461C7255DABD8003C1D1A /* SceneDelegate.swift */,
-				BEC461C9255DABD8003C1D1A /* ViewController.swift */,
-				BEC461CB255DABD8003C1D1A /* Main.storyboard */,
-				BEC461D1255DABDA003C1D1A /* Assets.xcassets */,
-				BEC461D3255DABDA003C1D1A /* LaunchScreen.storyboard */,
+				BEDD7A402562F3AB005BA4F9 /* Model */,
+				BEDD7A412562F3B8005BA4F9 /* View */,
+				BEDD7A422562F3C3005BA4F9 /* Controller */,
 				BEC461D6255DABDA003C1D1A /* Info.plist */,
-				BEC461CE255DABD8003C1D1A /* Bloomy.xcdatamodeld */,
 			);
 			path = Bloomy;
 			sourceTree = "<group>";
@@ -169,6 +165,34 @@
 				BEC461EC255DABDB003C1D1A /* Info.plist */,
 			);
 			path = BloomyUITests;
+			sourceTree = "<group>";
+		};
+		BEDD7A402562F3AB005BA4F9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BEC461D1255DABDA003C1D1A /* Assets.xcassets */,
+				BEC461CE255DABD8003C1D1A /* Bloomy.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BEDD7A412562F3B8005BA4F9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BEC461CB255DABD8003C1D1A /* Main.storyboard */,
+				BEC461D3255DABDA003C1D1A /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BEDD7A422562F3C3005BA4F9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BEC461C5255DABD8003C1D1A /* AppDelegate.swift */,
+				BEC461C7255DABD8003C1D1A /* SceneDelegate.swift */,
+				BEC461C9255DABD8003C1D1A /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
