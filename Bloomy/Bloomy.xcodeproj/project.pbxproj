@@ -18,6 +18,7 @@
 		BEC461D5255DABDA003C1D1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEC461D3255DABDA003C1D1A /* LaunchScreen.storyboard */; };
 		BEC461E0255DABDB003C1D1A /* BloomyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC461DF255DABDB003C1D1A /* BloomyTests.swift */; };
 		BEC461EB255DABDB003C1D1A /* BloomyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC461EA255DABDB003C1D1A /* BloomyUITests.swift */; };
+		BEDD7A4A25630ADF005BA4F9 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEDD7A4925630ADF005BA4F9 /* Home.storyboard */; };
 		BFE8F27E98A9FA5E51C8958C /* Pods_Bloomy_BloomyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33CC4FDD39B2F278DD2B4375 /* Pods_Bloomy_BloomyUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		BEC461E6255DABDB003C1D1A /* BloomyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BloomyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEC461EA255DABDB003C1D1A /* BloomyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloomyUITests.swift; sourceTree = "<group>"; };
 		BEC461EC255DABDB003C1D1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEDD7A4925630ADF005BA4F9 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		F1EA232AA2FD2DE50426D9E6 /* Pods-BloomyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BloomyTests.release.xcconfig"; path = "Target Support Files/Pods-BloomyTests/Pods-BloomyTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -181,6 +183,7 @@
 			children = (
 				BEC461CB255DABD8003C1D1A /* Main.storyboard */,
 				BEC461D3255DABDA003C1D1A /* LaunchScreen.storyboard */,
+				BEDD7A4925630ADF005BA4F9 /* Home.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				BEC461D5255DABDA003C1D1A /* LaunchScreen.storyboard in Resources */,
 				BEC461D2255DABDA003C1D1A /* Assets.xcassets in Resources */,
 				BEC461CD255DABD8003C1D1A /* Main.storyboard in Resources */,
+				BEDD7A4A25630ADF005BA4F9 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
