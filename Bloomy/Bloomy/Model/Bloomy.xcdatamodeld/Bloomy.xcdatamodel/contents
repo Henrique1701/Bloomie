@@ -21,7 +21,7 @@
     </entity>
     <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
         <attribute name="image" optional="YES" attributeType="Binary"/>
-        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="name" attributeType="String"/>
         <relationship name="userToIsland" toMany="YES" deletionRule="Nullify" destinationEntity="Island" inverseName="islandToUser" inverseEntity="Island"/>
     </entity>
     <elements>
