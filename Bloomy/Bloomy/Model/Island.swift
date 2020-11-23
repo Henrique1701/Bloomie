@@ -11,78 +11,80 @@ struct IslandManager {
     static let shared = IslandManager()
     static var island: Island?
     
-    //create
-    
-//    func newIsland(withName name: String) -> Island?{
-//        return self.save() ? island : nil
-//    }
-    
-    
-    func newUser(withName name: String) -> User? {
+    //MARK: Create new Island
+    func newIsland(withName name: String) -> Island? {
         
-        let userObject = NSEntityDescription.insertNewObject(forEntityName: "User", into: coreDataContext)
+        let islandObject = NSEntityDescription.insertNewObject(forEntityName: "Island", into: coreDataContext)
         
-        guard let user = userObject as? User else {
-            fatalError("Could not find User Entity")
+        guard let island = islandObject as? Island else {
+            fatalError("Could not find Island Entity")
         }
-        user.name = name
-        return self.save() ? user : nil
+        island.name = name
+        return self.save() ? island : nil
     }
-    //read
-    func getUser() -> User? {
-        let fetchRequest = NSFetchRequest<User>(entityName: "User")
+
+    
+    //MARK: Read Island
+    func getIsland() -> Island? {
+        let fetchRequest = NSFetchRequest<Island>(entityName: "Island")
         fetchRequest.fetchLimit = 1
         
         do {
-            let user = try coreDataContext.fetch(fetchRequest)
-            if !user.isEmpty { return user[0] }
+            let island = try coreDataContext.fetch(fetchRequest)
+            if !island.isEmpty { return island[0] }
         } catch let error {
-            print("We couldn't find the user. \n \(error)")
+            print("We couldn't find the island. \n \(error)")
         }
-        
+    
         return nil
     }
-    //update
-    func updateUserName(name: String) -> Bool {
-        
-        guard let user = getUser() else {
-            fatalError("Could not find User \(name)")
+    
+    func getIslands() -> [Island]? {
+        let fetchRequest = NSFetchRequest<Island>(entityName: "Island")
+
+        do {
+            let islands = try coreDataContext.fetch(fetchRequest)
+            return islands
+        } catch let fetchError {
+            print("Failed to fetch companies: \(fetchError)")
         }
-        user.name = name
-        
-        return self.save()
+
+        return nil
     }
-    //delete
-    func deleteUser(withName name: String) -> Bool {
+    
+    
+    //MARK: Delete Island
+    func deleteIsland(withName name: String) -> Bool {
         
-        let fetchRequest = NSFetchRequest<User>(entityName: "User")
+        let fetchRequest = NSFetchRequest<Island>(entityName: "Island")
         
         fetchRequest.fetchLimit = 1
         fetchRequest.predicate = NSPredicate(format: "name == %@", name)
         
         do {
-            let user = try coreDataContext.fetch(fetchRequest)
+            let island = try coreDataContext.fetch(fetchRequest)
             
-            if !user.isEmpty {
-                coreDataContext.delete(user[0])
+            if !island.isEmpty {
+                coreDataContext.delete(island[0])
                 return self.save()
             } else {
-                print("The user \(name) could not be found!")
+                print("The island \(name) could not be found!")
             }
         } catch {
-            print("Error deleting the user \(name)")
+            print("Error deleting the island \(name)")
         }
         
         return false
     }
     
+    //MARK: Save 
     private func save() -> Bool {
         
         do {
             try coreDataContext.save()
             return true
         } catch let error {
-            print("Sorry, we can't save the user. Try again later. \n \(error)")
+            print("Sorry, we can't save the island. Try again later. \n \(error)")
         }
         
         return false
