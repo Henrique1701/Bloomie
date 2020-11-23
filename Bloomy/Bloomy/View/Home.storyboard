@@ -27,12 +27,12 @@
         <!--Item 1-->
         <scene sceneID="bwK-sz-0P5">
             <objects>
-                <viewController id="RgJ-mV-1xY" sceneMemberID="viewController">
+                <viewController id="RgJ-mV-1xY" customClass="HomeViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SD3-t7-atG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QWl-mZ-0hW">
+                            <stackView opaque="NO" contentMode="center" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QWl-mZ-0hW">
                                 <rect key="frame" x="18" y="98" width="378" height="705"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="8zm-85-mby">
@@ -112,12 +112,6 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="cNI-DM-v3d" firstAttribute="height" secondItem="QWl-mZ-0hW" secondAttribute="height" multiplier="0.25" id="E2O-X6-dpH"/>
-                                    <constraint firstItem="qRI-YG-jhy" firstAttribute="height" secondItem="QWl-mZ-0hW" secondAttribute="height" multiplier="0.25" id="IdE-8g-e8B"/>
-                                    <constraint firstItem="5Ov-1z-qDX" firstAttribute="height" secondItem="QWl-mZ-0hW" secondAttribute="height" multiplier="0.25" id="icn-pg-Uuu"/>
-                                    <constraint firstItem="8zm-85-mby" firstAttribute="height" secondItem="QWl-mZ-0hW" secondAttribute="height" multiplier="0.25" id="oiy-SE-f9C"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Av6-Ir-yVL"/>
@@ -132,6 +126,20 @@
                     <tabBarItem key="tabBarItem" title="Item 1" id="UGr-BI-bmV">
                         <color key="badgeColor" red="0.99607843137254903" green="0.96078431372549022" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="firstLeftButton" destination="8HL-Y3-ktF" id="ERN-vy-U9J"/>
+                        <outlet property="firstRightButton" destination="OU3-jK-IzX" id="fOx-8a-D8L"/>
+                        <outlet property="firstStackView" destination="8zm-85-mby" id="sqE-E6-n24"/>
+                        <outlet property="fourthLeftButton" destination="DJT-c0-Yb4" id="KNj-mR-C5N"/>
+                        <outlet property="fourthRightButton" destination="LAO-tD-T8b" id="EJz-ul-XSX"/>
+                        <outlet property="fourthStackView" destination="5Ov-1z-qDX" id="xd4-L2-Atj"/>
+                        <outlet property="secondLeftButton" destination="0Hd-UH-ppZ" id="U0I-At-ZmQ"/>
+                        <outlet property="secondRightButton" destination="qEC-eP-JPs" id="t5Q-74-l1H"/>
+                        <outlet property="secondStackView" destination="qRI-YG-jhy" id="Fg6-5R-g99"/>
+                        <outlet property="thirdLeftButton" destination="0nr-na-HSl" id="tgm-af-n9I"/>
+                        <outlet property="thirdRightButton" destination="qX8-qc-3jX" id="peq-Aw-C4U"/>
+                        <outlet property="thirdStackView" destination="cNI-DM-v3d" id="aLq-j9-FbL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Te0-bZ-sn6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

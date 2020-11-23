@@ -9,13 +9,69 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var firstStackView: UIStackView!
+    @IBOutlet weak var secondStackView: UIStackView!
+    @IBOutlet weak var thirdStackView: UIStackView!
+    @IBOutlet weak var fourthStackView: UIStackView!
+    @IBOutlet weak var firstLeftButton: UIButton!
+    @IBOutlet weak var firstRightButton: UIButton!
+    @IBOutlet weak var secondLeftButton: UIButton!
+    @IBOutlet weak var secondRightButton: UIButton!
+    @IBOutlet weak var thirdLeftButton: UIButton!
+    @IBOutlet weak var thirdRightButton: UIButton!
+    @IBOutlet weak var fourthLeftButton: UIButton!
+    @IBOutlet weak var fourthRightButton: UIButton!
+    private let quantityIslands: Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        // Pegar a quantidade de ilhas selecionadas pelo usuário
+        setUpIslandsDisplay(quantityIslands: self.quantityIslands)
     }
-    
-
+    override func viewDidAppear(_ animated: Bool) {
+        // Esconde a navigation bar de todas as telas
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        // Mostra a navigation bar de todas as telas
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    func setUpIslandsDisplay(quantityIslands: Int) {
+        switch quantityIslands {
+        case 1:
+            self.fourthStackView.isHidden = true
+            self.thirdStackView.isHidden = true
+            self.secondStackView.isHidden = true
+            self.firstRightButton.isHidden = true
+            // TODO: Definir qual a ilha será exibida
+        case 2:
+            self.fourthStackView.isHidden = true
+            self.thirdStackView.isHidden = true
+            self.secondRightButton.isHidden = true
+            self.firstRightButton.isHidden = true
+            // TODO: Definir quais ilhas serão exibidas
+        case 3:
+            self.fourthStackView.isHidden = true
+            self.thirdRightButton.isEnabled = false
+            self.thirdRightButton.alpha = 0
+            self.secondLeftButton.isEnabled = false
+            self.secondLeftButton.alpha = 0
+            self.firstRightButton.isEnabled = false
+            self.firstRightButton.alpha = 0
+            // TODO: Definir quais ilhas serão exibidas
+        case 4:
+            self.fourthRightButton.isEnabled = false
+            self.fourthRightButton.alpha = 0
+            self.thirdLeftButton.isEnabled = false
+            self.thirdLeftButton.alpha = 0
+            self.secondRightButton.isEnabled = false
+            self.secondRightButton.alpha = 0
+            self.firstLeftButton.isEnabled = false
+            self.firstLeftButton.alpha = 0
+            // TODO: Definir a ordem das ilhas
+        default:
+            return
+        }
+    }
     /*
     // MARK: - Navigation
 
