@@ -1,7 +1,165 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jV2-bX-FxB">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Item-->
+        <scene sceneID="aKw-Nr-LeU">
+            <objects>
+                <navigationController id="jV2-bX-FxB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Om1-Xi-05P"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PHg-zW-NE9">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="AC1-FP-WMe" kind="relationship" relationship="rootViewController" id="eZE-Db-Hnl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U4O-uT-vhZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1855" y="135"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="bwK-sz-0P5">
+            <objects>
+                <viewController id="RgJ-mV-1xY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SD3-t7-atG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QWl-mZ-0hW">
+                                <rect key="frame" x="18" y="98" width="378" height="705"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="8zm-85-mby">
+                                        <rect key="frame" x="6" y="0.0" width="366" height="176.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8HL-Y3-ktF">
+                                                <rect key="frame" x="0.0" y="0.0" width="138" height="176.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="8HL-Y3-ktF" secondAttribute="height" multiplier="18:23" id="Lnt-hO-tn9"/>
+                                                </constraints>
+                                                <state key="normal" image="botão_ilha_saúde"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OU3-jK-IzX">
+                                                <rect key="frame" x="228" y="0.0" width="138" height="176.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="OU3-jK-IzX" secondAttribute="height" multiplier="18:23" id="NMU-Qb-kxc"/>
+                                                </constraints>
+                                                <state key="normal" image="botão_ilha_saúde"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="qRI-YG-jhy">
+                                        <rect key="frame" x="6" y="176.5" width="366" height="176"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Hd-UH-ppZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="138" height="176"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="0Hd-UH-ppZ" secondAttribute="height" multiplier="18:23" id="Z0K-Ig-YI0"/>
+                                                </constraints>
+                                                <state key="normal" image="botão_ilha_lazer"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qEC-eP-JPs">
+                                                <rect key="frame" x="228" y="0.0" width="138" height="176"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="qEC-eP-JPs" secondAttribute="height" multiplier="18:23" id="IN7-NV-g1c"/>
+                                                </constraints>
+                                                <state key="normal" image="botão_ilha_lazer"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="cNI-DM-v3d">
+                                        <rect key="frame" x="6" y="352.5" width="366" height="176.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nr-na-HSl">
+                                                <rect key="frame" x="0.0" y="0.0" width="138" height="176.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="0nr-na-HSl" secondAttribute="height" multiplier="18:23" id="Lph-0w-q5w"/>
+                                                </constraints>
+                                                <state key="normal" image="botão_ilha_atenção_plena"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qX8-qc-3jX">
+                                                <rect key="frame" x="228" y="0.0" width="138" height="176.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="qX8-qc-3jX" secondAttribute="height" multiplier="18:23" id="Hle-ug-N2B"/>
+                                                </constraints>
+                                                <state key="normal" image="botão_ilha_atenção_plena"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="5Ov-1z-qDX">
+                                        <rect key="frame" x="6" y="529" width="366" height="176"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DJT-c0-Yb4">
+                                                <rect key="frame" x="0.0" y="0.0" width="138" height="176"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="DJT-c0-Yb4" secondAttribute="height" multiplier="18:23" id="kqE-TP-HHK"/>
+                                                </constraints>
+                                                <state key="normal" image="botão_ilha_pessoas_queridas"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAO-tD-T8b">
+                                                <rect key="frame" x="228" y="0.0" width="138" height="176"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="LAO-tD-T8b" secondAttribute="height" multiplier="18:23" id="dah-da-eLy"/>
+                                                </constraints>
+                                                <state key="normal" image="botão_ilha_pessoas_queridas"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="cNI-DM-v3d" firstAttribute="height" secondItem="QWl-mZ-0hW" secondAttribute="height" multiplier="0.25" id="E2O-X6-dpH"/>
+                                    <constraint firstItem="qRI-YG-jhy" firstAttribute="height" secondItem="QWl-mZ-0hW" secondAttribute="height" multiplier="0.25" id="IdE-8g-e8B"/>
+                                    <constraint firstItem="5Ov-1z-qDX" firstAttribute="height" secondItem="QWl-mZ-0hW" secondAttribute="height" multiplier="0.25" id="icn-pg-Uuu"/>
+                                    <constraint firstItem="8zm-85-mby" firstAttribute="height" secondItem="QWl-mZ-0hW" secondAttribute="height" multiplier="0.25" id="oiy-SE-f9C"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Av6-Ir-yVL"/>
+                        <color key="backgroundColor" red="0.99607843137254903" green="0.96078431372549022" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="QWl-mZ-0hW" firstAttribute="width" secondItem="Av6-Ir-yVL" secondAttribute="height" multiplier="378:725" id="37N-cg-gCS"/>
+                            <constraint firstItem="QWl-mZ-0hW" firstAttribute="height" secondItem="Av6-Ir-yVL" secondAttribute="height" constant="-20" id="T3d-wv-WvV"/>
+                            <constraint firstItem="QWl-mZ-0hW" firstAttribute="centerX" secondItem="Av6-Ir-yVL" secondAttribute="centerX" id="fAd-u0-Haf"/>
+                            <constraint firstItem="QWl-mZ-0hW" firstAttribute="centerY" secondItem="Av6-Ir-yVL" secondAttribute="centerY" id="qKP-z5-Tk3"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="UGr-BI-bmV">
+                        <color key="badgeColor" red="0.99607843137254903" green="0.96078431372549022" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Te0-bZ-sn6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-214" y="135"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="dMZ-ON-ptP">
+            <objects>
+                <tabBarController id="AC1-FP-WMe" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="zPm-xm-TZW"/>
+                    <tabBar key="tabBar" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZcZ-Hk-sL0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.99602943659999998" green="0.96094125509999995" blue="0.94508653880000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="RgJ-mV-1xY" kind="relationship" relationship="viewControllers" id="xMn-Gg-Sj5"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aHJ-2I-VB4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1029" y="135"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="botão_ilha_atenção_plena" width="144" height="161"/>
+        <image name="botão_ilha_lazer" width="144" height="161"/>
+        <image name="botão_ilha_pessoas_queridas" width="144" height="161"/>
+        <image name="botão_ilha_saúde" width="144" height="161"/>
+    </resources>
 </document>
