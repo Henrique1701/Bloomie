@@ -92,6 +92,14 @@ struct UserManager {
         return false
     }
     
+    //relationships
+    public func setIslands(islands: NSSet) -> Bool {
+        let user = getUser()
+        user?.userToIsland = islands
+        return saveContext()
+    }
+    
+    //auxiliar
     private func saveContext() -> Bool {
         
         do {
