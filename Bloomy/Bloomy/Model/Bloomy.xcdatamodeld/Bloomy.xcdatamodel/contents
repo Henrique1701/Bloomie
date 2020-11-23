@@ -22,7 +22,7 @@
     <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
         <attribute name="image" optional="YES" attributeType="Binary"/>
         <attribute name="name" attributeType="String"/>
-        <relationship name="userToIsland" toMany="YES" deletionRule="Nullify" destinationEntity="Island" inverseName="islandToUser" inverseEntity="Island"/>
+        <relationship name="userToIsland" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Island" inverseName="islandToUser" inverseEntity="Island"/>
     </entity>
     <elements>
         <element name="Challenge" positionX="-36" positionY="9" width="128" height="118"/>
