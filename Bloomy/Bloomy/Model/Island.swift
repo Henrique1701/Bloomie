@@ -10,8 +10,7 @@ import CoreData
 struct IslandManager {
     static let shared = IslandManager()
     static var island: Island?
-    
-    //MARK: Create new Island
+    // MARK: Create new Island
     func newIsland(withName name: String) -> Island? {
         
         let islandObject = NSEntityDescription.insertNewObject(forEntityName: "Island", into: coreDataContext)
@@ -23,8 +22,7 @@ struct IslandManager {
         return self.save() ? island : nil
     }
 
-    
-    //MARK: Read Island
+    // MARK: Read Island
     func getIsland() -> Island? {
         let fetchRequest = NSFetchRequest<Island>(entityName: "Island")
         fetchRequest.fetchLimit = 1

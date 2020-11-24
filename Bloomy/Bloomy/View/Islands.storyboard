@@ -56,8 +56,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZ8-JS-nvu">
-                                <rect key="frame" x="175" y="735" width="65" height="30"/>
+                                <rect key="frame" x="172" y="736" width="73" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="vamos lá!"/>
                                 <connections>
                                     <action selector="selectedIslandsButton:" destination="Zig-Kb-FyU" eventType="touchUpInside" id="HPO-YI-Hng"/>

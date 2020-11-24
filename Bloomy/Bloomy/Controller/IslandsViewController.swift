@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class IslandsViewController: UIViewController {
     
@@ -55,13 +56,26 @@ class IslandsViewController: UIViewController {
     }
     
     @IBAction func selectedIslandsButton(_ sender: Any) {
+        if(selectedLazer == true){
+            guard let lazerIsland = IslandManager.shared.newIsland(withName: "Lazer") else { return }
+                print("Created \(lazerIsland)")
+        }
+        if(selectedSaude == true){
+            guard let saudeIsland = IslandManager.shared.newIsland(withName: "Saúde") else { return }
+                print("Created \(saudeIsland)")
+        }
+        if(selectedAtencaoPlena == true){
+            guard let atencaoPlenaIsland = IslandManager.shared.newIsland(withName: "Atenção Plena") else { return }
+                print("Created \(atencaoPlenaIsland)")
+        }
+        if(selectedPessoasQueridas == true){
+            guard let pessoasQueridasIsland = IslandManager.shared.newIsland(withName: "Pessoas Queridas") else { return }
+                print("Created \(pessoasQueridasIsland)")
+        }
+        
+        
         
     }
-    
-    
-    
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
