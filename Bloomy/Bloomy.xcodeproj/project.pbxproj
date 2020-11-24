@@ -12,6 +12,8 @@
 		7D2BEFC625685E48006AFD8C /* Island.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2BEFC525685E48006AFD8C /* Island.swift */; };
 		7D2BEFCE256C3294006AFD8C /* Islands.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D2BEFCD256C3294006AFD8C /* Islands.storyboard */; };
 		7D2BEFD3256C32C4006AFD8C /* IslandsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2BEFD2256C32C4006AFD8C /* IslandsViewController.swift */; };
+		7D2BEFE8256D86B0006AFD8C /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2BEFE6256D86B0006AFD8C /* User+CoreDataClass.swift */; };
+		7D2BEFE9256D86B0006AFD8C /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2BEFE7256D86B0006AFD8C /* User+CoreDataProperties.swift */; };
 		8928F54B25670DD10089BE0E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8928F54A25670DD10089BE0E /* User.swift */; };
 		8928F56325670EEE0089BE0E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8928F56225670EEE0089BE0E /* Constants.swift */; };
 		BEC461C6255DABD8003C1D1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC461C5255DABD8003C1D1A /* AppDelegate.swift */; };
@@ -52,6 +54,8 @@
 		7D2BEFC525685E48006AFD8C /* Island.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Island.swift; sourceTree = "<group>"; };
 		7D2BEFCD256C3294006AFD8C /* Islands.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Islands.storyboard; sourceTree = "<group>"; };
 		7D2BEFD2256C32C4006AFD8C /* IslandsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IslandsViewController.swift; sourceTree = "<group>"; };
+		7D2BEFE6256D86B0006AFD8C /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7D2BEFE7256D86B0006AFD8C /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8928F54A25670DD10089BE0E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8928F56225670EEE0089BE0E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		910E7EF4AA3E30A07B9A2743 /* Pods-Bloomy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bloomy.release.xcconfig"; path = "Target Support Files/Pods-Bloomy/Pods-Bloomy.release.xcconfig"; sourceTree = "<group>"; };
@@ -181,6 +185,8 @@
 		BEDD7A402562F3AB005BA4F9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7D2BEFE6256D86B0006AFD8C /* User+CoreDataClass.swift */,
+				7D2BEFE7256D86B0006AFD8C /* User+CoreDataProperties.swift */,
 				BEC461D1255DABDA003C1D1A /* Assets.xcassets */,
 				BEC461CE255DABD8003C1D1A /* Bloomy.xcdatamodeld */,
 				8928F54A25670DD10089BE0E /* User.swift */,
@@ -436,8 +442,10 @@
 				7D2BEFC625685E48006AFD8C /* Island.swift in Sources */,
 				7D2BEFD3256C32C4006AFD8C /* IslandsViewController.swift in Sources */,
 				BEC461C6255DABD8003C1D1A /* AppDelegate.swift in Sources */,
+				7D2BEFE8256D86B0006AFD8C /* User+CoreDataClass.swift in Sources */,
 				8928F54B25670DD10089BE0E /* User.swift in Sources */,
 				BEC461C8255DABD8003C1D1A /* SceneDelegate.swift in Sources */,
+				7D2BEFE9256D86B0006AFD8C /* User+CoreDataProperties.swift in Sources */,
 				8928F56325670EEE0089BE0E /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

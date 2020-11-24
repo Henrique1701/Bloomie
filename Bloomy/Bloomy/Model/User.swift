@@ -23,7 +23,7 @@ struct UserManager {
     }
     
     //read
-    private func getUser() -> User? {
+    public func getUser() -> User? {
         let fetchRequest = NSFetchRequest<User>(entityName: "User")
         fetchRequest.fetchLimit = 1
         
@@ -93,11 +93,18 @@ struct UserManager {
     }
     
     //relationships
-    public func setIslands(islands: NSSet) -> Bool {
+//    public func setIslands(islands: [Island]) -> Bool {
+//        let user = getUser()
+//        user?.userToIsland = islands
+//        return saveContext()
+//    }
+    
+    public func getIslands() -> [Island]{
         let user = getUser()
-        user?.userToIsland = islands
-        return saveContext()
+        let islands = user!.userToIsland
+        return Array(_immutableCocoaArray: islands)
     }
+    
     
     //auxiliar
     private func saveContext() -> Bool {

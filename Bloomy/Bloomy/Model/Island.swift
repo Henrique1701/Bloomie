@@ -23,10 +23,10 @@ struct IslandManager {
     }
 
     // MARK: Read Island
-    func getIsland() -> Island? {
+    func getIsland(withName name: String) -> Island? {
         let fetchRequest = NSFetchRequest<Island>(entityName: "Island")
         fetchRequest.fetchLimit = 1
-        
+        fetchRequest.predicate = NSPredicate(format: "name == %@", name)
         do {
             let island = try coreDataContext.fetch(fetchRequest)
             if !island.isEmpty { return island[0] }
@@ -36,6 +36,7 @@ struct IslandManager {
     
         return nil
     }
+    
     
     func getIslands() -> [Island]? {
         let fetchRequest = NSFetchRequest<Island>(entityName: "Island")
@@ -75,6 +76,12 @@ struct IslandManager {
         return false
     }
     
+    func setUser (islandName: String, user: User) -> Bool {
+        let island = getIsland(withName: islandName)
+        island?.islandToUser = user
+        return save()
+    }
+    
     //MARK: Save 
     private func save() -> Bool {
         
@@ -87,4 +94,6 @@ struct IslandManager {
         
         return false
     }
+    
+    
 }
