@@ -33,7 +33,6 @@ class ViewController: UIViewController {
         }
     }
     
-    
     @IBAction func deleteUserButton(_ sender: Any) {
         if user.deleteUser(withName: userName.text!) {
             userName.text = "sem usuário"
