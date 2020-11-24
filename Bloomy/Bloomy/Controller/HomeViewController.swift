@@ -21,7 +21,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var thirdRightButton: UIButton!
     @IBOutlet weak var fourthLeftButton: UIButton!
     @IBOutlet weak var fourthRightButton: UIButton!
-    private let quantityIslands: Int = 0
+    private let quantityIslands: Int = 1
     override func viewDidLoad() {
         super.viewDidLoad()
         // Pegar a quantidade de ilhas selecionadas pelo usuário
@@ -38,39 +38,51 @@ class HomeViewController: UIViewController {
     func setUpIslandsDisplay(quantityIslands: Int) {
         switch quantityIslands {
         case 1:
-            self.fourthStackView.isHidden = true
-            self.thirdStackView.isHidden = true
-            self.secondStackView.isHidden = true
-            self.firstRightButton.isHidden = true
-            // TODO: Definir qual a ilha será exibida
+            self.setUpDisplayOneIsland()
         case 2:
-            self.fourthStackView.isHidden = true
-            self.thirdStackView.isHidden = true
-            self.secondRightButton.isHidden = true
-            self.firstRightButton.isHidden = true
-            // TODO: Definir quais ilhas serão exibidas
+            self.setUpDisplayTwoIsland()
         case 3:
-            self.fourthStackView.isHidden = true
-            self.thirdRightButton.isEnabled = false
-            self.thirdRightButton.alpha = 0
-            self.secondLeftButton.isEnabled = false
-            self.secondLeftButton.alpha = 0
-            self.firstRightButton.isEnabled = false
-            self.firstRightButton.alpha = 0
-            // TODO: Definir quais ilhas serão exibidas
+            self.setUpDisplayThreeIsland()
         case 4:
-            self.fourthRightButton.isEnabled = false
-            self.fourthRightButton.alpha = 0
-            self.thirdLeftButton.isEnabled = false
-            self.thirdLeftButton.alpha = 0
-            self.secondRightButton.isEnabled = false
-            self.secondRightButton.alpha = 0
-            self.firstLeftButton.isEnabled = false
-            self.firstLeftButton.alpha = 0
-            // TODO: Definir a ordem das ilhas
+            self.setUpDisplayFourIsland()
         default:
             return
         }
+    }
+    func setUpDisplayOneIsland() {
+        self.fourthStackView.isHidden = true
+        self.thirdStackView.isHidden = true
+        self.secondStackView.isHidden = true
+        self.firstRightButton.isHidden = true
+        // TODO: Definir qual a ilha será exibida
+    }
+    func setUpDisplayTwoIsland() {
+        self.fourthStackView.isHidden = true
+        self.thirdStackView.isHidden = true
+        self.secondRightButton.isHidden = true
+        self.firstRightButton.isHidden = true
+        // TODO: Definir quais ilhas serão exibidas
+    }
+    func setUpDisplayThreeIsland() {
+        self.fourthStackView.isHidden = true
+        self.thirdRightButton.isEnabled = false
+        self.thirdRightButton.alpha = 0
+        self.secondLeftButton.isEnabled = false
+        self.secondLeftButton.alpha = 0
+        self.firstRightButton.isEnabled = false
+        self.firstRightButton.alpha = 0
+        // TODO: Definir quais ilhas serão exibidas
+    }
+    func setUpDisplayFourIsland() {
+        self.fourthRightButton.isEnabled = false
+        self.fourthRightButton.alpha = 0
+        self.thirdLeftButton.isEnabled = false
+        self.thirdLeftButton.alpha = 0
+        self.secondRightButton.isEnabled = false
+        self.secondRightButton.alpha = 0
+        self.firstLeftButton.isEnabled = false
+        self.firstLeftButton.alpha = 0
+        // TODO: Definir a ordem das ilhas
     }
     /*
     // MARK: - Navigation
