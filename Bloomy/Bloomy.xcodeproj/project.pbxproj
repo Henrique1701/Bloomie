@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12D13CE1256C2BD60013E511 /* TelaPerfil.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12D13CE0256C2BD60013E511 /* TelaPerfil.storyboard */; };
+		12D13CF0256C2D130013E511 /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D13CEF256C2D130013E511 /* PerfilViewController.swift */; };
 		1834972EEB6285E47FABD0A3 /* Pods_Bloomy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57CA3E352B06C25017BE1E66 /* Pods_Bloomy.framework */; };
 		75C430483B507584722F9116 /* Pods_BloomyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E49591F99200B6D647E55B /* Pods_BloomyTests.framework */; };
 		BEC461C6255DABD8003C1D1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC461C5255DABD8003C1D1A /* AppDelegate.swift */; };
@@ -39,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		12D13CE0256C2BD60013E511 /* TelaPerfil.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TelaPerfil.storyboard; sourceTree = "<group>"; };
+		12D13CEF256C2D130013E511 /* PerfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilViewController.swift; sourceTree = "<group>"; };
 		31B686F7D2FE3B59608E26C9 /* Pods-Bloomy-BloomyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bloomy-BloomyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Bloomy-BloomyUITests/Pods-Bloomy-BloomyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		33CC4FDD39B2F278DD2B4375 /* Pods_Bloomy_BloomyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bloomy_BloomyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		369F14DF579FC84A0B42AB62 /* Pods-Bloomy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bloomy.debug.xcconfig"; path = "Target Support Files/Pods-Bloomy/Pods-Bloomy.debug.xcconfig"; sourceTree = "<group>"; };
@@ -181,6 +185,7 @@
 			children = (
 				BEC461CB255DABD8003C1D1A /* Main.storyboard */,
 				BEC461D3255DABDA003C1D1A /* LaunchScreen.storyboard */,
+				12D13CE0256C2BD60013E511 /* TelaPerfil.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -191,6 +196,7 @@
 				BEC461C5255DABD8003C1D1A /* AppDelegate.swift */,
 				BEC461C7255DABD8003C1D1A /* SceneDelegate.swift */,
 				BEC461C9255DABD8003C1D1A /* ViewController.swift */,
+				12D13CEF256C2D130013E511 /* PerfilViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -303,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEC461D5255DABDA003C1D1A /* LaunchScreen.storyboard in Resources */,
+				12D13CE1256C2BD60013E511 /* TelaPerfil.storyboard in Resources */,
 				BEC461D2255DABDA003C1D1A /* Assets.xcassets in Resources */,
 				BEC461CD255DABD8003C1D1A /* Main.storyboard in Resources */,
 			);
@@ -418,6 +425,7 @@
 				BEC461CA255DABD8003C1D1A /* ViewController.swift in Sources */,
 				BEC461D0255DABD8003C1D1A /* Bloomy.xcdatamodeld in Sources */,
 				BEC461C6255DABD8003C1D1A /* AppDelegate.swift in Sources */,
+				12D13CF0256C2D130013E511 /* PerfilViewController.swift in Sources */,
 				BEC461C8255DABD8003C1D1A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
