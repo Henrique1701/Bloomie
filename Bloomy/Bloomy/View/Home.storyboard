@@ -204,7 +204,7 @@
             </objects>
             <point key="canvasLocation" x="630" y="468"/>
         </scene>
-        <!--Ações em andamento-->
+        <!--Desafios-->
         <scene sceneID="5Bw-bg-DYB">
             <objects>
                 <viewController id="8r1-tz-zHZ" sceneMemberID="viewController">
@@ -214,7 +214,7 @@
                         <viewLayoutGuide key="safeArea" id="Roa-Pm-K2v"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Ações em andamento" image="icone_ação" id="14f-Z1-41G"/>
+                    <tabBarItem key="tabBarItem" title="Desafios" image="icone_ação" id="14f-Z1-41G"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xg8-Jq-mtk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
