@@ -62,14 +62,14 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="8HL-Y3-ktF" secondAttribute="height" multiplier="18:23" id="Lnt-hO-tn9"/>
                                                 </constraints>
-                                                <state key="normal" image="botão_ilha_saúde"/>
+                                                <state key="normal" image="botão_ilha_saúde"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OU3-jK-IzX">
                                                 <rect key="frame" x="228" y="0.0" width="138" height="176.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="OU3-jK-IzX" secondAttribute="height" multiplier="18:23" id="NMU-Qb-kxc"/>
                                                 </constraints>
-                                                <state key="normal" image="botão_ilha_saúde"/>
+                                                <state key="normal" image="botão_ilha_saúde"/>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -81,14 +81,14 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="0Hd-UH-ppZ" secondAttribute="height" multiplier="18:23" id="Z0K-Ig-YI0"/>
                                                 </constraints>
-                                                <state key="normal" image="botão_ilha_lazer"/>
+                                                <state key="normal" image="botão_ilha_lazer"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qEC-eP-JPs">
                                                 <rect key="frame" x="228" y="0.0" width="138" height="176"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="qEC-eP-JPs" secondAttribute="height" multiplier="18:23" id="IN7-NV-g1c"/>
                                                 </constraints>
-                                                <state key="normal" image="botão_ilha_lazer"/>
+                                                <state key="normal" image="botão_ilha_lazer"/>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -100,14 +100,14 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="0nr-na-HSl" secondAttribute="height" multiplier="18:23" id="Lph-0w-q5w"/>
                                                 </constraints>
-                                                <state key="normal" image="botão_ilha_atenção_plena"/>
+                                                <state key="normal" image="botão_ilha_atenção_plena"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qX8-qc-3jX">
                                                 <rect key="frame" x="228" y="0.0" width="138" height="176.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="qX8-qc-3jX" secondAttribute="height" multiplier="18:23" id="Hle-ug-N2B"/>
                                                 </constraints>
-                                                <state key="normal" image="botão_ilha_atenção_plena"/>
+                                                <state key="normal" image="botão_ilha_atenção_plena"/>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -119,14 +119,14 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="DJT-c0-Yb4" secondAttribute="height" multiplier="18:23" id="kqE-TP-HHK"/>
                                                 </constraints>
-                                                <state key="normal" image="botão_ilha_pessoas_queridas"/>
+                                                <state key="normal" image="botão_ilha_pessoas_queridas"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAO-tD-T8b">
                                                 <rect key="frame" x="228" y="0.0" width="138" height="176"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="LAO-tD-T8b" secondAttribute="height" multiplier="18:23" id="dah-da-eLy"/>
                                                 </constraints>
-                                                <state key="normal" image="botão_ilha_pessoas_queridas"/>
+                                                <state key="normal" image="botão_ilha_pessoas_queridas"/>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -139,7 +139,7 @@
                             <constraint firstItem="tac-Iu-33N" firstAttribute="top" secondItem="6WV-3F-amA" secondAttribute="bottom" constant="174" id="05D-2g-9bl"/>
                             <constraint firstItem="QWl-mZ-0hW" firstAttribute="width" secondItem="Av6-Ir-yVL" secondAttribute="height" multiplier="378:725" id="37N-cg-gCS"/>
                             <constraint firstItem="jt8-p5-FXm" firstAttribute="width" secondItem="Av6-Ir-yVL" secondAttribute="width" multiplier="0.461333" id="7AY-UD-JKN"/>
-                            <constraint firstItem="Av6-Ir-yVL" firstAttribute="trailing" secondItem="jt8-p5-FXm" secondAttribute="trailing" constant="52" id="8z2-sT-4zR"/>
+                            <constraint firstItem="Av6-Ir-yVL" firstAttribute="trailing" secondItem="jt8-p5-FXm" secondAttribute="trailing" constant="52" id="8z2-sT-4zR" userLabel="Clouds Constraint6"/>
                             <constraint firstItem="86e-DL-0dD" firstAttribute="height" secondItem="Av6-Ir-yVL" secondAttribute="height" multiplier="0.126897" id="9xN-bK-jaj"/>
                             <constraint firstItem="86e-DL-0dD" firstAttribute="top" secondItem="Av6-Ir-yVL" secondAttribute="top" constant="12" id="AtM-tp-7df"/>
                             <constraint firstItem="wVM-gg-a62" firstAttribute="top" secondItem="Fpd-t3-Pe4" secondAttribute="bottom" constant="163" id="Crd-O3-3xv"/>
@@ -170,6 +170,12 @@
                         <color key="badgeColor" red="0.99607843137254903" green="0.96078431372549022" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBarItem>
                     <connections>
+                        <outlet property="cloudsConstraint1" destination="UDA-mt-yJM" id="dd5-Gi-JHF"/>
+                        <outlet property="cloudsConstraint2" destination="UKe-4S-cOa" id="G8s-eo-uS5"/>
+                        <outlet property="cloudsConstraint3" destination="nG6-ca-sh7" id="DUU-uz-D40"/>
+                        <outlet property="cloudsConstraint4" destination="hoy-vg-9nk" id="ocw-Tr-DNI"/>
+                        <outlet property="cloudsConstraint5" destination="qwL-J6-Bls" id="1Ke-tQ-AE6"/>
+                        <outlet property="cloudsConstraint6" destination="8z2-sT-4zR" id="wbH-xo-4hI"/>
                         <outlet property="firstLeftButton" destination="8HL-Y3-ktF" id="ERN-vy-U9J"/>
                         <outlet property="firstRightButton" destination="OU3-jK-IzX" id="fOx-8a-D8L"/>
                         <outlet property="firstStackView" destination="8zm-85-mby" id="sqE-E6-n24"/>
@@ -243,11 +249,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="botão_ilha_atenção_plena" width="144" height="161"/>
-        <image name="botão_ilha_lazer" width="144" height="161"/>
-        <image name="botão_ilha_pessoas_queridas" width="144" height="161"/>
-        <image name="botão_ilha_saúde" width="144" height="161"/>
-        <image name="icone_ação" width="30" height="30"/>
+        <image name="botão_ilha_atenção_plena" width="144" height="161"/>
+        <image name="botão_ilha_lazer" width="144" height="161"/>
+        <image name="botão_ilha_pessoas_queridas" width="144" height="161"/>
+        <image name="botão_ilha_saúde" width="144" height="161"/>
+        <image name="icone_ação" width="30" height="30"/>
         <image name="icone_ilhas" width="30" height="30"/>
         <image name="icone_perfil" width="30" height="30"/>
         <image name="nuvens_1" width="173" height="92"/>
