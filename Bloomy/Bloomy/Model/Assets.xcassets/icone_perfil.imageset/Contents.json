@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "nuvens_4 2.png",
+      "filename" : "icone_perfil.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "nuvens_4@2x 2.png",
+      "filename" : "icone_perfil@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "nuvens_4@3x 2.png",
+      "filename" : "icone_perfil@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
