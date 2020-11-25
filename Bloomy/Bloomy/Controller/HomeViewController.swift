@@ -21,7 +21,13 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var thirdRightButton: UIButton!
     @IBOutlet weak var fourthLeftButton: UIButton!
     @IBOutlet weak var fourthRightButton: UIButton!
-    private let quantityIslands: Int = 1
+    @IBOutlet weak var cloudsConstraint5: NSLayoutConstraint!
+    @IBOutlet weak var cloudsConstraint4: NSLayoutConstraint!
+    @IBOutlet weak var cloudsConstraint3: NSLayoutConstraint!
+    @IBOutlet weak var cloudsConstraint2: NSLayoutConstraint!
+    @IBOutlet weak var cloudsConstraint1: NSLayoutConstraint!
+    @IBOutlet weak var cloudsConstraint6: NSLayoutConstraint!
+    private let quantityIslands: Int = 3
     override func viewDidLoad() {
         super.viewDidLoad()
         // Pegar a quantidade de ilhas selecionadas pelo usuário
@@ -30,6 +36,7 @@ class HomeViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         // Esconde a navigation bar de todas as telas
         self.navigationController?.setNavigationBarHidden(true, animated: false)
+        self.moveCloudsToRight()
     }
     override func viewWillDisappear(_ animated: Bool) {
         // Mostra a navigation bar de todas as telas
@@ -83,6 +90,38 @@ class HomeViewController: UIViewController {
         self.firstLeftButton.isEnabled = false
         self.firstLeftButton.alpha = 0
         // TODO: Definir a ordem das ilhas
+    }
+    /// Configura a animação das nuvens
+    ///
+    /// Move a posição de todas as nuvens em +20 pontos
+    func moveCloudsToRight() {
+        self.cloudsConstraint5.constant += 20
+        self.cloudsConstraint4.constant += 20
+        self.cloudsConstraint3.constant += 20
+        self.cloudsConstraint2.constant += 20
+        self.cloudsConstraint1.constant += 20
+        self.cloudsConstraint6.constant += 20
+        UIView.animate(withDuration: 1.5, delay: 0, options: .curveLinear, animations: {
+            self.view.layoutIfNeeded()
+        }, completion: {_ in
+            print("Nuvens_5 moveu para direita")
+            self.moveCloudsToLeft()
+        })
+    }
+    /// Move a posição de todas as nuvens em -20 pontos
+    func moveCloudsToLeft() {
+        self.cloudsConstraint5.constant -= 20
+        self.cloudsConstraint4.constant -= 20
+        self.cloudsConstraint3.constant -= 20
+        self.cloudsConstraint2.constant -= 20
+        self.cloudsConstraint1.constant -= 20
+        self.cloudsConstraint6.constant -= 20
+        UIView.animate(withDuration: 1.5, delay: 0, options: .curveLinear, animations: {
+            self.view.layoutIfNeeded()
+        }, completion: { _ in
+            print("Nuvens_5 moveu para esquerda")
+            self.moveCloudsToRight()
+        })
     }
     /*
     // MARK: - Navigation
