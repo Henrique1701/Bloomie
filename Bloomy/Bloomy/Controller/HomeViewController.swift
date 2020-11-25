@@ -27,7 +27,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var cloudsConstraint2: NSLayoutConstraint!
     @IBOutlet weak var cloudsConstraint1: NSLayoutConstraint!
     @IBOutlet weak var cloudsConstraint6: NSLayoutConstraint!
-    private let quantityIslands: Int = 3
+    private let quantityIslands: Int = 1
     override func viewDidLoad() {
         super.viewDidLoad()
         // Pegar a quantidade de ilhas selecionadas pelo usuário
