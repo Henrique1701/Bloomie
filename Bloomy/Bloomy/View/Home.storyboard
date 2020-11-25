@@ -220,7 +220,7 @@
                         <viewLayoutGuide key="safeArea" id="Roa-Pm-K2v"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Desafios" image="icone_ação" id="14f-Z1-41G"/>
+                    <tabBarItem key="tabBarItem" title="Desafios" image="icone_ação" id="14f-Z1-41G"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xg8-Jq-mtk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -257,7 +257,7 @@
         <image name="icone_ilhas" width="30" height="30"/>
         <image name="icone_perfil" width="30" height="30"/>
         <image name="nuvens_1" width="173" height="92"/>
-        <image name="nuvens_2" width="144.5" height="89"/>
+        <image name="nuvens_2" width="145" height="89"/>
         <image name="nuvens_3" width="145" height="90"/>
         <image name="nuvens_4" width="173" height="84"/>
         <image name="nuvens_5" width="149" height="92"/>
