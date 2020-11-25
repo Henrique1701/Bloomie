@@ -19,6 +19,10 @@
 		BEC461E0255DABDB003C1D1A /* BloomyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC461DF255DABDB003C1D1A /* BloomyTests.swift */; };
 		BEC461EB255DABDB003C1D1A /* BloomyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC461EA255DABDB003C1D1A /* BloomyUITests.swift */; };
 		BFE8F27E98A9FA5E51C8958C /* Pods_Bloomy_BloomyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33CC4FDD39B2F278DD2B4375 /* Pods_Bloomy_BloomyUITests.framework */; };
+		D61D0395256D812B005BA187 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61D0394256D812B005BA187 /* LoginViewController.swift */; };
+		D61D03A8256DA430005BA187 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D61D03A7256DA430005BA187 /* Login.storyboard */; };
+		D61D03B7256DAA31005BA187 /* KeychainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61D03B6256DAA31005BA187 /* KeychainItem.swift */; };
+		D61D03BF256DAC93005BA187 /* LoginResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61D03BE256DAC93005BA187 /* LoginResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +66,11 @@
 		BEC461E6255DABDB003C1D1A /* BloomyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BloomyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEC461EA255DABDB003C1D1A /* BloomyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloomyUITests.swift; sourceTree = "<group>"; };
 		BEC461EC255DABDB003C1D1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D61D0394256D812B005BA187 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D61D0399256D82FA005BA187 /* Bloomy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Bloomy.entitlements; sourceTree = "<group>"; };
+		D61D03A7256DA430005BA187 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		D61D03B6256DAA31005BA187 /* KeychainItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainItem.swift; sourceTree = "<group>"; };
+		D61D03BE256DAC93005BA187 /* LoginResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResultViewController.swift; sourceTree = "<group>"; };
 		F1EA232AA2FD2DE50426D9E6 /* Pods-BloomyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BloomyTests.release.xcconfig"; path = "Target Support Files/Pods-BloomyTests/Pods-BloomyTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,10 +150,12 @@
 		BEC461C4255DABD8003C1D1A /* Bloomy */ = {
 			isa = PBXGroup;
 			children = (
+				D61D0399256D82FA005BA187 /* Bloomy.entitlements */,
 				BEDD7A402562F3AB005BA4F9 /* Model */,
 				BEDD7A412562F3B8005BA4F9 /* View */,
 				BEDD7A422562F3C3005BA4F9 /* Controller */,
 				BEC461D6255DABDA003C1D1A /* Info.plist */,
+				D61D03B6256DAA31005BA187 /* KeychainItem.swift */,
 			);
 			path = Bloomy;
 			sourceTree = "<group>";
@@ -180,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				BEC461CB255DABD8003C1D1A /* Main.storyboard */,
+				D61D03A7256DA430005BA187 /* Login.storyboard */,
 				BEC461D3255DABDA003C1D1A /* LaunchScreen.storyboard */,
 			);
 			path = View;
@@ -191,6 +203,8 @@
 				BEC461C5255DABD8003C1D1A /* AppDelegate.swift */,
 				BEC461C7255DABD8003C1D1A /* SceneDelegate.swift */,
 				BEC461C9255DABD8003C1D1A /* ViewController.swift */,
+				D61D0394256D812B005BA187 /* LoginViewController.swift */,
+				D61D03BE256DAC93005BA187 /* LoginResultViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -302,6 +316,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D61D03A8256DA430005BA187 /* Login.storyboard in Resources */,
 				BEC461D5255DABDA003C1D1A /* LaunchScreen.storyboard in Resources */,
 				BEC461D2255DABDA003C1D1A /* Assets.xcassets in Resources */,
 				BEC461CD255DABD8003C1D1A /* Main.storyboard in Resources */,
@@ -417,7 +432,10 @@
 			files = (
 				BEC461CA255DABD8003C1D1A /* ViewController.swift in Sources */,
 				BEC461D0255DABD8003C1D1A /* Bloomy.xcdatamodeld in Sources */,
+				D61D03B7256DAA31005BA187 /* KeychainItem.swift in Sources */,
 				BEC461C6255DABD8003C1D1A /* AppDelegate.swift in Sources */,
+				D61D0395256D812B005BA187 /* LoginViewController.swift in Sources */,
+				D61D03BF256DAC93005BA187 /* LoginResultViewController.swift in Sources */,
 				BEC461C8255DABD8003C1D1A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -595,8 +613,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Bloomy/Bloomy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 23WSBM7T82;
+				DEVELOPMENT_TEAM = S8R5YQ68C2;
 				INFOPLIST_FILE = Bloomy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -615,8 +634,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Bloomy/Bloomy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 23WSBM7T82;
+				DEVELOPMENT_TEAM = S8R5YQ68C2;
 				INFOPLIST_FILE = Bloomy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
