@@ -37,7 +37,6 @@ struct IslandManager {
         return nil
     }
     
-    
     func getIslands() -> [Island]? {
         let fetchRequest = NSFetchRequest<Island>(entityName: "Island")
 
@@ -51,8 +50,17 @@ struct IslandManager {
         return nil
     }
     
+    func getIslandsNames() {
+        if let islands = getIslands() {
+            for island in islands {
+                print(island.name)
+            }
+        } else {
+            print("Tá sem ilha, querido")
+        }
+    }
     
-    //MARK: Delete Island
+    // MARK: Delete Island
     func deleteIsland(withName name: String) -> Bool {
         
         let fetchRequest = NSFetchRequest<Island>(entityName: "Island")
@@ -82,7 +90,7 @@ struct IslandManager {
         return save()
     }
     
-    //MARK: Save 
+    // MARK: Save
     private func save() -> Bool {
         
         do {
@@ -94,6 +102,4 @@ struct IslandManager {
         
         return false
     }
-    
-    
 }

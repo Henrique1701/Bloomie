@@ -12,7 +12,7 @@ struct UserManager {
     static let shared = UserManager()
     static var user: User?
     
-    //create
+    // MARK: Create
     public func newUser(withName name: String) -> User? {
         
         let userObject = NSEntityDescription.insertNewObject(forEntityName: "User", into: coreDataContext)
@@ -22,7 +22,7 @@ struct UserManager {
         return self.saveContext() ? user : nil
     }
     
-    //read
+    // MARK: Read
     public func getUser() -> User? {
         let fetchRequest = NSFetchRequest<User>(entityName: "User")
         fetchRequest.fetchLimit = 1
@@ -51,7 +51,14 @@ struct UserManager {
         return nil
     }
     
-    //update
+    public func getIslands() -> [Island] {
+        let user = getUser()
+        let islands = user!.userToIsland
+        let islandsArray = islands?.allObjects as? [Island] ?? []
+        return islands?.allObjects as? [Island] ?? []
+    }
+    
+    // MARK: Update
     public func updateUserName(to name: String) -> Bool {
         guard let user = getUser() else {fatalError("Could not find User")}
         user.name = name
@@ -68,7 +75,7 @@ struct UserManager {
         return false
     }
     
-    //delete
+    // MARK: Delete
     public func deleteUser(withName name: String) -> Bool {
         
         let fetchRequest = NSFetchRequest<User>(entityName: "User")
@@ -92,21 +99,7 @@ struct UserManager {
         return false
     }
     
-    //relationships
-//    public func setIslands(islands: [Island]) -> Bool {
-//        let user = getUser()
-//        user?.userToIsland = islands
-//        return saveContext()
-//    }
-    
-    public func getIslands() -> [Island]{
-        let user = getUser()
-        let islands = user!.userToIsland
-        return Array(_immutableCocoaArray: islands)
-    }
-    
-    
-    //auxiliar
+    //MARK: Auxiliar
     private func saveContext() -> Bool {
         
         do {
