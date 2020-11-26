@@ -28,7 +28,7 @@ class LoginViewController: UIViewController {
         authorizationButton.addTarget(self, action: #selector(handleAuthorizationAppleIDButtonPress), for: .touchUpInside)
         self.loginProviderStackView.addArrangedSubview(authorizationButton)
     }
-    
+
     // - Tag: perform_appleid_password_request
     /// Prompts the user if an existing iCloud Keychain credential or Apple ID credential is found.
     func performExistingAccountSetupFlows() {
@@ -100,21 +100,22 @@ extension LoginViewController: ASAuthorizationControllerDelegate {
     
     private func showResultViewController(userIdentifier: String, fullName: PersonNameComponents?, email: String?) {
         guard let viewController = self.presentingViewController as? LoginResultViewController
-            else { return }
+        else { return }
         
-        /*DispatchQueue.main.async {
-            viewController.userIdentifierLabel.text = userIdentifier
-            if let givenName = fullName?.givenName {
-                viewController.givenNameLabel.text = givenName
-            }
-            if let familyName = fullName?.familyName {
-                viewController.familyNameLabel.text = familyName
-            }
-            if let email = email {
-                viewController.emailLabel.text = email
-            }
+        DispatchQueue.main.async {
+            /*viewController.userIdentifierLabel.text = userIdentifier
+             if let givenName = fullName?.givenName {
+             viewController.givenNameLabel.text = givenName
+             }
+             if let familyName = fullName?.familyName {
+             viewController.familyNameLabel.text = familyName
+             }
+             if let email = email {
+             viewController.emailLabel.text = email
+             }}*/
             self.dismiss(animated: true, completion: nil)
-        }*/
+            
+        }
     }
     
     private func showPasswordCredentialAlert(username: String, password: String) {
@@ -142,7 +143,7 @@ extension LoginViewController: ASAuthorizationControllerPresentationContextProvi
 extension UIViewController {
     
     func showLoginViewController() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let storyboard = UIStoryboard(name: "Login", bundle: nil)
         if let loginViewController = storyboard.instantiateViewController(withIdentifier: "loginViewController") as? LoginViewController {
             loginViewController.modalPresentationStyle = .formSheet
             loginViewController.isModalInPresentation = true
@@ -151,75 +152,3 @@ extension UIViewController {
     }
 }
 
-/*class LoginViewController: UIViewController {
-    
-    @IBOutlet weak var stackView: UIStackView!
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-            
-        //setupTitleLabel()
-        setupLoginWithAppleButton()
-        
-    }
-    
-    private func setupLoginWithAppleButton() {
-      let signInWithAppleButton = ASAuthorizationAppleIDButton(authorizationButtonType: .signUp, authorizationButtonStyle: .white)
-      signInWithAppleButton.addTarget(self, action: #selector(signInWithAppleButtonPressed), for: .touchUpInside)
-      stackView.addArrangedSubview(signInWithAppleButton)
-    }
-    
-    @objc private func signInWithAppleButtonPressed() {
-      let authorizationAppleIDProvider = ASAuthorizationAppleIDProvider()
-      let authorizationAppleIDRequest = authorizationAppleIDProvider.createRequest()
-      authorizationAppleIDRequest.requestedScopes = [.fullName, .email]
-
-      let authorizationPasswordProvider = ASAuthorizationPasswordProvider()
-      let authorizationPasswordRequest = authorizationPasswordProvider.createRequest()
-
-      let authorizationController = ASAuthorizationController(authorizationRequests: [authorizationAppleIDRequest, authorizationPasswordRequest])
-      authorizationController.presentationContextProvider = self
-      authorizationController.delegate = self
-      authorizationController.performRequests()
-    }
-    
-}
-extension LoginViewController: ASAuthorizationControllerPresentationContextProviding {
-
-      func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
-        return view.window!
-      }
-    }
-
-extension LoginViewController: ASAuthorizationControllerDelegate {
-
-  func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
-    guard let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential else { return }
-
-    print("User ID: \(appleIDCredential.user)")
-
-    if let userEmail = appleIDCredential.email {
-      print("Email: \(userEmail)")
-    }
-
-    if let userGivenName = appleIDCredential.fullName?.givenName,
-      let userFamilyName = appleIDCredential.fullName?.familyName {
-      print("Given Name: \(userGivenName)")
-      print("Family Name: \(userFamilyName)")
-    }
-
-    if let authorizationCode = appleIDCredential.authorizationCode,
-      let identifyToken = appleIDCredential.identityToken {
-      print("Authorization Code: \(authorizationCode)")
-      print("Identity Token: \(identifyToken)")
-      //First time user, perform authentication with the backend
-      //TODO: Submit authorization code and identity token to your backend for user validation and signIn
-      return
-    }
-    //TODO: Perform user login given User ID
-  }
-  
-  func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
-    print("Authorization returned an error: \(error.localizedDescription)")
-  }
-}*/
