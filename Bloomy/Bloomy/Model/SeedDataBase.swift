@@ -12,16 +12,20 @@ struct SeedDataBase {
     static let shared: SeedDataBase = SeedDataBase()
     
     func seed() {
-        if (UserManager.shared.getUser() != nil) {
+        if (UserManager.shared.getUser() == nil) {
             self.createUser()
         }
         
-        if (IslandManager.shared.getIslands() != nil) {
+        if (IslandManager.shared.getIslands() == nil) {
             self.createIslands()
         }
         
-        if (ChallengeManager.shared.getChallenges() != nil) {
+        if (ChallengeManager.shared.getChallenges() == nil) {
             self.createChallenges()
+        }
+        
+        if(RewardManager.shared.getRewards() == nil) {
+            self.createRewards()
         }
     }
     
@@ -39,6 +43,20 @@ struct SeedDataBase {
         createLeisureChallenges()
         createLovedsChallenges()
         createHealthChallenges()
+    }
+    
+    func createRewards() {
+        _ = RewardManager.shared.newReward(withId: "R1", withImage: UIImage())
+        _ = RewardManager.shared.newReward(withId: "R2", withImage: UIImage())
+        _ = RewardManager.shared.newReward(withId: "R3", withImage: UIImage())
+        _ = RewardManager.shared.newReward(withId: "R4", withImage: UIImage())
+        _ = RewardManager.shared.newReward(withId: "R5", withImage: UIImage())
+        
+        RewardManager.shared.setIsland(toReward: "R1", island: IslandManager.shared.getIsland(withName: "Atenção Plena")!)
+        RewardManager.shared.setIsland(toReward: "R2", island: IslandManager.shared.getIsland(withName: "Atenção Plena")!)
+        RewardManager.shared.setIsland(toReward: "R3", island: IslandManager.shared.getIsland(withName: "Lazer")!)
+        RewardManager.shared.setIsland(toReward: "R1", island: IslandManager.shared.getIsland(withName: "Pessoas Queridas")!)
+        RewardManager.shared.setIsland(toReward: "R1", island: IslandManager.shared.getIsland(withName: "Saúde")!)
     }
     
     func createUser() {

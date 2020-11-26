@@ -53,10 +53,8 @@ struct IslandManager {
     public func getIslandsNames() {
         if let islands = getIslands() {
             for island in islands {
-                print(island.name)
+                print(island.name ?? "")
             }
-        } else {
-            print("Tá sem ilha, querido")
         }
     }
     

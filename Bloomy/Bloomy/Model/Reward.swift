@@ -33,7 +33,7 @@ struct RewardManager {
     public func getReward(withId rewardId: String) -> Reward? {
         let fetchRequest = NSFetchRequest<Reward>(entityName: "Reward")
         fetchRequest.fetchLimit = 1
-        fetchRequest.predicate = NSPredicate(format: "id == %@", rewardId)
+        fetchRequest.predicate = NSPredicate(format: "rewardId == %@", rewardId)
         do {
             let reward = try coreDataContext.fetch(fetchRequest)
             if !reward.isEmpty { return reward[0] }
@@ -60,18 +60,18 @@ struct RewardManager {
     public func getRewardsLocation() {
         if let rewards = getRewards() {
             for reward in rewards {
-                print(reward.location)
+                print(reward.location ?? "")
             }
         } else {
             print("Não encontrei a localização das recompensas")
         }
     }
     //Returns all of the rewards that are being shown
-    public func getShownRewards() -> [Reward]{
+    public func getShownRewards() -> [Reward] {
         var rewardsShown: [Reward] = []
         if let rewards = getRewards() {
             for reward in rewards {
-                if (reward.isShown == true){
+                if (reward.isShown) {
                     rewardsShown.append(reward)
                     print(reward.id)
                 }

@@ -14,15 +14,15 @@ class IslandsViewController: UIViewController {
     var selectedSaude:Bool = false
     var selectedPessoasQueridas:Bool = false
     var selectedAtencaoPlena:Bool = false
-    
+
     let user = UserManager()
     let island = IslandManager()
-    
+
     @IBOutlet weak var userTextField: UITextField!
     @IBAction func saveUserButton(_ sender: Any) {
          user.newUser(withName: userTextField.text!)
     }
-    
+
     @IBAction func chooseLazer(_ sender: Any) {
         if (selectedLazer == true) {
             selectedLazer = false
@@ -32,7 +32,7 @@ class IslandsViewController: UIViewController {
             print("Lazer Selected")
         }
     }
-    
+
     @IBAction func chooseSaude(_ sender: Any) {
         if (selectedSaude == true) {
             selectedSaude = false
@@ -42,7 +42,7 @@ class IslandsViewController: UIViewController {
             print("Saude Selected")
         }
     }
-    
+
     @IBAction func choosePessoasQueridas(_ sender: Any) {
         if (selectedPessoasQueridas == true) {
             selectedPessoasQueridas = false
@@ -52,7 +52,7 @@ class IslandsViewController: UIViewController {
             print("Pessoas Queridas Selected")
         }
     }
-    
+
     @IBAction func chooseAtencaoPlena(_ sender: Any) {
         if (selectedAtencaoPlena == true) {
             selectedAtencaoPlena = false
@@ -62,10 +62,10 @@ class IslandsViewController: UIViewController {
             print("Atencao Selected")
         }
     }
-    
+
     @IBAction func selectedIslandsButton(_ sender: Any) {
         let usuario = self.user.getUser()
-        
+
         if(selectedLazer == true) {
             guard let lazerIsland = self.island.newIsland(withName: "Lazer") else { return }
             self.island.setUser(islandName: "Lazer", user: usuario!)
@@ -91,6 +91,12 @@ class IslandsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        SeedDataBase.shared.seed()
+        UserManager.shared.updateUserName(to: "Vittar")
+        print(UserManager.shared.getUserName() ?? "Tá sem nome")
+        print(UserManager.shared.getIslands())
+        
+        
     }
     
     /*

@@ -195,10 +195,10 @@
 				7D2BEFE7256D86B0006AFD8C /* User+CoreDataProperties.swift */,
 				BEC461D1255DABDA003C1D1A /* Assets.xcassets */,
 				BEC461CE255DABD8003C1D1A /* Bloomy.xcdatamodeld */,
-				8928F54A25670DD10089BE0E /* User.swift */,
+				891D2E46256ED7B200AC961A /* Challenge.swift */,
 				7D2BEFC525685E48006AFD8C /* Island.swift */,
 				7D267543256EDB97000C57A3 /* Reward.swift */,
-				891D2E46256ED7B200AC961A /* Challenge.swift */,
+				8928F54A25670DD10089BE0E /* User.swift */,
 				89DD872E2570243200DB1C13 /* SeedDataBase.swift */,
 			);
 			path = Model;
