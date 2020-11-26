@@ -164,22 +164,22 @@ struct Challenges {
     ]
     
     let healthChallenges = [
-        ["ID": "H", "Summary": "Ajuste a sua postura"],
-        ["ID": "H", "Summary": "Faça uma caminhada de 10 minutos"],
-        ["ID": "H", "Summary": "Se você tiver que andar de elevador hoje, escolha ir pelas escadas"],
-        ["ID": "H", "Summary": "Adicione mais vegetais às suas refeições"],
-        ["ID": "H", "Summary": "Tire 10 minutos do seu dia para organizar alguma coisa do seu ambiente. Pode ser a sua mesa do trabalho, uma gaveta no seu armário, uma prateleira da sua estante..."],
-        ["ID": "H", "Summary": "Reflita sobre três coisas pelas quais você é grato"],
-        ["ID": "H", "Summary": "Encontre um momento do seu dia para fazer uma pausa e relaxar. "],
-        ["ID": "H", "Summary": "Faça um alongamento "],
-        ["ID": "H", "Summary": "Fique em uma postura de yoga por dois minutos. Recomendamos a pose do cachorro olhando para baixo"],
-        ["ID": "H", "Summary": "Escreva uma carta para o seu eu do futuro e guarde num lugar seguro. Só abra daqui a 6 meses."],
-        ["ID": "H", "Summary": "Pratique o seu hobby favorito!"],
-        ["ID": "H", "Summary": "Preste atenção no quanto você reclama e tente evitar reclamar. Observe a mudança no seu humor."],
-        ["ID": "H", "Summary": "Proteja a sua pele! Use protetor solar!"],
-        ["ID": "H", "Summary": "Cante no chuveiro"],
-        ["ID": "H", "Summary": "Comemore uma pequena vitória sua hoje"],
-        ["ID": "H", "Summary": "Tente fazer uma nova receita saudável  que você está querendo experimentar"]
+        ["ID": "H1", "Summary": "Ajuste a sua postura"],
+        ["ID": "H2", "Summary": "Faça uma caminhada de 10 minutos"],
+        ["ID": "H3", "Summary": "Se você tiver que andar de elevador hoje, escolha ir pelas escadas"],
+        ["ID": "H4", "Summary": "Adicione mais vegetais às suas refeições"],
+        ["ID": "H5", "Summary": "Tire 10 minutos do seu dia para organizar alguma coisa do seu ambiente. Pode ser a sua mesa do trabalho, uma gaveta no seu armário, uma prateleira da sua estante..."],
+        ["ID": "H6", "Summary": "Reflita sobre três coisas pelas quais você é grato"],
+        ["ID": "H7", "Summary": "Encontre um momento do seu dia para fazer uma pausa e relaxar. "],
+        ["ID": "H8", "Summary": "Faça um alongamento "],
+        ["ID": "H9", "Summary": "Fique em uma postura de yoga por dois minutos. Recomendamos a pose do cachorro olhando para baixo"],
+        ["ID": "H10", "Summary": "Escreva uma carta para o seu eu do futuro e guarde num lugar seguro. Só abra daqui a 6 meses."],
+        ["ID": "H11", "Summary": "Pratique o seu hobby favorito!"],
+        ["ID": "H12", "Summary": "Preste atenção no quanto você reclama e tente evitar reclamar. Observe a mudança no seu humor."],
+        ["ID": "H13", "Summary": "Proteja a sua pele! Use protetor solar!"],
+        ["ID": "H14", "Summary": "Cante no chuveiro"],
+        ["ID": "H15", "Summary": "Comemore uma pequena vitória sua hoje"],
+        ["ID": "H16", "Summary": "Tente fazer uma nova receita saudável  que você está querendo experimentar"]
     ]
 
 }
