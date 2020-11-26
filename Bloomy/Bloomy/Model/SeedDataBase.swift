@@ -10,12 +10,15 @@ import UIKit
 
 struct SeedDataBase {
     static let shared: SeedDataBase = SeedDataBase()
-    static var islands: [Island?] = []
-    static var challenges: [Challenge?] = []
-    static var user: User?
     
     func seed() {
+        if (IslandManager.shared.getIslands() != nil) {
+            self.createIslands()
+        }
         
+        if (ChallengeManager.shared.getChallenges() != nil) {
+            self.createChallenges()
+        }
     }
     
     func createIslands() -> [Island?] {
