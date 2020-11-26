@@ -12,6 +12,10 @@ struct SeedDataBase {
     static let shared: SeedDataBase = SeedDataBase()
     
     func seed() {
+        if (UserManager.shared.getUser() != nil) {
+            self.createUser()
+        }
+        
         if (IslandManager.shared.getIslands() != nil) {
             self.createIslands()
         }
@@ -22,12 +26,12 @@ struct SeedDataBase {
     }
     
     func createIslands() -> [Island?] {
-        return [
-            IslandManager.shared.newIsland(withName: "Atenção Plena"),
-            IslandManager.shared.newIsland(withName: "Lazer"),
-            IslandManager.shared.newIsland(withName: "Pessoas Queridas"),
-            IslandManager.shared.newIsland(withName: "Saúde")
-        ]
+        IslandManager.shared.newIsland(withName: "Atenção Plena")
+        IslandManager.shared.newIsland(withName: "Lazer")
+        IslandManager.shared.newIsland(withName: "Pessoas Queridas")
+        IslandManager.shared.newIsland(withName: "Saúde")
+        
+        setUserToIslands()
     }
     
     func createChallenges() {
@@ -35,6 +39,10 @@ struct SeedDataBase {
         createLeisureChallenges()
         createLovedsChallenges()
         createHealthChallenges()
+    }
+    
+    func createUser() {
+        UserManager.shared.newUser(withName: "Rafa")
     }
     
     func createMindfulnessChallenges() {
@@ -67,6 +75,15 @@ struct SeedDataBase {
             _ = ChallengeManager.shared.createChallenge(withID: challenge["ID"]!
                                                     , withSummary: challenge["Summary"]!)
         }
+    }
+    
+    func setUserToIslands() {
+        let user = UserManager.shared.getUser()
+        
+        IslandManager.shared.setUser(islandName: "Atenção Plena", user: user)
+        IslandManager.shared.setUser(islandName: "Lazer", user: user)
+        IslandManager.shared.setUser(islandName: "Pessoas Queridas", user: user)
+        IslandManager.shared.setUser(islandName: "User", user: user)
     }
 }
 
