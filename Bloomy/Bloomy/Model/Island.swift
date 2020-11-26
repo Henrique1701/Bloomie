@@ -11,7 +11,7 @@ struct IslandManager {
     static let shared = IslandManager()
     static var island: Island?
     // MARK: Create new Island
-    func newIsland(withName name: String) -> Island? {
+    public func newIsland(withName name: String) -> Island? {
         
         let islandObject = NSEntityDescription.insertNewObject(forEntityName: "Island", into: coreDataContext)
         
@@ -19,11 +19,11 @@ struct IslandManager {
             fatalError("Could not find Island Entity")
         }
         island.name = name
-        return self.save() ? island : nil
+        return self.saveContext() ? island : nil
     }
 
     // MARK: Read Island
-    func getIsland(withName name: String) -> Island? {
+    public func getIsland(withName name: String) -> Island? {
         let fetchRequest = NSFetchRequest<Island>(entityName: "Island")
         fetchRequest.fetchLimit = 1
         fetchRequest.predicate = NSPredicate(format: "name == %@", name)
@@ -37,7 +37,7 @@ struct IslandManager {
         return nil
     }
     
-    func getIslands() -> [Island]? {
+    public func getIslands() -> [Island]? {
         let fetchRequest = NSFetchRequest<Island>(entityName: "Island")
 
         do {
@@ -50,7 +50,7 @@ struct IslandManager {
         return nil
     }
     
-    func getIslandsNames() {
+    public func getIslandsNames() {
         if let islands = getIslands() {
             for island in islands {
                 print(island.name)
@@ -61,7 +61,7 @@ struct IslandManager {
     }
     
     // MARK: Delete Island
-    func deleteIsland(withName name: String) -> Bool {
+    public func deleteIsland(withName name: String) -> Bool {
         
         let fetchRequest = NSFetchRequest<Island>(entityName: "Island")
         
@@ -73,7 +73,7 @@ struct IslandManager {
             
             if !island.isEmpty {
                 coreDataContext.delete(island[0])
-                return self.save()
+                return self.saveContext()
             } else {
                 print("The island \(name) could not be found!")
             }
@@ -84,14 +84,15 @@ struct IslandManager {
         return false
     }
     
-    func setUser (islandName: String, user: User) -> Bool {
+    // Relationship between user and islands
+    public func setUser (islandName: String, user: User) -> Bool {
         let island = getIsland(withName: islandName)
         island?.islandToUser = user
-        return save()
+        return saveContext()
     }
     
-    // MARK: Save
-    private func save() -> Bool {
+    // MARK: Save Context (auxiliar)
+    private func saveContext() -> Bool {
         
         do {
             try coreDataContext.save()

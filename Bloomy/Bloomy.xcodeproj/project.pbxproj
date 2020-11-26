@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1834972EEB6285E47FABD0A3 /* Pods_Bloomy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57CA3E352B06C25017BE1E66 /* Pods_Bloomy.framework */; };
 		75C430483B507584722F9116 /* Pods_BloomyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E49591F99200B6D647E55B /* Pods_BloomyTests.framework */; };
+		7D267544256EDB97000C57A3 /* Reward.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D267543256EDB97000C57A3 /* Reward.swift */; };
 		7D2BEFC625685E48006AFD8C /* Island.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2BEFC525685E48006AFD8C /* Island.swift */; };
 		7D2BEFCE256C3294006AFD8C /* Islands.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D2BEFCD256C3294006AFD8C /* Islands.storyboard */; };
 		7D2BEFD3256C32C4006AFD8C /* IslandsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2BEFD2256C32C4006AFD8C /* IslandsViewController.swift */; };
@@ -53,6 +54,7 @@
 		369F14DF579FC84A0B42AB62 /* Pods-Bloomy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bloomy.debug.xcconfig"; path = "Target Support Files/Pods-Bloomy/Pods-Bloomy.debug.xcconfig"; sourceTree = "<group>"; };
 		3C16641237BD639CA3DB2A3C /* Pods-Bloomy-BloomyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bloomy-BloomyUITests.release.xcconfig"; path = "Target Support Files/Pods-Bloomy-BloomyUITests/Pods-Bloomy-BloomyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		57CA3E352B06C25017BE1E66 /* Pods_Bloomy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bloomy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D267543256EDB97000C57A3 /* Reward.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reward.swift; sourceTree = "<group>"; };
 		7D2BEFC525685E48006AFD8C /* Island.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Island.swift; sourceTree = "<group>"; };
 		7D2BEFCD256C3294006AFD8C /* Islands.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Islands.storyboard; sourceTree = "<group>"; };
 		7D2BEFD2256C32C4006AFD8C /* IslandsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IslandsViewController.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				BEC461CE255DABD8003C1D1A /* Bloomy.xcdatamodeld */,
 				8928F54A25670DD10089BE0E /* User.swift */,
 				7D2BEFC525685E48006AFD8C /* Island.swift */,
+				7D267543256EDB97000C57A3 /* Reward.swift */,
 				891D2E46256ED7B200AC961A /* Challenge.swift */,
 				89DD872E2570243200DB1C13 /* SeedDataBase.swift */,
 			);
@@ -447,6 +450,7 @@
 				BEC461D0255DABD8003C1D1A /* Bloomy.xcdatamodeld in Sources */,
 				7D2BEFC625685E48006AFD8C /* Island.swift in Sources */,
 				7D2BEFD3256C32C4006AFD8C /* IslandsViewController.swift in Sources */,
+				7D267544256EDB97000C57A3 /* Reward.swift in Sources */,
 				891D2E47256ED7B200AC961A /* Challenge.swift in Sources */,
 				BEC461C6255DABD8003C1D1A /* AppDelegate.swift in Sources */,
 				7D2BEFE8256D86B0006AFD8C /* User+CoreDataClass.swift in Sources */,
