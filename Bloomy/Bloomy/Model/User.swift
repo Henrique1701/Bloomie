@@ -98,7 +98,7 @@ struct UserManager {
         return false
     }
     
-    //MARK: Auxiliar
+    // MARK: Auxiliar
     private func saveContext() -> Bool {
         do {
             try coreDataContext.save()

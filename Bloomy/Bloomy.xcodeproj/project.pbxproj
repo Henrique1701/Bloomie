@@ -17,6 +17,7 @@
 		891D2E47256ED7B200AC961A /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891D2E46256ED7B200AC961A /* Challenge.swift */; };
 		8928F54B25670DD10089BE0E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8928F54A25670DD10089BE0E /* User.swift */; };
 		8928F56325670EEE0089BE0E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8928F56225670EEE0089BE0E /* Constants.swift */; };
+		89DD872F2570243200DB1C13 /* SeedDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DD872E2570243200DB1C13 /* SeedDataBase.swift */; };
 		BEC461C6255DABD8003C1D1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC461C5255DABD8003C1D1A /* AppDelegate.swift */; };
 		BEC461C8255DABD8003C1D1A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC461C7255DABD8003C1D1A /* SceneDelegate.swift */; };
 		BEC461CA255DABD8003C1D1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC461C9255DABD8003C1D1A /* ViewController.swift */; };
@@ -60,6 +61,7 @@
 		891D2E46256ED7B200AC961A /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		8928F54A25670DD10089BE0E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8928F56225670EEE0089BE0E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		89DD872E2570243200DB1C13 /* SeedDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeedDataBase.swift; sourceTree = "<group>"; };
 		910E7EF4AA3E30A07B9A2743 /* Pods-Bloomy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bloomy.release.xcconfig"; path = "Target Support Files/Pods-Bloomy/Pods-Bloomy.release.xcconfig"; sourceTree = "<group>"; };
 		94E49591F99200B6D647E55B /* Pods_BloomyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BloomyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25879A5F40F669187A291F0 /* Pods-BloomyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BloomyTests.debug.xcconfig"; path = "Target Support Files/Pods-BloomyTests/Pods-BloomyTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 				8928F54A25670DD10089BE0E /* User.swift */,
 				7D2BEFC525685E48006AFD8C /* Island.swift */,
 				891D2E46256ED7B200AC961A /* Challenge.swift */,
+				89DD872E2570243200DB1C13 /* SeedDataBase.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -451,6 +454,7 @@
 				BEC461C8255DABD8003C1D1A /* SceneDelegate.swift in Sources */,
 				7D2BEFE9256D86B0006AFD8C /* User+CoreDataProperties.swift in Sources */,
 				8928F56325670EEE0089BE0E /* Constants.swift in Sources */,
+				89DD872F2570243200DB1C13 /* SeedDataBase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

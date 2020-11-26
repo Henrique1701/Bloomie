@@ -3,7 +3,7 @@
     <entity name="Challenge" representedClassName="Challenge" syncable="YES" codeGenerationType="class">
         <attribute name="accepted" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="done" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
-        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
         <attribute name="summary" optional="YES" attributeType="String"/>
         <attribute name="time" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <relationship name="challengeToIsland" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Island" inverseName="islandToChallenge" inverseEntity="Island"/>
