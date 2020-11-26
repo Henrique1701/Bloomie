@@ -120,6 +120,12 @@ struct ChallengeManager {
         return self.saveContext()
     }
     
+    public func setIsland(toChallenge withID: Int, island: Island) -> Bool {
+        guard let challenge = getChallenge(withID: withID) else { fatalError("Coud not find \(withID) Challenge") }
+        challenge.challengeToIsland = island
+        return saveContext()
+    }
+    
     // MARK: Delete
     public func deleteChallenge(withID: Int) -> Bool {
         guard let challenge = getChallenge(withID: withID) else { fatalError("Coud not find \(withID) Challenge") }
