@@ -127,7 +127,7 @@ struct RewardManager {
     // Associa recompensa a uma ilha
     public func setIsland (toReward rewardId: String, island: Island) -> Bool {
         guard let reward = getReward(withId: rewardId) else { fatalError("Coud not find \(rewardId) Reward") }
-        //reward.rewardToIsland = reward.rewardToIsland.adding()
+        reward.rewardToIsland = island
         return saveContext()
     }
     
