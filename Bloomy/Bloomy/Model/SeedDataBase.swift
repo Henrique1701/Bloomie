@@ -78,12 +78,12 @@ struct SeedDataBase {
     }
     
     func setUserToIslands() {
-        let user = UserManager.shared.getUser()
-        
-        IslandManager.shared.setUser(islandName: "Atenção Plena", user: user)
-        IslandManager.shared.setUser(islandName: "Lazer", user: user)
-        IslandManager.shared.setUser(islandName: "Pessoas Queridas", user: user)
-        IslandManager.shared.setUser(islandName: "User", user: user)
+        if let user = UserManager.shared.getUser() {
+            IslandManager.shared.setUser(islandName: "Atenção Plena", user: user)
+            IslandManager.shared.setUser(islandName: "Lazer", user: user)
+            IslandManager.shared.setUser(islandName: "Pessoas Queridas", user: user)
+            IslandManager.shared.setUser(islandName: "User", user: user)
+        }
     }
 }
 
