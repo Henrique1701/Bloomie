@@ -14,11 +14,11 @@ struct UserManager {
     
     // MARK: Create
     public func newUser(withName name: String) -> User? {
-        
         let userObject = NSEntityDescription.insertNewObject(forEntityName: "User", into: coreDataContext)
         
         guard let user = userObject as? User else {fatalError("Could not find User Entity")}
         user.name = name
+        
         return self.saveContext() ? user : nil
     }
     
@@ -77,7 +77,6 @@ struct UserManager {
     
     // MARK: Delete
     public func deleteUser(withName name: String) -> Bool {
-        
         let fetchRequest = NSFetchRequest<User>(entityName: "User")
         
         fetchRequest.fetchLimit = 1
@@ -99,9 +98,8 @@ struct UserManager {
         return false
     }
     
-    //MARK: Auxiliar
+    // MARK: Auxiliar
     private func saveContext() -> Bool {
-        
         do {
             try coreDataContext.save()
             return true
