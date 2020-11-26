@@ -22,7 +22,6 @@ struct ChallengeManager {
         return self.saveContext() ? challenge : nil
     }
     // MARK: Read
-    // TODO: Acho que cada challenge precisa ter um ID
     public func getChallenges() -> [Challenge]? {
         let fetchRequest = NSFetchRequest<Challenge>(entityName: "Challenge")
         
@@ -36,10 +35,10 @@ struct ChallengeManager {
         }
     }
     
-    public func getChallenge(withSummary summary: String) -> Challenge? {
+    public func getChallenge(withID: Int) -> Challenge? {
         let fetchRequest = NSFetchRequest<Challenge>(entityName: "Challenge")
         fetchRequest.fetchLimit = 1
-        fetchRequest.predicate = NSPredicate(format: "summary == %@", summary)
+        fetchRequest.predicate = NSPredicate(format: "summary == %@", withID)
         
         do {
             let challenge = try coreDataContext.fetch(fetchRequest)
@@ -51,26 +50,82 @@ struct ChallengeManager {
         return nil
     }
     
-    public func wasDone(challenge withSummary: String) -> Bool {
-        if let challenge = getChallenge(withSummary: withSummary) {
+    public func wasDone(challenge withID: Int) -> Bool {
+        if let challenge = getChallenge(withID: withID) {
             let wasDone = challenge.done
             return wasDone
         }
+        
         return false
     }
     
-    public func wasAccepted(challenge withSummary: String) -> Bool {
-        if let challenge = getChallenge(withSummary: withSummary) {
+    public func wasAccepted(challenge withID: Int) -> Bool {
+        if let challenge = getChallenge(withID: withID) {
             let wasAccepted = challenge.accepted
             return wasAccepted
         }
+        
         return false
+    }
+    
+    public func getSummary(forChallenge withID: Int) -> String? {
+        if let challenge = getChallenge(withID: withID) {
+            let summary = challenge.summary
+            return summary ?? nil
+        } else {
+            print("The \(withID) challenge has no summary description")
+        }
+        
+        return nil
+    }
+    
+    public func getTime(forChallenge withID: Int) -> Date? {
+        if let challenge = getChallenge(withID: withID) {
+            let time = challenge.time
+            return time ?? nil
+        } else {
+            print("The \(withID) challenge has no date")
+        }
+        
+        return nil
     }
     
     //publicFunc
     // MARK: Update
+    public func updateSummary(withID: Int, to newSummary: String) -> Bool {
+        guard let challenge = getChallenge(withID: withID) else { fatalError("Coud not find \(withID) Challenge") }
+        challenge.summary = newSummary
+        
+        return self.saveContext()
+    }
+    
+    public func updateAccepted(withID: Int, to newValue: Bool) -> Bool {
+        guard let challenge = getChallenge(withID: withID) else { fatalError("Coud not find \(withID) Challenge") }
+        challenge.accepted = newValue
+        
+        return self.saveContext()
+    }
+    
+    public func updateDone(withID: Int, to newValue: Bool) -> Bool {
+        guard let challenge = getChallenge(withID: withID) else { fatalError("Coud not find \(withID) Challenge") }
+        challenge.done = newValue
+        
+        return self.saveContext()
+    }
+    
+    public func updateTime(withID: Int, to newDate: Date) -> Bool {
+        guard let challenge = getChallenge(withID: withID) else { fatalError("Coud not find \(withID) Challenge") }
+        challenge.time = newDate
+        
+        return self.saveContext()
+    }
     
     // MARK: Delete
+    public func deleteChallenge(withID: Int) -> Bool {
+        guard let challenge = getChallenge(withID: withID) else { fatalError("Coud not find \(withID) Challenge") }
+        coreDataContext.delete(challenge)
+        return self.saveContext()
+    }
     
     // MARK: Auxiliar
     private func saveContext() -> Bool {
