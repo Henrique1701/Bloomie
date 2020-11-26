@@ -25,6 +25,7 @@
 		BEDD7A4A25630ADF005BA4F9 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEDD7A4925630ADF005BA4F9 /* Home.storyboard */; };
 		BEF24E532566C24800D408A8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF24E522566C24800D408A8 /* HomeViewController.swift */; };
 		BFE8F27E98A9FA5E51C8958C /* Pods_Bloomy_BloomyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33CC4FDD39B2F278DD2B4375 /* Pods_Bloomy_BloomyUITests.framework */; };
+		D61D03E825701C2F005BA187 /* Canela.ttc in Resources */ = {isa = PBXBuildFile; fileRef = D61D03D925701B8C005BA187 /* Canela.ttc */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		BEC461EC255DABDB003C1D1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEDD7A4925630ADF005BA4F9 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		BEF24E522566C24800D408A8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D61D03D925701B8C005BA187 /* Canela.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Canela.ttc; sourceTree = "<group>"; };
 		F1EA232AA2FD2DE50426D9E6 /* Pods-BloomyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BloomyTests.release.xcconfig"; path = "Target Support Files/Pods-BloomyTests/Pods-BloomyTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -183,6 +185,7 @@
 		BEDD7A402562F3AB005BA4F9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D61D03D825701B6F005BA187 /* Fonts */,
 				BEC461D1255DABDA003C1D1A /* Assets.xcassets */,
 				BEC461CE255DABD8003C1D1A /* Bloomy.xcdatamodeld */,
 				8928F54A25670DD10089BE0E /* User.swift */,
@@ -211,6 +214,14 @@
 				BEF24E522566C24800D408A8 /* HomeViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		D61D03D825701B6F005BA187 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D61D03D925701B8C005BA187 /* Canela.ttc */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEC461D5255DABDA003C1D1A /* LaunchScreen.storyboard in Resources */,
+				D61D03E825701C2F005BA187 /* Canela.ttc in Resources */,
 				12D13CE1256C2BD60013E511 /* TelaPerfil.storyboard in Resources */,
 				BEC461D2255DABDA003C1D1A /* Assets.xcassets in Resources */,
 				BEC461CD255DABD8003C1D1A /* Main.storyboard in Resources */,

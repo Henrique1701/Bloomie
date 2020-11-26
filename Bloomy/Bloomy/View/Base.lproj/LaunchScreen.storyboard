@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,33 +12,20 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plant" translatesAutoresizingMaskIntoConstraints="NO" id="Ys9-dt-19v">
-                                <rect key="frame" x="66.5" y="394" width="83" height="82"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchscreen" translatesAutoresizingMaskIntoConstraints="NO" id="Oah-kp-a4D">
+                                <rect key="frame" x="44" y="202.5" width="232" height="75"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bloomy" lineBreakMode="tailTruncation" baselineAdjustment="none" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cMj-xD-nVo">
-                                <rect key="frame" x="154.5" y="417" width="175" height="62"/>
-                                <fontDescription key="fontDescription" name="Charter-Bold" family="Charter" pointSize="50"/>
-                                <color key="textColor" red="0.24313725490196078" green="0.24705882352941178" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=compact-widthClass=compact">
-                                    <fontDescription key="fontDescription" name="Charter-Bold" family="Charter" pointSize="30"/>
-                                </variation>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="1" green="0.93333333333333335" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Ys9-dt-19v" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-13" id="4VT-9Y-YCg"/>
-                            <constraint firstItem="cMj-xD-nVo" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Lwe-Yd-ylr"/>
-                            <constraint firstItem="cMj-xD-nVo" firstAttribute="leading" secondItem="Ys9-dt-19v" secondAttribute="trailing" constant="5" id="OZx-AA-AMl"/>
-                            <constraint firstItem="cMj-xD-nVo" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.0757946" id="UAe-K5-Wkw"/>
-                            <constraint firstItem="cMj-xD-nVo" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.422705" id="dgz-wP-IXW"/>
-                            <constraint firstItem="cMj-xD-nVo" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" constant="35" id="guA-G7-65D"/>
-                            <constraint firstItem="Ys9-dt-19v" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.1" id="h4A-JQ-pK7"/>
-                            <constraint firstItem="Ys9-dt-19v" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.2" id="hbN-Es-54o"/>
+                            <constraint firstItem="Oah-kp-a4D" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="ArC-WR-nGB"/>
+                            <constraint firstItem="Oah-kp-a4D" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="V1o-f8-bvd"/>
+                            <constraint firstItem="Oah-kp-a4D" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.156479" id="VNX-AU-KWM"/>
+                            <constraint firstItem="Oah-kp-a4D" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.724638" id="wiF-Wi-pCO"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -48,6 +35,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="plant" width="332" height="300"/>
+        <image name="launchscreen" width="286" height="80"/>
     </resources>
 </document>
