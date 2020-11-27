@@ -51,11 +51,11 @@ struct UserManager {
         return nil
     }
     
-    public func getIslands() -> [Island] {
+    public func getIslands() -> [Island]? {
         let user = getUser()
         let islands = user!.userToIsland
         let islandsArray = islands?.allObjects as? [Island] ?? []
-        return islands?.allObjects as? [Island] ?? []
+        return islandsArray
     }
     
     // MARK: Update
@@ -76,26 +76,10 @@ struct UserManager {
     }
     
     // MARK: Delete
-    public func deleteUser(withName name: String) -> Bool {
-        let fetchRequest = NSFetchRequest<User>(entityName: "User")
-        
-        fetchRequest.fetchLimit = 1
-        fetchRequest.predicate = NSPredicate(format: "name == %@", name)
-        
-        do {
-            let user = try coreDataContext.fetch(fetchRequest)
-            
-            if !user.isEmpty {
-                coreDataContext.delete(user[0])
-                return self.saveContext()
-            } else {
-                print("The user \(name) could not be found!")
-            }
-        } catch {
-            print("Error deleting the user \(name)")
-        }
-        
-        return false
+    public func deleteUser() -> Bool {
+        guard let user = getUser() else { fatalError("Coud not find User") }
+        coreDataContext.delete(user)
+        return self.saveContext()
     }
     
     // MARK: Auxiliar

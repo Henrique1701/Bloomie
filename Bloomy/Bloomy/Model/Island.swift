@@ -42,7 +42,7 @@ struct IslandManager {
 
         do {
             let islands = try coreDataContext.fetch(fetchRequest)
-            return islands
+            if !islands.isEmpty { return islands }
         } catch let fetchError {
             print("Failed to fetch companies: \(fetchError)")
         }

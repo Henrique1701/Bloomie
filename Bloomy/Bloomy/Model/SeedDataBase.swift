@@ -55,8 +55,7 @@ struct SeedDataBase {
         RewardManager.shared.setIsland(toReward: "R1", island: IslandManager.shared.getIsland(withName: "Atenção Plena")!)
         RewardManager.shared.setIsland(toReward: "R2", island: IslandManager.shared.getIsland(withName: "Atenção Plena")!)
         RewardManager.shared.setIsland(toReward: "R3", island: IslandManager.shared.getIsland(withName: "Lazer")!)
-        RewardManager.shared.setIsland(toReward: "R1", island: IslandManager.shared.getIsland(withName: "Pessoas Queridas")!)
-        RewardManager.shared.setIsland(toReward: "R1", island: IslandManager.shared.getIsland(withName: "Saúde")!)
+        RewardManager.shared.setIsland(toReward: "R4", island: IslandManager.shared.getIsland(withName: "Pessoas Queridas")!)
     }
     
     func createUser() {
@@ -100,7 +99,6 @@ struct SeedDataBase {
             _ = IslandManager.shared.setUser(islandName: "Atenção Plena", user: user)
             _ = IslandManager.shared.setUser(islandName: "Lazer", user: user)
             _ = IslandManager.shared.setUser(islandName: "Pessoas Queridas", user: user)
-            _ = IslandManager.shared.setUser(islandName: "User", user: user)
         }
     }
 }

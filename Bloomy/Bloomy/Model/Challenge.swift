@@ -28,12 +28,12 @@ struct ChallengeManager {
         
         do {
             let challenges = try coreDataContext.fetch(fetchRequest)
-            return challenges
+            if !challenges.isEmpty { return challenges }
         } catch let error {
             print("We couldn't find the island. \n \(error)")
-            
-            return nil
         }
+        
+        return nil
     }
     
     public func getChallenge(withID: String) -> Challenge? {

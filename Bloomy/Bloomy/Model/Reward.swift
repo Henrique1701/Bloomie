@@ -49,7 +49,7 @@ struct RewardManager {
         
         do {
             let rewards = try coreDataContext.fetch(fetchRequest)
-            return rewards
+            if !rewards.isEmpty { return rewards }
         } catch let fetchError {
             print("Failed to fetch Rewards: \(fetchError)")
         }
@@ -70,11 +70,9 @@ struct RewardManager {
     public func getShownRewards() -> [Reward] {
         var rewardsShown: [Reward] = []
         if let rewards = getRewards() {
-            for reward in rewards {
-                if (reward.isShown) {
-                    rewardsShown.append(reward)
-                    print(reward.id)
-                }
+            for reward in rewards where reward.isShown {
+                rewardsShown.append(reward)
+                print(reward.id)
             }
         } else {
             print("Não encontrei as recompensas que estão sendo exibidas")
