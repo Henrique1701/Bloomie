@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jV2-bX-FxB">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item-->
+        <scene sceneID="aKw-Nr-LeU">
+            <objects>
+                <navigationController id="jV2-bX-FxB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Om1-Xi-05P"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PHg-zW-NE9">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="AC1-FP-WMe" kind="relationship" relationship="rootViewController" id="eZE-Db-Hnl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U4O-uT-vhZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1855" y="135"/>
+        </scene>
+        <!--Ilhas-->
+        <scene sceneID="bwK-sz-0P5">
+            <objects>
+                <viewController id="RgJ-mV-1xY" customClass="HomeViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SD3-t7-atG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nuvens_4" translatesAutoresizingMaskIntoConstraints="NO" id="jt8-p5-FXm" userLabel="nuvens_6">
+                                <rect key="frame" x="171" y="681.5" width="191" height="95"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nuvens_1" translatesAutoresizingMaskIntoConstraints="NO" id="tac-Iu-33N">
+                                <rect key="frame" x="25" y="572" width="173" height="92"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nuvens_2" translatesAutoresizingMaskIntoConstraints="NO" id="wVM-gg-a62">
+                                <rect key="frame" x="300.5" y="450" width="144.5" height="89"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nuvens_3" translatesAutoresizingMaskIntoConstraints="NO" id="6WV-3F-amA">
+                                <rect key="frame" x="-52" y="308" width="145" height="90"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nuvens_4" translatesAutoresizingMaskIntoConstraints="NO" id="Fpd-t3-Pe4">
+                                <rect key="frame" x="190" y="203" width="173" height="84"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nuvens_5" translatesAutoresizingMaskIntoConstraints="NO" id="86e-DL-0dD">
+                                <rect key="frame" x="29" y="100" width="149" height="92"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="center" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QWl-mZ-0hW">
+                                <rect key="frame" x="18" y="98" width="378" height="705"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="8zm-85-mby">
+                                        <rect key="frame" x="6" y="0.0" width="366" height="176.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8HL-Y3-ktF">
+                                                <rect key="frame" x="0.0" y="0.0" width="138" height="176.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="8HL-Y3-ktF" secondAttribute="height" multiplier="18:23" id="Lnt-hO-tn9"/>
+                                                </constraints>
+                                                <state key="normal" image="botão_ilha_saúde"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OU3-jK-IzX">
+                                                <rect key="frame" x="228" y="0.0" width="138" height="176.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="OU3-jK-IzX" secondAttribute="height" multiplier="18:23" id="NMU-Qb-kxc"/>
+                                                </constraints>
+                                                <state key="normal" image="botão_ilha_saúde"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="qRI-YG-jhy">
+                                        <rect key="frame" x="6" y="176.5" width="366" height="176"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Hd-UH-ppZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="138" height="176"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="0Hd-UH-ppZ" secondAttribute="height" multiplier="18:23" id="Z0K-Ig-YI0"/>
+                                                </constraints>
+                                                <state key="normal" image="botão_ilha_lazer"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qEC-eP-JPs">
+                                                <rect key="frame" x="228" y="0.0" width="138" height="176"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="qEC-eP-JPs" secondAttribute="height" multiplier="18:23" id="IN7-NV-g1c"/>
+                                                </constraints>
+                                                <state key="normal" image="botão_ilha_lazer"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="cNI-DM-v3d">
+                                        <rect key="frame" x="6" y="352.5" width="366" height="176.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nr-na-HSl">
+                                                <rect key="frame" x="0.0" y="0.0" width="138" height="176.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="0nr-na-HSl" secondAttribute="height" multiplier="18:23" id="Lph-0w-q5w"/>
+                                                </constraints>
+                                                <state key="normal" image="botão_ilha_atenção_plena"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qX8-qc-3jX">
+                                                <rect key="frame" x="228" y="0.0" width="138" height="176.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="qX8-qc-3jX" secondAttribute="height" multiplier="18:23" id="Hle-ug-N2B"/>
+                                                </constraints>
+                                                <state key="normal" image="botão_ilha_atenção_plena"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="5Ov-1z-qDX">
+                                        <rect key="frame" x="6" y="529" width="366" height="176"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DJT-c0-Yb4">
+                                                <rect key="frame" x="0.0" y="0.0" width="138" height="176"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="DJT-c0-Yb4" secondAttribute="height" multiplier="18:23" id="kqE-TP-HHK"/>
+                                                </constraints>
+                                                <state key="normal" image="botão_ilha_pessoas_queridas"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAO-tD-T8b">
+                                                <rect key="frame" x="228" y="0.0" width="138" height="176"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="LAO-tD-T8b" secondAttribute="height" multiplier="18:23" id="dah-da-eLy"/>
+                                                </constraints>
+                                                <state key="normal" image="botão_ilha_pessoas_queridas"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Av6-Ir-yVL"/>
+                        <color key="backgroundColor" red="0.99607843137254903" green="0.96078431372549022" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tac-Iu-33N" firstAttribute="top" secondItem="6WV-3F-amA" secondAttribute="bottom" constant="174" id="05D-2g-9bl"/>
+                            <constraint firstItem="QWl-mZ-0hW" firstAttribute="width" secondItem="Av6-Ir-yVL" secondAttribute="height" multiplier="378:725" id="37N-cg-gCS"/>
+                            <constraint firstItem="jt8-p5-FXm" firstAttribute="width" secondItem="Av6-Ir-yVL" secondAttribute="width" multiplier="0.461333" id="7AY-UD-JKN"/>
+                            <constraint firstItem="Av6-Ir-yVL" firstAttribute="trailing" secondItem="jt8-p5-FXm" secondAttribute="trailing" constant="52" id="8z2-sT-4zR" userLabel="Clouds Constraint6"/>
+                            <constraint firstItem="86e-DL-0dD" firstAttribute="height" secondItem="Av6-Ir-yVL" secondAttribute="height" multiplier="0.126897" id="9xN-bK-jaj"/>
+                            <constraint firstItem="86e-DL-0dD" firstAttribute="top" secondItem="Av6-Ir-yVL" secondAttribute="top" constant="12" id="AtM-tp-7df"/>
+                            <constraint firstItem="wVM-gg-a62" firstAttribute="top" secondItem="Fpd-t3-Pe4" secondAttribute="bottom" constant="163" id="Crd-O3-3xv"/>
+                            <constraint firstItem="Fpd-t3-Pe4" firstAttribute="height" secondItem="Av6-Ir-yVL" secondAttribute="height" multiplier="0.115862" id="DbJ-xo-em3"/>
+                            <constraint firstItem="6WV-3F-amA" firstAttribute="height" secondItem="Av6-Ir-yVL" secondAttribute="height" multiplier="0.124138" id="FS4-dO-LGJ"/>
+                            <constraint firstItem="tac-Iu-33N" firstAttribute="width" secondItem="Av6-Ir-yVL" secondAttribute="width" multiplier="0.417874" id="McU-tR-Ige"/>
+                            <constraint firstItem="86e-DL-0dD" firstAttribute="width" secondItem="Av6-Ir-yVL" secondAttribute="width" multiplier="0.359903" id="MxA-IR-TIn"/>
+                            <constraint firstItem="jt8-p5-FXm" firstAttribute="height" secondItem="Av6-Ir-yVL" secondAttribute="height" multiplier="0.131045" id="QE9-cH-ZQ2"/>
+                            <constraint firstItem="wVM-gg-a62" firstAttribute="height" secondItem="Av6-Ir-yVL" secondAttribute="height" multiplier="0.122759" id="SP2-Bm-Prk"/>
+                            <constraint firstItem="QWl-mZ-0hW" firstAttribute="height" secondItem="Av6-Ir-yVL" secondAttribute="height" constant="-20" id="T3d-wv-WvV"/>
+                            <constraint firstItem="tac-Iu-33N" firstAttribute="leading" secondItem="Av6-Ir-yVL" secondAttribute="leading" constant="25" id="UDA-mt-yJM"/>
+                            <constraint firstAttribute="trailing" secondItem="wVM-gg-a62" secondAttribute="trailing" constant="-31" id="UKe-4S-cOa"/>
+                            <constraint firstItem="6WV-3F-amA" firstAttribute="top" secondItem="86e-DL-0dD" secondAttribute="bottom" constant="116" id="cTC-Wn-8JG"/>
+                            <constraint firstItem="tac-Iu-33N" firstAttribute="height" secondItem="Av6-Ir-yVL" secondAttribute="height" multiplier="0.126897" id="e9G-pZ-1Sz"/>
+                            <constraint firstItem="QWl-mZ-0hW" firstAttribute="centerX" secondItem="Av6-Ir-yVL" secondAttribute="centerX" id="fAd-u0-Haf"/>
+                            <constraint firstItem="Fpd-t3-Pe4" firstAttribute="width" secondItem="Av6-Ir-yVL" secondAttribute="width" multiplier="0.417874" id="fHx-5t-Yo3"/>
+                            <constraint firstItem="Av6-Ir-yVL" firstAttribute="trailing" secondItem="Fpd-t3-Pe4" secondAttribute="trailing" constant="51" id="hoy-vg-9nk"/>
+                            <constraint firstItem="6WV-3F-amA" firstAttribute="leading" secondItem="SD3-t7-atG" secondAttribute="leading" constant="-52" id="nG6-ca-sh7"/>
+                            <constraint firstItem="jt8-p5-FXm" firstAttribute="top" secondItem="tac-Iu-33N" secondAttribute="bottom" constant="17.670000000000002" id="nGJ-xM-rEA"/>
+                            <constraint firstItem="QWl-mZ-0hW" firstAttribute="centerY" secondItem="Av6-Ir-yVL" secondAttribute="centerY" id="qKP-z5-Tk3"/>
+                            <constraint firstItem="6WV-3F-amA" firstAttribute="width" secondItem="Av6-Ir-yVL" secondAttribute="width" multiplier="0.350242" id="qRb-O2-lRs"/>
+                            <constraint firstItem="86e-DL-0dD" firstAttribute="leading" secondItem="Av6-Ir-yVL" secondAttribute="leading" constant="29" id="qwL-J6-Bls"/>
+                            <constraint firstItem="Fpd-t3-Pe4" firstAttribute="top" secondItem="Av6-Ir-yVL" secondAttribute="top" constant="115" id="uhp-Aw-s3O"/>
+                            <constraint firstItem="wVM-gg-a62" firstAttribute="width" secondItem="Av6-Ir-yVL" secondAttribute="width" multiplier="0.349034" id="vJD-v6-Pne"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Ilhas" image="icone_ilhas" id="UGr-BI-bmV">
+                        <color key="badgeColor" red="0.99607843137254903" green="0.96078431372549022" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="cloudsConstraint1" destination="UDA-mt-yJM" id="dd5-Gi-JHF"/>
+                        <outlet property="cloudsConstraint2" destination="UKe-4S-cOa" id="G8s-eo-uS5"/>
+                        <outlet property="cloudsConstraint3" destination="nG6-ca-sh7" id="DUU-uz-D40"/>
+                        <outlet property="cloudsConstraint4" destination="hoy-vg-9nk" id="ocw-Tr-DNI"/>
+                        <outlet property="cloudsConstraint5" destination="qwL-J6-Bls" id="1Ke-tQ-AE6"/>
+                        <outlet property="cloudsConstraint6" destination="8z2-sT-4zR" id="wbH-xo-4hI"/>
+                        <outlet property="firstLeftButton" destination="8HL-Y3-ktF" id="ERN-vy-U9J"/>
+                        <outlet property="firstRightButton" destination="OU3-jK-IzX" id="fOx-8a-D8L"/>
+                        <outlet property="firstStackView" destination="8zm-85-mby" id="sqE-E6-n24"/>
+                        <outlet property="fourthLeftButton" destination="DJT-c0-Yb4" id="KNj-mR-C5N"/>
+                        <outlet property="fourthRightButton" destination="LAO-tD-T8b" id="EJz-ul-XSX"/>
+                        <outlet property="fourthStackView" destination="5Ov-1z-qDX" id="xd4-L2-Atj"/>
+                        <outlet property="secondLeftButton" destination="0Hd-UH-ppZ" id="U0I-At-ZmQ"/>
+                        <outlet property="secondRightButton" destination="qEC-eP-JPs" id="t5Q-74-l1H"/>
+                        <outlet property="secondStackView" destination="qRI-YG-jhy" id="Fg6-5R-g99"/>
+                        <outlet property="thirdLeftButton" destination="0nr-na-HSl" id="tgm-af-n9I"/>
+                        <outlet property="thirdRightButton" destination="qX8-qc-3jX" id="peq-Aw-C4U"/>
+                        <outlet property="thirdStackView" destination="cNI-DM-v3d" id="aLq-j9-FbL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Te0-bZ-sn6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-178" y="134"/>
+        </scene>
+        <!--Perfil-->
+        <scene sceneID="qic-Ej-EO3">
+            <objects>
+                <viewController id="sjo-UK-w73" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bvz-UY-1Rk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="8FF-bk-n1x"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Perfil" image="icone_perfil" id="JLT-yq-WG7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zx7-5I-W9Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="630" y="468"/>
+        </scene>
+        <!--Desafios-->
+        <scene sceneID="5Bw-bg-DYB">
+            <objects>
+                <viewController id="8r1-tz-zHZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j2e-zQ-BXg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Roa-Pm-K2v"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Desafios" image="icone_ação" id="14f-Z1-41G"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xg8-Jq-mtk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="630" y="-185"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="dMZ-ON-ptP">
+            <objects>
+                <tabBarController id="AC1-FP-WMe" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="zPm-xm-TZW"/>
+                    <tabBar key="tabBar" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZcZ-Hk-sL0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.99602943659999998" green="0.96094125509999995" blue="0.94508653880000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" red="0.16078431372549018" green="0.16078431372549018" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="RgJ-mV-1xY" kind="relationship" relationship="viewControllers" id="xMn-Gg-Sj5"/>
+                        <segue destination="8r1-tz-zHZ" kind="relationship" relationship="viewControllers" id="2Nb-VE-cGV"/>
+                        <segue destination="sjo-UK-w73" kind="relationship" relationship="viewControllers" id="XhF-qA-gvE"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aHJ-2I-VB4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1029" y="135"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="botão_ilha_atenção_plena" width="144" height="161"/>
+        <image name="botão_ilha_lazer" width="144" height="161"/>
+        <image name="botão_ilha_pessoas_queridas" width="144" height="161"/>
+        <image name="botão_ilha_saúde" width="144" height="161"/>
+        <image name="icone_ação" width="30" height="30"/>
+        <image name="icone_ilhas" width="30" height="30"/>
+        <image name="icone_perfil" width="30" height="30"/>
+        <image name="nuvens_1" width="173" height="92"/>
+        <image name="nuvens_2" width="144.5" height="89"/>
+        <image name="nuvens_3" width="145" height="90"/>
+        <image name="nuvens_4" width="173" height="84"/>
+        <image name="nuvens_5" width="149" height="92"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
