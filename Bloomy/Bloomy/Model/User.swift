@@ -6,24 +6,24 @@
 //
 
 import CoreData
+import UIKit
 
 struct UserManager {
     static let shared = UserManager()
     static var user: User?
     
-    //create
-    func newUser(withName name: String) -> User? {
-        
+    // MARK: Create
+    public func newUser(withName name: String) -> User? {
         let userObject = NSEntityDescription.insertNewObject(forEntityName: "User", into: coreDataContext)
         
-        guard let user = userObject as? User else {
-            fatalError("Could not find User Entity")
-        }
+        guard let user = userObject as? User else {fatalError("Could not find User Entity")}
         user.name = name
-        return self.save() ? user : nil
+        
+        return self.saveContext() ? user : nil
     }
-    //read
-    func getUser() -> User? {
+    
+    // MARK: Read
+    public func getUser() -> User? {
         let fetchRequest = NSFetchRequest<User>(entityName: "User")
         fetchRequest.fetchLimit = 1
         
@@ -36,42 +36,54 @@ struct UserManager {
         
         return nil
     }
-    //update
-    func updateUserName(name: String) -> Bool {
-        
-        guard let user = getUser() else {
-            fatalError("Could not find User \(name)")
+    
+    public func getUserName() -> String? {
+        guard let user = getUser() else {fatalError("Could not find User")}
+        guard let userName = user.name else {fatalError("Could not find User's name")}
+        return userName
+    }
+    
+    public func getUserImage() -> UIImage? {
+        guard let user = getUser() else {fatalError("Could not find User")}
+        if let userImage = UIImage(data: user.image!) {
+            return userImage
         }
+        return nil
+    }
+    
+    public func getIslands() -> [Island]? {
+        let user = getUser()
+        let islands = user!.userToIsland
+        let islandsArray = islands?.allObjects as? [Island] ?? []
+        return islandsArray
+    }
+    
+    // MARK: Update
+    public func updateUserName(to name: String) -> Bool {
+        guard let user = getUser() else {fatalError("Could not find User")}
         user.name = name
         
-        return self.save()
+        return self.saveContext()
     }
-    //delete
-    func deleteUser(withName name: String) -> Bool {
-        
-        let fetchRequest = NSFetchRequest<User>(entityName: "User")
-        
-        fetchRequest.fetchLimit = 1
-        fetchRequest.predicate = NSPredicate(format: "name == %@", name)
-        
-        do {
-            let user = try coreDataContext.fetch(fetchRequest)
-            
-            if !user.isEmpty {
-                coreDataContext.delete(user[0])
-                return self.save()
-            } else {
-                print("The user \(name) could not be found!")
-            }
-        } catch {
-            print("Error deleting the user \(name)")
+    
+    public func updateUserImage(to image: UIImage) -> Bool {
+        guard let user = getUser() else {fatalError("Could not find User")}
+        if let data = image.pngData() {
+            user.image = data
+            return self.saveContext()
         }
-        
         return false
     }
     
-    private func save() -> Bool {
-        
+    // MARK: Delete
+    public func deleteUser() -> Bool {
+        guard let user = getUser() else { fatalError("Coud not find User") }
+        coreDataContext.delete(user)
+        return self.saveContext()
+    }
+    
+    // MARK: Auxiliar
+    private func saveContext() -> Bool {
         do {
             try coreDataContext.save()
             return true
