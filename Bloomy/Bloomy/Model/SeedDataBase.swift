@@ -156,27 +156,27 @@ struct Challenges {
     ]
     
     let lovedsChallenges = [
-        ["ID": "L0", "Summary": "Mande um meme ou um vídeo engraçado para alguém "],
-        ["ID": "L1", "Summary": "Mande mensagem para um amigo relembrando algum momento muito especial que vocês viveram juntos"],
-        ["ID": "L2", "Summary": "Fale para alguém como essa pessoa é especial"],
-        ["ID": "L3", "Summary": "Elogie duas pessoas que você ama"],
-        ["ID": "L4", "Summary": "Troque indicações de música com alguém "],
-        ["ID": "L5", "Summary": "Mande mensagem para um amigo com quem você não fala há muito tempo perguntando como ele está "],
-        ["ID": "L6", "Summary": "Mande um doce por delivery para alguém de surpresa"],
-        ["ID": "L7", "Summary": "Faça alguma surpresa para alguém que você ama"],
-        ["ID": "L8", "Summary": "Cozinhe uma refeição especial para alguém "],
-        ["ID": "L9", "Summary": "Compre um presente para uma pessoa querida"],
-        ["ID": "L10", "Summary": "Mande uma mensagem de bom dia "],
-        ["ID": "L11", "Summary": "Abrace alguém "],
-        ["ID": "L12", "Summary": "Mande uma mensagem de gratidão pela pelo apoio de alguém na sua vida"],
-        ["ID": "L13", "Summary": "Pergunte a alguém especial como foi seu dia"],
-        ["ID": "L14", "Summary": "Olhe fotos antigas com pessoas queridas"],
-        ["ID": "L15", "Summary": "Ligue para um parente mais velhinho e veja como ele está "],
-        ["ID": "L16", "Summary": "Ligue para alguém que você sente saudade"],
-        ["ID": "L17", "Summary": "Combine de assistir um filme com alguém "],
-        ["ID": "L18", "Summary": "Cante karaokê com alguém "],
-        ["ID": "L19", "Summary": "Brinque de verdade ou consequência com alguém "],
-        ["ID": "L20", "Summary": "Marque uma maratona de filmes com seus amigos"]
+        ["ID": "P0", "Summary": "Mande um meme ou um vídeo engraçado para alguém "],
+        ["ID": "P1", "Summary": "Mande mensagem para um amigo relembrando algum momento muito especial que vocês viveram juntos"],
+        ["ID": "P2", "Summary": "Fale para alguém como essa pessoa é especial"],
+        ["ID": "P3", "Summary": "Elogie duas pessoas que você ama"],
+        ["ID": "P4", "Summary": "Troque indicações de música com alguém "],
+        ["ID": "P5", "Summary": "Mande mensagem para um amigo com quem você não fala há muito tempo perguntando como ele está "],
+        ["ID": "P6", "Summary": "Mande um doce por delivery para alguém de surpresa"],
+        ["ID": "P7", "Summary": "Faça alguma surpresa para alguém que você ama"],
+        ["ID": "P8", "Summary": "Cozinhe uma refeição especial para alguém "],
+        ["ID": "P9", "Summary": "Compre um presente para uma pessoa querida"],
+        ["ID": "P10", "Summary": "Mande uma mensagem de bom dia "],
+        ["ID": "P11", "Summary": "Abrace alguém "],
+        ["ID": "P12", "Summary": "Mande uma mensagem de gratidão pela pelo apoio de alguém na sua vida"],
+        ["ID": "P13", "Summary": "Pergunte a alguém especial como foi seu dia"],
+        ["ID": "P14", "Summary": "Olhe fotos antigas com pessoas queridas"],
+        ["ID": "P15", "Summary": "Ligue para um parente mais velhinho e veja como ele está "],
+        ["ID": "P16", "Summary": "Ligue para alguém que você sente saudade"],
+        ["ID": "P17", "Summary": "Combine de assistir um filme com alguém "],
+        ["ID": "P18", "Summary": "Cante karaokê com alguém "],
+        ["ID": "P19", "Summary": "Brinque de verdade ou consequência com alguém "],
+        ["ID": "P20", "Summary": "Marque uma maratona de filmes com seus amigos"]
     ]
     
     let healthChallenges = [
@@ -197,5 +197,4 @@ struct Challenges {
         ["ID": "H15", "Summary": "Comemore uma pequena vitória sua hoje"],
         ["ID": "H16", "Summary": "Tente fazer uma nova receita saudável  que você está querendo experimentar"]
     ]
-
 }
