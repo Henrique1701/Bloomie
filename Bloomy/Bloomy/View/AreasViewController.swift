@@ -20,21 +20,24 @@ class AreasViewController: UIViewController {
     @IBOutlet weak var botaoSaude: UIButton!
     
     @IBAction func chooseAtencaoPlena(_ sender: Any) {
-        var buttonFrame: CGRect = botaoAtencaoPlena.frame;
         if (selectedAtencaoPlena == true) {
             selectedAtencaoPlena = false
             botaoAtencaoPlena.setBackgroundImage(UIImage(named: "botao_atencao_plena"), for: .normal)
-            buttonFrame.size = CGSize(width: 150, height: 150);
-            botaoAtencaoPlena.frame = buttonFrame
-            //botaoAtencaoPlena.imageView?.contentMode = .scaleAspectFit
             print("Atencao Plena Not Selected")
+            //Animação para que o botão volte a ter o tamanho normal
+            UIButton.animate(withDuration: 0.45) { () -> Void in
+                self.botaoAtencaoPlena.transform = CGAffineTransform(scaleX: 1, y: 1)
+            }
+            
         } else {
             selectedAtencaoPlena = true
             botaoAtencaoPlena.setBackgroundImage(UIImage(named: "botao_on_atencao_plena"), for: .normal)
-            buttonFrame.size = CGSize(width: 121, height: 121);
-            botaoAtencaoPlena.frame = buttonFrame
-            //botaoAtencaoPlena.imageView?.contentMode = .scaleAspectFit
             print("Atencao Selected")
+            //Animação para diminuir o tamanho do botão
+            UIButton.animate(withDuration: 0.45) { () -> Void in
+                self.botaoAtencaoPlena.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+            }
+
         }
     }
     
@@ -43,11 +46,19 @@ class AreasViewController: UIViewController {
             selectedPessoasQueridas = false
             botaoPessoasQueridas.setBackgroundImage(UIImage(named: "botao_pessoas_queridas"), for: .normal)
             print("Pessoas Queridas Not Selected")
+            //Animação para que o botão volte a ter o tamanho normal
+            UIButton.animate(withDuration: 0.45) { () -> Void in
+                self.botaoPessoasQueridas.transform = CGAffineTransform(scaleX: 1, y: 1)
+            }
             
         } else {
             selectedPessoasQueridas = true
             botaoPessoasQueridas.setBackgroundImage(UIImage(named: "botao_on_pessoas_queridas"), for: .normal)
             print("Pessoas Queridas Selected")
+            //Animação para diminuir o tamanho do botão
+            UIButton.animate(withDuration: 0.45) { () -> Void in
+                self.botaoPessoasQueridas.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+            }
         }
     }
     
@@ -56,10 +67,18 @@ class AreasViewController: UIViewController {
             selectedLazer = false
             botaoLazer.setBackgroundImage(UIImage(named: "botao_lazer"), for: .normal)
             print("Lazer Not Selected")
+            //Animação para que o botão volte a ter o tamanho normal
+            UIButton.animate(withDuration: 0.45) { () -> Void in
+                self.botaoLazer.transform = CGAffineTransform(scaleX: 1, y: 1)
+            }
         } else {
             selectedLazer = true
             botaoLazer.setBackgroundImage(UIImage(named: "botao_on_lazer"), for: .normal)
             print("Lazer Selected")
+            //Animação para diminuir o tamanho do botão
+            UIButton.animate(withDuration: 0.45) { () -> Void in
+                self.botaoLazer.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+            }
         }
     }
     
@@ -68,10 +87,18 @@ class AreasViewController: UIViewController {
             selectedSaude = false
             botaoSaude.setBackgroundImage(UIImage(named: "botao_saude"), for: .normal)
             print("Saude Not Selected")
+            //Animação para que o botão volte a ter o tamanho normal
+            UIButton.animate(withDuration: 0.45) { () -> Void in
+                self.botaoSaude.transform = CGAffineTransform(scaleX: 1, y: 1)
+            }
         } else {
             selectedSaude = true
             botaoSaude.setBackgroundImage(UIImage(named: "botao_on_saude"), for: .normal)
             print("Saude Selected")
+            //Animação para diminuir o tamanho do botão
+            UIButton.animate(withDuration: 0.45) { () -> Void in
+                self.botaoSaude.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+            }
         }
     }
     

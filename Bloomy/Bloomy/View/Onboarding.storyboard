@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="glK-6D-x0A">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6wg-Mg-gjz">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,7 +18,7 @@
         <!--ComoVai-->
         <scene sceneID="TPp-vA-J48">
             <objects>
-                <viewController storyboardIdentifier="ComoVai" title="ComoVai" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="glK-6D-x0A" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ComoVai" title="ComoVai" modalPresentationStyle="fullScreen" id="glK-6D-x0A" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hDa-14-lgL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -70,15 +70,16 @@
                         <color key="backgroundColor" red="0.99607843137254903" green="0.96078431372549022" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="6yh-Ot-1Ea"/>
+                    <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j9H-yM-6nD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-307" y="-85"/>
+            <point key="canvasLocation" x="602.89855072463774" y="-85.044642857142847"/>
         </scene>
         <!--ComoSeChama-->
         <scene sceneID="thv-pW-wEe">
             <objects>
-                <viewController storyboardIdentifier="WhatsYourName" title="ComoSeChama" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="93Q-cU-KeB" customClass="ComoSeChamaViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WhatsYourName" title="ComoSeChama" modalPresentationStyle="fullScreen" id="93Q-cU-KeB" customClass="ComoSeChamaViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XLp-GC-8ut">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -96,9 +97,12 @@
                                         <integer key="value" value="24"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="YeR-po-kno" kind="show" id="Dr2-oz-xKf"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Como você se chama?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbB-tr-cNQ">
-                                <rect key="frame" x="56" y="142" width="394" height="153"/>
+                                <rect key="frame" x="56" y="142" width="335" height="104"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="34"/>
                                 <nil key="textColor"/>
@@ -120,7 +124,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="seta"/>
                                 <connections>
-                                    <segue destination="glK-6D-x0A" kind="show" id="WW0-KG-aJ1"/>
+                                    <segue destination="glK-6D-x0A" kind="show" id="Iph-2D-FsY"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -128,13 +132,131 @@
                         <color key="backgroundColor" red="0.99607843137254903" green="0.96078431372549022" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="V0X-PD-V5E"/>
+                    <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EHA-h4-lFL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="747.82608695652175" y="-85.044642857142847"/>
+            <point key="canvasLocation" x="1657.9710144927537" y="-85.044642857142847"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fAQ-3e-LtG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="6wg-Mg-gjz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="x04-nR-xTb"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WG7-Wb-f2l">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="glK-6D-x0A" kind="relationship" relationship="rootViewController" id="mY1-TY-Q94"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YJw-zv-qsa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-307.24637681159425" y="-85.044642857142847"/>
+        </scene>
+        <!--Areas View Controller-->
+        <scene sceneID="WH1-5O-Ab1">
+            <objects>
+                <viewController storyboardIdentifier="Areas2" modalPresentationStyle="fullScreen" id="YeR-po-kno" customClass="AreasViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hsv-xC-Hvs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quais áreas vamos cuidar?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uvk-dJ-jB7">
+                                <rect key="frame" x="56" y="142" width="335" height="104"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lhy-DC-i4h">
+                                <rect key="frame" x="46" y="86" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="botao_voltar"/>
+                                <connections>
+                                    <segue destination="93Q-cU-KeB" kind="show" id="bJ8-og-Wfd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1A8-xo-SnA">
+                                <rect key="frame" x="114" y="749" width="186" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99607843139999996" green="0.73725490199999999" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="20"/>
+                                <state key="normal" title="vamos lá">
+                                    <color key="titleColor" red="0.1450980392" green="0.1450980392" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="24"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ntQ-on-DCI">
+                                <rect key="frame" x="37" y="282" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".SFNS-Regular" family=".SF NS" pointSize="13"/>
+                                <state key="normal" backgroundImage="botao_atencao_plena"/>
+                                <connections>
+                                    <action selector="chooseAtencaoPlena:" destination="YeR-po-kno" eventType="touchUpInside" id="LaP-3t-VT5"/>
+                                    <action selector="chooseAtencaoPlena:" destination="lcS-Br-iiS" eventType="touchUpInside" id="zqJ-gU-X58"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcm-Ub-itW">
+                                <rect key="frame" x="37" y="467" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="botao_lazer"/>
+                                <connections>
+                                    <action selector="chooseLazer:" destination="YeR-po-kno" eventType="touchUpInside" id="3Ly-PV-quC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yfh-ov-lnt">
+                                <rect key="frame" x="227" y="279" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="botao_pessoas_queridas"/>
+                                <connections>
+                                    <action selector="choosePessoasQueridas:" destination="lcS-Br-iiS" eventType="touchUpInside" id="DxY-b6-8m1"/>
+                                    <action selector="choosePessoasQueridas:" destination="YeR-po-kno" eventType="touchUpInside" id="VS9-dX-Fy9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hl-iM-4l8">
+                                <rect key="frame" x="227" y="467" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="botao_saude"/>
+                                <connections>
+                                    <action selector="chooseSaude:" destination="YeR-po-kno" eventType="touchUpInside" id="IqI-SS-9IH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rR8-Td-hEF"/>
+                        <color key="backgroundColor" red="0.98800367119999999" green="0.96098881960000004" blue="0.94510394330000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="m5U-he-LYo"/>
+                    <connections>
+                        <outlet property="botaoAtencaoPlena" destination="ntQ-on-DCI" id="Bb5-9t-Vjk"/>
+                        <outlet property="botaoLazer" destination="vcm-Ub-itW" id="5rh-Qq-cWf"/>
+                        <outlet property="botaoPessoasQueridas" destination="Yfh-ov-lnt" id="D2H-Ee-cge"/>
+                        <outlet property="botaoSaude" destination="2hl-iM-4l8" id="6ub-A3-l2a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dG3-qf-Fid" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="lcS-Br-iiS" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2937.68115942029" y="-85.044642857142847"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="l89-qV-Ujg"/>
+        <segue reference="Iph-2D-FsY"/>
+    </inferredMetricsTieBreakers>
     <resources>
+        <image name="botao_atencao_plena" width="150" height="150"/>
+        <image name="botao_lazer" width="150" height="150"/>
+        <image name="botao_pessoas_queridas" width="150" height="150"/>
+        <image name="botao_saude" width="150" height="150"/>
+        <image name="botao_voltar" width="32" height="30"/>
         <image name="garota-onboarding" width="375" height="403"/>
         <image name="name_line" width="259" height="1"/>
         <image name="seta" width="32" height="30"/>

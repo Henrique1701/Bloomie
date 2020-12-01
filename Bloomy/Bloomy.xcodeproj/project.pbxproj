@@ -15,7 +15,6 @@
 		7D2BEFC625685E48006AFD8C /* Island.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2BEFC525685E48006AFD8C /* Island.swift */; };
 		7D2BEFE8256D86B0006AFD8C /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2BEFE6256D86B0006AFD8C /* User+CoreDataClass.swift */; };
 		7D2BEFE9256D86B0006AFD8C /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2BEFE7256D86B0006AFD8C /* User+CoreDataProperties.swift */; };
-		7DAE801C2575749F00B17FB8 /* Areas.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DAE801B2575749F00B17FB8 /* Areas.storyboard */; };
 		7DAE80212575877000B17FB8 /* AreasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAE80202575877000B17FB8 /* AreasViewController.swift */; };
 		891D2E47256ED7B200AC961A /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891D2E46256ED7B200AC961A /* Challenge.swift */; };
 		8928F54B25670DD10089BE0E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8928F54A25670DD10089BE0E /* User.swift */; };
@@ -34,7 +33,7 @@
 		BEF24E532566C24800D408A8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF24E522566C24800D408A8 /* HomeViewController.swift */; };
 		BFE8F27E98A9FA5E51C8958C /* Pods_Bloomy_BloomyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33CC4FDD39B2F278DD2B4375 /* Pods_Bloomy_BloomyUITests.framework */; };
 		D61D03E825701C2F005BA187 /* Canela.ttc in Resources */ = {isa = PBXBuildFile; fileRef = D61D03D925701B8C005BA187 /* Canela.ttc */; };
-		D64B4F6325756F2000D818EB /* Onboarding1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D64B4F6225756F2000D818EB /* Onboarding1.storyboard */; };
+		D64B4F6325756F2000D818EB /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D64B4F6225756F2000D818EB /* Onboarding.storyboard */; };
 		D64B4F6C257575AB00D818EB /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D64B4F6A2575753200D818EB /* Poppins-Regular.ttf */; };
 		D64B4F70257575AF00D818EB /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D64B4F6B2575757C00D818EB /* Poppins-Bold.ttf */; };
 		D64B4F812575923B00D818EB /* ComoSeChamaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64B4F802575923B00D818EB /* ComoSeChamaViewController.swift */; };
@@ -69,7 +68,6 @@
 		7D2BEFC525685E48006AFD8C /* Island.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Island.swift; sourceTree = "<group>"; };
 		7D2BEFE6256D86B0006AFD8C /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		7D2BEFE7256D86B0006AFD8C /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		7DAE801B2575749F00B17FB8 /* Areas.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Areas.storyboard; sourceTree = "<group>"; };
 		7DAE80202575877000B17FB8 /* AreasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AreasViewController.swift; path = Bloomy/View/AreasViewController.swift; sourceTree = SOURCE_ROOT; };
 		891D2E46256ED7B200AC961A /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		8928F54A25670DD10089BE0E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -96,7 +94,7 @@
 		BEDD7A4925630ADF005BA4F9 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		BEF24E522566C24800D408A8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D61D03D925701B8C005BA187 /* Canela.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Canela.ttc; sourceTree = "<group>"; };
-		D64B4F6225756F2000D818EB /* Onboarding1.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding1.storyboard; sourceTree = "<group>"; };
+		D64B4F6225756F2000D818EB /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		D64B4F6A2575753200D818EB /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		D64B4F6B2575757C00D818EB /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		D64B4F802575923B00D818EB /* ComoSeChamaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComoSeChamaViewController.swift; sourceTree = "<group>"; };
@@ -231,8 +229,6 @@
 				12D13CE0256C2BD60013E511 /* TelaPerfil.storyboard */,
 				BEDD7A4925630ADF005BA4F9 /* Home.storyboard */,
 				D64B4F6225756F2000D818EB /* Onboarding.storyboard */,
-				7DAE801B2575749F00B17FB8 /* Areas.storyboard */,
-				D64B4F6225756F2000D818EB /* Onboarding1.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -372,9 +368,8 @@
 				D64B4F70257575AF00D818EB /* Poppins-Bold.ttf in Resources */,
 				D61D03E825701C2F005BA187 /* Canela.ttc in Resources */,
 				12D13CE1256C2BD60013E511 /* TelaPerfil.storyboard in Resources */,
-				7DAE801C2575749F00B17FB8 /* Areas.storyboard in Resources */,
 				BEC461D2255DABDA003C1D1A /* Assets.xcassets in Resources */,
-				D64B4F6325756F2000D818EB /* Onboarding1.storyboard in Resources */,
+				D64B4F6325756F2000D818EB /* Onboarding.storyboard in Resources */,
 				BEC461CD255DABD8003C1D1A /* Main.storyboard in Resources */,
 				BEDD7A4A25630ADF005BA4F9 /* Home.storyboard in Resources */,
 				D64B4F6C257575AB00D818EB /* Poppins-Regular.ttf in Resources */,
