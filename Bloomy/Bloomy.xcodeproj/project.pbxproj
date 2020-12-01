@@ -15,6 +15,8 @@
 		7D2BEFC625685E48006AFD8C /* Island.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2BEFC525685E48006AFD8C /* Island.swift */; };
 		7D2BEFE8256D86B0006AFD8C /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2BEFE6256D86B0006AFD8C /* User+CoreDataClass.swift */; };
 		7D2BEFE9256D86B0006AFD8C /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2BEFE7256D86B0006AFD8C /* User+CoreDataProperties.swift */; };
+		7DAE801C2575749F00B17FB8 /* Areas.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DAE801B2575749F00B17FB8 /* Areas.storyboard */; };
+		7DAE80212575877000B17FB8 /* AreasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAE80202575877000B17FB8 /* AreasViewController.swift */; };
 		891D2E47256ED7B200AC961A /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891D2E46256ED7B200AC961A /* Challenge.swift */; };
 		8928F54B25670DD10089BE0E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8928F54A25670DD10089BE0E /* User.swift */; };
 		8928F56325670EEE0089BE0E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8928F56225670EEE0089BE0E /* Constants.swift */; };
@@ -67,6 +69,8 @@
 		7D2BEFC525685E48006AFD8C /* Island.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Island.swift; sourceTree = "<group>"; };
 		7D2BEFE6256D86B0006AFD8C /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		7D2BEFE7256D86B0006AFD8C /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		7DAE801B2575749F00B17FB8 /* Areas.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Areas.storyboard; sourceTree = "<group>"; };
+		7DAE80202575877000B17FB8 /* AreasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AreasViewController.swift; path = Bloomy/View/AreasViewController.swift; sourceTree = SOURCE_ROOT; };
 		891D2E46256ED7B200AC961A /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		8928F54A25670DD10089BE0E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8928F56225670EEE0089BE0E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -226,6 +230,8 @@
 				BEC461D3255DABDA003C1D1A /* LaunchScreen.storyboard */,
 				12D13CE0256C2BD60013E511 /* TelaPerfil.storyboard */,
 				BEDD7A4925630ADF005BA4F9 /* Home.storyboard */,
+				D64B4F6225756F2000D818EB /* Onboarding.storyboard */,
+				7DAE801B2575749F00B17FB8 /* Areas.storyboard */,
 				D64B4F6225756F2000D818EB /* Onboarding1.storyboard */,
 			);
 			path = View;
@@ -234,6 +240,7 @@
 		BEDD7A422562F3C3005BA4F9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7DAE80202575877000B17FB8 /* AreasViewController.swift */,
 				BEC461C5255DABD8003C1D1A /* AppDelegate.swift */,
 				BEC461C7255DABD8003C1D1A /* SceneDelegate.swift */,
 				BEC461C9255DABD8003C1D1A /* ViewController.swift */,
@@ -365,6 +372,7 @@
 				D64B4F70257575AF00D818EB /* Poppins-Bold.ttf in Resources */,
 				D61D03E825701C2F005BA187 /* Canela.ttc in Resources */,
 				12D13CE1256C2BD60013E511 /* TelaPerfil.storyboard in Resources */,
+				7DAE801C2575749F00B17FB8 /* Areas.storyboard in Resources */,
 				BEC461D2255DABDA003C1D1A /* Assets.xcassets in Resources */,
 				D64B4F6325756F2000D818EB /* Onboarding1.storyboard in Resources */,
 				BEC461CD255DABD8003C1D1A /* Main.storyboard in Resources */,
@@ -486,6 +494,7 @@
 				7D2BEFC625685E48006AFD8C /* Island.swift in Sources */,
 				7D267544256EDB97000C57A3 /* Reward.swift in Sources */,
 				891D2E47256ED7B200AC961A /* Challenge.swift in Sources */,
+				7DAE80212575877000B17FB8 /* AreasViewController.swift in Sources */,
 				BEC461C6255DABD8003C1D1A /* AppDelegate.swift in Sources */,
 				7D2BEFE8256D86B0006AFD8C /* User+CoreDataClass.swift in Sources */,
 				12D13CF0256C2D130013E511 /* PerfilViewController.swift in Sources */,

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CPN-yz-FoV">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Areas View Controller-->
+        <scene sceneID="8s0-FQ-pOP">
+            <objects>
+                <viewController id="CPN-yz-FoV" customClass="AreasViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qc3-1g-K70">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quais áreas vamos cuidar?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLt-Z2-vQb">
+                                <rect key="frame" x="42" y="144" width="340" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MIs-Xj-2w1">
+                                <rect key="frame" x="42" y="65" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="botao_voltar"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJ6-qM-ahK">
+                                <rect key="frame" x="177" y="713" width="61" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="vamos lá"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UaH-eq-PSg">
+                                <rect key="frame" x="37" y="282" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".SFNS-Regular" family=".SF NS" pointSize="13"/>
+                                <state key="normal" backgroundImage="botao_atencao_plena"/>
+                                <connections>
+                                    <action selector="chooseAtencaoPlena:" destination="ccS-GU-QQ3" eventType="touchUpInside" id="Enl-EL-6Ag"/>
+                                    <action selector="chooseAtencaoPlena:" destination="CPN-yz-FoV" eventType="touchUpInside" id="PGK-oa-6Dk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lUh-oB-vRy">
+                                <rect key="frame" x="37" y="467" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="botao_lazer"/>
+                                <connections>
+                                    <action selector="chooseLazer:" destination="CPN-yz-FoV" eventType="touchUpInside" id="9Ly-Jb-K66"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DQC-gC-jXU">
+                                <rect key="frame" x="227" y="279" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="botao_pessoas_queridas"/>
+                                <connections>
+                                    <action selector="choosePessoasQueridas:" destination="CPN-yz-FoV" eventType="touchUpInside" id="7Jr-hY-Qmb"/>
+                                    <action selector="choosePessoasQueridas:" destination="ccS-GU-QQ3" eventType="touchUpInside" id="IGj-Dy-8VF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="feI-pd-jCQ">
+                                <rect key="frame" x="227" y="467" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="botao_saude"/>
+                                <connections>
+                                    <action selector="chooseSaude:" destination="CPN-yz-FoV" eventType="touchUpInside" id="L8d-6R-Vsa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ho7-UH-pK5"/>
+                        <color key="backgroundColor" red="0.98800367119999999" green="0.96098881960000004" blue="0.94510394330000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <connections>
+                        <outlet property="botaoAtencaoPlena" destination="UaH-eq-PSg" id="k8F-se-XEN"/>
+                        <outlet property="botaoLazer" destination="lUh-oB-vRy" id="SuE-JI-eZg"/>
+                        <outlet property="botaoPessoasQueridas" destination="DQC-gC-jXU" id="qRD-wj-hfk"/>
+                        <outlet property="botaoSaude" destination="feI-pd-jCQ" id="o9i-Yf-3yF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A5H-iq-b2D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="ccS-GU-QQ3" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-486.95652173913049" y="-43.526785714285715"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="botao_atencao_plena" width="150" height="150"/>
+        <image name="botao_lazer" width="150" height="150"/>
+        <image name="botao_pessoas_queridas" width="150" height="150"/>
+        <image name="botao_saude" width="150" height="150"/>
+        <image name="botao_voltar" width="32" height="30"/>
+    </resources>
+</document>
