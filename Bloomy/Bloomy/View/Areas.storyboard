@@ -39,6 +39,7 @@
                                 <state key="normal" backgroundImage="botao_atencao_plena"/>
                                 <connections>
                                     <action selector="chooseAtencaoPlena:" destination="ccS-GU-QQ3" eventType="touchUpInside" id="Enl-EL-6Ag"/>
+                                    <action selector="chooseAtencaoPlena:" destination="CPN-yz-FoV" eventType="touchUpInside" id="PGK-oa-6Dk"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lUh-oB-vRy">
@@ -46,7 +47,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="botao_lazer"/>
                                 <connections>
-                                    <action selector="chooseLazer:" destination="ccS-GU-QQ3" eventType="touchUpInside" id="MIi-aE-KU8"/>
+                                    <action selector="chooseLazer:" destination="CPN-yz-FoV" eventType="touchUpInside" id="9Ly-Jb-K66"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DQC-gC-jXU">
@@ -54,6 +55,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="botao_pessoas_queridas"/>
                                 <connections>
+                                    <action selector="choosePessoasQueridas:" destination="CPN-yz-FoV" eventType="touchUpInside" id="7Jr-hY-Qmb"/>
                                     <action selector="choosePessoasQueridas:" destination="ccS-GU-QQ3" eventType="touchUpInside" id="IGj-Dy-8VF"/>
                                 </connections>
                             </button>
@@ -62,13 +64,19 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="botao_saude"/>
                                 <connections>
-                                    <action selector="chooseSaude:" destination="ccS-GU-QQ3" eventType="touchUpInside" id="oDY-qt-NIN"/>
+                                    <action selector="chooseSaude:" destination="CPN-yz-FoV" eventType="touchUpInside" id="L8d-6R-Vsa"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ho7-UH-pK5"/>
                         <color key="backgroundColor" red="0.98800367119999999" green="0.96098881960000004" blue="0.94510394330000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
+                    <connections>
+                        <outlet property="botaoAtencaoPlena" destination="UaH-eq-PSg" id="k8F-se-XEN"/>
+                        <outlet property="botaoLazer" destination="lUh-oB-vRy" id="SuE-JI-eZg"/>
+                        <outlet property="botaoPessoasQueridas" destination="DQC-gC-jXU" id="qRD-wj-hfk"/>
+                        <outlet property="botaoSaude" destination="feI-pd-jCQ" id="o9i-Yf-3yF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A5H-iq-b2D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="ccS-GU-QQ3" userLabel="Exit" sceneMemberID="exit"/>
