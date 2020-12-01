@@ -58,6 +58,17 @@ struct IslandManager {
         }
     }
     
+    public func getChallenges(fromIsland name: String) -> [Challenge]? {
+        guard let island = self.getIsland(withName: name) else {fatalError("Could not find \(name) Island")}
+        
+        if let challenges = island.islandToChallenge {
+            let challengesArray = challenges.allObjects as? [Challenge] ?? []
+            return challengesArray
+        }
+        
+        return []
+    }
+    
     // MARK: Delete Island
     public func deleteIsland(withName name: String) -> Bool {
         
