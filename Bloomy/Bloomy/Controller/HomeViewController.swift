@@ -27,11 +27,18 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var cloudsConstraint2: NSLayoutConstraint!
     @IBOutlet weak var cloudsConstraint1: NSLayoutConstraint!
     @IBOutlet weak var cloudsConstraint6: NSLayoutConstraint!
-    private let quantityIslands: Int = 1
+    private let quantityIslands: Int = 4
+    let user = UserManager.shared.getUser()
+    let islandsNames: [String] = ["Saúde", "Lazer", "Atenção Plena", "Pessoas Queridas"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Pegar a quantidade de ilhas selecionadas pelo usuário
         setUpIslandsDisplay(quantityIslands: self.quantityIslands)
+        SeedDataBase.shared.seed()
+        let userDate = user?.lastSeen ?? Date()
+       refreshChallenges()
+        
     }
     override func viewDidAppear(_ animated: Bool) {
         // Esconde a navigation bar de todas as telas
@@ -43,6 +50,44 @@ class HomeViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(false, animated: false)
         // TODO: Criar um ariavel de controle para as animações
     }
+    
+    func isSameDay(userDate: Date, actualDate: Date) -> Bool {
+        let diff = Calendar.current.dateComponents([.day], from: userDate, to: actualDate)
+        
+        if diff.day == 0 {
+            return true
+            //fazer nada
+        }
+        
+        return false
+        /*
+         * Atualizar a data do usuário
+         * Atualizar os desafios
+         */
+    }
+    
+    func randomNumber(maximum: Int) -> Int {
+        let randomInt = Int.random(in: 0..<maximum)
+        return randomInt
+    }
+    
+    func refreshChallenges() {
+        var challenges: NSSet = NSSet()
+        for island in islandsNames {
+            guard let islandChallenges = IslandManager.shared.getChallenges(fromIsland: island) else { return } // TODO: arrumar o erro
+            var randomInt = randomNumber(maximum: islandChallenges.count)
+            var auxCount = islandChallenges.count
+            while(!islandChallenges[randomInt].accepted && auxCount > 0) {
+                auxCount -= 1
+                randomInt = (randomInt + 1) % islandChallenges.count
+            }
+            let dailyChallenge = islandChallenges[randomInt]
+            challenges = challenges.adding(dailyChallenge) as NSSet
+            //TODO: caso que todos foram aceitos/concluidos aceitos/Nconcluidos
+        }
+        UserManager.shared.updateDailyChallenges(to: challenges)
+    }
+    
     func setUpIslandsDisplay(quantityIslands: Int) {
         switch quantityIslands {
         case 1:
