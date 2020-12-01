@@ -65,32 +65,50 @@ struct SeedDataBase {
     func createMindfulnessChallenges() {
         let mindfulnessChallenges = Challenges().mindfulnessChallenges
         for challenge in mindfulnessChallenges {
-            _ = ChallengeManager.shared.createChallenge(withID: challenge["ID"]!
-                                                    , withSummary: challenge["Summary"]!)
+            if let mindfulnessChallenge = ChallengeManager.shared.createChallenge(withID: challenge["ID"]!
+                                                                                  , withSummary: challenge["Summary"]!) {
+                mindfulnessChallenge.challengeToIsland = IslandManager.shared.getIsland(withName: "Atenção Plena")
+            } else {
+                print("Challenge \(challenge["ID"] ?? "") da Ilha Atenção Plena não foi criado")
+            }
+            
         }
     }
     
     func createLeisureChallenges() {
-        let leisureChallenges = Challenges().mindfulnessChallenges
+        let leisureChallenges = Challenges().leisureChallenges
         for challenge in leisureChallenges {
-            _ = ChallengeManager.shared.createChallenge(withID: challenge["ID"]!
-                                                    , withSummary: challenge["Summary"]!)
+            if let leisureChallenge = ChallengeManager.shared.createChallenge(withID: challenge["ID"]!
+                                                                              , withSummary: challenge["Summary"]!) {
+                leisureChallenge.challengeToIsland = IslandManager.shared.getIsland(withName: "Lazer")
+            } else {
+                print("Challenge \(challenge["ID"] ?? "") da Ilha Lazer não foi criado")
+            }
         }
     }
     
     func createLovedsChallenges() {
-        let lovedsChallenges = Challenges().mindfulnessChallenges
+        let lovedsChallenges = Challenges().lovedsChallenges
         for challenge in lovedsChallenges {
-           _ = ChallengeManager.shared.createChallenge(withID: challenge["ID"]!
-                                                    , withSummary: challenge["Summary"]!)
+            if let lovedsChallenge = ChallengeManager.shared.createChallenge(withID: challenge["ID"]!
+                                                                             , withSummary: challenge["Summary"]!) {
+                lovedsChallenge.challengeToIsland = IslandManager.shared.getIsland(withName: "Pessoas Queridas")
+            } else {
+                print("Challenge \(challenge["ID"] ?? "") da Ilha Pessoas Queridas não foi criado")
+            }
         }
     }
     
     func createHealthChallenges() {
-        let healthChallenges = Challenges().mindfulnessChallenges
+        let healthChallenges = Challenges().healthChallenges
         for challenge in healthChallenges {
-            _ = ChallengeManager.shared.createChallenge(withID: challenge["ID"]!
-                                                    , withSummary: challenge["Summary"]!)
+            if let healthChallenge = ChallengeManager.shared.createChallenge(withID: challenge["ID"]!
+                                                                             , withSummary: challenge["Summary"]!)
+            {
+                healthChallenge.challengeToIsland = IslandManager.shared.getIsland(withName: "Saúde")
+            } else {
+                print("Challenge \(challenge["ID"] ?? "") da Ilha Saúde não foi criado")
+            }
         }
     }
     
@@ -99,6 +117,7 @@ struct SeedDataBase {
             _ = IslandManager.shared.setUser(islandName: "Atenção Plena", user: user)
             _ = IslandManager.shared.setUser(islandName: "Lazer", user: user)
             _ = IslandManager.shared.setUser(islandName: "Pessoas Queridas", user: user)
+            _ = IslandManager.shared.setUser(islandName: "Saúde", user: user)
         }
     }
 }
