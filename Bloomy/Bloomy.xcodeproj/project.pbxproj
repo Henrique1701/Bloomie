@@ -28,6 +28,14 @@
 		BEC461D5255DABDA003C1D1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEC461D3255DABDA003C1D1A /* LaunchScreen.storyboard */; };
 		BEC461E0255DABDB003C1D1A /* BloomyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC461DF255DABDB003C1D1A /* BloomyTests.swift */; };
 		BEC461EB255DABDB003C1D1A /* BloomyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC461EA255DABDB003C1D1A /* BloomyUITests.swift */; };
+		BED0527C2576B8940035EB18 /* Mindfulness.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BED0527B2576B8940035EB18 /* Mindfulness.storyboard */; };
+		BED052812576B8BB0035EB18 /* Leisure.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BED052802576B8BB0035EB18 /* Leisure.storyboard */; };
+		BED052862576B8D80035EB18 /* Loveds.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BED052852576B8D80035EB18 /* Loveds.storyboard */; };
+		BED0528B2576B8F20035EB18 /* Health.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BED0528A2576B8F20035EB18 /* Health.storyboard */; };
+		BED052902576BB150035EB18 /* MindfulnessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED0528F2576BB150035EB18 /* MindfulnessViewController.swift */; };
+		BED052952576BB250035EB18 /* LeisureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED052942576BB250035EB18 /* LeisureViewController.swift */; };
+		BED0529A2576BB340035EB18 /* LovedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED052992576BB340035EB18 /* LovedsViewController.swift */; };
+		BED0529F2576BB470035EB18 /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED0529E2576BB470035EB18 /* HealthViewController.swift */; };
 		BEDD7A4A25630ADF005BA4F9 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEDD7A4925630ADF005BA4F9 /* Home.storyboard */; };
 		BEF24E532566C24800D408A8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF24E522566C24800D408A8 /* HomeViewController.swift */; };
 		BFE8F27E98A9FA5E51C8958C /* Pods_Bloomy_BloomyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33CC4FDD39B2F278DD2B4375 /* Pods_Bloomy_BloomyUITests.framework */; };
@@ -85,6 +93,14 @@
 		BEC461E6255DABDB003C1D1A /* BloomyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BloomyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEC461EA255DABDB003C1D1A /* BloomyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloomyUITests.swift; sourceTree = "<group>"; };
 		BEC461EC255DABDB003C1D1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BED0527B2576B8940035EB18 /* Mindfulness.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mindfulness.storyboard; sourceTree = "<group>"; };
+		BED052802576B8BB0035EB18 /* Leisure.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Leisure.storyboard; sourceTree = "<group>"; };
+		BED052852576B8D80035EB18 /* Loveds.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Loveds.storyboard; sourceTree = "<group>"; };
+		BED0528A2576B8F20035EB18 /* Health.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Health.storyboard; sourceTree = "<group>"; };
+		BED0528F2576BB150035EB18 /* MindfulnessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindfulnessViewController.swift; sourceTree = "<group>"; };
+		BED052942576BB250035EB18 /* LeisureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeisureViewController.swift; sourceTree = "<group>"; };
+		BED052992576BB340035EB18 /* LovedsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LovedsViewController.swift; sourceTree = "<group>"; };
+		BED0529E2576BB470035EB18 /* HealthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthViewController.swift; sourceTree = "<group>"; };
 		BEDD7A4925630ADF005BA4F9 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		BEF24E522566C24800D408A8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D61D03D925701B8C005BA187 /* Canela.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Canela.ttc; sourceTree = "<group>"; };
@@ -218,6 +234,10 @@
 				BEC461D3255DABDA003C1D1A /* LaunchScreen.storyboard */,
 				12D13CE0256C2BD60013E511 /* TelaPerfil.storyboard */,
 				BEDD7A4925630ADF005BA4F9 /* Home.storyboard */,
+				BED0527B2576B8940035EB18 /* Mindfulness.storyboard */,
+				BED052802576B8BB0035EB18 /* Leisure.storyboard */,
+				BED052852576B8D80035EB18 /* Loveds.storyboard */,
+				BED0528A2576B8F20035EB18 /* Health.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -230,6 +250,10 @@
 				BEC461C9255DABD8003C1D1A /* ViewController.swift */,
 				12D13CEF256C2D130013E511 /* PerfilViewController.swift */,
 				BEF24E522566C24800D408A8 /* HomeViewController.swift */,
+				BED0528F2576BB150035EB18 /* MindfulnessViewController.swift */,
+				BED052942576BB250035EB18 /* LeisureViewController.swift */,
+				BED052992576BB340035EB18 /* LovedsViewController.swift */,
+				BED0529E2576BB470035EB18 /* HealthViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -351,8 +375,12 @@
 			files = (
 				BEC461D5255DABDA003C1D1A /* LaunchScreen.storyboard in Resources */,
 				D61D03E825701C2F005BA187 /* Canela.ttc in Resources */,
+				BED052812576B8BB0035EB18 /* Leisure.storyboard in Resources */,
 				12D13CE1256C2BD60013E511 /* TelaPerfil.storyboard in Resources */,
 				BEC461D2255DABDA003C1D1A /* Assets.xcassets in Resources */,
+				BED052862576B8D80035EB18 /* Loveds.storyboard in Resources */,
+				BED0528B2576B8F20035EB18 /* Health.storyboard in Resources */,
+				BED0527C2576B8940035EB18 /* Mindfulness.storyboard in Resources */,
 				BEC461CD255DABD8003C1D1A /* Main.storyboard in Resources */,
 				BEDD7A4A25630ADF005BA4F9 /* Home.storyboard in Resources */,
 			);
@@ -472,12 +500,16 @@
 				7D267544256EDB97000C57A3 /* Reward.swift in Sources */,
 				891D2E47256ED7B200AC961A /* Challenge.swift in Sources */,
 				BEC461C6255DABD8003C1D1A /* AppDelegate.swift in Sources */,
+				BED052902576BB150035EB18 /* MindfulnessViewController.swift in Sources */,
+				BED0529A2576BB340035EB18 /* LovedsViewController.swift in Sources */,
 				7D2BEFE8256D86B0006AFD8C /* User+CoreDataClass.swift in Sources */,
+				BED0529F2576BB470035EB18 /* HealthViewController.swift in Sources */,
 				12D13CF0256C2D130013E511 /* PerfilViewController.swift in Sources */,
 				8928F54B25670DD10089BE0E /* User.swift in Sources */,
 				BEC461C8255DABD8003C1D1A /* SceneDelegate.swift in Sources */,
 				7D2BEFE9256D86B0006AFD8C /* User+CoreDataProperties.swift in Sources */,
 				8928F56325670EEE0089BE0E /* Constants.swift in Sources */,
+				BED052952576BB250035EB18 /* LeisureViewController.swift in Sources */,
 				89DD872F2570243200DB1C13 /* SeedDataBase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
