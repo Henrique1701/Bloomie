@@ -41,6 +41,7 @@ class HomeViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         // Mostra a navigation bar de todas as telas
         self.navigationController?.setNavigationBarHidden(false, animated: false)
+        // TODO: Criar um ariavel de controle para as animações
     }
     func setUpIslandsDisplay(quantityIslands: Int) {
         switch quantityIslands {
@@ -104,7 +105,6 @@ class HomeViewController: UIViewController {
         UIView.animate(withDuration: 1.5, delay: 0, options: .curveLinear, animations: {
             self.view.layoutIfNeeded()
         }, completion: {_ in
-            print("Nuvens_5 moveu para direita")
             self.moveCloudsToLeft()
         })
     }
@@ -119,7 +119,6 @@ class HomeViewController: UIViewController {
         UIView.animate(withDuration: 1.5, delay: 0, options: .curveLinear, animations: {
             self.view.layoutIfNeeded()
         }, completion: { _ in
-            print("Nuvens_5 moveu para esquerda")
             self.moveCloudsToRight()
         })
     }
