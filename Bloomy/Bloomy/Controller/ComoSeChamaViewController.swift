@@ -9,13 +9,20 @@ import UIKit
 
 class ComoSeChamaViewController: UIViewController {
 
+    @IBOutlet weak var nomeUsuarioTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    //Passa o nome do usuario para o próximo View Controller
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "AreasSegue", case let nextVC = segue.destination as? AreasViewController {
+            nextVC?.nomeUsuario = nomeUsuarioTextField.text
+        }
+    }
     /*
     // MARK: - Navigation
 

@@ -10,6 +10,7 @@ import CoreData
 
 class AreasViewController: UIViewController {
     
+    var nomeUsuario:String?
     var selectedLazer:Bool = false
     var selectedSaude:Bool = false
     var selectedPessoasQueridas:Bool = false
@@ -18,6 +19,9 @@ class AreasViewController: UIViewController {
     @IBOutlet weak var botaoPessoasQueridas: UIButton!
     @IBOutlet weak var botaoLazer: UIButton!
     @IBOutlet weak var botaoSaude: UIButton!
+    //Gerenciadores das funções CRUD de Ilha e Usuário
+    let user = UserManager()
+    let island = IslandManager()
     
     @IBAction func chooseAtencaoPlena(_ sender: Any) {
         if (selectedAtencaoPlena == true) {
@@ -37,7 +41,7 @@ class AreasViewController: UIViewController {
             UIButton.animate(withDuration: 0.45) { () -> Void in
                 self.botaoAtencaoPlena.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
             }
-
+            
         }
     }
     
@@ -102,19 +106,42 @@ class AreasViewController: UIViewController {
         }
     }
     
+    @IBAction func createIslands(_ sender: Any) {
+        //Cria o usuário
+        user.newUser(withName: nomeUsuario!)
+        //Retorna o usuario criado
+        let usuario = self.user.getUser()
+        //Cria as ilhas que estão selecionadas
+        if(selectedLazer == true) {
+            guard let lazerIsland = self.island.newIsland(withName: "Lazer") else { return }
+            self.island.setUser(islandName: "Lazer", user: usuario!)
+            print("Created \(lazerIsland)")
+        }
+        if(selectedSaude == true) {
+            guard let saudeIsland = IslandManager.shared.newIsland(withName: "Saúde") else { return }
+            self.island.setUser(islandName: "Saúde", user: usuario!)
+            print("Created \(saudeIsland)")
+        }
+        if(selectedAtencaoPlena == true) {
+            guard let atencaoPlenaIsland = IslandManager.shared.newIsland(withName: "Atenção Plena") else { return }
+            self.island.setUser(islandName: "Atenção Plena", user: usuario!)
+            print("Created \(atencaoPlenaIsland)")
+        }
+        if(selectedPessoasQueridas == true) {
+            guard let pessoasQueridasIsland = IslandManager.shared.newIsland(withName: "Pessoas Queridas") else { return }
+            self.island.setUser(islandName: "Pessoas Queridas", user: usuario!)
+            print("Created \(pessoasQueridasIsland)")
+        }
+    }
+
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("oi")
-        // Do any additional setup after loading the view.
+        //print(self.user.getUserName() ?? "tá sem nome")
     }
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    
+    
     
 }

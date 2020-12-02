@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6wg-Mg-gjz">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -20,17 +20,17 @@
             <objects>
                 <viewController storyboardIdentifier="ComoVai" title="ComoVai" modalPresentationStyle="fullScreen" id="glK-6D-x0A" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hDa-14-lgL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Como vai?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Tr-F3-kKI">
-                                <rect key="frame" x="114" y="556" width="186" height="48"/>
+                                <rect key="frame" x="78" y="364.5" width="164" height="40"/>
                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="garota-onboarding" translatesAutoresizingMaskIntoConstraints="NO" id="XBE-gh-IuC">
-                                <rect key="frame" x="19.5" y="113" width="375" height="403"/>
+                                <rect key="frame" x="15" y="69" width="290" height="255.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="XBE-gh-IuC" secondAttribute="height" multiplier="375:403" id="DZP-zJ-iTv"/>
                                 </constraints>
@@ -43,7 +43,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="249" text="Acreditamos que pequenas ações conseguem mudar nosso mundo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fB0-LF-O2F">
-                                <rect key="frame" x="36" y="640" width="342" height="53.5"/>
+                                <rect key="frame" x="-11" y="440.5" width="342" height="53.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53.5" id="KEM-ui-AxR"/>
                                     <constraint firstAttribute="width" constant="342" id="f1V-sZ-zk6"/>
@@ -53,7 +53,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" placeholderIntrinsicWidth="186" placeholderIntrinsicHeight="48" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fv6-4Z-sev">
-                                <rect key="frame" x="114" y="761" width="186" height="48"/>
+                                <rect key="frame" x="67" y="467" width="186" height="48"/>
                                 <color key="backgroundColor" red="0.99607843137254903" green="0.73725490196078436" blue="0.082352941176470587" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="rbU-Mn-9t2"/>
@@ -101,11 +101,11 @@
             <objects>
                 <viewController storyboardIdentifier="WhatsYourName" title="ComoSeChama" modalPresentationStyle="fullScreen" id="93Q-cU-KeB" customClass="ComoSeChamaViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XLp-GC-8ut">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7H-AW-x4F">
-                                <rect key="frame" x="114" y="673" width="186" height="48"/>
+                                <rect key="frame" x="67" y="423" width="186" height="48"/>
                                 <color key="backgroundColor" red="0.99607843139999996" green="0.73725490199999999" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="CUi-p9-PE0"/>
@@ -121,23 +121,23 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="YeR-po-kno" kind="show" id="Dr2-oz-xKf"/>
+                                    <segue destination="YeR-po-kno" kind="show" identifier="AreasSegue" id="Dr2-oz-xKf"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Como você se chama?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbB-tr-cNQ">
-                                <rect key="frame" x="46" y="50" width="322" height="95.5"/>
+                                <rect key="frame" x="46" y="50" width="228" height="79.5"/>
                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VUl-JR-n5T">
-                                <rect key="frame" x="46" y="190" width="322" height="18.5"/>
+                                <rect key="frame" x="46" y="174" width="228" height="18.5"/>
                                 <color key="backgroundColor" red="0.9509803921568627" green="0.95659305363222558" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="name_line" translatesAutoresizingMaskIntoConstraints="NO" id="30f-Pd-FU9">
-                                <rect key="frame" x="46" y="219" width="322" height="1"/>
+                                <rect key="frame" x="46" y="203" width="228" height="1"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eOw-CH-D6B"/>
@@ -161,6 +161,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="V0X-PD-V5E"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="nomeUsuarioTextField" destination="VUl-JR-n5T" id="Zjj-67-kXj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EHA-h4-lFL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -188,13 +191,13 @@
         <!--Areas View Controller-->
         <scene sceneID="WH1-5O-Ab1">
             <objects>
-                <viewController storyboardIdentifier="Areas2" modalPresentationStyle="fullScreen" id="YeR-po-kno" customClass="AreasViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Areas" modalPresentationStyle="fullScreen" id="YeR-po-kno" customClass="AreasViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hsv-xC-Hvs">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1A8-xo-SnA">
-                                <rect key="frame" x="114" y="673" width="186" height="48"/>
+                                <rect key="frame" x="67" y="423" width="186" height="48"/>
                                 <color key="backgroundColor" red="0.99607843139999996" green="0.73725490199999999" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="186" id="Sqt-Uq-VZJ"/>
@@ -209,9 +212,12 @@
                                         <integer key="value" value="24"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="createIslands:" destination="YeR-po-kno" eventType="touchUpInside" id="85q-Vs-Uyt"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ntQ-on-DCI">
-                                <rect key="frame" x="36.5" y="252" width="142" height="142"/>
+                                <rect key="frame" x="35" y="161.5" width="96" height="96"/>
                                 <fontDescription key="fontDescription" name=".SFNS-Regular" family=".SF NS" pointSize="13"/>
                                 <state key="normal" backgroundImage="botao_atencao_plena"/>
                                 <connections>
@@ -220,14 +226,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcm-Ub-itW">
-                                <rect key="frame" x="36.5" y="454" width="142" height="142"/>
+                                <rect key="frame" x="35" y="292.5" width="96" height="96"/>
                                 <state key="normal" backgroundImage="botao_lazer"/>
                                 <connections>
                                     <action selector="chooseLazer:" destination="YeR-po-kno" eventType="touchUpInside" id="3Ly-PV-quC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yfh-ov-lnt">
-                                <rect key="frame" x="235.5" y="252" width="142" height="142"/>
+                                <rect key="frame" x="189" y="161.5" width="96" height="96"/>
                                 <state key="normal" backgroundImage="botao_pessoas_queridas"/>
                                 <connections>
                                     <action selector="choosePessoasQueridas:" destination="lcS-Br-iiS" eventType="touchUpInside" id="DxY-b6-8m1"/>
@@ -235,14 +241,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hl-iM-4l8">
-                                <rect key="frame" x="235.5" y="454" width="142" height="142"/>
+                                <rect key="frame" x="189" y="292.5" width="96" height="96"/>
                                 <state key="normal" backgroundImage="botao_saude"/>
                                 <connections>
                                     <action selector="chooseSaude:" destination="YeR-po-kno" eventType="touchUpInside" id="IqI-SS-9IH"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quais áreas vamos cuidar?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vCh-zs-79V">
-                                <rect key="frame" x="46" y="50" width="322" height="100.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quais áreas vamos cuidar?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.84999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="vCh-zs-79V">
+                                <rect key="frame" x="46" y="50" width="228" height="68"/>
                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -261,7 +267,6 @@
                             <constraint firstItem="ntQ-on-DCI" firstAttribute="width" secondItem="rR8-Td-hEF" secondAttribute="height" multiplier="75:409" id="E3f-uy-4EL"/>
                             <constraint firstItem="Yfh-ov-lnt" firstAttribute="height" secondItem="rR8-Td-hEF" secondAttribute="height" multiplier="0.183374" id="E5f-By-8AX"/>
                             <constraint firstItem="ntQ-on-DCI" firstAttribute="centerX" secondItem="hsv-xC-Hvs" secondAttribute="centerX" multiplier="0.52" id="Ekc-4P-T73"/>
-                            <constraint firstItem="vCh-zs-79V" firstAttribute="width" secondItem="rR8-Td-hEF" secondAttribute="width" multiplier="0.777778" id="Jz7-tx-CMv"/>
                             <constraint firstItem="vCh-zs-79V" firstAttribute="leading" secondItem="rR8-Td-hEF" secondAttribute="leading" constant="46" id="QNN-iT-LU2"/>
                             <constraint firstItem="Yfh-ov-lnt" firstAttribute="centerX" secondItem="hsv-xC-Hvs" secondAttribute="centerX" multiplier="1.48" id="RYQ-JL-y4c"/>
                             <constraint firstItem="2hl-iM-4l8" firstAttribute="centerX" secondItem="hsv-xC-Hvs" secondAttribute="centerX" multiplier="1.48" id="RzU-md-nEX"/>
