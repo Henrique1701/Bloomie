@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -28,7 +27,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NfR-0v-VZe">
-                                <rect key="frame" x="111.5" y="774" width="191" height="48"/>
+                                <rect key="frame" x="111.5" y="773" width="191" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="NfR-0v-VZe" secondAttribute="height" multiplier="191:48" priority="750" id="lo3-eq-8uV"/>
                                 </constraints>
@@ -46,7 +45,7 @@
                             <constraint firstItem="oZj-7E-Idn" firstAttribute="centerY" secondItem="pqV-Wh-NaH" secondAttribute="centerY" id="9za-vB-eHg"/>
                             <constraint firstItem="oZj-7E-Idn" firstAttribute="centerX" secondItem="pqV-Wh-NaH" secondAttribute="centerX" id="WIR-ah-JIy"/>
                             <constraint firstItem="NfR-0v-VZe" firstAttribute="width" secondItem="R8T-aD-uv3" secondAttribute="width" multiplier="0.461353" id="ZLp-RS-GVq"/>
-                            <constraint firstItem="R8T-aD-uv3" firstAttribute="bottom" secondItem="NfR-0v-VZe" secondAttribute="bottom" constant="40" id="aAi-BH-pq3"/>
+                            <constraint firstItem="R8T-aD-uv3" firstAttribute="bottom" secondItem="NfR-0v-VZe" secondAttribute="bottom" multiplier="1.05" id="aAi-BH-pq3"/>
                             <constraint firstItem="NfR-0v-VZe" firstAttribute="height" secondItem="R8T-aD-uv3" secondAttribute="height" multiplier="0.0586797" id="fpl-6j-JPP"/>
                         </constraints>
                     </view>
@@ -58,46 +57,112 @@
             </objects>
             <point key="canvasLocation" x="-272.46376811594206" y="17.410714285714285"/>
         </scene>
-        <!--View Controller-->
+        <!--Loveds View Controller-->
         <scene sceneID="CMO-Jh-B70">
             <objects>
-                <viewController storyboardIdentifier="Loveds" id="sRg-Fw-Wnf" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Loveds" id="sRg-Fw-Wnf" customClass="LovedsViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nHg-de-HAR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcW-Hv-4yq">
+                                <rect key="frame" x="111.5" y="773" width="191" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="bcW-Hv-4yq" secondAttribute="height" multiplier="191:48" id="n72-14-4hd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
+                                <inset key="contentEdgeInsets" minX="37" minY="16" maxX="37" maxY="16"/>
+                                <state key="normal" title="desafio do dia" backgroundImage="botao_desafio_do_dia">
+                                    <color key="titleColor" red="0.1333333333" green="0.1333333333" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="A2q-pt-6El"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.99602943659999998" green="0.96094125509999995" blue="0.94508653880000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="bcW-Hv-4yq" firstAttribute="centerX" secondItem="nHg-de-HAR" secondAttribute="centerX" id="8fh-g3-QLb"/>
+                            <constraint firstItem="A2q-pt-6El" firstAttribute="bottom" secondItem="bcW-Hv-4yq" secondAttribute="bottom" multiplier="1.05" id="AYm-mM-GXu"/>
+                            <constraint firstItem="bcW-Hv-4yq" firstAttribute="height" secondItem="A2q-pt-6El" secondAttribute="height" multiplier="0.0586797" id="Vht-AA-uWY"/>
+                            <constraint firstItem="bcW-Hv-4yq" firstAttribute="width" secondItem="A2q-pt-6El" secondAttribute="width" multiplier="0.461353" id="zdI-uH-NaU"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="challengeDayButton" destination="bcW-Hv-4yq" id="b4t-3D-RTx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T0F-CK-K83" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-266" y="701"/>
         </scene>
-        <!--View Controller-->
+        <!--Leisure View Controller-->
         <scene sceneID="9IP-dI-Q1H">
             <objects>
-                <viewController storyboardIdentifier="Leisure" id="bVq-44-vCv" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Leisure" id="bVq-44-vCv" customClass="LeisureViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4vC-0e-5Kz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mi9-3O-WEG">
+                                <rect key="frame" x="111.5" y="773" width="191" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mi9-3O-WEG" secondAttribute="height" multiplier="191:48" id="m4I-HG-LzS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
+                                <inset key="contentEdgeInsets" minX="37" minY="16" maxX="37" maxY="16"/>
+                                <state key="normal" title="desafio do dia" backgroundImage="botao_desafio_do_dia">
+                                    <color key="titleColor" red="0.1333333333" green="0.1333333333" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Afe-iT-dF4"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.99607843139999996" green="0.96078431369999995" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="mi9-3O-WEG" firstAttribute="height" secondItem="Afe-iT-dF4" secondAttribute="height" multiplier="0.0586797" id="1hN-mq-sGM"/>
+                            <constraint firstItem="Afe-iT-dF4" firstAttribute="bottom" secondItem="mi9-3O-WEG" secondAttribute="bottom" multiplier="1.05" id="NGp-rX-4Xi"/>
+                            <constraint firstItem="mi9-3O-WEG" firstAttribute="width" secondItem="Afe-iT-dF4" secondAttribute="width" multiplier="0.461353" id="VcS-A2-PFy"/>
+                            <constraint firstItem="mi9-3O-WEG" firstAttribute="centerX" secondItem="4vC-0e-5Kz" secondAttribute="centerX" id="veg-8Z-fFF"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="challengeDayButton" destination="mi9-3O-WEG" id="WIt-a9-wF1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qnk-vf-yPW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="523" y="17"/>
         </scene>
-        <!--View Controller-->
+        <!--Health View Controller-->
         <scene sceneID="DYQ-zp-fR1">
             <objects>
-                <viewController storyboardIdentifier="Health" id="emZ-vQ-65r" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Health" id="emZ-vQ-65r" customClass="HealthViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U6k-h0-ImQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mAy-eu-kQQ">
+                                <rect key="frame" x="111.5" y="773" width="191" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mAy-eu-kQQ" secondAttribute="height" multiplier="191:48" id="oBJ-vE-5K6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
+                                <inset key="contentEdgeInsets" minX="37" minY="16" maxX="37" maxY="16"/>
+                                <state key="normal" title="desafio do dia" backgroundImage="botao_desafio_do_dia">
+                                    <color key="titleColor" red="0.1333333333" green="0.1333333333" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="bTv-Za-ZDa"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.99602943659999998" green="0.96094125509999995" blue="0.94508653880000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="bTv-Za-ZDa" firstAttribute="bottom" secondItem="mAy-eu-kQQ" secondAttribute="bottom" multiplier="1.05" id="MB3-kY-ph2"/>
+                            <constraint firstItem="mAy-eu-kQQ" firstAttribute="height" secondItem="bTv-Za-ZDa" secondAttribute="height" multiplier="0.0586797" id="iD6-Ia-oJm"/>
+                            <constraint firstItem="mAy-eu-kQQ" firstAttribute="width" secondItem="bTv-Za-ZDa" secondAttribute="width" multiplier="0.461353" id="nvK-Ex-ppV"/>
+                            <constraint firstItem="mAy-eu-kQQ" firstAttribute="centerX" secondItem="U6k-h0-ImQ" secondAttribute="centerX" id="rL4-Rc-8SF"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="challengeDayButton" destination="mAy-eu-kQQ" id="5jI-Tk-Iqp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="roE-80-Eah" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -106,8 +171,5 @@
     </scenes>
     <resources>
         <image name="botao_desafio_do_dia" width="191" height="48"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

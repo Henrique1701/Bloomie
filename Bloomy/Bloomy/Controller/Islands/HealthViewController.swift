@@ -9,9 +9,15 @@ import UIKit
 
 class HealthViewController: UIViewController {
 
+    @IBOutlet weak var challengeDayButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Saúde"
+        
+        // Ajusta o tamaho do titulo do botão
+        self.challengeDayButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        
         setupNavigationController()
         // Do any additional setup after loading the view.
     }

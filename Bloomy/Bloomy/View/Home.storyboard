@@ -321,7 +321,7 @@
         <segue reference="J2b-CO-2Tp"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="botao_back" width="54" height="33"/>
+        <image name="botao_back" width="32" height="39"/>
         <image name="botao_ilha_atencao_plena" width="144" height="161"/>
         <image name="botao_ilha_lazer" width="144" height="161"/>
         <image name="botao_ilha_pessoas_queridas" width="144" height="161"/>
