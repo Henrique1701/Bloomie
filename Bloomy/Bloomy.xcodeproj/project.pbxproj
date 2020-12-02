@@ -28,14 +28,12 @@
 		BEC461D5255DABDA003C1D1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEC461D3255DABDA003C1D1A /* LaunchScreen.storyboard */; };
 		BEC461E0255DABDB003C1D1A /* BloomyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC461DF255DABDB003C1D1A /* BloomyTests.swift */; };
 		BEC461EB255DABDB003C1D1A /* BloomyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC461EA255DABDB003C1D1A /* BloomyUITests.swift */; };
-		BED0527C2576B8940035EB18 /* Mindfulness.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BED0527B2576B8940035EB18 /* Mindfulness.storyboard */; };
-		BED052812576B8BB0035EB18 /* Leisure.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BED052802576B8BB0035EB18 /* Leisure.storyboard */; };
-		BED052862576B8D80035EB18 /* Loveds.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BED052852576B8D80035EB18 /* Loveds.storyboard */; };
-		BED0528B2576B8F20035EB18 /* Health.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BED0528A2576B8F20035EB18 /* Health.storyboard */; };
+		BED0527C2576B8940035EB18 /* Islands.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BED0527B2576B8940035EB18 /* Islands.storyboard */; };
 		BED052902576BB150035EB18 /* MindfulnessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED0528F2576BB150035EB18 /* MindfulnessViewController.swift */; };
 		BED052952576BB250035EB18 /* LeisureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED052942576BB250035EB18 /* LeisureViewController.swift */; };
 		BED0529A2576BB340035EB18 /* LovedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED052992576BB340035EB18 /* LovedsViewController.swift */; };
 		BED0529F2576BB470035EB18 /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED0529E2576BB470035EB18 /* HealthViewController.swift */; };
+		BED052D62577EC070035EB18 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BED052D52577EC070035EB18 /* Poppins-SemiBold.ttf */; };
 		BEDD7A4A25630ADF005BA4F9 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEDD7A4925630ADF005BA4F9 /* Home.storyboard */; };
 		BEF24E532566C24800D408A8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF24E522566C24800D408A8 /* HomeViewController.swift */; };
 		BFE8F27E98A9FA5E51C8958C /* Pods_Bloomy_BloomyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33CC4FDD39B2F278DD2B4375 /* Pods_Bloomy_BloomyUITests.framework */; };
@@ -93,14 +91,12 @@
 		BEC461E6255DABDB003C1D1A /* BloomyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BloomyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEC461EA255DABDB003C1D1A /* BloomyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloomyUITests.swift; sourceTree = "<group>"; };
 		BEC461EC255DABDB003C1D1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BED0527B2576B8940035EB18 /* Mindfulness.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mindfulness.storyboard; sourceTree = "<group>"; };
-		BED052802576B8BB0035EB18 /* Leisure.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Leisure.storyboard; sourceTree = "<group>"; };
-		BED052852576B8D80035EB18 /* Loveds.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Loveds.storyboard; sourceTree = "<group>"; };
-		BED0528A2576B8F20035EB18 /* Health.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Health.storyboard; sourceTree = "<group>"; };
+		BED0527B2576B8940035EB18 /* Islands.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Islands.storyboard; sourceTree = "<group>"; };
 		BED0528F2576BB150035EB18 /* MindfulnessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindfulnessViewController.swift; sourceTree = "<group>"; };
 		BED052942576BB250035EB18 /* LeisureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeisureViewController.swift; sourceTree = "<group>"; };
 		BED052992576BB340035EB18 /* LovedsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LovedsViewController.swift; sourceTree = "<group>"; };
 		BED0529E2576BB470035EB18 /* HealthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthViewController.swift; sourceTree = "<group>"; };
+		BED052D52577EC070035EB18 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		BEDD7A4925630ADF005BA4F9 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		BEF24E522566C24800D408A8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D61D03D925701B8C005BA187 /* Canela.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Canela.ttc; sourceTree = "<group>"; };
@@ -260,17 +256,6 @@
 			path = BloomyUITests;
 			sourceTree = "<group>";
 		};
-		BED052D12577E28D0035EB18 /* Islands */ = {
-			isa = PBXGroup;
-			children = (
-				BED0527B2576B8940035EB18 /* Mindfulness.storyboard */,
-				BED052802576B8BB0035EB18 /* Leisure.storyboard */,
-				BED052852576B8D80035EB18 /* Loveds.storyboard */,
-				BED0528A2576B8F20035EB18 /* Health.storyboard */,
-			);
-			path = Islands;
-			sourceTree = "<group>";
-		};
 		BEDD7A402562F3AB005BA4F9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -288,7 +273,7 @@
 				BEC461D3255DABDA003C1D1A /* LaunchScreen.storyboard */,
 				12D13CE0256C2BD60013E511 /* TelaPerfil.storyboard */,
 				BEDD7A4925630ADF005BA4F9 /* Home.storyboard */,
-				BED052D12577E28D0035EB18 /* Islands */,
+				BED0527B2576B8940035EB18 /* Islands.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -309,6 +294,7 @@
 		D61D03D825701B6F005BA187 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				BED052D52577EC070035EB18 /* Poppins-SemiBold.ttf */,
 				D61D03D925701B8C005BA187 /* Canela.ttc */,
 			);
 			path = Fonts;
@@ -423,12 +409,10 @@
 			files = (
 				BEC461D5255DABDA003C1D1A /* LaunchScreen.storyboard in Resources */,
 				D61D03E825701C2F005BA187 /* Canela.ttc in Resources */,
-				BED052812576B8BB0035EB18 /* Leisure.storyboard in Resources */,
+				BED052D62577EC070035EB18 /* Poppins-SemiBold.ttf in Resources */,
 				12D13CE1256C2BD60013E511 /* TelaPerfil.storyboard in Resources */,
 				BEC461D2255DABDA003C1D1A /* Assets.xcassets in Resources */,
-				BED052862576B8D80035EB18 /* Loveds.storyboard in Resources */,
-				BED0528B2576B8F20035EB18 /* Health.storyboard in Resources */,
-				BED0527C2576B8940035EB18 /* Mindfulness.storyboard in Resources */,
+				BED0527C2576B8940035EB18 /* Islands.storyboard in Resources */,
 				BEC461CD255DABD8003C1D1A /* Main.storyboard in Resources */,
 				BEDD7A4A25630ADF005BA4F9 /* Home.storyboard in Resources */,
 			);
