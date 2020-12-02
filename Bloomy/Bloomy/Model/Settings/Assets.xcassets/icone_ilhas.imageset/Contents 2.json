@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "botão_ilha_lazer.png",
+      "filename" : "icone_ilhas.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "botão_ilha_lazer@2x.png",
+      "filename" : "icone_ilhas@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "botão_ilha_lazer@3x.png",
+      "filename" : "icone_ilhas@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

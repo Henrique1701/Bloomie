@@ -62,7 +62,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="8HL-Y3-ktF" secondAttribute="height" multiplier="18:23" id="Lnt-hO-tn9"/>
                                                 </constraints>
-                                                <state key="normal" image="botão_ilha_saúde"/>
+                                                <state key="normal" image="botao_ilha_saude"/>
                                                 <connections>
                                                     <segue destination="PHw-wF-UXq" kind="show" id="5v6-At-0e3"/>
                                                 </connections>
@@ -72,7 +72,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="OU3-jK-IzX" secondAttribute="height" multiplier="18:23" id="NMU-Qb-kxc"/>
                                                 </constraints>
-                                                <state key="normal" image="botão_ilha_saúde"/>
+                                                <state key="normal" image="botao_ilha_saude"/>
                                                 <connections>
                                                     <segue destination="PHw-wF-UXq" kind="show" id="fDF-zQ-dhp"/>
                                                 </connections>
@@ -87,7 +87,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="0Hd-UH-ppZ" secondAttribute="height" multiplier="18:23" id="Z0K-Ig-YI0"/>
                                                 </constraints>
-                                                <state key="normal" image="botão_ilha_lazer"/>
+                                                <state key="normal" image="botao_ilha_lazer"/>
                                                 <connections>
                                                     <segue destination="PfX-76-McD" kind="show" id="dWC-oI-uFe"/>
                                                 </connections>
@@ -97,7 +97,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="qEC-eP-JPs" secondAttribute="height" multiplier="18:23" id="IN7-NV-g1c"/>
                                                 </constraints>
-                                                <state key="normal" image="botão_ilha_lazer"/>
+                                                <state key="normal" image="botao_ilha_lazer"/>
                                                 <connections>
                                                     <segue destination="PfX-76-McD" kind="show" id="27e-V3-Vif"/>
                                                 </connections>
@@ -112,7 +112,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="0nr-na-HSl" secondAttribute="height" multiplier="18:23" id="Lph-0w-q5w"/>
                                                 </constraints>
-                                                <state key="normal" image="botão_ilha_atenção_plena"/>
+                                                <state key="normal" image="botao_ilha_atencao_plena"/>
                                                 <connections>
                                                     <segue destination="rmV-B3-mhM" kind="show" id="J2b-CO-2Tp"/>
                                                 </connections>
@@ -122,7 +122,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="qX8-qc-3jX" secondAttribute="height" multiplier="18:23" id="Hle-ug-N2B"/>
                                                 </constraints>
-                                                <state key="normal" image="botão_ilha_atenção_plena"/>
+                                                <state key="normal" image="botao_ilha_atencao_plena"/>
                                                 <connections>
                                                     <segue destination="rmV-B3-mhM" kind="show" id="KhC-L2-CGc"/>
                                                 </connections>
@@ -137,7 +137,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="DJT-c0-Yb4" secondAttribute="height" multiplier="18:23" id="kqE-TP-HHK"/>
                                                 </constraints>
-                                                <state key="normal" image="botão_ilha_pessoas_queridas"/>
+                                                <state key="normal" image="botao_ilha_pessoas_queridas"/>
                                                 <connections>
                                                     <segue destination="4zx-73-c06" kind="show" id="o7O-ez-KU1"/>
                                                 </connections>
@@ -147,7 +147,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="LAO-tD-T8b" secondAttribute="height" multiplier="18:23" id="dah-da-eLy"/>
                                                 </constraints>
-                                                <state key="normal" image="botão_ilha_pessoas_queridas"/>
+                                                <state key="normal" image="botao_ilha_pessoas_queridas"/>
                                                 <connections>
                                                     <segue destination="4zx-73-c06" kind="show" id="GHv-hy-UN0"/>
                                                 </connections>
@@ -284,7 +284,7 @@
                         <viewLayoutGuide key="safeArea" id="Roa-Pm-K2v"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Desafios" image="icone_ação" id="14f-Z1-41G"/>
+                    <tabBarItem key="tabBarItem" title="Desafios" image="icone_acao" id="14f-Z1-41G"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xg8-Jq-mtk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -319,11 +319,11 @@
         <segue reference="J2b-CO-2Tp"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="botão_ilha_atenção_plena" width="144" height="161"/>
-        <image name="botão_ilha_lazer" width="144" height="161"/>
-        <image name="botão_ilha_pessoas_queridas" width="144" height="161"/>
-        <image name="botão_ilha_saúde" width="144" height="161"/>
-        <image name="icone_ação" width="30" height="30"/>
+        <image name="botao_ilha_atencao_plena" width="144" height="161"/>
+        <image name="botao_ilha_lazer" width="144" height="161"/>
+        <image name="botao_ilha_pessoas_queridas" width="144" height="161"/>
+        <image name="botao_ilha_saude" width="144" height="161"/>
+        <image name="icone_acao" width="30" height="30"/>
         <image name="icone_ilhas" width="30" height="30"/>
         <image name="icone_perfil" width="30" height="30"/>
         <image name="nuvens_1" width="173" height="92"/>

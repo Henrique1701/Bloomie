@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "botão_ilha_pessoas_queridas 2.png",
+      "filename" : "botao_ilha_saude.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "botão_ilha_pessoas_queridas@2x 2.png",
+      "filename" : "botao_ilha_saude@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "botão_ilha_pessoas_queridas@3x 2.png",
+      "filename" : "botao_ilha_saude@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
