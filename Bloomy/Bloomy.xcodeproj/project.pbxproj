@@ -148,6 +148,57 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		895637142577C7B800CA8D3B /* Islands */ = {
+			isa = PBXGroup;
+			children = (
+				BED0528F2576BB150035EB18 /* MindfulnessViewController.swift */,
+				BED052942576BB250035EB18 /* LeisureViewController.swift */,
+				BED052992576BB340035EB18 /* LovedsViewController.swift */,
+				BED0529E2576BB470035EB18 /* HealthViewController.swift */,
+			);
+			path = Islands;
+			sourceTree = "<group>";
+		};
+		895637152577C7D900CA8D3B /* User */ = {
+			isa = PBXGroup;
+			children = (
+				8928F54A25670DD10089BE0E /* User.swift */,
+				7D2BEFE6256D86B0006AFD8C /* User+CoreDataClass.swift */,
+				7D2BEFE7256D86B0006AFD8C /* User+CoreDataProperties.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		895637172577C7FD00CA8D3B /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				BEC461D1255DABDA003C1D1A /* Assets.xcassets */,
+				D61D03D825701B6F005BA187 /* Fonts */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		895637182577C80300CA8D3B /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				BEC461CE255DABD8003C1D1A /* Bloomy.xcdatamodeld */,
+				891D2E46256ED7B200AC961A /* Challenge.swift */,
+				7D2BEFC525685E48006AFD8C /* Island.swift */,
+				7D267543256EDB97000C57A3 /* Reward.swift */,
+				89DD872E2570243200DB1C13 /* SeedDataBase.swift */,
+				895637152577C7D900CA8D3B /* User */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		895637192577C80900CA8D3B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8928F56225670EEE0089BE0E /* Constants.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		AE4F409CCC5D9A13F9027B38 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,7 +238,6 @@
 				BEDD7A412562F3B8005BA4F9 /* View */,
 				BEDD7A422562F3C3005BA4F9 /* Controller */,
 				BEC461D6255DABDA003C1D1A /* Info.plist */,
-				8928F56225670EEE0089BE0E /* Constants.swift */,
 			);
 			path = Bloomy;
 			sourceTree = "<group>";
@@ -213,16 +263,9 @@
 		BEDD7A402562F3AB005BA4F9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				7D2BEFE6256D86B0006AFD8C /* User+CoreDataClass.swift */,
-				7D2BEFE7256D86B0006AFD8C /* User+CoreDataProperties.swift */,
-				D61D03D825701B6F005BA187 /* Fonts */,
-				BEC461D1255DABDA003C1D1A /* Assets.xcassets */,
-				BEC461CE255DABD8003C1D1A /* Bloomy.xcdatamodeld */,
-				891D2E46256ED7B200AC961A /* Challenge.swift */,
-				7D2BEFC525685E48006AFD8C /* Island.swift */,
-				7D267543256EDB97000C57A3 /* Reward.swift */,
-				8928F54A25670DD10089BE0E /* User.swift */,
-				89DD872E2570243200DB1C13 /* SeedDataBase.swift */,
+				895637192577C80900CA8D3B /* Classes */,
+				895637182577C80300CA8D3B /* Database */,
+				895637172577C7FD00CA8D3B /* Settings */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -250,10 +293,7 @@
 				BEC461C9255DABD8003C1D1A /* ViewController.swift */,
 				12D13CEF256C2D130013E511 /* PerfilViewController.swift */,
 				BEF24E522566C24800D408A8 /* HomeViewController.swift */,
-				BED0528F2576BB150035EB18 /* MindfulnessViewController.swift */,
-				BED052942576BB250035EB18 /* LeisureViewController.swift */,
-				BED052992576BB340035EB18 /* LovedsViewController.swift */,
-				BED0529E2576BB470035EB18 /* HealthViewController.swift */,
+				895637142577C7B800CA8D3B /* Islands */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
