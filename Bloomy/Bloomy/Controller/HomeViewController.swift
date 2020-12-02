@@ -33,6 +33,7 @@ class HomeViewController: UIViewController {
     private let quantityIslands: Int = 4
     let userManager = UserManager.shared
     let islandsNames: [String] = ["Saúde", "Lazer", "Atenção Plena", "Pessoas Queridas"]
+    var stopAnimation = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,16 +46,22 @@ class HomeViewController: UIViewController {
         }
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         // Esconde a navigation bar de todas as telas
         self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        // Inicia a animação das nuvens
         self.moveCloudsToRight()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         // Mostra a navigation bar de todas as telas
         self.navigationController?.setNavigationBarHidden(false, animated: false)
-        // TODO: Criar um ariavel de controle para as animações
+        
+        // Para a animação das nuvens
+        self.stopAnimation = true
     }
     
     func isSameDay(userDate: Date, actualDate: Date) -> Bool {
@@ -160,6 +167,10 @@ class HomeViewController: UIViewController {
     ///
     /// Move a posição de todas as nuvens em +20 pontos
     func moveCloudsToRight() {
+        if stopAnimation {
+            self.stopAnimation = false
+            return
+        }
         self.cloudsConstraint5.constant += 20
         self.cloudsConstraint4.constant += 20
         self.cloudsConstraint3.constant += 20
@@ -175,6 +186,10 @@ class HomeViewController: UIViewController {
     
     /// Move a posição de todas as nuvens em -20 pontos
     func moveCloudsToLeft() {
+        if stopAnimation {
+            self.stopAnimation = false
+            return
+        }
         self.cloudsConstraint5.constant -= 20
         self.cloudsConstraint4.constant -= 20
         self.cloudsConstraint3.constant -= 20
