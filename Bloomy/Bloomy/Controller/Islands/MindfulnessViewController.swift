@@ -13,15 +13,19 @@ class MindfulnessViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Atenção Plena"
         
         // Ajusta o tamaho do titulo do botão
         self.challengeDayButton.titleLabel?.adjustsFontSizeToFitWidth = true
         
         // Configura a navigation controller
+        setupNavigationController()
+    }
+    
+    func setupNavigationController() {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.topItem?.title = ""
-        self.title = "Atenção Plena"
         self.navigationController?.navigationBar.layoutIfNeeded()
     }
     
