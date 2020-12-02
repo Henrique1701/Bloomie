@@ -260,6 +260,17 @@
 			path = BloomyUITests;
 			sourceTree = "<group>";
 		};
+		BED052D12577E28D0035EB18 /* Islands */ = {
+			isa = PBXGroup;
+			children = (
+				BED0527B2576B8940035EB18 /* Mindfulness.storyboard */,
+				BED052802576B8BB0035EB18 /* Leisure.storyboard */,
+				BED052852576B8D80035EB18 /* Loveds.storyboard */,
+				BED0528A2576B8F20035EB18 /* Health.storyboard */,
+			);
+			path = Islands;
+			sourceTree = "<group>";
+		};
 		BEDD7A402562F3AB005BA4F9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -277,10 +288,7 @@
 				BEC461D3255DABDA003C1D1A /* LaunchScreen.storyboard */,
 				12D13CE0256C2BD60013E511 /* TelaPerfil.storyboard */,
 				BEDD7A4925630ADF005BA4F9 /* Home.storyboard */,
-				BED0527B2576B8940035EB18 /* Mindfulness.storyboard */,
-				BED052802576B8BB0035EB18 /* Leisure.storyboard */,
-				BED052852576B8D80035EB18 /* Loveds.storyboard */,
-				BED0528A2576B8F20035EB18 /* Health.storyboard */,
+				BED052D12577E28D0035EB18 /* Islands */,
 			);
 			path = View;
 			sourceTree = "<group>";
