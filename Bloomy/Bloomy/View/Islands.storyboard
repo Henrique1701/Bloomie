@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Mindfulness View Controller-->
+        <scene sceneID="akN-oS-Fls">
+            <objects>
+                <viewController storyboardIdentifier="Mindfulness" id="Y8G-kZ-GGf" customClass="MindfulnessViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pqV-Wh-NaH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mindfulness" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZj-7E-Idn">
+                                <rect key="frame" x="160.5" y="437.5" width="93" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NfR-0v-VZe">
+                                <rect key="frame" x="111.5" y="774" width="191" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="NfR-0v-VZe" secondAttribute="height" multiplier="191:48" priority="750" id="lo3-eq-8uV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
+                                <inset key="contentEdgeInsets" minX="37" minY="16" maxX="37" maxY="16"/>
+                                <state key="normal" title="desafio do dia" backgroundImage="botao_desafio_do_dia">
+                                    <color key="titleColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="R8T-aD-uv3"/>
+                        <color key="backgroundColor" red="0.99602943659999998" green="0.96094125509999995" blue="0.94508653880000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="NfR-0v-VZe" firstAttribute="centerX" secondItem="pqV-Wh-NaH" secondAttribute="centerX" id="5KR-ZD-ene"/>
+                            <constraint firstItem="oZj-7E-Idn" firstAttribute="centerY" secondItem="pqV-Wh-NaH" secondAttribute="centerY" id="9za-vB-eHg"/>
+                            <constraint firstItem="oZj-7E-Idn" firstAttribute="centerX" secondItem="pqV-Wh-NaH" secondAttribute="centerX" id="WIR-ah-JIy"/>
+                            <constraint firstItem="NfR-0v-VZe" firstAttribute="width" secondItem="R8T-aD-uv3" secondAttribute="width" multiplier="0.461353" id="ZLp-RS-GVq"/>
+                            <constraint firstItem="R8T-aD-uv3" firstAttribute="bottom" secondItem="NfR-0v-VZe" secondAttribute="bottom" constant="40" id="aAi-BH-pq3"/>
+                            <constraint firstItem="NfR-0v-VZe" firstAttribute="height" secondItem="R8T-aD-uv3" secondAttribute="height" multiplier="0.0586797" id="fpl-6j-JPP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="challengeDayButton" destination="NfR-0v-VZe" id="D1I-XZ-kdQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jtu-za-ARP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-272.46376811594206" y="17.410714285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="botao_desafio_do_dia" width="191" height="48"/>
+    </resources>
+</document>
