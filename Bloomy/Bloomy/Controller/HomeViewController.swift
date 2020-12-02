@@ -9,7 +9,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    // MARK: Outlests
+    // MARK: Outlets
     @IBOutlet weak var firstStackView: UIStackView!
     @IBOutlet weak var secondStackView: UIStackView!
     @IBOutlet weak var thirdStackView: UIStackView!
@@ -29,6 +29,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var cloudsConstraint1: NSLayoutConstraint!
     @IBOutlet weak var cloudsConstraint6: NSLayoutConstraint!
     
+    // MARK: Global Variables
     private let quantityIslands: Int = 4
     let userManager = UserManager.shared
     let islandsNames: [String] = ["Saúde", "Lazer", "Atenção Plena", "Pessoas Queridas"]
@@ -38,7 +39,10 @@ class HomeViewController: UIViewController {
         // Pegar a quantidade de ilhas selecionadas pelo usuário
         setUpIslandsDisplay(quantityIslands: self.quantityIslands)
         SeedDataBase.shared.seed()
-        refreshChallenges()
+        if (!isSameDay(userDate: userManager.getLastSeen() ?? Date(), actualDate: Date())) {
+            userManager.updateLastSeen(to: Date())
+            getDailyChallenges()
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -58,14 +62,9 @@ class HomeViewController: UIViewController {
         
         if diff.day == 0 {
             return true
-            //fazer nada
         }
-        
+    
         return false
-        /*
-         * Atualizar a data do usuário
-         * Atualizar os desafios
-         */
     }
     
     func randomNumber(maximum: Int) -> Int {
@@ -73,7 +72,15 @@ class HomeViewController: UIViewController {
         return randomInt
     }
     
-    func refreshChallenges() {
+    func refreshDoneStatus(forIsland withName: String) {
+        guard let islandChallenges = IslandManager.shared.getChallenges(fromIsland: withName) else { return }
+        for challenge in islandChallenges where challenge.accepted && !challenge.done {
+            challenge.accepted = false
+        }
+    }
+    
+    //TODO: Caso esteja tudo terminado
+    func getDailyChallenges() {
         var challenges: NSSet = NSSet()
         for island in islandsNames {
             guard let islandChallenges = IslandManager.shared.getChallenges(fromIsland: island) else { return } // TODO: arrumar o erro
@@ -83,9 +90,14 @@ class HomeViewController: UIViewController {
                 auxCount -= 1
                 randomInt = (randomInt + 1) % islandChallenges.count
             }
-            let dailyChallenge = islandChallenges[randomInt]
-            challenges = challenges.adding(dailyChallenge) as NSSet
-            //TODO: caso que todos foram aceitos/concluidos aceitos/Nconcluidos
+            
+            if (!islandChallenges[randomInt].accepted) {
+                let dailyChallenge = islandChallenges[randomInt]
+                challenges = challenges.adding(dailyChallenge) as NSSet
+            } else {
+                refreshDoneStatus(forIsland: island)
+                getDailyChallenges()
+            }
         }
         UserManager.shared.updateDailyChallenges(to: challenges)
     }
