@@ -10,6 +10,7 @@ import UIKit
 class MindfulnessViewController: UIViewController {
 
     @IBOutlet weak var challengeDayButton: UIButton!
+    let challengeView: UIView = ChallengeView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +21,9 @@ class MindfulnessViewController: UIViewController {
         
         // Configura a navigation controller
         setupNavigationController()
+        
+        // Configura a challenge view
+        setupChallengeView()
     }
     
     func setupNavigationController() {
@@ -28,6 +32,17 @@ class MindfulnessViewController: UIViewController {
         self.navigationController?.navigationBar.topItem?.title = ""
         self.navigationController?.navigationBar.layoutIfNeeded()
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Poppins-Semibold", size: 18)]
+    }
+    
+    func setupChallengeView() {
+        self.view.addSubview(challengeView)
+        self.challengeView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            self.challengeView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            self.challengeView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 200),
+            self.challengeView.widthAnchor.constraint(equalToConstant: 400 ),
+            self.challengeView.heightAnchor.constraint(equalToConstant: 400)
+        ])
     }
     
 
