@@ -8,7 +8,8 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    
+    // MARK: Outlets
     @IBOutlet weak var firstStackView: UIStackView!
     @IBOutlet weak var secondStackView: UIStackView!
     @IBOutlet weak var thirdStackView: UIStackView!
@@ -27,21 +28,80 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var cloudsConstraint2: NSLayoutConstraint!
     @IBOutlet weak var cloudsConstraint1: NSLayoutConstraint!
     @IBOutlet weak var cloudsConstraint6: NSLayoutConstraint!
-    private let quantityIslands: Int = 1
+    
+    // MARK: Global Variables
+    private let quantityIslands: Int = 4
+    let userManager = UserManager.shared
+    let islandsNames: [String] = ["Saúde", "Lazer", "Atenção Plena", "Pessoas Queridas"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Pegar a quantidade de ilhas selecionadas pelo usuário
         setUpIslandsDisplay(quantityIslands: self.quantityIslands)
+        SeedDataBase.shared.seed()
+        if (!isSameDay(userDate: userManager.getLastSeen() ?? Date(), actualDate: Date())) {
+            userManager.updateLastSeen(to: Date())
+            getDailyChallenges()
+        }
     }
+    
     override func viewDidAppear(_ animated: Bool) {
         // Esconde a navigation bar de todas as telas
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         self.moveCloudsToRight()
     }
+    
     override func viewWillDisappear(_ animated: Bool) {
         // Mostra a navigation bar de todas as telas
         self.navigationController?.setNavigationBarHidden(false, animated: false)
+        // TODO: Criar um ariavel de controle para as animações
     }
+    
+    func isSameDay(userDate: Date, actualDate: Date) -> Bool {
+        let diff = Calendar.current.dateComponents([.day], from: userDate, to: actualDate)
+        
+        if diff.day == 0 {
+            return true
+        }
+    
+        return false
+    }
+    
+    func randomNumber(maximum: Int) -> Int {
+        let randomInt = Int.random(in: 0..<maximum)
+        return randomInt
+    }
+    
+    func refreshDoneStatus(forIsland withName: String) {
+        guard let islandChallenges = IslandManager.shared.getChallenges(fromIsland: withName) else { return }
+        for challenge in islandChallenges where challenge.accepted && !challenge.done {
+            challenge.accepted = false
+        }
+    }
+    
+    //TODO: Caso esteja tudo terminado
+    func getDailyChallenges() {
+        var challenges: NSSet = NSSet()
+        for island in islandsNames {
+            guard let islandChallenges = IslandManager.shared.getChallenges(fromIsland: island) else { return } // TODO: arrumar o erro
+            var randomInt = randomNumber(maximum: islandChallenges.count)
+            var auxCount = islandChallenges.count
+            while(!islandChallenges[randomInt].accepted && auxCount > 0) {
+                auxCount -= 1
+                randomInt = (randomInt + 1) % islandChallenges.count
+            }
+            
+            if (!islandChallenges[randomInt].accepted) {
+                let dailyChallenge = islandChallenges[randomInt]
+                challenges = challenges.adding(dailyChallenge) as NSSet
+            } else {
+                refreshDoneStatus(forIsland: island)
+                getDailyChallenges()
+            }
+        }
+        UserManager.shared.updateDailyChallenges(to: challenges)
+    }
+    
     func setUpIslandsDisplay(quantityIslands: Int) {
         switch quantityIslands {
         case 1:
@@ -56,6 +116,7 @@ class HomeViewController: UIViewController {
             return
         }
     }
+    
     func setUpDisplayOneIsland() {
         self.fourthStackView.isHidden = true
         self.thirdStackView.isHidden = true
@@ -63,6 +124,7 @@ class HomeViewController: UIViewController {
         self.firstRightButton.isHidden = true
         // TODO: Definir qual a ilha será exibida
     }
+    
     func setUpDisplayTwoIsland() {
         self.fourthStackView.isHidden = true
         self.thirdStackView.isHidden = true
@@ -70,6 +132,7 @@ class HomeViewController: UIViewController {
         self.firstRightButton.isHidden = true
         // TODO: Definir quais ilhas serão exibidas
     }
+    
     func setUpDisplayThreeIsland() {
         self.fourthStackView.isHidden = true
         self.thirdRightButton.isEnabled = false
@@ -80,6 +143,7 @@ class HomeViewController: UIViewController {
         self.firstRightButton.alpha = 0
         // TODO: Definir quais ilhas serão exibidas
     }
+    
     func setUpDisplayFourIsland() {
         self.fourthRightButton.isEnabled = false
         self.fourthRightButton.alpha = 0
@@ -91,6 +155,7 @@ class HomeViewController: UIViewController {
         self.firstLeftButton.alpha = 0
         // TODO: Definir a ordem das ilhas
     }
+    
     /// Configura a animação das nuvens
     ///
     /// Move a posição de todas as nuvens em +20 pontos
@@ -104,10 +169,10 @@ class HomeViewController: UIViewController {
         UIView.animate(withDuration: 1.5, delay: 0, options: .curveLinear, animations: {
             self.view.layoutIfNeeded()
         }, completion: {_ in
-            print("Nuvens_5 moveu para direita")
             self.moveCloudsToLeft()
         })
     }
+    
     /// Move a posição de todas as nuvens em -20 pontos
     func moveCloudsToLeft() {
         self.cloudsConstraint5.constant -= 20
@@ -119,7 +184,6 @@ class HomeViewController: UIViewController {
         UIView.animate(withDuration: 1.5, delay: 0, options: .curveLinear, animations: {
             self.view.layoutIfNeeded()
         }, completion: { _ in
-            print("Nuvens_5 moveu para esquerda")
             self.moveCloudsToRight()
         })
     }

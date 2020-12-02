@@ -18,6 +18,8 @@ extension User {
     @NSManaged public var image: Data?
     @NSManaged public var name: String?
     @NSManaged public var userToIsland: NSSet?
+    @NSManaged public var lastSeen: Date?
+    @NSManaged public var dailyChallenges: NSSet?
 
 }
 

@@ -63,6 +63,9 @@
                                                     <constraint firstAttribute="width" secondItem="8HL-Y3-ktF" secondAttribute="height" multiplier="18:23" id="Lnt-hO-tn9"/>
                                                 </constraints>
                                                 <state key="normal" image="botão_ilha_saúde"/>
+                                                <connections>
+                                                    <segue destination="PHw-wF-UXq" kind="show" id="5v6-At-0e3"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OU3-jK-IzX">
                                                 <rect key="frame" x="228" y="0.0" width="138" height="176.5"/>
@@ -70,6 +73,9 @@
                                                     <constraint firstAttribute="width" secondItem="OU3-jK-IzX" secondAttribute="height" multiplier="18:23" id="NMU-Qb-kxc"/>
                                                 </constraints>
                                                 <state key="normal" image="botão_ilha_saúde"/>
+                                                <connections>
+                                                    <segue destination="PHw-wF-UXq" kind="show" id="fDF-zQ-dhp"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -82,6 +88,9 @@
                                                     <constraint firstAttribute="width" secondItem="0Hd-UH-ppZ" secondAttribute="height" multiplier="18:23" id="Z0K-Ig-YI0"/>
                                                 </constraints>
                                                 <state key="normal" image="botão_ilha_lazer"/>
+                                                <connections>
+                                                    <segue destination="PfX-76-McD" kind="show" id="dWC-oI-uFe"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qEC-eP-JPs">
                                                 <rect key="frame" x="228" y="0.0" width="138" height="176"/>
@@ -89,6 +98,9 @@
                                                     <constraint firstAttribute="width" secondItem="qEC-eP-JPs" secondAttribute="height" multiplier="18:23" id="IN7-NV-g1c"/>
                                                 </constraints>
                                                 <state key="normal" image="botão_ilha_lazer"/>
+                                                <connections>
+                                                    <segue destination="PfX-76-McD" kind="show" id="27e-V3-Vif"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -101,6 +113,9 @@
                                                     <constraint firstAttribute="width" secondItem="0nr-na-HSl" secondAttribute="height" multiplier="18:23" id="Lph-0w-q5w"/>
                                                 </constraints>
                                                 <state key="normal" image="botão_ilha_atenção_plena"/>
+                                                <connections>
+                                                    <segue destination="rmV-B3-mhM" kind="show" id="J2b-CO-2Tp"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qX8-qc-3jX">
                                                 <rect key="frame" x="228" y="0.0" width="138" height="176.5"/>
@@ -108,6 +123,9 @@
                                                     <constraint firstAttribute="width" secondItem="qX8-qc-3jX" secondAttribute="height" multiplier="18:23" id="Hle-ug-N2B"/>
                                                 </constraints>
                                                 <state key="normal" image="botão_ilha_atenção_plena"/>
+                                                <connections>
+                                                    <segue destination="rmV-B3-mhM" kind="show" id="KhC-L2-CGc"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -120,6 +138,9 @@
                                                     <constraint firstAttribute="width" secondItem="DJT-c0-Yb4" secondAttribute="height" multiplier="18:23" id="kqE-TP-HHK"/>
                                                 </constraints>
                                                 <state key="normal" image="botão_ilha_pessoas_queridas"/>
+                                                <connections>
+                                                    <segue destination="4zx-73-c06" kind="show" id="o7O-ez-KU1"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAO-tD-T8b">
                                                 <rect key="frame" x="228" y="0.0" width="138" height="176"/>
@@ -127,6 +148,9 @@
                                                     <constraint firstAttribute="width" secondItem="LAO-tD-T8b" secondAttribute="height" multiplier="18:23" id="dah-da-eLy"/>
                                                 </constraints>
                                                 <state key="normal" image="botão_ilha_pessoas_queridas"/>
+                                                <connections>
+                                                    <segue destination="4zx-73-c06" kind="show" id="GHv-hy-UN0"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -194,6 +218,46 @@
             </objects>
             <point key="canvasLocation" x="-178" y="134"/>
         </scene>
+        <!--Mindfulness-->
+        <scene sceneID="k6n-9G-jhR">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Mindfulness" id="rmV-B3-mhM" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="eZw-Y6-7qX"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CTU-tw-sAf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-86" y="601"/>
+        </scene>
+        <!--Leisure-->
+        <scene sceneID="jFK-ip-s5v">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Leisure" id="PfX-76-McD" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="yiN-gz-Osx"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x7Q-Sk-vvU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-269" y="601"/>
+        </scene>
+        <!--Loveds-->
+        <scene sceneID="NHm-po-oRv">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Loveds" id="4zx-73-c06" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="5Zs-Kx-t60"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hl2-oQ-Wbl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="69" y="601"/>
+        </scene>
+        <!--Health-->
+        <scene sceneID="ipR-xF-MsX">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Health" id="PHw-wF-UXq" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="OQX-Hw-x9E"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y3u-n9-a4w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-428" y="601"/>
+        </scene>
         <!--Perfil-->
         <scene sceneID="qic-Ej-EO3">
             <objects>
@@ -248,6 +312,12 @@
             <point key="canvasLocation" x="-1029" y="135"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="fDF-zQ-dhp"/>
+        <segue reference="o7O-ez-KU1"/>
+        <segue reference="dWC-oI-uFe"/>
+        <segue reference="J2b-CO-2Tp"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="botão_ilha_atenção_plena" width="144" height="161"/>
         <image name="botão_ilha_lazer" width="144" height="161"/>

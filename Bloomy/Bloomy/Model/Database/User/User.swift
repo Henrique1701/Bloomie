@@ -58,6 +58,23 @@ struct UserManager {
         return islandsArray
     }
     
+    public func getLastSeen() -> Date? {
+        guard let user = getUser() else {fatalError("Could not find User")}
+        if let lastSeen = user.lastSeen {
+            return lastSeen
+        }
+        return nil
+    }
+    
+    public func getDailyChallenges() -> [Challenge]? {
+        guard let user = getUser() else {fatalError("Could not find User")}
+        if let dailyChallenges = user.dailyChallenges {
+            let dailyChallengesArray = dailyChallenges.allObjects as? [Challenge] ?? []
+            return dailyChallengesArray
+        }
+        return []
+    }
+    
     // MARK: Update
     public func updateUserName(to name: String) -> Bool {
         guard let user = getUser() else {fatalError("Could not find User")}
@@ -73,6 +90,20 @@ struct UserManager {
             return self.saveContext()
         }
         return false
+    }
+    
+    public func updateLastSeen(to date: Date) -> Bool {
+        guard let user = getUser() else {fatalError("Could not find User")}
+        user.lastSeen = date
+        
+        return self.saveContext()
+    }
+    
+    public func updateDailyChallenges(to challenges: NSSet) -> Bool {
+        guard let user = getUser() else {fatalError("Could not find User")}
+        user.dailyChallenges = challenges
+        
+        return saveContext()
     }
     
     // MARK: Delete
