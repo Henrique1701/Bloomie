@@ -31,9 +31,6 @@
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="garota-onboarding" translatesAutoresizingMaskIntoConstraints="NO" id="XBE-gh-IuC">
                                 <rect key="frame" x="15" y="69" width="290" height="255.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="XBE-gh-IuC" secondAttribute="height" multiplier="375:403" id="DZP-zJ-iTv"/>
-                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qyx-Gb-S2G">
                                 <rect key="frame" x="186" y="621" width="0.0" height="0.0"/>
@@ -131,13 +128,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VUl-JR-n5T">
-                                <rect key="frame" x="46" y="174" width="228" height="18.5"/>
+                                <rect key="frame" x="46" y="174" width="228" height="20.5"/>
                                 <color key="backgroundColor" red="0.9509803921568627" green="0.95659305363222558" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="name_line" translatesAutoresizingMaskIntoConstraints="NO" id="30f-Pd-FU9">
-                                <rect key="frame" x="46" y="203" width="228" height="1"/>
+                                <rect key="frame" x="46" y="205" width="228" height="1"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eOw-CH-D6B"/>
