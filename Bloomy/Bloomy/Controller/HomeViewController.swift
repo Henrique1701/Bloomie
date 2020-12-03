@@ -32,9 +32,11 @@ class HomeViewController: UIViewController {
     // MARK: Global Variables
     private let quantityIslands: Int = 4
     let userManager = UserManager.shared
+    let islandsManager = IslandManager.shared
     let islandsNames: [String] = ["Saúde", "Lazer", "Atenção Plena", "Pessoas Queridas"]
     var stopAnimation = false
     
+    // MARK: View Functions
     override func viewDidLoad() {
         super.viewDidLoad()
         // Pegar a quantidade de ilhas selecionadas pelo usuário
@@ -42,7 +44,7 @@ class HomeViewController: UIViewController {
         SeedDataBase.shared.seed()
         if (!isSameDay(userDate: userManager.getLastSeen() ?? Date(), actualDate: Date())) {
             _ = userManager.updateLastSeen(to: Date())
-            getDailyChallenges()
+            setDailyChallenges()
         }
     }
     
@@ -87,26 +89,38 @@ class HomeViewController: UIViewController {
     }
     
     //TODO: Caso esteja tudo terminado
-    func getDailyChallenges() {
-        var challenges: NSSet = NSSet()
-        for island in islandsNames {
-            guard let islandChallenges = IslandManager.shared.getChallenges(fromIsland: island) else { return } // TODO: arrumar o erro
-            var randomInt = randomNumber(maximum: islandChallenges.count)
-            var auxCount = islandChallenges.count
-            while(!islandChallenges[randomInt].accepted && auxCount > 0) {
-                auxCount -= 1
-                randomInt = (randomInt + 1) % islandChallenges.count
-            }
-            
-            if (!islandChallenges[randomInt].accepted) {
-                let dailyChallenge = islandChallenges[randomInt]
-                challenges = challenges.adding(dailyChallenge) as NSSet
+    func setDailyChallenges() {
+        //Coleta as ilhas do usuário
+        guard let userIslands = userManager.getIslands() else {
+            fatalError("Usuário não tem ilhas associadas")
+        }
+        
+        //Seleciona algum challenge que ainda não foi aceito
+        for island in userIslands {
+            guard let islandChallenges = islandsManager.getChallenges(fromIsland: island.name ?? "") else { return }
+            if let availableChallenge = searchForAvailableChallenge(inChallenges: islandChallenges) {
+                _ = islandsManager.updateDailyChallenge(forIsland: island.name ?? "", toChallenge: availableChallenge)
             } else {
-                refreshDoneStatus(forIsland: island)
-                getDailyChallenges()
+                refreshDoneStatus(forIsland: island.name ?? "")
+                setDailyChallenges()
             }
         }
-        _ = UserManager.shared.updateDailyChallenges(to: challenges)
+    }
+    
+    func searchForAvailableChallenge(inChallenges challenges: [Challenge]) -> Challenge? {
+        var randomIndex = randomNumber(maximum: challenges.count)
+        var challengesCount = challenges.count //Auxiliar para garantir saída do while
+        
+        while(!challenges[randomIndex].accepted && challengesCount > 0) {
+            challengesCount -= 1
+            randomIndex = (randomIndex + 1) % challenges.count
+        }
+        
+        if (!challenges[randomIndex].accepted) {
+            return challenges[randomIndex]
+        } else {
+            return nil
+        }
     }
     
     func setUpIslandsDisplay(quantityIslands: Int) {
