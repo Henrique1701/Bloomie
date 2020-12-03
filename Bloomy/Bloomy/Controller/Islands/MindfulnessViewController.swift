@@ -14,7 +14,7 @@ class MindfulnessViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Atenção Plena"
+        self.title = IslandsNames.mindfulness.rawValue
         
         // Ajusta o tamaho do titulo do botão
         self.challengeDayButton.titleLabel?.adjustsFontSizeToFitWidth = true
@@ -31,7 +31,7 @@ class MindfulnessViewController: UIViewController {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.topItem?.title = ""
         self.navigationController?.navigationBar.layoutIfNeeded()
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Poppins-Semibold", size: 18)]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Poppins-Semibold", size: 18) ?? UIFont()]
     }
     
     func setupChallengeView() {
@@ -45,7 +45,6 @@ class MindfulnessViewController: UIViewController {
         ])
     }
     
-
     /*
     // MARK: - Navigation
 

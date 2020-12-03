@@ -13,7 +13,7 @@ class LovedsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Pessoas Queridas"
+        self.title = IslandsNames.loveds.rawValue
         
         // Ajusta o tamaho do titulo do botão
         self.challengeDayButton.titleLabel?.adjustsFontSizeToFitWidth = true
@@ -27,7 +27,7 @@ class LovedsViewController: UIViewController {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.topItem?.title = ""
         self.navigationController?.navigationBar.layoutIfNeeded()
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Poppins-Semibold", size: 18)]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Poppins-Semibold", size: 18) ?? UIFont()]
     }
 
     /*

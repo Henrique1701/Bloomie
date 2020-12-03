@@ -57,6 +57,4 @@ class ChallengeView: UIView {
         fatalError("initir(coder:) has not been implemeted")
     }
     
-    
-    
 }

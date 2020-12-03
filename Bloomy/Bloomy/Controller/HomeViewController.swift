@@ -41,7 +41,7 @@ class HomeViewController: UIViewController {
         setUpIslandsDisplay(quantityIslands: self.quantityIslands)
         SeedDataBase.shared.seed()
         if (!isSameDay(userDate: userManager.getLastSeen() ?? Date(), actualDate: Date())) {
-            userManager.updateLastSeen(to: Date())
+            _ = userManager.updateLastSeen(to: Date())
             getDailyChallenges()
         }
     }
@@ -106,7 +106,7 @@ class HomeViewController: UIViewController {
                 getDailyChallenges()
             }
         }
-        UserManager.shared.updateDailyChallenges(to: challenges)
+        _ = UserManager.shared.updateDailyChallenges(to: challenges)
     }
     
     func setUpIslandsDisplay(quantityIslands: Int) {
