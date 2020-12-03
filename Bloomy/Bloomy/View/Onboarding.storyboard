@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6wg-Mg-gjz">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -20,17 +20,17 @@
             <objects>
                 <viewController storyboardIdentifier="ComoVai" title="ComoVai" modalPresentationStyle="fullScreen" id="glK-6D-x0A" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hDa-14-lgL">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Como vai?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Tr-F3-kKI">
-                                <rect key="frame" x="78" y="364.5" width="164" height="40"/>
+                                <rect key="frame" x="114.33333333333333" y="440" width="185.33333333333337" height="47.666666666666686"/>
                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="garota-onboarding" translatesAutoresizingMaskIntoConstraints="NO" id="XBE-gh-IuC">
-                                <rect key="frame" x="15" y="69" width="290" height="255.5"/>
+                                <rect key="frame" x="19.666666666666657" y="69" width="375" height="331"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qyx-Gb-S2G">
                                 <rect key="frame" x="186" y="621" width="0.0" height="0.0"/>
@@ -40,7 +40,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="249" text="Acreditamos que pequenas ações conseguem mudar nosso mundo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fB0-LF-O2F">
-                                <rect key="frame" x="-11" y="440.5" width="342" height="53.5"/>
+                                <rect key="frame" x="36" y="523.66666666666663" width="342" height="53.666666666666629"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53.5" id="KEM-ui-AxR"/>
                                     <constraint firstAttribute="width" constant="342" id="f1V-sZ-zk6"/>
@@ -50,7 +50,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" placeholderIntrinsicWidth="186" placeholderIntrinsicHeight="48" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fv6-4Z-sev">
-                                <rect key="frame" x="67" y="467" width="186" height="48"/>
+                                <rect key="frame" x="114" y="635" width="186" height="48"/>
                                 <color key="backgroundColor" red="0.99607843137254903" green="0.73725490196078436" blue="0.082352941176470587" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="rbU-Mn-9t2"/>
@@ -98,11 +98,11 @@
             <objects>
                 <viewController storyboardIdentifier="WhatsYourName" title="ComoSeChama" modalPresentationStyle="fullScreen" id="93Q-cU-KeB" customClass="ComoSeChamaViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XLp-GC-8ut">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7H-AW-x4F">
-                                <rect key="frame" x="67" y="423" width="186" height="48"/>
+                                <rect key="frame" x="114" y="591" width="186" height="48"/>
                                 <color key="backgroundColor" red="0.99607843139999996" green="0.73725490199999999" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="CUi-p9-PE0"/>
@@ -122,32 +122,32 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Como você se chama?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbB-tr-cNQ">
-                                <rect key="frame" x="46" y="50" width="228" height="79.5"/>
+                                <rect key="frame" x="46" y="49.999999999999993" width="322" height="95.333333333333314"/>
                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VUl-JR-n5T">
-                                <rect key="frame" x="46" y="174" width="228" height="20.5"/>
+                                <rect key="frame" x="77" y="190" width="260" height="24"/>
                                 <color key="backgroundColor" red="0.9509803921568627" green="0.95659305363222558" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="name_line" translatesAutoresizingMaskIntoConstraints="NO" id="30f-Pd-FU9">
-                                <rect key="frame" x="46" y="205" width="228" height="1"/>
+                                <rect key="frame" x="46" y="224.33333333333331" width="322" height="1"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eOw-CH-D6B"/>
                         <color key="backgroundColor" red="0.99607843137254903" green="0.96078431372549022" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="VUl-JR-n5T" firstAttribute="top" secondItem="fbB-tr-cNQ" secondAttribute="bottom" constant="44.5" id="3Fn-pa-ub3"/>
-                            <constraint firstItem="eOw-CH-D6B" firstAttribute="trailing" secondItem="VUl-JR-n5T" secondAttribute="trailing" constant="46" id="8p8-x3-Vgk"/>
+                            <constraint firstItem="eOw-CH-D6B" firstAttribute="trailing" secondItem="VUl-JR-n5T" secondAttribute="trailing" constant="77" id="8p8-x3-Vgk"/>
                             <constraint firstItem="fbB-tr-cNQ" firstAttribute="top" secondItem="eOw-CH-D6B" secondAttribute="top" constant="50" id="AeE-Pc-bJf"/>
                             <constraint firstItem="30f-Pd-FU9" firstAttribute="centerX" secondItem="XLp-GC-8ut" secondAttribute="centerX" id="EIg-qn-U6K"/>
                             <constraint firstItem="fbB-tr-cNQ" firstAttribute="centerX" secondItem="XLp-GC-8ut" secondAttribute="centerX" id="NH4-4U-r2S"/>
                             <constraint firstItem="fbB-tr-cNQ" firstAttribute="leading" secondItem="eOw-CH-D6B" secondAttribute="leading" constant="46" id="WvK-ud-9F4"/>
                             <constraint firstItem="eOw-CH-D6B" firstAttribute="trailing" secondItem="fbB-tr-cNQ" secondAttribute="trailing" constant="46" id="bLR-jp-SU4"/>
-                            <constraint firstItem="VUl-JR-n5T" firstAttribute="leading" secondItem="eOw-CH-D6B" secondAttribute="leading" constant="46" id="cYh-bz-qF9"/>
+                            <constraint firstItem="VUl-JR-n5T" firstAttribute="leading" secondItem="eOw-CH-D6B" secondAttribute="leading" constant="77" id="cYh-bz-qF9"/>
                             <constraint firstItem="VUl-JR-n5T" firstAttribute="centerX" secondItem="XLp-GC-8ut" secondAttribute="centerX" id="jLb-gv-cIh"/>
                             <constraint firstItem="eOw-CH-D6B" firstAttribute="trailing" secondItem="30f-Pd-FU9" secondAttribute="trailing" constant="46" id="k0p-dc-olp"/>
                             <constraint firstItem="30f-Pd-FU9" firstAttribute="leading" secondItem="eOw-CH-D6B" secondAttribute="leading" constant="46" id="nZv-YZ-fDk"/>
@@ -159,12 +159,13 @@
                     <navigationItem key="navigationItem" id="V0X-PD-V5E"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
+                        <outlet property="continuarButton" destination="o7H-AW-x4F" id="Wql-Wz-WB6"/>
                         <outlet property="nomeUsuarioTextField" destination="VUl-JR-n5T" id="Zjj-67-kXj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EHA-h4-lFL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1657.9710144927537" y="-85.044642857142847"/>
+            <point key="canvasLocation" x="1657.9710144927537" y="-85.59782608695653"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fAQ-3e-LtG">
@@ -190,11 +191,11 @@
             <objects>
                 <viewController storyboardIdentifier="Areas" modalPresentationStyle="fullScreen" id="YeR-po-kno" customClass="AreasViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hsv-xC-Hvs">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1A8-xo-SnA">
-                                <rect key="frame" x="67" y="423" width="186" height="48"/>
+                                <rect key="frame" x="114" y="591" width="186" height="48"/>
                                 <color key="backgroundColor" red="0.99607843139999996" green="0.73725490199999999" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="186" id="Sqt-Uq-VZJ"/>
@@ -214,7 +215,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ntQ-on-DCI">
-                                <rect key="frame" x="35" y="161.5" width="96" height="96"/>
+                                <rect key="frame" x="44.333333333333336" y="213.33333333333331" width="126.66666666666666" height="127"/>
                                 <fontDescription key="fontDescription" name=".SFNS-Regular" family=".SF NS" pointSize="13"/>
                                 <state key="normal" backgroundImage="botao_atencao_plena"/>
                                 <connections>
@@ -223,14 +224,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcm-Ub-itW">
-                                <rect key="frame" x="35" y="292.5" width="96" height="96"/>
+                                <rect key="frame" x="44.333333333333336" y="386.33333333333331" width="126.66666666666666" height="126.99999999999994"/>
                                 <state key="normal" backgroundImage="botao_lazer"/>
                                 <connections>
                                     <action selector="chooseLazer:" destination="YeR-po-kno" eventType="touchUpInside" id="3Ly-PV-quC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yfh-ov-lnt">
-                                <rect key="frame" x="189" y="161.5" width="96" height="96"/>
+                                <rect key="frame" x="242.99999999999997" y="213.33333333333331" width="126.66666666666666" height="127"/>
                                 <state key="normal" backgroundImage="botao_pessoas_queridas"/>
                                 <connections>
                                     <action selector="choosePessoasQueridas:" destination="lcS-Br-iiS" eventType="touchUpInside" id="DxY-b6-8m1"/>
@@ -238,14 +239,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hl-iM-4l8">
-                                <rect key="frame" x="189" y="292.5" width="96" height="96"/>
+                                <rect key="frame" x="242.99999999999997" y="386.33333333333331" width="126.66666666666666" height="126.99999999999994"/>
                                 <state key="normal" backgroundImage="botao_saude"/>
                                 <connections>
                                     <action selector="chooseSaude:" destination="YeR-po-kno" eventType="touchUpInside" id="IqI-SS-9IH"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quais áreas vamos cuidar?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.84999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="vCh-zs-79V">
-                                <rect key="frame" x="46" y="50" width="228" height="68"/>
+                                <rect key="frame" x="46" y="50.000000000000007" width="322" height="89.666666666666686"/>
                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
