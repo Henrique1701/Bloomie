@@ -16,6 +16,7 @@
 		7D2BEFE8256D86B0006AFD8C /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2BEFE6256D86B0006AFD8C /* User+CoreDataClass.swift */; };
 		7D2BEFE9256D86B0006AFD8C /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2BEFE7256D86B0006AFD8C /* User+CoreDataProperties.swift */; };
 		8905E6AA257836910015ECAC /* ChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8905E6A9257836910015ECAC /* ChallengeView.swift */; };
+		8905E6C3257961660015ECAC /* ChallengePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8905E6C2257961660015ECAC /* ChallengePopUpViewController.swift */; };
 		891D2E47256ED7B200AC961A /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891D2E46256ED7B200AC961A /* Challenge.swift */; };
 		8928F54B25670DD10089BE0E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8928F54A25670DD10089BE0E /* User.swift */; };
 		8928F56325670EEE0089BE0E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8928F56225670EEE0089BE0E /* Constants.swift */; };
@@ -71,6 +72,7 @@
 		7D2BEFE6256D86B0006AFD8C /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		7D2BEFE7256D86B0006AFD8C /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8905E6A9257836910015ECAC /* ChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeView.swift; sourceTree = "<group>"; };
+		8905E6C2257961660015ECAC /* ChallengePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengePopUpViewController.swift; sourceTree = "<group>"; };
 		891D2E46256ED7B200AC961A /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		8928F54A25670DD10089BE0E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8928F56225670EEE0089BE0E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -289,6 +291,7 @@
 				BEC461C9255DABD8003C1D1A /* ViewController.swift */,
 				12D13CEF256C2D130013E511 /* PerfilViewController.swift */,
 				BEF24E522566C24800D408A8 /* HomeViewController.swift */,
+				8905E6C2257961660015ECAC /* ChallengePopUpViewController.swift */,
 				895637142577C7B800CA8D3B /* Islands */,
 			);
 			path = Controller;
@@ -535,6 +538,7 @@
 				7D2BEFC625685E48006AFD8C /* Island.swift in Sources */,
 				7D267544256EDB97000C57A3 /* Reward.swift in Sources */,
 				891D2E47256ED7B200AC961A /* Challenge.swift in Sources */,
+				8905E6C3257961660015ECAC /* ChallengePopUpViewController.swift in Sources */,
 				BEC461C6255DABD8003C1D1A /* AppDelegate.swift in Sources */,
 				BED052902576BB150035EB18 /* MindfulnessViewController.swift in Sources */,
 				BED0529A2576BB340035EB18 /* LovedsViewController.swift in Sources */,

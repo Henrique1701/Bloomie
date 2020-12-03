@@ -8,7 +8,7 @@
 import UIKit
 
 class LovedsViewController: UIViewController {
-
+    let island = IslandManager.shared.getIsland(withName: IslandsNames.loveds.rawValue)
     @IBOutlet weak var challengeDayButton: UIButton!
     
     override func viewDidLoad() {
@@ -20,6 +20,13 @@ class LovedsViewController: UIViewController {
         
         setupNavigationController()
         // Do any additional setup after loading the view.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toChallengePopUpViewControllerSegue" {
+            let popup = segue.destination as! ChallengePopUpViewController
+            popup.summary = island?.dailyChallenge?.summary ?? ""
+        }
     }
     
     func setupNavigationController() {

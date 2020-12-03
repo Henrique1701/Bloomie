@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -17,17 +18,17 @@
             <objects>
                 <viewController storyboardIdentifier="Mindfulness" id="Y8G-kZ-GGf" customClass="MindfulnessViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pqV-Wh-NaH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mindfulness" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZj-7E-Idn">
-                                <rect key="frame" x="160.5" y="437.5" width="93" height="21"/>
+                                <rect key="frame" x="113.5" y="273.5" width="93" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NfR-0v-VZe">
-                                <rect key="frame" x="111.5" y="773" width="191" height="48"/>
+                                <rect key="frame" x="86" y="507.5" width="148" height="33.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="NfR-0v-VZe" secondAttribute="height" multiplier="191:48" priority="750" id="lo3-eq-8uV"/>
                                 </constraints>
@@ -36,6 +37,9 @@
                                 <state key="normal" title="desafio do dia" backgroundImage="botao_desafio_do_dia">
                                     <color key="titleColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="4gS-XJ-ah1" kind="presentation" identifier="toChallengePopUpViewControllerSegue" id="yoT-wX-hzU"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="R8T-aD-uv3"/>
@@ -62,11 +66,11 @@
             <objects>
                 <viewController storyboardIdentifier="Loveds" id="sRg-Fw-Wnf" customClass="LovedsViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nHg-de-HAR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcW-Hv-4yq">
-                                <rect key="frame" x="111.5" y="773" width="191" height="48"/>
+                                <rect key="frame" x="86" y="507.5" width="148" height="33.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="bcW-Hv-4yq" secondAttribute="height" multiplier="191:48" priority="750" id="n72-14-4hd"/>
                                 </constraints>
@@ -75,6 +79,9 @@
                                 <state key="normal" title="desafio do dia" backgroundImage="botao_desafio_do_dia">
                                     <color key="titleColor" red="0.1333333333" green="0.1333333333" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="4gS-XJ-ah1" kind="presentation" identifier="toChallengePopUpViewControllerSegue" id="5Lv-g4-Ckc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="A2q-pt-6El"/>
@@ -99,11 +106,11 @@
             <objects>
                 <viewController storyboardIdentifier="Leisure" id="bVq-44-vCv" customClass="LeisureViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4vC-0e-5Kz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mi9-3O-WEG">
-                                <rect key="frame" x="111.5" y="773" width="191" height="48"/>
+                                <rect key="frame" x="86" y="507.5" width="148" height="33.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="mi9-3O-WEG" secondAttribute="height" multiplier="191:48" priority="750" id="m4I-HG-LzS"/>
                                 </constraints>
@@ -112,6 +119,9 @@
                                 <state key="normal" title="desafio do dia" backgroundImage="botao_desafio_do_dia">
                                     <color key="titleColor" red="0.1333333333" green="0.1333333333" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="4gS-XJ-ah1" kind="presentation" identifier="toChallengePopUpViewControllerSegue" id="bXS-ZC-j2E"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L1Z-la-hgB">
                                 <rect key="frame" x="172" y="438" width="42" height="21"/>
@@ -138,16 +148,100 @@
             </objects>
             <point key="canvasLocation" x="523" y="17"/>
         </scene>
+        <!--Challenge Pop Up View Controller-->
+        <scene sceneID="NdD-RS-qAJ">
+            <objects>
+                <viewController storyboardIdentifier="ChallengePopUp" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="4gS-XJ-ah1" customClass="ChallengePopUpViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6nj-zd-k93">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5K5-Xl-HCS">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="e4Q-NK-g4z">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="extraLight"/>
+                            </visualEffectView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="57R-6n-8wW">
+                                <rect key="frame" x="32" y="142" width="256" height="284"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZRT-RR-n1f">
+                                        <rect key="frame" x="218" y="28" width="14" height="15.5"/>
+                                        <state key="normal" image="closeButton"/>
+                                        <connections>
+                                            <action selector="close:" destination="4gS-XJ-ah1" eventType="touchUpInside" id="eJj-l7-5Ma"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="09F-T9-CzD">
+                                        <rect key="frame" x="54" y="236.5" width="148" height="33.5"/>
+                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
+                                        <inset key="contentEdgeInsets" minX="60" minY="16" maxX="60" maxY="16"/>
+                                        <state key="normal" title="aceitar" backgroundImage="botao_desafio_do_dia">
+                                            <color key="titleColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.16862745098039217" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="accept:" destination="4gS-XJ-ah1" eventType="touchUpInside" id="nue-qg-P7J"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="2" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RrP-TH-xKw">
+                                        <rect key="frame" x="13" y="57" width="230" height="170"/>
+                                        <string key="text">Feche os olhos e imagine que você está escaneando o seu corpo, da cabeça até os pés. Preste atenção nas sensações. Relaxe as áreas do seu corpo que você sentir que estão tensionadas.</string>
+                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="RrP-TH-xKw" firstAttribute="centerX" secondItem="57R-6n-8wW" secondAttribute="centerX" id="Bfy-KJ-Jcy"/>
+                                    <constraint firstItem="ZRT-RR-n1f" firstAttribute="height" secondItem="57R-6n-8wW" secondAttribute="height" multiplier="0.0550122" id="NSp-Zh-2ay"/>
+                                    <constraint firstItem="RrP-TH-xKw" firstAttribute="height" secondItem="57R-6n-8wW" secondAttribute="height" multiplier="0.599022" id="XPU-Ev-RmV"/>
+                                    <constraint firstItem="09F-T9-CzD" firstAttribute="height" secondItem="57R-6n-8wW" secondAttribute="height" multiplier="0.117359" id="Y4v-GF-XN7"/>
+                                    <constraint firstItem="09F-T9-CzD" firstAttribute="width" secondItem="57R-6n-8wW" secondAttribute="width" multiplier="0.577039" id="g32-3e-Oh3"/>
+                                    <constraint firstItem="RrP-TH-xKw" firstAttribute="leading" secondItem="57R-6n-8wW" secondAttribute="leading" constant="13" id="qqU-iW-HSg"/>
+                                    <constraint firstAttribute="bottom" secondItem="09F-T9-CzD" secondAttribute="bottom" constant="14" id="s5b-IZ-6iG"/>
+                                    <constraint firstItem="ZRT-RR-n1f" firstAttribute="width" secondItem="57R-6n-8wW" secondAttribute="width" multiplier="0.0543807" id="u9r-3I-5US"/>
+                                    <constraint firstAttribute="trailing" secondItem="RrP-TH-xKw" secondAttribute="trailing" constant="13" id="wEq-J3-cb9"/>
+                                    <constraint firstItem="RrP-TH-xKw" firstAttribute="centerY" secondItem="57R-6n-8wW" secondAttribute="centerY" id="xCC-eB-Rww"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZRT-RR-n1f" secondAttribute="trailing" constant="24" id="yM6-kP-Pdb"/>
+                                    <constraint firstItem="09F-T9-CzD" firstAttribute="centerX" secondItem="57R-6n-8wW" secondAttribute="centerX" id="yVm-Kh-gAc"/>
+                                    <constraint firstItem="ZRT-RR-n1f" firstAttribute="top" secondItem="57R-6n-8wW" secondAttribute="top" constant="28" id="zjE-kN-2ie"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gxZ-2w-f3b"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="57R-6n-8wW" firstAttribute="width" secondItem="gxZ-2w-f3b" secondAttribute="width" multiplier="0.799517" id="CY1-hu-Js5"/>
+                            <constraint firstItem="57R-6n-8wW" firstAttribute="centerX" secondItem="6nj-zd-k93" secondAttribute="centerX" id="FHp-xl-imf"/>
+                            <constraint firstItem="57R-6n-8wW" firstAttribute="height" secondItem="gxZ-2w-f3b" secondAttribute="height" multiplier="0.5" id="iFE-oI-LSB"/>
+                            <constraint firstItem="57R-6n-8wW" firstAttribute="centerY" secondItem="6nj-zd-k93" secondAttribute="centerY" id="wC1-Yr-ypE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="kTn-oL-pYw"/>
+                    <connections>
+                        <outlet property="acceptButton" destination="09F-T9-CzD" id="wFo-jK-mhZ"/>
+                        <outlet property="contentView" destination="57R-6n-8wW" id="Jee-rz-xgb"/>
+                        <outlet property="summaryLabel" destination="RrP-TH-xKw" id="LME-cK-8En"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zAZ-6E-thK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1866.6666666666667" y="414.50892857142856"/>
+        </scene>
         <!--Health View Controller-->
         <scene sceneID="DYQ-zp-fR1">
             <objects>
                 <viewController storyboardIdentifier="Health" id="emZ-vQ-65r" customClass="HealthViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U6k-h0-ImQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mAy-eu-kQQ">
-                                <rect key="frame" x="111.5" y="773" width="191" height="48"/>
+                                <rect key="frame" x="86" y="507.5" width="148" height="33.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="mAy-eu-kQQ" secondAttribute="height" multiplier="191:48" priority="750" id="oBJ-vE-5K6"/>
                                 </constraints>
@@ -156,6 +250,9 @@
                                 <state key="normal" title="desafio do dia" backgroundImage="botao_desafio_do_dia">
                                     <color key="titleColor" red="0.1333333333" green="0.1333333333" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="4gS-XJ-ah1" kind="presentation" identifier="toChallengePopUpViewControllerSegue" id="vMT-eP-tGl"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bTv-Za-ZDa"/>
@@ -176,7 +273,14 @@
             <point key="canvasLocation" x="522" y="700"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="bXS-ZC-j2E"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="botao_desafio_do_dia" width="191" height="48"/>
+        <image name="closeButton" width="19.5" height="19"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

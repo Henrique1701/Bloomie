@@ -10,7 +10,8 @@ import UIKit
 class MindfulnessViewController: UIViewController {
 
     @IBOutlet weak var challengeDayButton: UIButton!
-    let challengeView: UIView = ChallengeView()
+    let island = IslandManager.shared.getIsland(withName: IslandsNames.mindfulness.rawValue)
+    //let challengeView: UIView = ChallengeView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +24,14 @@ class MindfulnessViewController: UIViewController {
         setupNavigationController()
         
         // Configura a challenge view
-        setupChallengeView()
+        //setupChallengeView()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toChallengePopUpViewControllerSegue" {
+            let popup = segue.destination as! ChallengePopUpViewController
+            popup.summary = island?.dailyChallenge?.summary ?? ""
+        }
     }
     
     func setupNavigationController() {
@@ -34,16 +42,16 @@ class MindfulnessViewController: UIViewController {
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Poppins-Semibold", size: 18) ?? UIFont()]
     }
     
-    func setupChallengeView() {
-        self.view.addSubview(challengeView)
-        self.challengeView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            self.challengeView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            self.challengeView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 200),
-            self.challengeView.widthAnchor.constraint(equalToConstant: 400 ),
-            self.challengeView.heightAnchor.constraint(equalToConstant: 400)
-        ])
-    }
+//    func setupChallengeView() {
+//        self.view.addSubview(challengeView)
+//        self.challengeView.translatesAutoresizingMaskIntoConstraints = false
+//        NSLayoutConstraint.activate([
+//            self.challengeView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+//            self.challengeView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 200),
+//            self.challengeView.widthAnchor.constraint(equalToConstant: 400 ),
+//            self.challengeView.heightAnchor.constraint(equalToConstant: 400)
+//        ])
+//    }
     
     /*
     // MARK: - Navigation
