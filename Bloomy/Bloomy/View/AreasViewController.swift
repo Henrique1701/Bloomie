@@ -10,7 +10,6 @@ import CoreData
 
 class AreasViewController: UIViewController {
     
-    var nomeUsuario:String?
     var selectedLazer:Bool = false
     var selectedSaude:Bool = false
     var selectedPessoasQueridas:Bool = false
@@ -114,11 +113,9 @@ class AreasViewController: UIViewController {
     
     // MARK: Create Islands on Core Data
     @IBAction func createIslands(_ sender: Any) {
-        //Cria o usuário
-        user.newUser(withName: nomeUsuario!)
         //Retorna o usuario criado
         let usuario = self.user.getUser()
-        //Cria as ilhas que estão selecionadas
+        //Cria as ilhas que estão selecionadas para o usuario criado
         if(selectedLazer == true) {
             guard let lazerIsland = self.island.newIsland(withName: "Lazer") else { return }
             self.island.setUser(islandName: "Lazer", user: usuario!)
@@ -145,7 +142,6 @@ class AreasViewController: UIViewController {
     func enableButton() {
         botaoVamosLa.isEnabled = true
         botaoVamosLa.alpha = 1.0
-        print("chamei a funcao enable button")
     }
     
     //Desabilita o botão Vamos lá

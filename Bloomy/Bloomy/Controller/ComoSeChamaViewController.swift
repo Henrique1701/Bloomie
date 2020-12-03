@@ -6,11 +6,15 @@
 //
 
 import UIKit
+import CoreData
 
 class ComoSeChamaViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var nomeUsuarioTextField: UITextField!
     @IBOutlet weak var continuarButton: UIButton!
+    //Gerenciador das funções CRUD de Usuário
+    let user = UserManager()
+    var nomeUsuario:String?
     
     // MARK: Dismiss keyboard
     //tapGesture para ocultar o teclado ao clicar fora dele
@@ -42,6 +46,16 @@ class ComoSeChamaViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
+    // MARK: Create user on Core Data
+    @IBAction func salvarUsuario(_ sender: Any) {
+        nomeUsuario = nomeUsuarioTextField.text
+        if (self.user.getUser() != nil) {
+            user.updateUserName(to: nomeUsuario!)
+        } else{
+            user.newUser(withName: nomeUsuario!)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -51,16 +65,10 @@ class ComoSeChamaViewController: UIViewController, UITextFieldDelegate {
         //Delegate para o botao de Retorno ocultar o teclado
         self.nomeUsuarioTextField.delegate = self
         
+        
         //Desativar o botão de Continuar se o textField estiver vazio
         continuarButton.isEnabled = false
         continuarButton.alpha = 0.5
-    }
-    
-    //Passa o nome do usuario para o próximo View Controller
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "AreasSegue", case let nextVC = segue.destination as? AreasViewController {
-            nextVC?.nomeUsuario = nomeUsuarioTextField.text
-        }
     }
 
 }
