@@ -285,6 +285,7 @@
                         <outlet property="botaoLazer" destination="vcm-Ub-itW" id="5rh-Qq-cWf"/>
                         <outlet property="botaoPessoasQueridas" destination="Yfh-ov-lnt" id="D2H-Ee-cge"/>
                         <outlet property="botaoSaude" destination="2hl-iM-4l8" id="6ub-A3-l2a"/>
+                        <outlet property="botaoVamosLa" destination="1A8-xo-SnA" id="l7p-qI-508"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dG3-qf-Fid" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

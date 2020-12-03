@@ -19,6 +19,8 @@ class AreasViewController: UIViewController {
     @IBOutlet weak var botaoPessoasQueridas: UIButton!
     @IBOutlet weak var botaoLazer: UIButton!
     @IBOutlet weak var botaoSaude: UIButton!
+    @IBOutlet weak var botaoVamosLa: UIButton!
+    
     //Gerenciadores das funções CRUD de Ilha e Usuário
     let user = UserManager()
     let island = IslandManager()
@@ -36,13 +38,14 @@ class AreasViewController: UIViewController {
         } else {
             selectedAtencaoPlena = true
             botaoAtencaoPlena.setBackgroundImage(UIImage(named: "botao_on_atencao_plena"), for: .normal)
-            print("Atencao Selected")
+            print("Atencao Plena Selected")
             //Animação para diminuir o tamanho do botão
             UIButton.animate(withDuration: 0.45) { () -> Void in
                 self.botaoAtencaoPlena.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
             }
             
         }
+        shouldButtonBeDisabled()
     }
     
     @IBAction func choosePessoasQueridas(_ sender: Any) {
@@ -64,6 +67,7 @@ class AreasViewController: UIViewController {
                 self.botaoPessoasQueridas.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
             }
         }
+        shouldButtonBeDisabled()
     }
     
     @IBAction func chooseLazer(_ sender: Any) {
@@ -84,6 +88,7 @@ class AreasViewController: UIViewController {
                 self.botaoLazer.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
             }
         }
+        shouldButtonBeDisabled()
     }
     
     @IBAction func chooseSaude(_ sender: Any) {
@@ -104,8 +109,10 @@ class AreasViewController: UIViewController {
                 self.botaoSaude.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
             }
         }
+        shouldButtonBeDisabled()
     }
     
+    // MARK: Create Islands on Core Data
     @IBAction func createIslands(_ sender: Any) {
         //Cria o usuário
         user.newUser(withName: nomeUsuario!)
@@ -133,15 +140,32 @@ class AreasViewController: UIViewController {
             print("Created \(pessoasQueridasIsland)")
         }
     }
-
     
+    //Habilita o botão Vamos lá
+    func enableButton() {
+        botaoVamosLa.isEnabled = true
+        botaoVamosLa.alpha = 1.0
+        print("chamei a funcao enable button")
+    }
     
+    //Desabilita o botão Vamos lá
+    func disableButton() {
+        botaoVamosLa.isEnabled = false
+        botaoVamosLa.alpha = 0.5
+    }
+    
+    //Verifica se o botão Vamos lá deve ser desabilitado
+    func shouldButtonBeDisabled() {
+        //Caso alguma das áreas esteja selecionada, o botão está habilitado
+        if(selectedSaude || selectedLazer || selectedAtencaoPlena || selectedPessoasQueridas) {
+            enableButton()
+        } else {
+            disableButton()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //print(self.user.getUserName() ?? "tá sem nome")
+        disableButton()
     }
-    
-    
-    
 }
