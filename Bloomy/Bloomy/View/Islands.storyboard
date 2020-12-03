@@ -68,7 +68,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcW-Hv-4yq">
                                 <rect key="frame" x="111.5" y="773" width="191" height="48"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="bcW-Hv-4yq" secondAttribute="height" multiplier="191:48" id="n72-14-4hd"/>
+                                    <constraint firstAttribute="width" secondItem="bcW-Hv-4yq" secondAttribute="height" multiplier="191:48" priority="750" id="n72-14-4hd"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
                                 <inset key="contentEdgeInsets" minX="37" minY="16" maxX="37" maxY="16"/>
@@ -105,7 +105,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mi9-3O-WEG">
                                 <rect key="frame" x="111.5" y="773" width="191" height="48"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="mi9-3O-WEG" secondAttribute="height" multiplier="191:48" id="m4I-HG-LzS"/>
+                                    <constraint firstAttribute="width" secondItem="mi9-3O-WEG" secondAttribute="height" multiplier="191:48" priority="750" id="m4I-HG-LzS"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
                                 <inset key="contentEdgeInsets" minX="37" minY="16" maxX="37" maxY="16"/>
@@ -113,6 +113,13 @@
                                     <color key="titleColor" red="0.1333333333" green="0.1333333333" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L1Z-la-hgB">
+                                <rect key="frame" x="172" y="438" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Afe-iT-dF4"/>
                         <color key="backgroundColor" red="0.99607843139999996" green="0.96078431369999995" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -142,7 +149,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mAy-eu-kQQ">
                                 <rect key="frame" x="111.5" y="773" width="191" height="48"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="mAy-eu-kQQ" secondAttribute="height" multiplier="191:48" id="oBJ-vE-5K6"/>
+                                    <constraint firstAttribute="width" secondItem="mAy-eu-kQQ" secondAttribute="height" multiplier="191:48" priority="750" id="oBJ-vE-5K6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
                                 <inset key="contentEdgeInsets" minX="37" minY="16" maxX="37" maxY="16"/>
