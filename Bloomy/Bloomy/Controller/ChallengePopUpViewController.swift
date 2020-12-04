@@ -9,7 +9,6 @@ import UIKit
 
 class ChallengePopUpViewController: UIViewController {
     var summary: String = ""
-    var islandName: String = ""
     
     @IBOutlet weak var acceptButton: UIButton!
     @IBOutlet weak var summaryLabel: UILabel!
