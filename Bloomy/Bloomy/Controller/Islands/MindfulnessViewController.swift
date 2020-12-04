@@ -8,29 +8,43 @@
 import UIKit
 
 class MindfulnessViewController: UIViewController {
-
     @IBOutlet weak var challengeDayButton: UIButton!
-    let island = IslandManager.shared.getIsland(withName: IslandsNames.mindfulness.rawValue)
-    //let challengeView: UIView = ChallengeView()
+    let island = IslandManager.shared.getIsland(withName: IslandsNames.mindfulness.rawValue)!
+    var observer: NSObjectProtocol?
+    let teste = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = IslandsNames.mindfulness.rawValue
+
+        chooseButtonToShow()
+        setupStyle()
+        print(self.island.dailyChallenge?.accepted)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        observer = NotificationCenter.default.addObserver(forName: .acceptChallenge, object: nil, queue: OperationQueue.main) { (notification) in
+            let popup = notification.object as! ChallengePopUpViewController
+            print("parte 1:")
+            self.island.dailyChallenge?.accepted = true
+            _ = IslandManager.shared.saveContext()
+            self.challengeDayButton.isHidden = true
+            self.loadViewIfNeeded()
+        }
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
         
-        // Ajusta o tamaho do titulo do botão
-        self.challengeDayButton.titleLabel?.adjustsFontSizeToFitWidth = true
-        
-        // Configura a navigation controller
-        setupNavigationController()
-        
-        // Configura a challenge view
-        //setupChallengeView()
+        if observer != nil {
+            NotificationCenter.default
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toChallengePopUpViewControllerSegue" {
             let popup = segue.destination as! ChallengePopUpViewController
-            popup.summary = island?.dailyChallenge?.summary ?? ""
+            popup.summary = island.dailyChallenge?.summary ?? ""
         }
     }
     
@@ -42,25 +56,25 @@ class MindfulnessViewController: UIViewController {
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Poppins-Semibold", size: 18) ?? UIFont()]
     }
     
-//    func setupChallengeView() {
-//        self.view.addSubview(challengeView)
-//        self.challengeView.translatesAutoresizingMaskIntoConstraints = false
-//        NSLayoutConstraint.activate([
-//            self.challengeView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-//            self.challengeView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 200),
-//            self.challengeView.widthAnchor.constraint(equalToConstant: 400 ),
-//            self.challengeView.heightAnchor.constraint(equalToConstant: 400)
-//        ])
-//    }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setupStyle() {
+        self.title = IslandsNames.mindfulness.rawValue
+        // Ajusta o tamaho do titulo do botão
+        self.challengeDayButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        // Configura a navigation controller
+        setupNavigationController()
     }
-    */
-
+    
+    func chooseButtonToShow() {
+        if (self.island.dailyChallenge?.accepted ?? false) {
+            self.challengeDayButton.isHidden = true
+            print("no certo")
+        } else if (self.island.dailyChallenge?.accepted ?? true) {
+            //Mostra o challengeDayButton
+            //Esconde o botão de concluir
+            //Ainda tem o caso em que o botão tá desativado
+        } else {
+            print("veio pra cá")
+        }
+    }
+    
 }

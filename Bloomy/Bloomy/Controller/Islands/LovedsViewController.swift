@@ -8,24 +8,40 @@
 import UIKit
 
 class LovedsViewController: UIViewController {
-    let island = IslandManager.shared.getIsland(withName: IslandsNames.loveds.rawValue)
     @IBOutlet weak var challengeDayButton: UIButton!
+    let island = IslandManager.shared.getIsland(withName: IslandsNames.loveds.rawValue)!
+    var observer: NSObjectProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = IslandsNames.loveds.rawValue
         
-        // Ajusta o tamaho do titulo do botão
-        self.challengeDayButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        chooseButtonToShow()
+        setupStyle()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        observer = NotificationCenter.default.addObserver(forName: .acceptChallenge, object: nil, queue: OperationQueue.main) { (notification) in
+            let popup = notification.object as! ChallengePopUpViewController
+            self.island.dailyChallenge?.accepted = true
+            IslandManager.shared.saveContext()
+            self.challengeDayButton.isHidden = true
+            self.loadViewIfNeeded()
+        }
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
         
-        setupNavigationController()
-        // Do any additional setup after loading the view.
+        if observer != nil {
+            NotificationCenter.default
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toChallengePopUpViewControllerSegue" {
             let popup = segue.destination as! ChallengePopUpViewController
-            popup.summary = island?.dailyChallenge?.summary ?? ""
+            popup.summary = island.dailyChallenge?.summary ?? ""
         }
     }
     
@@ -36,15 +52,23 @@ class LovedsViewController: UIViewController {
         self.navigationController?.navigationBar.layoutIfNeeded()
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Poppins-Semibold", size: 18) ?? UIFont()]
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func setupStyle() {
+        self.title = IslandsNames.loveds.rawValue
+        // Ajusta o tamaho do titulo do botão
+        self.challengeDayButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        // Configura a navigation controller
+        setupNavigationController()
     }
-    */
+    
+    func chooseButtonToShow() {
+        if (self.island.dailyChallenge?.accepted ?? false) {
+            self.challengeDayButton.isHidden = true
+        } else if (self.island.dailyChallenge?.accepted ?? true) {
+            //Mostra o challengeDayButton
+            //Esconde o botão de concluir
+            //Ainda tem o caso em que o botão tá desativado
+        }
+    }
 
 }
