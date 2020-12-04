@@ -11,6 +11,7 @@
 		12D13CF0256C2D130013E511 /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D13CEF256C2D130013E511 /* PerfilViewController.swift */; };
 		1834972EEB6285E47FABD0A3 /* Pods_Bloomy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57CA3E352B06C25017BE1E66 /* Pods_Bloomy.framework */; };
 		75C430483B507584722F9116 /* Pods_BloomyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E49591F99200B6D647E55B /* Pods_BloomyTests.framework */; };
+		7D192271257ABA0E00D26450 /* ComoVaiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D192270257ABA0E00D26450 /* ComoVaiViewController.swift */; };
 		7D267544256EDB97000C57A3 /* Reward.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D267543256EDB97000C57A3 /* Reward.swift */; };
 		7D2BEFC625685E48006AFD8C /* Island.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2BEFC525685E48006AFD8C /* Island.swift */; };
 		7D2BEFE8256D86B0006AFD8C /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2BEFE6256D86B0006AFD8C /* User+CoreDataClass.swift */; };
@@ -64,6 +65,7 @@
 		369F14DF579FC84A0B42AB62 /* Pods-Bloomy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bloomy.debug.xcconfig"; path = "Target Support Files/Pods-Bloomy/Pods-Bloomy.debug.xcconfig"; sourceTree = "<group>"; };
 		3C16641237BD639CA3DB2A3C /* Pods-Bloomy-BloomyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bloomy-BloomyUITests.release.xcconfig"; path = "Target Support Files/Pods-Bloomy-BloomyUITests/Pods-Bloomy-BloomyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		57CA3E352B06C25017BE1E66 /* Pods_Bloomy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bloomy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D192270257ABA0E00D26450 /* ComoVaiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ComoVaiViewController.swift; path = Bloomy/View/ComoVaiViewController.swift; sourceTree = SOURCE_ROOT; };
 		7D267543256EDB97000C57A3 /* Reward.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reward.swift; sourceTree = "<group>"; };
 		7D2BEFC525685E48006AFD8C /* Island.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Island.swift; sourceTree = "<group>"; };
 		7D2BEFE6256D86B0006AFD8C /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 		BEDD7A422562F3C3005BA4F9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7D192270257ABA0E00D26450 /* ComoVaiViewController.swift */,
 				7DAE80202575877000B17FB8 /* AreasViewController.swift */,
 				BEC461C5255DABD8003C1D1A /* AppDelegate.swift */,
 				BEC461C7255DABD8003C1D1A /* SceneDelegate.swift */,
@@ -497,6 +500,7 @@
 				BEC461C8255DABD8003C1D1A /* SceneDelegate.swift in Sources */,
 				7D2BEFE9256D86B0006AFD8C /* User+CoreDataProperties.swift in Sources */,
 				8928F56325670EEE0089BE0E /* Constants.swift in Sources */,
+				7D192271257ABA0E00D26450 /* ComoVaiViewController.swift in Sources */,
 				89DD872F2570243200DB1C13 /* SeedDataBase.swift in Sources */,
 				D64B4F812575923B00D818EB /* ComoSeChamaViewController.swift in Sources */,
 			);

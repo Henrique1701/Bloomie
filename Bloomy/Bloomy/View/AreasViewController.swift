@@ -160,8 +160,17 @@ class AreasViewController: UIViewController {
         }
     }
     
+    func setupNavigationController() {
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.topItem?.title = ""
+        self.navigationController?.navigationBar.layoutIfNeeded()
+        //self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Poppins-Regular", size: 18) ?? UIFont()]
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         disableButton()
+        setupNavigationController()
     }
 }

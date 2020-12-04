@@ -56,6 +56,14 @@ class ComoSeChamaViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    func setupNavigationController() {
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.topItem?.title = ""
+        self.navigationController?.navigationBar.layoutIfNeeded()
+        //self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Poppins-Regular", size: 18) ?? UIFont()]
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -64,11 +72,13 @@ class ComoSeChamaViewController: UIViewController, UITextFieldDelegate {
         
         //Delegate para o botao de Retorno ocultar o teclado
         self.nomeUsuarioTextField.delegate = self
-        
-        
+                
         //Desativar o botão de Continuar se o textField estiver vazio
         continuarButton.isEnabled = false
         continuarButton.alpha = 0.5
+        
+        //Modificar a navigation Bar
+        setupNavigationController()
     }
 
 }
