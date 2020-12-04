@@ -24,3 +24,7 @@ enum IslandsNames: String {
     case loveds      = "Pessoas Queridas"
     case leisure     = "Lazer"
 }
+
+extension Notification.Name {
+    static let acceptChallenge = Notification.Name("acceptChallenge")
+}
