@@ -41,11 +41,10 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         // Pegar a quantidade de ilhas selecionadas pelo usuário
         setUpIslandsDisplay(quantityIslands: self.quantityIslands)
-        SeedDataBase.shared.seed()
-        _ = userManager.updateLastSeen(to: Date())
         if (!isSameDay(userDate: userManager.getLastSeen() ?? Date(), actualDate: Date())) {
             setDailyChallenges()
         }
+        _ = userManager.updateLastSeen(to: Date())
     }
     
     override func viewWillAppear(_ animated: Bool) {
