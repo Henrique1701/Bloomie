@@ -119,7 +119,7 @@ struct IslandManager {
     }
     
     // MARK: Save Context (auxiliar)
-    private func saveContext() -> Bool {
+    public func saveContext() -> Bool {
         
         do {
             try coreDataContext.save()
