@@ -8,25 +8,17 @@
 import UIKit
 
 class ChallengePopUpViewController: UIViewController {
-    @IBOutlet weak var acceptButton: UIButton!
     var summary: String = ""
+    var islandName: String = ""
     
+    @IBOutlet weak var acceptButton: UIButton!
     @IBOutlet weak var summaryLabel: UILabel!
     @IBOutlet weak var contentView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.acceptButton.titleLabel?.adjustsFontSizeToFitWidth = true
-        self.contentView.layer.cornerRadius = 35
-        self.summaryLabel.adjustsFontSizeToFitWidth = true
-        //self.summaryLabel.minimumScaleFactor = 0.5
-        // Do any additional setup after loading the view.
-        //self.summaryLabel.text = summary
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        self.summaryLabel.text = summary
+        setupStyle()
     }
     
     @IBAction func close(_ sender: Any) {
@@ -34,17 +26,18 @@ class ChallengePopUpViewController: UIViewController {
     }
     
     @IBAction func accept(_ sender: Any) {
+        NotificationCenter.default.post(name: .acceptChallenge, object: self)
         dismiss(animated: true)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        self.summaryLabel.text = summary
     }
-    */
+    
+    func setupStyle() {
+        self.acceptButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        self.contentView.layer.cornerRadius = 35
+        self.summaryLabel.adjustsFontSizeToFitWidth = true
+    }
 
 }
