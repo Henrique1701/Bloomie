@@ -15,7 +15,6 @@
 		7D2BEFC625685E48006AFD8C /* Island.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2BEFC525685E48006AFD8C /* Island.swift */; };
 		7D2BEFE8256D86B0006AFD8C /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2BEFE6256D86B0006AFD8C /* User+CoreDataClass.swift */; };
 		7D2BEFE9256D86B0006AFD8C /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2BEFE7256D86B0006AFD8C /* User+CoreDataProperties.swift */; };
-		8905E6AA257836910015ECAC /* ChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8905E6A9257836910015ECAC /* ChallengeView.swift */; };
 		8905E6C3257961660015ECAC /* ChallengePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8905E6C2257961660015ECAC /* ChallengePopUpViewController.swift */; };
 		891D2E47256ED7B200AC961A /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891D2E46256ED7B200AC961A /* Challenge.swift */; };
 		8928F54B25670DD10089BE0E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8928F54A25670DD10089BE0E /* User.swift */; };
@@ -71,7 +70,6 @@
 		7D2BEFC525685E48006AFD8C /* Island.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Island.swift; sourceTree = "<group>"; };
 		7D2BEFE6256D86B0006AFD8C /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		7D2BEFE7256D86B0006AFD8C /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		8905E6A9257836910015ECAC /* ChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeView.swift; sourceTree = "<group>"; };
 		8905E6C2257961660015ECAC /* ChallengePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengePopUpViewController.swift; sourceTree = "<group>"; };
 		891D2E46256ED7B200AC961A /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		8928F54A25670DD10089BE0E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -278,7 +276,6 @@
 				12D13CE0256C2BD60013E511 /* TelaPerfil.storyboard */,
 				BEDD7A4925630ADF005BA4F9 /* Home.storyboard */,
 				BED0527B2576B8940035EB18 /* Islands.storyboard */,
-				8905E6A9257836910015ECAC /* ChallengeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -533,7 +530,6 @@
 			files = (
 				BEF24E532566C24800D408A8 /* HomeViewController.swift in Sources */,
 				BEC461CA255DABD8003C1D1A /* ViewController.swift in Sources */,
-				8905E6AA257836910015ECAC /* ChallengeView.swift in Sources */,
 				BEC461D0255DABD8003C1D1A /* Bloomy.xcdatamodeld in Sources */,
 				7D2BEFC625685E48006AFD8C /* Island.swift in Sources */,
 				7D267544256EDB97000C57A3 /* Reward.swift in Sources */,
