@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jV2-bX-FxB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jV2-bX-FxB">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,7 +11,7 @@
         <!--Item-->
         <scene sceneID="aKw-Nr-LeU">
             <objects>
-                <navigationController id="jV2-bX-FxB" sceneMemberID="viewController">
+                <navigationController modalPresentationStyle="fullScreen" id="jV2-bX-FxB" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="Om1-Xi-05P"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="PHg-zW-NE9">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -28,7 +28,7 @@
         <!--Ilhas-->
         <scene sceneID="bwK-sz-0P5">
             <objects>
-                <viewController id="RgJ-mV-1xY" customClass="HomeViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="RgJ-mV-1xY" customClass="HomeViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SD3-t7-atG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -293,7 +293,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="dMZ-ON-ptP">
             <objects>
-                <tabBarController id="AC1-FP-WMe" sceneMemberID="viewController">
+                <tabBarController modalPresentationStyle="fullScreen" id="AC1-FP-WMe" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="zPm-xm-TZW"/>
                     <tabBar key="tabBar" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZcZ-Hk-sL0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>

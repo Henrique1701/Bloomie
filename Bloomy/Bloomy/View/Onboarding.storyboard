@@ -29,7 +29,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="garota-onboarding" translatesAutoresizingMaskIntoConstraints="NO" id="XBE-gh-IuC">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="garota_onboarding" translatesAutoresizingMaskIntoConstraints="NO" id="XBE-gh-IuC">
                                 <rect key="frame" x="19.666666666666657" y="98" width="375" height="403"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qyx-Gb-S2G">
@@ -212,6 +212,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="createIslands:" destination="YeR-po-kno" eventType="touchUpInside" id="85q-Vs-Uyt"/>
+                                    <segue destination="1vZ-7t-4G2" kind="show" id="0zo-Wt-b19"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ntQ-on-DCI">
@@ -293,6 +294,16 @@
             </objects>
             <point key="canvasLocation" x="2936.8000000000002" y="-85.907046476761622"/>
         </scene>
+        <!--Home-->
+        <scene sceneID="74P-i3-xPi">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" id="1vZ-7t-4G2" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ba2-3Y-7fC"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E5w-Ya-AQG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3893" y="-86"/>
+        </scene>
     </scenes>
     <resources>
         <image name="botao_atencao_plena" width="150" height="150"/>
@@ -300,7 +311,7 @@
         <image name="botao_pessoas_queridas" width="150" height="150"/>
         <image name="botao_saude" width="150" height="150"/>
         <image name="botao_voltar" width="32" height="30"/>
-        <image name="garota-onboarding" width="375" height="403"/>
+        <image name="garota_onboarding" width="375" height="403"/>
         <image name="name_line" width="259" height="1"/>
     </resources>
 </document>
