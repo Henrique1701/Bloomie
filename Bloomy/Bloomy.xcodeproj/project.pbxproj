@@ -10,6 +10,7 @@
 		125F541B256D5B8D0051F9AC /* TelaPerfil.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 125F541A256D5B8D0051F9AC /* TelaPerfil.storyboard */; };
 		125F5423256D5BE10051F9AC /* PerfilTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125F5422256D5BE10051F9AC /* PerfilTableViewController.swift */; };
 		125F542B256D5EFC0051F9AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125F542A256D5EFC0051F9AC /* ViewController.swift */; };
+		12D4FDA3257AC6D00063A167 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D4FDA2257AC6D00063A167 /* NavigationViewController.swift */; };
 		12F07E5D2576CAD000C4EE8F /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 12F07E5C2576CAD000C4EE8F /* Intents.intentdefinition */; };
 		1834972EEB6285E47FABD0A3 /* Pods_Bloomy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57CA3E352B06C25017BE1E66 /* Pods_Bloomy.framework */; };
 		75C430483B507584722F9116 /* Pods_BloomyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E49591F99200B6D647E55B /* Pods_BloomyTests.framework */; };
@@ -45,6 +46,7 @@
 		125F541A256D5B8D0051F9AC /* TelaPerfil.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TelaPerfil.storyboard; sourceTree = "<group>"; };
 		125F5422256D5BE10051F9AC /* PerfilTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilTableViewController.swift; sourceTree = "<group>"; };
 		125F542A256D5EFC0051F9AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		12D4FDA2257AC6D00063A167 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		12F07E582576CA1100C4EE8F /* Bloomy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Bloomy.entitlements; sourceTree = "<group>"; };
 		12F07E5C2576CAD000C4EE8F /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
 		31B686F7D2FE3B59608E26C9 /* Pods-Bloomy-BloomyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bloomy-BloomyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Bloomy-BloomyUITests/Pods-Bloomy-BloomyUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				125F542A256D5EFC0051F9AC /* ViewController.swift */,
 				125F5422256D5BE10051F9AC /* PerfilTableViewController.swift */,
 				12F07E5C2576CAD000C4EE8F /* Intents.intentdefinition */,
+				12D4FDA2257AC6D00063A167 /* NavigationViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 				BEC461D0255DABD8003C1D1A /* Bloomy.xcdatamodeld in Sources */,
 				BEC461C6255DABD8003C1D1A /* AppDelegate.swift in Sources */,
 				BEC461C8255DABD8003C1D1A /* SceneDelegate.swift in Sources */,
+				12D4FDA3257AC6D00063A167 /* NavigationViewController.swift in Sources */,
 				125F5423256D5BE10051F9AC /* PerfilTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

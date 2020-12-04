@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aTf-Iq-ZL2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YIC-fF-8EX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
@@ -11,7 +11,7 @@
         <!--Perfil-->
         <scene sceneID="JV3-35-oEM">
             <objects>
-                <viewController title="Perfil" modalPresentationStyle="fullScreen" interfaceStyle="light" id="XCZ-zc-2Tt" sceneMemberID="viewController">
+                <viewController title="Perfil" modalPresentationStyle="fullScreen" id="XCZ-zc-2Tt" customClass="NavigationViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r0P-bO-81l">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,7 +24,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="KDu-DO-eBT" secondAttribute="height" multiplier="327:118" id="4RI-FL-iqW"/>
                                         </constraints>
-                                        <state key="normal" image="saúde">
+                                        <state key="normal" image="saúde">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
@@ -40,7 +40,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="SIb-rj-X9d" secondAttribute="height" multiplier="327:118" id="V2s-TZ-8Cb"/>
                                         </constraints>
-                                        <state key="normal" image="atençãoplena"/>
+                                        <state key="normal" image="atençãoplena"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0x-gF-LQl">
                                         <rect key="frame" x="0.0" y="405" width="327" height="118"/>
@@ -73,7 +73,7 @@
                                 <color key="tintColor" red="0.24313725489999999" green="0.2470588235" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <state key="normal" image="gearshape.fill" catalog="system"/>
                                 <connections>
-                                    <segue destination="LCt-ex-JkX" kind="show" id="s4m-H1-MYF"/>
+                                    <segue destination="LCt-ex-JkX" kind="show" id="eRs-06-PIG"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Avatar" translatesAutoresizingMaskIntoConstraints="NO" id="vnq-Dm-5Q0">
@@ -107,11 +107,10 @@
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" id="F8C-Qe-vPE"/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <nil key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XHD-A3-o3T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2401.449275362319" y="-94.419642857142847"/>
+            <point key="canvasLocation" x="4186.9565217391309" y="-94.419642857142847"/>
         </scene>
         <!--Configurações-->
         <scene sceneID="br8-Ug-7zX">
@@ -300,7 +299,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JtX-ko-gW2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3173.913043478261" y="-94.419642857142847"/>
+            <point key="canvasLocation" x="4994.202898550725" y="-94.419642857142847"/>
         </scene>
         <!--Atalhos da Siri-->
         <scene sceneID="FoC-c3-1mB">
@@ -325,38 +324,34 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EU9-vu-Gg7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3948" y="157"/>
+            <point key="canvasLocation" x="5768.115942028986" y="156.69642857142856"/>
         </scene>
-        <!--Item-->
-        <scene sceneID="gx4-15-aH9">
+        <!--Navigation Controller-->
+        <scene sceneID="MuO-eG-3Pk">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aTf-Iq-ZL2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Hkl-wf-ETB"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBarsOnTap="YES" id="YIC-fF-8EX" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Gei-fb-rj6">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="m8r-Id-xV5">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BiF-66-nnU">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </toolbar>
                     <connections>
-                        <segue destination="XCZ-zc-2Tt" kind="relationship" relationship="rootViewController" id="Be7-LI-gwj"/>
+                        <segue destination="XCZ-zc-2Tt" kind="relationship" relationship="rootViewController" id="Zcj-hv-cTY"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Tb3-Ah-PBo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eZT-zS-ekI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1491.304347826087" y="-94.419642857142847"/>
+            <point key="canvasLocation" x="3276.811594202899" y="-94.419642857142847"/>
         </scene>
     </scenes>
     <resources>
         <image name="Avatar" width="77" height="77"/>
-        <image name="atençãoplena" width="327" height="118"/>
+        <image name="atençãoplena" width="327" height="118"/>
         <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <image name="lazer" width="327" height="118"/>
         <image name="pessoasqueridas" width="327" height="118"/>
-        <image name="saúde" width="327" height="118"/>
+        <image name="saúde" width="327" height="118"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
