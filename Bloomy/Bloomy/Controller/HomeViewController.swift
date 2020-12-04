@@ -10,18 +10,18 @@ import UIKit
 class HomeViewController: UIViewController {
     
     // MARK: Outlets
-    @IBOutlet weak var firstStackView: UIStackView!
-    @IBOutlet weak var secondStackView: UIStackView!
-    @IBOutlet weak var thirdStackView: UIStackView!
-    @IBOutlet weak var fourthStackView: UIStackView!
-    @IBOutlet weak var firstLeftButton: UIButton!
-    @IBOutlet weak var firstRightButton: UIButton!
-    @IBOutlet weak var secondLeftButton: UIButton!
-    @IBOutlet weak var secondRightButton: UIButton!
-    @IBOutlet weak var thirdLeftButton: UIButton!
-    @IBOutlet weak var thirdRightButton: UIButton!
-    @IBOutlet weak var fourthLeftButton: UIButton!
-    @IBOutlet weak var fourthRightButton: UIButton!
+    @IBOutlet weak var healthStackView: UIStackView!
+    @IBOutlet weak var leisureStackView: UIStackView!
+    @IBOutlet weak var mindfulnessStackView: UIStackView!
+    @IBOutlet weak var lovedsStackView: UIStackView!
+    @IBOutlet weak var healthLeftButton: UIButton!
+    @IBOutlet weak var healthRightButton: UIButton!
+    @IBOutlet weak var leisureLeftButton: UIButton!
+    @IBOutlet weak var leisureRightButton: UIButton!
+    @IBOutlet weak var mindfulnessLeftButton: UIButton!
+    @IBOutlet weak var mindfulnessRightButton: UIButton!
+    @IBOutlet weak var lovedsLeftButton: UIButton!
+    @IBOutlet weak var lovedsRightButton: UIButton!
     @IBOutlet weak var cloudsConstraint5: NSLayoutConstraint!
     @IBOutlet weak var cloudsConstraint4: NSLayoutConstraint!
     @IBOutlet weak var cloudsConstraint3: NSLayoutConstraint!
@@ -30,20 +30,28 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var cloudsConstraint6: NSLayoutConstraint!
     
     // MARK: Global Variables
-    private let quantityIslands: Int = 4
     let userManager = UserManager.shared
     let islandsNames: [String] = ["Saúde", "Lazer", "Atenção Plena", "Pessoas Queridas"]
     var stopAnimation = false
+    let ilhas = UserManager.shared.getIslands()
+    private var quantityIslands: Int = 4
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Pegar a quantidade de ilhas selecionadas pelo usuário
+        quantityIslands = ilhas!.count
         setUpIslandsDisplay(quantityIslands: self.quantityIslands)
         SeedDataBase.shared.seed()
         if (!isSameDay(userDate: userManager.getLastSeen() ?? Date(), actualDate: Date())) {
             userManager.updateLastSeen(to: Date())
             getDailyChallenges()
         }
+        print("-----------------------")
+        print("essas sao as ilhas")
+        print(userManager.getIslands())
+        print("-----------------------")
+        print("esse é o numero de ilhas")
+        print(userManager.getIslands()?.count)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -125,41 +133,41 @@ class HomeViewController: UIViewController {
     }
     
     func setUpDisplayOneIsland() {
-        self.fourthStackView.isHidden = true
-        self.thirdStackView.isHidden = true
-        self.secondStackView.isHidden = true
-        self.firstRightButton.isHidden = true
+        self.lovedsStackView.isHidden = true
+        self.mindfulnessStackView.isHidden = true
+        self.leisureStackView.isHidden = true
+        self.healthRightButton.isHidden = true
         // TODO: Definir qual a ilha será exibida
     }
     
     func setUpDisplayTwoIsland() {
-        self.fourthStackView.isHidden = true
-        self.thirdStackView.isHidden = true
-        self.secondRightButton.isHidden = true
-        self.firstRightButton.isHidden = true
+        self.lovedsStackView.isHidden = true
+        self.mindfulnessStackView.isHidden = true
+        self.leisureRightButton.isHidden = true
+        self.healthRightButton.isHidden = true
         // TODO: Definir quais ilhas serão exibidas
     }
     
     func setUpDisplayThreeIsland() {
-        self.fourthStackView.isHidden = true
-        self.thirdRightButton.isEnabled = false
-        self.thirdRightButton.alpha = 0
-        self.secondLeftButton.isEnabled = false
-        self.secondLeftButton.alpha = 0
-        self.firstRightButton.isEnabled = false
-        self.firstRightButton.alpha = 0
+        self.lovedsStackView.isHidden = true
+        self.mindfulnessRightButton.isEnabled = false
+        self.mindfulnessRightButton.alpha = 0
+        self.leisureLeftButton.isEnabled = false
+        self.leisureLeftButton.alpha = 0
+        self.healthRightButton.isEnabled = false
+        self.healthRightButton.alpha = 0
         // TODO: Definir quais ilhas serão exibidas
     }
     
     func setUpDisplayFourIsland() {
-        self.fourthRightButton.isEnabled = false
-        self.fourthRightButton.alpha = 0
-        self.thirdLeftButton.isEnabled = false
-        self.thirdLeftButton.alpha = 0
-        self.secondRightButton.isEnabled = false
-        self.secondRightButton.alpha = 0
-        self.firstLeftButton.isEnabled = false
-        self.firstLeftButton.alpha = 0
+        self.lovedsRightButton.isEnabled = false
+        self.lovedsRightButton.alpha = 0
+        self.mindfulnessLeftButton.isEnabled = false
+        self.mindfulnessLeftButton.alpha = 0
+        self.leisureRightButton.isEnabled = false
+        self.leisureRightButton.alpha = 0
+        self.healthLeftButton.isEnabled = false
+        self.healthLeftButton.alpha = 0
         // TODO: Definir a ordem das ilhas
     }
     

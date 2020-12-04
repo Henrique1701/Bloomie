@@ -53,7 +53,7 @@ struct SeedDataBase {
         _ = RewardManager.shared.newReward(withId: "R5", withImage: UIImage())
         
         RewardManager.shared.setIsland(toReward: "R1", island: IslandManager.shared.getIsland(withName: "Atenção Plena")!)
-        RewardManager.shared.setIsland(toReward: "R2", island: IslandManager.shared.getIsland(withName: "Atenção Plena")!)
+        RewardManager.shared.setIsland(toReward: "R2", island: IslandManager.shared.getIsland(withName: "Saúde")!)
         RewardManager.shared.setIsland(toReward: "R3", island: IslandManager.shared.getIsland(withName: "Lazer")!)
         RewardManager.shared.setIsland(toReward: "R4", island: IslandManager.shared.getIsland(withName: "Pessoas Queridas")!)
     }
