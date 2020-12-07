@@ -35,6 +35,7 @@ class LovedsViewController: UIViewController {
             self.island.dailyChallenge?.done = true
             _ = IslandManager.shared.saveContext()
             self.chooseButtonToShow()
+            self.showRewardPopUp()
             self.loadViewIfNeeded()
         }
     }
@@ -84,20 +85,28 @@ class LovedsViewController: UIViewController {
             //se o desafio não foi aceito
             self.doneButton.isHidden = true
             self.challengeDayButton.isHidden = false
-            
+            self.challengeDayButton.isEnabled = true
+            self.challengeDayButton.alpha = 1
         } else if ((self.island.dailyChallenge?.accepted)! && !(self.island.dailyChallenge?.done)!) {
             //se o desafio foi aceito mas n foi concluído
             self.challengeDayButton.isHidden = true
             self.doneButton.isHidden = false
-            //Mostra o challengeDayButton
-            //Esconde o botão de concluir
-            //Ainda tem o caso em que o botão tá desativado
         } else {
             //desafio aceito e concluído
-            //precisa setar uma forma inativa para o challengeDayButton
-            self.challengeDayButton.isHidden = true
+            self.challengeDayButton.isHidden = false
+            self.challengeDayButton.alpha = 0.5
+            self.challengeDayButton.isEnabled = false
             self.doneButton.isHidden = true
         }
+    }
+    
+    func showRewardPopUp() {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "PopUps", bundle: nil)
+        let popup = storyBoard.instantiateViewController(identifier: "RewardPopUp") as! RewardPopUpViewController
+        popup.rewardImage = UIImage(named: "mushroom")
+        popup.modalTransitionStyle = .crossDissolve
+        popup.modalPresentationStyle = .overCurrentContext
+        self.present(popup, animated: true)
     }
     
 }
