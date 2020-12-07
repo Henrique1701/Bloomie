@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="un7-2z-1AU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
@@ -19,191 +19,6 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Mindfulness View Controller-->
-        <scene sceneID="akN-oS-Fls">
-            <objects>
-                <viewController storyboardIdentifier="Mindfulness" modalPresentationStyle="fullScreen" id="Y8G-kZ-GGf" customClass="MindfulnessViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="pqV-Wh-NaH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mindfulness" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZj-7E-Idn">
-                                <rect key="frame" x="160.5" y="437.5" width="93" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NfR-0v-VZe">
-                                <rect key="frame" x="111.5" y="773" width="191" height="48"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="NfR-0v-VZe" secondAttribute="height" multiplier="191:48" priority="750" id="lo3-eq-8uV"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
-                                <inset key="contentEdgeInsets" minX="37" minY="16" maxX="37" maxY="16"/>
-                                <state key="normal" title="desafio do dia" backgroundImage="botao_desafio_do_dia">
-                                    <color key="titleColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="4gS-XJ-ah1" kind="presentation" identifier="toChallengePopUpViewControllerSegue" id="yoT-wX-hzU"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mA0-ue-Doc">
-                                <rect key="frame" x="111.5" y="772.5" width="191" height="48.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="mA0-ue-Doc" secondAttribute="height" multiplier="191:48" priority="750" id="m2y-1c-GSj"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
-                                <inset key="contentEdgeInsets" minX="37" minY="16" maxX="37" maxY="16"/>
-                                <state key="normal" title="concluir desafio" backgroundImage="botao_desafio_do_dia">
-                                    <color key="titleColor" red="0.1333333333" green="0.1333333333" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="hRC-TM-lDe" kind="presentation" identifier="toDonePopUpViewControllerSegue" id="1kV-c2-549"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="R8T-aD-uv3"/>
-                        <color key="backgroundColor" red="0.99602943659999998" green="0.96094125509999995" blue="0.94508653880000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <constraints>
-                            <constraint firstItem="NfR-0v-VZe" firstAttribute="centerX" secondItem="pqV-Wh-NaH" secondAttribute="centerX" id="5KR-ZD-ene"/>
-                            <constraint firstItem="oZj-7E-Idn" firstAttribute="centerY" secondItem="pqV-Wh-NaH" secondAttribute="centerY" id="9za-vB-eHg"/>
-                            <constraint firstItem="mA0-ue-Doc" firstAttribute="height" secondItem="R8T-aD-uv3" secondAttribute="height" multiplier="0.0589789" id="BZG-Ln-1ZN"/>
-                            <constraint firstItem="mA0-ue-Doc" firstAttribute="width" secondItem="R8T-aD-uv3" secondAttribute="width" multiplier="0.4625" id="Onj-ft-70d"/>
-                            <constraint firstItem="oZj-7E-Idn" firstAttribute="centerX" secondItem="pqV-Wh-NaH" secondAttribute="centerX" id="WIR-ah-JIy"/>
-                            <constraint firstItem="NfR-0v-VZe" firstAttribute="width" secondItem="R8T-aD-uv3" secondAttribute="width" multiplier="0.461353" id="ZLp-RS-GVq"/>
-                            <constraint firstItem="R8T-aD-uv3" firstAttribute="bottom" secondItem="NfR-0v-VZe" secondAttribute="bottom" multiplier="1.05" id="aAi-BH-pq3"/>
-                            <constraint firstItem="R8T-aD-uv3" firstAttribute="bottom" secondItem="mA0-ue-Doc" secondAttribute="bottom" multiplier="1.05" id="eow-8X-6fi"/>
-                            <constraint firstItem="mA0-ue-Doc" firstAttribute="width" secondItem="mA0-ue-Doc" secondAttribute="height" multiplier="191:48" priority="750" id="fXi-9Q-DCU"/>
-                            <constraint firstItem="NfR-0v-VZe" firstAttribute="height" secondItem="R8T-aD-uv3" secondAttribute="height" multiplier="0.0586797" id="fpl-6j-JPP"/>
-                            <constraint firstItem="mA0-ue-Doc" firstAttribute="centerX" secondItem="pqV-Wh-NaH" secondAttribute="centerX" id="sPX-40-TlQ"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="lWM-pz-9YJ"/>
-                    <connections>
-                        <outlet property="challengeDayButton" destination="NfR-0v-VZe" id="D1I-XZ-kdQ"/>
-                        <outlet property="doneButton" destination="mA0-ue-Doc" id="k6h-mo-0QB"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jtu-za-ARP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-272.46376811594206" y="17.410714285714285"/>
-        </scene>
-        <!--Loveds View Controller-->
-        <scene sceneID="CMO-Jh-B70">
-            <objects>
-                <viewController storyboardIdentifier="Loveds" id="sRg-Fw-Wnf" customClass="LovedsViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="nHg-de-HAR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcW-Hv-4yq">
-                                <rect key="frame" x="111.5" y="773" width="191" height="48"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="bcW-Hv-4yq" secondAttribute="height" multiplier="191:48" priority="750" id="n72-14-4hd"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
-                                <inset key="contentEdgeInsets" minX="37" minY="16" maxX="37" maxY="16"/>
-                                <state key="normal" title="desafio do dia" backgroundImage="botao_desafio_do_dia">
-                                    <color key="titleColor" red="0.1333333333" green="0.1333333333" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="4gS-XJ-ah1" kind="presentation" identifier="toChallengePopUpViewControllerSegue" id="5Lv-g4-Ckc"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RaQ-AR-8oe">
-                                <rect key="frame" x="111.5" y="772.5" width="191" height="48.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="RaQ-AR-8oe" secondAttribute="height" multiplier="191:48" priority="750" id="80A-uS-F5x"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
-                                <inset key="contentEdgeInsets" minX="37" minY="16" maxX="37" maxY="16"/>
-                                <state key="normal" title="concluir desafio" backgroundImage="botao_desafio_do_dia">
-                                    <color key="titleColor" red="0.1333333333" green="0.1333333333" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="hRC-TM-lDe" kind="presentation" identifier="toDonePopUpViewControllerSegue" id="Ybx-NU-BJ5"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="A2q-pt-6El"/>
-                        <color key="backgroundColor" red="0.99602943659999998" green="0.96094125509999995" blue="0.94508653880000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <constraints>
-                            <constraint firstItem="RaQ-AR-8oe" firstAttribute="height" secondItem="A2q-pt-6El" secondAttribute="height" multiplier="0.0589789" id="6Ob-Wl-xK1"/>
-                            <constraint firstItem="RaQ-AR-8oe" firstAttribute="width" secondItem="A2q-pt-6El" secondAttribute="width" multiplier="0.4625" id="6tl-bn-V4h"/>
-                            <constraint firstItem="bcW-Hv-4yq" firstAttribute="centerX" secondItem="nHg-de-HAR" secondAttribute="centerX" id="8fh-g3-QLb"/>
-                            <constraint firstItem="A2q-pt-6El" firstAttribute="bottom" secondItem="bcW-Hv-4yq" secondAttribute="bottom" multiplier="1.05" id="AYm-mM-GXu"/>
-                            <constraint firstItem="RaQ-AR-8oe" firstAttribute="centerX" secondItem="nHg-de-HAR" secondAttribute="centerX" id="L1t-3w-T9e"/>
-                            <constraint firstItem="A2q-pt-6El" firstAttribute="bottom" secondItem="RaQ-AR-8oe" secondAttribute="bottom" multiplier="1.05" id="LFm-Yt-Zif"/>
-                            <constraint firstItem="bcW-Hv-4yq" firstAttribute="height" secondItem="A2q-pt-6El" secondAttribute="height" multiplier="0.0586797" id="Vht-AA-uWY"/>
-                            <constraint firstItem="bcW-Hv-4yq" firstAttribute="width" secondItem="A2q-pt-6El" secondAttribute="width" multiplier="0.461353" id="zdI-uH-NaU"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="challengeDayButton" destination="bcW-Hv-4yq" id="b4t-3D-RTx"/>
-                        <outlet property="doneButton" destination="RaQ-AR-8oe" id="1vV-TF-vRG"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="T0F-CK-K83" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-266" y="701"/>
-        </scene>
-        <!--Leisure View Controller-->
-        <scene sceneID="9IP-dI-Q1H">
-            <objects>
-                <viewController storyboardIdentifier="Leisure" id="bVq-44-vCv" customClass="LeisureViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="4vC-0e-5Kz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mi9-3O-WEG">
-                                <rect key="frame" x="111.5" y="773" width="191" height="48"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="mi9-3O-WEG" secondAttribute="height" multiplier="191:48" priority="750" id="m4I-HG-LzS"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
-                                <inset key="contentEdgeInsets" minX="37" minY="16" maxX="37" maxY="16"/>
-                                <state key="normal" title="desafio do dia" backgroundImage="botao_desafio_do_dia">
-                                    <color key="titleColor" red="0.1333333333" green="0.1333333333" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="4gS-XJ-ah1" kind="presentation" identifier="toChallengePopUpViewControllerSegue" id="bXS-ZC-j2E"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNZ-y0-hwL">
-                                <rect key="frame" x="111.5" y="772.5" width="191" height="48.5"/>
-                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
-                                <inset key="contentEdgeInsets" minX="37" minY="16" maxX="37" maxY="16"/>
-                                <state key="normal" title="concluir desafio" backgroundImage="botao_desafio_do_dia">
-                                    <color key="titleColor" red="0.1333333333" green="0.1333333333" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="hRC-TM-lDe" kind="presentation" identifier="toDonePopUpViewControllerSegue" id="FyB-xs-Qkk"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Afe-iT-dF4"/>
-                        <color key="backgroundColor" red="0.99607843139999996" green="0.96078431369999995" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <constraints>
-                            <constraint firstItem="mi9-3O-WEG" firstAttribute="height" secondItem="Afe-iT-dF4" secondAttribute="height" multiplier="0.0586797" id="1hN-mq-sGM"/>
-                            <constraint firstItem="hNZ-y0-hwL" firstAttribute="width" secondItem="hNZ-y0-hwL" secondAttribute="height" multiplier="191:48" priority="750" id="GXJ-1h-oyC"/>
-                            <constraint firstItem="hNZ-y0-hwL" firstAttribute="centerX" secondItem="4vC-0e-5Kz" secondAttribute="centerX" id="HVc-L1-m8N"/>
-                            <constraint firstItem="Afe-iT-dF4" firstAttribute="bottom" secondItem="mi9-3O-WEG" secondAttribute="bottom" multiplier="1.05" id="NGp-rX-4Xi"/>
-                            <constraint firstItem="mi9-3O-WEG" firstAttribute="width" secondItem="Afe-iT-dF4" secondAttribute="width" multiplier="0.461353" id="VcS-A2-PFy"/>
-                            <constraint firstItem="Afe-iT-dF4" firstAttribute="bottom" secondItem="hNZ-y0-hwL" secondAttribute="bottom" multiplier="1.05" id="aj5-Vs-wJH"/>
-                            <constraint firstItem="hNZ-y0-hwL" firstAttribute="width" secondItem="Afe-iT-dF4" secondAttribute="width" multiplier="0.4625" id="gID-zH-gKA"/>
-                            <constraint firstItem="hNZ-y0-hwL" firstAttribute="height" secondItem="Afe-iT-dF4" secondAttribute="height" multiplier="0.0589789" id="laN-dM-URK"/>
-                            <constraint firstItem="mi9-3O-WEG" firstAttribute="centerX" secondItem="4vC-0e-5Kz" secondAttribute="centerX" id="veg-8Z-fFF"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="challengeDayButton" destination="mi9-3O-WEG" id="WIt-a9-wF1"/>
-                        <outlet property="doneButton" destination="hNZ-y0-hwL" id="eRO-Mj-YIn"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qnk-vf-yPW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="523" y="17"/>
-        </scene>
         <!--Challenge Pop Up View Controller-->
         <scene sceneID="NdD-RS-qAJ">
             <objects>
@@ -289,28 +104,28 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zAZ-6E-thK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1865.217391304348" y="413.83928571428572"/>
+            <point key="canvasLocation" x="390" y="-525"/>
         </scene>
         <!--Done Pop Up View Controller-->
-        <scene sceneID="kYt-vF-maM">
+        <scene sceneID="2WN-FH-dUb">
             <objects>
-                <viewController storyboardIdentifier="DonePopUp" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="hRC-TM-lDe" customClass="DonePopUpViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="NsM-aq-Jfn">
+                <viewController storyboardIdentifier="DonePopUp" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="cd6-hB-nrB" customClass="DonePopUpViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OID-2I-tql">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <visualEffectView opaque="NO" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lxu-Tb-PDc">
+                            <visualEffectView opaque="NO" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cXg-rG-hwN">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Wc5-Md-VjA">
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="HLn-IA-W2x">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
                                 <blurEffect style="extraLight"/>
                             </visualEffectView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Ad-fs-ohe" userLabel="Content View">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c5d-6q-Xtw" userLabel="Content View">
                                 <rect key="frame" x="41.5" y="243.5" width="331" height="409"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZMF-G9-LJb">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WG7-Rt-fph">
                                         <rect key="frame" x="70" y="347" width="191" height="48"/>
                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
                                         <inset key="contentEdgeInsets" minX="60" minY="16" maxX="60" maxY="16"/>
@@ -318,25 +133,23 @@
                                             <color key="titleColor" red="0.1333333333" green="0.1333333333" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="accept:" destination="4gS-XJ-ah1" eventType="touchUpInside" id="Pl3-Em-kHg"/>
-                                            <action selector="doneChallenge:" destination="hRC-TM-lDe" eventType="touchUpInside" id="FJJ-82-4fA"/>
+                                            <action selector="doneChallenge:" destination="cd6-hB-nrB" eventType="touchUpInside" id="BwD-d4-obJ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mGk-Mz-B7J">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gkJ-Lj-7u4">
                                         <rect key="frame" x="289" y="28" width="18" height="22.5"/>
                                         <state key="normal" image="closeButton"/>
                                         <connections>
-                                            <action selector="close:" destination="hRC-TM-lDe" eventType="touchUpInside" id="PzI-Ej-Ynj"/>
-                                            <action selector="close:" destination="4gS-XJ-ah1" eventType="touchUpInside" id="ag1-fw-Ce7"/>
+                                            <action selector="close:" destination="cd6-hB-nrB" eventType="touchUpInside" id="1MX-eK-RQb"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você conseguiu terminar a ação?" textAlignment="center" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="oqm-Qk-6vq">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você conseguiu terminar a ação?" textAlignment="center" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="VZu-jz-pSL">
                                         <rect key="frame" x="60.5" y="41" width="210" height="82"/>
                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3x1-sO-2dU">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="piH-OW-3rQ">
                                         <rect key="frame" x="13" y="110.5" width="305" height="218.5"/>
                                         <string key="text">Feche os olhos e imagine que você está escaneando o seu corpo, da cabeça até os pés. Preste atenção nas sensações. Relaxe as áreas do seu corpo que você sentir que estão tensionadas.</string>
                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
@@ -346,143 +159,84 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="oqm-Qk-6vq" firstAttribute="centerX" secondItem="4Ad-fs-ohe" secondAttribute="centerX" id="4wr-pX-XZd"/>
-                                    <constraint firstItem="mGk-Mz-B7J" firstAttribute="height" secondItem="4Ad-fs-ohe" secondAttribute="height" multiplier="0.0550122" id="7fp-Wp-GgH"/>
-                                    <constraint firstItem="3x1-sO-2dU" firstAttribute="top" secondItem="oqm-Qk-6vq" secondAttribute="bottom" multiplier="0.9" id="Aax-va-ije"/>
-                                    <constraint firstItem="3x1-sO-2dU" firstAttribute="leading" secondItem="4Ad-fs-ohe" secondAttribute="leading" constant="13" id="GQd-Ys-TsA"/>
-                                    <constraint firstItem="ZMF-G9-LJb" firstAttribute="height" secondItem="4Ad-fs-ohe" secondAttribute="height" multiplier="0.117359" id="Hgk-gR-zt6"/>
-                                    <constraint firstItem="ZMF-G9-LJb" firstAttribute="centerX" secondItem="4Ad-fs-ohe" secondAttribute="centerX" id="IdQ-9u-xE0"/>
-                                    <constraint firstItem="mGk-Mz-B7J" firstAttribute="top" secondItem="4Ad-fs-ohe" secondAttribute="top" constant="28" id="M1b-MP-yRN"/>
-                                    <constraint firstItem="3x1-sO-2dU" firstAttribute="centerX" secondItem="4Ad-fs-ohe" secondAttribute="centerX" id="Qmk-lh-2dR"/>
-                                    <constraint firstItem="oqm-Qk-6vq" firstAttribute="width" secondItem="4Ad-fs-ohe" secondAttribute="width" multiplier="0.634441" id="RCr-4m-HVx"/>
-                                    <constraint firstItem="oqm-Qk-6vq" firstAttribute="height" secondItem="4Ad-fs-ohe" secondAttribute="height" multiplier="0.200489" id="Toa-mS-sPW"/>
-                                    <constraint firstAttribute="trailing" secondItem="3x1-sO-2dU" secondAttribute="trailing" constant="13" id="YJ4-mr-Ddc"/>
-                                    <constraint firstItem="oqm-Qk-6vq" firstAttribute="top" secondItem="4Ad-fs-ohe" secondAttribute="top" constant="41" id="Z25-CW-g9f"/>
-                                    <constraint firstAttribute="bottom" secondItem="ZMF-G9-LJb" secondAttribute="bottom" constant="14" id="gvL-7e-wzx"/>
-                                    <constraint firstItem="ZMF-G9-LJb" firstAttribute="width" secondItem="4Ad-fs-ohe" secondAttribute="width" multiplier="0.577039" id="jbV-o5-HXn"/>
-                                    <constraint firstItem="ZMF-G9-LJb" firstAttribute="bottom" secondItem="3x1-sO-2dU" secondAttribute="bottom" multiplier="1.2" id="nDG-OC-xFr"/>
-                                    <constraint firstAttribute="trailing" secondItem="mGk-Mz-B7J" secondAttribute="trailing" constant="24" id="wcX-Y5-5ng"/>
-                                    <constraint firstItem="mGk-Mz-B7J" firstAttribute="width" secondItem="4Ad-fs-ohe" secondAttribute="width" multiplier="0.0543807" id="yQ2-Gg-Kv6"/>
+                                    <constraint firstItem="VZu-jz-pSL" firstAttribute="top" secondItem="c5d-6q-Xtw" secondAttribute="top" constant="41" id="7qr-vz-HTq"/>
+                                    <constraint firstItem="gkJ-Lj-7u4" firstAttribute="width" secondItem="c5d-6q-Xtw" secondAttribute="width" multiplier="0.0543807" id="8M5-Ku-hKY"/>
+                                    <constraint firstItem="piH-OW-3rQ" firstAttribute="leading" secondItem="c5d-6q-Xtw" secondAttribute="leading" constant="13" id="9iv-xa-o44"/>
+                                    <constraint firstItem="gkJ-Lj-7u4" firstAttribute="top" secondItem="c5d-6q-Xtw" secondAttribute="top" constant="28" id="BFn-n8-z4y"/>
+                                    <constraint firstItem="VZu-jz-pSL" firstAttribute="width" secondItem="c5d-6q-Xtw" secondAttribute="width" multiplier="0.634441" id="BKd-6K-Bnl"/>
+                                    <constraint firstItem="piH-OW-3rQ" firstAttribute="top" secondItem="VZu-jz-pSL" secondAttribute="bottom" multiplier="0.9" id="HEA-DY-inw"/>
+                                    <constraint firstItem="piH-OW-3rQ" firstAttribute="centerX" secondItem="c5d-6q-Xtw" secondAttribute="centerX" id="KrQ-Zi-CDP"/>
+                                    <constraint firstItem="VZu-jz-pSL" firstAttribute="height" secondItem="c5d-6q-Xtw" secondAttribute="height" multiplier="0.200489" id="Oot-0l-o9r"/>
+                                    <constraint firstItem="WG7-Rt-fph" firstAttribute="bottom" secondItem="piH-OW-3rQ" secondAttribute="bottom" multiplier="1.2" id="P48-XP-JIM"/>
+                                    <constraint firstAttribute="trailing" secondItem="gkJ-Lj-7u4" secondAttribute="trailing" constant="24" id="PIN-Qk-Kf4"/>
+                                    <constraint firstAttribute="bottom" secondItem="WG7-Rt-fph" secondAttribute="bottom" constant="14" id="VoN-gv-ksG"/>
+                                    <constraint firstItem="gkJ-Lj-7u4" firstAttribute="height" secondItem="c5d-6q-Xtw" secondAttribute="height" multiplier="0.0550122" id="a3N-Wc-0yB"/>
+                                    <constraint firstItem="WG7-Rt-fph" firstAttribute="height" secondItem="c5d-6q-Xtw" secondAttribute="height" multiplier="0.117359" id="kVH-0T-9ld"/>
+                                    <constraint firstItem="VZu-jz-pSL" firstAttribute="centerX" secondItem="c5d-6q-Xtw" secondAttribute="centerX" id="m7E-gb-12Z"/>
+                                    <constraint firstAttribute="trailing" secondItem="piH-OW-3rQ" secondAttribute="trailing" constant="13" id="p1f-Su-xXi"/>
+                                    <constraint firstItem="WG7-Rt-fph" firstAttribute="width" secondItem="c5d-6q-Xtw" secondAttribute="width" multiplier="0.577039" id="qPg-sm-dhM"/>
+                                    <constraint firstItem="WG7-Rt-fph" firstAttribute="centerX" secondItem="c5d-6q-Xtw" secondAttribute="centerX" id="zCE-4R-8ck"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="Def-Cm-GIh"/>
+                        <viewLayoutGuide key="safeArea" id="nCA-Hv-ayr"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="lxu-Tb-PDc" firstAttribute="width" secondItem="NsM-aq-Jfn" secondAttribute="width" id="3yV-6l-ZPV"/>
-                            <constraint firstItem="lxu-Tb-PDc" firstAttribute="height" secondItem="NsM-aq-Jfn" secondAttribute="height" id="5Qf-uZ-SiY"/>
-                            <constraint firstItem="4Ad-fs-ohe" firstAttribute="height" secondItem="Def-Cm-GIh" secondAttribute="height" multiplier="0.5" id="DSJ-WH-DOW"/>
-                            <constraint firstItem="4Ad-fs-ohe" firstAttribute="width" secondItem="Def-Cm-GIh" secondAttribute="width" multiplier="0.799517" id="Qmo-68-Bxo"/>
-                            <constraint firstItem="lxu-Tb-PDc" firstAttribute="centerY" secondItem="NsM-aq-Jfn" secondAttribute="centerY" id="bp4-9I-1ZM"/>
-                            <constraint firstItem="4Ad-fs-ohe" firstAttribute="centerY" secondItem="NsM-aq-Jfn" secondAttribute="centerY" id="hif-Wz-pVl"/>
-                            <constraint firstItem="lxu-Tb-PDc" firstAttribute="centerX" secondItem="NsM-aq-Jfn" secondAttribute="centerX" id="nca-q6-C07"/>
-                            <constraint firstItem="4Ad-fs-ohe" firstAttribute="centerX" secondItem="NsM-aq-Jfn" secondAttribute="centerX" id="nmK-xw-QyJ"/>
+                            <constraint firstItem="cXg-rG-hwN" firstAttribute="width" secondItem="OID-2I-tql" secondAttribute="width" id="Hpg-6z-gBi"/>
+                            <constraint firstItem="c5d-6q-Xtw" firstAttribute="height" secondItem="nCA-Hv-ayr" secondAttribute="height" multiplier="0.5" id="Lhc-AN-Gas"/>
+                            <constraint firstItem="c5d-6q-Xtw" firstAttribute="width" secondItem="nCA-Hv-ayr" secondAttribute="width" multiplier="0.799517" id="OVO-nn-WUw"/>
+                            <constraint firstItem="c5d-6q-Xtw" firstAttribute="centerY" secondItem="OID-2I-tql" secondAttribute="centerY" id="Zxy-p1-afc"/>
+                            <constraint firstItem="c5d-6q-Xtw" firstAttribute="centerX" secondItem="OID-2I-tql" secondAttribute="centerX" id="cqI-Vc-eEh"/>
+                            <constraint firstItem="cXg-rG-hwN" firstAttribute="centerX" secondItem="OID-2I-tql" secondAttribute="centerX" id="eyb-nP-5cE"/>
+                            <constraint firstItem="cXg-rG-hwN" firstAttribute="centerY" secondItem="OID-2I-tql" secondAttribute="centerY" id="sgR-9d-fXI"/>
+                            <constraint firstItem="cXg-rG-hwN" firstAttribute="height" secondItem="OID-2I-tql" secondAttribute="height" id="vaY-Ch-7Q3"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="2rP-bt-22k"/>
+                    <navigationItem key="navigationItem" id="4og-H6-B9h"/>
                     <connections>
-                        <outlet property="contentView" destination="4Ad-fs-ohe" id="QnZ-cI-P85"/>
-                        <outlet property="doneButton" destination="ZMF-G9-LJb" id="TqU-gw-due"/>
-                        <outlet property="questionLabel" destination="oqm-Qk-6vq" id="VR0-ia-wxA"/>
-                        <outlet property="summaryLabel" destination="3x1-sO-2dU" id="4z4-zX-9HW"/>
+                        <outlet property="contentView" destination="c5d-6q-Xtw" id="y6L-Su-ydK"/>
+                        <outlet property="doneButton" destination="WG7-Rt-fph" id="B3g-ca-pxk"/>
+                        <outlet property="questionLabel" destination="VZu-jz-pSL" id="ikM-dd-jgj"/>
+                        <outlet property="summaryLabel" destination="piH-OW-3rQ" id="3RL-A4-tdH"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="l1c-kH-xan" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SeN-7u-ndk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1865" y="-525"/>
         </scene>
-        <!--Health View Controller-->
-        <scene sceneID="DYQ-zp-fR1">
-            <objects>
-                <viewController storyboardIdentifier="Health" id="emZ-vQ-65r" customClass="HealthViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="U6k-h0-ImQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mAy-eu-kQQ">
-                                <rect key="frame" x="111.5" y="773" width="191" height="48"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="mAy-eu-kQQ" secondAttribute="height" multiplier="191:48" priority="750" id="oBJ-vE-5K6"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
-                                <inset key="contentEdgeInsets" minX="37" minY="16" maxX="37" maxY="16"/>
-                                <state key="normal" title="desafio do dia" backgroundImage="botao_desafio_do_dia">
-                                    <color key="titleColor" red="0.1333333333" green="0.1333333333" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="4gS-XJ-ah1" kind="presentation" identifier="toChallengePopUpViewControllerSegue" id="vMT-eP-tGl"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bs9-XH-U3W">
-                                <rect key="frame" x="111.5" y="772.5" width="191" height="48.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="bs9-XH-U3W" secondAttribute="height" multiplier="191:48" priority="750" id="JmS-Dj-OEl"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
-                                <inset key="contentEdgeInsets" minX="37" minY="16" maxX="37" maxY="16"/>
-                                <state key="normal" title="concluir desafio" backgroundImage="botao_desafio_do_dia">
-                                    <color key="titleColor" red="0.1333333333" green="0.1333333333" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="hRC-TM-lDe" kind="presentation" identifier="toDonePopUpViewControllerSegue" id="wft-5A-VUK"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="bTv-Za-ZDa"/>
-                        <color key="backgroundColor" red="0.99602943659999998" green="0.96094125509999995" blue="0.94508653880000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <constraints>
-                            <constraint firstItem="bs9-XH-U3W" firstAttribute="width" secondItem="bTv-Za-ZDa" secondAttribute="width" multiplier="0.4625" id="1KG-9K-bTX"/>
-                            <constraint firstItem="bTv-Za-ZDa" firstAttribute="bottom" secondItem="mAy-eu-kQQ" secondAttribute="bottom" multiplier="1.05" id="MB3-kY-ph2"/>
-                            <constraint firstItem="bs9-XH-U3W" firstAttribute="height" secondItem="bTv-Za-ZDa" secondAttribute="height" multiplier="0.0589789" id="XiW-Xo-pzr"/>
-                            <constraint firstItem="bTv-Za-ZDa" firstAttribute="bottom" secondItem="bs9-XH-U3W" secondAttribute="bottom" multiplier="1.05" id="YWk-ro-mtO"/>
-                            <constraint firstItem="bs9-XH-U3W" firstAttribute="centerX" secondItem="U6k-h0-ImQ" secondAttribute="centerX" id="b07-jE-lfA"/>
-                            <constraint firstItem="mAy-eu-kQQ" firstAttribute="height" secondItem="bTv-Za-ZDa" secondAttribute="height" multiplier="0.0586797" id="iD6-Ia-oJm"/>
-                            <constraint firstItem="mAy-eu-kQQ" firstAttribute="width" secondItem="bTv-Za-ZDa" secondAttribute="width" multiplier="0.461353" id="nvK-Ex-ppV"/>
-                            <constraint firstItem="mAy-eu-kQQ" firstAttribute="centerX" secondItem="U6k-h0-ImQ" secondAttribute="centerX" id="rL4-Rc-8SF"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="challengeDayButton" destination="mAy-eu-kQQ" id="5jI-Tk-Iqp"/>
-                        <outlet property="doneButton" destination="bs9-XH-U3W" id="CC2-6W-m0s"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="roE-80-Eah" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="522" y="700"/>
-        </scene>
         <!--Reward Pop Up View Controller-->
-        <scene sceneID="Xzz-wc-zU4">
+        <scene sceneID="XcC-5V-2Ag">
             <objects>
-                <viewController storyboardIdentifier="RewardPopUp" modalPresentationStyle="overCurrentContext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="un7-2z-1AU" customClass="RewardPopUpViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="6hu-lx-eeC">
+                <viewController storyboardIdentifier="RewardPopUp" modalPresentationStyle="overCurrentContext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DBh-4h-gf3" customClass="RewardPopUpViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Dg-KW-ltq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <visualEffectView opaque="NO" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2fJ-QI-Dqi">
+                            <visualEffectView opaque="NO" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CzV-Gi-K9u">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Gxm-nC-vKZ">
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="rQQ-Ik-SzU">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <blurEffect style="extraLight"/>
                             </visualEffectView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XYG-J3-Dmm">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PlC-KE-XjA">
                                 <rect key="frame" x="41.5" y="243.5" width="331" height="409"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parabéns!" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fVf-rq-Pj6">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parabéns!" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Hgg-be-DOJ">
                                         <rect key="frame" x="8" y="52" width="315" height="42"/>
                                         <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Essa é a sua recompensa:" textAlignment="center" lineBreakMode="clip" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="CYV-LL-aJ4">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Essa é a sua recompensa:" textAlignment="center" lineBreakMode="clip" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="d3L-xo-TEp">
                                         <rect key="frame" x="39" y="88.5" width="253" height="70"/>
                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSu-Fw-9I9">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQC-af-OXo">
                                         <rect key="frame" x="70" y="347" width="191" height="48"/>
                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
                                         <inset key="contentEdgeInsets" minX="60" minY="16" maxX="60" maxY="16"/>
@@ -490,75 +244,69 @@
                                             <color key="titleColor" red="0.1333333333" green="0.1333333333" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="accept:" destination="4gS-XJ-ah1" eventType="touchUpInside" id="Vs3-FQ-lHQ"/>
-                                            <action selector="getReward:" destination="un7-2z-1AU" eventType="touchUpInside" id="kUa-is-ICL"/>
+                                            <action selector="getReward:" destination="DBh-4h-gf3" eventType="touchUpInside" id="EKB-PL-5mF"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bDz-fr-EJ9">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jyN-ZF-4go">
                                         <rect key="frame" x="289" y="28" width="18" height="22.5"/>
                                         <state key="normal" image="closeButton"/>
                                         <connections>
-                                            <action selector="close:" destination="un7-2z-1AU" eventType="touchUpInside" id="XhJ-SU-oq4"/>
-                                            <action selector="close:" destination="4gS-XJ-ah1" eventType="touchUpInside" id="jcd-bv-FqU"/>
+                                            <action selector="close:" destination="DBh-4h-gf3" eventType="touchUpInside" id="D2M-bl-KGX"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="fVf-rq-Pj6" firstAttribute="height" secondItem="XYG-J3-Dmm" secondAttribute="height" multiplier="0.102689" id="3qV-Ne-b4F"/>
-                                    <constraint firstItem="bDz-fr-EJ9" firstAttribute="width" secondItem="XYG-J3-Dmm" secondAttribute="width" multiplier="0.0543807" id="9o1-2E-xmr"/>
-                                    <constraint firstItem="dSu-Fw-9I9" firstAttribute="height" secondItem="XYG-J3-Dmm" secondAttribute="height" multiplier="0.117359" id="9pk-ld-WwA"/>
-                                    <constraint firstItem="dSu-Fw-9I9" firstAttribute="width" secondItem="XYG-J3-Dmm" secondAttribute="width" multiplier="0.577039" id="Haj-vH-JwM"/>
-                                    <constraint firstItem="CYV-LL-aJ4" firstAttribute="width" secondItem="XYG-J3-Dmm" secondAttribute="width" multiplier="0.76435" id="I6Q-Z4-gGh"/>
-                                    <constraint firstItem="bDz-fr-EJ9" firstAttribute="height" secondItem="XYG-J3-Dmm" secondAttribute="height" multiplier="0.0550122" id="KDw-T9-H7B"/>
-                                    <constraint firstItem="fVf-rq-Pj6" firstAttribute="centerX" secondItem="XYG-J3-Dmm" secondAttribute="centerX" id="Oh8-Va-oup"/>
-                                    <constraint firstItem="fVf-rq-Pj6" firstAttribute="top" secondItem="bDz-fr-EJ9" secondAttribute="bottom" constant="1.5" id="ZcJ-27-c2u"/>
-                                    <constraint firstItem="dSu-Fw-9I9" firstAttribute="centerX" secondItem="XYG-J3-Dmm" secondAttribute="centerX" id="arh-Fk-n9L"/>
-                                    <constraint firstItem="bDz-fr-EJ9" firstAttribute="top" secondItem="XYG-J3-Dmm" secondAttribute="top" constant="28" id="bb6-kj-XIe"/>
-                                    <constraint firstItem="fVf-rq-Pj6" firstAttribute="width" secondItem="XYG-J3-Dmm" secondAttribute="width" multiplier="0.951662" id="knv-Gf-9MN"/>
-                                    <constraint firstAttribute="trailing" secondItem="bDz-fr-EJ9" secondAttribute="trailing" constant="24" id="n2N-8d-0d8"/>
-                                    <constraint firstItem="CYV-LL-aJ4" firstAttribute="height" secondItem="XYG-J3-Dmm" secondAttribute="height" multiplier="0.171149" id="t9b-iL-KZE"/>
-                                    <constraint firstItem="CYV-LL-aJ4" firstAttribute="top" secondItem="fVf-rq-Pj6" secondAttribute="top" multiplier="1.7" id="uPr-l3-zNg"/>
-                                    <constraint firstAttribute="bottom" secondItem="dSu-Fw-9I9" secondAttribute="bottom" constant="14" id="vgP-GI-Hz2"/>
-                                    <constraint firstItem="CYV-LL-aJ4" firstAttribute="centerX" secondItem="XYG-J3-Dmm" secondAttribute="centerX" id="wSe-kV-nir"/>
+                                    <constraint firstItem="jyN-ZF-4go" firstAttribute="width" secondItem="PlC-KE-XjA" secondAttribute="width" multiplier="0.0543807" id="0Ki-Lb-KQr"/>
+                                    <constraint firstItem="jQC-af-OXo" firstAttribute="centerX" secondItem="PlC-KE-XjA" secondAttribute="centerX" id="4Ky-9B-nQe"/>
+                                    <constraint firstAttribute="trailing" secondItem="jyN-ZF-4go" secondAttribute="trailing" constant="24" id="CyP-iE-P7I"/>
+                                    <constraint firstItem="Hgg-be-DOJ" firstAttribute="top" secondItem="jyN-ZF-4go" secondAttribute="bottom" constant="1.5" id="H3n-xd-T0D"/>
+                                    <constraint firstItem="Hgg-be-DOJ" firstAttribute="height" secondItem="PlC-KE-XjA" secondAttribute="height" multiplier="0.102689" id="JUG-8L-JLm"/>
+                                    <constraint firstItem="Hgg-be-DOJ" firstAttribute="centerX" secondItem="PlC-KE-XjA" secondAttribute="centerX" id="MCR-5z-s1H"/>
+                                    <constraint firstAttribute="bottom" secondItem="jQC-af-OXo" secondAttribute="bottom" constant="14" id="Tem-uo-PKl"/>
+                                    <constraint firstItem="jQC-af-OXo" firstAttribute="width" secondItem="PlC-KE-XjA" secondAttribute="width" multiplier="0.577039" id="V8U-tg-mDz"/>
+                                    <constraint firstItem="d3L-xo-TEp" firstAttribute="top" secondItem="Hgg-be-DOJ" secondAttribute="top" multiplier="1.7" id="XHl-FK-aDC"/>
+                                    <constraint firstItem="jyN-ZF-4go" firstAttribute="height" secondItem="PlC-KE-XjA" secondAttribute="height" multiplier="0.0550122" id="XZs-x1-YGJ"/>
+                                    <constraint firstItem="d3L-xo-TEp" firstAttribute="height" secondItem="PlC-KE-XjA" secondAttribute="height" multiplier="0.171149" id="YrS-1l-93R"/>
+                                    <constraint firstItem="jyN-ZF-4go" firstAttribute="top" secondItem="PlC-KE-XjA" secondAttribute="top" constant="28" id="cfv-TH-TM0"/>
+                                    <constraint firstItem="d3L-xo-TEp" firstAttribute="width" secondItem="PlC-KE-XjA" secondAttribute="width" multiplier="0.76435" id="kNk-X9-zr1"/>
+                                    <constraint firstItem="d3L-xo-TEp" firstAttribute="centerX" secondItem="PlC-KE-XjA" secondAttribute="centerX" id="l0u-sB-2Tk"/>
+                                    <constraint firstItem="jQC-af-OXo" firstAttribute="height" secondItem="PlC-KE-XjA" secondAttribute="height" multiplier="0.117359" id="v5F-Jm-Gey"/>
+                                    <constraint firstItem="Hgg-be-DOJ" firstAttribute="width" secondItem="PlC-KE-XjA" secondAttribute="width" multiplier="0.951662" id="vj1-pe-DaW"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cXz-gc-FVV">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iq9-ot-6Zn">
                                 <rect key="frame" x="159.5" y="427" width="95" height="107"/>
                             </imageView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="CYI-dj-6EQ"/>
+                        <viewLayoutGuide key="safeArea" id="QIX-bY-igN"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="cXz-gc-FVV" firstAttribute="top" secondItem="CYV-LL-aJ4" secondAttribute="bottom" multiplier="1.16" id="3Re-KN-QRZ"/>
-                            <constraint firstItem="XYG-J3-Dmm" firstAttribute="centerY" secondItem="6hu-lx-eeC" secondAttribute="centerY" id="Epg-3J-XNl"/>
-                            <constraint firstItem="cXz-gc-FVV" firstAttribute="width" secondItem="6hu-lx-eeC" secondAttribute="width" multiplier="0.287009" constant="-23.821752265861022" id="MXR-dy-ZSo"/>
-                            <constraint firstItem="XYG-J3-Dmm" firstAttribute="centerX" secondItem="6hu-lx-eeC" secondAttribute="centerX" id="RJB-IV-tQd"/>
-                            <constraint firstItem="2fJ-QI-Dqi" firstAttribute="width" secondItem="6hu-lx-eeC" secondAttribute="width" id="XcM-Dh-6gV"/>
-                            <constraint firstItem="2fJ-QI-Dqi" firstAttribute="height" secondItem="6hu-lx-eeC" secondAttribute="height" id="bgI-2b-eAe"/>
-                            <constraint firstItem="2fJ-QI-Dqi" firstAttribute="centerY" secondItem="6hu-lx-eeC" secondAttribute="centerY" id="epO-0Z-Amj"/>
-                            <constraint firstItem="cXz-gc-FVV" firstAttribute="height" secondItem="6hu-lx-eeC" secondAttribute="height" multiplier="0.261614" constant="-127.40586797066013" id="h5e-fN-O1M"/>
-                            <constraint firstItem="XYG-J3-Dmm" firstAttribute="height" secondItem="CYI-dj-6EQ" secondAttribute="height" multiplier="0.5" id="n9g-tJ-IPL"/>
-                            <constraint firstItem="cXz-gc-FVV" firstAttribute="centerX" secondItem="6hu-lx-eeC" secondAttribute="centerX" id="nri-8a-Oye"/>
-                            <constraint firstItem="2fJ-QI-Dqi" firstAttribute="centerX" secondItem="6hu-lx-eeC" secondAttribute="centerX" id="r4w-u6-vCX"/>
-                            <constraint firstItem="XYG-J3-Dmm" firstAttribute="width" secondItem="CYI-dj-6EQ" secondAttribute="width" multiplier="0.799517" id="yle-xi-ikg"/>
+                            <constraint firstItem="PlC-KE-XjA" firstAttribute="centerY" secondItem="9Dg-KW-ltq" secondAttribute="centerY" id="2K5-ro-0dg"/>
+                            <constraint firstItem="iq9-ot-6Zn" firstAttribute="height" secondItem="9Dg-KW-ltq" secondAttribute="height" multiplier="0.261614" constant="-127.40586797066013" id="97g-EE-QCd"/>
+                            <constraint firstItem="CzV-Gi-K9u" firstAttribute="width" secondItem="9Dg-KW-ltq" secondAttribute="width" id="FjM-3W-bHs"/>
+                            <constraint firstItem="iq9-ot-6Zn" firstAttribute="top" secondItem="d3L-xo-TEp" secondAttribute="bottom" multiplier="1.16" id="O5o-xP-pHp"/>
+                            <constraint firstItem="CzV-Gi-K9u" firstAttribute="centerX" secondItem="9Dg-KW-ltq" secondAttribute="centerX" id="OtP-Dw-B2r"/>
+                            <constraint firstItem="PlC-KE-XjA" firstAttribute="centerX" secondItem="9Dg-KW-ltq" secondAttribute="centerX" id="PEb-Mf-Qxp"/>
+                            <constraint firstItem="iq9-ot-6Zn" firstAttribute="centerX" secondItem="9Dg-KW-ltq" secondAttribute="centerX" id="Qw4-ag-3vA"/>
+                            <constraint firstItem="CzV-Gi-K9u" firstAttribute="centerY" secondItem="9Dg-KW-ltq" secondAttribute="centerY" id="TIv-RA-FX9"/>
+                            <constraint firstItem="iq9-ot-6Zn" firstAttribute="width" secondItem="9Dg-KW-ltq" secondAttribute="width" multiplier="0.287009" constant="-23.821752265861022" id="YjS-pa-9GW"/>
+                            <constraint firstItem="PlC-KE-XjA" firstAttribute="width" secondItem="QIX-bY-igN" secondAttribute="width" multiplier="0.799517" id="e8r-hZ-sle"/>
+                            <constraint firstItem="CzV-Gi-K9u" firstAttribute="height" secondItem="9Dg-KW-ltq" secondAttribute="height" id="erR-Cw-6OY"/>
+                            <constraint firstItem="PlC-KE-XjA" firstAttribute="height" secondItem="QIX-bY-igN" secondAttribute="height" multiplier="0.5" id="wxM-rW-FD1"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="contentView" destination="XYG-J3-Dmm" id="E2g-rn-lMm"/>
-                        <outlet property="getButton" destination="dSu-Fw-9I9" id="K13-ag-EhM"/>
-                        <outlet property="rewardImageView" destination="cXz-gc-FVV" id="NJX-4S-zyG"/>
+                        <outlet property="contentView" destination="PlC-KE-XjA" id="pMr-wl-vAO"/>
+                        <outlet property="getButton" destination="jQC-af-OXo" id="4mZ-p6-CaX"/>
+                        <outlet property="rewardImageView" destination="iq9-ot-6Zn" id="0GO-np-Jz8"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DC6-xe-3e6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hpr-Pr-T2S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3229" y="-525"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="1kV-c2-549"/>
-        <segue reference="yoT-wX-hzU"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="botao_desafio_do_dia" width="191" height="48"/>
         <image name="closeButton" width="19.5" height="19"/>
