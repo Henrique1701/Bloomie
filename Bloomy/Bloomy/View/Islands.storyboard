@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -8,6 +8,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Poppins-Bold.ttf">
+            <string>Poppins-Bold</string>
+        </array>
         <array key="Poppins-Regular.ttf">
             <string>Poppins-Regular</string>
         </array>
@@ -21,17 +24,17 @@
             <objects>
                 <viewController storyboardIdentifier="Mindfulness" id="Y8G-kZ-GGf" customClass="MindfulnessViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pqV-Wh-NaH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mindfulness" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZj-7E-Idn">
-                                <rect key="frame" x="160.5" y="437.5" width="93" height="21"/>
+                                <rect key="frame" x="160.66666666666666" y="357.66666666666669" width="93" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NfR-0v-VZe">
-                                <rect key="frame" x="111.5" y="773" width="191" height="48"/>
+                                <rect key="frame" x="111.66666666666669" y="657.66666666666663" width="191" height="43.333333333333371"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="NfR-0v-VZe" secondAttribute="height" multiplier="191:48" priority="750" id="lo3-eq-8uV"/>
                                 </constraints>
@@ -45,7 +48,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mA0-ue-Doc">
-                                <rect key="frame" x="111.5" y="772.5" width="191" height="48.5"/>
+                                <rect key="frame" x="111.33333333333333" y="657.66666666666663" width="191.33333333333337" height="43.333333333333371"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="mA0-ue-Doc" secondAttribute="height" multiplier="191:48" priority="750" id="m2y-1c-GSj"/>
                                 </constraints>
@@ -89,11 +92,11 @@
             <objects>
                 <viewController storyboardIdentifier="Loveds" id="sRg-Fw-Wnf" customClass="LovedsViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nHg-de-HAR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcW-Hv-4yq">
-                                <rect key="frame" x="111.5" y="773" width="191" height="48"/>
+                                <rect key="frame" x="111.66666666666669" y="657.66666666666663" width="191" height="43.333333333333371"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="bcW-Hv-4yq" secondAttribute="height" multiplier="191:48" priority="750" id="n72-14-4hd"/>
                                 </constraints>
@@ -107,7 +110,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RaQ-AR-8oe">
-                                <rect key="frame" x="111.5" y="772.5" width="191" height="48.5"/>
+                                <rect key="frame" x="111.33333333333333" y="657.66666666666663" width="191.33333333333337" height="43.333333333333371"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="RaQ-AR-8oe" secondAttribute="height" multiplier="191:48" priority="750" id="80A-uS-F5x"/>
                                 </constraints>
@@ -148,11 +151,11 @@
             <objects>
                 <viewController storyboardIdentifier="Leisure" id="bVq-44-vCv" customClass="LeisureViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4vC-0e-5Kz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mi9-3O-WEG">
-                                <rect key="frame" x="111.5" y="773" width="191" height="48"/>
+                                <rect key="frame" x="111.66666666666669" y="657.66666666666663" width="191" height="43.333333333333371"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="mi9-3O-WEG" secondAttribute="height" multiplier="191:48" priority="750" id="m4I-HG-LzS"/>
                                 </constraints>
@@ -166,7 +169,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNZ-y0-hwL">
-                                <rect key="frame" x="111.5" y="772.5" width="191" height="48.5"/>
+                                <rect key="frame" x="111.33333333333333" y="657.66666666666663" width="191.33333333333337" height="43.333333333333371"/>
                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
                                 <inset key="contentEdgeInsets" minX="37" minY="16" maxX="37" maxY="16"/>
                                 <state key="normal" title="concluir desafio" backgroundImage="botao_desafio_do_dia">
@@ -205,29 +208,29 @@
             <objects>
                 <viewController storyboardIdentifier="ChallengePopUp" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="4gS-XJ-ah1" customClass="ChallengePopUpViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6nj-zd-k93">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <visualEffectView opaque="NO" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5K5-Xl-HCS">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="e4Q-NK-g4z">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
                                 <blurEffect style="extraLight"/>
                             </visualEffectView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="57R-6n-8wW">
-                                <rect key="frame" x="41.5" y="243.5" width="331" height="409"/>
+                                <rect key="frame" x="41.666666666666657" y="184" width="331" height="368"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZRT-RR-n1f">
-                                        <rect key="frame" x="289" y="28" width="18" height="22.5"/>
+                                        <rect key="frame" x="289" y="28" width="18" height="20.333333333333329"/>
                                         <state key="normal" image="closeButton"/>
                                         <connections>
                                             <action selector="close:" destination="4gS-XJ-ah1" eventType="touchUpInside" id="eJj-l7-5Ma"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="09F-T9-CzD">
-                                        <rect key="frame" x="70" y="347" width="191" height="48"/>
+                                        <rect key="frame" x="70" y="310.66666666666669" width="191" height="43.333333333333314"/>
                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
                                         <inset key="contentEdgeInsets" minX="60" minY="16" maxX="60" maxY="16"/>
                                         <state key="normal" title="aceitar" backgroundImage="botao_desafio_do_dia">
@@ -238,7 +241,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="2" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RrP-TH-xKw">
-                                        <rect key="frame" x="13" y="82" width="305" height="245"/>
+                                        <rect key="frame" x="13" y="73.666666666666671" width="305" height="220.66666666666663"/>
                                         <string key="text">Feche os olhos e imagine que você está escaneando o seu corpo, da cabeça até os pés. Preste atenção nas sensações. Relaxe as áreas do seu corpo que você sentir que estão tensionadas.</string>
                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
                                         <nil key="textColor"/>
@@ -292,22 +295,22 @@
             <objects>
                 <viewController storyboardIdentifier="DonePopUp" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="hRC-TM-lDe" customClass="DonePopUpViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NsM-aq-Jfn">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <visualEffectView opaque="NO" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lxu-Tb-PDc">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Wc5-Md-VjA">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
                                 <blurEffect style="extraLight"/>
                             </visualEffectView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Ad-fs-ohe" userLabel="Content View">
-                                <rect key="frame" x="41.5" y="243.5" width="331" height="409"/>
+                                <rect key="frame" x="41.666666666666657" y="184" width="331" height="368"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZMF-G9-LJb">
-                                        <rect key="frame" x="70" y="347" width="191" height="48"/>
+                                        <rect key="frame" x="70" y="310.66666666666669" width="191" height="43.333333333333314"/>
                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
                                         <inset key="contentEdgeInsets" minX="60" minY="16" maxX="60" maxY="16"/>
                                         <state key="normal" title="concluir" backgroundImage="botao_desafio_do_dia">
@@ -319,7 +322,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mGk-Mz-B7J">
-                                        <rect key="frame" x="289" y="28" width="18" height="22.5"/>
+                                        <rect key="frame" x="289" y="28" width="18" height="20.333333333333329"/>
                                         <state key="normal" image="closeButton"/>
                                         <connections>
                                             <action selector="close:" destination="hRC-TM-lDe" eventType="touchUpInside" id="PzI-Ej-Ynj"/>
@@ -327,13 +330,13 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você conseguiu terminar a ação?" textAlignment="center" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="oqm-Qk-6vq">
-                                        <rect key="frame" x="60.5" y="41" width="210" height="82"/>
+                                        <rect key="frame" x="60.333333333333343" y="41.000000000000007" width="210.00000000000003" height="73.666666666666686"/>
                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3x1-sO-2dU">
-                                        <rect key="frame" x="13" y="86" width="305" height="262"/>
+                                        <rect key="frame" x="13" y="80.3333333333333" width="305" height="226.66666666666663"/>
                                         <string key="text">Feche os olhos e imagine que você está escaneando o seu corpo, da cabeça até os pés. Preste atenção nas sensações. Relaxe as áreas do seu corpo que você sentir que estão tensionadas.</string>
                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                         <nil key="textColor"/>
@@ -391,11 +394,11 @@
             <objects>
                 <viewController storyboardIdentifier="Health" id="emZ-vQ-65r" customClass="HealthViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U6k-h0-ImQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mAy-eu-kQQ">
-                                <rect key="frame" x="111.5" y="773" width="191" height="48"/>
+                                <rect key="frame" x="111.66666666666669" y="657.66666666666663" width="191" height="43.333333333333371"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="mAy-eu-kQQ" secondAttribute="height" multiplier="191:48" priority="750" id="oBJ-vE-5K6"/>
                                 </constraints>
@@ -409,7 +412,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bs9-XH-U3W">
-                                <rect key="frame" x="111.5" y="772.5" width="191" height="48.5"/>
+                                <rect key="frame" x="111.33333333333333" y="657.66666666666663" width="191.33333333333337" height="43.333333333333371"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="bs9-XH-U3W" secondAttribute="height" multiplier="191:48" priority="750" id="JmS-Dj-OEl"/>
                                 </constraints>
@@ -445,6 +448,90 @@
             </objects>
             <point key="canvasLocation" x="522" y="700"/>
         </scene>
+        <!--Reward Pop Up View Controller-->
+        <scene sceneID="Xzz-wc-zU4">
+            <objects>
+                <viewController storyboardIdentifier="RewardPopUp" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="un7-2z-1AU" customClass="RewardPopUpViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6hu-lx-eeC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XYG-J3-Dmm">
+                                <rect key="frame" x="41.666666666666657" y="184" width="331" height="368"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parabéns!" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fVf-rq-Pj6">
+                                        <rect key="frame" x="8" y="49.666666666666657" width="315" height="38"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Essa é a sua recompensa:" textAlignment="center" lineBreakMode="clip" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="CYV-LL-aJ4">
+                                        <rect key="frame" x="39" y="84.666666666666686" width="253" height="63"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSu-Fw-9I9">
+                                        <rect key="frame" x="70" y="310.66666666666669" width="191" height="43.333333333333314"/>
+                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
+                                        <inset key="contentEdgeInsets" minX="60" minY="16" maxX="60" maxY="16"/>
+                                        <state key="normal" title="receber" backgroundImage="botao_desafio_do_dia">
+                                            <color key="titleColor" red="0.1333333333" green="0.1333333333" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="accept:" destination="4gS-XJ-ah1" eventType="touchUpInside" id="Vs3-FQ-lHQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bDz-fr-EJ9">
+                                        <rect key="frame" x="289" y="28" width="18" height="20.333333333333329"/>
+                                        <state key="normal" image="closeButton"/>
+                                        <connections>
+                                            <action selector="close:" destination="4gS-XJ-ah1" eventType="touchUpInside" id="jcd-bv-FqU"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mushroom" translatesAutoresizingMaskIntoConstraints="NO" id="cXz-gc-FVV">
+                                        <rect key="frame" x="118" y="171" width="95" height="96.333333333333314"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="fVf-rq-Pj6" firstAttribute="height" secondItem="XYG-J3-Dmm" secondAttribute="height" multiplier="0.102689" id="3qV-Ne-b4F"/>
+                                    <constraint firstItem="bDz-fr-EJ9" firstAttribute="width" secondItem="XYG-J3-Dmm" secondAttribute="width" multiplier="0.0543807" id="9o1-2E-xmr"/>
+                                    <constraint firstItem="dSu-Fw-9I9" firstAttribute="height" secondItem="XYG-J3-Dmm" secondAttribute="height" multiplier="0.117359" id="9pk-ld-WwA"/>
+                                    <constraint firstItem="cXz-gc-FVV" firstAttribute="height" secondItem="XYG-J3-Dmm" secondAttribute="height" multiplier="0.261614" id="AO5-8k-HoY"/>
+                                    <constraint firstItem="dSu-Fw-9I9" firstAttribute="width" secondItem="XYG-J3-Dmm" secondAttribute="width" multiplier="0.577039" id="Haj-vH-JwM"/>
+                                    <constraint firstItem="CYV-LL-aJ4" firstAttribute="width" secondItem="XYG-J3-Dmm" secondAttribute="width" multiplier="0.76435" id="I6Q-Z4-gGh"/>
+                                    <constraint firstItem="bDz-fr-EJ9" firstAttribute="height" secondItem="XYG-J3-Dmm" secondAttribute="height" multiplier="0.0550122" id="KDw-T9-H7B"/>
+                                    <constraint firstItem="fVf-rq-Pj6" firstAttribute="centerX" secondItem="XYG-J3-Dmm" secondAttribute="centerX" id="Oh8-Va-oup"/>
+                                    <constraint firstItem="cXz-gc-FVV" firstAttribute="top" secondItem="CYV-LL-aJ4" secondAttribute="bottom" multiplier="1.16" id="SEA-Nf-7No"/>
+                                    <constraint firstItem="fVf-rq-Pj6" firstAttribute="top" secondItem="bDz-fr-EJ9" secondAttribute="bottom" constant="1.5" id="ZcJ-27-c2u"/>
+                                    <constraint firstItem="dSu-Fw-9I9" firstAttribute="centerX" secondItem="XYG-J3-Dmm" secondAttribute="centerX" id="arh-Fk-n9L"/>
+                                    <constraint firstItem="bDz-fr-EJ9" firstAttribute="top" secondItem="XYG-J3-Dmm" secondAttribute="top" constant="28" id="bb6-kj-XIe"/>
+                                    <constraint firstItem="cXz-gc-FVV" firstAttribute="width" secondItem="XYG-J3-Dmm" secondAttribute="width" multiplier="0.287009" id="d9f-Rl-bOs"/>
+                                    <constraint firstItem="fVf-rq-Pj6" firstAttribute="width" secondItem="XYG-J3-Dmm" secondAttribute="width" multiplier="0.951662" id="knv-Gf-9MN"/>
+                                    <constraint firstAttribute="trailing" secondItem="bDz-fr-EJ9" secondAttribute="trailing" constant="24" id="n2N-8d-0d8"/>
+                                    <constraint firstItem="CYV-LL-aJ4" firstAttribute="height" secondItem="XYG-J3-Dmm" secondAttribute="height" multiplier="0.171149" id="t9b-iL-KZE"/>
+                                    <constraint firstItem="cXz-gc-FVV" firstAttribute="centerX" secondItem="XYG-J3-Dmm" secondAttribute="centerX" id="tqi-Ng-fxP"/>
+                                    <constraint firstItem="CYV-LL-aJ4" firstAttribute="top" secondItem="fVf-rq-Pj6" secondAttribute="top" multiplier="1.7" id="uPr-l3-zNg"/>
+                                    <constraint firstAttribute="bottom" secondItem="dSu-Fw-9I9" secondAttribute="bottom" constant="14" id="vgP-GI-Hz2"/>
+                                    <constraint firstItem="CYV-LL-aJ4" firstAttribute="centerX" secondItem="XYG-J3-Dmm" secondAttribute="centerX" id="wSe-kV-nir"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CYI-dj-6EQ"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="XYG-J3-Dmm" firstAttribute="centerY" secondItem="6hu-lx-eeC" secondAttribute="centerY" id="Epg-3J-XNl"/>
+                            <constraint firstItem="XYG-J3-Dmm" firstAttribute="centerX" secondItem="6hu-lx-eeC" secondAttribute="centerX" id="RJB-IV-tQd"/>
+                            <constraint firstItem="XYG-J3-Dmm" firstAttribute="height" secondItem="CYI-dj-6EQ" secondAttribute="height" multiplier="0.5" id="n9g-tJ-IPL"/>
+                            <constraint firstItem="XYG-J3-Dmm" firstAttribute="width" secondItem="CYI-dj-6EQ" secondAttribute="width" multiplier="0.799517" id="yle-xi-ikg"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DC6-xe-3e6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2881.1594202898555" y="412.5"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="1kV-c2-549"/>
@@ -452,7 +539,8 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="botao_desafio_do_dia" width="191" height="48"/>
-        <image name="closeButton" width="19.5" height="19"/>
+        <image name="closeButton" width="19.333333969116211" height="18.666666030883789"/>
+        <image name="mushroom" width="58.666667938232422" height="75"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
