@@ -28,7 +28,6 @@ class AreasViewController: UIViewController {
         if (selectedAtencaoPlena == true) {
             selectedAtencaoPlena = false
             botaoAtencaoPlena.setBackgroundImage(UIImage(named: "botao_atencao_plena"), for: .normal)
-            print("Atencao Plena Not Selected")
             //Animação para que o botão volte a ter o tamanho normal
             UIButton.animate(withDuration: 0.45) { () -> Void in
                 self.botaoAtencaoPlena.transform = CGAffineTransform(scaleX: 1, y: 1)
@@ -37,7 +36,6 @@ class AreasViewController: UIViewController {
         } else {
             selectedAtencaoPlena = true
             botaoAtencaoPlena.setBackgroundImage(UIImage(named: "botao_on_atencao_plena"), for: .normal)
-            print("Atencao Plena Selected")
             //Animação para diminuir o tamanho do botão
             UIButton.animate(withDuration: 0.45) { () -> Void in
                 self.botaoAtencaoPlena.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
@@ -51,7 +49,6 @@ class AreasViewController: UIViewController {
         if (selectedPessoasQueridas == true) {
             selectedPessoasQueridas = false
             botaoPessoasQueridas.setBackgroundImage(UIImage(named: "botao_pessoas_queridas"), for: .normal)
-            print("Pessoas Queridas Not Selected")
             //Animação para que o botão volte a ter o tamanho normal
             UIButton.animate(withDuration: 0.45) { () -> Void in
                 self.botaoPessoasQueridas.transform = CGAffineTransform(scaleX: 1, y: 1)
@@ -60,7 +57,6 @@ class AreasViewController: UIViewController {
         } else {
             selectedPessoasQueridas = true
             botaoPessoasQueridas.setBackgroundImage(UIImage(named: "botao_on_pessoas_queridas"), for: .normal)
-            print("Pessoas Queridas Selected")
             //Animação para diminuir o tamanho do botão
             UIButton.animate(withDuration: 0.45) { () -> Void in
                 self.botaoPessoasQueridas.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
@@ -73,7 +69,6 @@ class AreasViewController: UIViewController {
         if (selectedLazer == true) {
             selectedLazer = false
             botaoLazer.setBackgroundImage(UIImage(named: "botao_lazer"), for: .normal)
-            print("Lazer Not Selected")
             //Animação para que o botão volte a ter o tamanho normal
             UIButton.animate(withDuration: 0.45) { () -> Void in
                 self.botaoLazer.transform = CGAffineTransform(scaleX: 1, y: 1)
@@ -81,7 +76,6 @@ class AreasViewController: UIViewController {
         } else {
             selectedLazer = true
             botaoLazer.setBackgroundImage(UIImage(named: "botao_on_lazer"), for: .normal)
-            print("Lazer Selected")
             //Animação para diminuir o tamanho do botão
             UIButton.animate(withDuration: 0.45) { () -> Void in
                 self.botaoLazer.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
@@ -94,7 +88,6 @@ class AreasViewController: UIViewController {
         if (selectedSaude == true) {
             selectedSaude = false
             botaoSaude.setBackgroundImage(UIImage(named: "botao_saude"), for: .normal)
-            print("Saude Not Selected")
             //Animação para que o botão volte a ter o tamanho normal
             UIButton.animate(withDuration: 0.45) { () -> Void in
                 self.botaoSaude.transform = CGAffineTransform(scaleX: 1, y: 1)
@@ -102,7 +95,6 @@ class AreasViewController: UIViewController {
         } else {
             selectedSaude = true
             botaoSaude.setBackgroundImage(UIImage(named: "botao_on_saude"), for: .normal)
-            print("Saude Selected")
             //Animação para diminuir o tamanho do botão
             UIButton.animate(withDuration: 0.45) { () -> Void in
                 self.botaoSaude.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
@@ -119,22 +111,22 @@ class AreasViewController: UIViewController {
         if(selectedLazer == true) {
             guard let lazerIsland = self.island.newIsland(withName: "Lazer") else { return }
             self.island.setUser(islandName: "Lazer", user: usuario!)
-            print("Created \(lazerIsland)")
+            SeedDataBase.shared.createLeisureChallenges()
         }
         if(selectedSaude == true) {
             guard let saudeIsland = IslandManager.shared.newIsland(withName: "Saúde") else { return }
             self.island.setUser(islandName: "Saúde", user: usuario!)
-            print("Created \(saudeIsland)")
+            SeedDataBase.shared.createHealthChallenges()
         }
         if(selectedAtencaoPlena == true) {
             guard let atencaoPlenaIsland = IslandManager.shared.newIsland(withName: "Atenção Plena") else { return }
             self.island.setUser(islandName: "Atenção Plena", user: usuario!)
-            print("Created \(atencaoPlenaIsland)")
+            SeedDataBase.shared.createMindfulnessChallenges()
         }
         if(selectedPessoasQueridas == true) {
             guard let pessoasQueridasIsland = IslandManager.shared.newIsland(withName: "Pessoas Queridas") else { return }
             self.island.setUser(islandName: "Pessoas Queridas", user: usuario!)
-            print("Created \(pessoasQueridasIsland)")
+            SeedDataBase.shared.createLovedsChallenges()
         }
     }
     

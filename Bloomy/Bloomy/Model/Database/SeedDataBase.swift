@@ -12,18 +12,6 @@ struct SeedDataBase {
     static let shared: SeedDataBase = SeedDataBase()
     
     func seed() {
-        if (UserManager.shared.getUser() == nil) {
-            self.createUser()
-        }
-        
-        if (IslandManager.shared.getIslands() == nil) {
-            self.createIslands()
-        }
-        
-        if (ChallengeManager.shared.getChallenges() == nil) {
-            self.createChallenges()
-        }
-        
         if(RewardManager.shared.getRewards() == nil) {
             self.createRewards()
         }

@@ -32,7 +32,6 @@ class HomeViewController: UIViewController {
     // MARK: Global Variables
     let userManager = UserManager.shared
     let islandsManager = IslandManager.shared
-    let islandsNames: [String] = ["Saúde", "Lazer", "Atenção Plena", "Pessoas Queridas"]
     var stopAnimation = false
     let islands = UserManager.shared.getIslands()
     private var quantityIslands: Int = 0
@@ -40,19 +39,16 @@ class HomeViewController: UIViewController {
     // MARK: View Functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Pegar a quantidade de ilhas selecionadas pelo usuário
+        
         quantityIslands = islands!.count
         setUpIslandsDisplay(quantityIslands: self.quantityIslands)
         
-        if (userManager.getUser() == nil) {
-            SeedDataBase.shared.seed()
+        if (userManager.getLastSeen() == nil) {
             setDailyChallenges()
         }
-   
         if (!isSameDay(userDate: userManager.getLastSeen() ?? Date(), actualDate: Date())) {
             setDailyChallenges()
         }
-        
         _ = userManager.updateLastSeen(to: Date())
     }
     
@@ -322,14 +318,4 @@ class HomeViewController: UIViewController {
             self.moveCloudsToRight()
         })
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
