@@ -41,9 +41,16 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         // Pegar a quantidade de ilhas selecionadas pelo usuário
         setUpIslandsDisplay(quantityIslands: self.quantityIslands)
+        
+        if (userManager.getUser() == nil) {
+            SeedDataBase.shared.seed()
+            setDailyChallenges()
+        }
+   
         if (!isSameDay(userDate: userManager.getLastSeen() ?? Date(), actualDate: Date())) {
             setDailyChallenges()
         }
+        
         _ = userManager.updateLastSeen(to: Date())
     }
     
