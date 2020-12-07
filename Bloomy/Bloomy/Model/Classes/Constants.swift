@@ -17,3 +17,15 @@ let coreDataContext: NSManagedObjectContext = {
     
     return context
 }()
+
+enum IslandsNames: String {
+    case mindfulness = "Atenção Plena"
+    case health      = "Saúde"
+    case loveds      = "Pessoas Queridas"
+    case leisure     = "Lazer"
+}
+
+extension Notification.Name {
+    static let acceptChallenge = Notification.Name("acceptChallenge")
+    static let doneChallenge = Notification.Name("doneChallenge")
+}

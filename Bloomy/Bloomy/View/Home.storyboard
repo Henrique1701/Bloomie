@@ -13,9 +13,11 @@
             <objects>
                 <navigationController modalPresentationStyle="fullScreen" id="jV2-bX-FxB" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="Om1-Xi-05P"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PHg-zW-NE9">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="botao_back" backIndicatorTransitionMaskImage="botao_back" id="PHg-zW-NE9">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.99607843139999996" green="0.96078431369999995" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <connections>
                         <segue destination="AC1-FP-WMe" kind="relationship" relationship="rootViewController" id="eZE-Db-Hnl"/>
@@ -62,7 +64,7 @@
                                                 </constraints>
                                                 <state key="normal" image="botao_ilha_saude"/>
                                                 <connections>
-                                                    <segue destination="PHw-wF-UXq" kind="show" id="5v6-At-0e3"/>
+                                                    <segue destination="PHw-wF-UXq" kind="show" id="RKa-s8-4c2"/>
                                                 </connections>
                                             </button>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OU3-jK-IzX">
@@ -209,7 +211,7 @@
         <!--Mindfulness-->
         <scene sceneID="k6n-9G-jhR">
             <objects>
-                <viewControllerPlaceholder storyboardName="Mindfulness" id="rmV-B3-mhM" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Islands" referencedIdentifier="Mindfulness" id="rmV-B3-mhM" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="eZw-Y6-7qX"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CTU-tw-sAf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -219,7 +221,7 @@
         <!--Leisure-->
         <scene sceneID="jFK-ip-s5v">
             <objects>
-                <viewControllerPlaceholder storyboardName="Leisure" id="PfX-76-McD" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Islands" referencedIdentifier="Leisure" id="PfX-76-McD" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="yiN-gz-Osx"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x7Q-Sk-vvU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -229,7 +231,7 @@
         <!--Loveds-->
         <scene sceneID="NHm-po-oRv">
             <objects>
-                <viewControllerPlaceholder storyboardName="Loveds" id="4zx-73-c06" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Islands" referencedIdentifier="Loveds" id="4zx-73-c06" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="5Zs-Kx-t60"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hl2-oQ-Wbl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -239,7 +241,7 @@
         <!--Health-->
         <scene sceneID="ipR-xF-MsX">
             <objects>
-                <viewControllerPlaceholder storyboardName="Health" id="PHw-wF-UXq" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Islands" referencedIdentifier="Health" id="PHw-wF-UXq" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="OQX-Hw-x9E"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y3u-n9-a4w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -307,6 +309,7 @@
         <segue reference="J2b-CO-2Tp"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="botao_back" width="32" height="39"/>
         <image name="botao_ilha_atencao_plena" width="144" height="161"/>
         <image name="botao_ilha_lazer" width="144" height="161"/>
         <image name="botao_ilha_pessoas_queridas" width="144" height="161"/>

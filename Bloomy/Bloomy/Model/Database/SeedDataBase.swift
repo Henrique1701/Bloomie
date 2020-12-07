@@ -60,7 +60,7 @@ struct SeedDataBase {
     }
     
     func createUser() {
-        UserManager.shared.newUser(withName: "Rafa")
+        _ = UserManager.shared.newUser(withName: "Rafa")
     }
     
     func createMindfulnessChallenges() {
@@ -104,8 +104,7 @@ struct SeedDataBase {
         let healthChallenges = Challenges().healthChallenges
         for challenge in healthChallenges {
             if let healthChallenge = ChallengeManager.shared.createChallenge(withID: challenge["ID"]!
-                                                                             , withSummary: challenge["Summary"]!)
-            {
+                                                                             , withSummary: challenge["Summary"]!) {
                 healthChallenge.challengeToIsland = IslandManager.shared.getIsland(withName: "Saúde")
             } else {
                 print("Challenge \(challenge["ID"] ?? "") da Ilha Saúde não foi criado")
