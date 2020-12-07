@@ -11,7 +11,8 @@ class HealthViewController: UIViewController {
     @IBOutlet weak var challengeDayButton: UIButton!
     @IBOutlet weak var doneButton: UIButton!
     let island = IslandManager.shared.getIsland(withName: IslandsNames.health.rawValue)!
-    var observer: NSObjectProtocol?
+    var challengeObserver: NSObjectProtocol?
+    var doneObserver: NSObjectProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,9 +23,16 @@ class HealthViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        chooseButtonToShow()
-        observer = NotificationCenter.default.addObserver(forName: .acceptChallenge, object: nil, queue: OperationQueue.main) { (notification) in
+        
+        challengeObserver = NotificationCenter.default.addObserver(forName: .acceptChallenge, object: nil, queue: OperationQueue.main) { (notification) in
             self.island.dailyChallenge?.accepted = true
+            _ = IslandManager.shared.saveContext()
+            self.chooseButtonToShow()
+            self.loadViewIfNeeded()
+        }
+        
+        doneObserver = NotificationCenter.default.addObserver(forName: .doneChallenge, object: nil, queue: OperationQueue.main) { (notification) in
+            self.island.dailyChallenge?.done = true
             _ = IslandManager.shared.saveContext()
             self.chooseButtonToShow()
             self.loadViewIfNeeded()
@@ -34,14 +42,22 @@ class HealthViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         
-        if observer != nil {
-            NotificationCenter.default.removeObserver(observer!)
+        if challengeObserver != nil {
+            NotificationCenter.default.removeObserver(challengeObserver!)
+        }
+        
+        if doneObserver != nil {
+            NotificationCenter.default.removeObserver(doneObserver!)
         }
     }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toChallengePopUpViewControllerSegue" {
             let popup = segue.destination as! ChallengePopUpViewController
+            popup.summary = island.dailyChallenge?.summary ?? ""
+        } else if (segue.identifier == "toDonePopUpViewControllerSegue") {
+            let popup = segue.destination as! DonePopUpViewController
             popup.summary = island.dailyChallenge?.summary ?? ""
         }
     }
@@ -68,16 +84,20 @@ class HealthViewController: UIViewController {
             //se o desafio não foi aceito
             self.doneButton.isHidden = true
             self.challengeDayButton.isHidden = false
-           
-        } else if ((self.island.dailyChallenge?.accepted)!) {
-            //se o desafio foi aceito
+            
+        } else if ((self.island.dailyChallenge?.accepted)! && !(self.island.dailyChallenge?.done)!) {
+            //se o desafio foi aceito mas n foi concluído
             self.challengeDayButton.isHidden = true
             self.doneButton.isHidden = false
             //Mostra o challengeDayButton
             //Esconde o botão de concluir
             //Ainda tem o caso em que o botão tá desativado
         } else {
+            //desafio aceito e concluído
+            //precisa setar uma forma inativa para o challengeDayButton
+            self.challengeDayButton.isHidden = true
+            self.doneButton.isHidden = true
         }
     }
-
+    
 }
