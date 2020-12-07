@@ -11,7 +11,7 @@
         <!--Item-->
         <scene sceneID="aKw-Nr-LeU">
             <objects>
-                <navigationController id="jV2-bX-FxB" sceneMemberID="viewController">
+                <navigationController modalPresentationStyle="fullScreen" id="jV2-bX-FxB" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="Om1-Xi-05P"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="botao_back" backIndicatorTransitionMaskImage="botao_back" id="PHg-zW-NE9">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -30,7 +30,7 @@
         <!--Ilhas-->
         <scene sceneID="bwK-sz-0P5">
             <objects>
-                <viewController id="RgJ-mV-1xY" customClass="HomeViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="RgJ-mV-1xY" customClass="HomeViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SD3-t7-atG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -56,11 +56,9 @@
                             <stackView opaque="NO" contentMode="center" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QWl-mZ-0hW">
                                 <rect key="frame" x="18" y="98" width="378" height="705"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="8zm-85-mby">
-                                        <rect key="frame" x="6" y="0.0" width="366" height="176.5"/>
+                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="8zm-85-mby">
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8HL-Y3-ktF">
-                                                <rect key="frame" x="0.0" y="0.0" width="138" height="176.5"/>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8HL-Y3-ktF">
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="8HL-Y3-ktF" secondAttribute="height" multiplier="18:23" id="Lnt-hO-tn9"/>
                                                 </constraints>
@@ -69,8 +67,7 @@
                                                     <segue destination="PHw-wF-UXq" kind="show" id="RKa-s8-4c2"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OU3-jK-IzX">
-                                                <rect key="frame" x="228" y="0.0" width="138" height="176.5"/>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OU3-jK-IzX">
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="OU3-jK-IzX" secondAttribute="height" multiplier="18:23" id="NMU-Qb-kxc"/>
                                                 </constraints>
@@ -81,11 +78,9 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="qRI-YG-jhy">
-                                        <rect key="frame" x="6" y="176.5" width="366" height="176"/>
+                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="qRI-YG-jhy">
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Hd-UH-ppZ">
-                                                <rect key="frame" x="0.0" y="0.0" width="138" height="176"/>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Hd-UH-ppZ">
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="0Hd-UH-ppZ" secondAttribute="height" multiplier="18:23" id="Z0K-Ig-YI0"/>
                                                 </constraints>
@@ -94,8 +89,7 @@
                                                     <segue destination="PfX-76-McD" kind="show" id="dWC-oI-uFe"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qEC-eP-JPs">
-                                                <rect key="frame" x="228" y="0.0" width="138" height="176"/>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qEC-eP-JPs">
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="qEC-eP-JPs" secondAttribute="height" multiplier="18:23" id="IN7-NV-g1c"/>
                                                 </constraints>
@@ -106,11 +100,9 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="cNI-DM-v3d">
-                                        <rect key="frame" x="6" y="352.5" width="366" height="176.5"/>
+                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="cNI-DM-v3d">
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nr-na-HSl">
-                                                <rect key="frame" x="0.0" y="0.0" width="138" height="176.5"/>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nr-na-HSl">
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="0nr-na-HSl" secondAttribute="height" multiplier="18:23" id="Lph-0w-q5w"/>
                                                 </constraints>
@@ -119,8 +111,7 @@
                                                     <segue destination="rmV-B3-mhM" kind="show" id="J2b-CO-2Tp"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qX8-qc-3jX">
-                                                <rect key="frame" x="228" y="0.0" width="138" height="176.5"/>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qX8-qc-3jX">
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="qX8-qc-3jX" secondAttribute="height" multiplier="18:23" id="Hle-ug-N2B"/>
                                                 </constraints>
@@ -131,11 +122,9 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="5Ov-1z-qDX">
-                                        <rect key="frame" x="6" y="529" width="366" height="176"/>
+                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="5Ov-1z-qDX">
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DJT-c0-Yb4">
-                                                <rect key="frame" x="0.0" y="0.0" width="138" height="176"/>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DJT-c0-Yb4">
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="DJT-c0-Yb4" secondAttribute="height" multiplier="18:23" id="kqE-TP-HHK"/>
                                                 </constraints>
@@ -144,8 +133,7 @@
                                                     <segue destination="4zx-73-c06" kind="show" id="o7O-ez-KU1"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAO-tD-T8b">
-                                                <rect key="frame" x="228" y="0.0" width="138" height="176"/>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAO-tD-T8b">
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="LAO-tD-T8b" secondAttribute="height" multiplier="18:23" id="dah-da-eLy"/>
                                                 </constraints>
@@ -202,18 +190,18 @@
                         <outlet property="cloudsConstraint4" destination="hoy-vg-9nk" id="ocw-Tr-DNI"/>
                         <outlet property="cloudsConstraint5" destination="qwL-J6-Bls" id="1Ke-tQ-AE6"/>
                         <outlet property="cloudsConstraint6" destination="8z2-sT-4zR" id="wbH-xo-4hI"/>
-                        <outlet property="firstLeftButton" destination="8HL-Y3-ktF" id="ERN-vy-U9J"/>
-                        <outlet property="firstRightButton" destination="OU3-jK-IzX" id="fOx-8a-D8L"/>
-                        <outlet property="firstStackView" destination="8zm-85-mby" id="sqE-E6-n24"/>
-                        <outlet property="fourthLeftButton" destination="DJT-c0-Yb4" id="KNj-mR-C5N"/>
-                        <outlet property="fourthRightButton" destination="LAO-tD-T8b" id="EJz-ul-XSX"/>
-                        <outlet property="fourthStackView" destination="5Ov-1z-qDX" id="xd4-L2-Atj"/>
-                        <outlet property="secondLeftButton" destination="0Hd-UH-ppZ" id="U0I-At-ZmQ"/>
-                        <outlet property="secondRightButton" destination="qEC-eP-JPs" id="t5Q-74-l1H"/>
-                        <outlet property="secondStackView" destination="qRI-YG-jhy" id="Fg6-5R-g99"/>
-                        <outlet property="thirdLeftButton" destination="0nr-na-HSl" id="tgm-af-n9I"/>
-                        <outlet property="thirdRightButton" destination="qX8-qc-3jX" id="peq-Aw-C4U"/>
-                        <outlet property="thirdStackView" destination="cNI-DM-v3d" id="aLq-j9-FbL"/>
+                        <outlet property="healthLeftButton" destination="8HL-Y3-ktF" id="ERN-vy-U9J"/>
+                        <outlet property="healthRightButton" destination="OU3-jK-IzX" id="fOx-8a-D8L"/>
+                        <outlet property="healthStackView" destination="8zm-85-mby" id="sqE-E6-n24"/>
+                        <outlet property="leisureLeftButton" destination="0Hd-UH-ppZ" id="U0I-At-ZmQ"/>
+                        <outlet property="leisureRightButton" destination="qEC-eP-JPs" id="t5Q-74-l1H"/>
+                        <outlet property="leisureStackView" destination="qRI-YG-jhy" id="Fg6-5R-g99"/>
+                        <outlet property="lovedsLeftButton" destination="DJT-c0-Yb4" id="KNj-mR-C5N"/>
+                        <outlet property="lovedsRightButton" destination="LAO-tD-T8b" id="EJz-ul-XSX"/>
+                        <outlet property="lovedsStackView" destination="5Ov-1z-qDX" id="xd4-L2-Atj"/>
+                        <outlet property="mindfulnessLeftButton" destination="0nr-na-HSl" id="tgm-af-n9I"/>
+                        <outlet property="mindfulnessRightButton" destination="qX8-qc-3jX" id="peq-Aw-C4U"/>
+                        <outlet property="mindfulnessStackView" destination="cNI-DM-v3d" id="aLq-j9-FbL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Te0-bZ-sn6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -295,7 +283,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="dMZ-ON-ptP">
             <objects>
-                <tabBarController id="AC1-FP-WMe" sceneMemberID="viewController">
+                <tabBarController modalPresentationStyle="fullScreen" id="AC1-FP-WMe" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="zPm-xm-TZW"/>
                     <tabBar key="tabBar" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZcZ-Hk-sL0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>

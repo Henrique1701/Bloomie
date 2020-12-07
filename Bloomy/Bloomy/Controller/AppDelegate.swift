@@ -13,6 +13,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Change the color of tab bar items
+        UITabBar.appearance().tintColor = #colorLiteral(red: 0.2431372549, green: 0.2470588235, blue: 0.2745098039, alpha: 1)
+        
+        // Change font of Tab Bar Items
+        let fontAttributes = [NSAttributedString.Key.font: UIFont(name: "Poppins-Regular", size: 12.0)!]
+        UITabBarItem.appearance().setTitleTextAttributes(fontAttributes, for: .normal)
         return true
     }
 

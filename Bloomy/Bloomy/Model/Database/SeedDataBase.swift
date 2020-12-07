@@ -52,10 +52,11 @@ struct SeedDataBase {
         _ = RewardManager.shared.newReward(withId: "R4", withImage: UIImage())
         _ = RewardManager.shared.newReward(withId: "R5", withImage: UIImage())
         
-        _ = RewardManager.shared.setIsland(toReward: "R1", island: IslandManager.shared.getIsland(withName: "Atenção Plena")!)
-        _ = RewardManager.shared.setIsland(toReward: "R2", island: IslandManager.shared.getIsland(withName: "Atenção Plena")!)
-        _ = RewardManager.shared.setIsland(toReward: "R3", island: IslandManager.shared.getIsland(withName: "Lazer")!)
-        _ = RewardManager.shared.setIsland(toReward: "R4", island: IslandManager.shared.getIsland(withName: "Pessoas Queridas")!)
+        // TODO: Erro ao não escolher as quatro ilhas
+        RewardManager.shared.setIsland(toReward: "R1", island: IslandManager.shared.getIsland(withName: "Atenção Plena")!)
+        RewardManager.shared.setIsland(toReward: "R2", island: IslandManager.shared.getIsland(withName: "Saúde")!)
+        RewardManager.shared.setIsland(toReward: "R3", island: IslandManager.shared.getIsland(withName: "Lazer")!)
+        RewardManager.shared.setIsland(toReward: "R4", island: IslandManager.shared.getIsland(withName: "Pessoas Queridas")!)
     }
     
     func createUser() {

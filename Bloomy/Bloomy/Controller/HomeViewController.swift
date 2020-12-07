@@ -10,18 +10,18 @@ import UIKit
 class HomeViewController: UIViewController {
     
     // MARK: Outlets
-    @IBOutlet weak var firstStackView: UIStackView!
-    @IBOutlet weak var secondStackView: UIStackView!
-    @IBOutlet weak var thirdStackView: UIStackView!
-    @IBOutlet weak var fourthStackView: UIStackView!
-    @IBOutlet weak var firstLeftButton: UIButton!
-    @IBOutlet weak var firstRightButton: UIButton!
-    @IBOutlet weak var secondLeftButton: UIButton!
-    @IBOutlet weak var secondRightButton: UIButton!
-    @IBOutlet weak var thirdLeftButton: UIButton!
-    @IBOutlet weak var thirdRightButton: UIButton!
-    @IBOutlet weak var fourthLeftButton: UIButton!
-    @IBOutlet weak var fourthRightButton: UIButton!
+    @IBOutlet weak var healthStackView: UIStackView!
+    @IBOutlet weak var leisureStackView: UIStackView!
+    @IBOutlet weak var mindfulnessStackView: UIStackView!
+    @IBOutlet weak var lovedsStackView: UIStackView!
+    @IBOutlet weak var healthLeftButton: UIButton!
+    @IBOutlet weak var healthRightButton: UIButton!
+    @IBOutlet weak var leisureLeftButton: UIButton!
+    @IBOutlet weak var leisureRightButton: UIButton!
+    @IBOutlet weak var mindfulnessLeftButton: UIButton!
+    @IBOutlet weak var mindfulnessRightButton: UIButton!
+    @IBOutlet weak var lovedsLeftButton: UIButton!
+    @IBOutlet weak var lovedsRightButton: UIButton!
     @IBOutlet weak var cloudsConstraint5: NSLayoutConstraint!
     @IBOutlet weak var cloudsConstraint4: NSLayoutConstraint!
     @IBOutlet weak var cloudsConstraint3: NSLayoutConstraint!
@@ -30,16 +30,18 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var cloudsConstraint6: NSLayoutConstraint!
     
     // MARK: Global Variables
-    private let quantityIslands: Int = 4
     let userManager = UserManager.shared
     let islandsManager = IslandManager.shared
     let islandsNames: [String] = ["Saúde", "Lazer", "Atenção Plena", "Pessoas Queridas"]
     var stopAnimation = false
+    let islands = UserManager.shared.getIslands()
+    private var quantityIslands: Int = 0
     
     // MARK: View Functions
     override func viewDidLoad() {
         super.viewDidLoad()
         // Pegar a quantidade de ilhas selecionadas pelo usuário
+        quantityIslands = islands!.count
         setUpIslandsDisplay(quantityIslands: self.quantityIslands)
         
         if (userManager.getUser() == nil) {
@@ -109,6 +111,7 @@ class HomeViewController: UIViewController {
             } else {
                 refreshDoneStatus(forIsland: island.name ?? "")
                 setDailyChallenges()
+
             }
         }
     }
@@ -145,42 +148,139 @@ class HomeViewController: UIViewController {
     }
     
     func setUpDisplayOneIsland() {
-        self.fourthStackView.isHidden = true
-        self.thirdStackView.isHidden = true
-        self.secondStackView.isHidden = true
-        self.firstRightButton.isHidden = true
-        // TODO: Definir qual a ilha será exibida
+        guard let islands = self.islands else {
+            print("Nenhuma ilha foi selecionada")
+            return
+        }
+        for island in islands {
+            switch island.name {
+            case "Saúde":
+                healthStackView.isHidden = false
+                healthRightButton.isHidden = false
+            case "Lazer":
+                leisureStackView.isHidden = false
+                leisureRightButton.isHidden = false
+            case "Atenção Plena":
+                mindfulnessStackView.isHidden = false
+                mindfulnessRightButton.isHidden = false
+            default:
+                lovedsStackView.isHidden = false
+                lovedsRightButton.isHidden = false
+            }
+        }
     }
     
     func setUpDisplayTwoIsland() {
-        self.fourthStackView.isHidden = true
-        self.thirdStackView.isHidden = true
-        self.secondRightButton.isHidden = true
-        self.firstRightButton.isHidden = true
-        // TODO: Definir quais ilhas serão exibidas
+        guard let islands = self.islands else {
+            print("Nenhuma ilha foi selecionada")
+            return
+        }
+        print("__________")
+        for island in islands {
+            switch island.name {
+            case "Saúde":
+                healthStackView.isHidden = false
+                healthRightButton.isHidden = false
+            case "Lazer":
+                leisureStackView.isHidden = false
+                leisureRightButton.isHidden = false
+            case "Atenção Plena":
+                mindfulnessStackView.isHidden = false
+                mindfulnessRightButton.isHidden = false
+            default:
+                lovedsStackView.isHidden = false
+                lovedsRightButton.isHidden = false
+            }
+        }
     }
     
     func setUpDisplayThreeIsland() {
-        self.fourthStackView.isHidden = true
-        self.thirdRightButton.isEnabled = false
-        self.thirdRightButton.alpha = 0
-        self.secondLeftButton.isEnabled = false
-        self.secondLeftButton.alpha = 0
-        self.firstRightButton.isEnabled = false
-        self.firstRightButton.alpha = 0
-        // TODO: Definir quais ilhas serão exibidas
+        guard let islands = self.islands else {
+            print("Nenhuma ilha foi selecionada")
+            return
+        }
+        print(islands.count)
+        for islandPos in 0..<3 {
+            if islandPos%2 == 0 {
+                switch islands[islandPos].name {
+                case "Saúde":
+                    healthStackView.isHidden = false
+                    healthRightButton.isHidden = false
+                    healthLeftButton.isHidden = false
+                    healthLeftButton.isEnabled = false
+                    healthLeftButton.alpha = 0
+                case "Lazer":
+                    leisureStackView.isHidden = false
+                    leisureRightButton.isHidden = false
+                    leisureLeftButton.isHidden = false
+                    leisureLeftButton.isEnabled = false
+                    leisureLeftButton.alpha = 0
+                case "Atenção Plena":
+                    mindfulnessStackView.isHidden = false
+                    mindfulnessRightButton.isHidden = false
+                    mindfulnessLeftButton.isHidden = false
+                    mindfulnessLeftButton.isEnabled = false
+                    mindfulnessLeftButton.alpha = 0
+                default:
+                    lovedsStackView.isHidden = false
+                    lovedsRightButton.isHidden = false
+                    lovedsLeftButton.isHidden = false
+                    lovedsLeftButton.isEnabled = false
+                    lovedsLeftButton.alpha = 0
+                }
+            } else {
+                switch islands[islandPos].name {
+                case "Saúde":
+                    healthStackView.isHidden = false
+                    healthRightButton.isHidden = false
+                    healthLeftButton.isHidden = false
+                    healthRightButton.isEnabled = false
+                    healthRightButton.alpha = 0
+                case "Lazer":
+                    leisureStackView.isHidden = false
+                    leisureRightButton.isHidden = false
+                    leisureLeftButton.isHidden = false
+                    leisureRightButton.isEnabled = false
+                    leisureRightButton.alpha = 0
+                case "Atenção Plena":
+                    mindfulnessStackView.isHidden = false
+                    mindfulnessRightButton.isHidden = false
+                    mindfulnessLeftButton.isHidden = false
+                    mindfulnessRightButton.isEnabled = false
+                    mindfulnessRightButton.alpha = 0
+                default:
+                    lovedsStackView.isHidden = false
+                    lovedsRightButton.isHidden = false
+                    lovedsLeftButton.isHidden = false
+                    lovedsRightButton.isEnabled = false
+                    lovedsRightButton.alpha = 0
+                }
+            }
+        }
     }
     
     func setUpDisplayFourIsland() {
-        self.fourthRightButton.isEnabled = false
-        self.fourthRightButton.alpha = 0
-        self.thirdLeftButton.isEnabled = false
-        self.thirdLeftButton.alpha = 0
-        self.secondRightButton.isEnabled = false
-        self.secondRightButton.alpha = 0
-        self.firstLeftButton.isEnabled = false
-        self.firstLeftButton.alpha = 0
-        // TODO: Definir a ordem das ilhas
+        healthStackView.isHidden = false
+        healthLeftButton.isHidden = false
+        healthRightButton.isHidden = false
+        leisureStackView.isHidden = false
+        leisureLeftButton.isHidden = false
+        leisureRightButton.isHidden = false
+        mindfulnessStackView.isHidden = false
+        mindfulnessLeftButton.isHidden = false
+        mindfulnessRightButton.isHidden = false
+        lovedsStackView.isHidden = false
+        lovedsLeftButton.isHidden = false
+        lovedsRightButton.isHidden = false
+        
+        self.lovedsRightButton.isEnabled = false
+        self.lovedsRightButton.alpha = 0
+        self.mindfulnessLeftButton.isEnabled = false
+        self.mindfulnessLeftButton.alpha = 0
+        self.leisureRightButton.isEnabled = false
+        self.leisureRightButton.alpha = 0
+        self.healthLeftButton.isEnabled = false
+        self.healthLeftButton.alpha = 0
     }
     
     /// Configura a animação das nuvens
