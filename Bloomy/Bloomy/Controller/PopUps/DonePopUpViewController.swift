@@ -17,7 +17,7 @@ class DonePopUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupStyle()
     }
     
@@ -26,8 +26,8 @@ class DonePopUpViewController: UIViewController {
     }
     
     @IBAction func doneChallenge(_ sender: Any) {
+        dismiss(animated: false)
         NotificationCenter.default.post(name: .doneChallenge, object: self)
-        dismiss(animated: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
