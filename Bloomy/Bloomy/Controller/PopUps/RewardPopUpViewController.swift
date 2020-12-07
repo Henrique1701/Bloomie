@@ -8,22 +8,31 @@
 import UIKit
 
 class RewardPopUpViewController: UIViewController {
-
+    var rewardImage: UIImage?
+    
+    @IBOutlet var contentView: UIView!
+    @IBOutlet var rewardImageView: UIImageView!
+    @IBOutlet weak var getButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupStyle()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func close(_ sender: Any) {
+        dismiss(animated: true)
     }
-    */
-
+    
+    @IBAction func getReward(_ sender: Any) {
+        dismiss(animated: true)
+    }
+    
+    func setupStyle() {
+        self.getButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        self.contentView.layer.cornerRadius = 35
+        if rewardImage != nil {
+            self.rewardImageView.image = rewardImage
+        }
+    }
 }
