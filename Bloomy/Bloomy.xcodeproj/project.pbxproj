@@ -19,6 +19,9 @@
 		8905E6D7257E65D80015ECAC /* DonePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8905E6D6257E65D80015ECAC /* DonePopUpViewController.swift */; };
 		891D2E47256ED7B200AC961A /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891D2E46256ED7B200AC961A /* Challenge.swift */; };
 		89249D3A257E6C32002747A3 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 89249D39257E6C32002747A3 /* Poppins-Regular.ttf */; };
+		89249D4B257EA004002747A3 /* RewardPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89249D4A257EA004002747A3 /* RewardPopUpViewController.swift */; };
+		89249D50257EA18F002747A3 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 89249D4F257EA18F002747A3 /* Poppins-Bold.ttf */; };
+		89249D55257ED12E002747A3 /* PopUps.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89249D54257ED12E002747A3 /* PopUps.storyboard */; };
 		8928F54B25670DD10089BE0E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8928F54A25670DD10089BE0E /* User.swift */; };
 		8928F56325670EEE0089BE0E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8928F56225670EEE0089BE0E /* Constants.swift */; };
 		89DD872F2570243200DB1C13 /* SeedDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DD872E2570243200DB1C13 /* SeedDataBase.swift */; };
@@ -76,6 +79,9 @@
 		8905E6D6257E65D80015ECAC /* DonePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonePopUpViewController.swift; sourceTree = "<group>"; };
 		891D2E46256ED7B200AC961A /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		89249D39257E6C32002747A3 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		89249D4A257EA004002747A3 /* RewardPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardPopUpViewController.swift; sourceTree = "<group>"; };
+		89249D4F257EA18F002747A3 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		89249D54257ED12E002747A3 /* PopUps.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PopUps.storyboard; sourceTree = "<group>"; };
 		8928F54A25670DD10089BE0E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8928F56225670EEE0089BE0E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		89DD872E2570243200DB1C13 /* SeedDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeedDataBase.swift; sourceTree = "<group>"; };
@@ -148,6 +154,16 @@
 				F1EA232AA2FD2DE50426D9E6 /* Pods-BloomyTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		89249D3E257E9F2F002747A3 /* PopUps */ = {
+			isa = PBXGroup;
+			children = (
+				8905E6C2257961660015ECAC /* ChallengePopUpViewController.swift */,
+				8905E6D6257E65D80015ECAC /* DonePopUpViewController.swift */,
+				89249D4A257EA004002747A3 /* RewardPopUpViewController.swift */,
+			);
+			path = PopUps;
 			sourceTree = "<group>";
 		};
 		895637142577C7B800CA8D3B /* Islands */ = {
@@ -280,6 +296,7 @@
 				12D13CE0256C2BD60013E511 /* TelaPerfil.storyboard */,
 				BEDD7A4925630ADF005BA4F9 /* Home.storyboard */,
 				BED0527B2576B8940035EB18 /* Islands.storyboard */,
+				89249D54257ED12E002747A3 /* PopUps.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -292,8 +309,7 @@
 				BEC461C9255DABD8003C1D1A /* ViewController.swift */,
 				12D13CEF256C2D130013E511 /* PerfilViewController.swift */,
 				BEF24E522566C24800D408A8 /* HomeViewController.swift */,
-				8905E6C2257961660015ECAC /* ChallengePopUpViewController.swift */,
-				8905E6D6257E65D80015ECAC /* DonePopUpViewController.swift */,
+				89249D3E257E9F2F002747A3 /* PopUps */,
 				895637142577C7B800CA8D3B /* Islands */,
 			);
 			path = Controller;
@@ -302,6 +318,7 @@
 		D61D03D825701B6F005BA187 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				89249D4F257EA18F002747A3 /* Poppins-Bold.ttf */,
 				89249D39257E6C32002747A3 /* Poppins-Regular.ttf */,
 				BED052D52577EC070035EB18 /* Poppins-SemiBold.ttf */,
 				D61D03D925701B8C005BA187 /* Canela.ttc */,
@@ -419,10 +436,12 @@
 				BEC461D5255DABDA003C1D1A /* LaunchScreen.storyboard in Resources */,
 				D61D03E825701C2F005BA187 /* Canela.ttc in Resources */,
 				BED052D62577EC070035EB18 /* Poppins-SemiBold.ttf in Resources */,
+				89249D55257ED12E002747A3 /* PopUps.storyboard in Resources */,
 				89249D3A257E6C32002747A3 /* Poppins-Regular.ttf in Resources */,
 				12D13CE1256C2BD60013E511 /* TelaPerfil.storyboard in Resources */,
 				BEC461D2255DABDA003C1D1A /* Assets.xcassets in Resources */,
 				BED0527C2576B8940035EB18 /* Islands.storyboard in Resources */,
+				89249D50257EA18F002747A3 /* Poppins-Bold.ttf in Resources */,
 				BEC461CD255DABD8003C1D1A /* Main.storyboard in Resources */,
 				BEDD7A4A25630ADF005BA4F9 /* Home.storyboard in Resources */,
 			);
@@ -551,6 +570,7 @@
 				12D13CF0256C2D130013E511 /* PerfilViewController.swift in Sources */,
 				8928F54B25670DD10089BE0E /* User.swift in Sources */,
 				BEC461C8255DABD8003C1D1A /* SceneDelegate.swift in Sources */,
+				89249D4B257EA004002747A3 /* RewardPopUpViewController.swift in Sources */,
 				7D2BEFE9256D86B0006AFD8C /* User+CoreDataProperties.swift in Sources */,
 				8928F56325670EEE0089BE0E /* Constants.swift in Sources */,
 				BED052952576BB250035EB18 /* LeisureViewController.swift in Sources */,
