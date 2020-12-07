@@ -8,22 +8,37 @@
 import UIKit
 
 class DonePopUpViewController: UIViewController {
-
+    var summary: String = ""
+    
+    @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var summaryLabel: UILabel!
+    @IBOutlet weak var doneButton: UIButton!
+    @IBOutlet weak var contentView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupStyle()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func close(_ sender: Any) {
+        dismiss(animated: true)
     }
-    */
-
+    
+    @IBAction func doneChallenge(_ sender: Any) {
+        NotificationCenter.default.post(name: .doneChallenge, object: self)
+        dismiss(animated: true)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.summaryLabel.text = summary
+    }
+    
+    func setupStyle() {
+        self.questionLabel.adjustsFontSizeToFitWidth = true
+        self.summaryLabel.adjustsFontSizeToFitWidth = true
+        self.doneButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        self.contentView.layer.cornerRadius = 35
+    }
+    
 }
