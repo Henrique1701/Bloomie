@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import SpriteKit
+import GameplayKit
 
 class LovedsViewController: UIViewController {
     @IBOutlet weak var challengeDayButton: UIButton!
@@ -13,12 +15,45 @@ class LovedsViewController: UIViewController {
     let island = IslandManager.shared.getIsland(withName: IslandsNames.loveds.rawValue)!
     var challengeObserver: NSObjectProtocol?
     var doneObserver: NSObjectProtocol?
+    let scene = SKScene(fileNamed: "HealthIsland")
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let islandView = SKView(frame: CGRect(x: self.view.center.x-(366/2), y: self.view.center.y-(364/2), width: 366, height: 364))
+        islandView.backgroundColor = .black
+        self.view.addSubview(islandView)
+        
+        if let view = islandView as SKView? {
+            /*
+            scene!.scaleMode = .aspectFill
+            let node = scene!.childNode(withName: "AA1") as? SKSpriteNode
+            node?.alpha = 0.5
+            view.presentScene(scene)
+            
+            view.ignoresSiblingOrder = true
+            */
+        }
+
         chooseButtonToShow()
         setupStyle()
+    }
+    
+    override var shouldAutorotate: Bool {
+        return true
+    }
+
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            return .allButUpsideDown
+        } else {
+            return .all
+        }
+    }
+
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
     
     override func viewDidAppear(_ animated: Bool) {
