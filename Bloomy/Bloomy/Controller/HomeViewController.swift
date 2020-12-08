@@ -171,7 +171,6 @@ class HomeViewController: UIViewController {
             print("Nenhuma ilha foi selecionada")
             return
         }
-        print("__________")
         for island in islands {
             switch island.name {
             case "Saúde":
@@ -195,7 +194,6 @@ class HomeViewController: UIViewController {
             print("Nenhuma ilha foi selecionada")
             return
         }
-        print(islands.count)
         for islandPos in 0..<3 {
             if islandPos%2 == 0 {
                 switch islands[islandPos].name {
