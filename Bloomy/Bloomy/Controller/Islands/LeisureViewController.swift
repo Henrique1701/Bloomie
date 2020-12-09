@@ -6,34 +6,35 @@
 //
 
 import UIKit
+import SpriteKit
+import GameplayKit
 
 class LeisureViewController: UIViewController {
     @IBOutlet weak var challengeDayButton: UIButton!
     @IBOutlet weak var doneButton: UIButton!
+    
     let island = IslandManager.shared.getIsland(withName: IslandsNames.leisure.rawValue)!
     var challengeObserver: NSObjectProtocol?
     var doneObserver: NSObjectProtocol?
+    let scene = SKScene(fileNamed: "LeisureIsland")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        chooseButtonToShow()
-        setupStyle()
+        self.setupStyle()
+        self.setupSKScene()
+        self.chooseButtonToShow()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         challengeObserver = NotificationCenter.default.addObserver(forName: .acceptChallenge, object: nil, queue: OperationQueue.main) { (notification) in
-            self.island.dailyChallenge?.accepted = true
-            _ = IslandManager.shared.saveContext()
-            self.chooseButtonToShow()
-            self.loadViewIfNeeded()
+            self.acceptChallenge()
         }
         
         doneObserver = NotificationCenter.default.addObserver(forName: .doneChallenge, object: nil, queue: OperationQueue.main) { (notification) in
-            self.island.dailyChallenge?.done = true
-            _ = IslandManager.shared.saveContext()
+            self.doneChallenge()
             self.chooseButtonToShow()
             self.showRewardPopUp()
             self.loadViewIfNeeded()
@@ -52,6 +53,21 @@ class LeisureViewController: UIViewController {
         }
     }
     
+    override var shouldAutorotate: Bool {
+        return true
+    }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            return .allButUpsideDown
+        } else {
+            return .all
+        }
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toChallengePopUpViewControllerSegue" {
@@ -63,12 +79,37 @@ class LeisureViewController: UIViewController {
         }
     }
     
+    func acceptChallenge() {
+        self.island.dailyChallenge?.accepted = true
+        _ = IslandManager.shared.saveContext()
+        self.chooseButtonToShow()
+        self.loadViewIfNeeded()
+    }
+    
+    func doneChallenge() {
+        self.island.dailyChallenge?.done = true
+        _ = IslandManager.shared.saveContext()
+    }
+    
     func setupNavigationController() {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.topItem?.title = ""
         self.navigationController?.navigationBar.layoutIfNeeded()
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Poppins-Semibold", size: 18) ?? UIFont()]
+    }
+    
+    func setupSKScene() {
+        let islandView = SKView(frame: CGRect(x: self.view.center.x-(366/2), y: self.view.center.y-(364/2), width: 366, height: 364))
+        islandView.backgroundColor = .black
+        self.view.addSubview(islandView)
+        
+        if let view = islandView as SKView? {
+            scene!.scaleMode = .aspectFill
+            self.showRewards()
+            view.presentScene(scene)
+            view.ignoresSiblingOrder = true
+        }
     }
     
     func setupStyle() {
@@ -105,10 +146,14 @@ class LeisureViewController: UIViewController {
         let popup = storyBoard.instantiateViewController(identifier: "RewardPopUp") as! RewardPopUpViewController
         let rewards = IslandManager.shared.getRewards(fromIsland: island.name!)!
         if let availableReward = getAvailableReward(inRewards: rewards) {
-            popup.rewardImage = UIImage(named: "\(availableReward.id as! String)")
+            popup.rewardImage = UIImage(named: "\(availableReward.id!)")
             popup.modalTransitionStyle = .crossDissolve
             popup.modalPresentationStyle = .overCurrentContext
+            let node = self.scene!.childNode(withName: "\(availableReward.id!)") as? SKSpriteNode
             self.present(popup, animated: true)
+            node?.alpha = 1
+            availableReward.isShown = true
+            _ = RewardManager.shared.saveContext()
         } else {
             fatalError("There is no available reward")
         }
@@ -130,6 +175,12 @@ class LeisureViewController: UIViewController {
         
         return rewards[randomIndex]
     }
-
     
+    func showRewards() {
+        let rewards = IslandManager.shared.getRewards(fromIsland: self.island.name!)!
+        for reward in rewards where reward.isShown {
+            let node = self.scene!.childNode(withName: "\(reward.id!)") as? SKSpriteNode
+            node?.alpha = 1
+        }
+    }
 }
