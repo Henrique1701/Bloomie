@@ -10,7 +10,7 @@ import AVFoundation
 
 class RewardPopUpViewController: UIViewController {
     var rewardImage: UIImage?
-    var audioPlayer: AVAudioPlayer?
+    var rewardAudioPlayer: AVAudioPlayer?
     
     @IBOutlet var contentView: UIView!
     @IBOutlet var rewardImageView: UIImageView!
@@ -48,8 +48,8 @@ class RewardPopUpViewController: UIViewController {
         let pathToSound = Bundle.main.path(forResource: "reward", ofType: "mp3")!
         let urlReward = URL(fileURLWithPath: pathToSound)
         do{
-            audioPlayer = try AVAudioPlayer(contentsOf: urlReward)
-            audioPlayer?.play()
+            rewardAudioPlayer = try AVAudioPlayer(contentsOf: urlReward)
+            rewardAudioPlayer?.play()
         } catch let error as NSError {
             print(error.description)
         }
