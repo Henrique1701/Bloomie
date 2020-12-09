@@ -13,8 +13,32 @@
 		12CD887025815C4D002E0E3A /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CD886F25815C4D002E0E3A /* NotificationsViewController.swift */; };
 		12D4FDA3257AC6D00063A167 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D4FDA2257AC6D00063A167 /* NavigationViewController.swift */; };
 		12F07E5D2576CAD000C4EE8F /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 12F07E5C2576CAD000C4EE8F /* Intents.intentdefinition */; };
+		12D13CF0256C2D130013E511 /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D13CEF256C2D130013E511 /* PerfilViewController.swift */; };
 		1834972EEB6285E47FABD0A3 /* Pods_Bloomy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57CA3E352B06C25017BE1E66 /* Pods_Bloomy.framework */; };
 		75C430483B507584722F9116 /* Pods_BloomyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E49591F99200B6D647E55B /* Pods_BloomyTests.framework */; };
+		7D192271257ABA0E00D26450 /* ComoVaiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D192270257ABA0E00D26450 /* ComoVaiViewController.swift */; };
+		7D267544256EDB97000C57A3 /* Reward.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D267543256EDB97000C57A3 /* Reward.swift */; };
+		7D2BEFC625685E48006AFD8C /* Island.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2BEFC525685E48006AFD8C /* Island.swift */; };
+		7D2BEFE8256D86B0006AFD8C /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2BEFE6256D86B0006AFD8C /* User+CoreDataClass.swift */; };
+		7D2BEFE9256D86B0006AFD8C /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2BEFE7256D86B0006AFD8C /* User+CoreDataProperties.swift */; };
+		7DAE80212575877000B17FB8 /* AreasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAE80202575877000B17FB8 /* AreasViewController.swift */; };
+		7DB41BFA257AC31900BBFAEA /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DB41BF8257AC31900BBFAEA /* Poppins-Regular.ttf */; };
+		7DB41BFB257AC31900BBFAEA /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DB41BF9257AC31900BBFAEA /* Poppins-SemiBold.ttf */; };
+		7DB41C00257AC36300BBFAEA /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DB41BFF257AC36300BBFAEA /* Poppins-Bold.ttf */; };
+		8905E6C3257961660015ECAC /* ChallengePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8905E6C2257961660015ECAC /* ChallengePopUpViewController.swift */; };
+		8905E6D7257E65D80015ECAC /* DonePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8905E6D6257E65D80015ECAC /* DonePopUpViewController.swift */; };
+		891D2E47256ED7B200AC961A /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891D2E46256ED7B200AC961A /* Challenge.swift */; };
+		89249D4B257EA004002747A3 /* RewardPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89249D4A257EA004002747A3 /* RewardPopUpViewController.swift */; };
+		89249D55257ED12E002747A3 /* PopUps.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89249D54257ED12E002747A3 /* PopUps.storyboard */; };
+		8928F54B25670DD10089BE0E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8928F54A25670DD10089BE0E /* User.swift */; };
+		8928F56325670EEE0089BE0E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8928F56225670EEE0089BE0E /* Constants.swift */; };
+		896273AB257FF381002FAD99 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896273AA257FF381002FAD99 /* ContentView.swift */; };
+		8984E40B257FF16D002A5A72 /* TabBarDesafiosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8984E40A257FF16D002A5A72 /* TabBarDesafiosViewController.swift */; };
+		89DD872F2570243200DB1C13 /* SeedDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DD872E2570243200DB1C13 /* SeedDataBase.swift */; };
+		BE91BADC257FFF2000CC83D0 /* HealthIsland.sks in Resources */ = {isa = PBXBuildFile; fileRef = BE91BADB257FFF2000CC83D0 /* HealthIsland.sks */; };
+		BE91BB112580163C00CC83D0 /* LeisureIsland.sks in Resources */ = {isa = PBXBuildFile; fileRef = BE91BB102580163C00CC83D0 /* LeisureIsland.sks */; };
+		BE91BB16258016DF00CC83D0 /* LovedsIsland.sks in Resources */ = {isa = PBXBuildFile; fileRef = BE91BB15258016DF00CC83D0 /* LovedsIsland.sks */; };
+		BE91BB1B2580179B00CC83D0 /* MindfulnessIsland.sks in Resources */ = {isa = PBXBuildFile; fileRef = BE91BB1A2580179B00CC83D0 /* MindfulnessIsland.sks */; };
 		BEC461C6255DABD8003C1D1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC461C5255DABD8003C1D1A /* AppDelegate.swift */; };
 		BEC461C8255DABD8003C1D1A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC461C7255DABD8003C1D1A /* SceneDelegate.swift */; };
 		BEC461CD255DABD8003C1D1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEC461CB255DABD8003C1D1A /* Main.storyboard */; };
@@ -23,7 +47,19 @@
 		BEC461D5255DABDA003C1D1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEC461D3255DABDA003C1D1A /* LaunchScreen.storyboard */; };
 		BEC461E0255DABDB003C1D1A /* BloomyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC461DF255DABDB003C1D1A /* BloomyTests.swift */; };
 		BEC461EB255DABDB003C1D1A /* BloomyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC461EA255DABDB003C1D1A /* BloomyUITests.swift */; };
+		BED0527C2576B8940035EB18 /* Islands.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BED0527B2576B8940035EB18 /* Islands.storyboard */; };
+		BED052902576BB150035EB18 /* MindfulnessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED0528F2576BB150035EB18 /* MindfulnessViewController.swift */; };
+		BED052952576BB250035EB18 /* LeisureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED052942576BB250035EB18 /* LeisureViewController.swift */; };
+		BED0529A2576BB340035EB18 /* LovedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED052992576BB340035EB18 /* LovedsViewController.swift */; };
+		BED0529F2576BB470035EB18 /* HealthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED0529E2576BB470035EB18 /* HealthViewController.swift */; };
+		BEDD7A4A25630ADF005BA4F9 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEDD7A4925630ADF005BA4F9 /* Home.storyboard */; };
+		BEF24E532566C24800D408A8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF24E522566C24800D408A8 /* HomeViewController.swift */; };
 		BFE8F27E98A9FA5E51C8958C /* Pods_Bloomy_BloomyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33CC4FDD39B2F278DD2B4375 /* Pods_Bloomy_BloomyUITests.framework */; };
+		D61D03E825701C2F005BA187 /* Canela.ttc in Resources */ = {isa = PBXBuildFile; fileRef = D61D03D925701B8C005BA187 /* Canela.ttc */; };
+		D64B4F6325756F2000D818EB /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D64B4F6225756F2000D818EB /* Onboarding.storyboard */; };
+		D64B4F812575923B00D818EB /* ComoSeChamaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64B4F802575923B00D818EB /* ComoSeChamaViewController.swift */; };
+		D6DFCE3B258148AF0013E8D1 /* reward.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D6DFCE3A258148AF0013E8D1 /* reward.mp3 */; };
+		D6DFCE472581500E0013E8D1 /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D6DFCE462581500E0013E8D1 /* background.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,14 +87,40 @@
 		12D4FDA2257AC6D00063A167 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		12F07E582576CA1100C4EE8F /* Bloomy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Bloomy.entitlements; sourceTree = "<group>"; };
 		12F07E5C2576CAD000C4EE8F /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
+		12D13CEF256C2D130013E511 /* PerfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilViewController.swift; sourceTree = "<g
 		31B686F7D2FE3B59608E26C9 /* Pods-Bloomy-BloomyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bloomy-BloomyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Bloomy-BloomyUITests/Pods-Bloomy-BloomyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		33CC4FDD39B2F278DD2B4375 /* Pods_Bloomy_BloomyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bloomy_BloomyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		369F14DF579FC84A0B42AB62 /* Pods-Bloomy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bloomy.debug.xcconfig"; path = "Target Support Files/Pods-Bloomy/Pods-Bloomy.debug.xcconfig"; sourceTree = "<group>"; };
 		3C16641237BD639CA3DB2A3C /* Pods-Bloomy-BloomyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bloomy-BloomyUITests.release.xcconfig"; path = "Target Support Files/Pods-Bloomy-BloomyUITests/Pods-Bloomy-BloomyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		57CA3E352B06C25017BE1E66 /* Pods_Bloomy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bloomy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D192270257ABA0E00D26450 /* ComoVaiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ComoVaiViewController.swift; path = Bloomy/View/ComoVaiViewController.swift; sourceTree = SOURCE_ROOT; };
+		7D267543256EDB97000C57A3 /* Reward.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reward.swift; sourceTree = "<group>"; };
+		7D2BEFC525685E48006AFD8C /* Island.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Island.swift; sourceTree = "<group>"; };
+		7D2BEFE6256D86B0006AFD8C /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7D2BEFE7256D86B0006AFD8C /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		7DAE80202575877000B17FB8 /* AreasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AreasViewController.swift; path = Bloomy/View/AreasViewController.swift; sourceTree = SOURCE_ROOT; };
+		7DB41BF8257AC31900BBFAEA /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		7DB41BF9257AC31900BBFAEA /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		7DB41BFF257AC36300BBFAEA /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		8905E6C2257961660015ECAC /* ChallengePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengePopUpViewController.swift; sourceTree = "<group>"; };
+		8905E6D6257E65D80015ECAC /* DonePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonePopUpViewController.swift; sourceTree = "<group>"; };
+		891D2E46256ED7B200AC961A /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
+		89249D39257E6C32002747A3 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		89249D4A257EA004002747A3 /* RewardPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardPopUpViewController.swift; sourceTree = "<group>"; };
+		89249D4F257EA18F002747A3 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		89249D54257ED12E002747A3 /* PopUps.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PopUps.storyboard; sourceTree = "<group>"; };
+		8928F54A25670DD10089BE0E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8928F56225670EEE0089BE0E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		896273AA257FF381002FAD99 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8984E40A257FF16D002A5A72 /* TabBarDesafiosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarDesafiosViewController.swift; sourceTree = "<group>"; };
+		89DD872E2570243200DB1C13 /* SeedDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeedDataBase.swift; sourceTree = "<group>"; };
 		910E7EF4AA3E30A07B9A2743 /* Pods-Bloomy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bloomy.release.xcconfig"; path = "Target Support Files/Pods-Bloomy/Pods-Bloomy.release.xcconfig"; sourceTree = "<group>"; };
 		94E49591F99200B6D647E55B /* Pods_BloomyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BloomyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25879A5F40F669187A291F0 /* Pods-BloomyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BloomyTests.debug.xcconfig"; path = "Target Support Files/Pods-BloomyTests/Pods-BloomyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BE91BADB257FFF2000CC83D0 /* HealthIsland.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = HealthIsland.sks; sourceTree = "<group>"; };
+		BE91BB102580163C00CC83D0 /* LeisureIsland.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = LeisureIsland.sks; sourceTree = "<group>"; };
+		BE91BB15258016DF00CC83D0 /* LovedsIsland.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = LovedsIsland.sks; sourceTree = "<group>"; };
+		BE91BB1A2580179B00CC83D0 /* MindfulnessIsland.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MindfulnessIsland.sks; sourceTree = "<group>"; };
 		BEC461C2255DABD8003C1D1A /* Bloomy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bloomy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEC461C5255DABD8003C1D1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEC461C7255DABD8003C1D1A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +135,19 @@
 		BEC461E6255DABDB003C1D1A /* BloomyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BloomyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEC461EA255DABDB003C1D1A /* BloomyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloomyUITests.swift; sourceTree = "<group>"; };
 		BEC461EC255DABDB003C1D1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BED0527B2576B8940035EB18 /* Islands.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Islands.storyboard; sourceTree = "<group>"; };
+		BED0528F2576BB150035EB18 /* MindfulnessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindfulnessViewController.swift; sourceTree = "<group>"; };
+		BED052942576BB250035EB18 /* LeisureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeisureViewController.swift; sourceTree = "<group>"; };
+		BED052992576BB340035EB18 /* LovedsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LovedsViewController.swift; sourceTree = "<group>"; };
+		BED0529E2576BB470035EB18 /* HealthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthViewController.swift; sourceTree = "<group>"; };
+		BED052D52577EC070035EB18 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		BEDD7A4925630ADF005BA4F9 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		BEF24E522566C24800D408A8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D61D03D925701B8C005BA187 /* Canela.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Canela.ttc; sourceTree = "<group>"; };
+		D64B4F6225756F2000D818EB /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		D64B4F802575923B00D818EB /* ComoSeChamaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComoSeChamaViewController.swift; sourceTree = "<group>"; };
+		D6DFCE3A258148AF0013E8D1 /* reward.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = reward.mp3; sourceTree = "<group>"; };
+		D6DFCE462581500E0013E8D1 /* background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background.mp3; sourceTree = "<group>"; };
 		F1EA232AA2FD2DE50426D9E6 /* Pods-BloomyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BloomyTests.release.xcconfig"; path = "Target Support Files/Pods-BloomyTests/Pods-BloomyTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,6 +190,68 @@
 				F1EA232AA2FD2DE50426D9E6 /* Pods-BloomyTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		89249D3E257E9F2F002747A3 /* PopUps */ = {
+			isa = PBXGroup;
+			children = (
+				8905E6C2257961660015ECAC /* ChallengePopUpViewController.swift */,
+				8905E6D6257E65D80015ECAC /* DonePopUpViewController.swift */,
+				89249D4A257EA004002747A3 /* RewardPopUpViewController.swift */,
+			);
+			path = PopUps;
+			sourceTree = "<group>";
+		};
+		895637142577C7B800CA8D3B /* Islands */ = {
+			isa = PBXGroup;
+			children = (
+				BED0528F2576BB150035EB18 /* MindfulnessViewController.swift */,
+				BED052942576BB250035EB18 /* LeisureViewController.swift */,
+				BED052992576BB340035EB18 /* LovedsViewController.swift */,
+				BED0529E2576BB470035EB18 /* HealthViewController.swift */,
+			);
+			path = Islands;
+			sourceTree = "<group>";
+		};
+		895637152577C7D900CA8D3B /* User */ = {
+			isa = PBXGroup;
+			children = (
+				8928F54A25670DD10089BE0E /* User.swift */,
+				7D2BEFE6256D86B0006AFD8C /* User+CoreDataClass.swift */,
+				7D2BEFE7256D86B0006AFD8C /* User+CoreDataProperties.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		895637172577C7FD00CA8D3B /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				BEC461D1255DABDA003C1D1A /* Assets.xcassets */,
+				D6DFCE392581489C0013E8D1 /* Sounds */,
+				D61D03D825701B6F005BA187 /* Fonts */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		895637182577C80300CA8D3B /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				BEC461CE255DABD8003C1D1A /* Bloomy.xcdatamodeld */,
+				891D2E46256ED7B200AC961A /* Challenge.swift */,
+				7D2BEFC525685E48006AFD8C /* Island.swift */,
+				7D267543256EDB97000C57A3 /* Reward.swift */,
+				89DD872E2570243200DB1C13 /* SeedDataBase.swift */,
+				895637152577C7D900CA8D3B /* User */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		895637192577C80900CA8D3B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8928F56225670EEE0089BE0E /* Constants.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		AE4F409CCC5D9A13F9027B38 /* Frameworks */ = {
@@ -182,8 +319,9 @@
 		BEDD7A402562F3AB005BA4F9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BEC461D1255DABDA003C1D1A /* Assets.xcassets */,
-				BEC461CE255DABD8003C1D1A /* Bloomy.xcdatamodeld */,
+				895637192577C80900CA8D3B /* Classes */,
+				895637182577C80300CA8D3B /* Database */,
+				895637172577C7FD00CA8D3B /* Settings */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -194,6 +332,15 @@
 				BEC461CB255DABD8003C1D1A /* Main.storyboard */,
 				BEC461D3255DABDA003C1D1A /* LaunchScreen.storyboard */,
 				125F541A256D5B8D0051F9AC /* TelaPerfil.storyboard */,
+				BEDD7A4925630ADF005BA4F9 /* Home.storyboard */,
+				BED0527B2576B8940035EB18 /* Islands.storyboard */,
+				89249D54257ED12E002747A3 /* PopUps.storyboard */,
+				D64B4F6225756F2000D818EB /* Onboarding.storyboard */,
+				896273AA257FF381002FAD99 /* ContentView.swift */,
+				BE91BADB257FFF2000CC83D0 /* HealthIsland.sks */,
+				BE91BB102580163C00CC83D0 /* LeisureIsland.sks */,
+				BE91BB15258016DF00CC83D0 /* LovedsIsland.sks */,
+				BE91BB1A2580179B00CC83D0 /* MindfulnessIsland.sks */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -201,15 +348,46 @@
 		BEDD7A422562F3C3005BA4F9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7D192270257ABA0E00D26450 /* ComoVaiViewController.swift */,
+				7DAE80202575877000B17FB8 /* AreasViewController.swift */,
 				BEC461C5255DABD8003C1D1A /* AppDelegate.swift */,
 				BEC461C7255DABD8003C1D1A /* SceneDelegate.swift */,
-				125F542A256D5EFC0051F9AC /* ViewController.swift */,
 				12D4FDA2257AC6D00063A167 /* NavigationViewController.swift */,
 				12A8F007257ECAD4000D7DE4 /* TableViewController.swift */,
 				12CD886F25815C4D002E0E3A /* NotificationsViewController.swift */,
 				12F07E5C2576CAD000C4EE8F /* Intents.intentdefinition */,
+				BEC461C9255DABD8003C1D1A /* ViewController.swift */,
+				12D13CEF256C2D130013E511 /* PerfilViewController.swift */,
+				BEF24E522566C24800D408A8 /* HomeViewController.swift */,
+				D64B4F802575923B00D818EB /* ComoSeChamaViewController.swift */,
+				8984E40A257FF16D002A5A72 /* TabBarDesafiosViewController.swift */,
+				89249D3E257E9F2F002747A3 /* PopUps */,
+				895637142577C7B800CA8D3B /* Islands */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		D61D03D825701B6F005BA187 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				89249D4F257EA18F002747A3 /* Poppins-Bold.ttf */,
+				89249D39257E6C32002747A3 /* Poppins-Regular.ttf */,
+				BED052D52577EC070035EB18 /* Poppins-SemiBold.ttf */,
+				7DB41BF8257AC31900BBFAEA /* Poppins-Regular.ttf */,
+				7DB41BFF257AC36300BBFAEA /* Poppins-Bold.ttf */,
+				7DB41BF9257AC31900BBFAEA /* Poppins-SemiBold.ttf */,
+				D61D03D925701B8C005BA187 /* Canela.ttc */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		D6DFCE392581489C0013E8D1 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				D6DFCE3A258148AF0013E8D1 /* reward.mp3 */,
+				D6DFCE462581500E0013E8D1 /* background.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,8 +499,24 @@
 			files = (
 				125F541B256D5B8D0051F9AC /* TelaPerfil.storyboard in Resources */,
 				BEC461D5255DABDA003C1D1A /* LaunchScreen.storyboard in Resources */,
+				D6DFCE472581500E0013E8D1 /* background.mp3 in Resources */,
+				D61D03E825701C2F005BA187 /* Canela.ttc in Resources */,
+				89249D55257ED12E002747A3 /* PopUps.storyboard in Resources */,
+				BED0527C2576B8940035EB18 /* Islands.storyboard in Resources */,
+				7DB41BFA257AC31900BBFAEA /* Poppins-Regular.ttf in Resources */,
+				D6DFCE3B258148AF0013E8D1 /* reward.mp3 in Resources */,
+				7DB41BFB257AC31900BBFAEA /* Poppins-SemiBold.ttf in Resources */,
+				BE91BB1B2580179B00CC83D0 /* MindfulnessIsland.sks in Resources */,
+				BE91BADC257FFF2000CC83D0 /* HealthIsland.sks in Resources */,
+				BE91BB16258016DF00CC83D0 /* LovedsIsland.sks in Resources */,
+				12D13CE1256C2BD60013E511 /* TelaPerfil.storyboard in Resources */,
 				BEC461D2255DABDA003C1D1A /* Assets.xcassets in Resources */,
+				BE91BB112580163C00CC83D0 /* LeisureIsland.sks in Resources */,
+				D64B4F6325756F2000D818EB /* Onboarding.storyboard in Resources */,
+				7DB41C00257AC36300BBFAEA /* Poppins-Bold.ttf in Resources */,
+				BED0527C2576B8940035EB18 /* Islands.storyboard in Resources */,
 				BEC461CD255DABD8003C1D1A /* Main.storyboard in Resources */,
+				BEDD7A4A25630ADF005BA4F9 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,13 +628,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				12F07E5D2576CAD000C4EE8F /* Intents.intentdefinition in Sources */,
-				125F542B256D5EFC0051F9AC /* ViewController.swift in Sources */,
-				BEC461D0255DABD8003C1D1A /* Bloomy.xcdatamodeld in Sources */,
 				12A8F008257ECAD4000D7DE4 /* TableViewController.swift in Sources */,
+				BEF24E532566C24800D408A8 /* HomeViewController.swift in Sources */,
+				8905E6D7257E65D80015ECAC /* DonePopUpViewController.swift in Sources */,
+				BEC461CA255DABD8003C1D1A /* ViewController.swift in Sources */,
+				BEC461D0255DABD8003C1D1A /* Bloomy.xcdatamodeld in Sources */,
+				7D2BEFC625685E48006AFD8C /* Island.swift in Sources */,
+				7D267544256EDB97000C57A3 /* Reward.swift in Sources */,
+				891D2E47256ED7B200AC961A /* Challenge.swift in Sources */,
+				8905E6C3257961660015ECAC /* ChallengePopUpViewController.swift in Sources */,
+				7DAE80212575877000B17FB8 /* AreasViewController.swift in Sources */,
 				BEC461C6255DABD8003C1D1A /* AppDelegate.swift in Sources */,
+				896273AB257FF381002FAD99 /* ContentView.swift in Sources */,
+				BED052902576BB150035EB18 /* MindfulnessViewController.swift in Sources */,
+				8984E40B257FF16D002A5A72 /* TabBarDesafiosViewController.swift in Sources */,
+				BED0529A2576BB340035EB18 /* LovedsViewController.swift in Sources */,
+				7D2BEFE8256D86B0006AFD8C /* User+CoreDataClass.swift in Sources */,
+				BED0529F2576BB470035EB18 /* HealthViewController.swift in Sources */,
+				12D13CF0256C2D130013E511 /* PerfilViewController.swift in Sources */,
+				8928F54B25670DD10089BE0E /* User.swift in Sources */,
 				BEC461C8255DABD8003C1D1A /* SceneDelegate.swift in Sources */,
 				12D4FDA3257AC6D00063A167 /* NavigationViewController.swift in Sources */,
 				12CD887025815C4D002E0E3A /* NotificationsViewController.swift in Sources */,
+				89249D4B257EA004002747A3 /* RewardPopUpViewController.swift in Sources */,
+				7D2BEFE9256D86B0006AFD8C /* User+CoreDataProperties.swift in Sources */,
+				8928F56325670EEE0089BE0E /* Constants.swift in Sources */,
+				7D192271257ABA0E00D26450 /* ComoVaiViewController.swift in Sources */,
+				BED052952576BB250035EB18 /* LeisureViewController.swift in Sources */,
+				89DD872F2570243200DB1C13 /* SeedDataBase.swift in Sources */,
+				D64B4F812575923B00D818EB /* ComoSeChamaViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
