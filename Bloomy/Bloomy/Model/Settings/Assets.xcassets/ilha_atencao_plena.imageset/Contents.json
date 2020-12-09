@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "ilha_atencaoPlena.png",
+      "filename" : "ilha_atencao_plena.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "ilha_atencaoPlena@2.png",
+      "filename" : "ilha_atencao_plena@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "ilha_atencaoPlena@3.png",
+      "filename" : "ilha_atencao_plena@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
