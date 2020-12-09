@@ -103,10 +103,32 @@ class HealthViewController: UIViewController {
     func showRewardPopUp() {
         let storyBoard: UIStoryboard = UIStoryboard(name: "PopUps", bundle: nil)
         let popup = storyBoard.instantiateViewController(identifier: "RewardPopUp") as! RewardPopUpViewController
-        popup.rewardImage = UIImage(named: "mushroom")
-        popup.modalTransitionStyle = .crossDissolve
-        popup.modalPresentationStyle = .overCurrentContext
-        self.present(popup, animated: true)
+        let rewards = IslandManager.shared.getRewards(fromIsland: island.name!)!
+        if let availableReward = getAvailableReward(inRewards: rewards) {
+            popup.rewardImage = UIImage(named: "\(availableReward.id as! String)")
+            popup.modalTransitionStyle = .crossDissolve
+            popup.modalPresentationStyle = .overCurrentContext
+            self.present(popup, animated: true)
+        } else {
+            fatalError("There is no available reward")
+        }
+    }
+    
+    func randomNumber(maximum: Int) -> Int {
+        let randomInt = Int.random(in: 0..<maximum)
+        return randomInt
+    }
+    
+    func getAvailableReward(inRewards rewards: [Reward]) -> Reward? {
+        var randomIndex = randomNumber(maximum: rewards.count)
+        var rewardsCount = rewards.count //Auxiliar para garantir saída do while
+        
+        while(rewards[randomIndex].isShown && rewardsCount > 0) {
+            rewardsCount -= 1
+            randomIndex = (randomIndex + 1) % rewards.count
+        }
+        
+        return rewards[randomIndex]
     }
     
 }
