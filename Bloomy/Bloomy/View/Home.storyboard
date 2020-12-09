@@ -267,7 +267,7 @@
         <!--Desafios-->
         <scene sceneID="5Bw-bg-DYB">
             <objects>
-                <viewController id="8r1-tz-zHZ" sceneMemberID="viewController">
+                <viewController id="8r1-tz-zHZ" customClass="TabBarDesafiosViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j2e-zQ-BXg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
