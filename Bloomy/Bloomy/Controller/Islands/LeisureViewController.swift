@@ -17,6 +17,8 @@ class LeisureViewController: UIViewController {
     var challengeObserver: NSObjectProtocol?
     var doneObserver: NSObjectProtocol?
     let scene = SKScene(fileNamed: "LeisureIsland")
+    var animationObserver: NSObjectProtocol?
+    var rewardIdToAnimate = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +41,11 @@ class LeisureViewController: UIViewController {
             self.showRewardPopUp()
             self.loadViewIfNeeded()
         }
+        
+        // Espera uma notificação para ativar animação da recompensa
+        animationObserver = NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "animationObserver"), object: nil, queue: OperationQueue.main) { _ in
+            self.rewardAnimation()
+        }
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -50,6 +57,10 @@ class LeisureViewController: UIViewController {
         
         if doneObserver != nil {
             NotificationCenter.default.removeObserver(doneObserver!)
+        }
+        
+        if animationObserver != nil {
+            NotificationCenter.default.removeObserver(animationObserver!)
         }
     }
     
@@ -149,9 +160,8 @@ class LeisureViewController: UIViewController {
             popup.rewardImage = UIImage(named: "\(availableReward.id!)")
             popup.modalTransitionStyle = .crossDissolve
             popup.modalPresentationStyle = .overCurrentContext
-            let node = self.scene!.childNode(withName: "\(availableReward.id!)") as? SKSpriteNode
+            self.rewardIdToAnimate = availableReward.id!
             self.present(popup, animated: true)
-            node?.alpha = 1
             availableReward.isShown = true
             _ = RewardManager.shared.saveContext()
         } else {
@@ -182,5 +192,15 @@ class LeisureViewController: UIViewController {
             let node = self.scene!.childNode(withName: "\(reward.id!)") as? SKSpriteNode
             node?.alpha = 1
         }
+    }
+    
+    @objc func rewardAnimation() {
+        let node = self.scene?.childNode(withName: self.rewardIdToAnimate) as? SKSpriteNode
+        let nodeSize = node?.size
+        node?.alpha = 1
+        let increase = SKAction.resize(toWidth: nodeSize!.width*2, height: nodeSize!.height*2, duration: 1.5)
+        let decrease = SKAction.resize(toWidth: nodeSize!.width, height: nodeSize!.height, duration: 1.5)
+        let sequentialAction = SKAction.sequence([increase, decrease, increase, decrease])
+        node?.run(sequentialAction)
     }
 }

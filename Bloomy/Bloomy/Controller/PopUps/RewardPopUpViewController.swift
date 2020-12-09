@@ -20,6 +20,11 @@ class RewardPopUpViewController: UIViewController {
         setupStyle()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        // Mandar um sinal para animação começar na tela de ilha
+        NotificationCenter.default.post(name: Notification.Name("animationObserver"), object: nil)
+    }
+    
     @IBAction func close(_ sender: Any) {
         dismiss(animated: true)
     }
