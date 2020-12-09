@@ -19,10 +19,8 @@
         <relationship name="islandToUser" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="userToIsland" inverseEntity="User"/>
     </entity>
     <entity name="Reward" representedClassName="Reward" syncable="YES" codeGenerationType="class">
-        <attribute name="image" optional="YES" attributeType="Binary"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
         <attribute name="isShown" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
-        <attribute name="location" optional="YES" attributeType="String"/>
-        <attribute name="rewardId" optional="YES" attributeType="String"/>
         <relationship name="rewardToIsland" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Island" inverseName="islandToReward" inverseEntity="Island"/>
     </entity>
     <entity name="User" representedClassName="User" syncable="YES">
@@ -35,7 +33,7 @@
     <elements>
         <element name="Challenge" positionX="176.03515625" positionY="-403.1953125" width="128" height="163"/>
         <element name="Island" positionX="184.1875" positionY="-191.41796875" width="128" height="133"/>
-        <element name="Reward" positionX="475.3359375" positionY="-174.11328125" width="128" height="118"/>
+        <element name="Reward" positionX="475.3359375" positionY="-174.11328125" width="128" height="88"/>
         <element name="User" positionX="-122.3046875" positionY="-177.93359375" width="128" height="118"/>
     </elements>
 </model>

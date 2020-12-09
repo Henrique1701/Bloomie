@@ -6,7 +6,9 @@
 //
 
 import UIKit
+import AVFoundation
 
+var backgroundAudioPlayer: AVAudioPlayer?
 class HomeViewController: UIViewController {
     
     // MARK: Outlets
@@ -39,6 +41,17 @@ class HomeViewController: UIViewController {
     // MARK: View Functions
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let pathToBGSound = Bundle.main.path(forResource: "background", ofType: "mp3")!
+        let urlbg = URL(fileURLWithPath: pathToBGSound)
+        do{
+            backgroundAudioPlayer = try AVAudioPlayer(contentsOf: urlbg)
+            backgroundAudioPlayer?.prepareToPlay()
+            backgroundAudioPlayer?.numberOfLoops = -1
+            backgroundAudioPlayer?.play()
+        } catch let error as NSError {
+            print(error.description)
+        }
         
         quantityIslands = islands!.count
         setUpIslandsDisplay(quantityIslands: self.quantityIslands)

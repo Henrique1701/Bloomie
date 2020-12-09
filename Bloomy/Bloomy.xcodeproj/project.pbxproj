@@ -30,6 +30,10 @@
 		896273AB257FF381002FAD99 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896273AA257FF381002FAD99 /* ContentView.swift */; };
 		8984E40B257FF16D002A5A72 /* TabBarDesafiosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8984E40A257FF16D002A5A72 /* TabBarDesafiosViewController.swift */; };
 		89DD872F2570243200DB1C13 /* SeedDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DD872E2570243200DB1C13 /* SeedDataBase.swift */; };
+		BE91BADC257FFF2000CC83D0 /* HealthIsland.sks in Resources */ = {isa = PBXBuildFile; fileRef = BE91BADB257FFF2000CC83D0 /* HealthIsland.sks */; };
+		BE91BB112580163C00CC83D0 /* LeisureIsland.sks in Resources */ = {isa = PBXBuildFile; fileRef = BE91BB102580163C00CC83D0 /* LeisureIsland.sks */; };
+		BE91BB16258016DF00CC83D0 /* LovedsIsland.sks in Resources */ = {isa = PBXBuildFile; fileRef = BE91BB15258016DF00CC83D0 /* LovedsIsland.sks */; };
+		BE91BB1B2580179B00CC83D0 /* MindfulnessIsland.sks in Resources */ = {isa = PBXBuildFile; fileRef = BE91BB1A2580179B00CC83D0 /* MindfulnessIsland.sks */; };
 		BEC461C6255DABD8003C1D1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC461C5255DABD8003C1D1A /* AppDelegate.swift */; };
 		BEC461C8255DABD8003C1D1A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC461C7255DABD8003C1D1A /* SceneDelegate.swift */; };
 		BEC461CA255DABD8003C1D1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC461C9255DABD8003C1D1A /* ViewController.swift */; };
@@ -50,6 +54,8 @@
 		D61D03E825701C2F005BA187 /* Canela.ttc in Resources */ = {isa = PBXBuildFile; fileRef = D61D03D925701B8C005BA187 /* Canela.ttc */; };
 		D64B4F6325756F2000D818EB /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D64B4F6225756F2000D818EB /* Onboarding.storyboard */; };
 		D64B4F812575923B00D818EB /* ComoSeChamaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64B4F802575923B00D818EB /* ComoSeChamaViewController.swift */; };
+		D6DFCE3B258148AF0013E8D1 /* reward.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D6DFCE3A258148AF0013E8D1 /* reward.mp3 */; };
+		D6DFCE472581500E0013E8D1 /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D6DFCE462581500E0013E8D1 /* background.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +107,10 @@
 		910E7EF4AA3E30A07B9A2743 /* Pods-Bloomy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bloomy.release.xcconfig"; path = "Target Support Files/Pods-Bloomy/Pods-Bloomy.release.xcconfig"; sourceTree = "<group>"; };
 		94E49591F99200B6D647E55B /* Pods_BloomyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BloomyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25879A5F40F669187A291F0 /* Pods-BloomyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BloomyTests.debug.xcconfig"; path = "Target Support Files/Pods-BloomyTests/Pods-BloomyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BE91BADB257FFF2000CC83D0 /* HealthIsland.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = HealthIsland.sks; sourceTree = "<group>"; };
+		BE91BB102580163C00CC83D0 /* LeisureIsland.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = LeisureIsland.sks; sourceTree = "<group>"; };
+		BE91BB15258016DF00CC83D0 /* LovedsIsland.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = LovedsIsland.sks; sourceTree = "<group>"; };
+		BE91BB1A2580179B00CC83D0 /* MindfulnessIsland.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MindfulnessIsland.sks; sourceTree = "<group>"; };
 		BEC461C2255DABD8003C1D1A /* Bloomy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bloomy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEC461C5255DABD8003C1D1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEC461C7255DABD8003C1D1A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +137,8 @@
 		D61D03D925701B8C005BA187 /* Canela.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Canela.ttc; sourceTree = "<group>"; };
 		D64B4F6225756F2000D818EB /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		D64B4F802575923B00D818EB /* ComoSeChamaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComoSeChamaViewController.swift; sourceTree = "<group>"; };
+		D6DFCE3A258148AF0013E8D1 /* reward.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = reward.mp3; sourceTree = "<group>"; };
+		D6DFCE462581500E0013E8D1 /* background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background.mp3; sourceTree = "<group>"; };
 		F1EA232AA2FD2DE50426D9E6 /* Pods-BloomyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BloomyTests.release.xcconfig"; path = "Target Support Files/Pods-BloomyTests/Pods-BloomyTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -206,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				BEC461D1255DABDA003C1D1A /* Assets.xcassets */,
+				D6DFCE392581489C0013E8D1 /* Sounds */,
 				D61D03D825701B6F005BA187 /* Fonts */,
 			);
 			path = Settings;
@@ -314,6 +327,10 @@
 				89249D54257ED12E002747A3 /* PopUps.storyboard */,
 				D64B4F6225756F2000D818EB /* Onboarding.storyboard */,
 				896273AA257FF381002FAD99 /* ContentView.swift */,
+				BE91BADB257FFF2000CC83D0 /* HealthIsland.sks */,
+				BE91BB102580163C00CC83D0 /* LeisureIsland.sks */,
+				BE91BB15258016DF00CC83D0 /* LovedsIsland.sks */,
+				BE91BB1A2580179B00CC83D0 /* MindfulnessIsland.sks */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -348,6 +365,15 @@
 				D61D03D925701B8C005BA187 /* Canela.ttc */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		D6DFCE392581489C0013E8D1 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				D6DFCE3A258148AF0013E8D1 /* reward.mp3 */,
+				D6DFCE462581500E0013E8D1 /* background.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -458,13 +484,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEC461D5255DABDA003C1D1A /* LaunchScreen.storyboard in Resources */,
+				D6DFCE472581500E0013E8D1 /* background.mp3 in Resources */,
 				D61D03E825701C2F005BA187 /* Canela.ttc in Resources */,
 				89249D55257ED12E002747A3 /* PopUps.storyboard in Resources */,
 				BED0527C2576B8940035EB18 /* Islands.storyboard in Resources */,
 				7DB41BFA257AC31900BBFAEA /* Poppins-Regular.ttf in Resources */,
+				D6DFCE3B258148AF0013E8D1 /* reward.mp3 in Resources */,
 				7DB41BFB257AC31900BBFAEA /* Poppins-SemiBold.ttf in Resources */,
+				BE91BB1B2580179B00CC83D0 /* MindfulnessIsland.sks in Resources */,
+				BE91BADC257FFF2000CC83D0 /* HealthIsland.sks in Resources */,
+				BE91BB16258016DF00CC83D0 /* LovedsIsland.sks in Resources */,
 				12D13CE1256C2BD60013E511 /* TelaPerfil.storyboard in Resources */,
 				BEC461D2255DABDA003C1D1A /* Assets.xcassets in Resources */,
+				BE91BB112580163C00CC83D0 /* LeisureIsland.sks in Resources */,
 				D64B4F6325756F2000D818EB /* Onboarding.storyboard in Resources */,
 				7DB41C00257AC36300BBFAEA /* Poppins-Bold.ttf in Resources */,
 				BED0527C2576B8940035EB18 /* Islands.storyboard in Resources */,

@@ -79,6 +79,17 @@ struct IslandManager {
         return dailyChallenge
     }
     
+    public func getRewards(fromIsland name: String) -> [Reward]? {
+        guard let island = self.getIsland(withName: name) else {fatalError("Could not find \(name) Island")}
+        
+        if let rewards = island.islandToReward {
+            let rewardsArray = rewards.allObjects as? [Reward] ?? []
+            return rewardsArray
+        }
+        
+        return nil
+    }
+    
     // MARK: Update Island
     
     public func updateDailyChallenge(forIsland name: String, toChallenge challenge: Challenge) -> Bool {
