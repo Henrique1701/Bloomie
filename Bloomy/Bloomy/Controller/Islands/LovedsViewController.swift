@@ -15,7 +15,7 @@ class LovedsViewController: UIViewController {
     let island = IslandManager.shared.getIsland(withName: IslandsNames.loveds.rawValue)!
     var challengeObserver: NSObjectProtocol?
     var doneObserver: NSObjectProtocol?
-    let scene = SKScene(fileNamed: "HealthIsland")
+    let scene = SKScene(fileNamed: "LovedsIsland")
     
     
     override func viewDidLoad() {
@@ -26,14 +26,10 @@ class LovedsViewController: UIViewController {
         self.view.addSubview(islandView)
         
         if let view = islandView as SKView? {
-            /*
             scene!.scaleMode = .aspectFill
-            let node = scene!.childNode(withName: "AA1") as? SKSpriteNode
-            node?.alpha = 0.5
+            showRewards()
             view.presentScene(scene)
-            
             view.ignoresSiblingOrder = true
-            */
         }
 
         chooseButtonToShow()
@@ -143,7 +139,11 @@ class LovedsViewController: UIViewController {
             popup.rewardImage = UIImage(named: "\(availableReward.id as! String)")
             popup.modalTransitionStyle = .crossDissolve
             popup.modalPresentationStyle = .overCurrentContext
+            let node = self.scene!.childNode(withName: "\(availableReward.id!)") as? SKSpriteNode
             self.present(popup, animated: true)
+            node?.alpha = 1
+            availableReward.isShown = true
+            RewardManager.shared.saveContext()
         } else {
             fatalError("There is no available reward")
         }
@@ -166,5 +166,11 @@ class LovedsViewController: UIViewController {
         return rewards[randomIndex]
     }
 
-    
+    func showRewards() {
+        let rewards = IslandManager.shared.getRewards(fromIsland: island.name!)!
+        for reward in rewards where reward.isShown {
+            let node = self.scene!.childNode(withName: "\(reward.id!)") as? SKSpriteNode
+            node?.alpha = 1
+        }
+    }
 }
