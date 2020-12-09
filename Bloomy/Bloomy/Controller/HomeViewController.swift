@@ -207,9 +207,10 @@ class HomeViewController: UIViewController {
             print("Nenhuma ilha foi selecionada")
             return
         }
+        let organizedIslands = self.organizeIslands(islands: islands)
         for islandPos in 0..<3 {
             if islandPos%2 == 0 {
-                switch islands[islandPos].name {
+                switch organizedIslands[islandPos].name {
                 case "Saúde":
                     healthStackView.isHidden = false
                     healthRightButton.isHidden = false
@@ -236,7 +237,7 @@ class HomeViewController: UIViewController {
                     lovedsLeftButton.alpha = 0
                 }
             } else {
-                switch islands[islandPos].name {
+                switch organizedIslands[islandPos].name {
                 case "Saúde":
                     healthStackView.isHidden = false
                     healthRightButton.isHidden = false
@@ -264,6 +265,24 @@ class HomeViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    func organizeIslands(islands: [Island]) -> [Island] {
+        var organizedIslands: [Island] = []
+        let islandsNames = [
+            IslandsNames.health.rawValue,
+            IslandsNames.leisure.rawValue,
+            IslandsNames.mindfulness.rawValue,
+            IslandsNames.loveds.rawValue
+        ]
+        
+        for islandName in islandsNames {
+            if let island = islandsManager.getIsland(withName: islandName) {
+                organizedIslands.append(island)
+            }
+        }
+        
+        return organizedIslands
     }
     
     func setUpDisplayFourIsland() {
