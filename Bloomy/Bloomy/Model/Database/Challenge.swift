@@ -135,7 +135,7 @@ struct ChallengeManager {
     }
     
     // MARK: Auxiliar
-    private func saveContext() -> Bool {
+    public func saveContext() -> Bool {
         do {
             try coreDataContext.save()
             return true
