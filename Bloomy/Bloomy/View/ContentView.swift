@@ -11,6 +11,9 @@ struct ContentView: View {
     var body: some View {
         
         Home()
+            .onAppear() {
+                challenges = getAcceptedChallenges()
+            }
     }
 }
 
@@ -23,7 +26,7 @@ struct ContentView_Previews: PreviewProvider {
 struct Home : View {
     
     @State var menu = 0
-    @State var page = 0
+    @State var page = 1
     
     var body: some View {
         
@@ -52,16 +55,19 @@ struct Home : View {
 struct List : View {
     
     @Binding var page : Int
-   // @State var challenges: [Challenge] = []
+    @State var acceptedChallenges = challenges
     var body: some View {
         
         HStack(spacing: 0) {
         
-            ForEach(0..<challenges.count, id: \.self) { index in
+            ForEach(0..<acceptedChallenges.count, id: \.self) { index in
                 // Mistakenly Used Geomtry Reader...
                 
-                Card(index: index, page: self.$page, width: UIScreen.main.bounds.width, challenge: challenges[index])
+                Card(index: index, page: self.$page, width: UIScreen.main.bounds.width, challenge: acceptedChallenges[index])
             }
+        }
+        .onAppear() {
+            acceptedChallenges = getAcceptedChallenges()
         }
     }
 }
@@ -92,7 +98,10 @@ struct Card : View {
                     .padding(.horizontal, 30.0)
                     .padding(.top, -250)
 
-                Button(action: {}) {
+                Button(action: {
+                    self.challenge.done = true
+                    ChallengeManager.shared.saveContext()
+                }) {
                     Text("concluir desafio")
                         .font(.custom("Poppins-Bold", size: 18))
                         .foregroundColor(.black)
