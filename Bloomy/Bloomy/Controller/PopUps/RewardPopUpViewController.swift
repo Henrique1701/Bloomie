@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import AVFoundation
 
 class RewardPopUpViewController: UIViewController {
     var rewardImage: UIImage?
+    var audioPlayer: AVAudioPlayer?
     
     @IBOutlet var contentView: UIView!
     @IBOutlet var rewardImageView: UIImageView!
@@ -18,6 +20,7 @@ class RewardPopUpViewController: UIViewController {
         super.viewDidLoad()
 
         setupStyle()
+        playRewardSound()
     }
     
     @IBAction func close(_ sender: Any) {
@@ -33,6 +36,17 @@ class RewardPopUpViewController: UIViewController {
         self.contentView.layer.cornerRadius = 35
         if rewardImage != nil {
             self.rewardImageView.image = rewardImage
+        }
+    }
+    
+    func playRewardSound(){
+        let pathToSound = Bundle.main.path(forResource: "reward", ofType: "mp3")!
+        let urlReward = URL(fileURLWithPath: pathToSound)
+        do{
+            audioPlayer = try AVAudioPlayer(contentsOf: urlReward)
+            audioPlayer?.play()
+        } catch let error as NSError {
+            print(error.description)
         }
     }
 }
