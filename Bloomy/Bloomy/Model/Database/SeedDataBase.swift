@@ -12,9 +12,6 @@ struct SeedDataBase {
     static let shared: SeedDataBase = SeedDataBase()
     
     func seed() {
-        if(RewardManager.shared.getRewards() == nil) {
-            self.createRewards()
-        }
     }
     
     func createIslands() {
@@ -34,17 +31,6 @@ struct SeedDataBase {
     }
     
     func createRewards() {
-        _ = RewardManager.shared.newReward(withId: "R1", withImage: UIImage())
-        _ = RewardManager.shared.newReward(withId: "R2", withImage: UIImage())
-        _ = RewardManager.shared.newReward(withId: "R3", withImage: UIImage())
-        _ = RewardManager.shared.newReward(withId: "R4", withImage: UIImage())
-        _ = RewardManager.shared.newReward(withId: "R5", withImage: UIImage())
-        
-        // TODO: Erro ao não escolher as quatro ilhas
-        RewardManager.shared.setIsland(toReward: "R1", island: IslandManager.shared.getIsland(withName: "Atenção Plena")!)
-        RewardManager.shared.setIsland(toReward: "R2", island: IslandManager.shared.getIsland(withName: "Saúde")!)
-        RewardManager.shared.setIsland(toReward: "R3", island: IslandManager.shared.getIsland(withName: "Lazer")!)
-        RewardManager.shared.setIsland(toReward: "R4", island: IslandManager.shared.getIsland(withName: "Pessoas Queridas")!)
     }
     
     func createUser() {
@@ -57,10 +43,22 @@ struct SeedDataBase {
             if let mindfulnessChallenge = ChallengeManager.shared.createChallenge(withID: challenge["ID"]!
                                                                                   , withSummary: challenge["Summary"]!) {
                 mindfulnessChallenge.challengeToIsland = IslandManager.shared.getIsland(withName: "Atenção Plena")
+                _ = IslandManager.shared.saveContext()
             } else {
                 print("Challenge \(challenge["ID"] ?? "") da Ilha Atenção Plena não foi criado")
             }
             
+        }
+    }
+    
+    func createMindfulnessRewards() {
+        let mindfulnessRewards = Rewards().mindfulnessRewards
+        for reward in mindfulnessRewards {
+            if let mindfulnessReward = RewardManager.shared.newReward(withId: reward["ID"]!) {
+                mindfulnessReward.rewardToIsland = IslandManager.shared.getIsland(withName: IslandsNames.mindfulness.rawValue)
+            } else {
+                print("Reward \(reward["ID"] ?? "") da Ilha Atenção Plena não foi criado")
+            }
         }
     }
     
@@ -70,11 +68,24 @@ struct SeedDataBase {
             if let leisureChallenge = ChallengeManager.shared.createChallenge(withID: challenge["ID"]!
                                                                               , withSummary: challenge["Summary"]!) {
                 leisureChallenge.challengeToIsland = IslandManager.shared.getIsland(withName: "Lazer")
+                _ = IslandManager.shared.saveContext()
             } else {
                 print("Challenge \(challenge["ID"] ?? "") da Ilha Lazer não foi criado")
             }
         }
     }
+    
+    func createLeisureRewards() {
+        let leisureRewards = Rewards().leisureRewards
+        for reward in leisureRewards {
+            if let leisureReward = RewardManager.shared.newReward(withId: reward["ID"]!) {
+                leisureReward.rewardToIsland = IslandManager.shared.getIsland(withName: IslandsNames.leisure.rawValue)
+            } else {
+                print("Reward \(reward["ID"] ?? "") da Ilha Lazer não foi criado")
+            }
+        }
+    }
+
     
     func createLovedsChallenges() {
         let lovedsChallenges = Challenges().lovedsChallenges
@@ -82,8 +93,20 @@ struct SeedDataBase {
             if let lovedsChallenge = ChallengeManager.shared.createChallenge(withID: challenge["ID"]!
                                                                              , withSummary: challenge["Summary"]!) {
                 lovedsChallenge.challengeToIsland = IslandManager.shared.getIsland(withName: "Pessoas Queridas")
+                _ = IslandManager.shared.saveContext()
             } else {
                 print("Challenge \(challenge["ID"] ?? "") da Ilha Pessoas Queridas não foi criado")
+            }
+        }
+    }
+    
+    func createLovedsRewards() {
+        let lovedsRewards = Rewards().lovedsRewards
+        for reward in lovedsRewards {
+            if let lovedsReward = RewardManager.shared.newReward(withId: reward["ID"]!) {
+                lovedsReward.rewardToIsland = IslandManager.shared.getIsland(withName: IslandsNames.loveds.rawValue)
+            } else {
+                print("Reward \(reward["ID"] ?? "") da Ilha Pessoas Queridas não foi criado")
             }
         }
     }
@@ -94,8 +117,20 @@ struct SeedDataBase {
             if let healthChallenge = ChallengeManager.shared.createChallenge(withID: challenge["ID"]!
                                                                              , withSummary: challenge["Summary"]!) {
                 healthChallenge.challengeToIsland = IslandManager.shared.getIsland(withName: "Saúde")
+                _ = IslandManager.shared.saveContext()
             } else {
                 print("Challenge \(challenge["ID"] ?? "") da Ilha Saúde não foi criado")
+            }
+        }
+    }
+    
+    func createHealthRewards() {
+        let healthRewards = Rewards().healthRewards
+        for reward in healthRewards {
+            if let healthReward = RewardManager.shared.newReward(withId: reward["ID"]!) {
+                healthReward.rewardToIsland = IslandManager.shared.getIsland(withName: IslandsNames.health.rawValue)
+            } else {
+                print("Reward \(reward["ID"] ?? "") da Ilha Saúde não foi criado")
             }
         }
     }
@@ -204,4 +239,92 @@ struct Challenges {
         ["ID": "H15", "Summary": "Comemore uma pequena vitória sua hoje"],
         ["ID": "H16", "Summary": "Tente fazer uma nova receita saudável  que você está querendo experimentar"]
     ]
+}
+
+struct Rewards {
+    let mindfulnessRewards = [
+        ["ID": "AH2"],
+        ["ID": "AO3"],
+        ["ID": "AM4"],
+        ["ID": "AG3"],
+        ["ID": "AN2"],
+        ["ID": "AD3"],
+        ["ID": "AL2"],
+        ["ID": "AN1"],
+        ["ID": "AB3"],
+        ["ID": "AJ1"]
+    ]
+    
+    let lovedsRewards = [
+        ["ID": "AI4"],
+        ["ID": "AF1"],
+        ["ID": "AF4"],
+        ["ID": "AB4"],
+        ["ID": "AG3"],
+        ["ID": "AG5"],
+        ["ID": "AK5"],
+        ["ID": "AN1"],
+        ["ID": "AC1"],
+        ["ID": "AA2"],
+        ["ID": "AC11"],
+        ["ID": "AM1"],
+        ["ID": "AO4"],
+        ["ID": "AE4"],
+        ["ID": "AE5"],
+        ["ID": "AN2"],
+        ["ID": "AF2"],
+        ["ID": "AF3"],
+        ["ID": "AN3"],
+        ["ID": "AH5"]
+    ]
+    
+    let leisureRewards = [
+        ["ID": "AI2"],
+        ["ID": "AD1"],
+        ["ID": "AN2"],
+        ["ID": "AO2"],
+        ["ID": "AM2"],
+        ["ID": "AE1"],
+        ["ID": "AM5"],
+        ["ID": "AE4"],
+        ["ID": "AA3"],
+        ["ID": "AI6"],
+        ["ID": "AA2"],
+        ["ID": "AK2"],
+        ["ID": "AH1"],
+        ["ID": "AA2"],
+        ["ID": "AB4"],
+        ["ID": "AN1"],
+        ["ID": "AG3"],
+        ["ID": "AC4"],
+        ["ID": "AC3"],
+        ["ID": "AN3"],
+        ["ID": "AJ6"],
+        ["ID": "AC31"],
+        ["ID": "AK6"],
+        ["ID": "AD4"]
+    ]
+    
+    let healthRewards = [
+        ["ID": "AB1"],
+        ["ID": "AG4"],
+        ["ID": "AI1"],
+        ["ID": "AN1"],
+        ["ID": "AJ6"],
+        ["ID": "AN3"],
+        ["ID": "AK1"],
+        ["ID": "AD1"],
+        ["ID": "AG1"],
+        ["ID": "AG2"],
+        ["ID": "AK4"],
+        ["ID": "AN2"],
+        ["ID": "A01"],
+        ["ID": "4M4"],
+        ["ID": "AE5"],
+        ["ID": "AE4"],
+        ["ID": "AH4"],
+        ["ID": "AA4"],
+        ["ID": "AG3"]
+    ]
+    
 }

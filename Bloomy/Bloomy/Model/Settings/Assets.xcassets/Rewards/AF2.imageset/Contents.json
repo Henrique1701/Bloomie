@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "AI.png",
+      "filename" : "AF2.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "AI@2x.png",
+      "filename" : "AF2@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "AI@3x.png",
+      "filename" : "AF2@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

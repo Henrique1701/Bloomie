@@ -28,6 +28,10 @@
 		8928F54B25670DD10089BE0E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8928F54A25670DD10089BE0E /* User.swift */; };
 		8928F56325670EEE0089BE0E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8928F56225670EEE0089BE0E /* Constants.swift */; };
 		89DD872F2570243200DB1C13 /* SeedDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DD872E2570243200DB1C13 /* SeedDataBase.swift */; };
+		BE91BADC257FFF2000CC83D0 /* HealthIsland.sks in Resources */ = {isa = PBXBuildFile; fileRef = BE91BADB257FFF2000CC83D0 /* HealthIsland.sks */; };
+		BE91BB112580163C00CC83D0 /* LeisureIsland.sks in Resources */ = {isa = PBXBuildFile; fileRef = BE91BB102580163C00CC83D0 /* LeisureIsland.sks */; };
+		BE91BB16258016DF00CC83D0 /* LovedsIsland.sks in Resources */ = {isa = PBXBuildFile; fileRef = BE91BB15258016DF00CC83D0 /* LovedsIsland.sks */; };
+		BE91BB1B2580179B00CC83D0 /* MindfulnessIsland.sks in Resources */ = {isa = PBXBuildFile; fileRef = BE91BB1A2580179B00CC83D0 /* MindfulnessIsland.sks */; };
 		BEC461C6255DABD8003C1D1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC461C5255DABD8003C1D1A /* AppDelegate.swift */; };
 		BEC461C8255DABD8003C1D1A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC461C7255DABD8003C1D1A /* SceneDelegate.swift */; };
 		BEC461CA255DABD8003C1D1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC461C9255DABD8003C1D1A /* ViewController.swift */; };
@@ -97,6 +101,10 @@
 		910E7EF4AA3E30A07B9A2743 /* Pods-Bloomy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bloomy.release.xcconfig"; path = "Target Support Files/Pods-Bloomy/Pods-Bloomy.release.xcconfig"; sourceTree = "<group>"; };
 		94E49591F99200B6D647E55B /* Pods_BloomyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BloomyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25879A5F40F669187A291F0 /* Pods-BloomyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BloomyTests.debug.xcconfig"; path = "Target Support Files/Pods-BloomyTests/Pods-BloomyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BE91BADB257FFF2000CC83D0 /* HealthIsland.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = HealthIsland.sks; sourceTree = "<group>"; };
+		BE91BB102580163C00CC83D0 /* LeisureIsland.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = LeisureIsland.sks; sourceTree = "<group>"; };
+		BE91BB15258016DF00CC83D0 /* LovedsIsland.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = LovedsIsland.sks; sourceTree = "<group>"; };
+		BE91BB1A2580179B00CC83D0 /* MindfulnessIsland.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MindfulnessIsland.sks; sourceTree = "<group>"; };
 		BEC461C2255DABD8003C1D1A /* Bloomy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bloomy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEC461C5255DABD8003C1D1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEC461C7255DABD8003C1D1A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -309,6 +317,10 @@
 				BED0527B2576B8940035EB18 /* Islands.storyboard */,
 				89249D54257ED12E002747A3 /* PopUps.storyboard */,
 				D64B4F6225756F2000D818EB /* Onboarding.storyboard */,
+				BE91BADB257FFF2000CC83D0 /* HealthIsland.sks */,
+				BE91BB102580163C00CC83D0 /* LeisureIsland.sks */,
+				BE91BB15258016DF00CC83D0 /* LovedsIsland.sks */,
+				BE91BB1A2580179B00CC83D0 /* MindfulnessIsland.sks */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -457,8 +469,12 @@
 				BED0527C2576B8940035EB18 /* Islands.storyboard in Resources */,
 				7DB41BFA257AC31900BBFAEA /* Poppins-Regular.ttf in Resources */,
 				7DB41BFB257AC31900BBFAEA /* Poppins-SemiBold.ttf in Resources */,
+				BE91BB1B2580179B00CC83D0 /* MindfulnessIsland.sks in Resources */,
+				BE91BADC257FFF2000CC83D0 /* HealthIsland.sks in Resources */,
+				BE91BB16258016DF00CC83D0 /* LovedsIsland.sks in Resources */,
 				12D13CE1256C2BD60013E511 /* TelaPerfil.storyboard in Resources */,
 				BEC461D2255DABDA003C1D1A /* Assets.xcassets in Resources */,
+				BE91BB112580163C00CC83D0 /* LeisureIsland.sks in Resources */,
 				D64B4F6325756F2000D818EB /* Onboarding.storyboard in Resources */,
 				7DB41C00257AC36300BBFAEA /* Poppins-Bold.ttf in Resources */,
 				BED0527C2576B8940035EB18 /* Islands.storyboard in Resources */,
