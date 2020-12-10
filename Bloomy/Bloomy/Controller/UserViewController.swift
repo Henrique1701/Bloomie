@@ -14,6 +14,7 @@ class UserViewController: UIViewController {
         super.viewDidLoad()
 
         self.userNameLabel.text = UserManager.shared.getUserName()
+        self.setupNavigationController()
     }
     
     func setupNavigationController() {
