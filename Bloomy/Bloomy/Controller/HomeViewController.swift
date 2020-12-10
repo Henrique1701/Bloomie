@@ -208,61 +208,11 @@ class HomeViewController: UIViewController {
             return
         }
         let organizedIslands = self.organizeIslands(islands: islands)
-        for islandPos in 0..<3 {
-            if islandPos%2 == 0 {
-                switch organizedIslands[islandPos].name {
-                case "Saúde":
-                    healthStackView.isHidden = false
-                    healthRightButton.isHidden = false
-                    healthLeftButton.isHidden = false
-                    healthLeftButton.isEnabled = false
-                    healthLeftButton.alpha = 0
-                case "Lazer":
-                    leisureStackView.isHidden = false
-                    leisureRightButton.isHidden = false
-                    leisureLeftButton.isHidden = false
-                    leisureLeftButton.isEnabled = false
-                    leisureLeftButton.alpha = 0
-                case "Atenção Plena":
-                    mindfulnessStackView.isHidden = false
-                    mindfulnessRightButton.isHidden = false
-                    mindfulnessLeftButton.isHidden = false
-                    mindfulnessLeftButton.isEnabled = false
-                    mindfulnessLeftButton.alpha = 0
-                default:
-                    lovedsStackView.isHidden = false
-                    lovedsRightButton.isHidden = false
-                    lovedsLeftButton.isHidden = false
-                    lovedsLeftButton.isEnabled = false
-                    lovedsLeftButton.alpha = 0
-                }
+        for index in 0..<3 {
+            if index%2 == 0 {
+                self.showIslandLeft(islands: organizedIslands, index: index)
             } else {
-                switch organizedIslands[islandPos].name {
-                case "Saúde":
-                    healthStackView.isHidden = false
-                    healthRightButton.isHidden = false
-                    healthLeftButton.isHidden = false
-                    healthRightButton.isEnabled = false
-                    healthRightButton.alpha = 0
-                case "Lazer":
-                    leisureStackView.isHidden = false
-                    leisureRightButton.isHidden = false
-                    leisureLeftButton.isHidden = false
-                    leisureRightButton.isEnabled = false
-                    leisureRightButton.alpha = 0
-                case "Atenção Plena":
-                    mindfulnessStackView.isHidden = false
-                    mindfulnessRightButton.isHidden = false
-                    mindfulnessLeftButton.isHidden = false
-                    mindfulnessRightButton.isEnabled = false
-                    mindfulnessRightButton.alpha = 0
-                default:
-                    lovedsStackView.isHidden = false
-                    lovedsRightButton.isHidden = false
-                    lovedsLeftButton.isHidden = false
-                    lovedsRightButton.isEnabled = false
-                    lovedsRightButton.alpha = 0
-                }
+                self.showIslandRight(islands: organizedIslands, index: index)
             }
         }
     }
@@ -285,19 +235,77 @@ class HomeViewController: UIViewController {
         return organizedIslands
     }
     
+    func showIslandLeft(islands: [Island], index: Int) {
+        switch islands[index].name {
+        case "Saúde":
+            self.healthStackView.isHidden = false
+            self.healthRightButton.isHidden = false
+            self.healthLeftButton.isHidden = false
+            self.healthLeftButton.isEnabled = false
+            self.healthLeftButton.alpha = 0
+        case "Lazer":
+            self.leisureStackView.isHidden = false
+            self.leisureRightButton.isHidden = false
+            self.leisureLeftButton.isHidden = false
+            self.leisureLeftButton.isEnabled = false
+            self.leisureLeftButton.alpha = 0
+        case "Atenção Plena":
+            self.mindfulnessStackView.isHidden = false
+            self.mindfulnessRightButton.isHidden = false
+            self.mindfulnessLeftButton.isHidden = false
+            self.mindfulnessLeftButton.isEnabled = false
+            self.mindfulnessLeftButton.alpha = 0
+        default:
+            self.lovedsStackView.isHidden = false
+            self.lovedsRightButton.isHidden = false
+            self.lovedsLeftButton.isHidden = false
+            self.lovedsLeftButton.isEnabled = false
+            self.lovedsLeftButton.alpha = 0
+        }
+    }
+    
+    func showIslandRight(islands: [Island], index: Int) {
+        switch islands[index].name {
+        case "Saúde":
+            self.healthStackView.isHidden = false
+            self.healthRightButton.isHidden = false
+            self.healthLeftButton.isHidden = false
+            self.healthRightButton.isEnabled = false
+            self.healthRightButton.alpha = 0
+        case "Lazer":
+            self.leisureStackView.isHidden = false
+            self.leisureRightButton.isHidden = false
+            self.leisureLeftButton.isHidden = false
+            self.leisureRightButton.isEnabled = false
+            self.leisureRightButton.alpha = 0
+        case "Atenção Plena":
+            self.mindfulnessStackView.isHidden = false
+            self.mindfulnessRightButton.isHidden = false
+            self.mindfulnessLeftButton.isHidden = false
+            self.mindfulnessRightButton.isEnabled = false
+            self.mindfulnessRightButton.alpha = 0
+        default:
+            self.lovedsStackView.isHidden = false
+            self.lovedsRightButton.isHidden = false
+            self.lovedsLeftButton.isHidden = false
+            self.lovedsRightButton.isEnabled = false
+            self.lovedsRightButton.alpha = 0
+        }
+    }
+    
     func setUpDisplayFourIsland() {
-        healthStackView.isHidden = false
-        healthLeftButton.isHidden = false
-        healthRightButton.isHidden = false
-        leisureStackView.isHidden = false
-        leisureLeftButton.isHidden = false
-        leisureRightButton.isHidden = false
-        mindfulnessStackView.isHidden = false
-        mindfulnessLeftButton.isHidden = false
-        mindfulnessRightButton.isHidden = false
-        lovedsStackView.isHidden = false
-        lovedsLeftButton.isHidden = false
-        lovedsRightButton.isHidden = false
+        self.healthStackView.isHidden = false
+        self.healthLeftButton.isHidden = false
+        self.healthRightButton.isHidden = false
+        self.leisureStackView.isHidden = false
+        self.leisureLeftButton.isHidden = false
+        self.leisureRightButton.isHidden = false
+        self.mindfulnessStackView.isHidden = false
+        self.mindfulnessLeftButton.isHidden = false
+        self.mindfulnessRightButton.isHidden = false
+        self.lovedsStackView.isHidden = false
+        self.lovedsLeftButton.isHidden = false
+        self.lovedsRightButton.isHidden = false
         
         self.lovedsRightButton.isEnabled = false
         self.lovedsRightButton.alpha = 0
