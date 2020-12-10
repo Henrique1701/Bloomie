@@ -9,7 +9,6 @@ import UIKit
 import UserNotifications
 
 class NotificationsViewController: UIViewController {
-
     
     @IBOutlet var acceptChallenge: UISwitch!
     @IBOutlet var finishChallenge: UISwitch!
