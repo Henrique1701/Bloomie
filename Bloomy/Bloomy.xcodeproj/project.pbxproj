@@ -33,6 +33,7 @@
 		89566A702581B4DE00784DF3 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89566A6F2581B4DE00784DF3 /* UserViewController.swift */; };
 		896273AB257FF381002FAD99 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896273AA257FF381002FAD99 /* ContentView.swift */; };
 		8984E40B257FF16D002A5A72 /* TabBarDesafiosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8984E40A257FF16D002A5A72 /* TabBarDesafiosViewController.swift */; };
+		89AA1D4925825E0200137F50 /* DesafiosVazioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AA1D4825825E0200137F50 /* DesafiosVazioView.swift */; };
 		89DD872F2570243200DB1C13 /* SeedDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DD872E2570243200DB1C13 /* SeedDataBase.swift */; };
 		89ED4BB825824CCD00A18B29 /* SiriShortcutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89ED4BB725824CCD00A18B29 /* SiriShortcutsViewController.swift */; };
 		BE91BADC257FFF2000CC83D0 /* HealthIsland.sks in Resources */ = {isa = PBXBuildFile; fileRef = BE91BADB257FFF2000CC83D0 /* HealthIsland.sks */; };
@@ -113,6 +114,7 @@
 		89566A6F2581B4DE00784DF3 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		896273AA257FF381002FAD99 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8984E40A257FF16D002A5A72 /* TabBarDesafiosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarDesafiosViewController.swift; sourceTree = "<group>"; };
+		89AA1D4825825E0200137F50 /* DesafiosVazioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafiosVazioView.swift; sourceTree = "<group>"; };
 		89DD872E2570243200DB1C13 /* SeedDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeedDataBase.swift; sourceTree = "<group>"; };
 		89ED4BB725824CCD00A18B29 /* SiriShortcutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriShortcutsViewController.swift; sourceTree = "<group>"; };
 		910E7EF4AA3E30A07B9A2743 /* Pods-Bloomy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bloomy.release.xcconfig"; path = "Target Support Files/Pods-Bloomy/Pods-Bloomy.release.xcconfig"; sourceTree = "<group>"; };
@@ -350,6 +352,7 @@
 				89249D54257ED12E002747A3 /* PopUps.storyboard */,
 				D64B4F6225756F2000D818EB /* Onboarding.storyboard */,
 				896273AA257FF381002FAD99 /* ContentView.swift */,
+				89AA1D4825825E0200137F50 /* DesafiosVazioView.swift */,
 				89ED4BC625824E6800A18B29 /* SKScenes */,
 			);
 			path = View;
@@ -641,6 +644,7 @@
 				89566A702581B4DE00784DF3 /* UserViewController.swift in Sources */,
 				8905E6D7257E65D80015ECAC /* DonePopUpViewController.swift in Sources */,
 				BEC461CA255DABD8003C1D1A /* ViewController.swift in Sources */,
+				89AA1D4925825E0200137F50 /* DesafiosVazioView.swift in Sources */,
 				89566A562581A8FE00784DF3 /* Intents.intentdefinition in Sources */,
 				BEC461D0255DABD8003C1D1A /* Bloomy.xcdatamodeld in Sources */,
 				7D2BEFC625685E48006AFD8C /* Island.swift in Sources */,
