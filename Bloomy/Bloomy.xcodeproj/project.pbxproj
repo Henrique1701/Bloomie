@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		12D13CE1256C2BD60013E511 /* TelaPerfil.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12D13CE0256C2BD60013E511 /* TelaPerfil.storyboard */; };
 		12D13CF0256C2D130013E511 /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D13CEF256C2D130013E511 /* PerfilViewController.swift */; };
 		1834972EEB6285E47FABD0A3 /* Pods_Bloomy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57CA3E352B06C25017BE1E66 /* Pods_Bloomy.framework */; };
 		75C430483B507584722F9116 /* Pods_BloomyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E49591F99200B6D647E55B /* Pods_BloomyTests.framework */; };
@@ -27,6 +26,11 @@
 		89249D55257ED12E002747A3 /* PopUps.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89249D54257ED12E002747A3 /* PopUps.storyboard */; };
 		8928F54B25670DD10089BE0E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8928F54A25670DD10089BE0E /* User.swift */; };
 		8928F56325670EEE0089BE0E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8928F56225670EEE0089BE0E /* Constants.swift */; };
+		89566A562581A8FE00784DF3 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 89566A552581A8FE00784DF3 /* Intents.intentdefinition */; };
+		89566A5B2581A90B00784DF3 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89566A5A2581A90B00784DF3 /* NotificationsViewController.swift */; };
+		89566A632581AADA00784DF3 /* TelaPerfil.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89566A622581AADA00784DF3 /* TelaPerfil.storyboard */; };
+		89566A682581B27F00784DF3 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89566A672581B27F00784DF3 /* SettingsTableViewController.swift */; };
+		89566A702581B4DE00784DF3 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89566A6F2581B4DE00784DF3 /* UserViewController.swift */; };
 		896273AB257FF381002FAD99 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896273AA257FF381002FAD99 /* ContentView.swift */; };
 		8984E40B257FF16D002A5A72 /* TabBarDesafiosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8984E40A257FF16D002A5A72 /* TabBarDesafiosViewController.swift */; };
 		89DD872F2570243200DB1C13 /* SeedDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DD872E2570243200DB1C13 /* SeedDataBase.swift */; };
@@ -76,7 +80,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		12D13CE0256C2BD60013E511 /* TelaPerfil.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TelaPerfil.storyboard; sourceTree = "<group>"; };
 		12D13CEF256C2D130013E511 /* PerfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilViewController.swift; sourceTree = "<group>"; };
 		31B686F7D2FE3B59608E26C9 /* Pods-Bloomy-BloomyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bloomy-BloomyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Bloomy-BloomyUITests/Pods-Bloomy-BloomyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		33CC4FDD39B2F278DD2B4375 /* Pods_Bloomy_BloomyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bloomy_BloomyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +104,12 @@
 		89249D54257ED12E002747A3 /* PopUps.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PopUps.storyboard; sourceTree = "<group>"; };
 		8928F54A25670DD10089BE0E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8928F56225670EEE0089BE0E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		89566A4C2581A85400784DF3 /* Bloomy.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; name = Bloomy.entitlements; path = ../../../../Downloads/Bloomy/Bloomy/Bloomy.entitlements; sourceTree = "<group>"; };
+		89566A552581A8FE00784DF3 /* Intents.intentdefinition */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
+		89566A5A2581A90B00784DF3 /* NotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
+		89566A622581AADA00784DF3 /* TelaPerfil.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TelaPerfil.storyboard; sourceTree = "<group>"; };
+		89566A672581B27F00784DF3 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		89566A6F2581B4DE00784DF3 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		896273AA257FF381002FAD99 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8984E40A257FF16D002A5A72 /* TabBarDesafiosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarDesafiosViewController.swift; sourceTree = "<group>"; };
 		89DD872E2570243200DB1C13 /* SeedDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeedDataBase.swift; sourceTree = "<group>"; };
@@ -280,6 +289,7 @@
 		BEC461C4255DABD8003C1D1A /* Bloomy */ = {
 			isa = PBXGroup;
 			children = (
+				89566A4C2581A85400784DF3 /* Bloomy.entitlements */,
 				BEDD7A402562F3AB005BA4F9 /* Model */,
 				BEDD7A412562F3B8005BA4F9 /* View */,
 				BEDD7A422562F3C3005BA4F9 /* Controller */,
@@ -321,7 +331,7 @@
 			children = (
 				BEC461CB255DABD8003C1D1A /* Main.storyboard */,
 				BEC461D3255DABDA003C1D1A /* LaunchScreen.storyboard */,
-				12D13CE0256C2BD60013E511 /* TelaPerfil.storyboard */,
+				89566A622581AADA00784DF3 /* TelaPerfil.storyboard */,
 				BEDD7A4925630ADF005BA4F9 /* Home.storyboard */,
 				BED0527B2576B8940035EB18 /* Islands.storyboard */,
 				89249D54257ED12E002747A3 /* PopUps.storyboard */,
@@ -347,6 +357,10 @@
 				BEF24E522566C24800D408A8 /* HomeViewController.swift */,
 				D64B4F802575923B00D818EB /* ComoSeChamaViewController.swift */,
 				8984E40A257FF16D002A5A72 /* TabBarDesafiosViewController.swift */,
+				89566A5A2581A90B00784DF3 /* NotificationsViewController.swift */,
+				89566A672581B27F00784DF3 /* SettingsTableViewController.swift */,
+				89566A6F2581B4DE00784DF3 /* UserViewController.swift */,
+				89566A552581A8FE00784DF3 /* Intents.intentdefinition */,
 				89249D3E257E9F2F002747A3 /* PopUps */,
 				895637142577C7B800CA8D3B /* Islands */,
 			);
@@ -484,6 +498,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEC461D5255DABDA003C1D1A /* LaunchScreen.storyboard in Resources */,
+				89566A632581AADA00784DF3 /* TelaPerfil.storyboard in Resources */,
 				D6DFCE472581500E0013E8D1 /* background.mp3 in Resources */,
 				D61D03E825701C2F005BA187 /* Canela.ttc in Resources */,
 				89249D55257ED12E002747A3 /* PopUps.storyboard in Resources */,
@@ -494,7 +509,6 @@
 				BE91BB1B2580179B00CC83D0 /* MindfulnessIsland.sks in Resources */,
 				BE91BADC257FFF2000CC83D0 /* HealthIsland.sks in Resources */,
 				BE91BB16258016DF00CC83D0 /* LovedsIsland.sks in Resources */,
-				12D13CE1256C2BD60013E511 /* TelaPerfil.storyboard in Resources */,
 				BEC461D2255DABDA003C1D1A /* Assets.xcassets in Resources */,
 				BE91BB112580163C00CC83D0 /* LeisureIsland.sks in Resources */,
 				D64B4F6325756F2000D818EB /* Onboarding.storyboard in Resources */,
@@ -613,8 +627,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEF24E532566C24800D408A8 /* HomeViewController.swift in Sources */,
+				89566A702581B4DE00784DF3 /* UserViewController.swift in Sources */,
 				8905E6D7257E65D80015ECAC /* DonePopUpViewController.swift in Sources */,
 				BEC461CA255DABD8003C1D1A /* ViewController.swift in Sources */,
+				89566A562581A8FE00784DF3 /* Intents.intentdefinition in Sources */,
 				BEC461D0255DABD8003C1D1A /* Bloomy.xcdatamodeld in Sources */,
 				7D2BEFC625685E48006AFD8C /* Island.swift in Sources */,
 				7D267544256EDB97000C57A3 /* Reward.swift in Sources */,
@@ -623,6 +639,7 @@
 				7DAE80212575877000B17FB8 /* AreasViewController.swift in Sources */,
 				BEC461C6255DABD8003C1D1A /* AppDelegate.swift in Sources */,
 				896273AB257FF381002FAD99 /* ContentView.swift in Sources */,
+				89566A682581B27F00784DF3 /* SettingsTableViewController.swift in Sources */,
 				BED052902576BB150035EB18 /* MindfulnessViewController.swift in Sources */,
 				8984E40B257FF16D002A5A72 /* TabBarDesafiosViewController.swift in Sources */,
 				BED0529A2576BB340035EB18 /* LovedsViewController.swift in Sources */,
@@ -630,6 +647,7 @@
 				BED0529F2576BB470035EB18 /* HealthViewController.swift in Sources */,
 				12D13CF0256C2D130013E511 /* PerfilViewController.swift in Sources */,
 				8928F54B25670DD10089BE0E /* User.swift in Sources */,
+				89566A5B2581A90B00784DF3 /* NotificationsViewController.swift in Sources */,
 				BEC461C8255DABD8003C1D1A /* SceneDelegate.swift in Sources */,
 				89249D4B257EA004002747A3 /* RewardPopUpViewController.swift in Sources */,
 				7D2BEFE9256D86B0006AFD8C /* User+CoreDataProperties.swift in Sources */,
