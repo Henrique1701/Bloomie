@@ -44,10 +44,10 @@ class RewardPopUpViewController: UIViewController {
         }
     }
     
-    func playRewardSound(){
+    func playRewardSound() {
         let pathToSound = Bundle.main.path(forResource: "reward", ofType: "mp3")!
         let urlReward = URL(fileURLWithPath: pathToSound)
-        do{
+        do {
             rewardAudioPlayer = try AVAudioPlayer(contentsOf: urlReward)
             rewardAudioPlayer?.play()
         } catch let error as NSError {
