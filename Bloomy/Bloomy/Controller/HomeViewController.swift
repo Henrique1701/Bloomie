@@ -48,6 +48,7 @@ class HomeViewController: UIViewController {
             backgroundAudioPlayer = try AVAudioPlayer(contentsOf: urlbg)
             backgroundAudioPlayer?.prepareToPlay()
             backgroundAudioPlayer?.numberOfLoops = -1
+            backgroundAudioPlayer?.volume = 0.5
             backgroundAudioPlayer?.play()
         } catch let error as NSError {
             print(error.description)
