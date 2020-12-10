@@ -139,10 +139,17 @@ class NotificationsViewController: UIViewController {
         center.requestAuthorization(options: [.alert, .sound, .badge]) { (granted, error) in
             
         }
+        
+        self.title = "Notificações"
+        self.setupNavigationController()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(false, animated: false)
+    func setupNavigationController() {
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.topItem?.title = ""
+        self.navigationController?.navigationBar.layoutIfNeeded()
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Poppins-Semibold", size: 18) ?? UIFont()]
     }
     /*
     // MARK: - Navigation
