@@ -44,7 +44,7 @@ class HomeViewController: UIViewController {
         
         let pathToBGSound = Bundle.main.path(forResource: "background", ofType: "mp3")!
         let urlbg = URL(fileURLWithPath: pathToBGSound)
-        do{
+        do {
             backgroundAudioPlayer = try AVAudioPlayer(contentsOf: urlbg)
             backgroundAudioPlayer?.prepareToPlay()
             backgroundAudioPlayer?.numberOfLoops = -1
