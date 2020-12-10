@@ -41,7 +41,7 @@ class NotificationsViewController: UIViewController {
             let request = UNNotificationRequest(identifier: "Alert", content: content, trigger: trigger)
 
             //Register the request
-            center.add(request) { (error) in
+            center.add(request) { _ in
             }
 }
     
@@ -79,7 +79,7 @@ class NotificationsViewController: UIViewController {
             let request = UNNotificationRequest(identifier: "Alert", content: content, trigger: trigger)
 
             //Register the request
-            center.add(request) { (error) in
+            center.add(request) { _ in
             }
 }
     
@@ -115,7 +115,7 @@ class NotificationsViewController: UIViewController {
             let request = UNNotificationRequest(identifier: "Alert", content: content, trigger: trigger)
 
             //Register the request
-            center.add(request) { (error) in
+            center.add(request) { _ in
             }
 }
     
@@ -136,7 +136,7 @@ class NotificationsViewController: UIViewController {
         // Ask permission
         let center = UNUserNotificationCenter.current()
         
-        center.requestAuthorization(options: [.alert, .sound, .badge]) { (granted, error) in
+        center.requestAuthorization(options: [.alert, .sound, .badge]) { (_, _) in
             
         }
         
