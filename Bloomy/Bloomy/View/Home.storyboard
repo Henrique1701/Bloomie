@@ -248,21 +248,15 @@
             </objects>
             <point key="canvasLocation" x="-428" y="601"/>
         </scene>
-        <!--Perfil-->
-        <scene sceneID="qic-Ej-EO3">
+        <!--TelaPerfil-->
+        <scene sceneID="E0m-Nt-rYM">
             <objects>
-                <viewController id="sjo-UK-w73" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Bvz-UY-1Rk">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="8FF-bk-n1x"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Perfil" image="icone_perfil" id="JLT-yq-WG7"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zx7-5I-W9Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="TelaPerfil" id="vYC-Nb-792" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" selectedImage="icone_perfil" id="ITW-nq-jL7"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Okq-Pa-qFC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="630" y="468"/>
+            <point key="canvasLocation" x="828" y="437"/>
         </scene>
         <!--Desafios-->
         <scene sceneID="5Bw-bg-DYB">
@@ -294,7 +288,7 @@
                     <connections>
                         <segue destination="RgJ-mV-1xY" kind="relationship" relationship="viewControllers" id="xMn-Gg-Sj5"/>
                         <segue destination="8r1-tz-zHZ" kind="relationship" relationship="viewControllers" id="2Nb-VE-cGV"/>
-                        <segue destination="sjo-UK-w73" kind="relationship" relationship="viewControllers" id="XhF-qA-gvE"/>
+                        <segue destination="vYC-Nb-792" kind="relationship" relationship="viewControllers" id="90q-I5-a4P"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aHJ-2I-VB4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
