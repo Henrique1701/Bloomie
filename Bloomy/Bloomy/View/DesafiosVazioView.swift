@@ -16,7 +16,7 @@ struct DesafiosVazioView: View {
                     Spacer()
                     Image("garota_onboarding")
                         .resizable()
-                        .frame(minWidth: 150, idealWidth: 275, minHeight: 150, idealHeight: 290, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                        .frame(minWidth: 150, idealWidth: 275, maxWidth: 275, minHeight: 150, idealHeight: 290, maxHeight: 300, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                     //Diminuir um pouco a imagem
                     
                     Text("Nenhum desafio em\n andamento")
