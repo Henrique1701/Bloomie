@@ -18,10 +18,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="fIS-qQ-Qir">
-                                <rect key="frame" x="43.5" y="211" width="327" height="523"/>
+                                <rect key="frame" x="43.5" y="206.5" width="327" height="491.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KDu-DO-eBT">
-                                        <rect key="frame" x="0.0" y="0.0" width="327" height="118"/>
+                                        <rect key="frame" x="11" y="0.0" width="305" height="110"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="KDu-DO-eBT" secondAttribute="height" multiplier="327:118" id="4RI-FL-iqW"/>
                                         </constraints>
@@ -30,21 +30,21 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EdG-rW-QkK">
-                                        <rect key="frame" x="0.0" y="135" width="327" height="118"/>
+                                        <rect key="frame" x="11" y="127" width="305" height="110"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="EdG-rW-QkK" secondAttribute="height" multiplier="327:118" id="wMl-vu-z6N"/>
                                         </constraints>
                                         <state key="normal" image="lazer"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SIb-rj-X9d">
-                                        <rect key="frame" x="0.0" y="270" width="327" height="118"/>
+                                        <rect key="frame" x="11" y="254" width="305" height="110.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="SIb-rj-X9d" secondAttribute="height" multiplier="327:118" id="V2s-TZ-8Cb"/>
                                         </constraints>
                                         <state key="normal" image="atencaoplena"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0x-gF-LQl">
-                                        <rect key="frame" x="0.0" y="405" width="327" height="118"/>
+                                        <rect key="frame" x="11" y="381.5" width="305" height="110"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="H0x-gF-LQl" secondAttribute="height" multiplier="327:118" id="zEk-v0-Z8h"/>
                                         </constraints>
@@ -53,7 +53,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9bR-wU-MQA">
-                                <rect key="frame" x="147" y="142" width="82" height="30"/>
+                                <rect key="frame" x="147" y="142" width="82" height="28"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <state key="normal" title="Editar Perfil">
                                     <color key="titleColor" red="0.55637307363013699" green="0.53861648617385605" blue="0.53891242929812733" alpha="1" colorSpace="calibratedRGB"/>
@@ -70,7 +70,7 @@
                                 <color key="highlightedColor" red="0.24313725489999999" green="0.2470588235" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r24-s7-XCY">
-                                <rect key="frame" x="350.5" y="122" width="20.5" height="22"/>
+                                <rect key="frame" x="350.5" y="122" width="20.5" height="20.5"/>
                                 <color key="tintColor" red="0.24313725489999999" green="0.2470588235" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <state key="normal" image="gearshape.fill" catalog="system"/>
                                 <connections>
@@ -78,7 +78,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="vnq-Dm-5Q0">
-                                <rect key="frame" x="44" y="107" width="77" height="77"/>
+                                <rect key="frame" x="44" y="107" width="77" height="72.5"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7Ec-G9-za4"/>
@@ -105,6 +105,10 @@
                             <constraint firstItem="7Ec-G9-za4" firstAttribute="trailing" secondItem="r24-s7-XCY" secondAttribute="trailing" constant="43" id="zQ7-ug-9VW"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Perfil" image="icone_perfil" id="bYG-tS-CaU">
+                        <color key="badgeColor" name="cor_fundo"/>
+                    </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="userNameLabel" destination="n1b-ml-mBg" id="tsF-ZG-phX"/>
                     </connections>
@@ -477,6 +481,7 @@
         <image name="atencaoplena" width="327" height="118"/>
         <image name="avatar" width="77" height="77"/>
         <image name="gearshape.fill" catalog="system" width="128" height="121"/>
+        <image name="icone_perfil" width="30" height="30"/>
         <image name="lazer" width="327" height="118"/>
         <image name="pessoasqueridas" width="327" height="118"/>
         <image name="saude" width="327" height="118"/>
