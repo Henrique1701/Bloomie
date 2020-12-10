@@ -31,11 +31,11 @@ class MindfulnessViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        challengeObserver = NotificationCenter.default.addObserver(forName: .acceptChallenge, object: nil, queue: OperationQueue.main) { (notification) in
+        challengeObserver = NotificationCenter.default.addObserver(forName: .acceptChallenge, object: nil, queue: OperationQueue.main) { _ in
             self.acceptChallenge()
         }
         
-        doneObserver = NotificationCenter.default.addObserver(forName: .doneChallenge, object: nil, queue: OperationQueue.main) { (notification) in
+        doneObserver = NotificationCenter.default.addObserver(forName: .doneChallenge, object: nil, queue: OperationQueue.main) { _ in
             self.doneChallenge()
             self.chooseButtonToShow()
             self.showRewardPopUp()
@@ -82,11 +82,11 @@ class MindfulnessViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toChallengePopUpViewControllerSegue" {
-            let popup = segue.destination as! ChallengePopUpViewController
-            popup.summary = island.dailyChallenge?.summary ?? ""
+            let popup = segue.destination as? ChallengePopUpViewController
+            popup!.summary = island.dailyChallenge?.summary ?? ""
         } else if (segue.identifier == "toDonePopUpViewControllerSegue") {
-            let popup = segue.destination as! DonePopUpViewController
-            popup.summary = island.dailyChallenge?.summary ?? ""
+            let popup = segue.destination as? DonePopUpViewController
+            popup!.summary = island.dailyChallenge?.summary ?? ""
         }
     }
     
@@ -154,14 +154,14 @@ class MindfulnessViewController: UIViewController {
     
     func showRewardPopUp() {
         let storyBoard: UIStoryboard = UIStoryboard(name: "PopUps", bundle: nil)
-        let popup = storyBoard.instantiateViewController(identifier: "RewardPopUp") as! RewardPopUpViewController
+        let popup = storyBoard.instantiateViewController(identifier: "RewardPopUp") as? RewardPopUpViewController
         let rewards = IslandManager.shared.getRewards(fromIsland: island.name!)!
         if let availableReward = getAvailableReward(inRewards: rewards) {
-            popup.rewardImage = UIImage(named: "\(availableReward.id!)")
-            popup.modalTransitionStyle = .crossDissolve
-            popup.modalPresentationStyle = .overCurrentContext
+            popup!.rewardImage = UIImage(named: "\(availableReward.id!)")
+            popup!.modalTransitionStyle = .crossDissolve
+            popup!.modalPresentationStyle = .overCurrentContext
             self.rewardIdToAnimate = availableReward.id!
-            self.present(popup, animated: true)
+            self.present(popup!, animated: true)
             availableReward.isShown = true
             _ = RewardManager.shared.saveContext()
         } else {
