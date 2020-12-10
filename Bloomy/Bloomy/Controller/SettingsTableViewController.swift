@@ -9,7 +9,6 @@ import UIKit
 
 public class SettingsTableViewController: UITableViewController {
 
-    
     public override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -42,7 +41,6 @@ public class SettingsTableViewController: UITableViewController {
 //        return 3
 //    }
 
-    
 //    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 //        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as! TableViewCell
     
@@ -50,7 +48,6 @@ public class SettingsTableViewController: UITableViewController {
 //        return cell
 //    }
     
-
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
