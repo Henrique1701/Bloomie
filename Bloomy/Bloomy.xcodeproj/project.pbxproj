@@ -34,6 +34,7 @@
 		896273AB257FF381002FAD99 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896273AA257FF381002FAD99 /* ContentView.swift */; };
 		8984E40B257FF16D002A5A72 /* TabBarDesafiosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8984E40A257FF16D002A5A72 /* TabBarDesafiosViewController.swift */; };
 		89DD872F2570243200DB1C13 /* SeedDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DD872E2570243200DB1C13 /* SeedDataBase.swift */; };
+		89ED4BB825824CCD00A18B29 /* SiriShortcutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89ED4BB725824CCD00A18B29 /* SiriShortcutsViewController.swift */; };
 		BE91BADC257FFF2000CC83D0 /* HealthIsland.sks in Resources */ = {isa = PBXBuildFile; fileRef = BE91BADB257FFF2000CC83D0 /* HealthIsland.sks */; };
 		BE91BB112580163C00CC83D0 /* LeisureIsland.sks in Resources */ = {isa = PBXBuildFile; fileRef = BE91BB102580163C00CC83D0 /* LeisureIsland.sks */; };
 		BE91BB16258016DF00CC83D0 /* LovedsIsland.sks in Resources */ = {isa = PBXBuildFile; fileRef = BE91BB15258016DF00CC83D0 /* LovedsIsland.sks */; };
@@ -113,6 +114,7 @@
 		896273AA257FF381002FAD99 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8984E40A257FF16D002A5A72 /* TabBarDesafiosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarDesafiosViewController.swift; sourceTree = "<group>"; };
 		89DD872E2570243200DB1C13 /* SeedDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeedDataBase.swift; sourceTree = "<group>"; };
+		89ED4BB725824CCD00A18B29 /* SiriShortcutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriShortcutsViewController.swift; sourceTree = "<group>"; };
 		910E7EF4AA3E30A07B9A2743 /* Pods-Bloomy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bloomy.release.xcconfig"; path = "Target Support Files/Pods-Bloomy/Pods-Bloomy.release.xcconfig"; sourceTree = "<group>"; };
 		94E49591F99200B6D647E55B /* Pods_BloomyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BloomyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25879A5F40F669187A291F0 /* Pods-BloomyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BloomyTests.debug.xcconfig"; path = "Target Support Files/Pods-BloomyTests/Pods-BloomyTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -254,6 +256,17 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
+		89ED4BC625824E6800A18B29 /* SKScenes */ = {
+			isa = PBXGroup;
+			children = (
+				BE91BADB257FFF2000CC83D0 /* HealthIsland.sks */,
+				BE91BB102580163C00CC83D0 /* LeisureIsland.sks */,
+				BE91BB15258016DF00CC83D0 /* LovedsIsland.sks */,
+				BE91BB1A2580179B00CC83D0 /* MindfulnessIsland.sks */,
+			);
+			path = SKScenes;
+			sourceTree = "<group>";
+		};
 		AE4F409CCC5D9A13F9027B38 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -337,10 +350,7 @@
 				89249D54257ED12E002747A3 /* PopUps.storyboard */,
 				D64B4F6225756F2000D818EB /* Onboarding.storyboard */,
 				896273AA257FF381002FAD99 /* ContentView.swift */,
-				BE91BADB257FFF2000CC83D0 /* HealthIsland.sks */,
-				BE91BB102580163C00CC83D0 /* LeisureIsland.sks */,
-				BE91BB15258016DF00CC83D0 /* LovedsIsland.sks */,
-				BE91BB1A2580179B00CC83D0 /* MindfulnessIsland.sks */,
+				89ED4BC625824E6800A18B29 /* SKScenes */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -360,6 +370,7 @@
 				89566A5A2581A90B00784DF3 /* NotificationsViewController.swift */,
 				89566A672581B27F00784DF3 /* SettingsTableViewController.swift */,
 				89566A6F2581B4DE00784DF3 /* UserViewController.swift */,
+				89ED4BB725824CCD00A18B29 /* SiriShortcutsViewController.swift */,
 				89566A552581A8FE00784DF3 /* Intents.intentdefinition */,
 				89249D3E257E9F2F002747A3 /* PopUps */,
 				895637142577C7B800CA8D3B /* Islands */,
@@ -639,6 +650,7 @@
 				7DAE80212575877000B17FB8 /* AreasViewController.swift in Sources */,
 				BEC461C6255DABD8003C1D1A /* AppDelegate.swift in Sources */,
 				896273AB257FF381002FAD99 /* ContentView.swift in Sources */,
+				89ED4BB825824CCD00A18B29 /* SiriShortcutsViewController.swift in Sources */,
 				89566A682581B27F00784DF3 /* SettingsTableViewController.swift in Sources */,
 				BED052902576BB150035EB18 /* MindfulnessViewController.swift in Sources */,
 				8984E40B257FF16D002A5A72 /* TabBarDesafiosViewController.swift in Sources */,
