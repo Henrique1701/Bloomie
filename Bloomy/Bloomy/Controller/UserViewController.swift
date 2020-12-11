@@ -9,6 +9,10 @@ import UIKit
 
 class UserViewController: UIViewController {
     @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet var healthButton: UIButton!
+    @IBOutlet var leisureButton: UIButton!
+    @IBOutlet var mindfulnessButton: UIButton!
+    @IBOutlet var lovedsButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()

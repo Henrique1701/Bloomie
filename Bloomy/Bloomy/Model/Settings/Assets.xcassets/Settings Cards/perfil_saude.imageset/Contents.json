@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "saúde.png",
+      "filename" : "perfil_saude.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "perfil_saude@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "perfil_saude@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
