@@ -168,5 +168,8 @@ class AreasViewController: UIViewController {
         super.viewDidLoad()
         disableButton()
         setupNavigationController()
+        
+        // Cria uma variável no user defaults para armazenar o estado SoundsSwitch
+        UserDefaults.standard.set(true, forKey: "stateSoundsSwitch")
     }
 }

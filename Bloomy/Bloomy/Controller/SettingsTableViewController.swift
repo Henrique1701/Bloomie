@@ -20,6 +20,10 @@ public class SettingsTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
+        // Altera o estado do switch
+        let stateSoundsSwitch = UserDefaults.standard.bool(forKey: "stateSoundsSwitch")
+        self.soundsSwitch.setOn(stateSoundsSwitch, animated: true)
+        
         self.setupNavigationController()
     }
     
@@ -33,6 +37,7 @@ public class SettingsTableViewController: UITableViewController {
 
     @IBAction func touchedSoundsSwitch(_ sender: Any) {
         let stateSoundsSwitch = self.soundsSwitch.isOn
+        UserDefaults.standard.set(stateSoundsSwitch, forKey: "stateSoundsSwitch")
         MusicPlayer.shared.changeStatePlayer(state: stateSoundsSwitch)
     }
     // MARK: - Table view data source
