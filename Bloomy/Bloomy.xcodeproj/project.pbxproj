@@ -40,6 +40,7 @@
 		BE91BB112580163C00CC83D0 /* LeisureIsland.sks in Resources */ = {isa = PBXBuildFile; fileRef = BE91BB102580163C00CC83D0 /* LeisureIsland.sks */; };
 		BE91BB16258016DF00CC83D0 /* LovedsIsland.sks in Resources */ = {isa = PBXBuildFile; fileRef = BE91BB15258016DF00CC83D0 /* LovedsIsland.sks */; };
 		BE91BB1B2580179B00CC83D0 /* MindfulnessIsland.sks in Resources */ = {isa = PBXBuildFile; fileRef = BE91BB1A2580179B00CC83D0 /* MindfulnessIsland.sks */; };
+		BEBD260F2583DB25002263BD /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBD260E2583DB25002263BD /* MusicPlayer.swift */; };
 		BEC461C6255DABD8003C1D1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC461C5255DABD8003C1D1A /* AppDelegate.swift */; };
 		BEC461C8255DABD8003C1D1A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC461C7255DABD8003C1D1A /* SceneDelegate.swift */; };
 		BEC461CA255DABD8003C1D1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC461C9255DABD8003C1D1A /* ViewController.swift */; };
@@ -124,6 +125,7 @@
 		BE91BB102580163C00CC83D0 /* LeisureIsland.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = LeisureIsland.sks; sourceTree = "<group>"; };
 		BE91BB15258016DF00CC83D0 /* LovedsIsland.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = LovedsIsland.sks; sourceTree = "<group>"; };
 		BE91BB1A2580179B00CC83D0 /* MindfulnessIsland.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MindfulnessIsland.sks; sourceTree = "<group>"; };
+		BEBD260E2583DB25002263BD /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
 		BEC461C2255DABD8003C1D1A /* Bloomy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bloomy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEC461C5255DABD8003C1D1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEC461C7255DABD8003C1D1A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				8928F56225670EEE0089BE0E /* Constants.swift */,
+				BEBD260E2583DB25002263BD /* MusicPlayer.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -651,6 +654,7 @@
 				7D267544256EDB97000C57A3 /* Reward.swift in Sources */,
 				891D2E47256ED7B200AC961A /* Challenge.swift in Sources */,
 				8905E6C3257961660015ECAC /* ChallengePopUpViewController.swift in Sources */,
+				BEBD260F2583DB25002263BD /* MusicPlayer.swift in Sources */,
 				7DAE80212575877000B17FB8 /* AreasViewController.swift in Sources */,
 				BEC461C6255DABD8003C1D1A /* AppDelegate.swift in Sources */,
 				896273AB257FF381002FAD99 /* ContentView.swift in Sources */,

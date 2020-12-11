@@ -42,18 +42,8 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let pathToBGSound = Bundle.main.path(forResource: "background", ofType: "mp3")!
-        let urlbg = URL(fileURLWithPath: pathToBGSound)
-        do {
-            backgroundAudioPlayer = try AVAudioPlayer(contentsOf: urlbg)
-            backgroundAudioPlayer?.prepareToPlay()
-            backgroundAudioPlayer?.numberOfLoops = -1
-            backgroundAudioPlayer?.volume = 0.5
-            backgroundAudioPlayer?.play()
-        } catch let error as NSError {
-            print(error.description)
-        }
-        
+        MusicPlayer.shared.startBackgroundMusic(backgroundMusicFileName: "background")
+
         quantityIslands = islands!.count
         setUpIslandsDisplay(quantityIslands: self.quantityIslands)
         
@@ -130,7 +120,7 @@ class HomeViewController: UIViewController {
         var randomIndex = randomNumber(maximum: challenges.count)
         var challengesCount = challenges.count //Auxiliar para garantir saída do while
         
-        while(!challenges[randomIndex].accepted && challengesCount > 0) {
+        while(challenges[randomIndex].accepted && challengesCount > 0) {
             challengesCount -= 1
             randomIndex = (randomIndex + 1) % challenges.count
         }
