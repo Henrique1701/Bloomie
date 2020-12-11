@@ -18,6 +18,7 @@ class UserViewController: UIViewController {
         super.viewDidLoad()
 
         self.userNameLabel.text = UserManager.shared.getUserName()
+        self.buttonsToShow()
         self.setupNavigationController()
     }
     
@@ -27,5 +28,23 @@ class UserViewController: UIViewController {
         self.navigationController?.navigationBar.topItem?.title = ""
         self.navigationController?.navigationBar.layoutIfNeeded()
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Poppins-Semibold", size: 18) ?? UIFont()]
+    }
+    
+    func buttonsToShow() {
+        if (IslandManager.shared.getIsland(withName: IslandsNames.health.rawValue) == nil) {
+            self.healthButton.isHidden = true
+        }
+        
+        if (IslandManager.shared.getIsland(withName: IslandsNames.leisure.rawValue) == nil) {
+            self.leisureButton.isHidden = true
+        }
+        
+        if (IslandManager.shared.getIsland(withName: IslandsNames.mindfulness.rawValue) == nil) {
+            self.mindfulnessButton.isHidden = true
+        }
+        
+        if (IslandManager.shared.getIsland(withName: IslandsNames.loveds.rawValue) == nil) {
+            self.lovedsButton.isHidden = true
+        }
     }
 }
