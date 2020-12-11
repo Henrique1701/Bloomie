@@ -9,6 +9,8 @@ import UIKit
 
 public class SettingsTableViewController: UITableViewController {
 
+    @IBOutlet weak var soundsSwitch: UISwitch!
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,6 +31,10 @@ public class SettingsTableViewController: UITableViewController {
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Poppins-Semibold", size: 18) ?? UIFont()]
     }
 
+    @IBAction func touchedSoundsSwitch(_ sender: Any) {
+        let stateSoundsSwitch = self.soundsSwitch.isOn
+        MusicPlayer.shared.changeStatePlayer(state: stateSoundsSwitch)
+    }
     // MARK: - Table view data source
 
 //    public override func numberOfSections(in tableView: UITableView) -> Int {

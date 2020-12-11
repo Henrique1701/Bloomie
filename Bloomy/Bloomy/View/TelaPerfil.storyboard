@@ -230,6 +230,9 @@
                                                 </label>
                                                 <switch autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FRO-Dv-kpD">
                                                     <rect key="frame" x="316" y="6.5" width="49" height="31"/>
+                                                    <connections>
+                                                        <action selector="touchedSoundsSwitch:" destination="LCt-ex-JkX" eventType="valueChanged" id="rXn-s9-PdR"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                             <constraints>
@@ -327,6 +330,9 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="x3J-Zq-uHO"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="soundsSwitch" destination="FRO-Dv-kpD" id="ZPH-7L-AGp"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JtX-ko-gW2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
