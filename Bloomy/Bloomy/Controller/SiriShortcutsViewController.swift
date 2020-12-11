@@ -61,7 +61,7 @@ class SiriShortcutsViewController: UIViewController{
     @available(iOS 12.0, *)
     public var intent: DoSomethingIntent {
         let testIntent = DoSomethingIntent()
-        testIntent.suggestedInvocationPhrase = "Test command"
+        testIntent.suggestedInvocationPhrase = "Abrir Bloomy"
         return testIntent
     }
 }
