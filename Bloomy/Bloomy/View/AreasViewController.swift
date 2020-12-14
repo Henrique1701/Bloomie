@@ -110,25 +110,25 @@ class AreasViewController: UIViewController {
         //Cria as ilhas que estão selecionadas para o usuario criado
         if(selectedLazer == true) {
             guard let lazerIsland = self.island.newIsland(withName: "Lazer") else { return }
-            self.island.setUser(islandName: "Lazer", user: usuario!)
+            _ = self.island.setUser(islandName: "Lazer", user: usuario!)
             SeedDataBase.shared.createLeisureChallenges()
             SeedDataBase.shared.createLeisureRewards()
         }
         if(selectedSaude == true) {
             guard let saudeIsland = IslandManager.shared.newIsland(withName: "Saúde") else { return }
-            self.island.setUser(islandName: "Saúde", user: usuario!)
+            _ = self.island.setUser(islandName: "Saúde", user: usuario!)
             SeedDataBase.shared.createHealthChallenges()
             SeedDataBase.shared.createHealthRewards()
         }
         if(selectedAtencaoPlena == true) {
             guard let atencaoPlenaIsland = IslandManager.shared.newIsland(withName: "Atenção Plena") else { return }
-            self.island.setUser(islandName: "Atenção Plena", user: usuario!)
+            _ = self.island.setUser(islandName: "Atenção Plena", user: usuario!)
             SeedDataBase.shared.createMindfulnessChallenges()
             SeedDataBase.shared.createMindfulnessRewards()
         }
         if(selectedPessoasQueridas == true) {
             guard let pessoasQueridasIsland = IslandManager.shared.newIsland(withName: "Pessoas Queridas") else { return }
-            self.island.setUser(islandName: "Pessoas Queridas", user: usuario!)
+            _ = self.island.setUser(islandName: "Pessoas Queridas", user: usuario!)
             SeedDataBase.shared.createLovedsChallenges()
             SeedDataBase.shared.createLovedsRewards()
         }
