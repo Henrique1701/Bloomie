@@ -197,11 +197,22 @@ class HealthViewController: UIViewController {
     
     @objc func rewardAnimation() {
         let node = self.scene?.childNode(withName: self.rewardIdToAnimate) as? SKSpriteNode
+        
         let nodeSize = node?.size
+        let positionXInitial = node?.position.x
+        let positionYInitial = node?.position.y
+        
         node?.alpha = 1
-        let increase = SKAction.resize(toWidth: nodeSize!.width*2, height: nodeSize!.height*2, duration: 1.5)
-        let decrease = SKAction.resize(toWidth: nodeSize!.width, height: nodeSize!.height, duration: 1.5)
-        let sequentialAction = SKAction.sequence([increase, decrease, increase, decrease])
+        node?.position = CGPoint(x: 0, y: 0)
+        node?.size = CGSize(width: nodeSize!.width*3, height: nodeSize!.height*3)
+        
+        let resizeAction = SKAction.resize(toWidth: nodeSize!.width, height: nodeSize!.height, duration: 3)
+        let moveAction = SKAction.move(to: CGPoint(x: positionXInitial!, y: positionYInitial!), duration: 3)
+        let waitAction = SKAction.wait(forDuration: 1)
+        
+        let concurrentAction = SKAction.group([resizeAction, moveAction])
+        let sequentialAction = SKAction.sequence([waitAction, concurrentAction])
+        
         node?.run(sequentialAction)
     }
 
