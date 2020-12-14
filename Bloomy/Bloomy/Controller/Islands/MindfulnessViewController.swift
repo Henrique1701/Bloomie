@@ -12,6 +12,7 @@ import GameplayKit
 class MindfulnessViewController: UIViewController {
     @IBOutlet weak var challengeDayButton: UIButton!
     @IBOutlet weak var doneButton: UIButton!
+    @IBOutlet weak var feedbackMessage: UIImageView!
     
     let island = IslandManager.shared.getIsland(withName: IslandsNames.mindfulness.rawValue)!
     var challengeObserver: NSObjectProtocol?
@@ -139,16 +140,19 @@ class MindfulnessViewController: UIViewController {
             self.challengeDayButton.isHidden = false
             self.challengeDayButton.isEnabled = true
             self.challengeDayButton.alpha = 1
+            self.feedbackMessage.isHidden = true
         } else if ((self.island.dailyChallenge?.accepted)! && !(self.island.dailyChallenge?.done)!) {
             //se o desafio foi aceito mas n foi concluído
             self.challengeDayButton.isHidden = true
             self.doneButton.isHidden = false
+            self.feedbackMessage.isHidden = false
         } else {
             //desafio aceito e concluído
             self.challengeDayButton.isHidden = false
             self.challengeDayButton.alpha = 0.5
             self.challengeDayButton.isEnabled = false
             self.doneButton.isHidden = true
+            self.feedbackMessage.isHidden = true
         }
     }
     
