@@ -36,7 +36,7 @@ class HomeViewController: UIViewController {
     let islandsManager = IslandManager.shared
     var stopAnimation = false
     let islands = UserManager.shared.getIslands()
-    private var quantityIslands: Int = 0
+    private var quantityIslands: Int?
     
     // MARK: View Functions
     override func viewDidLoad() {
@@ -44,8 +44,8 @@ class HomeViewController: UIViewController {
         
         MusicPlayer.shared.startBackgroundMusic(backgroundMusicFileName: "background")
 
-        quantityIslands = islands!.count
-        setUpIslandsDisplay(quantityIslands: self.quantityIslands)
+        self.quantityIslands = islands!.count
+        setUpIslandsDisplay(quantityIslands: self.quantityIslands!)
         
         if (userManager.getLastSeen() == nil) {
             setDailyChallenges()
