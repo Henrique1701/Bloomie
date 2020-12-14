@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6wg-Mg-gjz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6wg-Mg-gjz">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <array key="Poppins-Bold.ttf">
             <string>Poppins-Bold</string>
+        </array>
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
         </array>
         <array key="Poppins-Regular.ttf">
             <string>Poppins-Regular</string>
@@ -24,8 +27,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Como vai?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Tr-F3-kKI">
-                                <rect key="frame" x="114.33333333333333" y="541" width="185.33333333333337" height="47.666666666666629"/>
-                                <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="34"/>
+                                <rect key="frame" x="115" y="541" width="184" height="47.666666666666629"/>
+                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="34"/>
                                 <color key="textColor" red="0.24313725490196078" green="0.24705882352941178" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -121,10 +124,10 @@
                                     <segue destination="YeR-po-kno" kind="show" identifier="AreasSegue" id="Dr2-oz-xKf"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Como você se chama?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbB-tr-cNQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Como posso te chamar?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbB-tr-cNQ">
                                 <rect key="frame" x="46" y="118" width="322" height="95.333333333333314"/>
-                                <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="34"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="34"/>
+                                <color key="textColor" red="0.24313725490196078" green="0.24705882352941178" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VUl-JR-n5T">
@@ -248,8 +251,8 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quais áreas vamos cuidar?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.84999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="vCh-zs-79V">
                                 <rect key="frame" x="46" y="118" width="322" height="116"/>
-                                <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="34"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="34"/>
+                                <color key="textColor" red="0.24313725490196078" green="0.24705882352941178" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>

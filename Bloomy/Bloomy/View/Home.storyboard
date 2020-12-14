@@ -258,7 +258,7 @@
             </objects>
             <point key="canvasLocation" x="828" y="437"/>
         </scene>
-        <!--Desafios-->
+        <!--Missões-->
         <scene sceneID="5Bw-bg-DYB">
             <objects>
                 <viewController id="8r1-tz-zHZ" customClass="TabBarDesafiosViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
@@ -268,7 +268,7 @@
                         <viewLayoutGuide key="safeArea" id="Roa-Pm-K2v"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Desafios" image="icone_acao" id="14f-Z1-41G"/>
+                    <tabBarItem key="tabBarItem" title="Missões" image="icone_acao" id="14f-Z1-41G"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xg8-Jq-mtk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

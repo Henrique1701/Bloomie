@@ -32,6 +32,7 @@
 		89566A682581B27F00784DF3 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89566A672581B27F00784DF3 /* SettingsTableViewController.swift */; };
 		89566A702581B4DE00784DF3 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89566A6F2581B4DE00784DF3 /* UserViewController.swift */; };
 		896273AB257FF381002FAD99 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896273AA257FF381002FAD99 /* ContentView.swift */; };
+		898441302587E6D4001F4185 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8984412F2587E6D4001F4185 /* Poppins-Medium.ttf */; };
 		8984E40B257FF16D002A5A72 /* TabBarDesafiosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8984E40A257FF16D002A5A72 /* TabBarDesafiosViewController.swift */; };
 		89AA1D4925825E0200137F50 /* DesafiosVazioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AA1D4825825E0200137F50 /* DesafiosVazioView.swift */; };
 		89DD872F2570243200DB1C13 /* SeedDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DD872E2570243200DB1C13 /* SeedDataBase.swift */; };
@@ -115,6 +116,7 @@
 		89566A672581B27F00784DF3 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		89566A6F2581B4DE00784DF3 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		896273AA257FF381002FAD99 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8984412F2587E6D4001F4185 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
 		8984E40A257FF16D002A5A72 /* TabBarDesafiosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarDesafiosViewController.swift; sourceTree = "<group>"; };
 		89AA1D4825825E0200137F50 /* DesafiosVazioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafiosVazioView.swift; sourceTree = "<group>"; };
 		89DD872E2570243200DB1C13 /* SeedDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeedDataBase.swift; sourceTree = "<group>"; };
@@ -390,6 +392,7 @@
 			isa = PBXGroup;
 			children = (
 				89249D4F257EA18F002747A3 /* Poppins-Bold.ttf */,
+				8984412F2587E6D4001F4185 /* Poppins-Medium.ttf */,
 				89249D39257E6C32002747A3 /* Poppins-Regular.ttf */,
 				BED052D52577EC070035EB18 /* Poppins-SemiBold.ttf */,
 				7DB41BF8257AC31900BBFAEA /* Poppins-Regular.ttf */,
@@ -525,6 +528,7 @@
 				7DB41BFA257AC31900BBFAEA /* Poppins-Regular.ttf in Resources */,
 				D6DFCE3B258148AF0013E8D1 /* reward.mp3 in Resources */,
 				7DB41BFB257AC31900BBFAEA /* Poppins-SemiBold.ttf in Resources */,
+				898441302587E6D4001F4185 /* Poppins-Medium.ttf in Resources */,
 				BE91BB1B2580179B00CC83D0 /* MindfulnessIsland.sks in Resources */,
 				BE91BADC257FFF2000CC83D0 /* HealthIsland.sks in Resources */,
 				BE91BB16258016DF00CC83D0 /* LovedsIsland.sks in Resources */,
@@ -858,13 +862,13 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = 357F5R89AF;
+				DEVELOPMENT_TEAM = D84M4LK87S;
 				INFOPLIST_FILE = Bloomy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jhfs.cin.ufpe.br.Bloomy;
+				PRODUCT_BUNDLE_IDENTIFIER = wrs.cin.ufpe.br.Bloomy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -882,13 +886,13 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = 357F5R89AF;
+				DEVELOPMENT_TEAM = D84M4LK87S;
 				INFOPLIST_FILE = Bloomy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jhfs.cin.ufpe.br.Bloomy;
+				PRODUCT_BUNDLE_IDENTIFIER = wrs.cin.ufpe.br.Bloomy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
