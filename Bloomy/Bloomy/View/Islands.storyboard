@@ -27,7 +27,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
                                 <inset key="contentEdgeInsets" minX="37" minY="16" maxX="37" maxY="16"/>
-                                <state key="normal" title="desafio do dia" backgroundImage="botao_desafio_do_dia">
+                                <state key="normal" title="missão do dia" backgroundImage="botao_desafio_do_dia">
                                     <color key="titleColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -41,7 +41,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
                                 <inset key="contentEdgeInsets" minX="37" minY="16" maxX="37" maxY="16"/>
-                                <state key="normal" title="concluir desafio" backgroundImage="botao_desafio_do_dia">
+                                <state key="normal" title="concluir missão" backgroundImage="botao_desafio_do_dia">
                                     <color key="titleColor" red="0.1333333333" green="0.1333333333" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -88,7 +88,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
                                 <inset key="contentEdgeInsets" minX="37" minY="16" maxX="37" maxY="16"/>
-                                <state key="normal" title="desafio do dia" backgroundImage="botao_desafio_do_dia">
+                                <state key="normal" title="missão do dia" backgroundImage="botao_desafio_do_dia">
                                     <color key="titleColor" red="0.1333333333" green="0.1333333333" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -102,7 +102,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
                                 <inset key="contentEdgeInsets" minX="37" minY="16" maxX="37" maxY="16"/>
-                                <state key="normal" title="concluir desafio" backgroundImage="botao_desafio_do_dia">
+                                <state key="normal" title="concluir missão" backgroundImage="botao_desafio_do_dia">
                                     <color key="titleColor" red="0.1333333333" green="0.1333333333" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -147,7 +147,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
                                 <inset key="contentEdgeInsets" minX="37" minY="16" maxX="37" maxY="16"/>
-                                <state key="normal" title="desafio do dia" backgroundImage="botao_desafio_do_dia">
+                                <state key="normal" title="missão do dia" backgroundImage="botao_desafio_do_dia">
                                     <color key="titleColor" red="0.1333333333" green="0.1333333333" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -158,7 +158,7 @@
                                 <rect key="frame" x="111.5" y="772.5" width="191" height="48.5"/>
                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
                                 <inset key="contentEdgeInsets" minX="37" minY="16" maxX="37" maxY="16"/>
-                                <state key="normal" title="concluir desafio" backgroundImage="botao_desafio_do_dia">
+                                <state key="normal" title="concluir missão" backgroundImage="botao_desafio_do_dia">
                                     <color key="titleColor" red="0.1333333333" green="0.1333333333" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -204,7 +204,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
                                 <inset key="contentEdgeInsets" minX="37" minY="16" maxX="37" maxY="16"/>
-                                <state key="normal" title="desafio do dia" backgroundImage="botao_desafio_do_dia">
+                                <state key="normal" title="missão do dia" backgroundImage="botao_desafio_do_dia">
                                     <color key="titleColor" red="0.1333333333" green="0.1333333333" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -218,7 +218,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
                                 <inset key="contentEdgeInsets" minX="37" minY="16" maxX="37" maxY="16"/>
-                                <state key="normal" title="concluir desafio" backgroundImage="botao_desafio_do_dia">
+                                <state key="normal" title="concluir missão" backgroundImage="botao_desafio_do_dia">
                                     <color key="titleColor" red="0.1333333333" green="0.1333333333" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>

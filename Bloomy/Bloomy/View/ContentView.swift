@@ -102,7 +102,7 @@ struct Card : View {
                     self.challenge.done = true
                     ChallengeManager.shared.saveContext()
                 }) {
-                    Text("concluir desafio")
+                    Text("concluir missão")
                         .font(.custom("Poppins-Bold", size: 18))
                         .foregroundColor(.black)
                         .padding(.vertical, 10)

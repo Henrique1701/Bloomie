@@ -19,7 +19,7 @@ struct DesafiosVazioView: View {
                         .frame(minWidth: 150, idealWidth: 275, maxWidth: 275, minHeight: 150, idealHeight: 290, maxHeight: 300, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                     //Diminuir um pouco a imagem
                     
-                    Text("Nenhum desafio em\n andamento")
+                    Text("Nenhuma missão em\n andamento")
                         .font(.custom("Poppins-Bold", size: 24))
                         .foregroundColor(.black)
                         .multilineTextAlignment(.center)
@@ -27,7 +27,7 @@ struct DesafiosVazioView: View {
                     Spacer()
                         .frame(idealWidth: 30, maxWidth: 35, idealHeight: 30, maxHeight: 35)
                     
-                    Text("Por enquanto você não tem nenhum desafio para concluir.\nQue tal checar suas ilhas, e tentar selecionar um novo desafio (:")
+                    Text("Por enquanto você não tem nenhuma missão para concluir.\nQue tal checar suas ilhas, e tentar selecionar uma nova missão. (:")
                         .font(.custom("Poppins-Regular", size: 18))
                         .foregroundColor(.black)
                         .multilineTextAlignment(.center)

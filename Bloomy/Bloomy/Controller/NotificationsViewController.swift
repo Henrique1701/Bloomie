@@ -25,8 +25,8 @@ class NotificationsViewController: UIViewController {
     
           // create the notification content
             let content = UNMutableNotificationContent()
-            content.title = "Aceitar novo desafio"
-            content.body = "Você tem novos desafios a serem aceitos. Vamos crescer juntos?"
+            content.title = "aceitar nova missão"
+            content.body = "você tem novas missões a serem aceitas. vamos crescer juntos?"
             content.sound = .default
 
             let date = acceptHour.date
@@ -63,8 +63,8 @@ class NotificationsViewController: UIViewController {
     
           // create the notification content
             let content = UNMutableNotificationContent()
-            content.title = "Finalize seu desafio"
-            content.body = "Lembre-se de finalizar seu desafio no Bloomy. Sua ilha vai ficar mais florida!"
+            content.title = "finalize sua missão"
+            content.body = "lembre-se de finalizar sua missão no Bloomy. sua ilha vai ficar mais florida!"
             content.sound = .default
 
             let date = finishHour.date
@@ -99,8 +99,8 @@ class NotificationsViewController: UIViewController {
     
           // create the notification content
             let content = UNMutableNotificationContent()
-            content.title = "Lembre-se de realizar seu desafio"
-            content.body = "Essa é uma boa hora pra fazer o desafio, não acha?"
+            content.title = "lembre-se de realizar sua missão"
+            content.body = "essa é uma boa hora pra fazer a missão, não acha?"
             content.sound = .default
 
             let date = rememberHour.date
