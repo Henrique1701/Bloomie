@@ -6,12 +6,12 @@
       "scale" : "1x"
     },
     {
-      "filename" : "botao_on_saude@2x.png",
+      "filename" : "botao_on_saude2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "botao_on_saude@3x.png",
+      "filename" : "botao_on_saude3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
