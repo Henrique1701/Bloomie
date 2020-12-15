@@ -49,11 +49,13 @@ class SiriShortcutsViewController: UIViewController{
 //    
 //    }
     
+    /*
     func showMessage() {
         let alert = UIAlertController(title: "Done!", message: "This is your first shortcut action!", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
+    */
 
 }
 
