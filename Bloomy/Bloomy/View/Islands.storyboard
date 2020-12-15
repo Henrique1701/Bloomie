@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -48,6 +48,9 @@
                                     <segue destination="KCk-Pt-V2e" kind="presentation" identifier="toDonePopUpViewControllerSegue" id="pNA-Ij-AoS"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="feedback_missao_aceita" translatesAutoresizingMaskIntoConstraints="NO" id="fxP-82-5eJ">
+                                <rect key="frame" x="137.5" y="674.5" width="165" height="98"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="R8T-aD-uv3"/>
                         <color key="backgroundColor" red="0.99602943659999998" green="0.96094125509999995" blue="0.94508653880000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -60,13 +63,18 @@
                             <constraint firstItem="R8T-aD-uv3" firstAttribute="bottom" secondItem="mA0-ue-Doc" secondAttribute="bottom" multiplier="1.05" id="eow-8X-6fi"/>
                             <constraint firstItem="mA0-ue-Doc" firstAttribute="width" secondItem="mA0-ue-Doc" secondAttribute="height" multiplier="191:48" priority="750" id="fXi-9Q-DCU"/>
                             <constraint firstItem="NfR-0v-VZe" firstAttribute="height" secondItem="R8T-aD-uv3" secondAttribute="height" multiplier="0.0586797" id="fpl-6j-JPP"/>
+                            <constraint firstItem="fxP-82-5eJ" firstAttribute="width" secondItem="R8T-aD-uv3" secondAttribute="width" multiplier="0.398551" id="hS9-E5-AwD"/>
+                            <constraint firstItem="fxP-82-5eJ" firstAttribute="height" secondItem="R8T-aD-uv3" secondAttribute="height" multiplier="0.119804" id="lUG-ct-fbf"/>
+                            <constraint firstItem="mA0-ue-Doc" firstAttribute="top" secondItem="fxP-82-5eJ" secondAttribute="bottom" id="ohb-gN-zXW"/>
                             <constraint firstItem="mA0-ue-Doc" firstAttribute="centerX" secondItem="pqV-Wh-NaH" secondAttribute="centerX" id="sPX-40-TlQ"/>
+                            <constraint firstItem="fxP-82-5eJ" firstAttribute="trailing" secondItem="mA0-ue-Doc" secondAttribute="trailing" id="zAt-RQ-l2e"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lWM-pz-9YJ"/>
                     <connections>
                         <outlet property="challengeDayButton" destination="NfR-0v-VZe" id="D1I-XZ-kdQ"/>
                         <outlet property="doneButton" destination="mA0-ue-Doc" id="k6h-mo-0QB"/>
+                        <outlet property="feedbackMessage" destination="fxP-82-5eJ" id="6lk-Lk-YV3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jtu-za-ARP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -109,23 +117,31 @@
                                     <segue destination="KCk-Pt-V2e" kind="presentation" identifier="toDonePopUpViewControllerSegue" id="5sb-ac-Qcm"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="feedback_missao_aceita" translatesAutoresizingMaskIntoConstraints="NO" id="2v2-2u-es8">
+                                <rect key="frame" x="137.5" y="674.5" width="165" height="98"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="A2q-pt-6El"/>
                         <color key="backgroundColor" red="0.99602943659999998" green="0.96094125509999995" blue="0.94508653880000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="2v2-2u-es8" firstAttribute="height" secondItem="A2q-pt-6El" secondAttribute="height" multiplier="0.119804" id="2BL-rS-k3o"/>
                             <constraint firstItem="RaQ-AR-8oe" firstAttribute="height" secondItem="A2q-pt-6El" secondAttribute="height" multiplier="0.0589789" id="6Ob-Wl-xK1"/>
                             <constraint firstItem="RaQ-AR-8oe" firstAttribute="width" secondItem="A2q-pt-6El" secondAttribute="width" multiplier="0.4625" id="6tl-bn-V4h"/>
                             <constraint firstItem="bcW-Hv-4yq" firstAttribute="centerX" secondItem="nHg-de-HAR" secondAttribute="centerX" id="8fh-g3-QLb"/>
                             <constraint firstItem="A2q-pt-6El" firstAttribute="bottom" secondItem="bcW-Hv-4yq" secondAttribute="bottom" multiplier="1.05" id="AYm-mM-GXu"/>
+                            <constraint firstItem="2v2-2u-es8" firstAttribute="trailing" secondItem="RaQ-AR-8oe" secondAttribute="trailing" id="HzZ-F9-L4J"/>
                             <constraint firstItem="RaQ-AR-8oe" firstAttribute="centerX" secondItem="nHg-de-HAR" secondAttribute="centerX" id="L1t-3w-T9e"/>
                             <constraint firstItem="A2q-pt-6El" firstAttribute="bottom" secondItem="RaQ-AR-8oe" secondAttribute="bottom" multiplier="1.05" id="LFm-Yt-Zif"/>
                             <constraint firstItem="bcW-Hv-4yq" firstAttribute="height" secondItem="A2q-pt-6El" secondAttribute="height" multiplier="0.0586797" id="Vht-AA-uWY"/>
+                            <constraint firstItem="RaQ-AR-8oe" firstAttribute="top" secondItem="2v2-2u-es8" secondAttribute="bottom" id="d7K-M5-vzP"/>
                             <constraint firstItem="bcW-Hv-4yq" firstAttribute="width" secondItem="A2q-pt-6El" secondAttribute="width" multiplier="0.461353" id="zdI-uH-NaU"/>
+                            <constraint firstItem="2v2-2u-es8" firstAttribute="width" secondItem="A2q-pt-6El" secondAttribute="width" multiplier="0.398551" id="zjJ-nD-sby"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="challengeDayButton" destination="bcW-Hv-4yq" id="b4t-3D-RTx"/>
                         <outlet property="doneButton" destination="RaQ-AR-8oe" id="1vV-TF-vRG"/>
+                        <outlet property="feedbackMessage" destination="2v2-2u-es8" id="5zt-3k-jxV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T0F-CK-K83" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -165,14 +181,21 @@
                                     <segue destination="KCk-Pt-V2e" kind="presentation" identifier="toDonePopUpViewControllerSegue" id="IFg-Cf-0Ph"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="feedback_missao_aceita" translatesAutoresizingMaskIntoConstraints="NO" id="1di-oH-aGc">
+                                <rect key="frame" x="137.5" y="674.5" width="165" height="98"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Afe-iT-dF4"/>
                         <color key="backgroundColor" red="0.99607843139999996" green="0.96078431369999995" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="mi9-3O-WEG" firstAttribute="height" secondItem="Afe-iT-dF4" secondAttribute="height" multiplier="0.0586797" id="1hN-mq-sGM"/>
+                            <constraint firstItem="1di-oH-aGc" firstAttribute="width" secondItem="Afe-iT-dF4" secondAttribute="width" multiplier="0.398551" id="BDj-HL-tUQ"/>
+                            <constraint firstItem="1di-oH-aGc" firstAttribute="height" secondItem="Afe-iT-dF4" secondAttribute="height" multiplier="0.119804" id="CaY-dZ-rc2"/>
                             <constraint firstItem="hNZ-y0-hwL" firstAttribute="width" secondItem="hNZ-y0-hwL" secondAttribute="height" multiplier="191:48" priority="750" id="GXJ-1h-oyC"/>
+                            <constraint firstItem="1di-oH-aGc" firstAttribute="trailing" secondItem="hNZ-y0-hwL" secondAttribute="trailing" id="GlQ-Oq-UBN"/>
                             <constraint firstItem="hNZ-y0-hwL" firstAttribute="centerX" secondItem="4vC-0e-5Kz" secondAttribute="centerX" id="HVc-L1-m8N"/>
                             <constraint firstItem="Afe-iT-dF4" firstAttribute="bottom" secondItem="mi9-3O-WEG" secondAttribute="bottom" multiplier="1.05" id="NGp-rX-4Xi"/>
+                            <constraint firstItem="hNZ-y0-hwL" firstAttribute="top" secondItem="1di-oH-aGc" secondAttribute="bottom" id="Oeq-X4-ith"/>
                             <constraint firstItem="mi9-3O-WEG" firstAttribute="width" secondItem="Afe-iT-dF4" secondAttribute="width" multiplier="0.461353" id="VcS-A2-PFy"/>
                             <constraint firstItem="Afe-iT-dF4" firstAttribute="bottom" secondItem="hNZ-y0-hwL" secondAttribute="bottom" multiplier="1.05" id="aj5-Vs-wJH"/>
                             <constraint firstItem="hNZ-y0-hwL" firstAttribute="width" secondItem="Afe-iT-dF4" secondAttribute="width" multiplier="0.4625" id="gID-zH-gKA"/>
@@ -183,6 +206,7 @@
                     <connections>
                         <outlet property="challengeDayButton" destination="mi9-3O-WEG" id="WIt-a9-wF1"/>
                         <outlet property="doneButton" destination="hNZ-y0-hwL" id="eRO-Mj-YIn"/>
+                        <outlet property="feedbackMessage" destination="1di-oH-aGc" id="NKC-Zc-hi4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qnk-vf-yPW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -225,12 +249,19 @@
                                     <segue destination="KCk-Pt-V2e" kind="presentation" identifier="toDonePopUpViewControllerSegue" id="6Y2-Wj-aUd"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="feedback_missao_aceita" translatesAutoresizingMaskIntoConstraints="NO" id="lrc-sR-eMk">
+                                <rect key="frame" x="137.5" y="674.5" width="165" height="98"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bTv-Za-ZDa"/>
                         <color key="backgroundColor" red="0.99602943659999998" green="0.96094125509999995" blue="0.94508653880000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="bs9-XH-U3W" firstAttribute="width" secondItem="bTv-Za-ZDa" secondAttribute="width" multiplier="0.4625" id="1KG-9K-bTX"/>
+                            <constraint firstItem="lrc-sR-eMk" firstAttribute="width" secondItem="bTv-Za-ZDa" secondAttribute="width" multiplier="0.398551" id="6oG-f1-9lF"/>
+                            <constraint firstItem="lrc-sR-eMk" firstAttribute="height" secondItem="bTv-Za-ZDa" secondAttribute="height" multiplier="0.119804" id="7cA-5P-7g2"/>
                             <constraint firstItem="bTv-Za-ZDa" firstAttribute="bottom" secondItem="mAy-eu-kQQ" secondAttribute="bottom" multiplier="1.05" id="MB3-kY-ph2"/>
+                            <constraint firstItem="lrc-sR-eMk" firstAttribute="trailing" secondItem="bs9-XH-U3W" secondAttribute="trailing" id="MzU-37-RSA"/>
+                            <constraint firstItem="bs9-XH-U3W" firstAttribute="top" secondItem="lrc-sR-eMk" secondAttribute="bottom" id="OIP-JQ-Ajr"/>
                             <constraint firstItem="bs9-XH-U3W" firstAttribute="height" secondItem="bTv-Za-ZDa" secondAttribute="height" multiplier="0.0589789" id="XiW-Xo-pzr"/>
                             <constraint firstItem="bTv-Za-ZDa" firstAttribute="bottom" secondItem="bs9-XH-U3W" secondAttribute="bottom" multiplier="1.05" id="YWk-ro-mtO"/>
                             <constraint firstItem="bs9-XH-U3W" firstAttribute="centerX" secondItem="U6k-h0-ImQ" secondAttribute="centerX" id="b07-jE-lfA"/>
@@ -242,6 +273,7 @@
                     <connections>
                         <outlet property="challengeDayButton" destination="mAy-eu-kQQ" id="5jI-Tk-Iqp"/>
                         <outlet property="doneButton" destination="bs9-XH-U3W" id="CC2-6W-m0s"/>
+                        <outlet property="feedbackMessage" destination="lrc-sR-eMk" id="lS0-c1-IVd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="roE-80-Eah" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -266,10 +298,11 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="5sb-ac-Qcm"/>
-        <segue reference="yoT-wX-hzU"/>
+        <segue reference="6Y2-Wj-aUd"/>
+        <segue reference="vMT-eP-tGl"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="botao_desafio_do_dia" width="191" height="48"/>
+        <image name="feedback_missao_aceita" width="164.5" height="97.5"/>
     </resources>
 </document>
