@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6wg-Mg-gjz">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6wg-Mg-gjz">
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,17 +23,17 @@
             <objects>
                 <viewController storyboardIdentifier="ComoVai" title="ComoVai" modalPresentationStyle="fullScreen" id="glK-6D-x0A" customClass="ComoVaiViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hDa-14-lgL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Como vai?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Tr-F3-kKI">
-                                <rect key="frame" x="115" y="541" width="184" height="48"/>
+                                <rect key="frame" x="68" y="310" width="184" height="48"/>
                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="34"/>
                                 <color key="textColor" red="0.24313725490196078" green="0.24705882352941178" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="garota_onboarding" translatesAutoresizingMaskIntoConstraints="NO" id="XBE-gh-IuC">
-                                <rect key="frame" x="19.5" y="98" width="375" height="403"/>
+                                <rect key="frame" x="15" y="54" width="290" height="216"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qyx-Gb-S2G">
                                 <rect key="frame" x="186" y="621" width="0.0" height="0.0"/>
@@ -43,7 +43,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="249" text="Acreditamos que pequenas ações conseguem mudar nosso mundo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fB0-LF-O2F">
-                                <rect key="frame" x="36" y="625" width="342" height="53.5"/>
+                                <rect key="frame" x="-11" y="394" width="342" height="53.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53.5" id="KEM-ui-AxR"/>
                                     <constraint firstAttribute="width" constant="342" id="f1V-sZ-zk6"/>
@@ -53,7 +53,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" placeholderIntrinsicWidth="186" placeholderIntrinsicHeight="48" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fv6-4Z-sev">
-                                <rect key="frame" x="114" y="761" width="186" height="48"/>
+                                <rect key="frame" x="67" y="379" width="186" height="48"/>
                                 <color key="backgroundColor" red="0.99607843137254903" green="0.73725490196078436" blue="0.082352941176470587" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="rbU-Mn-9t2"/>
@@ -100,11 +100,11 @@
             <objects>
                 <viewController storyboardIdentifier="WhatsYourName" title="ComoSeChama" modalPresentationStyle="fullScreen" id="93Q-cU-KeB" customClass="ComoSeChamaViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XLp-GC-8ut">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7H-AW-x4F">
-                                <rect key="frame" x="114" y="761" width="186" height="48"/>
+                                <rect key="frame" x="67" y="379" width="186" height="48"/>
                                 <color key="backgroundColor" red="0.99607843139999996" green="0.73725490199999999" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="CUi-p9-PE0"/>
@@ -125,19 +125,19 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Como posso te chamar?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbB-tr-cNQ">
-                                <rect key="frame" x="46" y="118" width="322" height="95.5"/>
+                                <rect key="frame" x="46" y="74" width="228" height="95.5"/>
                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="34"/>
                                 <color key="textColor" red="0.24313725490196078" green="0.24705882352941178" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VUl-JR-n5T">
-                                <rect key="frame" x="77" y="258" width="260" height="25.5"/>
+                                <rect key="frame" x="77" y="214" width="166" height="25.5"/>
                                 <color key="backgroundColor" red="0.9509803921568627" green="0.95659305363222558" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="name_line" translatesAutoresizingMaskIntoConstraints="NO" id="30f-Pd-FU9">
-                                <rect key="frame" x="46" y="294" width="322" height="1"/>
+                                <rect key="frame" x="46" y="250" width="228" height="1"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eOw-CH-D6B"/>
@@ -176,7 +176,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="x04-nR-xTb"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backIndicatorImage="botao_voltar" backIndicatorTransitionMaskImage="botao_voltar" id="WG7-Wb-f2l">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.14509803921568626" green="0.14509803921568626" blue="0.16862745098039217" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
@@ -194,11 +194,11 @@
             <objects>
                 <viewController storyboardIdentifier="Areas" modalPresentationStyle="fullScreen" id="YeR-po-kno" customClass="AreasViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hsv-xC-Hvs">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1A8-xo-SnA">
-                                <rect key="frame" x="114" y="735.5" width="186" height="48"/>
+                                <rect key="frame" x="67" y="388.5" width="186" height="48"/>
                                 <color key="backgroundColor" red="0.99607843139999996" green="0.73725490199999999" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="186" id="Sqt-Uq-VZJ"/>
@@ -219,7 +219,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ntQ-on-DCI">
-                                <rect key="frame" x="54" y="264.5" width="306" height="82"/>
+                                <rect key="frame" x="41.5" y="157.5" width="237" height="44"/>
                                 <fontDescription key="fontDescription" name=".SFNS-Regular" family=".SF NS" pointSize="13"/>
                                 <state key="normal" backgroundImage="botao_atencao_plena"/>
                                 <connections>
@@ -228,28 +228,28 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcm-Ub-itW">
-                                <rect key="frame" x="54" y="468" width="306" height="82"/>
+                                <rect key="frame" x="41.5" y="268" width="237" height="44"/>
                                 <state key="normal" backgroundImage="botao_lazer"/>
                                 <connections>
                                     <action selector="chooseLazer:" destination="YeR-po-kno" eventType="touchUpInside" id="3Ly-PV-quC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yfh-ov-lnt">
-                                <rect key="frame" x="54" y="364" width="306" height="82"/>
+                                <rect key="frame" x="41.5" y="211.5" width="237" height="44"/>
                                 <state key="normal" backgroundImage="botao_pessoas_queridas"/>
                                 <connections>
                                     <action selector="choosePessoasQueridas:" destination="lcS-Br-iiS" eventType="touchUpInside" id="DxY-b6-8m1"/>
                                     <action selector="choosePessoasQueridas:" destination="YeR-po-kno" eventType="touchUpInside" id="VS9-dX-Fy9"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quais áreas vamos cuidar?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.84999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="vCh-zs-79V">
-                                <rect key="frame" x="46" y="118" width="322" height="116"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quais áreas vamos cuidar?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.65000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="vCh-zs-79V">
+                                <rect key="frame" x="0.0" y="74" width="320" height="65.5"/>
                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="34"/>
                                 <color key="textColor" red="0.24313725490196078" green="0.24705882352941178" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hl-iM-4l8">
-                                <rect key="frame" x="54" y="577.5" width="306" height="82"/>
+                                <rect key="frame" x="41.5" y="328" width="237" height="43.5"/>
                                 <state key="normal" backgroundImage="botao_saude"/>
                                 <connections>
                                     <action selector="chooseSaude:" destination="YeR-po-kno" eventType="touchUpInside" id="IqI-SS-9IH"/>
@@ -259,13 +259,13 @@
                         <viewLayoutGuide key="safeArea" id="rR8-Td-hEF"/>
                         <color key="backgroundColor" red="0.98800367119999999" green="0.96098881960000004" blue="0.94510394330000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="rR8-Td-hEF" firstAttribute="trailing" secondItem="vCh-zs-79V" secondAttribute="trailing" constant="46" id="0Bu-IL-LAJ"/>
+                            <constraint firstItem="rR8-Td-hEF" firstAttribute="trailing" secondItem="vCh-zs-79V" secondAttribute="trailing" id="0Bu-IL-LAJ"/>
                             <constraint firstItem="Yfh-ov-lnt" firstAttribute="width" secondItem="hsv-xC-Hvs" secondAttribute="width" multiplier="0.73913" id="0Fg-2s-UDs"/>
                             <constraint firstItem="vCh-zs-79V" firstAttribute="height" secondItem="rR8-Td-hEF" secondAttribute="height" multiplier="0.15" id="2l6-pm-hnz"/>
                             <constraint firstItem="ntQ-on-DCI" firstAttribute="top" secondItem="vCh-zs-79V" secondAttribute="bottom" multiplier="1.13" id="FDv-9E-k5v"/>
                             <constraint firstItem="vcm-Ub-itW" firstAttribute="centerX" secondItem="hsv-xC-Hvs" secondAttribute="centerX" id="NZj-5P-Jpz"/>
                             <constraint firstItem="vcm-Ub-itW" firstAttribute="top" secondItem="Yfh-ov-lnt" secondAttribute="bottom" multiplier="1.05" id="PiJ-hw-RRV"/>
-                            <constraint firstItem="vCh-zs-79V" firstAttribute="leading" secondItem="rR8-Td-hEF" secondAttribute="leading" constant="46" id="QNN-iT-LU2"/>
+                            <constraint firstItem="vCh-zs-79V" firstAttribute="leading" secondItem="rR8-Td-hEF" secondAttribute="leading" id="QNN-iT-LU2"/>
                             <constraint firstItem="2hl-iM-4l8" firstAttribute="height" secondItem="hsv-xC-Hvs" secondAttribute="height" multiplier="0.0915179" id="YPW-h0-M85"/>
                             <constraint firstItem="Yfh-ov-lnt" firstAttribute="centerX" secondItem="hsv-xC-Hvs" secondAttribute="centerX" id="Ynz-CJ-C4q"/>
                             <constraint firstItem="ntQ-on-DCI" firstAttribute="width" secondItem="hsv-xC-Hvs" secondAttribute="width" multiplier="0.73913" id="asg-N4-cxU"/>
