@@ -37,6 +37,7 @@
 		89AA1D4925825E0200137F50 /* DesafiosVazioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AA1D4825825E0200137F50 /* DesafiosVazioView.swift */; };
 		89DD872F2570243200DB1C13 /* SeedDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DD872E2570243200DB1C13 /* SeedDataBase.swift */; };
 		89ED4BB825824CCD00A18B29 /* SiriShortcutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89ED4BB725824CCD00A18B29 /* SiriShortcutsViewController.swift */; };
+		BE4BE73725A74995002AB66E /* IslandsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4BE73625A74995002AB66E /* IslandsViewController.swift */; };
 		BE91BADC257FFF2000CC83D0 /* HealthIsland.sks in Resources */ = {isa = PBXBuildFile; fileRef = BE91BADB257FFF2000CC83D0 /* HealthIsland.sks */; };
 		BE91BB112580163C00CC83D0 /* LeisureIsland.sks in Resources */ = {isa = PBXBuildFile; fileRef = BE91BB102580163C00CC83D0 /* LeisureIsland.sks */; };
 		BE91BB16258016DF00CC83D0 /* LovedsIsland.sks in Resources */ = {isa = PBXBuildFile; fileRef = BE91BB15258016DF00CC83D0 /* LovedsIsland.sks */; };
@@ -124,6 +125,7 @@
 		910E7EF4AA3E30A07B9A2743 /* Pods-Bloomy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bloomy.release.xcconfig"; path = "Target Support Files/Pods-Bloomy/Pods-Bloomy.release.xcconfig"; sourceTree = "<group>"; };
 		94E49591F99200B6D647E55B /* Pods_BloomyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BloomyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25879A5F40F669187A291F0 /* Pods-BloomyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BloomyTests.debug.xcconfig"; path = "Target Support Files/Pods-BloomyTests/Pods-BloomyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BE4BE73625A74995002AB66E /* IslandsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IslandsViewController.swift; sourceTree = "<group>"; };
 		BE91BADB257FFF2000CC83D0 /* HealthIsland.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = HealthIsland.sks; sourceTree = "<group>"; };
 		BE91BB102580163C00CC83D0 /* LeisureIsland.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = LeisureIsland.sks; sourceTree = "<group>"; };
 		BE91BB15258016DF00CC83D0 /* LovedsIsland.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = LovedsIsland.sks; sourceTree = "<group>"; };
@@ -384,6 +386,7 @@
 				89566A552581A8FE00784DF3 /* Intents.intentdefinition */,
 				89249D3E257E9F2F002747A3 /* PopUps */,
 				895637142577C7B800CA8D3B /* Islands */,
+				BE4BE73625A74995002AB66E /* IslandsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -672,6 +675,7 @@
 				7D2BEFE8256D86B0006AFD8C /* User+CoreDataClass.swift in Sources */,
 				BED0529F2576BB470035EB18 /* HealthViewController.swift in Sources */,
 				12D13CF0256C2D130013E511 /* PerfilViewController.swift in Sources */,
+				BE4BE73725A74995002AB66E /* IslandsViewController.swift in Sources */,
 				8928F54B25670DD10089BE0E /* User.swift in Sources */,
 				89566A5B2581A90B00784DF3 /* NotificationsViewController.swift in Sources */,
 				BEC461C8255DABD8003C1D1A /* SceneDelegate.swift in Sources */,

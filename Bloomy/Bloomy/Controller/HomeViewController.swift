@@ -347,4 +347,22 @@ class HomeViewController: UIViewController {
             self.moveCloudsToRight()
         })
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as? IslandsViewController
+        
+        if segue.identifier == "homeToHealth" {
+            destination?.island = IslandManager.shared.getIsland(withName: IslandsNames.health.rawValue)!
+            destination?.sceneName = "HealthIsland"
+        } else if segue.identifier == "homeToLeisure" {
+            destination?.island = IslandManager.shared.getIsland(withName: IslandsNames.leisure.rawValue)!
+            destination?.sceneName = "LeisureIsland"
+        } else if segue.identifier == "homeToMindfulness" {
+            destination?.island = IslandManager.shared.getIsland(withName: IslandsNames.mindfulness.rawValue)!
+            destination?.sceneName = "MindfulnessIsland"
+        } else if segue.identifier == "homeToLoveds" {
+            destination?.island = IslandManager.shared.getIsland(withName: IslandsNames.loveds.rawValue)!
+            destination?.sceneName = "LovedsIsland"
+        }
+    }
 }

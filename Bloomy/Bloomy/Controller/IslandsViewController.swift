@@ -1,30 +1,36 @@
 //
-//  MindfulnessViewController.swift
+//  IslandsViewController.swift
 //  Bloomy
 //
-//  Created by José Henrique Fernandes Silva on 01/12/20.
+//  Created by José Henrique Fernandes Silva on 07/01/21.
 //
 
 import UIKit
 import SpriteKit
 import GameplayKit
 
-class MindfulnessViewController: UIViewController {
+class IslandsViewController: UIViewController {
+    //@IBOutlet weak var challengeDayButton: UIButton!
+    //@IBOutlet weak var doneButton: UIButton!
+    //@IBOutlet weak var feedbackMessage: UIImageView!
     @IBOutlet weak var challengeDayButton: UIButton!
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var feedbackMessage: UIImageView!
     
-    let island = IslandManager.shared.getIsland(withName: IslandsNames.mindfulness.rawValue)!
+    var island = Island()
     var challengeObserver: NSObjectProtocol?
     var doneObserver: NSObjectProtocol?
-    let scene = SKScene(fileNamed: "MindfulnessIsland")
+    var scene = SKScene()
     var animationObserver: NSObjectProtocol?
     var rewardIdToAnimate = ""
     var originalScaleFromIsland = CGAffineTransform()
     var originalFrameFromIsland = CGRect()
+    var sceneName = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        scene = SKScene(fileNamed: sceneName)!
         
         self.setupStyle()
         self.setupSKScene()
@@ -136,7 +142,7 @@ class MindfulnessViewController: UIViewController {
         self.view.addSubview(islandView)
         
         if let view = islandView as SKView? {
-            scene!.scaleMode = .aspectFill
+            scene.scaleMode = .aspectFill
             self.showRewards()
             view.presentScene(scene)
             view.ignoresSiblingOrder = true
@@ -144,7 +150,7 @@ class MindfulnessViewController: UIViewController {
     }
     
     func setupStyle() {
-        self.title = IslandsNames.mindfulness.rawValue
+        self.title = island.name
         // Ajusta o tamaho do titulo do botão
         self.challengeDayButton.titleLabel?.adjustsFontSizeToFitWidth = true
         self.doneButton.titleLabel?.adjustsFontSizeToFitWidth = true
@@ -212,13 +218,13 @@ class MindfulnessViewController: UIViewController {
     func showRewards() {
         let rewards = IslandManager.shared.getRewards(fromIsland: self.island.name!)!
         for reward in rewards where reward.isShown {
-            let node = self.scene!.childNode(withName: "\(reward.id!)") as? SKSpriteNode
+            let node = self.scene.childNode(withName: "\(reward.id!)") as? SKSpriteNode
             node?.alpha = 1
         }
     }
     
     @objc func rewardAnimation() {
-        let node = self.scene?.childNode(withName: self.rewardIdToAnimate) as? SKSpriteNode
+        let node = self.scene.childNode(withName: self.rewardIdToAnimate) as? SKSpriteNode
         
         let nodeSize = node?.size
         let positionXInitial = node?.position.x

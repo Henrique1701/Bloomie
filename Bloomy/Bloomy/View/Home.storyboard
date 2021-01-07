@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jV2-bX-FxB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jV2-bX-FxB">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -64,7 +64,7 @@
                                                 </constraints>
                                                 <state key="normal" image="botao_ilha_saude"/>
                                                 <connections>
-                                                    <segue destination="PHw-wF-UXq" kind="show" id="RKa-s8-4c2"/>
+                                                    <segue destination="8k1-Kb-qAh" kind="show" identifier="homeToHealth" id="3Ps-Mh-4gc"/>
                                                 </connections>
                                             </button>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OU3-jK-IzX">
@@ -73,7 +73,7 @@
                                                 </constraints>
                                                 <state key="normal" image="botao_ilha_saude"/>
                                                 <connections>
-                                                    <segue destination="PHw-wF-UXq" kind="show" id="fDF-zQ-dhp"/>
+                                                    <segue destination="8k1-Kb-qAh" kind="show" identifier="homeToHealth" id="Ikw-OA-Psf"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -86,7 +86,7 @@
                                                 </constraints>
                                                 <state key="normal" image="botao_ilha_lazer"/>
                                                 <connections>
-                                                    <segue destination="PfX-76-McD" kind="show" id="dWC-oI-uFe"/>
+                                                    <segue destination="8k1-Kb-qAh" kind="show" identifier="homeToLeisure" id="rgu-LE-js8"/>
                                                 </connections>
                                             </button>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qEC-eP-JPs">
@@ -95,7 +95,7 @@
                                                 </constraints>
                                                 <state key="normal" image="botao_ilha_lazer"/>
                                                 <connections>
-                                                    <segue destination="PfX-76-McD" kind="show" id="27e-V3-Vif"/>
+                                                    <segue destination="8k1-Kb-qAh" kind="show" identifier="homeToLeisure" id="oCh-if-kTA"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -108,7 +108,7 @@
                                                 </constraints>
                                                 <state key="normal" image="botao_ilha_atencao_plena"/>
                                                 <connections>
-                                                    <segue destination="rmV-B3-mhM" kind="show" id="J2b-CO-2Tp"/>
+                                                    <segue destination="8k1-Kb-qAh" kind="show" identifier="homeToMindfulness" id="Xm8-0N-McA"/>
                                                 </connections>
                                             </button>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qX8-qc-3jX">
@@ -117,7 +117,7 @@
                                                 </constraints>
                                                 <state key="normal" image="botao_ilha_atencao_plena"/>
                                                 <connections>
-                                                    <segue destination="rmV-B3-mhM" kind="show" id="KhC-L2-CGc"/>
+                                                    <segue destination="8k1-Kb-qAh" kind="show" identifier="homeToMindfulness" id="Vn8-ci-YPc"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -130,7 +130,7 @@
                                                 </constraints>
                                                 <state key="normal" image="botao_ilha_pessoas_queridas"/>
                                                 <connections>
-                                                    <segue destination="4zx-73-c06" kind="show" id="o7O-ez-KU1"/>
+                                                    <segue destination="8k1-Kb-qAh" kind="show" identifier="homeToLoveds" id="xyq-TJ-BkT"/>
                                                 </connections>
                                             </button>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAO-tD-T8b">
@@ -139,7 +139,7 @@
                                                 </constraints>
                                                 <state key="normal" image="botao_ilha_pessoas_queridas"/>
                                                 <connections>
-                                                    <segue destination="4zx-73-c06" kind="show" id="GHv-hy-UN0"/>
+                                                    <segue destination="8k1-Kb-qAh" kind="show" identifier="homeToLoveds" id="KBd-hJ-ySm"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -208,45 +208,15 @@
             </objects>
             <point key="canvasLocation" x="-178" y="134"/>
         </scene>
-        <!--Mindfulness-->
-        <scene sceneID="k6n-9G-jhR">
+        <!--Islands-->
+        <scene sceneID="bbM-1X-os7">
             <objects>
-                <viewControllerPlaceholder storyboardName="Islands" referencedIdentifier="Mindfulness" id="rmV-B3-mhM" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="eZw-Y6-7qX"/>
+                <viewControllerPlaceholder storyboardName="Islands" referencedIdentifier="Islands" id="8k1-Kb-qAh" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="cEM-J9-azH"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CTU-tw-sAf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="glF-kS-mpw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-86" y="601"/>
-        </scene>
-        <!--Leisure-->
-        <scene sceneID="jFK-ip-s5v">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Islands" referencedIdentifier="Leisure" id="PfX-76-McD" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="yiN-gz-Osx"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x7Q-Sk-vvU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-269" y="601"/>
-        </scene>
-        <!--Loveds-->
-        <scene sceneID="NHm-po-oRv">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Islands" referencedIdentifier="Loveds" id="4zx-73-c06" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="5Zs-Kx-t60"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Hl2-oQ-Wbl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="69" y="601"/>
-        </scene>
-        <!--Health-->
-        <scene sceneID="ipR-xF-MsX">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Islands" referencedIdentifier="Health" id="PHw-wF-UXq" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="OQX-Hw-x9E"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="y3u-n9-a4w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-428" y="601"/>
+            <point key="canvasLocation" x="-178" y="565"/>
         </scene>
         <!--TelaPerfil-->
         <scene sceneID="E0m-Nt-rYM">
@@ -297,10 +267,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="fDF-zQ-dhp"/>
-        <segue reference="o7O-ez-KU1"/>
-        <segue reference="dWC-oI-uFe"/>
-        <segue reference="J2b-CO-2Tp"/>
+        <segue reference="KBd-hJ-ySm"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="botao_back" width="32" height="39"/>

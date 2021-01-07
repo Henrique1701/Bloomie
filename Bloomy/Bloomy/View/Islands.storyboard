@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -283,10 +284,79 @@
         <!--ChallengePopUp-->
         <scene sceneID="QMl-Un-mdG">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="ChallengePopUp" storyboardName="PopUps" referencedIdentifier="ChallengePopUp" id="O0z-BR-KUJ" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="ChallengePopUp" storyboardName="PopUps" referencedIdentifier="ChallengePopUp" id="O0z-BR-KUJ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="cZ1-td-6pe"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Ot-jZ-b9o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1865.217391304348" y="413.83928571428572"/>
+        </scene>
+        <!--Islands View Controller-->
+        <scene sceneID="hGF-m3-24Y">
+            <objects>
+                <viewController storyboardIdentifier="Islands" id="WHu-oe-GsD" customClass="IslandsViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tXy-Zn-dcv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ivo-yh-sxt">
+                                <rect key="frame" x="111.5" y="773" width="191" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ivo-yh-sxt" secondAttribute="height" multiplier="191:48" priority="750" id="pgY-Uf-Frj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
+                                <inset key="contentEdgeInsets" minX="37" minY="16" maxX="37" maxY="16"/>
+                                <state key="normal" title="missão do dia" backgroundImage="botao_desafio_do_dia">
+                                    <color key="titleColor" red="0.2077606618" green="0.20445087549999999" blue="0.22035497430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="O0z-BR-KUJ" kind="presentation" identifier="toChallengePopUpViewControllerSegue" id="hLn-PJ-Ebv"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NTA-Fy-qrN">
+                                <rect key="frame" x="109.5" y="773" width="195" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="NTA-Fy-qrN" secondAttribute="height" multiplier="191:48" priority="750" id="nLf-HY-yLM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
+                                <inset key="contentEdgeInsets" minX="37" minY="16" maxX="37" maxY="16"/>
+                                <state key="normal" title="concluir missão" backgroundImage="botao_desafio_do_dia">
+                                    <color key="titleColor" red="0.2077606618" green="0.20445087549999999" blue="0.22035497430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="KCk-Pt-V2e" kind="presentation" identifier="toDonePopUpViewControllerSegue" id="vqp-se-Olx"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="feedback_missao_aceita" translatesAutoresizingMaskIntoConstraints="NO" id="g7S-xT-IYb">
+                                <rect key="frame" x="139.5" y="675" width="165" height="98"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ujv-VC-Lmf"/>
+                        <color key="backgroundColor" name="cor_fundo"/>
+                        <constraints>
+                            <constraint firstItem="Ivo-yh-sxt" firstAttribute="height" secondItem="ujv-VC-Lmf" secondAttribute="height" multiplier="0.0586797" id="0rq-Dg-9D4"/>
+                            <constraint firstItem="g7S-xT-IYb" firstAttribute="width" secondItem="tXy-Zn-dcv" secondAttribute="width" multiplier="0.398551" id="7EL-q3-dUd"/>
+                            <constraint firstItem="Ivo-yh-sxt" firstAttribute="centerX" secondItem="tXy-Zn-dcv" secondAttribute="centerX" id="CdB-e0-mn3"/>
+                            <constraint firstItem="ujv-VC-Lmf" firstAttribute="bottom" secondItem="NTA-Fy-qrN" secondAttribute="bottom" multiplier="1.05" id="ELB-8Z-8ph"/>
+                            <constraint firstItem="NTA-Fy-qrN" firstAttribute="height" secondItem="tXy-Zn-dcv" secondAttribute="height" multiplier="0.0535714" id="EWH-nU-DKe"/>
+                            <constraint firstItem="Ivo-yh-sxt" firstAttribute="width" secondItem="ujv-VC-Lmf" secondAttribute="width" multiplier="0.461353" id="PdU-Bl-yea"/>
+                            <constraint firstItem="NTA-Fy-qrN" firstAttribute="width" secondItem="tXy-Zn-dcv" secondAttribute="width" multiplier="0.471014" id="VnZ-ff-luf"/>
+                            <constraint firstItem="g7S-xT-IYb" firstAttribute="trailing" secondItem="NTA-Fy-qrN" secondAttribute="trailing" id="fEd-Ov-XCI"/>
+                            <constraint firstItem="g7S-xT-IYb" firstAttribute="height" secondItem="tXy-Zn-dcv" secondAttribute="height" multiplier="0.109375" id="g1t-a2-CKi"/>
+                            <constraint firstItem="ujv-VC-Lmf" firstAttribute="bottom" secondItem="Ivo-yh-sxt" secondAttribute="bottom" multiplier="1.05" id="hZJ-31-tQy"/>
+                            <constraint firstItem="NTA-Fy-qrN" firstAttribute="centerX" secondItem="tXy-Zn-dcv" secondAttribute="centerX" id="sFf-aX-dom"/>
+                            <constraint firstItem="Ivo-yh-sxt" firstAttribute="top" secondItem="g7S-xT-IYb" secondAttribute="bottom" id="xOp-R4-3di"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="challengeDayButton" destination="Ivo-yh-sxt" id="XVZ-uO-jxd"/>
+                        <outlet property="doneButton" destination="NTA-Fy-qrN" id="u95-K3-yj1"/>
+                        <outlet property="feedbackMessage" destination="g7S-xT-IYb" id="9Qo-cB-HoF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jbI-27-Qpf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1296" y="17"/>
         </scene>
         <!--DonePopUp-->
         <scene sceneID="zSa-II-sXZ">
@@ -298,11 +368,14 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="6Y2-Wj-aUd"/>
-        <segue reference="vMT-eP-tGl"/>
+        <segue reference="vqp-se-Olx"/>
+        <segue reference="hLn-PJ-Ebv"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="botao_desafio_do_dia" width="191" height="48"/>
         <image name="feedback_missao_aceita" width="164.5" height="97.5"/>
+        <namedColor name="cor_fundo">
+            <color red="0.99599999189376831" green="0.96100002527236938" blue="0.94499999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
