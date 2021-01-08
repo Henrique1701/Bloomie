@@ -252,7 +252,7 @@
                     <tabBarItem key="tabBarItem" title="Missões" image="tabBarItem:14f-Z1-41G:image" id="14f-Z1-41G"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1157" y="-205"/>
+            <point key="canvasLocation" x="1271" y="-206"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="dMZ-ON-ptP">

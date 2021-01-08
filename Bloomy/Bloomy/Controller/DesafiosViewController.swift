@@ -12,23 +12,14 @@ class DesafiosViewController: UIViewController {
 
     @IBOutlet weak var contentView: UIView!
     
+    // Identificar quais desafios foram aceitos
     lazy var challenges:[Challenge] = getAcceptedChallenges()
     
-    // Texto dos desafios
+    // Identificar o texto dos desafios aceitos
     lazy var dataSource = getChallengeSummary()
-    var dataSourceReload : [String] = []
-//    let dataSource = ["Atenção Plena",
-//                      "Pessoas Queridas",
-//                      "Lazer",
-//                      "Saúde"]
-    
-    
     
     // Imagem dos desafios
-    let dataSourceImage: [UIImage] = [UIImage(imageLiteralResourceName: "card_atencao_plena"),
-                                      UIImage(imageLiteralResourceName: "card_pessoas_queridas"),
-                                      UIImage(imageLiteralResourceName: "card_lazer"),
-                                      UIImage(imageLiteralResourceName: "card_saude")]
+    lazy var dataSourceImage: [UIImage] = getChallengesIslandName()
     
     var currentViewControllerIndex = 0
    
@@ -77,9 +68,8 @@ class DesafiosViewController: UIViewController {
         pageViewController.setViewControllers([startingViewController], direction: .forward, animated: true)
     }
     
-    
     func detailViewControllerAt(index: Int) -> DesafiosDataViewController? {
-        //Garantir que o Page view controller não ultrapasse o limite de páginas
+        // Garantir que o Page view controller não ultrapasse o limite de páginas
         if (index >= dataSource.count || dataSource.isEmpty) {
             return nil
         }
@@ -108,9 +98,9 @@ class DesafiosViewController: UIViewController {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.topItem?.title = ""
         self.navigationController?.navigationBar.layoutIfNeeded()
-        //self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Poppins-Regular", size: 18) ?? UIFont()]
     }
     
+    // Converte o nome da ilha para o nome da imagem do card correspondente à ilha
     var islandNameToImage: [String:String] = [
         "Atenção Plena": "card_atencao_plena",
         "Saúde": "card_saude",
@@ -118,8 +108,7 @@ class DesafiosViewController: UIViewController {
         "Lazer": "card_lazer"
     ]
 
-    //var challenges = getAcceptedChallenges()
-
+    // Retorna do Core Data quais são os challenges aceitos que ainda não foram concluídos
     func getAcceptedChallenges() -> [Challenge] {
         var acceptedChallenges: [Challenge] = []
         for island in UserManager.shared.getIslands()! {
@@ -132,6 +121,7 @@ class DesafiosViewController: UIViewController {
         return acceptedChallenges
     }
     
+    //Retorna o texto dos challenges
     func getChallengeSummary() -> [String] {
         var challengeSummary: [String] = []
         for challenge in challenges {
@@ -140,15 +130,14 @@ class DesafiosViewController: UIViewController {
         return challengeSummary
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        dataSourceReload = getChallengeSummary()
-        dataSource = dataSourceReload
+    // Retorna os nomes das imagens correspondente à ilha de cada challenge
+    func getChallengesIslandName() -> [UIImage] {
+        var challengeIslandName: [UIImage] = []
+        for challenge in challenges {
+            challengeIslandName.append(UIImage(imageLiteralResourceName: islandNameToImage[challenge.challengeToIsland!.name!]!))
+        }
+        return challengeIslandName
     }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        dataSource = []
-    }
-
 }
 
 extension DesafiosViewController: UIPageViewControllerDelegate, UIPageViewControllerDataSource {
@@ -200,4 +189,3 @@ extension DesafiosViewController: UIPageViewControllerDelegate, UIPageViewContro
     }
     
 }
-

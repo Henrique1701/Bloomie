@@ -14,6 +14,7 @@ class DesafiosDataViewController: UIViewController {
     @IBOutlet weak var summaryLabel: UILabel!
     @IBOutlet weak var concluirButtonOutlet: UIButton!
     @IBAction func concluirButton(_ sender: Any) {
+        
     }
     
     //Global variables
@@ -26,7 +27,7 @@ class DesafiosDataViewController: UIViewController {
         super.viewDidLoad()
         summaryLabel.text = summaryText
         card.image = cardImage
-        
+        card.clipsToBounds = true
+        card.layer.cornerRadius = 20
     }
 }
-
