@@ -36,16 +36,16 @@ class HomeViewController: UIViewController {
     let islandsManager = IslandManager.shared
     var stopAnimation = false
     let islands = UserManager.shared.getIslands()
-    private var quantityIslands: Int?
+    var quantityIslands: Int = 4
     
     // MARK: View Functions
     override func viewDidLoad() {
         super.viewDidLoad()
         
         MusicPlayer.shared.startBackgroundMusic(backgroundMusicFileName: "background")
-
-        self.quantityIslands = islands!.count
-        setUpIslandsDisplay(quantityIslands: self.quantityIslands!)
+        
+        quantityIslands = UserDefaults.standard.integer(forKey: "quantityIslands")
+        setUpIslandsDisplay(quantityIslands: self.quantityIslands)
         
         if (userManager.getLastSeen() == nil) {
             setDailyChallenges()
@@ -59,6 +59,8 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         // Esconde a navigation bar de todas as telas
         self.navigationController?.setNavigationBarHidden(true, animated: false)
+        
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {

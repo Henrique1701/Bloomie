@@ -176,7 +176,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="x04-nR-xTb"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backIndicatorImage="botao_voltar" backIndicatorTransitionMaskImage="botao_voltar" id="WG7-Wb-f2l">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.14509803921568626" green="0.14509803921568626" blue="0.16862745098039217" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
@@ -215,7 +215,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="createIslands:" destination="YeR-po-kno" eventType="touchUpInside" id="85q-Vs-Uyt"/>
-                                    <segue destination="1vZ-7t-4G2" kind="show" id="0zo-Wt-b19"/>
+                                    <segue destination="1vZ-7t-4G2" kind="show" identifier="toHome" id="0zo-Wt-b19"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ntQ-on-DCI">
