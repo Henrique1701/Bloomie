@@ -60,7 +60,7 @@
                                 <rect key="frame" x="41.5" y="143.5" width="331" height="698.5"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summary" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8fo-6q-5J7">
-                                <rect key="frame" x="60" y="437.5" width="294" height="31"/>
+                                <rect key="frame" x="60" y="369.5" width="294" height="327"/>
                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -90,10 +90,11 @@
                         <color key="backgroundColor" red="0.98800367119999999" green="0.96098881960000004" blue="0.94510394330000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="jck-jC-yjZ" firstAttribute="bottom" secondItem="yEx-zk-WcM" secondAttribute="bottom" constant="-32" id="BHe-Tp-iFT"/>
-                            <constraint firstItem="8fo-6q-5J7" firstAttribute="centerY" secondItem="KsB-g1-xa1" secondAttribute="centerY" id="ERw-Bq-nwd"/>
+                            <constraint firstItem="8fo-6q-5J7" firstAttribute="centerY" secondItem="KsB-g1-xa1" secondAttribute="centerY" constant="80" id="ERw-Bq-nwd"/>
                             <constraint firstItem="yEx-zk-WcM" firstAttribute="centerY" secondItem="BNU-NM-852" secondAttribute="centerY" multiplier="1.1" id="L3i-4A-zox"/>
                             <constraint firstItem="yEx-zk-WcM" firstAttribute="centerX" secondItem="BNU-NM-852" secondAttribute="centerX" id="LM7-ou-vTq"/>
                             <constraint firstItem="8fo-6q-5J7" firstAttribute="leading" secondItem="KsB-g1-xa1" secondAttribute="leading" constant="60" id="QcS-fl-iFA"/>
+                            <constraint firstItem="8fo-6q-5J7" firstAttribute="height" secondItem="KsB-g1-xa1" secondAttribute="height" multiplier="0.4" id="XpS-K8-PDV"/>
                             <constraint firstItem="yEx-zk-WcM" firstAttribute="width" secondItem="BNU-NM-852" secondAttribute="width" multiplier="0.8" id="p9d-3O-qs2"/>
                             <constraint firstItem="yEx-zk-WcM" firstAttribute="height" secondItem="BNU-NM-852" secondAttribute="height" multiplier="0.78" id="s9n-iz-DG2"/>
                             <constraint firstItem="jck-jC-yjZ" firstAttribute="centerX" secondItem="BNU-NM-852" secondAttribute="centerX" id="w7m-St-Atw"/>
