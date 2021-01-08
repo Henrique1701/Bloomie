@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7UQ-yZ-4gm">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Bold.ttf">
+            <string>Poppins-Bold</string>
+        </array>
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Missões-->
+        <scene sceneID="6nD-KI-OBi">
+            <objects>
+                <viewController storyboardIdentifier="DesafiosViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7UQ-yZ-4gm" customClass="DesafiosViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yFV-Ur-e8E">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0U4-AW-goP">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rl5-d1-Ucm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0U4-AW-goP" firstAttribute="leading" secondItem="rl5-d1-Ucm" secondAttribute="leading" id="dlX-wb-1fD"/>
+                            <constraint firstItem="0U4-AW-goP" firstAttribute="top" secondItem="yFV-Ur-e8E" secondAttribute="top" id="fp5-vv-aFz"/>
+                            <constraint firstAttribute="bottom" secondItem="0U4-AW-goP" secondAttribute="bottom" id="mXI-mR-frF"/>
+                            <constraint firstItem="0U4-AW-goP" firstAttribute="trailing" secondItem="rl5-d1-Ucm" secondAttribute="trailing" id="yMm-2x-KcD"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Missões" image="icone_acao" id="4Ks-mW-MNb"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="contentView" destination="0U4-AW-goP" id="tn0-UE-cfS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dIr-4p-Wbv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="60.869565217391312" y="142.63392857142856"/>
+        </scene>
+        <!--Desafios Data View Controller-->
+        <scene sceneID="wjj-i8-CEt">
+            <objects>
+                <viewController storyboardIdentifier="DesafiosDataViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lDG-oy-4Cv" customClass="DesafiosDataViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BNU-NM-852">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="card_atencao_plena" translatesAutoresizingMaskIntoConstraints="NO" id="yEx-zk-WcM">
+                                <rect key="frame" x="41.5" y="143.5" width="331" height="698.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summary" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8fo-6q-5J7">
+                                <rect key="frame" x="60" y="437.5" width="294" height="31"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jck-jC-yjZ">
+                                <rect key="frame" x="114" y="762" width="186" height="48"/>
+                                <color key="backgroundColor" red="0.99607843139999996" green="0.73725490199999999" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="186" id="42Q-st-Sx6"/>
+                                    <constraint firstAttribute="height" constant="48" id="l0Q-nZ-ZgM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="20"/>
+                                <state key="normal" title="concluir">
+                                    <color key="titleColor" red="0.1450980392" green="0.1450980392" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="24"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="concluirButton:" destination="lDG-oy-4Cv" eventType="touchUpInside" id="BZC-1H-AfB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KsB-g1-xa1"/>
+                        <color key="backgroundColor" red="0.98800367119999999" green="0.96098881960000004" blue="0.94510394330000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="jck-jC-yjZ" firstAttribute="bottom" secondItem="yEx-zk-WcM" secondAttribute="bottom" constant="-32" id="BHe-Tp-iFT"/>
+                            <constraint firstItem="8fo-6q-5J7" firstAttribute="centerY" secondItem="KsB-g1-xa1" secondAttribute="centerY" id="ERw-Bq-nwd"/>
+                            <constraint firstItem="yEx-zk-WcM" firstAttribute="centerY" secondItem="BNU-NM-852" secondAttribute="centerY" multiplier="1.1" id="L3i-4A-zox"/>
+                            <constraint firstItem="yEx-zk-WcM" firstAttribute="centerX" secondItem="BNU-NM-852" secondAttribute="centerX" id="LM7-ou-vTq"/>
+                            <constraint firstItem="8fo-6q-5J7" firstAttribute="leading" secondItem="KsB-g1-xa1" secondAttribute="leading" constant="60" id="QcS-fl-iFA"/>
+                            <constraint firstItem="yEx-zk-WcM" firstAttribute="width" secondItem="BNU-NM-852" secondAttribute="width" multiplier="0.8" id="p9d-3O-qs2"/>
+                            <constraint firstItem="yEx-zk-WcM" firstAttribute="height" secondItem="BNU-NM-852" secondAttribute="height" multiplier="0.78" id="s9n-iz-DG2"/>
+                            <constraint firstItem="jck-jC-yjZ" firstAttribute="centerX" secondItem="BNU-NM-852" secondAttribute="centerX" id="w7m-St-Atw"/>
+                            <constraint firstItem="KsB-g1-xa1" firstAttribute="trailing" secondItem="8fo-6q-5J7" secondAttribute="trailing" constant="60" id="weO-tX-T3M"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="card" destination="yEx-zk-WcM" id="e4G-fF-cYv"/>
+                        <outlet property="concluirButtonOutlet" destination="jck-jC-yjZ" id="PdK-WN-GII"/>
+                        <outlet property="summaryLabel" destination="8fo-6q-5J7" id="uLM-gT-39o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jYB-Sr-vpE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="704.34782608695662" y="142.63392857142856"/>
+        </scene>
+        <!--Desafios Page View Controller-->
+        <scene sceneID="xIZ-7F-cUg">
+            <objects>
+                <pageViewController storyboardIdentifier="DesafiosPageViewController" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="NfX-RE-Feu" customClass="DesafiosPageViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hfq-94-WSn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1357" y="143"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="card_atencao_plena" width="534" height="846.5"/>
+        <image name="icone_acao" width="30" height="30"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
