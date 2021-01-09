@@ -29,6 +29,13 @@ class EditIslandsViewController: UIViewController {
         self.configureSelectedIslandButtons()
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        // Salva no User Default a quantidade de ilhas selecionadas
+        defaults.set(selectedCount, forKey: "quantityIslands")
+
+        defaults.set(true, forKey: "islandsChange")
+    }
+    
     func setupNavigationController() {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -136,5 +143,4 @@ class EditIslandsViewController: UIViewController {
             }
         }
     }
-    
 }

@@ -42,6 +42,8 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //self.hideIsland()
+        
         MusicPlayer.shared.startBackgroundMusic(backgroundMusicFileName: "background")
         
         quantityIslands = UserDefaults.standard.integer(forKey: "quantityIslands")
@@ -60,7 +62,12 @@ class HomeViewController: UIViewController {
         // Esconde a navigation bar de todas as telas
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         
-        
+        /*
+        if UserDefaults.standard.bool(forKey: "islandsChange") {
+            self.hideIsland()
+            self.updateIslandsView()
+        }
+        */
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -74,6 +81,40 @@ class HomeViewController: UIViewController {
         
         // Para a animação das nuvens
         self.stopAnimation = true
+    }
+    
+    @objc func updateIslandsView() {
+        print("----------------")
+        print("---- Entrou ----")
+        print("---- Update ----")
+        print("----------------")
+        DispatchQueue.main.async {
+            switch UserDefaults.standard.integer(forKey: "quantityIslands") {
+            case 1:
+                self.setUpDisplayOneIsland()
+            case 2:
+                self.setUpDisplayTwoIsland()
+            case 3:
+                self.setUpDisplayThreeIsland()
+            default: // 4
+                self.setUpDisplayFourIsland()
+            }
+        }
+    }
+    
+    func hideIsland() {
+        self.healthStackView.isHidden = true
+        self.healthLeftButton.isHidden = true
+        self.healthRightButton.isHidden = true
+        self.mindfulnessStackView.isHidden = true
+        self.mindfulnessLeftButton.isHidden = true
+        self.mindfulnessRightButton.isHidden = true
+        self.lovedsStackView.isHidden = true
+        self.lovedsLeftButton.isHidden = true
+        self.lovedsRightButton.isHidden = true
+        self.leisureStackView.isHidden = true
+        self.leisureLeftButton.isHidden = true
+        self.leisureRightButton.isHidden = true
     }
     
     func isSameDay(userDate: Date, actualDate: Date) -> Bool {
