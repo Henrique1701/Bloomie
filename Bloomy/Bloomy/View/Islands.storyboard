@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -28,11 +28,11 @@
             <objects>
                 <viewController storyboardIdentifier="Islands" id="WHu-oe-GsD" customClass="IslandsViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tXy-Zn-dcv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ivo-yh-sxt">
-                                <rect key="frame" x="111.5" y="773" width="191" height="48"/>
+                                <rect key="frame" x="101" y="596" width="173" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Ivo-yh-sxt" secondAttribute="height" multiplier="191:48" priority="750" id="pgY-Uf-Frj"/>
                                 </constraints>
@@ -46,7 +46,7 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NTA-Fy-qrN">
-                                <rect key="frame" x="109.5" y="773" width="195" height="48"/>
+                                <rect key="frame" x="99" y="599.5" width="177" height="35.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="NTA-Fy-qrN" secondAttribute="height" multiplier="191:48" priority="750" id="nLf-HY-yLM"/>
                                 </constraints>
@@ -60,7 +60,10 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="feedback_missao_aceita" translatesAutoresizingMaskIntoConstraints="NO" id="g7S-xT-IYb">
-                                <rect key="frame" x="139.5" y="675" width="165" height="98"/>
+                                <rect key="frame" x="126.5" y="523" width="149.5" height="73"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="feedback_missao_concluida" translatesAutoresizingMaskIntoConstraints="NO" id="i8n-SR-4Cn">
+                                <rect key="frame" x="88" y="509" width="217.5" height="95"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ujv-VC-Lmf"/>
@@ -68,22 +71,27 @@
                         <constraints>
                             <constraint firstItem="Ivo-yh-sxt" firstAttribute="height" secondItem="ujv-VC-Lmf" secondAttribute="height" multiplier="0.0586797" id="0rq-Dg-9D4"/>
                             <constraint firstItem="g7S-xT-IYb" firstAttribute="width" secondItem="tXy-Zn-dcv" secondAttribute="width" multiplier="0.398551" id="7EL-q3-dUd"/>
+                            <constraint firstItem="Ivo-yh-sxt" firstAttribute="top" secondItem="i8n-SR-4Cn" secondAttribute="bottom" multiplier="0.985" constant="1" id="7Oc-q5-SkD"/>
                             <constraint firstItem="Ivo-yh-sxt" firstAttribute="centerX" secondItem="tXy-Zn-dcv" secondAttribute="centerX" id="CdB-e0-mn3"/>
                             <constraint firstItem="ujv-VC-Lmf" firstAttribute="bottom" secondItem="NTA-Fy-qrN" secondAttribute="bottom" multiplier="1.05" id="ELB-8Z-8ph"/>
                             <constraint firstItem="NTA-Fy-qrN" firstAttribute="height" secondItem="tXy-Zn-dcv" secondAttribute="height" multiplier="0.0535714" id="EWH-nU-DKe"/>
+                            <constraint firstItem="i8n-SR-4Cn" firstAttribute="height" secondItem="tXy-Zn-dcv" secondAttribute="height" multiplier="0.142857" id="HfT-f7-90J"/>
                             <constraint firstItem="Ivo-yh-sxt" firstAttribute="width" secondItem="ujv-VC-Lmf" secondAttribute="width" multiplier="0.461353" id="PdU-Bl-yea"/>
                             <constraint firstItem="NTA-Fy-qrN" firstAttribute="width" secondItem="tXy-Zn-dcv" secondAttribute="width" multiplier="0.471014" id="VnZ-ff-luf"/>
                             <constraint firstItem="g7S-xT-IYb" firstAttribute="trailing" secondItem="NTA-Fy-qrN" secondAttribute="trailing" id="fEd-Ov-XCI"/>
                             <constraint firstItem="g7S-xT-IYb" firstAttribute="height" secondItem="tXy-Zn-dcv" secondAttribute="height" multiplier="0.109375" id="g1t-a2-CKi"/>
                             <constraint firstItem="ujv-VC-Lmf" firstAttribute="bottom" secondItem="Ivo-yh-sxt" secondAttribute="bottom" multiplier="1.05" id="hZJ-31-tQy"/>
                             <constraint firstItem="NTA-Fy-qrN" firstAttribute="centerX" secondItem="tXy-Zn-dcv" secondAttribute="centerX" id="sFf-aX-dom"/>
+                            <constraint firstItem="i8n-SR-4Cn" firstAttribute="width" secondItem="tXy-Zn-dcv" secondAttribute="width" multiplier="0.57971" id="x3K-X4-TPm"/>
                             <constraint firstItem="Ivo-yh-sxt" firstAttribute="top" secondItem="g7S-xT-IYb" secondAttribute="bottom" id="xOp-R4-3di"/>
+                            <constraint firstItem="NTA-Fy-qrN" firstAttribute="trailing" secondItem="i8n-SR-4Cn" secondAttribute="trailing" multiplier="0.9" constant="1" id="zOM-5I-Kra"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="acceptedFeedbackMessage" destination="g7S-xT-IYb" id="9Qo-cB-HoF"/>
                         <outlet property="challengeDayButton" destination="Ivo-yh-sxt" id="XVZ-uO-jxd"/>
                         <outlet property="doneButton" destination="NTA-Fy-qrN" id="u95-K3-yj1"/>
-                        <outlet property="feedbackMessage" destination="g7S-xT-IYb" id="9Qo-cB-HoF"/>
+                        <outlet property="doneFeedbackMessage" destination="i8n-SR-4Cn" id="aHd-f6-O0j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jbI-27-Qpf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -102,6 +110,7 @@
     <resources>
         <image name="botao_desafio_do_dia" width="191" height="48"/>
         <image name="feedback_missao_aceita" width="164.5" height="97.5"/>
+        <image name="feedback_missao_concluida" width="191" height="88"/>
         <namedColor name="cor_fundo">
             <color red="0.99599999189376831" green="0.96100002527236938" blue="0.94499999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
