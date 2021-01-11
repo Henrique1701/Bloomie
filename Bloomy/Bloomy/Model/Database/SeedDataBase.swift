@@ -148,15 +148,15 @@ struct SeedDataBase {
 struct Challenges {
     
     let mindfulnessChallenges = [
-        ["ID": "M0", "Summary": "Pare por um momento e observe os sons aos seu redor. O que você consegue ouvir?"],
-        ["ID": "M1", "Summary": "Durante alguma das suas refeições de hoje, preste atenção apenas no que você está comendo. Sem celular, sem televisão. Saboreie cada pedaço com atenção plena."],
-        ["ID": "M2", "Summary": "Observe a sua respiração. Note o ar entrando e saindo dos seus pulmões. Observe como você está se sentindo."],
-        ["ID": "M3", "Summary": "Olhe ao seu redor e preste atenção nos detalhes das coisas que você vê. Quais cores, formas e textura você nota?"],
-        ["ID": "M4", "Summary": "Feche os olhos e imagine que você está escaneando o seu corpo, da cabeça até os pés. Preste atenção nas sensações. Relaxe as áreas do seu corpo que você sentir que estão tensionadas."],
-        ["ID": "M5", "Summary": "Respire profundamente, levando o ar para a sua barriga."],
-        ["ID": "M6", "Summary": "Quando você for escovar os dentes hoje, preste atenção no seu corpo e nos movimentos que você faz. Gentilmente retorne a sua atenção quando você notar que se distraiu. "],
-        ["ID": "M7", "Summary": "Preste atenção em um objeto ao seu redor e o observe como se o estivesse vendo pela primeira vez."],
-        ["ID": "M8", "Summary": "Note a beleza de algo ao seu redor. Pode ser algo da natureza, uma pessoa, um objeto, uma música..."]
+        ["ID": "M0", "Summary": "Pare por um momento e observe os sons aos seu redor. O que você consegue ouvir?"], //ok
+        ["ID": "M1", "Summary": "Durante alguma das suas refeições de hoje, preste atenção apenas no que você está comendo. Sem celular, sem televisão. Saboreie cada pedaço com atenção plena."], //ok
+        ["ID": "M2", "Summary": "Observe a sua respiração. Note o ar entrando e saindo dos seus pulmões. Observe como você está se sentindo."], //ok
+        ["ID": "M3", "Summary": "Olhe ao seu redor e preste atenção nos detalhes das coisas que você vê. Quais cores, formas e textura você nota?"], //ok
+        ["ID": "M4", "Summary": "Feche os olhos e imagine que você está escaneando o seu corpo, da cabeça até os pés. Preste atenção nas sensações. Relaxe as áreas do seu corpo que você sentir que estão tensionadas."], //ok
+        ["ID": "M5", "Summary": "Respire profundamente, levando o ar para a sua barriga."], //ok
+        ["ID": "M6", "Summary": "Quando você for escovar os dentes hoje, preste atenção no seu corpo e nos movimentos que você faz. Gentilmente retorne a sua atenção quando você notar que se distraiu. "], //ok
+        ["ID": "M7", "Summary": "Preste atenção em um objeto ao seu redor e o observe como se o estivesse vendo pela primeira vez."], //ok
+        ["ID": "M8", "Summary": "Note a beleza de algo ao seu redor. Pode ser algo da natureza, uma pessoa, um objeto, uma música."]
     ]
     
     let leisureChallenges = [
@@ -226,7 +226,7 @@ struct Challenges {
         ["ID": "H2", "Summary": "Faça uma caminhada de 10 minutos"],
         ["ID": "H3", "Summary": "Se você tiver que andar de elevador hoje, escolha ir pelas escadas"],
         ["ID": "H4", "Summary": "Adicione mais vegetais às suas refeições"],
-        ["ID": "H5", "Summary": "Tire 10 minutos do seu dia para organizar alguma coisa do seu ambiente. Pode ser a sua mesa do trabalho, uma gaveta no seu armário, uma prateleira da sua estante..."],
+        ["ID": "H5", "Summary": "Tire 10 minutos do seu dia para organizar alguma coisa do seu ambiente. Pode ser a sua mesa do trabalho, uma gaveta no seu armário, uma prateleira da sua estante."],
         ["ID": "H6", "Summary": "Reflita sobre três coisas pelas quais você é grato"],
         ["ID": "H7", "Summary": "Encontre um momento do seu dia para fazer uma pausa e relaxar. "],
         ["ID": "H8", "Summary": "Faça um alongamento "],
