@@ -15,8 +15,9 @@ class IslandsViewController: UIViewController {
     //@IBOutlet weak var feedbackMessage: UIImageView!
     @IBOutlet weak var challengeDayButton: UIButton!
     @IBOutlet weak var doneButton: UIButton!
-    @IBOutlet weak var feedbackMessage: UIImageView!
-    
+    @IBOutlet weak var acceptedFeedbackMessage: UIImageView!
+    @IBOutlet var doneFeedbackMessage: UIImageView!
+
     var island = Island()
     var challengeObserver: NSObjectProtocol?
     var doneObserver: NSObjectProtocol?
@@ -165,19 +166,22 @@ class IslandsViewController: UIViewController {
             self.challengeDayButton.isHidden = false
             self.challengeDayButton.isEnabled = true
             self.challengeDayButton.alpha = 1
-            self.feedbackMessage.isHidden = true
+            self.acceptedFeedbackMessage.isHidden = true
+            self.doneFeedbackMessage.isHidden = true
         } else if ((self.island.dailyChallenge?.accepted)! && !(self.island.dailyChallenge?.done)!) {
             //se o desafio foi aceito mas n foi concluído
             self.challengeDayButton.isHidden = true
             self.doneButton.isHidden = false
-            self.feedbackMessage.isHidden = false
+            self.acceptedFeedbackMessage.isHidden = false
+            self.doneFeedbackMessage.isHidden = true
         } else {
             //desafio aceito e concluído
             self.challengeDayButton.isHidden = false
             self.challengeDayButton.alpha = 0.5
             self.challengeDayButton.isEnabled = false
             self.doneButton.isHidden = true
-            self.feedbackMessage.isHidden = true
+            self.acceptedFeedbackMessage.isHidden = true
+            self.doneFeedbackMessage.isHidden = false
         }
     }
     
