@@ -47,12 +47,15 @@ class HomeViewController: UIViewController {
         self.quantityIslands = islands!.count
         setUpIslandsDisplay(quantityIslands: self.quantityIslands!)
         
+        //Escolher os challenges depois do onboarding
         if (userManager.getLastSeen() == nil) {
             setDailyChallenges()
         }
+        //Observa se já carregou os challenges para aquele dia
         if (!isSameDay(userDate: userManager.getLastSeen() ?? Date(), actualDate: Date())) {
             setDailyChallenges()
         }
+        //Atualiza o último visto do usuário para data atual do sistema
         _ = userManager.updateLastSeen(to: Date())
     }
     
@@ -89,14 +92,19 @@ class HomeViewController: UIViewController {
         return randomInt
     }
     
-    func refreshDoneStatus(forIsland withName: String) {
-        guard let islandChallenges = IslandManager.shared.getChallenges(fromIsland: withName) else { return }
+    /// Muda o status de done para os desafios que foram aceitos mas não foram concluídos
+    /// - Parameter withName: String com o nome da ilha
+    /// - Returns: Bool que indica se alguma ilha mudou o status
+    func refreshDoneStatus(forIsland withName: String) -> Bool {
+        var thereIsUndoneChallenge = false
+        guard let islandChallenges = IslandManager.shared.getChallenges(fromIsland: withName) else { return false}
         for challenge in islandChallenges where challenge.accepted && !challenge.done {
+            thereIsUndoneChallenge = true
             challenge.accepted = false
         }
+        return thereIsUndoneChallenge
     }
     
-    //TODO: Caso esteja tudo terminado
     func setDailyChallenges() {
         //Coleta as ilhas do usuário
         guard let userIslands = userManager.getIslands() else {
@@ -108,10 +116,14 @@ class HomeViewController: UIViewController {
             guard let islandChallenges = islandsManager.getChallenges(fromIsland: island.name ?? "") else { return }
             if let availableChallenge = searchForAvailableChallenge(inChallenges: islandChallenges) {
                 _ = islandsManager.updateDailyChallenge(forIsland: island.name ?? "", toChallenge: availableChallenge)
-            } else {
-                refreshDoneStatus(forIsland: island.name ?? "")
+            } else if (refreshDoneStatus(forIsland: island.name ?? "")) {
                 setDailyChallenges()
-
+            } else {
+                let alert = UIAlertController(title: "Acabou missão para ilha \(String(island.name!))", message: "Parabéns! Você concluiu todas missões da ilha \(String(island.name!)). Como você está se sentindo?\n Em breve, teremos mais missões nessa ilha (:", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+                NSLog("The \"OK\" alert occured.")
+                }))
+                self.present(alert, animated: true, completion: nil)
             }
         }
     }
