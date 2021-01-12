@@ -156,7 +156,22 @@ struct Challenges {
         ["ID": "M5", "Summary": "Respire profundamente, levando o ar para a sua barriga."], //ok
         ["ID": "M6", "Summary": "Quando você for escovar os dentes hoje, preste atenção no seu corpo e nos movimentos que você faz. Gentilmente retorne a sua atenção quando você notar que se distraiu. "], //ok
         ["ID": "M7", "Summary": "Preste atenção em um objeto ao seu redor e o observe como se o estivesse vendo pela primeira vez."], //ok
-        ["ID": "M8", "Summary": "Note a beleza de algo ao seu redor. Pode ser algo da natureza, uma pessoa, um objeto, uma música."]
+        ["ID": "M8", "Summary": "Note a beleza de algo ao seu redor. Pode ser algo da natureza, uma pessoa, um objeto, uma música."],
+        ["ID": "M9", "Summary": "Respire fundo 5 vezes, puxando e soltando o ar levemente."],
+        ["ID": "M10", "Summary": "Feche os olhos e preste atenção em quais diferentes sons você ouvir nesse momento."],
+        ["ID": "M11", "Summary": "Feche os olhos e preste atenção em quais cheiros você consegue sentir no momento."],
+        ["ID": "M12", "Summary": "Reserve um momento para fazer massagem no próprio pé e preste atenção nessa sensação."],
+        ["ID": "M13", "Summary": "Escolha uma música que te acalma e a escute de olhos fechados, prestando atenção somente na música."],
+        ["ID": "M14", "Summary": "Esqueça as preocupações por um momento. Olhe por uma janela e preste atenção nos detalhes da vista."],
+        ["ID": "M15", "Summary": "Tente fechar os olhos e lembrar de uma paisagem que você já viu. Pense nas características daquele lugar."],
+        ["ID": "M16", "Summary": "Usando seus dedos, conte 10 motivos de gratidão na sua vida."],
+        ["ID": "M17", "Summary": "Pare e pense sobre como você está se sentindo nesse momento. O que causou essas sensações? O que pode melhorá-las?"],
+        ["ID": "M18", "Summary": "Escolha uma música calma e, durante ela, realize exercícios de respiração"],
+        ["ID": "M19", "Summary": "Inspire por 4 segundos, prenda o ar por 2 e solte tudo em 6 segundos. Repita esse exercício algumas vezes."],
+        ["ID": "M20", "Summary": "Deite e coloque algo leve em cima do seu estômago. Respire profundamente algumas vezes e note a subida e descida daquele objeto."],
+        ["ID": "M21", "Summary": "Desenhe uma onda e passe seu dedo pelo papel. Nos picos da onda, inspire. Nas descidas, expire."],
+        ["ID": "M22", "Summary": "Inspire por 4 segundos, segure o ar por mais 4 e expire novamente durante 4 segundos. Espere 4 segundos e repita o processo algumas vezes"]
+        
     ]
     
     let leisureChallenges = [
@@ -237,7 +252,19 @@ struct Challenges {
         ["ID": "H13", "Summary": "Proteja a sua pele! Use protetor solar!"],
         ["ID": "H14", "Summary": "Cante no chuveiro"],
         ["ID": "H15", "Summary": "Comemore uma pequena vitória sua hoje"],
-        ["ID": "H16", "Summary": "Tente fazer uma nova receita saudável  que você está querendo experimentar"]
+        ["ID": "H16", "Summary": "Tente fazer uma nova receita saudável  que você está querendo experimentar"],
+        ["ID": "H17", "Summary": "Beba pelo menos 5 copos d’água hoje"],
+        ["ID": "H18", "Summary": "Coma frutas como lanche"],
+        ["ID": "H19", "Summary": "Abra mão do chocolate por hoje"],
+        ["ID": "H20", "Summary": "Se organize para dormir de modo que você tenha 8 horas de sono esta noite"],
+        ["ID": "H21", "Summary": "Não mexa no celular logo antes de dormir esta noite"],
+        ["ID": "H22", "Summary": "Durante as refeições de hoje, mantenha seu celular desligado e coma com calma"],
+        ["ID": "H23", "Summary": "Passe hidratante no seu corpo"],
+        ["ID": "H24", "Summary": "Tente uma fruta/vegetal que você nunca provou"],
+        ["ID": "H25", "Summary": "Escute uma música animada e faça alguns polichinelos e agachamentos durante ela"],
+        ["ID": "H26", "Summary": "Liste 3 coisas que você ama no seu corpo"],
+        ["ID": "H27", "Summary": "Por hoje, fique longe dos alimentos processados"],
+        ["ID": "H28", "Summary": "Marque uma consulta médica para um checkup que você não faz há muito tempo"]
     ]
 }
 
