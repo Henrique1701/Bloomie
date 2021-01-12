@@ -36,16 +36,19 @@ class HomeViewController: UIViewController {
     let islandsManager = IslandManager.shared
     var stopAnimation = false
     let islands = UserManager.shared.getIslands()
-    private var quantityIslands: Int?
+    var quantityIslands: Int = 4
+    let defaults = UserDefaults.standard
     
     // MARK: View Functions
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //self.hideIsland()
+        
         MusicPlayer.shared.startBackgroundMusic(backgroundMusicFileName: "background")
-
-        self.quantityIslands = islands!.count
-        setUpIslandsDisplay(quantityIslands: self.quantityIslands!)
+        
+        quantityIslands = defaults.integer(forKey: "quantityIslands")
+        setUpIslandsDisplay(quantityIslands: self.quantityIslands)
         
         //Escolher os challenges depois do onboarding
         if (userManager.getLastSeen() == nil) {
@@ -67,6 +70,11 @@ class HomeViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         // Inicia a animação das nuvens
         self.moveCloudsToRight()
+        
+        if defaults.bool(forKey: "islandsChange") {
+            defaults.set(false, forKey: "islandsChange")
+            self.updateIslandsView()
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -144,182 +152,29 @@ class HomeViewController: UIViewController {
         }
     }
     
-    func setUpIslandsDisplay(quantityIslands: Int) {
-        switch quantityIslands {
-        case 1:
-            self.setUpDisplayOneIsland()
-        case 2:
-            self.setUpDisplayTwoIsland()
-        case 3:
-            self.setUpDisplayThreeIsland()
-        case 4:
-            self.setUpDisplayFourIsland()
-        default:
-            return
-        }
-    }
     
-    func setUpDisplayOneIsland() {
-        guard let islands = self.islands else {
-            print("Nenhuma ilha foi selecionada")
-            return
-        }
-        for island in islands {
-            switch island.name {
-            case "Saúde":
-                healthStackView.isHidden = false
-                healthRightButton.isHidden = false
-            case "Lazer":
-                leisureStackView.isHidden = false
-                leisureRightButton.isHidden = false
-            case "Atenção Plena":
-                mindfulnessStackView.isHidden = false
-                mindfulnessRightButton.isHidden = false
-            default:
-                lovedsStackView.isHidden = false
-                lovedsRightButton.isHidden = false
-            }
-        }
-    }
     
-    func setUpDisplayTwoIsland() {
-        guard let islands = self.islands else {
-            print("Nenhuma ilha foi selecionada")
-            return
-        }
-        for island in islands {
-            switch island.name {
-            case "Saúde":
-                healthStackView.isHidden = false
-                healthRightButton.isHidden = false
-            case "Lazer":
-                leisureStackView.isHidden = false
-                leisureRightButton.isHidden = false
-            case "Atenção Plena":
-                mindfulnessStackView.isHidden = false
-                mindfulnessRightButton.isHidden = false
-            default:
-                lovedsStackView.isHidden = false
-                lovedsRightButton.isHidden = false
-            }
-        }
-    }
-    
-    func setUpDisplayThreeIsland() {
-        guard let islands = self.islands else {
-            print("Nenhuma ilha foi selecionada")
-            return
-        }
-        let organizedIslands = self.organizeIslands(islands: islands)
-        for index in 0..<3 {
-            if index%2 == 0 {
-                self.showIslandLeft(islands: organizedIslands, index: index)
-            } else {
-                self.showIslandRight(islands: organizedIslands, index: index)
-            }
-        }
-    }
-    
-    func organizeIslands(islands: [Island]) -> [Island] {
-        var organizedIslands: [Island] = []
-        let islandsNames = [
-            IslandsNames.health.rawValue,
-            IslandsNames.leisure.rawValue,
-            IslandsNames.mindfulness.rawValue,
-            IslandsNames.loveds.rawValue
-        ]
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as? IslandsViewController
         
-        for islandName in islandsNames {
-            if let island = islandsManager.getIsland(withName: islandName) {
-                organizedIslands.append(island)
-            }
-        }
-        
-        return organizedIslands
-    }
-    
-    func showIslandLeft(islands: [Island], index: Int) {
-        switch islands[index].name {
-        case "Saúde":
-            self.healthStackView.isHidden = false
-            self.healthRightButton.isHidden = false
-            self.healthLeftButton.isHidden = false
-            self.healthLeftButton.isEnabled = false
-            self.healthLeftButton.alpha = 0
-        case "Lazer":
-            self.leisureStackView.isHidden = false
-            self.leisureRightButton.isHidden = false
-            self.leisureLeftButton.isHidden = false
-            self.leisureLeftButton.isEnabled = false
-            self.leisureLeftButton.alpha = 0
-        case "Atenção Plena":
-            self.mindfulnessStackView.isHidden = false
-            self.mindfulnessRightButton.isHidden = false
-            self.mindfulnessLeftButton.isHidden = false
-            self.mindfulnessLeftButton.isEnabled = false
-            self.mindfulnessLeftButton.alpha = 0
-        default:
-            self.lovedsStackView.isHidden = false
-            self.lovedsRightButton.isHidden = false
-            self.lovedsLeftButton.isHidden = false
-            self.lovedsLeftButton.isEnabled = false
-            self.lovedsLeftButton.alpha = 0
+        if segue.identifier == "homeToHealth" {
+            destination?.island = IslandManager.shared.getIsland(withName: IslandsNames.health.rawValue)!
+            destination?.sceneName = "HealthIsland"
+        } else if segue.identifier == "homeToLeisure" {
+            destination?.island = IslandManager.shared.getIsland(withName: IslandsNames.leisure.rawValue)!
+            destination?.sceneName = "LeisureIsland"
+        } else if segue.identifier == "homeToMindfulness" {
+            destination?.island = IslandManager.shared.getIsland(withName: IslandsNames.mindfulness.rawValue)!
+            destination?.sceneName = "MindfulnessIsland"
+        } else if segue.identifier == "homeToLoveds" {
+            destination?.island = IslandManager.shared.getIsland(withName: IslandsNames.loveds.rawValue)!
+            destination?.sceneName = "LovedsIsland"
         }
     }
-    
-    func showIslandRight(islands: [Island], index: Int) {
-        switch islands[index].name {
-        case "Saúde":
-            self.healthStackView.isHidden = false
-            self.healthRightButton.isHidden = false
-            self.healthLeftButton.isHidden = false
-            self.healthRightButton.isEnabled = false
-            self.healthRightButton.alpha = 0
-        case "Lazer":
-            self.leisureStackView.isHidden = false
-            self.leisureRightButton.isHidden = false
-            self.leisureLeftButton.isHidden = false
-            self.leisureRightButton.isEnabled = false
-            self.leisureRightButton.alpha = 0
-        case "Atenção Plena":
-            self.mindfulnessStackView.isHidden = false
-            self.mindfulnessRightButton.isHidden = false
-            self.mindfulnessLeftButton.isHidden = false
-            self.mindfulnessRightButton.isEnabled = false
-            self.mindfulnessRightButton.alpha = 0
-        default:
-            self.lovedsStackView.isHidden = false
-            self.lovedsRightButton.isHidden = false
-            self.lovedsLeftButton.isHidden = false
-            self.lovedsRightButton.isEnabled = false
-            self.lovedsRightButton.alpha = 0
-        }
-    }
-    
-    func setUpDisplayFourIsland() {
-        self.healthStackView.isHidden = false
-        self.healthLeftButton.isHidden = false
-        self.healthRightButton.isHidden = false
-        self.leisureStackView.isHidden = false
-        self.leisureLeftButton.isHidden = false
-        self.leisureRightButton.isHidden = false
-        self.mindfulnessStackView.isHidden = false
-        self.mindfulnessLeftButton.isHidden = false
-        self.mindfulnessRightButton.isHidden = false
-        self.lovedsStackView.isHidden = false
-        self.lovedsLeftButton.isHidden = false
-        self.lovedsRightButton.isHidden = false
-        
-        self.lovedsRightButton.isEnabled = false
-        self.lovedsRightButton.alpha = 0
-        self.mindfulnessLeftButton.isEnabled = false
-        self.mindfulnessLeftButton.alpha = 0
-        self.leisureRightButton.isEnabled = false
-        self.leisureRightButton.alpha = 0
-        self.healthLeftButton.isEnabled = false
-        self.healthLeftButton.alpha = 0
-    }
-    
+}
+
+// MARK: Configura a animação das nuvens
+extension HomeViewController {
     /// Configura a animação das nuvens
     ///
     /// Move a posição de todas as nuvens em +20 pontos
@@ -359,22 +214,230 @@ class HomeViewController: UIViewController {
             self.moveCloudsToRight()
         })
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destination = segue.destination as? IslandsViewController
-        
-        if segue.identifier == "homeToHealth" {
-            destination?.island = IslandManager.shared.getIsland(withName: IslandsNames.health.rawValue)!
-            destination?.sceneName = "HealthIsland"
-        } else if segue.identifier == "homeToLeisure" {
-            destination?.island = IslandManager.shared.getIsland(withName: IslandsNames.leisure.rawValue)!
-            destination?.sceneName = "LeisureIsland"
-        } else if segue.identifier == "homeToMindfulness" {
-            destination?.island = IslandManager.shared.getIsland(withName: IslandsNames.mindfulness.rawValue)!
-            destination?.sceneName = "MindfulnessIsland"
-        } else if segue.identifier == "homeToLoveds" {
-            destination?.island = IslandManager.shared.getIsland(withName: IslandsNames.loveds.rawValue)!
-            destination?.sceneName = "LovedsIsland"
+}
+
+// MARK: Configura os botões das ilhas
+extension HomeViewController {
+    @objc func updateIslandsView() {
+        DispatchQueue.main.async {
+            self.hideIsland()
+            self.enableIslandButtons()
+            self.quantityIslands = self.defaults.integer(forKey: "quantityIslands")
+            self.setUpIslandsDisplay(quantityIslands: self.quantityIslands)
         }
+    }
+    
+    func setUpIslandsDisplay(quantityIslands: Int) {
+        switch quantityIslands {
+        case 1:
+            self.setUpDisplayOneIsland()
+        case 2:
+            self.setUpDisplayTwoIsland()
+        case 3:
+            self.setUpDisplayThreeIsland()
+        case 4:
+            self.setUpDisplayFourIsland()
+        default:
+            return
+        }
+    }
+    
+    func setUpDisplayOneIsland() {
+        if defaults.bool(forKey: "selectedMindfulness") {
+            mindfulnessStackView.isHidden = false
+            mindfulnessRightButton.isHidden = false
+        } else if defaults.bool(forKey: "selectedLeisure") {
+            leisureStackView.isHidden = false
+            leisureRightButton.isHidden = false
+        } else if defaults.bool(forKey: "selectedHealth") {
+            healthStackView.isHidden = false
+            healthRightButton.isHidden = false
+        } else if defaults.bool(forKey: "selectedLoveds") {
+            lovedsStackView.isHidden = false
+            lovedsRightButton.isHidden = false
+        } else {
+            print("Nenhuma ilha foi selecionada")
+        }
+        
+    }
+    
+    func setUpDisplayTwoIsland() {
+        if defaults.bool(forKey: "selectedMindfulness") {
+            mindfulnessStackView.isHidden = false
+            mindfulnessRightButton.isHidden = false
+        }
+        if defaults.bool(forKey: "selectedLeisure") {
+            leisureStackView.isHidden = false
+            leisureRightButton.isHidden = false
+        }
+        if defaults.bool(forKey: "selectedHealth") {
+            healthStackView.isHidden = false
+            healthRightButton.isHidden = false
+        }
+        if defaults.bool(forKey: "selectedLoveds") {
+            lovedsStackView.isHidden = false
+            lovedsRightButton.isHidden = false
+        }
+    }
+    
+    func setUpDisplayThreeIsland() {
+        var selectedMindfulness = defaults.bool(forKey: "selectedMindfulness")
+        var selectedLoveds = defaults.bool(forKey: "selectedLoveds")
+        var selectedLeisure = defaults.bool(forKey: "selectedLeisure")
+        var selectedHealth = defaults.bool(forKey: "selectedHealth")
+        
+        for index in 1...3 {
+            if index%2 == 0 {
+                if selectedHealth {
+                    selectedHealth = false
+                    self.showIslandRight(island: "health")
+                } else if selectedLeisure {
+                    selectedLeisure = false
+                    self.showIslandRight(island: "leisure")
+                } else if selectedMindfulness {
+                    selectedMindfulness = false
+                    self.showIslandRight(island: "mindfulness")
+                } else if selectedLoveds {
+                    selectedLoveds = false
+                    self.showIslandRight(island: "loveds")
+                }
+            } else {
+                if selectedHealth {
+                    selectedHealth = false
+                    self.showIslandLeft(island: "health")
+                } else if selectedLeisure {
+                    selectedLeisure = false
+                    self.showIslandLeft(island: "leisure")
+                } else if selectedMindfulness {
+                    selectedMindfulness = false
+                    self.showIslandLeft(island: "mindfulness")
+                } else if selectedLoveds {
+                    selectedLoveds = false
+                    self.showIslandLeft(island: "loveds")
+                }
+            }
+        }
+    }
+    
+    func setUpDisplayFourIsland() {
+        self.healthStackView.isHidden = false
+        self.healthLeftButton.isHidden = false
+        self.healthRightButton.isHidden = false
+        self.leisureStackView.isHidden = false
+        self.leisureLeftButton.isHidden = false
+        self.leisureRightButton.isHidden = false
+        self.mindfulnessStackView.isHidden = false
+        self.mindfulnessLeftButton.isHidden = false
+        self.mindfulnessRightButton.isHidden = false
+        self.lovedsStackView.isHidden = false
+        self.lovedsLeftButton.isHidden = false
+        self.lovedsRightButton.isHidden = false
+        
+        self.lovedsRightButton.isEnabled = false
+        self.lovedsRightButton.alpha = 0
+        self.mindfulnessLeftButton.isEnabled = false
+        self.mindfulnessLeftButton.alpha = 0
+        self.leisureRightButton.isEnabled = false
+        self.leisureRightButton.alpha = 0
+        self.healthLeftButton.isEnabled = false
+        self.healthLeftButton.alpha = 0
+    }
+    
+    func showIslandLeft(island: String) {
+        switch island {
+        case "health":
+            self.healthStackView.isHidden = false
+            self.healthRightButton.isHidden = false
+            self.healthLeftButton.isHidden = false
+            self.healthLeftButton.isEnabled = false
+            self.healthLeftButton.alpha = 0
+        case "leisure":
+            print("Entrou no lazer direito")
+            self.leisureStackView.isHidden = false
+            self.leisureRightButton.isHidden = false
+            self.leisureLeftButton.isHidden = false
+            self.leisureLeftButton.isEnabled = false
+            self.leisureLeftButton.alpha = 0
+        case "mindfulness":
+            self.mindfulnessStackView.isHidden = false
+            self.mindfulnessRightButton.isHidden = false
+            self.mindfulnessLeftButton.isHidden = false
+            self.mindfulnessLeftButton.isEnabled = false
+            self.mindfulnessLeftButton.alpha = 0
+        case "loveds":
+            self.lovedsStackView.isHidden = false
+            self.lovedsRightButton.isHidden = false
+            self.lovedsLeftButton.isHidden = false
+            self.lovedsLeftButton.isEnabled = false
+            self.lovedsLeftButton.alpha = 0
+        default:
+            print("Entrou no caso default")
+        }
+    }
+    
+    func showIslandRight(island: String) {
+        switch island {
+        case "health":
+            self.healthStackView.isHidden = false
+            self.healthRightButton.isHidden = false
+            self.healthLeftButton.isHidden = false
+            self.healthRightButton.isEnabled = false
+            self.healthRightButton.alpha = 0
+        case "leisure":
+            print("Entro no lazer esquerdo")
+            self.leisureStackView.isHidden = false
+            self.leisureRightButton.isHidden = false
+            self.leisureLeftButton.isHidden = false
+            self.leisureRightButton.isEnabled = false
+            self.leisureRightButton.alpha = 0
+        case "mindfulness":
+            self.mindfulnessStackView.isHidden = false
+            self.mindfulnessRightButton.isHidden = false
+            self.mindfulnessLeftButton.isHidden = false
+            self.mindfulnessRightButton.isEnabled = false
+            self.mindfulnessRightButton.alpha = 0
+        case "loveds":
+            self.lovedsStackView.isHidden = false
+            self.lovedsRightButton.isHidden = false
+            self.lovedsLeftButton.isHidden = false
+            self.lovedsRightButton.isEnabled = false
+            self.lovedsRightButton.alpha = 0
+        default:
+            print("Entrou no caso default")
+        }
+    }
+    
+    func hideIsland() {
+        self.healthStackView.isHidden = true
+        self.healthLeftButton.isHidden = true
+        self.healthRightButton.isHidden = true
+        self.mindfulnessStackView.isHidden = true
+        self.mindfulnessLeftButton.isHidden = true
+        self.mindfulnessRightButton.isHidden = true
+        self.lovedsStackView.isHidden = true
+        self.lovedsLeftButton.isHidden = true
+        self.lovedsRightButton.isHidden = true
+        self.leisureStackView.isHidden = true
+        self.leisureLeftButton.isHidden = true
+        self.leisureRightButton.isHidden = true
+    }
+    
+    func enableIslandButtons() {
+        self.healthLeftButton.isEnabled = true
+        self.healthLeftButton.alpha = 1
+        self.healthRightButton.isEnabled = true
+        self.healthRightButton.alpha = 1
+        self.mindfulnessLeftButton.isEnabled = true
+        self.mindfulnessLeftButton.alpha = 1
+        self.mindfulnessRightButton.isEnabled = true
+        self.mindfulnessRightButton.alpha = 1
+        self.lovedsLeftButton.isEnabled = true
+        self.lovedsLeftButton.alpha = 1
+        self.lovedsRightButton.isEnabled = true
+        self.lovedsRightButton.alpha = 1
+        self.leisureLeftButton.isEnabled = true
+        self.leisureLeftButton.alpha = 1
+        self.leisureRightButton.isEnabled = true
+        self.leisureRightButton.alpha = 1
     }
 }
