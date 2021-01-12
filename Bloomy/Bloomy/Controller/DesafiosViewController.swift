@@ -9,7 +9,49 @@ import UIKit
 import CoreData
 
 class DesafiosViewController: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.configurePageViewController()
+        //self.updatePageViewController()
+        self.setupNavigationController()
+        print("ENTROU")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        //self.configurePageViewController()
+        updatePageViewController()
+    }
+    
+//    override func viewDidDisappear(_ animated: Bool) {
+//        hideContentController()
+//    }
+    
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        if !completed { return }
+        guard let pageViewController = storyboard?.instantiateViewController(withIdentifier: String(describing:DesafiosPageViewController.self)) as? DesafiosPageViewController else {
+            return
+        }
+        DispatchQueue.main.async() {
+            pageViewController.dataSource = nil
+            pageViewController.dataSource = self
+            print("vai funcionar")
+        }
+    }
+    
+    
 
+    
+    
+    // MARK: Navigation Bar
+    func setupNavigationController() {
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.topItem?.title = ""
+        self.navigationController?.navigationBar.layoutIfNeeded()
+    }
+    
+    // MARK: Page View Controller
     @IBOutlet weak var contentView: UIView!
     
     // Identificar quais desafios foram aceitos
@@ -22,19 +64,17 @@ class DesafiosViewController: UIViewController {
     lazy var dataSourceImage: [UIImage] = getChallengesIslandName()
     
     var currentViewControllerIndex = 0
-   
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.configurePageViewController()
-        self.setupNavigationController()
-    }
     
+    lazy var pageViewController = storyboard?.instantiateViewController(withIdentifier: String(describing:DesafiosPageViewController.self)) as? DesafiosPageViewController
+    
+    // Lógica de inicialização do PageViewController
     func configurePageViewController() {
         
         guard let pageViewController = storyboard?.instantiateViewController(withIdentifier: String(describing:DesafiosPageViewController.self)) as? DesafiosPageViewController else {
             return
         }
         
+        // Protocolos
         pageViewController.delegate = self
         pageViewController.dataSource = self
         
@@ -66,8 +106,13 @@ class DesafiosViewController: UIViewController {
         }
         
         pageViewController.setViewControllers([startingViewController], direction: .forward, animated: true)
+        
+        print("==================================")
+        print("configurePageViewController")
+        print("==================================")
     }
     
+    // Gera a página do Page View Controller
     func detailViewControllerAt(index: Int) -> DesafiosDataViewController? {
         // Garantir que o Page view controller não ultrapasse o limite de páginas
         if (index >= dataSource.count || dataSource.isEmpty) {
@@ -77,7 +122,7 @@ class DesafiosViewController: UIViewController {
         guard let dataViewController = storyboard?.instantiateViewController(withIdentifier: String(describing:DesafiosDataViewController.self)) as? DesafiosDataViewController else {
             return nil
         }
-        
+        //updatePageViewController()
         dataViewController.index = index
         dataViewController.summaryText = dataSource[index]
         dataViewController.cardImage
@@ -93,13 +138,8 @@ class DesafiosViewController: UIViewController {
         return dataViewController
     }
     
-    func setupNavigationController() {
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.topItem?.title = ""
-        self.navigationController?.navigationBar.layoutIfNeeded()
-    }
     
+    // MARK: Dados que serão usados nas páginas do Page View Controller
     // Converte o nome da ilha para o nome da imagem do card correspondente à ilha
     var islandNameToImage: [String:String] = [
         "Atenção Plena": "card_atencao_plena",
@@ -107,7 +147,7 @@ class DesafiosViewController: UIViewController {
         "Pessoas Queridas": "card_pessoas_queridas",
         "Lazer": "card_lazer"
     ]
-
+    
     // Retorna do Core Data quais são os challenges aceitos que ainda não foram concluídos
     func getAcceptedChallenges() -> [Challenge] {
         var acceptedChallenges: [Challenge] = []
@@ -121,7 +161,7 @@ class DesafiosViewController: UIViewController {
         return acceptedChallenges
     }
     
-    //Retorna o texto dos challenges
+    // Retorna o texto dos challenges
     func getChallengeSummary() -> [String] {
         var challengeSummary: [String] = []
         for challenge in challenges {
@@ -138,8 +178,39 @@ class DesafiosViewController: UIViewController {
         }
         return challengeIslandName
     }
+    
+    func hideContentController() {
+        guard let pageViewController = storyboard?.instantiateViewController(withIdentifier: String(describing:DesafiosPageViewController.self)) as? DesafiosPageViewController else {
+            return
+        }
+        pageViewController.willMove(toParent: nil)
+        pageViewController.view.removeFromSuperview()
+        pageViewController.removeFromParent()
+//        pageViewController.dataSource = nil
+//        pageViewController.dataSource = self
+        print("==================================")
+        print("==================================")
+        print("Hide View Controller")
+        print("==================================")
+    }
+    
+    @objc func updatePageViewController() {
+        print("----------------")
+        print("---- Entrou ----")
+        print("---- Update ----")
+        print("----------------")
+        DispatchQueue.main.async {
+            //self.hideContentController()
+            self.configurePageViewController()
+//            self.dataSource = self.getChallengeSummary()
+//            self.dataSourceImage = self.getChallengesIslandName()
+            
+        }
+        
+    }
 }
 
+// MARK: Page View Controller Protocols
 extension DesafiosViewController: UIPageViewControllerDelegate, UIPageViewControllerDataSource {
     
     func presentationIndex(for pageViewController: UIPageViewController) -> Int {
@@ -186,6 +257,10 @@ extension DesafiosViewController: UIPageViewControllerDelegate, UIPageViewContro
         currentViewControllerIndex = currentIndex
         
         return detailViewControllerAt(index: currentIndex)
+    }
+    
+    func setViewControllers(_ viewControllers: [UIViewController]?, direction: UIPageViewController.NavigationDirection, animated: Bool, completion: ((Bool) -> Void)? = nil) {
+        
     }
     
 }
