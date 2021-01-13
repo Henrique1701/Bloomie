@@ -9,15 +9,19 @@ import UIKit
 
 class DesafiosDataViewController: UIViewController {
     
-    //Outlets
+    // Esse View Controller define como serão as páginas do PageViewController
+    
+    // Outlets
     @IBOutlet weak var card: UIImageView!
     @IBOutlet weak var summaryLabel: UILabel!
     @IBOutlet weak var concluirButtonOutlet: UIButton!
+    
+    // Botão concluir missão
     @IBAction func concluirButton(_ sender: Any) {
         
     }
     
-    //Global variables
+    // Global variables
     var cardImage: UIImage!
     var summaryText: String!
     var index: Int?
