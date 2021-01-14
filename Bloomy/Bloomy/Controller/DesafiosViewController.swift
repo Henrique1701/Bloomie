@@ -40,8 +40,18 @@ class DesafiosViewController: UIViewController {
         challenges = getAcceptedChallenges()
         challengeSummaryDataSource = getChallengeSummary()
         challengeImageDataSource = getChallengesIslandName()
+        // Reseta o delegate do Data Source
+        hideContentController()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         // Atualiza o contéudo Page View Controller
-        updatePageViewController()
+        configurePageViewController()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        // Reseta o indice do PageViewController caso esteja na última página
+        currentViewControllerIndex = 0
     }
     
     // MARK: Navigation Bar
@@ -92,7 +102,6 @@ class DesafiosViewController: UIViewController {
         guard let startingViewController = detailViewControllerAt(index: currentViewControllerIndex) else {
             return
         }
-        
         pageViewController.setViewControllers([startingViewController], direction: .forward, animated: true)
     }
     
