@@ -70,6 +70,10 @@ class DesafiosViewController: UIViewController {
             return
         }
         
+        guard let noChallengeViewController = storyboard?.instantiateViewController(withIdentifier: String(describing:DesafiosVazioViewController.self)) as? DesafiosVazioViewController else {
+            return
+        }
+        
         // Protocolos
         pageViewController.delegate = self
         pageViewController.dataSource = self
@@ -81,28 +85,32 @@ class DesafiosViewController: UIViewController {
         pageViewController.view.backgroundColor = #colorLiteral(red: 0.9938541055, green: 0.9598969817, blue: 0.9428560138, alpha: 1)
         
         // Adiciona a view do Page View Controller ao contentView (uma UIView que funciona como um container para o Page View Controller neste View Controller)
-        contentView.addSubview(pageViewController.view)
-        
-        // Autolayout
-        pageViewController.view.translatesAutoresizingMaskIntoConstraints = false
-        
-        // Dicionário para facilitar na hora que for criar as constraints de AutoLayout
-        let views: [String: Any] = ["pageView": pageViewController.view as Any]
-        
-        // A view do Page View Controller inicia no mesmo ponto que a contentView, que é a view que o contém
-        contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[pageView]-0-|",
-                                                                  options: NSLayoutConstraint.FormatOptions(rawValue: 0),
-                                                                  metrics: nil,
-                                                                  views: views))
-        contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[pageView]-0-|",
-                                                                  options: NSLayoutConstraint.FormatOptions(rawValue: 0),
-                                                                  metrics: nil,
-                                                                  views: views))
-        
-        guard let startingViewController = detailViewControllerAt(index: currentViewControllerIndex) else {
-            return
+        if (challenges.isEmpty) {
+            contentView.addSubview(noChallengeViewController.view)
+        } else {
+            contentView.addSubview(pageViewController.view)
+            
+            // Autolayout
+            pageViewController.view.translatesAutoresizingMaskIntoConstraints = false
+            
+            // Dicionário para facilitar na hora que for criar as constraints de AutoLayout
+            let views: [String: Any] = ["pageView": pageViewController.view as Any]
+            
+            // A view do Page View Controller inicia no mesmo ponto que a contentView, que é a view que o contém
+            contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[pageView]-0-|",
+                                                                      options: NSLayoutConstraint.FormatOptions(rawValue: 0),
+                                                                      metrics: nil,
+                                                                      views: views))
+            contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[pageView]-0-|",
+                                                                      options: NSLayoutConstraint.FormatOptions(rawValue: 0),
+                                                                      metrics: nil,
+                                                                      views: views))
+            
+            guard let startingViewController = detailViewControllerAt(index: currentViewControllerIndex) else {
+                return
+            }
+            pageViewController.setViewControllers([startingViewController], direction: .forward, animated: true)
         }
-        pageViewController.setViewControllers([startingViewController], direction: .forward, animated: true)
     }
     
     // Cria uma nova página do PageViewController (que é um View Controller do tipo DesafiosDataViewController em um determinado índice
