@@ -27,13 +27,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="LlP-Bi-bPj">
-                                <rect key="frame" x="22" y="48" width="331" height="61.5"/>
+                                <rect key="frame" x="22" y="43.5" width="331" height="62"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="EUz-nq-cBI">
-                                        <rect key="frame" x="0.0" y="0.0" width="206.5" height="61.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="206.5" height="62"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="vnq-Dm-5Q0">
-                                                <rect key="frame" x="0.0" y="0.0" width="77" height="61.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="77" height="62"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rebecca Bloom" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="n1b-ml-mBg">
                                                 <rect key="frame" x="85" y="20.5" width="121.5" height="20.5"/>
@@ -44,7 +44,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r24-s7-XCY">
-                                        <rect key="frame" x="310.5" y="19.5" width="20.5" height="22"/>
+                                        <rect key="frame" x="310.5" y="20" width="20.5" height="22"/>
                                         <color key="tintColor" red="0.24313725489999999" green="0.2470588235" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <state key="normal" image="gearshape.fill" catalog="system"/>
                                         <connections>
@@ -54,44 +54,56 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jornada" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qwu-SL-fSk">
-                                <rect key="frame" x="0.0" y="142.5" width="187.5" height="29"/>
+                                <rect key="frame" x="0.0" y="137" width="187.5" height="29"/>
                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
                                 <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OHX-tc-ufm" userLabel="View linha jornada">
-                                <rect key="frame" x="0.0" y="171.5" width="187.5" height="2.5"/>
+                                <rect key="frame" x="0.0" y="166" width="187.5" height="2.5"/>
                                 <color key="backgroundColor" name="cor_botao"/>
                                 <color key="tintColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="led-tU-wAa" userLabel="View linha resumo">
-                                <rect key="frame" x="187.5" y="171.5" width="187.5" height="2.5"/>
+                                <rect key="frame" x="187.5" y="166" width="187.5" height="2.5"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <stackView opaque="NO" contentMode="top" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="KRp-RJ-KO6">
-                                <rect key="frame" x="18" y="191.5" width="339" height="417.5"/>
+                            <stackView opaque="NO" contentMode="top" axis="vertical" distribution="fillEqually" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="KRp-RJ-KO6">
+                                <rect key="frame" x="0.0" y="185" width="375" height="418"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fj1-cD-fkY">
-                                        <rect key="frame" x="0.0" y="0.0" width="339" height="92"/>
+                                        <rect key="frame" x="59.5" y="0.0" width="256" height="92.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="fj1-cD-fkY" secondAttribute="height" multiplier="327:118" id="yyX-eN-lLO"/>
+                                        </constraints>
                                         <state key="normal" image="perfil_saude"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qTm-fl-V37">
-                                        <rect key="frame" x="0.0" y="108" width="339" height="92.5"/>
+                                        <rect key="frame" x="59.5" y="108.5" width="256" height="92.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="qTm-fl-V37" secondAttribute="height" multiplier="327:118" id="vpT-Ow-GGI"/>
+                                        </constraints>
                                         <state key="normal" image="perfil_lazer"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fdu-dr-hBT">
-                                        <rect key="frame" x="0.0" y="216.5" width="339" height="92.5"/>
+                                        <rect key="frame" x="59.5" y="217" width="256" height="92.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Fdu-dr-hBT" secondAttribute="height" multiplier="327:118" id="PKn-Aj-P2e"/>
+                                        </constraints>
                                         <state key="normal" image="perfil_atencao_plena"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vie-FK-jjr">
-                                        <rect key="frame" x="0.0" y="325" width="339" height="92.5"/>
+                                        <rect key="frame" x="59.5" y="325.5" width="256" height="92.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="vie-FK-jjr" secondAttribute="height" multiplier="327:118" id="gi6-8Q-FHn"/>
+                                        </constraints>
                                         <state key="normal" image="perfil_pessoas_queridas"/>
                                     </button>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resumo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igc-Us-STc">
-                                <rect key="frame" x="187.5" y="142.5" width="187.5" height="29"/>
+                                <rect key="frame" x="187.5" y="137" width="187.5" height="29"/>
                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
                                 <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -103,13 +115,14 @@
                             <constraint firstItem="qwu-SL-fSk" firstAttribute="top" secondItem="LlP-Bi-bPj" secondAttribute="bottom" multiplier="1.3" id="07Q-Mu-YqM"/>
                             <constraint firstItem="KRp-RJ-KO6" firstAttribute="height" secondItem="7Ec-G9-za4" secondAttribute="height" multiplier="0.676203" id="4hP-TV-E4d"/>
                             <constraint firstItem="LlP-Bi-bPj" firstAttribute="width" secondItem="7Ec-G9-za4" secondAttribute="width" multiplier="0.881643" id="5aY-5U-ksU"/>
-                            <constraint firstItem="KRp-RJ-KO6" firstAttribute="centerY" secondItem="r0P-bO-81l" secondAttribute="centerY" multiplier="1.2" id="6Wg-hs-xCR"/>
+                            <constraint firstItem="KRp-RJ-KO6" firstAttribute="leading" secondItem="7Ec-G9-za4" secondAttribute="leading" priority="750" id="9mp-fC-ql1"/>
                             <constraint firstAttribute="trailing" secondItem="led-tU-wAa" secondAttribute="trailing" id="BeQ-7c-7qe"/>
                             <constraint firstItem="led-tU-wAa" firstAttribute="width" secondItem="7Ec-G9-za4" secondAttribute="width" multiplier="0.5" id="DH0-ad-rfF"/>
                             <constraint firstItem="qwu-SL-fSk" firstAttribute="height" secondItem="7Ec-G9-za4" secondAttribute="height" multiplier="0.046814" id="EiT-gC-Mmn"/>
                             <constraint firstItem="OHX-tc-ufm" firstAttribute="height" secondItem="7Ec-G9-za4" secondAttribute="height" multiplier="0.00390117" id="FBw-WW-E2J"/>
                             <constraint firstItem="LlP-Bi-bPj" firstAttribute="centerX" secondItem="r0P-bO-81l" secondAttribute="centerX" id="H3o-1q-GkG"/>
                             <constraint firstItem="led-tU-wAa" firstAttribute="height" secondItem="7Ec-G9-za4" secondAttribute="height" multiplier="0.00390117" id="HHD-vj-HO7"/>
+                            <constraint firstItem="7Ec-G9-za4" firstAttribute="trailing" secondItem="KRp-RJ-KO6" secondAttribute="trailing" priority="750" id="Ija-OL-oZQ"/>
                             <constraint firstItem="igc-Us-STc" firstAttribute="width" secondItem="7Ec-G9-za4" secondAttribute="width" multiplier="0.5" id="Jf4-K4-Mb9"/>
                             <constraint firstItem="KRp-RJ-KO6" firstAttribute="top" secondItem="OHX-tc-ufm" secondAttribute="bottom" multiplier="1.1" id="LaT-53-FrS"/>
                             <constraint firstItem="igc-Us-STc" firstAttribute="height" secondItem="7Ec-G9-za4" secondAttribute="height" multiplier="0.046814" id="NEg-xb-0Qw"/>
@@ -121,8 +134,8 @@
                             <constraint firstItem="led-tU-wAa" firstAttribute="top" secondItem="igc-Us-STc" secondAttribute="bottom" id="eth-aV-YTU"/>
                             <constraint firstItem="KRp-RJ-KO6" firstAttribute="top" secondItem="led-tU-wAa" secondAttribute="bottom" multiplier="1.1" id="fhV-lv-zVj"/>
                             <constraint firstItem="OHX-tc-ufm" firstAttribute="top" secondItem="qwu-SL-fSk" secondAttribute="bottom" id="gdG-QW-nBh"/>
+                            <constraint firstItem="7Ec-G9-za4" firstAttribute="bottom" secondItem="KRp-RJ-KO6" secondAttribute="bottom" constant="15" id="gxC-17-Rph"/>
                             <constraint firstItem="LlP-Bi-bPj" firstAttribute="height" secondItem="7Ec-G9-za4" secondAttribute="height" multiplier="0.10013" id="kYx-a3-AfV"/>
-                            <constraint firstItem="KRp-RJ-KO6" firstAttribute="width" secondItem="7Ec-G9-za4" secondAttribute="width" multiplier="0.903382" id="lTK-oe-Jet"/>
                             <constraint firstItem="OHX-tc-ufm" firstAttribute="leading" secondItem="r0P-bO-81l" secondAttribute="leading" id="yFj-CG-MIX"/>
                         </constraints>
                     </view>
