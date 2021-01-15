@@ -83,6 +83,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="concluirButton:" destination="lDG-oy-4Cv" eventType="touchUpInside" id="BZC-1H-AfB"/>
+                                    <segue destination="gjZ-vG-k0s" kind="show" id="bms-Zx-AhB"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -110,6 +111,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jYB-Sr-vpE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="704.34782608695662" y="142.63392857142856"/>
+        </scene>
+        <!--Islands-->
+        <scene sceneID="xJS-tv-hKE">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Islands" storyboardName="Islands" referencedIdentifier="Islands" id="gjZ-vG-k0s" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ais-Iw-fvO"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W2L-Me-Gfo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="730" y="578"/>
         </scene>
         <!--Desafios Page View Controller-->
         <scene sceneID="xIZ-7F-cUg">
