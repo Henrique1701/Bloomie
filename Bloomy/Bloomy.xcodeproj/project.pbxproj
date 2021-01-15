@@ -43,6 +43,7 @@
 		89DD872F2570243200DB1C13 /* SeedDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DD872E2570243200DB1C13 /* SeedDataBase.swift */; };
 		89ED4BB825824CCD00A18B29 /* SiriShortcutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89ED4BB725824CCD00A18B29 /* SiriShortcutsViewController.swift */; };
 		BE4BE73725A74995002AB66E /* IslandsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4BE73625A74995002AB66E /* IslandsViewController.swift */; };
+		BE4BE74B25A78556002AB66E /* EditIslandsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4BE74A25A78556002AB66E /* EditIslandsViewController.swift */; };
 		BE91BADC257FFF2000CC83D0 /* HealthIsland.sks in Resources */ = {isa = PBXBuildFile; fileRef = BE91BADB257FFF2000CC83D0 /* HealthIsland.sks */; };
 		BE91BB112580163C00CC83D0 /* LeisureIsland.sks in Resources */ = {isa = PBXBuildFile; fileRef = BE91BB102580163C00CC83D0 /* LeisureIsland.sks */; };
 		BE91BB16258016DF00CC83D0 /* LovedsIsland.sks in Resources */ = {isa = PBXBuildFile; fileRef = BE91BB15258016DF00CC83D0 /* LovedsIsland.sks */; };
@@ -132,6 +133,7 @@
 		94E49591F99200B6D647E55B /* Pods_BloomyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BloomyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25879A5F40F669187A291F0 /* Pods-BloomyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BloomyTests.debug.xcconfig"; path = "Target Support Files/Pods-BloomyTests/Pods-BloomyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BE4BE73625A74995002AB66E /* IslandsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IslandsViewController.swift; sourceTree = "<group>"; };
+		BE4BE74A25A78556002AB66E /* EditIslandsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditIslandsViewController.swift; sourceTree = "<group>"; };
 		BE91BADB257FFF2000CC83D0 /* HealthIsland.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = HealthIsland.sks; sourceTree = "<group>"; };
 		BE91BB102580163C00CC83D0 /* LeisureIsland.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = LeisureIsland.sks; sourceTree = "<group>"; };
 		BE91BB15258016DF00CC83D0 /* LovedsIsland.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = LovedsIsland.sks; sourceTree = "<group>"; };
@@ -382,6 +384,7 @@
 				7DAA427325A8D0A600C1CFF5 /* DesafiosViewController.swift */,
 				7DAA427825A8D0C100C1CFF5 /* DesafiosPageViewController.swift */,
 				7DAA427D25A8D0DD00C1CFF5 /* DesafiosDataViewController.swift */,
+				BE4BE74A25A78556002AB66E /* EditIslandsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -477,7 +480,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1210;
-				LastUpgradeCheck = 1210;
+				LastUpgradeCheck = 1230;
 				TargetAttributes = {
 					BEC461C1255DABD8003C1D1A = {
 						CreatedOnToolsVersion = 12.1;
@@ -535,7 +538,6 @@
 				BE91BB112580163C00CC83D0 /* LeisureIsland.sks in Resources */,
 				D64B4F6325756F2000D818EB /* Onboarding.storyboard in Resources */,
 				7DB41C00257AC36300BBFAEA /* Poppins-Bold.ttf in Resources */,
-				BED0527C2576B8940035EB18 /* Islands.storyboard in Resources */,
 				BEC461CD255DABD8003C1D1A /* Main.storyboard in Resources */,
 				BEDD7A4A25630ADF005BA4F9 /* Home.storyboard in Resources */,
 			);
@@ -668,6 +670,7 @@
 				896273AB257FF381002FAD99 /* ContentView.swift in Sources */,
 				89ED4BB825824CCD00A18B29 /* SiriShortcutsViewController.swift in Sources */,
 				89566A682581B27F00784DF3 /* SettingsTableViewController.swift in Sources */,
+				BE4BE74B25A78556002AB66E /* EditIslandsViewController.swift in Sources */,
 				8984E40B257FF16D002A5A72 /* TabBarDesafiosViewController.swift in Sources */,
 				7D2BEFE8256D86B0006AFD8C /* User+CoreDataClass.swift in Sources */,
 				12D13CF0256C2D130013E511 /* PerfilViewController.swift in Sources */,
@@ -862,13 +865,13 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = D84M4LK87S;
+				DEVELOPMENT_TEAM = 23WSBM7T82;
 				INFOPLIST_FILE = Bloomy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jhfs.cin.ufpe.br.Bloomy;
+				PRODUCT_BUNDLE_IDENTIFIER = jhfs.academy.cin.ufpe.br.Bloomy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -886,13 +889,13 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = D84M4LK87S;
+				DEVELOPMENT_TEAM = 23WSBM7T82;
 				INFOPLIST_FILE = Bloomy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jhfs.cin.ufpe.br.Bloomy;
+				PRODUCT_BUNDLE_IDENTIFIER = jhfs.academy.cin.ufpe.br.Bloomy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;

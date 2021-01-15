@@ -14,28 +14,33 @@ class AreasViewController: UIViewController {
     var selectedSaude:Bool = false
     var selectedPessoasQueridas:Bool = false
     var selectedAtencaoPlena:Bool = false
+    var selectedCount: Int = 0
     @IBOutlet weak var botaoAtencaoPlena: UIButton!
     @IBOutlet weak var botaoPessoasQueridas: UIButton!
     @IBOutlet weak var botaoLazer: UIButton!
     @IBOutlet weak var botaoSaude: UIButton!
     @IBOutlet weak var botaoVamosLa: UIButton!
     
-    //Gerenciadores das funções CRUD de Ilha e Usuário
+    // Gerenciadores das funções CRUD de Ilha e Usuário
     let user = UserManager()
     let island = IslandManager()
+    
+    // User default
+    let defaults = UserDefaults.standard
     
     @IBAction func chooseAtencaoPlena(_ sender: Any) {
         if (selectedAtencaoPlena == true) {
             selectedAtencaoPlena = false
             botaoAtencaoPlena.setBackgroundImage(UIImage(named: "botao_atencao_plena"), for: .normal)
+            selectedCount -= 1
             //Animação para que o botão volte a ter o tamanho normal
 //            UIButton.animate(withDuration: 0.45) { () -> Void in
 //                self.botaoAtencaoPlena.transform = CGAffineTransform(scaleX: 1, y: 1)
 //            }
-            
         } else {
             selectedAtencaoPlena = true
             botaoAtencaoPlena.setBackgroundImage(UIImage(named: "botao_on_atencao_plena"), for: .normal)
+            selectedCount += 1
             //Animação para diminuir o tamanho do botão
 //            UIButton.animate(withDuration: 0.45) { () -> Void in
 //                self.botaoAtencaoPlena.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
@@ -49,6 +54,7 @@ class AreasViewController: UIViewController {
         if (selectedPessoasQueridas == true) {
             selectedPessoasQueridas = false
             botaoPessoasQueridas.setBackgroundImage(UIImage(named: "botao_pessoas_queridas"), for: .normal)
+            selectedCount -= 1
             //Animação para que o botão volte a ter o tamanho normal
 //            UIButton.animate(withDuration: 0.45) { () -> Void in
 //                self.botaoPessoasQueridas.transform = CGAffineTransform(scaleX: 1, y: 1)
@@ -57,6 +63,7 @@ class AreasViewController: UIViewController {
         } else {
             selectedPessoasQueridas = true
             botaoPessoasQueridas.setBackgroundImage(UIImage(named: "botao_on_pessoas_queridas"), for: .normal)
+            selectedCount += 1
             //Animação para diminuir o tamanho do botão
 //            UIButton.animate(withDuration: 0.45) { () -> Void in
 //                self.botaoPessoasQueridas.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
@@ -69,6 +76,7 @@ class AreasViewController: UIViewController {
         if (selectedLazer == true) {
             selectedLazer = false
             botaoLazer.setBackgroundImage(UIImage(named: "botao_lazer"), for: .normal)
+            selectedCount -= 1
             //Animação para que o botão volte a ter o tamanho normal
 //            UIButton.animate(withDuration: 0.45) { () -> Void in
 //                self.botaoLazer.transform = CGAffineTransform(scaleX: 1, y: 1)
@@ -76,6 +84,7 @@ class AreasViewController: UIViewController {
         } else {
             selectedLazer = true
             botaoLazer.setBackgroundImage(UIImage(named: "botao_on_lazer"), for: .normal)
+            selectedCount += 1
             //Animação para diminuir o tamanho do botão
 //            UIButton.animate(withDuration: 0.45) { () -> Void in
 //                self.botaoLazer.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
@@ -88,6 +97,7 @@ class AreasViewController: UIViewController {
         if (selectedSaude == true) {
             selectedSaude = false
             botaoSaude.setBackgroundImage(UIImage(named: "botao_saude"), for: .normal)
+            selectedCount -= 1
             //Animação para que o botão volte a ter o tamanho normal
 //            UIButton.animate(withDuration: 0.45) { () -> Void in
 //                self.botaoSaude.transform = CGAffineTransform(scaleX: 1, y: 1)
@@ -95,6 +105,7 @@ class AreasViewController: UIViewController {
         } else {
             selectedSaude = true
             botaoSaude.setBackgroundImage(UIImage(named: "botao_on_saude"), for: .normal)
+            selectedCount += 1
             //Animação para diminuir o tamanho do botão
 //            UIButton.animate(withDuration: 0.45) { () -> Void in
 //                self.botaoSaude.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
@@ -107,31 +118,26 @@ class AreasViewController: UIViewController {
     @IBAction func createIslands(_ sender: Any) {
         //Retorna o usuario criado
         let usuario = self.user.getUser()
-        //Cria as ilhas que estão selecionadas para o usuario criado
-        if(selectedLazer == true) {
-            guard let lazerIsland = self.island.newIsland(withName: "Lazer") else { return }
-            _ = self.island.setUser(islandName: "Lazer", user: usuario!)
-            SeedDataBase.shared.createLeisureChallenges()
-            SeedDataBase.shared.createLeisureRewards()
-        }
-        if(selectedSaude == true) {
-            guard let saudeIsland = IslandManager.shared.newIsland(withName: "Saúde") else { return }
-            _ = self.island.setUser(islandName: "Saúde", user: usuario!)
-            SeedDataBase.shared.createHealthChallenges()
-            SeedDataBase.shared.createHealthRewards()
-        }
-        if(selectedAtencaoPlena == true) {
-            guard let atencaoPlenaIsland = IslandManager.shared.newIsland(withName: "Atenção Plena") else { return }
-            _ = self.island.setUser(islandName: "Atenção Plena", user: usuario!)
-            SeedDataBase.shared.createMindfulnessChallenges()
-            SeedDataBase.shared.createMindfulnessRewards()
-        }
-        if(selectedPessoasQueridas == true) {
-            guard let pessoasQueridasIsland = IslandManager.shared.newIsland(withName: "Pessoas Queridas") else { return }
-            _ = self.island.setUser(islandName: "Pessoas Queridas", user: usuario!)
-            SeedDataBase.shared.createLovedsChallenges()
-            SeedDataBase.shared.createLovedsRewards()
-        }
+        //Cria as ilhas
+        guard let lazerIsland = self.island.newIsland(withName: "Lazer") else { return }
+        _ = self.island.setUser(islandName: "Lazer", user: usuario!)
+        SeedDataBase.shared.createLeisureChallenges()
+        SeedDataBase.shared.createLeisureRewards()
+        
+        guard let saudeIsland = IslandManager.shared.newIsland(withName: "Saúde") else { return }
+        _ = self.island.setUser(islandName: "Saúde", user: usuario!)
+        SeedDataBase.shared.createHealthChallenges()
+        SeedDataBase.shared.createHealthRewards()
+        
+        guard let atencaoPlenaIsland = IslandManager.shared.newIsland(withName: "Atenção Plena") else { return }
+        _ = self.island.setUser(islandName: "Atenção Plena", user: usuario!)
+        SeedDataBase.shared.createMindfulnessChallenges()
+        SeedDataBase.shared.createMindfulnessRewards()
+        
+        guard let pessoasQueridasIsland = IslandManager.shared.newIsland(withName: "Pessoas Queridas") else { return }
+        _ = self.island.setUser(islandName: "Pessoas Queridas", user: usuario!)
+        SeedDataBase.shared.createLovedsChallenges()
+        SeedDataBase.shared.createLovedsRewards()
     }
     
     //Habilita o botão Vamos lá
@@ -170,6 +176,17 @@ class AreasViewController: UIViewController {
         setupNavigationController()
         
         // Cria uma variável no user defaults para armazenar o estado SoundsSwitch
-        UserDefaults.standard.set(true, forKey: "stateSoundsSwitch")
+        defaults.set(true, forKey: "stateSoundsSwitch")
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        // Adiciona quantidade de ilhas selecionadas ao user default
+        defaults.set(self.selectedCount, forKey: "quantityIslands")
+        
+        // Configura ilhas selecionadas no user default
+        defaults.set(selectedAtencaoPlena, forKey: "selectedMindfulness")
+        defaults.set(selectedLazer, forKey: "selectedLeisure")
+        defaults.set(selectedSaude, forKey: "selectedHealth")
+        defaults.set(selectedPessoasQueridas, forKey: "selectedLoveds")
     }
 }

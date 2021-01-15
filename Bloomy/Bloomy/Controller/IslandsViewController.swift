@@ -10,13 +10,11 @@ import SpriteKit
 import GameplayKit
 
 class IslandsViewController: UIViewController {
-    //@IBOutlet weak var challengeDayButton: UIButton!
-    //@IBOutlet weak var doneButton: UIButton!
-    //@IBOutlet weak var feedbackMessage: UIImageView!
     @IBOutlet weak var challengeDayButton: UIButton!
     @IBOutlet weak var doneButton: UIButton!
-    @IBOutlet weak var feedbackMessage: UIImageView!
-    
+    @IBOutlet weak var acceptedFeedbackMessage: UIImageView!
+    @IBOutlet var doneFeedbackMessage: UIImageView!
+
     var island = Island()
     var challengeObserver: NSObjectProtocol?
     var doneObserver: NSObjectProtocol?
@@ -39,6 +37,8 @@ class IslandsViewController: UIViewController {
         
         self.view.addSubview(challengeDayButton)
         self.view.addSubview(doneButton)
+        self.view.addSubview(acceptedFeedbackMessage)
+        self.view.addSubview(doneFeedbackMessage)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -142,6 +142,7 @@ class IslandsViewController: UIViewController {
         self.originalScaleFromIsland = islandView.transform
         tapGesture.numberOfTapsRequired = 2
         islandView.addGestureRecognizer(tapGesture)
+        self.view.addGestureRecognizer(tapGesture)
         
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(dragIsland(sender:)))
         islandView.addGestureRecognizer(panGesture)
@@ -172,19 +173,22 @@ class IslandsViewController: UIViewController {
             self.challengeDayButton.isHidden = false
             self.challengeDayButton.isEnabled = true
             self.challengeDayButton.alpha = 1
-            self.feedbackMessage.isHidden = true
+            self.acceptedFeedbackMessage.isHidden = true
+            self.doneFeedbackMessage.isHidden = true
         } else if ((self.island.dailyChallenge?.accepted)! && !(self.island.dailyChallenge?.done)!) {
             //se o desafio foi aceito mas n foi concluído
             self.challengeDayButton.isHidden = true
             self.doneButton.isHidden = false
-            self.feedbackMessage.isHidden = false
+            self.acceptedFeedbackMessage.isHidden = false
+            self.doneFeedbackMessage.isHidden = true
         } else {
             //desafio aceito e concluído
             self.challengeDayButton.isHidden = false
             self.challengeDayButton.alpha = 0.5
             self.challengeDayButton.isEnabled = false
             self.doneButton.isHidden = true
-            self.feedbackMessage.isHidden = true
+            self.acceptedFeedbackMessage.isHidden = true
+            self.doneFeedbackMessage.isHidden = false
         }
     }
     
@@ -253,16 +257,22 @@ class IslandsViewController: UIViewController {
     
     @objc func handlePinch(sender: UIPinchGestureRecognizer) {
         guard sender.view != nil else { return }
-        
+ 
         if sender.state == .began || sender.state == .changed {
+            
+            let transformA = (sender.view?.transform.a)!
+            if (transformA > self.view.frame.width/100 && sender.scale > 1) || transformA < 1 && sender.scale < 1 {
+                return
+            }
+            
             sender.view?.transform = (sender.view?.transform.scaledBy(x: sender.scale, y: sender.scale))!
             sender.scale = 1.0
         }
     }
     
     @objc func resizeIsland(sender: UITapGestureRecognizer) {
-        //sender.view?.transform = self.originalScaleFromIsland
-        sender.view?.frame = self.originalFrameFromIsland
+        self.scene.view?.transform = self.originalScaleFromIsland
+        self.scene.view?.frame = self.originalFrameFromIsland
     }
     
     @objc func dragIsland(sender: UIPanGestureRecognizer) {
@@ -274,8 +284,13 @@ class IslandsViewController: UIViewController {
             
         }
         if  sender.state == .began || sender.state == .changed {
-            view.center = CGPoint(x: view.center.x + translation.x, y: view.center.y + translation.y)
+            //  Precisei multiplicar o translation.x e translation.y para acelerar movimentação da view
+            // quando o usuário dar zoom
+            let translationX = translation.x * (sender.view?.frame.width)!/self.originalFrameFromIsland.width
+            let translationY = translation.y * (sender.view?.frame.width)!/self.originalFrameFromIsland.width
+            view.center = CGPoint(x: view.center.x + translationX, y: view.center.y + translationY)
             sender.setTranslation(CGPoint.zero, in: sender.view)
+            
         }
     }
 }

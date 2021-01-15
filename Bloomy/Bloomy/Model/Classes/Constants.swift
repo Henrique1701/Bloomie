@@ -28,4 +28,5 @@ enum IslandsNames: String {
 extension Notification.Name {
     static let acceptChallenge = Notification.Name("acceptChallenge")
     static let doneChallenge = Notification.Name("doneChallenge")
+    static let islandsChange = Notification.Name("islandsChange")
 }

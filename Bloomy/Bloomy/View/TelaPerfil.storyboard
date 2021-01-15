@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XCZ-zc-2Tt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XCZ-zc-2Tt">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
@@ -10,6 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
         <array key="Poppins-Regular.ttf">
             <string>Poppins-Regular</string>
         </array>
@@ -152,7 +155,7 @@
                         <color key="sectionIndexBackgroundColor" name="cor_fundo"/>
                         <color key="sectionIndexTrackingBackgroundColor" red="0.1450980392" green="0.1450980392" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                         <button key="tableFooterView" hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Okm-Dd-qEW">
-                            <rect key="frame" x="0.0" y="216" width="375" height="74"/>
+                            <rect key="frame" x="0.0" y="259.5" width="375" height="74"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.93333333330000001" green="0.69411764710000001" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <state key="normal" title="Sair">
@@ -232,6 +235,26 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="TjS-aE-C72" kind="show" id="g29-au-Zjp"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="kSI-Vu-2fs">
+                                        <rect key="frame" x="16" y="186" width="343" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kSI-Vu-2fs" id="Tgo-a7-Yea">
+                                            <rect key="frame" x="0.0" y="0.0" width="316" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Editar ilhas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y7E-Dl-6Ns">
+                                                    <rect key="frame" x="20" y="11" width="84" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="fcX-VI-Z2p" kind="show" id="mOe-6e-geb"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -504,11 +527,100 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LEC-3O-IZd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5767" y="193"/>
+            <point key="canvasLocation" x="5766" y="178"/>
+        </scene>
+        <!--Edit Islands View Controller-->
+        <scene sceneID="AFn-j8-uOS">
+            <objects>
+                <viewController id="fcX-VI-Z2p" customClass="EditIslandsViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JBh-8O-s83">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xoW-ZE-w8F">
+                                <rect key="frame" x="49" y="170" width="277" height="327"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aye-mV-1di">
+                                        <rect key="frame" x="0.0" y="0.0" width="277" height="74"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="aye-mV-1di" secondAttribute="height" multiplier="153:41" id="GiF-rI-PIN"/>
+                                        </constraints>
+                                        <state key="normal" image="botao_atencao_plena"/>
+                                        <connections>
+                                            <action selector="tappedMindfulnessButton:" destination="fcX-VI-Z2p" eventType="touchUpInside" id="sNq-GE-bql"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="59b-O3-0zB">
+                                        <rect key="frame" x="0.0" y="84" width="277" height="74.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="59b-O3-0zB" secondAttribute="height" multiplier="153:41" id="bsA-QU-fJ1"/>
+                                        </constraints>
+                                        <state key="normal" image="botao_pessoas_queridas"/>
+                                        <connections>
+                                            <action selector="tappedLovedsButton:" destination="fcX-VI-Z2p" eventType="touchUpInside" id="tmD-3g-FTk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJa-Be-7MM">
+                                        <rect key="frame" x="0.0" y="168.5" width="277" height="74.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="lJa-Be-7MM" secondAttribute="height" multiplier="153:41" id="MS1-pb-bxP"/>
+                                        </constraints>
+                                        <state key="normal" image="botao_lazer"/>
+                                        <connections>
+                                            <action selector="tappedLeisureButton:" destination="fcX-VI-Z2p" eventType="touchUpInside" id="2Mp-QK-C6X"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYW-ck-Vtf">
+                                        <rect key="frame" x="0.0" y="253" width="277" height="74"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="fYW-ck-Vtf" secondAttribute="height" multiplier="153:41" id="aA0-LH-eNh"/>
+                                        </constraints>
+                                        <state key="normal" image="botao_saude"/>
+                                        <connections>
+                                            <action selector="tappedHealthButton:" destination="fcX-VI-Z2p" eventType="touchUpInside" id="JO8-TB-yy6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quais áreas vamos cuidar?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="EuY-xz-ayQ">
+                                <rect key="frame" x="40" y="79" width="295" height="62.5"/>
+                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="34"/>
+                                <color key="textColor" red="0.2077606618" green="0.20445087549999999" blue="0.22035497430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="P9y-hL-aHR"/>
+                        <color key="backgroundColor" name="cor_fundo"/>
+                        <constraints>
+                            <constraint firstItem="EuY-xz-ayQ" firstAttribute="leading" secondItem="P9y-hL-aHR" secondAttribute="leading" constant="40" id="1vD-Pb-nux"/>
+                            <constraint firstItem="xoW-ZE-w8F" firstAttribute="centerY" secondItem="JBh-8O-s83" secondAttribute="centerY" id="6tJ-Xh-zAF"/>
+                            <constraint firstItem="xoW-ZE-w8F" firstAttribute="height" secondItem="P9y-hL-aHR" secondAttribute="height" multiplier="0.51467" priority="750" id="8aK-lO-C0f"/>
+                            <constraint firstItem="EuY-xz-ayQ" firstAttribute="trailing" secondItem="P9y-hL-aHR" secondAttribute="trailing" constant="-40" id="93Z-Pw-h1M"/>
+                            <constraint firstItem="xoW-ZE-w8F" firstAttribute="top" secondItem="EuY-xz-ayQ" secondAttribute="bottom" multiplier="1.2" id="Udk-m4-2nE"/>
+                            <constraint firstItem="xoW-ZE-w8F" firstAttribute="width" secondItem="P9y-hL-aHR" secondAttribute="width" multiplier="0.73913" id="cdF-7F-QKk"/>
+                            <constraint firstItem="EuY-xz-ayQ" firstAttribute="height" secondItem="JBh-8O-s83" secondAttribute="height" multiplier="0.09375" id="d4i-N6-qnk"/>
+                            <constraint firstItem="xoW-ZE-w8F" firstAttribute="centerX" secondItem="JBh-8O-s83" secondAttribute="centerX" id="qR6-sp-mEf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="GHL-FT-uCF"/>
+                    <connections>
+                        <outlet property="healthButton" destination="fYW-ck-Vtf" id="pGU-xh-hZ7"/>
+                        <outlet property="leisureButton" destination="lJa-Be-7MM" id="ToE-oV-qqw"/>
+                        <outlet property="lovedsButton" destination="59b-O3-0zB" id="v0a-GT-BFg"/>
+                        <outlet property="mindfulnessButton" destination="aye-mV-1di" id="PzJ-Sf-irr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QVr-oE-rw7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6538" y="-53"/>
         </scene>
     </scenes>
     <resources>
         <image name="avatar" width="77" height="77"/>
+        <image name="botao_atencao_plena" width="306" height="82"/>
+        <image name="botao_lazer" width="306" height="82"/>
+        <image name="botao_pessoas_queridas" width="306" height="82"/>
+        <image name="botao_saude" width="306" height="82"/>
         <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <image name="icone_perfil" width="30" height="30"/>
         <image name="perfil_atencao_plena" width="327" height="118"/>
