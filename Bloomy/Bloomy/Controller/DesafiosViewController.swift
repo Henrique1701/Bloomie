@@ -159,7 +159,8 @@ class DesafiosViewController: UIViewController {
     // Retorna do Core Data quais são os challenges aceitos que ainda não foram concluídos
     func getAcceptedChallenges() -> [Challenge] {
         var acceptedChallenges: [Challenge] = []
-        for island in UserManager.shared.getIslands()! {
+        let islands = getSortedIslands(islands: UserManager.shared.getIslands()!)
+        for island in  islands {
             if let dailyChallenge = island.dailyChallenge {
                 if dailyChallenge.accepted && !dailyChallenge.done {
                     acceptedChallenges.append(dailyChallenge)
@@ -167,6 +168,24 @@ class DesafiosViewController: UIViewController {
             }
         }
         return acceptedChallenges
+    }
+    
+    func getSortedIslands(islands: [Island]) -> [Island] {
+        var sortedIslands: [Island] = []
+        let islandsNames = [
+            IslandsNames.health.rawValue,
+            IslandsNames.leisure.rawValue,
+            IslandsNames.mindfulness.rawValue,
+            IslandsNames.loveds.rawValue
+        ]
+        
+        for islandName in islandsNames {
+            if let island = IslandManager.shared.getIsland(withName: islandName) {
+                sortedIslands.append(island)
+            }
+        }
+        
+        return sortedIslands
     }
     
     //Retorna o nome das ilhas
