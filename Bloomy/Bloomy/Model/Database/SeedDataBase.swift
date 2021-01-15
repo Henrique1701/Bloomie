@@ -86,7 +86,6 @@ struct SeedDataBase {
         }
     }
 
-    
     func createLovedsChallenges() {
         let lovedsChallenges = Challenges().lovedsChallenges
         for challenge in lovedsChallenges {
@@ -348,7 +347,7 @@ struct Rewards {
         ["ID": "AK4"],
         ["ID": "AN2"],
         ["ID": "A01"],
-        ["ID": "4M4"],
+        ["ID": "AM4"],
         ["ID": "AE5"],
         ["ID": "AE4"],
         ["ID": "AH4"],

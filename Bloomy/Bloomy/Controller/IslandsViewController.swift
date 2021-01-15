@@ -24,6 +24,7 @@ class IslandsViewController: UIViewController {
     var originalScaleFromIsland = CGAffineTransform()
     var originalFrameFromIsland = CGRect()
     var sceneName = ""
+    var senderWasDesafios = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +58,12 @@ class IslandsViewController: UIViewController {
         // Espera uma notificação para ativar animação da recompensa
         animationObserver = NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "animationObserver"), object: nil, queue: OperationQueue.main) { _ in
             self.rewardAnimation()
+        }
+        
+        // Exibe o popup de concluir quando chamado por DesafiosDataViewController
+        if (senderWasDesafios) {
+            self.performSegue(withIdentifier: "toDonePopUpViewControllerSegue" , sender: self)
+            self.senderWasDesafios = false
         }
     }
     

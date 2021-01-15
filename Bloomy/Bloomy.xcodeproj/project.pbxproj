@@ -15,10 +15,15 @@
 		7D2BEFC625685E48006AFD8C /* Island.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2BEFC525685E48006AFD8C /* Island.swift */; };
 		7D2BEFE8256D86B0006AFD8C /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2BEFE6256D86B0006AFD8C /* User+CoreDataClass.swift */; };
 		7D2BEFE9256D86B0006AFD8C /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2BEFE7256D86B0006AFD8C /* User+CoreDataProperties.swift */; };
+		7DAA427425A8D0A600C1CFF5 /* DesafiosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAA427325A8D0A600C1CFF5 /* DesafiosViewController.swift */; };
+		7DAA427925A8D0C100C1CFF5 /* DesafiosPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAA427825A8D0C100C1CFF5 /* DesafiosPageViewController.swift */; };
+		7DAA427E25A8D0DD00C1CFF5 /* DesafiosDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAA427D25A8D0DD00C1CFF5 /* DesafiosDataViewController.swift */; };
+		7DAA428325A8D17700C1CFF5 /* Desafios.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DAA428225A8D17700C1CFF5 /* Desafios.storyboard */; };
 		7DAE80212575877000B17FB8 /* AreasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAE80202575877000B17FB8 /* AreasViewController.swift */; };
 		7DB41BFA257AC31900BBFAEA /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DB41BF8257AC31900BBFAEA /* Poppins-Regular.ttf */; };
 		7DB41BFB257AC31900BBFAEA /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DB41BF9257AC31900BBFAEA /* Poppins-SemiBold.ttf */; };
 		7DB41C00257AC36300BBFAEA /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DB41BFF257AC36300BBFAEA /* Poppins-Bold.ttf */; };
+		7DD0195425B0BADE00024BD1 /* DesafiosVazioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD0195325B0BADE00024BD1 /* DesafiosVazioViewController.swift */; };
 		8905E6C3257961660015ECAC /* ChallengePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8905E6C2257961660015ECAC /* ChallengePopUpViewController.swift */; };
 		8905E6D7257E65D80015ECAC /* DonePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8905E6D6257E65D80015ECAC /* DonePopUpViewController.swift */; };
 		891D2E47256ED7B200AC961A /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891D2E46256ED7B200AC961A /* Challenge.swift */; };
@@ -94,10 +99,15 @@
 		7D2BEFC525685E48006AFD8C /* Island.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Island.swift; sourceTree = "<group>"; };
 		7D2BEFE6256D86B0006AFD8C /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		7D2BEFE7256D86B0006AFD8C /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		7DAA427325A8D0A600C1CFF5 /* DesafiosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafiosViewController.swift; sourceTree = "<group>"; };
+		7DAA427825A8D0C100C1CFF5 /* DesafiosPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafiosPageViewController.swift; sourceTree = "<group>"; };
+		7DAA427D25A8D0DD00C1CFF5 /* DesafiosDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafiosDataViewController.swift; sourceTree = "<group>"; };
+		7DAA428225A8D17700C1CFF5 /* Desafios.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Desafios.storyboard; sourceTree = "<group>"; };
 		7DAE80202575877000B17FB8 /* AreasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AreasViewController.swift; path = Bloomy/View/AreasViewController.swift; sourceTree = SOURCE_ROOT; };
 		7DB41BF8257AC31900BBFAEA /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		7DB41BF9257AC31900BBFAEA /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		7DB41BFF257AC36300BBFAEA /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		7DD0195325B0BADE00024BD1 /* DesafiosVazioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DesafiosVazioViewController.swift; path = Bloomy/View/DesafiosVazioViewController.swift; sourceTree = SOURCE_ROOT; };
 		8905E6C2257961660015ECAC /* ChallengePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengePopUpViewController.swift; sourceTree = "<group>"; };
 		8905E6D6257E65D80015ECAC /* DonePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonePopUpViewController.swift; sourceTree = "<group>"; };
 		891D2E46256ED7B200AC961A /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
@@ -343,6 +353,7 @@
 				BED0527B2576B8940035EB18 /* Islands.storyboard */,
 				89249D54257ED12E002747A3 /* PopUps.storyboard */,
 				D64B4F6225756F2000D818EB /* Onboarding.storyboard */,
+				7DAA428225A8D17700C1CFF5 /* Desafios.storyboard */,
 				896273AA257FF381002FAD99 /* ContentView.swift */,
 				89AA1D4825825E0200137F50 /* DesafiosVazioView.swift */,
 				89ED4BC625824E6800A18B29 /* SKScenes */,
@@ -353,6 +364,7 @@
 		BEDD7A422562F3C3005BA4F9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7DD0195325B0BADE00024BD1 /* DesafiosVazioViewController.swift */,
 				7D192270257ABA0E00D26450 /* ComoVaiViewController.swift */,
 				7DAE80202575877000B17FB8 /* AreasViewController.swift */,
 				BEC461C5255DABD8003C1D1A /* AppDelegate.swift */,
@@ -369,6 +381,9 @@
 				BE4BE73625A74995002AB66E /* IslandsViewController.swift */,
 				89249D3E257E9F2F002747A3 /* PopUps */,
 				89566A552581A8FE00784DF3 /* Intents.intentdefinition */,
+				7DAA427325A8D0A600C1CFF5 /* DesafiosViewController.swift */,
+				7DAA427825A8D0C100C1CFF5 /* DesafiosPageViewController.swift */,
+				7DAA427D25A8D0DD00C1CFF5 /* DesafiosDataViewController.swift */,
 				BE4BE74A25A78556002AB66E /* EditIslandsViewController.swift */,
 			);
 			path = Controller;
@@ -511,6 +526,7 @@
 				D61D03E825701C2F005BA187 /* Canela.ttc in Resources */,
 				89249D55257ED12E002747A3 /* PopUps.storyboard in Resources */,
 				BED0527C2576B8940035EB18 /* Islands.storyboard in Resources */,
+				7DAA428325A8D17700C1CFF5 /* Desafios.storyboard in Resources */,
 				7DB41BFA257AC31900BBFAEA /* Poppins-Regular.ttf in Resources */,
 				D6DFCE3B258148AF0013E8D1 /* reward.mp3 in Resources */,
 				7DB41BFB257AC31900BBFAEA /* Poppins-SemiBold.ttf in Resources */,
@@ -640,14 +656,17 @@
 				BEC461CA255DABD8003C1D1A /* ViewController.swift in Sources */,
 				89AA1D4925825E0200137F50 /* DesafiosVazioView.swift in Sources */,
 				89566A562581A8FE00784DF3 /* Intents.intentdefinition in Sources */,
+				7DAA427E25A8D0DD00C1CFF5 /* DesafiosDataViewController.swift in Sources */,
 				BEC461D0255DABD8003C1D1A /* Bloomy.xcdatamodeld in Sources */,
 				7D2BEFC625685E48006AFD8C /* Island.swift in Sources */,
 				7D267544256EDB97000C57A3 /* Reward.swift in Sources */,
 				891D2E47256ED7B200AC961A /* Challenge.swift in Sources */,
+				7DAA427925A8D0C100C1CFF5 /* DesafiosPageViewController.swift in Sources */,
 				8905E6C3257961660015ECAC /* ChallengePopUpViewController.swift in Sources */,
 				BEBD260F2583DB25002263BD /* MusicPlayer.swift in Sources */,
 				7DAE80212575877000B17FB8 /* AreasViewController.swift in Sources */,
 				BEC461C6255DABD8003C1D1A /* AppDelegate.swift in Sources */,
+				7DD0195425B0BADE00024BD1 /* DesafiosVazioViewController.swift in Sources */,
 				896273AB257FF381002FAD99 /* ContentView.swift in Sources */,
 				89ED4BB825824CCD00A18B29 /* SiriShortcutsViewController.swift in Sources */,
 				89566A682581B27F00784DF3 /* SettingsTableViewController.swift in Sources */,
@@ -658,6 +677,7 @@
 				BE4BE73725A74995002AB66E /* IslandsViewController.swift in Sources */,
 				8928F54B25670DD10089BE0E /* User.swift in Sources */,
 				89566A5B2581A90B00784DF3 /* NotificationsViewController.swift in Sources */,
+				7DAA427425A8D0A600C1CFF5 /* DesafiosViewController.swift in Sources */,
 				BEC461C8255DABD8003C1D1A /* SceneDelegate.swift in Sources */,
 				89249D4B257EA004002747A3 /* RewardPopUpViewController.swift in Sources */,
 				7D2BEFE9256D86B0006AFD8C /* User+CoreDataProperties.swift in Sources */,
