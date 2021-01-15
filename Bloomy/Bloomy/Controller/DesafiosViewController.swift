@@ -10,11 +10,11 @@ import CoreData
 
 class DesafiosViewController: UIViewController {
 
-    //MARK: Outlets
+    // MARK: Outlets
     // UIView que irá exibir a View do PageViewController
     @IBOutlet weak var contentView: UIView!
     
-    //MARK: Variáveis Globais
+    // MARK: Variáveis Globais
     // Identificar quais desafios foram aceitos
     var challenges:[Challenge] = []
     
@@ -24,6 +24,9 @@ class DesafiosViewController: UIViewController {
     // Imagem dos desafios
     var challengeImageDataSource: [UIImage] = []
     
+    // Nome das ilhas
+    var islandsNames: [String] = []
+    
     var currentViewControllerIndex = 0
     
     override func viewDidLoad() {
@@ -31,6 +34,7 @@ class DesafiosViewController: UIViewController {
         self.challenges = getAcceptedChallenges()
         self.challengeSummaryDataSource = getChallengeSummary()
         self.challengeImageDataSource = getChallengesIslandName()
+        self.islandsNames = getIslandsNames()
         self.configurePageViewController()
         self.setupNavigationController()
     }
@@ -40,6 +44,7 @@ class DesafiosViewController: UIViewController {
         challenges = getAcceptedChallenges()
         challengeSummaryDataSource = getChallengeSummary()
         challengeImageDataSource = getChallengesIslandName()
+        self.islandsNames = getIslandsNames()
         // Reseta o delegate do Data Source
         hideContentController()
     }
@@ -122,6 +127,7 @@ class DesafiosViewController: UIViewController {
         dataViewController.summaryText = challengeSummaryDataSource[index]
         dataViewController.cardImage
             = challengeImageDataSource[index]
+        dataViewController.islandName = islandsNames[index]
         
         // Verifica se é a última tela
         if index == challengeSummaryDataSource.count-1 {
@@ -153,6 +159,15 @@ class DesafiosViewController: UIViewController {
             }
         }
         return acceptedChallenges
+    }
+    
+    //Retorna o nome das ilhas
+    func getIslandsNames() -> [String] {
+        var islandsNames: [String] = []
+        for challenge in challenges {
+            islandsNames.append(challenge.challengeToIsland!.name!)
+        }
+        return islandsNames
     }
     
     // Retorna o texto dos challenges
