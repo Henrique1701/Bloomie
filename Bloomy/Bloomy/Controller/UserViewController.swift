@@ -47,4 +47,18 @@ class UserViewController: UIViewController {
             self.lovedsButton.isHidden = true
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as? IslandsViewController
+        
+        if segue.identifier == "healthToJourney" {
+            print("Health")
+        } else if segue.identifier == "leisureToJourney" {
+            print("Leisure")
+        } else if segue.identifier == "mindfulnessToJourney" {
+            print("Mindfulness")
+        } else if segue.identifier == "lovedsToJourney" {
+            print("Loveds")
+        }
+    }
 }
