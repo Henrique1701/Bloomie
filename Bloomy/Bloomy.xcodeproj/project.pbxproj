@@ -36,10 +36,9 @@
 		89566A632581AADA00784DF3 /* TelaPerfil.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89566A622581AADA00784DF3 /* TelaPerfil.storyboard */; };
 		89566A682581B27F00784DF3 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89566A672581B27F00784DF3 /* SettingsTableViewController.swift */; };
 		89566A702581B4DE00784DF3 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89566A6F2581B4DE00784DF3 /* UserViewController.swift */; };
-		896273AB257FF381002FAD99 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896273AA257FF381002FAD99 /* ContentView.swift */; };
 		898441302587E6D4001F4185 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8984412F2587E6D4001F4185 /* Poppins-Medium.ttf */; };
-		8984E40B257FF16D002A5A72 /* TabBarDesafiosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8984E40A257FF16D002A5A72 /* TabBarDesafiosViewController.swift */; };
-		89AA1D4925825E0200137F50 /* DesafiosVazioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AA1D4825825E0200137F50 /* DesafiosVazioView.swift */; };
+		89C1DAB625B6083600EB700E /* Journey.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89C1DAB525B6083600EB700E /* Journey.storyboard */; };
+		89C1DABB25B6090300EB700E /* JourneyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C1DABA25B6090300EB700E /* JourneyTableViewController.swift */; };
 		89DD872F2570243200DB1C13 /* SeedDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DD872E2570243200DB1C13 /* SeedDataBase.swift */; };
 		89ED4BB825824CCD00A18B29 /* SiriShortcutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89ED4BB725824CCD00A18B29 /* SiriShortcutsViewController.swift */; };
 		BE4BE73725A74995002AB66E /* IslandsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4BE73625A74995002AB66E /* IslandsViewController.swift */; };
@@ -123,10 +122,9 @@
 		89566A622581AADA00784DF3 /* TelaPerfil.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TelaPerfil.storyboard; sourceTree = "<group>"; };
 		89566A672581B27F00784DF3 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		89566A6F2581B4DE00784DF3 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
-		896273AA257FF381002FAD99 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8984412F2587E6D4001F4185 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
-		8984E40A257FF16D002A5A72 /* TabBarDesafiosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarDesafiosViewController.swift; sourceTree = "<group>"; };
-		89AA1D4825825E0200137F50 /* DesafiosVazioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafiosVazioView.swift; sourceTree = "<group>"; };
+		89C1DAB525B6083600EB700E /* Journey.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Journey.storyboard; sourceTree = "<group>"; };
+		89C1DABA25B6090300EB700E /* JourneyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyTableViewController.swift; sourceTree = "<group>"; };
 		89DD872E2570243200DB1C13 /* SeedDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeedDataBase.swift; sourceTree = "<group>"; };
 		89ED4BB725824CCD00A18B29 /* SiriShortcutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriShortcutsViewController.swift; sourceTree = "<group>"; };
 		910E7EF4AA3E30A07B9A2743 /* Pods-Bloomy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bloomy.release.xcconfig"; path = "Target Support Files/Pods-Bloomy/Pods-Bloomy.release.xcconfig"; sourceTree = "<group>"; };
@@ -354,8 +352,7 @@
 				89249D54257ED12E002747A3 /* PopUps.storyboard */,
 				D64B4F6225756F2000D818EB /* Onboarding.storyboard */,
 				7DAA428225A8D17700C1CFF5 /* Desafios.storyboard */,
-				896273AA257FF381002FAD99 /* ContentView.swift */,
-				89AA1D4825825E0200137F50 /* DesafiosVazioView.swift */,
+				89C1DAB525B6083600EB700E /* Journey.storyboard */,
 				89ED4BC625824E6800A18B29 /* SKScenes */,
 			);
 			path = View;
@@ -373,7 +370,6 @@
 				12D13CEF256C2D130013E511 /* PerfilViewController.swift */,
 				BEF24E522566C24800D408A8 /* HomeViewController.swift */,
 				D64B4F802575923B00D818EB /* ComoSeChamaViewController.swift */,
-				8984E40A257FF16D002A5A72 /* TabBarDesafiosViewController.swift */,
 				89566A5A2581A90B00784DF3 /* NotificationsViewController.swift */,
 				89566A672581B27F00784DF3 /* SettingsTableViewController.swift */,
 				89566A6F2581B4DE00784DF3 /* UserViewController.swift */,
@@ -385,6 +381,7 @@
 				7DAA427825A8D0C100C1CFF5 /* DesafiosPageViewController.swift */,
 				7DAA427D25A8D0DD00C1CFF5 /* DesafiosDataViewController.swift */,
 				BE4BE74A25A78556002AB66E /* EditIslandsViewController.swift */,
+				89C1DABA25B6090300EB700E /* JourneyTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -530,6 +527,7 @@
 				7DB41BFA257AC31900BBFAEA /* Poppins-Regular.ttf in Resources */,
 				D6DFCE3B258148AF0013E8D1 /* reward.mp3 in Resources */,
 				7DB41BFB257AC31900BBFAEA /* Poppins-SemiBold.ttf in Resources */,
+				89C1DAB625B6083600EB700E /* Journey.storyboard in Resources */,
 				898441302587E6D4001F4185 /* Poppins-Medium.ttf in Resources */,
 				BE91BB1B2580179B00CC83D0 /* MindfulnessIsland.sks in Resources */,
 				BE91BADC257FFF2000CC83D0 /* HealthIsland.sks in Resources */,
@@ -654,11 +652,11 @@
 				89566A702581B4DE00784DF3 /* UserViewController.swift in Sources */,
 				8905E6D7257E65D80015ECAC /* DonePopUpViewController.swift in Sources */,
 				BEC461CA255DABD8003C1D1A /* ViewController.swift in Sources */,
-				89AA1D4925825E0200137F50 /* DesafiosVazioView.swift in Sources */,
 				89566A562581A8FE00784DF3 /* Intents.intentdefinition in Sources */,
 				7DAA427E25A8D0DD00C1CFF5 /* DesafiosDataViewController.swift in Sources */,
 				BEC461D0255DABD8003C1D1A /* Bloomy.xcdatamodeld in Sources */,
 				7D2BEFC625685E48006AFD8C /* Island.swift in Sources */,
+				89C1DABB25B6090300EB700E /* JourneyTableViewController.swift in Sources */,
 				7D267544256EDB97000C57A3 /* Reward.swift in Sources */,
 				891D2E47256ED7B200AC961A /* Challenge.swift in Sources */,
 				7DAA427925A8D0C100C1CFF5 /* DesafiosPageViewController.swift in Sources */,
@@ -667,11 +665,9 @@
 				7DAE80212575877000B17FB8 /* AreasViewController.swift in Sources */,
 				BEC461C6255DABD8003C1D1A /* AppDelegate.swift in Sources */,
 				7DD0195425B0BADE00024BD1 /* DesafiosVazioViewController.swift in Sources */,
-				896273AB257FF381002FAD99 /* ContentView.swift in Sources */,
 				89ED4BB825824CCD00A18B29 /* SiriShortcutsViewController.swift in Sources */,
 				89566A682581B27F00784DF3 /* SettingsTableViewController.swift in Sources */,
 				BE4BE74B25A78556002AB66E /* EditIslandsViewController.swift in Sources */,
-				8984E40B257FF16D002A5A72 /* TabBarDesafiosViewController.swift in Sources */,
 				7D2BEFE8256D86B0006AFD8C /* User+CoreDataClass.swift in Sources */,
 				12D13CF0256C2D130013E511 /* PerfilViewController.swift in Sources */,
 				BE4BE73725A74995002AB66E /* IslandsViewController.swift in Sources */,
