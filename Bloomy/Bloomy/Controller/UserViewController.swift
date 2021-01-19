@@ -49,16 +49,16 @@ class UserViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destination = segue.destination as? IslandsViewController
+        let destination = segue.destination as? JourneyTableViewController
         
         if segue.identifier == "healthToJourney" {
-            print("Health")
+            destination?.island = IslandManager.shared.getIsland(withName: IslandsNames.health.rawValue)!
         } else if segue.identifier == "leisureToJourney" {
-            print("Leisure")
+            destination?.island = IslandManager.shared.getIsland(withName: IslandsNames.leisure.rawValue)!
         } else if segue.identifier == "mindfulnessToJourney" {
-            print("Mindfulness")
+            destination?.island = IslandManager.shared.getIsland(withName: IslandsNames.mindfulness.rawValue)!
         } else if segue.identifier == "lovedsToJourney" {
-            print("Loveds")
+            destination?.island = IslandManager.shared.getIsland(withName: IslandsNames.loveds.rawValue)!
         }
     }
 }
