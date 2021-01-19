@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17511" systemVersion="19H2" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20C69" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Challenge" representedClassName="Challenge" syncable="YES" codeGenerationType="class">
         <attribute name="accepted" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="done" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
@@ -9,6 +9,7 @@
         <relationship name="challengeToIsland" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Island" inverseName="islandToChallenge" inverseEntity="Island"/>
         <relationship name="daily" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Island" inverseName="dailyChallenge" inverseEntity="Island"/>
         <relationship name="dailyUser" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="dailyChallenges" inverseEntity="User"/>
+        <relationship name="reward" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Reward" inverseName="rewardToChallenge" inverseEntity="Reward"/>
     </entity>
     <entity name="Island" representedClassName="Island" syncable="YES" codeGenerationType="class">
         <attribute name="image" optional="YES" attributeType="Binary"/>
@@ -21,6 +22,7 @@
     <entity name="Reward" representedClassName="Reward" syncable="YES" codeGenerationType="class">
         <attribute name="id" optional="YES" attributeType="String"/>
         <attribute name="isShown" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <relationship name="rewardToChallenge" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Challenge" inverseName="reward" inverseEntity="Challenge"/>
         <relationship name="rewardToIsland" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Island" inverseName="islandToReward" inverseEntity="Island"/>
     </entity>
     <entity name="User" representedClassName="User" syncable="YES">
@@ -31,9 +33,9 @@
         <relationship name="userToIsland" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Island" inverseName="islandToUser" inverseEntity="Island"/>
     </entity>
     <elements>
-        <element name="Challenge" positionX="176.03515625" positionY="-403.1953125" width="128" height="163"/>
+        <element name="Challenge" positionX="176.03515625" positionY="-403.1953125" width="128" height="164"/>
         <element name="Island" positionX="184.1875" positionY="-191.41796875" width="128" height="133"/>
-        <element name="Reward" positionX="475.3359375" positionY="-174.11328125" width="128" height="88"/>
+        <element name="Reward" positionX="475.3359375" positionY="-174.11328125" width="128" height="89"/>
         <element name="User" positionX="-122.3046875" positionY="-177.93359375" width="128" height="118"/>
     </elements>
 </model>
