@@ -97,7 +97,7 @@
                                         <rect key="frame" x="0.0" y="325" width="339" height="92.5"/>
                                         <state key="normal" image="perfil_pessoas_queridas"/>
                                         <connections>
-                                            <segue destination="xsX-N9-PIP" kind="show" identifier="lovedToJourney" id="CEU-aU-W89"/>
+                                            <segue destination="xsX-N9-PIP" kind="show" identifier="lovedsToJourney" id="CEU-aU-W89"/>
                                         </connections>
                                     </button>
                                 </subviews>
