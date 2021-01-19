@@ -18,7 +18,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <color key="sectionIndexBackgroundColor" name="cor_fundo"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="89" id="Rbb-FV-S3S">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="journeyTableViewCell" rowHeight="89" id="Rbb-FV-S3S" customClass="JourneyTableViewCell" customModule="Bloomy" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="89"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Rbb-FV-S3S" id="eAQ-sM-tHz">
@@ -38,6 +38,10 @@
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="rewardImageView" destination="ICx-nE-kf8" id="bqf-Mu-7SX"/>
+                                    <outlet property="summaryLabel" destination="0k3-9w-Unp" id="wDH-V1-DGI"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
