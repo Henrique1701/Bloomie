@@ -203,6 +203,7 @@ class IslandsViewController: UIViewController {
             self.rewardIdToAnimate = availableReward.id!
             self.present(popup!, animated: true)
             availableReward.isShown = true
+            availableReward.rewardToChallenge = self.island.dailyChallenge
             _ = RewardManager.shared.saveContext()
         } else {
             fatalError("There is no available reward")
