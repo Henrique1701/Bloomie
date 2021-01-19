@@ -13,6 +13,9 @@ class JourneyTableViewController: UITableViewController {
     let userManager = UserManager.shared
     let islandsManager = IslandManager.shared
     var island = Island()
+    var doneChallenges: [Challenge] = []
+    
+    // MARK: - Outlets
 
     // MARK: - View Functions
     override func viewDidLoad() {
@@ -20,6 +23,7 @@ class JourneyTableViewController: UITableViewController {
         
         self.view.backgroundColor = UIColor(named: "cor_fundo")
         self.title = island.name!
+        self.setDoneChallenges()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -31,23 +35,33 @@ class JourneyTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        let numberOfDoneChallenges = doneChallenges.count
+        return numberOfDoneChallenges
+    }
+    
+    func setDoneChallenges() {
+        self.doneChallenges = []
+        for challenge in islandsManager.getChallenges(fromIsland: self.island.name!)! where challenge.done {
+            self.doneChallenges.append(challenge)
+        }
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        let cellIdentifier = "journeyTableViewCell"
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! JourneyTableViewCell
+        
+        cell.summaryLabel.text = doneChallenges[indexPath.row].summary
+        let rewardID = doneChallenges[indexPath.row].reward?.id
+        cell.rewardImageView.image = UIImage(named: rewardID!)
 
         return cell
     }
-    */
+
 
     /*
     // Override to support conditional editing of the table view.
