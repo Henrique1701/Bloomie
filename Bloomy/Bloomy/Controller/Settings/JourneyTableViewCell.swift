@@ -8,7 +8,10 @@
 import UIKit
 
 class JourneyTableViewCell: UITableViewCell {
-
+    // MARK: - Outlets
+    @IBOutlet var summaryLabel: UILabel!
+    @IBOutlet var rewardImageView: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
