@@ -8,11 +8,18 @@
 import UIKit
 
 class JourneyTableViewController: UITableViewController {
+    
+    // MARK: - Global Variables
+    let userManager = UserManager.shared
+    let islandsManager = IslandManager.shared
+    var island = Island()
 
+    // MARK: - View Functions
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.view.backgroundColor = UIColor(named: "cor_fundo")
+        self.title = island.name!
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
