@@ -49,7 +49,7 @@ class UserViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destination = segue.destination as? JourneyTableViewController
+        let destination = segue.destination as? JourneyCollectionViewController
         
         if segue.identifier == "healthToJourney" {
             destination?.island = IslandManager.shared.getIsland(withName: IslandsNames.health.rawValue)!
