@@ -9,4 +9,7 @@ import UIKit
 
 class JourneyCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet var summaryLabel: UILabel!
+    @IBOutlet var rewardImageView: UIImageView!
+    
 }
