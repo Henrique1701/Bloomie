@@ -1,58 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a0B-EO-4P6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sH8-7B-71Y">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--Journey Table View Controller-->
-        <scene sceneID="uBM-kA-KRf">
+        <!--Journey Collection View Controller-->
+        <scene sceneID="GgA-jg-Lys">
             <objects>
-                <tableViewController storyboardIdentifier="Journey" useStoryboardIdentifierAsRestorationIdentifier="YES" id="a0B-EO-4P6" customClass="JourneyTableViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="OdH-7Q-o5d">
+                <collectionViewController storyboardIdentifier="JourneyCollectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sH8-7B-71Y" customClass="JourneyCollectionViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="rPN-ui-Yfo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <color key="sectionIndexBackgroundColor" name="cor_fundo"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="journeyTableViewCell" rowHeight="89" id="Rbb-FV-S3S" customClass="JourneyTableViewCell" customModule="Bloomy" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="89"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Rbb-FV-S3S" id="eAQ-sM-tHz">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="89"/>
+                        <color key="backgroundColor" name="cor_fundo"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="16" minimumInteritemSpacing="16" id="gcM-bY-0DX">
+                            <size key="itemSize" width="327" height="118"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="32" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" reuseIdentifier="JourneyCollectionViewCell" id="cJi-v9-0ow" customClass="JourneyCollectionViewCell" customModule="Bloomy" customModuleProvider="target">
+                                <rect key="frame" x="43.5" y="32" width="327" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bIA-Wm-X8P">
+                                    <rect key="frame" x="0.0" y="0.0" width="327" height="118"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0k3-9w-Unp">
-                                            <rect key="frame" x="20" y="0.0" width="169" height="89"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpF-VK-eCr">
+                                            <rect key="frame" x="20" y="20" width="174" height="73"/>
+                                            <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ICx-nE-kf8">
-                                            <rect key="frame" x="304" y="11" width="68" height="67"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Ad-4K-V4X">
+                                            <rect key="frame" x="265" y="43" width="35" height="50"/>
                                         </imageView>
                                     </subviews>
-                                </tableViewCellContentView>
+                                    <constraints>
+                                        <constraint firstItem="0Ad-4K-V4X" firstAttribute="width" secondItem="bIA-Wm-X8P" secondAttribute="width" multiplier="0.107034" id="5NC-uE-7Bs"/>
+                                        <constraint firstItem="fpF-VK-eCr" firstAttribute="leading" secondItem="bIA-Wm-X8P" secondAttribute="leading" constant="20" symbolic="YES" id="Y3S-Eh-bgd"/>
+                                        <constraint firstItem="fpF-VK-eCr" firstAttribute="top" secondItem="bIA-Wm-X8P" secondAttribute="top" constant="20" symbolic="YES" id="ZLf-bM-ONN"/>
+                                        <constraint firstAttribute="trailing" secondItem="0Ad-4K-V4X" secondAttribute="trailing" constant="27" id="ak3-0O-41f"/>
+                                        <constraint firstItem="fpF-VK-eCr" firstAttribute="height" secondItem="bIA-Wm-X8P" secondAttribute="height" multiplier="0.618644" id="gIa-I2-LS5"/>
+                                        <constraint firstItem="0Ad-4K-V4X" firstAttribute="height" secondItem="bIA-Wm-X8P" secondAttribute="height" multiplier="0.423729" id="pDp-ca-shJ"/>
+                                        <constraint firstItem="fpF-VK-eCr" firstAttribute="width" secondItem="bIA-Wm-X8P" secondAttribute="width" multiplier="0.53211" id="srm-P7-gUh"/>
+                                        <constraint firstAttribute="bottom" secondItem="0Ad-4K-V4X" secondAttribute="bottom" constant="25" id="vpm-MN-qeD"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="customSize" width="327" height="118"/>
                                 <connections>
-                                    <outlet property="rewardImageView" destination="ICx-nE-kf8" id="bqf-Mu-7SX"/>
-                                    <outlet property="summaryLabel" destination="0k3-9w-Unp" id="wDH-V1-DGI"/>
+                                    <outlet property="rewardImageView" destination="0Ad-4K-V4X" id="Ra2-pK-2k3"/>
+                                    <outlet property="summaryLabel" destination="fpF-VK-eCr" id="CHO-HJ-hwA"/>
+                                    <segue destination="ADf-iP-Wpb" kind="presentation" id="x2M-9M-AaR"/>
                                 </connections>
-                            </tableViewCell>
-                        </prototypes>
+                            </collectionViewCell>
+                        </cells>
                         <connections>
-                            <outlet property="dataSource" destination="a0B-EO-4P6" id="3J3-92-O7X"/>
-                            <outlet property="delegate" destination="a0B-EO-4P6" id="cZx-55-nJJ"/>
+                            <outlet property="dataSource" destination="sH8-7B-71Y" id="XsZ-U8-ANB"/>
+                            <outlet property="delegate" destination="sH8-7B-71Y" id="3vt-OB-FsO"/>
                         </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bCb-BO-6r9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M5T-YG-kIO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-430.43478260869568" y="-252.45535714285714"/>
+            <point key="canvasLocation" x="350.72463768115944" y="-252.45535714285714"/>
+        </scene>
+        <!--Modal View Controller-->
+        <scene sceneID="Ska-uI-dKh">
+            <objects>
+                <viewController storyboardIdentifier="Modal" id="ADf-iP-Wpb" customClass="ModalViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aOg-cg-V8K">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKx-eM-IQH">
+                                <rect key="frame" x="86" y="304" width="205" height="298"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LDz-9T-XPR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="summaryLabel" destination="eKx-eM-IQH" id="E4L-mx-ErA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XDR-2P-8Bf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1153.6231884057972" y="-252.45535714285714"/>
         </scene>
     </scenes>
     <resources>
