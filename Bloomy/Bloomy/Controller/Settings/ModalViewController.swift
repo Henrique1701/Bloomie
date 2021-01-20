@@ -8,11 +8,18 @@
 import UIKit
 
 class ModalViewController: UIViewController {
+    @IBOutlet var summaryLabel: UILabel!
+    var summaryText = ""
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.summaryLabel.text = summaryText
     }
     
 
