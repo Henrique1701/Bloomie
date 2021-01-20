@@ -7,20 +7,28 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
+private let reuseIdentifier = "JourneyCollectionViewCell"
 
 class JourneyCollectionViewController: UICollectionViewController {
+    
+    // MARK: - Global Variables
+    
+    let userManager = UserManager.shared
+    let islandsManager = IslandManager.shared
+    var island = Island()
+    var doneChallenges: [Challenge] = []
+    var selected = 2
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
+        
         // Do any additional setup after loading the view.
+        self.view.backgroundColor = UIColor(named: "cor_fundo")
+        self.title = island.name!
+        self.setDoneChallenges()
     }
 
     /*
@@ -37,20 +45,23 @@ class JourneyCollectionViewController: UICollectionViewController {
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 0
+        return doneChallenges.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-    
-        // Configure the cell
-    
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "JourneyCollectionViewCell", for: indexPath) as! JourneyCollectionViewCell
+        
+        cell.summaryLabel.text = doneChallenges[indexPath.row].summary
+        let rewardID = doneChallenges[indexPath.row].reward?.id
+        cell.rewardImageView.image = UIImage(named: rewardID!)
+        cell.layer.cornerRadius = 12
+
         return cell
     }
 
@@ -84,5 +95,15 @@ class JourneyCollectionViewController: UICollectionViewController {
     
     }
     */
+
+    // MARK: - Auxiliar Functions
+    
+    func setDoneChallenges() {
+        self.doneChallenges = []
+        for challenge in islandsManager.getChallenges(fromIsland: self.island.name!)! where challenge.done {
+            self.doneChallenges.append(challenge)
+        }
+    }
+
 
 }
