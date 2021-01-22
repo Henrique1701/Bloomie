@@ -17,7 +17,6 @@ class JourneyCollectionViewController: UICollectionViewController {
     let islandsManager = IslandManager.shared
     var island = Island()
     var doneChallenges: [Challenge] = []
-    var selected = 2
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,6 +62,22 @@ class JourneyCollectionViewController: UICollectionViewController {
         cell.layer.cornerRadius = 12
 
         return cell
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let modalStoryboard = UIStoryboard(name: "Journey", bundle: nil)
+        let modalViewControler = modalStoryboard.instantiateViewController(identifier: "Modal") as ModalViewController
+        modalViewControler.summaryText = doneChallenges[indexPath.row].summary!
+        modalViewControler.rewardID = (doneChallenges[indexPath.row].reward?.id)!
+        print(doneChallenges[indexPath.row].time)
+        
+        // Configura a data
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyyy"
+        let dateString = dateFormatter.string(from: doneChallenges[indexPath.row].time!)
+        modalViewControler.dateText = dateString
+        
+        present(modalViewControler, animated: true, completion: nil)
     }
 
     // MARK: UICollectionViewDelegate

@@ -118,6 +118,7 @@ class IslandsViewController: UIViewController {
     
     func doneChallenge() {
         self.island.dailyChallenge?.done = true
+        self.island.dailyChallenge?.time = Date()
         _ = IslandManager.shared.saveContext()
     }
     
