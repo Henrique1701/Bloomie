@@ -43,6 +43,7 @@
 		89C1DAB625B6083600EB700E /* Journey.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89C1DAB525B6083600EB700E /* Journey.storyboard */; };
 		89DD872F2570243200DB1C13 /* SeedDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DD872E2570243200DB1C13 /* SeedDataBase.swift */; };
 		89ED4BB825824CCD00A18B29 /* SiriShortcutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89ED4BB725824CCD00A18B29 /* SiriShortcutsViewController.swift */; };
+		BE2742B625C0E5A3006699E6 /* JourneyPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2742B525C0E5A3006699E6 /* JourneyPopUpViewController.swift */; };
 		BE4BE73725A74995002AB66E /* IslandsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4BE73625A74995002AB66E /* IslandsViewController.swift */; };
 		BE4BE74B25A78556002AB66E /* EditIslandsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4BE74A25A78556002AB66E /* EditIslandsViewController.swift */; };
 		BE91BADC257FFF2000CC83D0 /* HealthIsland.sks in Resources */ = {isa = PBXBuildFile; fileRef = BE91BADB257FFF2000CC83D0 /* HealthIsland.sks */; };
@@ -134,6 +135,7 @@
 		910E7EF4AA3E30A07B9A2743 /* Pods-Bloomy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bloomy.release.xcconfig"; path = "Target Support Files/Pods-Bloomy/Pods-Bloomy.release.xcconfig"; sourceTree = "<group>"; };
 		94E49591F99200B6D647E55B /* Pods_BloomyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BloomyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25879A5F40F669187A291F0 /* Pods-BloomyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BloomyTests.debug.xcconfig"; path = "Target Support Files/Pods-BloomyTests/Pods-BloomyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BE2742B525C0E5A3006699E6 /* JourneyPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyPopUpViewController.swift; sourceTree = "<group>"; };
 		BE4BE73625A74995002AB66E /* IslandsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IslandsViewController.swift; sourceTree = "<group>"; };
 		BE4BE74A25A78556002AB66E /* EditIslandsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditIslandsViewController.swift; sourceTree = "<group>"; };
 		BE91BADB257FFF2000CC83D0 /* HealthIsland.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = HealthIsland.sks; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 				8905E6C2257961660015ECAC /* ChallengePopUpViewController.swift */,
 				8905E6D6257E65D80015ECAC /* DonePopUpViewController.swift */,
 				89249D4A257EA004002747A3 /* RewardPopUpViewController.swift */,
+				BE2742B525C0E5A3006699E6 /* JourneyPopUpViewController.swift */,
 			);
 			path = PopUps;
 			sourceTree = "<group>";
@@ -674,6 +677,7 @@
 				7D2BEFC625685E48006AFD8C /* Island.swift in Sources */,
 				7D267544256EDB97000C57A3 /* Reward.swift in Sources */,
 				891D2E47256ED7B200AC961A /* Challenge.swift in Sources */,
+				BE2742B625C0E5A3006699E6 /* JourneyPopUpViewController.swift in Sources */,
 				7DAA427925A8D0C100C1CFF5 /* DesafiosPageViewController.swift in Sources */,
 				8905E6C3257961660015ECAC /* ChallengePopUpViewController.swift in Sources */,
 				BEBD260F2583DB25002263BD /* MusicPlayer.swift in Sources */,
