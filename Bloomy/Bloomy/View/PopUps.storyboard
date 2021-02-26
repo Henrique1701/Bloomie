@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -10,6 +10,9 @@
     <customFonts key="customFonts">
         <array key="Poppins-Bold.ttf">
             <string>Poppins-Bold</string>
+        </array>
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
         </array>
         <array key="Poppins-Regular.ttf">
             <string>Poppins-Regular</string>
@@ -202,7 +205,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SeN-7u-ndk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1865" y="-525"/>
+            <point key="canvasLocation" x="1251" y="-525"/>
         </scene>
         <!--Reward Pop Up View Controller-->
         <scene sceneID="XcC-5V-2Ag">
@@ -304,7 +307,98 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hpr-Pr-T2S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3229" y="-525"/>
+            <point key="canvasLocation" x="2180" y="-525"/>
+        </scene>
+        <!--Journey Pop Up View Controller-->
+        <scene sceneID="H3C-gf-cEC">
+            <objects>
+                <viewController storyboardIdentifier="JourneyPopUp" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="2Om-li-Mfm" customClass="JourneyPopUpViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZN3-S1-ZhE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nCM-tM-S4a">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="JHF-0Z-ehJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <blurEffect style="extraLight"/>
+                            </visualEffectView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LyY-9f-iOM">
+                                <rect key="frame" x="41.5" y="243.5" width="331" height="409"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ui-Pf-WIz">
+                                        <rect key="frame" x="287" y="28" width="20" height="22"/>
+                                        <state key="normal" image="closeButton"/>
+                                        <connections>
+                                            <action selector="touchedCloseButton:" destination="2Om-li-Mfm" eventType="touchUpInside" id="izL-kb-P7L"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="26/01/2021" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqW-9r-M2O">
+                                        <rect key="frame" x="90" y="363" width="151" height="26"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M7M-h4-2nI">
+                                        <rect key="frame" x="118" y="50" width="95" height="107"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vIX-7w-2UK">
+                                        <rect key="frame" x="21" y="165" width="289" height="190"/>
+                                        <string key="text">Feche os olhos e imagine que você está escaneando o seu corpo, da cabeça até os pés. Preste atenção nas sensações. Relaxe as áreas do seu corpo que você sentir que estão tensionadas.</string>
+                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="fqW-9r-M2O" firstAttribute="top" secondItem="vIX-7w-2UK" secondAttribute="bottom" constant="8" symbolic="YES" id="2cz-WH-zdy"/>
+                                    <constraint firstAttribute="trailing" secondItem="9Ui-Pf-WIz" secondAttribute="trailing" constant="24" id="CHw-Ji-0Kh"/>
+                                    <constraint firstItem="M7M-h4-2nI" firstAttribute="height" secondItem="LyY-9f-iOM" secondAttribute="height" multiplier="0.261614" id="EO1-Ur-Lck"/>
+                                    <constraint firstItem="9Ui-Pf-WIz" firstAttribute="width" secondItem="LyY-9f-iOM" secondAttribute="width" multiplier="0.060423" id="FU5-K0-5Ou"/>
+                                    <constraint firstItem="vIX-7w-2UK" firstAttribute="top" secondItem="M7M-h4-2nI" secondAttribute="bottom" constant="8" symbolic="YES" id="JbM-9z-pJ2"/>
+                                    <constraint firstItem="M7M-h4-2nI" firstAttribute="centerX" secondItem="LyY-9f-iOM" secondAttribute="centerX" id="PbI-FB-cTl"/>
+                                    <constraint firstItem="M7M-h4-2nI" firstAttribute="width" secondItem="LyY-9f-iOM" secondAttribute="width" multiplier="0.287009" id="Ta2-tM-Wlh"/>
+                                    <constraint firstItem="9Ui-Pf-WIz" firstAttribute="height" secondItem="LyY-9f-iOM" secondAttribute="height" multiplier="0.0537897" id="VwS-mX-FHW"/>
+                                    <constraint firstItem="vIX-7w-2UK" firstAttribute="centerX" secondItem="LyY-9f-iOM" secondAttribute="centerX" id="abV-6e-inN"/>
+                                    <constraint firstItem="fqW-9r-M2O" firstAttribute="height" secondItem="LyY-9f-iOM" secondAttribute="height" multiplier="0.0635697" id="d5H-nc-5Se"/>
+                                    <constraint firstAttribute="bottom" secondItem="fqW-9r-M2O" secondAttribute="bottom" constant="20" id="dth-Yo-3K9"/>
+                                    <constraint firstItem="fqW-9r-M2O" firstAttribute="width" secondItem="LyY-9f-iOM" secondAttribute="width" multiplier="0.456193" id="erm-6o-afK"/>
+                                    <constraint firstItem="9Ui-Pf-WIz" firstAttribute="top" secondItem="LyY-9f-iOM" secondAttribute="top" constant="28" id="etb-Yp-JaR"/>
+                                    <constraint firstItem="vIX-7w-2UK" firstAttribute="width" secondItem="LyY-9f-iOM" secondAttribute="width" multiplier="0.873112" id="mJe-6O-dMb"/>
+                                    <constraint firstItem="M7M-h4-2nI" firstAttribute="top" secondItem="9Ui-Pf-WIz" secondAttribute="bottom" id="qxe-eq-0Vh"/>
+                                    <constraint firstItem="fqW-9r-M2O" firstAttribute="centerX" secondItem="LyY-9f-iOM" secondAttribute="centerX" id="zlY-2L-MHR"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JqR-vX-7Uh"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="nCM-tM-S4a" secondAttribute="bottom" id="4rh-6D-jkq"/>
+                            <constraint firstItem="LyY-9f-iOM" firstAttribute="centerX" secondItem="ZN3-S1-ZhE" secondAttribute="centerX" id="BK8-n9-bSp"/>
+                            <constraint firstItem="LyY-9f-iOM" firstAttribute="width" secondItem="JqR-vX-7Uh" secondAttribute="width" multiplier="0.799517" id="MSm-0M-ZF1"/>
+                            <constraint firstItem="nCM-tM-S4a" firstAttribute="top" secondItem="ZN3-S1-ZhE" secondAttribute="top" id="aqS-Yy-wCR"/>
+                            <constraint firstItem="nCM-tM-S4a" firstAttribute="leading" secondItem="JqR-vX-7Uh" secondAttribute="leading" id="bth-dj-VzH"/>
+                            <constraint firstItem="nCM-tM-S4a" firstAttribute="trailing" secondItem="JqR-vX-7Uh" secondAttribute="trailing" id="cQz-O2-Rol"/>
+                            <constraint firstItem="LyY-9f-iOM" firstAttribute="height" secondItem="JqR-vX-7Uh" secondAttribute="height" multiplier="0.5" id="t3o-b7-HtV"/>
+                            <constraint firstItem="LyY-9f-iOM" firstAttribute="centerY" secondItem="ZN3-S1-ZhE" secondAttribute="centerY" id="yuN-ey-fgS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentView" destination="LyY-9f-iOM" id="aYM-a3-WsX"/>
+                        <outlet property="dateLabel" destination="fqW-9r-M2O" id="HKq-gg-KgW"/>
+                        <outlet property="rewardImage" destination="M7M-h4-2nI" id="kFC-hA-0cE"/>
+                        <outlet property="summaryLabel" destination="vIX-7w-2UK" id="r4d-QO-oOd"/>
+                        <outlet property="visualEffectView" destination="nCM-tM-S4a" id="2DZ-XX-Q5f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="igD-5p-H9i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3105.7971014492755" y="-525"/>
         </scene>
     </scenes>
     <resources>

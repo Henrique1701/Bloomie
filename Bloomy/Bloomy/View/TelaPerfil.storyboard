@@ -51,6 +51,9 @@
                                             <constraint firstAttribute="width" secondItem="fj1-cD-fkY" secondAttribute="height" multiplier="327:118" id="yyX-eN-lLO"/>
                                         </constraints>
                                         <state key="normal" image="perfil_saude"/>
+                                        <connections>
+                                            <segue destination="xsX-N9-PIP" kind="show" identifier="healthToJourney" id="oCr-vV-Ayb"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qTm-fl-V37">
                                         <rect key="frame" x="43.5" y="134" width="327" height="118"/>
@@ -58,6 +61,9 @@
                                             <constraint firstAttribute="width" secondItem="qTm-fl-V37" secondAttribute="height" multiplier="327:118" id="vpT-Ow-GGI"/>
                                         </constraints>
                                         <state key="normal" image="perfil_lazer"/>
+                                        <connections>
+                                            <segue destination="xsX-N9-PIP" kind="show" identifier="leisureToJourney" id="9QA-hq-cAL"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fdu-dr-hBT">
                                         <rect key="frame" x="43.5" y="268" width="327" height="118"/>
@@ -65,6 +71,9 @@
                                             <constraint firstAttribute="width" secondItem="Fdu-dr-hBT" secondAttribute="height" multiplier="327:118" id="PKn-Aj-P2e"/>
                                         </constraints>
                                         <state key="normal" image="perfil_atencao_plena"/>
+                                        <connections>
+                                            <segue destination="xsX-N9-PIP" kind="show" identifier="mindfulnessToJourney" id="sfM-p3-Rqh"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vie-FK-jjr">
                                         <rect key="frame" x="43.5" y="402" width="327" height="118"/>
@@ -72,6 +81,9 @@
                                             <constraint firstAttribute="width" secondItem="vie-FK-jjr" secondAttribute="height" multiplier="327:118" id="gi6-8Q-FHn"/>
                                         </constraints>
                                         <state key="normal" image="perfil_pessoas_queridas"/>
+                                        <connections>
+                                            <segue destination="xsX-N9-PIP" kind="show" identifier="lovedsToJourney" id="CEU-aU-W89"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -152,6 +164,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XHD-A3-o3T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4186.9565217391309" y="-94.419642857142847"/>
+        </scene>
+        <!--Journey-->
+        <scene sceneID="M3b-cP-0I1">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Journey" id="xsX-N9-PIP" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="OmP-cK-8lJ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wxR-bv-yb1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4182" y="390"/>
         </scene>
         <!--Configurações-->
         <scene sceneID="br8-Ug-7zX">
@@ -626,6 +648,9 @@
             <point key="canvasLocation" x="6538" y="-53"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="CEU-aU-W89"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="avatar" width="77" height="77"/>
         <image name="botao_atencao_plena" width="306" height="82"/>
