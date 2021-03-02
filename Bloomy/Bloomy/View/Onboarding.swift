@@ -19,7 +19,7 @@ struct Onboarding: View {
                 
                 Text("Como vai?")
                     .font(.custom("Poppins-SemiBold", size: 34))
-                    .foregroundColor(Color("cor_fonte"))
+                    //.foregroundColor(Color("cor_fonte"))
                     
                 Spacer()
                     .frame(maxHeight: 20)
@@ -28,7 +28,7 @@ struct Onboarding: View {
                     .font(.custom("Poppins-Regular", size: 18))
                     .minimumScaleFactor(0.5)
                     .multilineTextAlignment(.center)
-                    .foregroundColor(Color("cor_fonte"))
+                    //.foregroundColor(Color("cor_fonte"))
                 
                 Spacer(minLength: 40)
                 
@@ -53,7 +53,10 @@ struct Onboarding_Previews: PreviewProvider {
         Group {
             Onboarding()
             Onboarding()
+                .previewDevice("iPhone SE (2nd generation)")
+            Onboarding()
                 .previewDevice("iPod touch (7th generation)")
+            
         }
     }
 }
