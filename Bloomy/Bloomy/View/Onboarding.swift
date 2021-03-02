@@ -9,6 +9,8 @@
  [] Colocar um tamanho máximo para a imagem para
  [] FontSize ter manho mínimo e máximo
  [] Ver SwiftUI em proporção à tela
+ [] Ver GeomtryReader
+ [] Ver iPad nas Highs
  */
 
 import SwiftUI
@@ -19,6 +21,7 @@ struct Onboarding: View {
             Image("garota_onboarding")
                 .resizable()
                 .scaledToFit()
+                .frame(maxWidth: 600, maxHeight: 600)
             
             Spacer()
             
