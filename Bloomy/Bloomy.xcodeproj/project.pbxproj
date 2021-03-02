@@ -40,6 +40,7 @@
 		898441302587E6D4001F4185 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8984412F2587E6D4001F4185 /* Poppins-Medium.ttf */; };
 		8984E40B257FF16D002A5A72 /* TabBarDesafiosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8984E40A257FF16D002A5A72 /* TabBarDesafiosViewController.swift */; };
 		89AA1D4925825E0200137F50 /* DesafiosVazioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AA1D4825825E0200137F50 /* DesafiosVazioView.swift */; };
+		89D9D46625EED27A0024FAC6 /* Onboarding2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D9D46525EED27A0024FAC6 /* Onboarding2.swift */; };
 		89DD872F2570243200DB1C13 /* SeedDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DD872E2570243200DB1C13 /* SeedDataBase.swift */; };
 		89E69E0A25E9827000E4704C /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E69E0925E9827000E4704C /* Onboarding.swift */; };
 		89ED4BB825824CCD00A18B29 /* SiriShortcutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89ED4BB725824CCD00A18B29 /* SiriShortcutsViewController.swift */; };
@@ -128,6 +129,7 @@
 		8984412F2587E6D4001F4185 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
 		8984E40A257FF16D002A5A72 /* TabBarDesafiosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarDesafiosViewController.swift; sourceTree = "<group>"; };
 		89AA1D4825825E0200137F50 /* DesafiosVazioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafiosVazioView.swift; sourceTree = "<group>"; };
+		89D9D46525EED27A0024FAC6 /* Onboarding2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding2.swift; sourceTree = "<group>"; };
 		89DD872E2570243200DB1C13 /* SeedDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeedDataBase.swift; sourceTree = "<group>"; };
 		89E69E0925E9827000E4704C /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		89ED4BB725824CCD00A18B29 /* SiriShortcutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriShortcutsViewController.swift; sourceTree = "<group>"; };
@@ -359,6 +361,7 @@
 				896273AA257FF381002FAD99 /* ContentView.swift */,
 				89AA1D4825825E0200137F50 /* DesafiosVazioView.swift */,
 				89E69E0925E9827000E4704C /* Onboarding.swift */,
+				89D9D46525EED27A0024FAC6 /* Onboarding2.swift */,
 				89ED4BC625824E6800A18B29 /* SKScenes */,
 			);
 			path = View;
@@ -660,6 +663,7 @@
 				89AA1D4925825E0200137F50 /* DesafiosVazioView.swift in Sources */,
 				89566A562581A8FE00784DF3 /* Intents.intentdefinition in Sources */,
 				7DAA427E25A8D0DD00C1CFF5 /* DesafiosDataViewController.swift in Sources */,
+				89D9D46625EED27A0024FAC6 /* Onboarding2.swift in Sources */,
 				BEC461D0255DABD8003C1D1A /* Bloomy.xcdatamodeld in Sources */,
 				7D2BEFC625685E48006AFD8C /* Island.swift in Sources */,
 				7D267544256EDB97000C57A3 /* Reward.swift in Sources */,
