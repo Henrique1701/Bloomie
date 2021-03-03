@@ -24,6 +24,7 @@
 		7DB41BFB257AC31900BBFAEA /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DB41BF9257AC31900BBFAEA /* Poppins-SemiBold.ttf */; };
 		7DB41C00257AC36300BBFAEA /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DB41BFF257AC36300BBFAEA /* Poppins-Bold.ttf */; };
 		7DD0195425B0BADE00024BD1 /* DesafiosVazioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD0195325B0BADE00024BD1 /* DesafiosVazioViewController.swift */; };
+		890079A125F002AE00F54028 /* Onboarding3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890079A025F002AE00F54028 /* Onboarding3.swift */; };
 		8905E6C3257961660015ECAC /* ChallengePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8905E6C2257961660015ECAC /* ChallengePopUpViewController.swift */; };
 		8905E6D7257E65D80015ECAC /* DonePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8905E6D6257E65D80015ECAC /* DonePopUpViewController.swift */; };
 		891D2E47256ED7B200AC961A /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891D2E46256ED7B200AC961A /* Challenge.swift */; };
@@ -110,6 +111,7 @@
 		7DB41BF9257AC31900BBFAEA /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		7DB41BFF257AC36300BBFAEA /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		7DD0195325B0BADE00024BD1 /* DesafiosVazioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DesafiosVazioViewController.swift; path = Bloomy/View/DesafiosVazioViewController.swift; sourceTree = SOURCE_ROOT; };
+		890079A025F002AE00F54028 /* Onboarding3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding3.swift; sourceTree = "<group>"; };
 		8905E6C2257961660015ECAC /* ChallengePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengePopUpViewController.swift; sourceTree = "<group>"; };
 		8905E6D6257E65D80015ECAC /* DonePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonePopUpViewController.swift; sourceTree = "<group>"; };
 		891D2E46256ED7B200AC961A /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
@@ -362,6 +364,7 @@
 				89AA1D4825825E0200137F50 /* DesafiosVazioView.swift */,
 				89E69E0925E9827000E4704C /* Onboarding.swift */,
 				89D9D46525EED27A0024FAC6 /* Onboarding2.swift */,
+				890079A025F002AE00F54028 /* Onboarding3.swift */,
 				89ED4BC625824E6800A18B29 /* SKScenes */,
 			);
 			path = View;
@@ -662,6 +665,7 @@
 				BEC461CA255DABD8003C1D1A /* ViewController.swift in Sources */,
 				89AA1D4925825E0200137F50 /* DesafiosVazioView.swift in Sources */,
 				89566A562581A8FE00784DF3 /* Intents.intentdefinition in Sources */,
+				890079A125F002AE00F54028 /* Onboarding3.swift in Sources */,
 				7DAA427E25A8D0DD00C1CFF5 /* DesafiosDataViewController.swift in Sources */,
 				89D9D46625EED27A0024FAC6 /* Onboarding2.swift in Sources */,
 				BEC461D0255DABD8003C1D1A /* Bloomy.xcdatamodeld in Sources */,
