@@ -19,23 +19,25 @@ struct Onboarding: View {
                 
                 Text("Como vai?")
                     .font(.custom("Poppins-SemiBold", size: 34))
-                    //.foregroundColor(Color("cor_fonte"))
+                    .foregroundColor(Color("cor_fonte"))
                     
                 Spacer()
                     .frame(maxHeight: 20)
                 
                 Text("Acreditamos que pequenas ações\n conseguem mudar o mundo")
+                    .frame(width: geometry.size.width * 0.9)
                     .font(.custom("Poppins-Regular", size: 18))
+                    .lineLimit(2)
                     .minimumScaleFactor(0.5)
                     .multilineTextAlignment(.center)
-                    //.foregroundColor(Color("cor_fonte"))
+                    .foregroundColor(Color("cor_fonte"))
                 
                 Spacer(minLength: 40)
                 
                 Button(action: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/{}/*@END_MENU_TOKEN@*/) {
                     Text("começar")
                         .font(.custom("Poppins-Bold", size: 18))
-                        .foregroundColor(.black)
+                        .foregroundColor(Color("cor_fonte"))
                         .padding(.vertical, geometry.size.height * 0.02)
                         .padding(.horizontal, geometry.size.width * 0.15)
                 }
