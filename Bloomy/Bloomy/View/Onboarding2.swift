@@ -13,22 +13,30 @@ struct Onboarding2: View {
         GeometryReader { geometry in
             
             VStack() {
-                Text("Como você se chama?")
-                    .font(.custom("Poppins-Bold", size: 28))
+                Text("Como posso te chamar?")
+                    .font(.custom("Poppins-Medium", size: 30))
+                    .foregroundColor(Color("cor_fonte"))
                     .padding(.trailing)
                     .frame(width: geometry.size.width * 0.9, alignment: .leading)
-                    
                 
-                TextField(/*@START_MENU_TOKEN@*/"Placeholder"/*@END_MENU_TOKEN@*/, text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
-                    .frame(width: geometry.size.width * 0.9)
+                
+                TextField("Aninha", text: .constant(""))
+                    .frame(width: geometry.size.width * 0.9, alignment: .leading)
+                
+                Rectangle()
+                    .background(Color("cor_fonte"))
+                    .opacity(0.6)
+                    .position(x: geometry.size.width * 0.30)
+                    .frame(width: geometry.size.width * 0.75, height: 3, alignment: .leading)
+                
                 
                 
                 Spacer ()
                 
-                Button(action: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/{}/*@END_MENU_TOKEN@*/) {
+                Button(action: {}) {
                     Text("continuar")
                         .font(.custom("Poppins-Bold", size: 18))
-                        .foregroundColor(.black)
+                        .foregroundColor(Color("cor_fonte"))
                         .padding(.vertical, geometry.size.height * 0.02)
                         .padding(.horizontal, geometry.size.width * 0.15)
                 }
@@ -44,7 +52,11 @@ struct Onboarding2: View {
 
 struct Onboarding2_Previews: PreviewProvider {
     static var previews: some View {
+        
         Onboarding2()
+            .previewDevice("iPhone 11")
+        Onboarding2()
+            .previewDevice("iPhone 12 Pro Max")
         Onboarding2()
             .previewDevice("iPod touch (7th generation)")
     }
