@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Onboarding3: View {
     
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State var isMindfulnessSelected = false
     @State var isLovedsSelected = false
     @State var isLeisureSelected = false
@@ -19,6 +20,12 @@ struct Onboarding3: View {
         GeometryReader { geometry in
             
             VStack() {
+                
+                Button(action: {self.presentationMode.wrappedValue.dismiss()}) {
+                    Image("botao_back")
+                        .aspectRatio(contentMode: .fit)
+                        .foregroundColor(.white)
+                }.frame(width: geometry.size.width * 0.9, alignment: .leading)
                 
                 Text("Quais áreas vamos cuidar?")
                     .font(.custom("Poppins-Medium", size: 30))
@@ -111,7 +118,7 @@ struct Onboarding3: View {
             .frame(width: geometry.size.width)
         }
         .background(Color("cor_fundo").edgesIgnoringSafeArea(.all))
-        
+        .navigationBarHidden(true)
     }
 }
 
