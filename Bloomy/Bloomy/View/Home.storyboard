@@ -241,7 +241,6 @@
         <!--Missões-->
         <scene sceneID="5Bw-bg-DYB">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xg8-Jq-mtk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="8r1-tz-zHZ" customClass="TabBarDesafiosViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j2e-zQ-BXg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -251,13 +250,14 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Missões" image="tabBarItem:14f-Z1-41G:image" id="14f-Z1-41G"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xg8-Jq-mtk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1271" y="-206"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="dMZ-ON-ptP">
             <objects>
-                <tabBarController modalPresentationStyle="fullScreen" id="AC1-FP-WMe" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="HomeTabBar" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AC1-FP-WMe" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="zPm-xm-TZW"/>
                     <tabBar key="tabBar" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZcZ-Hk-sL0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>

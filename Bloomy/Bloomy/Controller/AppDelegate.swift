@@ -32,9 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.makeKeyAndVisible()
         
         if (UserManager.shared.getUser() == nil) {
-            let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
-            let initialViewController = storyboard.instantiateInitialViewController()!
-            self.window?.rootViewController = initialViewController
+            self.window?.rootViewController = OnboardingContainerViewController()
         } else {
             let storyboard = UIStoryboard(name: "Home", bundle: nil)
             let initialViewController = storyboard.instantiateInitialViewController()!
