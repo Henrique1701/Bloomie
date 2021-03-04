@@ -17,7 +17,7 @@ struct Onboarding: View {
                     Image("garota_onboarding")
                         .resizable()
                         .scaledToFit()
-                        .frame(idealWidth: 409, maxWidth: 600,idealHeight: 402, maxHeight: geometry.size.height * 0.5)
+                        .frame(idealWidth: 409, maxWidth:  600, maxHeight: geometry.size.height * 0.5)
                     
                     Text("Como vai?")
                         .font(.custom("Poppins-SemiBold", size: 34))

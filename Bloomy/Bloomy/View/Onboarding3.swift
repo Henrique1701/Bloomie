@@ -14,6 +14,58 @@ struct Onboarding3: View {
     @State var isLovedsSelected = false
     @State var isLeisureSelected = false
     @State var isHealthSelected = false
+    @State var selectedCount: Int = 0
+    
+    // Gerenciadores das funções CRUD de Ilha e Usuário
+    let user = UserManager()
+    let island = IslandManager()
+    // User default
+    let defaults = UserDefaults.standard
+    
+    func increaseOrDiacreaseCount(forStatus: Bool) {
+        if (forStatus) {
+            self.selectedCount -= 1
+        } else {
+            self.selectedCount += 1
+        }
+    }
+    
+    func createIslands() {
+        //Retorna o usuario criado
+        let usuario = self.user.getUser()
+        //Cria as ilhas
+        guard self.island.newIsland(withName: "Lazer") != nil else { return }
+        _ = self.island.setUser(islandName: "Lazer", user: usuario!)
+        SeedDataBase.shared.createLeisureChallenges()
+        SeedDataBase.shared.createLeisureRewards()
+        
+        guard IslandManager.shared.newIsland(withName: "Saúde") != nil else { return }
+        _ = self.island.setUser(islandName: "Saúde", user: usuario!)
+        SeedDataBase.shared.createHealthChallenges()
+        SeedDataBase.shared.createHealthRewards()
+        
+        guard IslandManager.shared.newIsland(withName: "Atenção Plena") != nil else { return }
+        _ = self.island.setUser(islandName: "Atenção Plena", user: usuario!)
+        SeedDataBase.shared.createMindfulnessChallenges()
+        SeedDataBase.shared.createMindfulnessRewards()
+        
+        guard IslandManager.shared.newIsland(withName: "Pessoas Queridas") != nil else { return }
+        _ = self.island.setUser(islandName: "Pessoas Queridas", user: usuario!)
+        SeedDataBase.shared.createLovedsChallenges()
+        SeedDataBase.shared.createLovedsRewards()
+    }
+    
+    func setIslansInUserDefaults() {
+        // Adiciona quantidade de ilhas selecionadas ao user default
+        defaults.set(self.selectedCount, forKey: "quantityIslands")
+        
+        // Configura ilhas selecionadas no user default
+        defaults.set(self.isMindfulnessSelected, forKey: "selectedMindfulness")
+        defaults.set(self.isLeisureSelected, forKey: "selectedLeisure")
+        defaults.set(self.isHealthSelected, forKey: "selectedHealth")
+        defaults.set(self.isLovedsSelected, forKey: "selectedLoveds")
+    }
+
     
     var body: some View {
         
@@ -38,6 +90,7 @@ struct Onboarding3: View {
                 VStack() {
                     
                     Button(action: {
+                        self.increaseOrDiacreaseCount(forStatus: isMindfulnessSelected)
                         self.isMindfulnessSelected.toggle()
                     }) {
                         if !isMindfulnessSelected {
@@ -54,6 +107,7 @@ struct Onboarding3: View {
                     Spacer()
                     
                     Button(action: {
+                        self.increaseOrDiacreaseCount(forStatus: isLovedsSelected)
                         self.isLovedsSelected.toggle()
                     }) {
                         if !isLovedsSelected {
@@ -70,6 +124,7 @@ struct Onboarding3: View {
                     Spacer()
                     
                     Button(action: {
+                        self.increaseOrDiacreaseCount(forStatus: isLeisureSelected)
                         self.isLeisureSelected.toggle()
                     }) {
                         if !isLeisureSelected {
@@ -86,6 +141,7 @@ struct Onboarding3: View {
                     Spacer()
                     
                     Button(action: {
+                        self.increaseOrDiacreaseCount(forStatus: isHealthSelected)
                         self.isHealthSelected.toggle()
                     }) {
                         if !isHealthSelected {
@@ -103,16 +159,36 @@ struct Onboarding3: View {
                 
                 Spacer()
                 
-                Button(action: {}) {
-                    Text("vamos lá")
-                        .font(.custom("Poppins-Bold", size: 18))
-                        .foregroundColor(Color("cor_fonte"))
-                        .padding(.vertical, geometry.size.height * 0.02)
-                        .padding(.horizontal, geometry.size.width * 0.15)
+                if !self.isMindfulnessSelected && !self.isHealthSelected && !self.isLeisureSelected && !self.isLovedsSelected {
+                    Button(action: {}) {
+                        Text("vamos lá")
+                            .font(.custom("Poppins-Bold", size: 18))
+                            .foregroundColor(Color("cor_fonte"))
+                            .padding(.vertical, geometry.size.height * 0.02)
+                            .padding(.horizontal, geometry.size.width * 0.15)
+                    }
+                    .background(Color("cor_botao"))
+                    .opacity(0.2)
+                    .clipShape(Capsule())
+                    .disabled(true)
+                } else {
+                    Button(action: {
+                        self.createIslands()
+                        self.setIslansInUserDefaults()
+                        print(self.selectedCount)
+                        //Chama o storyboard
+                        NotificationCenter.default.post(name: Notification.Name("callHome"), object: nil)
+                    }) {
+                        Text("vamos lá")
+                            .font(.custom("Poppins-Bold", size: 18))
+                            .foregroundColor(Color("cor_fonte"))
+                            .padding(.vertical, geometry.size.height * 0.02)
+                            .padding(.horizontal, geometry.size.width * 0.15)
+                    }
+                    .background(Color("cor_botao"))
+                    .clipShape(Capsule())
                 }
-                .background(Color("cor_botao"))
-                .clipShape(Capsule())
-                
+
             }
             .padding(.bottom, geometry.size.height * 0.05)
             .frame(width: geometry.size.width)

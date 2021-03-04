@@ -12,6 +12,16 @@ struct Onboarding2: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State var textFieldInput = ""
     
+    func setUser() {
+        let userName = textFieldInput
+        if (UserManager.shared.getUser() != nil) {
+            _ = UserManager.shared.deleteUser()
+            _ = UserManager.shared.newUser(withName: userName)
+        } else{
+            _ = UserManager.shared.newUser(withName: userName)
+        }
+    }
+    
     var body: some View {
         
         GeometryReader { geometry in
@@ -45,7 +55,7 @@ struct Onboarding2: View {
                 Spacer ()
                 
                 if textFieldInput == "" {
-                    Button(action: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/{}/*@END_MENU_TOKEN@*/) {
+                    Button(action: {}) {
                         Text("continuar")
                             .font(.custom("Poppins-Bold", size: 18))
                             .foregroundColor(Color("cor_fonte"))
@@ -58,7 +68,10 @@ struct Onboarding2: View {
                     .disabled(true)
                 } else {
                     NavigationLink(
-                        destination: Onboarding3(),
+                        destination: Onboarding3().onAppear(perform: {
+                            self.setUser()
+                            print(UserManager.shared.getUserName()!)
+                        }),
                         label: {
                             Text("continuar")
                                 .font(.custom("Poppins-Bold", size: 18))
