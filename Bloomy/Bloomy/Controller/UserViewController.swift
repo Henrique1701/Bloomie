@@ -47,4 +47,18 @@ class UserViewController: UIViewController {
             self.lovedsButton.isHidden = true
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as? JourneyCollectionViewController
+        
+        if segue.identifier == "healthToJourney" {
+            destination?.island = IslandManager.shared.getIsland(withName: IslandsNames.health.rawValue)!
+        } else if segue.identifier == "leisureToJourney" {
+            destination?.island = IslandManager.shared.getIsland(withName: IslandsNames.leisure.rawValue)!
+        } else if segue.identifier == "mindfulnessToJourney" {
+            destination?.island = IslandManager.shared.getIsland(withName: IslandsNames.mindfulness.rawValue)!
+        } else if segue.identifier == "lovedsToJourney" {
+            destination?.island = IslandManager.shared.getIsland(withName: IslandsNames.loveds.rawValue)!
+        }
+    }
 }

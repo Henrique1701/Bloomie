@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sH8-7B-71Y">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Journey Collection View Controller-->
+        <scene sceneID="GgA-jg-Lys">
+            <objects>
+                <collectionViewController storyboardIdentifier="JourneyCollectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sH8-7B-71Y" customClass="JourneyCollectionViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="rPN-ui-Yfo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="cor_fundo"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="16" minimumInteritemSpacing="16" id="gcM-bY-0DX">
+                            <size key="itemSize" width="327" height="118"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="32" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" reuseIdentifier="JourneyCollectionViewCell" id="cJi-v9-0ow" customClass="JourneyCollectionViewCell" customModule="Bloomy" customModuleProvider="target">
+                                <rect key="frame" x="43.5" y="32" width="327" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bIA-Wm-X8P">
+                                    <rect key="frame" x="0.0" y="0.0" width="327" height="118"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpF-VK-eCr">
+                                            <rect key="frame" x="20" y="20" width="174" height="73"/>
+                                            <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Ad-4K-V4X">
+                                            <rect key="frame" x="265" y="43" width="35" height="50"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="0Ad-4K-V4X" firstAttribute="width" secondItem="bIA-Wm-X8P" secondAttribute="width" multiplier="0.107034" id="5NC-uE-7Bs"/>
+                                        <constraint firstItem="fpF-VK-eCr" firstAttribute="leading" secondItem="bIA-Wm-X8P" secondAttribute="leading" constant="20" symbolic="YES" id="Y3S-Eh-bgd"/>
+                                        <constraint firstItem="fpF-VK-eCr" firstAttribute="top" secondItem="bIA-Wm-X8P" secondAttribute="top" constant="20" symbolic="YES" id="ZLf-bM-ONN"/>
+                                        <constraint firstAttribute="trailing" secondItem="0Ad-4K-V4X" secondAttribute="trailing" constant="27" id="ak3-0O-41f"/>
+                                        <constraint firstItem="fpF-VK-eCr" firstAttribute="height" secondItem="bIA-Wm-X8P" secondAttribute="height" multiplier="0.618644" id="gIa-I2-LS5"/>
+                                        <constraint firstItem="0Ad-4K-V4X" firstAttribute="height" secondItem="bIA-Wm-X8P" secondAttribute="height" multiplier="0.423729" id="pDp-ca-shJ"/>
+                                        <constraint firstItem="fpF-VK-eCr" firstAttribute="width" secondItem="bIA-Wm-X8P" secondAttribute="width" multiplier="0.53211" id="srm-P7-gUh"/>
+                                        <constraint firstAttribute="bottom" secondItem="0Ad-4K-V4X" secondAttribute="bottom" constant="25" id="vpm-MN-qeD"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="customSize" width="327" height="118"/>
+                                <connections>
+                                    <outlet property="rewardImageView" destination="0Ad-4K-V4X" id="Ra2-pK-2k3"/>
+                                    <outlet property="summaryLabel" destination="fpF-VK-eCr" id="CHO-HJ-hwA"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="sH8-7B-71Y" id="XsZ-U8-ANB"/>
+                            <outlet property="delegate" destination="sH8-7B-71Y" id="3vt-OB-FsO"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M5T-YG-kIO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="350.72463768115944" y="-252.45535714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="cor_fundo">
+            <color red="0.99599999189376831" green="0.96100002527236938" blue="0.94499999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
