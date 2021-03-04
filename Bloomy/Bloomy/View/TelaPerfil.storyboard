@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XCZ-zc-2Tt">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -23,30 +23,30 @@
             <objects>
                 <viewController storyboardIdentifier="Perfil" title="Perfil" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XCZ-zc-2Tt" customClass="UserViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r0P-bO-81l">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jornada" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qwu-SL-fSk">
-                                <rect key="frame" x="0.0" y="113" width="160" height="24"/>
+                                <rect key="frame" x="0.0" y="91.5" width="160" height="20"/>
                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
                                 <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OHX-tc-ufm" userLabel="View linha jornada">
-                                <rect key="frame" x="0.0" y="137" width="160" height="2"/>
+                                <rect key="frame" x="0.0" y="111.5" width="160" height="1.5"/>
                                 <color key="backgroundColor" name="cor_botao"/>
                                 <color key="tintColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="led-tU-wAa" userLabel="View linha resumo">
-                                <rect key="frame" x="160" y="137" width="160" height="2"/>
+                                <rect key="frame" x="160" y="111.5" width="160" height="1.5"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <stackView opaque="NO" contentMode="top" axis="vertical" distribution="fillEqually" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="KRp-RJ-KO6">
-                                <rect key="frame" x="0.0" y="153" width="320" height="351"/>
+                                <rect key="frame" x="0.0" y="124.5" width="320" height="291.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fj1-cD-fkY">
-                                        <rect key="frame" x="55" y="0.0" width="210" height="76"/>
+                                        <rect key="frame" x="75.5" y="0.0" width="169" height="61"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="fj1-cD-fkY" secondAttribute="height" multiplier="327:118" id="yyX-eN-lLO"/>
                                         </constraints>
@@ -56,7 +56,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qTm-fl-V37">
-                                        <rect key="frame" x="55" y="92" width="210" height="75.5"/>
+                                        <rect key="frame" x="75.5" y="77" width="169" height="61"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="qTm-fl-V37" secondAttribute="height" multiplier="327:118" id="vpT-Ow-GGI"/>
                                         </constraints>
@@ -66,7 +66,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fdu-dr-hBT">
-                                        <rect key="frame" x="55" y="183.5" width="210" height="76"/>
+                                        <rect key="frame" x="75.5" y="154" width="169" height="60.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Fdu-dr-hBT" secondAttribute="height" multiplier="327:118" id="PKn-Aj-P2e"/>
                                         </constraints>
@@ -76,7 +76,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vie-FK-jjr">
-                                        <rect key="frame" x="55" y="275.5" width="210" height="75.5"/>
+                                        <rect key="frame" x="75.5" y="230.5" width="169" height="61"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="vie-FK-jjr" secondAttribute="height" multiplier="327:118" id="gi6-8Q-FHn"/>
                                         </constraints>
@@ -88,13 +88,13 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resumo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igc-Us-STc">
-                                <rect key="frame" x="160" y="113" width="160" height="24"/>
+                                <rect key="frame" x="160" y="91.5" width="160" height="20"/>
                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
                                 <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r24-s7-XCY">
-                                <rect key="frame" x="258" y="20" width="62" height="50.5"/>
+                                <rect key="frame" x="258" y="20" width="62" height="43"/>
                                 <color key="tintColor" red="0.24313725489999999" green="0.2470588235" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <state key="normal" image="gearshape.fill" catalog="system"/>
                                 <connections>
@@ -102,13 +102,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rebecca Bloom" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="n1b-ml-mBg">
-                                <rect key="frame" x="81" y="45" width="94" height="13"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <rect key="frame" x="81" y="45" width="94" height="11"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                                 <color key="textColor" red="0.24313725489999999" green="0.2470588235" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" red="0.24313725489999999" green="0.2470588235" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="vnq-Dm-5Q0">
-                                <rect key="frame" x="10" y="20" width="71" height="49"/>
+                                <rect key="frame" x="10" y="20" width="71" height="41.5"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7Ec-G9-za4"/>
@@ -180,7 +180,7 @@
             <objects>
                 <tableViewController title="Configurações" modalPresentationStyle="fullScreen" id="LCt-ex-JkX" customClass="SettingsTableViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="6Ln-LZ-e2S">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="cor_fundo"/>
                         <color key="separatorColor" name="cor_fundo"/>
@@ -313,185 +313,180 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="IgX-Lf-JwG" customClass="NotificationsViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GGu-WX-JW3">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ezn-lP-lPq" userLabel="Stack View Geral">
-                                <rect key="frame" x="16" y="84" width="288" height="327"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="QBz-rV-lVi" userLabel="Stack View Finalizar missão">
+                                <rect key="frame" x="16" y="223" width="288" height="124.5"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="YaJ-ya-b2O" userLabel="Stack View Aceitar">
-                                        <rect key="frame" x="0.0" y="0.0" width="288" height="92.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="GYu-0o-Os7">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="69.5"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="QFb-jd-0nZ">
-                                                <rect key="frame" x="0.0" y="0.0" width="288" height="42.5"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="6V7-sp-HsU" userLabel="Stack View Labels">
+                                                <rect key="frame" x="0.0" y="0.0" width="229.5" height="69.5"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="jhA-qh-TiX">
-                                                        <rect key="frame" x="0.0" y="0.0" width="234" height="42.5"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aceitar uma missão" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i6i-jZ-Mn6">
-                                                                <rect key="frame" x="0.0" y="0.0" width="171.5" height="24"/>
-                                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ex: &quot;Você ainda não aceitou nenhuma missão hoje&quot;" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dw1-IH-VvP">
-                                                                <rect key="frame" x="0.0" y="27" width="234" height="15.5"/>
-                                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="11"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                    </stackView>
-                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xQL-GD-2TC">
-                                                        <rect key="frame" x="239" y="6" width="51" height="31"/>
-                                                        <color key="tintColor" systemColor="systemBlueColor"/>
-                                                        <color key="onTintColor" red="0.93333333330000001" green="0.69411764710000001" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <connections>
-                                                            <action selector="acceptSwitch:" destination="IgX-Lf-JwG" eventType="valueChanged" id="cqQ-YP-IB8"/>
-                                                        </connections>
-                                                    </switch>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="W2L-5J-96m" userLabel="Stack View Aceitar Horario">
-                                                <rect key="frame" x="0.0" y="42.5" width="288" height="50"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horário" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="aIW-ya-1aS">
-                                                        <rect key="frame" x="0.0" y="15" width="51" height="20"/>
-                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
-                                                        <color key="textColor" red="0.24313725489999999" green="0.2470588235" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finalizar missão" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1tp-mA-7dL">
+                                                        <rect key="frame" x="0.0" y="0.0" width="135.5" height="30.5"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
+                                                        <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="K5E-c9-CRw">
-                                                        <rect key="frame" x="198.5" y="0.0" width="89.5" height="50"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="50" id="0p2-gk-xE1"/>
-                                                            <constraint firstAttribute="width" constant="89.666666666666671" id="BlS-hl-Tef"/>
-                                                        </constraints>
-                                                        <connections>
-                                                            <action selector="acceptSchedule:" destination="IgX-Lf-JwG" eventType="valueChanged" id="2ux-U9-201"/>
-                                                        </connections>
-                                                    </datePicker>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ex: &quot;Lembre-se de finalizar sua missão no Bloomie&quot;" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BbZ-4P-Vku">
+                                                        <rect key="frame" x="0.0" y="38.5" width="211.5" height="31"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="11"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="K5E-c9-CRw" firstAttribute="top" secondItem="W2L-5J-96m" secondAttribute="topMargin" id="wF9-e9-Oh2"/>
-                                                </constraints>
                                             </stackView>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="k6O-Xa-Oi3">
+                                                <rect key="frame" x="234.5" y="19.5" width="55.5" height="31"/>
+                                                <color key="tintColor" systemColor="systemBlueColor"/>
+                                                <color key="onTintColor" red="0.93333333330000001" green="0.69411764710000001" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="finishSwitch:" destination="IgX-Lf-JwG" eventType="valueChanged" id="TcJ-NC-EES"/>
+                                                </connections>
+                                            </switch>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="QBz-rV-lVi" userLabel="Stack View Finalizar missão">
-                                        <rect key="frame" x="0.0" y="102.5" width="288" height="113"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="CH5-s3-Egr" userLabel="Stack View Finalizar horario">
+                                        <rect key="frame" x="0.0" y="74.5" width="288" height="50"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="GYu-0o-Os7">
-                                                <rect key="frame" x="0.0" y="0.0" width="288" height="58"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horário" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xrO-vh-xTM">
+                                                <rect key="frame" x="0.0" y="15" width="51" height="20"/>
+                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                                                <color key="textColor" red="0.24313725489999999" green="0.2470588235" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="Vm8-bp-mRj">
+                                                <rect key="frame" x="198.5" y="0.0" width="89.5" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="89.666666666666671" id="lqR-9O-eGB"/>
+                                                    <constraint firstAttribute="height" constant="50" id="mGL-NY-iHT"/>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="finishSchedule:" destination="IgX-Lf-JwG" eventType="valueChanged" id="SlK-fe-ePd"/>
+                                                </connections>
+                                            </datePicker>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Vm8-bp-mRj" firstAttribute="top" secondItem="CH5-s3-Egr" secondAttribute="topMargin" id="caN-Kt-31g"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="IYa-S6-25g" userLabel="Stack View Realizar">
+                                <rect key="frame" x="16" y="367.5" width="288" height="122.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Xh4-g9-TXb">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="63.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Xdp-pQ-MMZ" userLabel="Stack View Labels">
+                                                <rect key="frame" x="0.0" y="0.0" width="234" height="63.5"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="6V7-sp-HsU">
-                                                        <rect key="frame" x="0.0" y="0.0" width="234" height="58"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finalizar missão" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1tp-mA-7dL">
-                                                                <rect key="frame" x="0.0" y="0.0" width="135.5" height="24"/>
-                                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ex: &quot;Lembre-se de finalizar sua missão no Bloomie&quot;" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BbZ-4P-Vku">
-                                                                <rect key="frame" x="0.0" y="27" width="211.5" height="31"/>
-                                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="11"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                    </stackView>
-                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="k6O-Xa-Oi3">
-                                                        <rect key="frame" x="239" y="13.5" width="51" height="31"/>
-                                                        <color key="tintColor" systemColor="systemBlueColor"/>
-                                                        <color key="onTintColor" red="0.93333333330000001" green="0.69411764710000001" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <connections>
-                                                            <action selector="finishSwitch:" destination="IgX-Lf-JwG" eventType="valueChanged" id="TcJ-NC-EES"/>
-                                                        </connections>
-                                                    </switch>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="CH5-s3-Egr" userLabel="Stack View Finalizar horario">
-                                                <rect key="frame" x="0.0" y="63" width="288" height="50"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horário" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xrO-vh-xTM">
-                                                        <rect key="frame" x="0.0" y="15" width="51" height="20"/>
-                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
-                                                        <color key="textColor" red="0.24313725489999999" green="0.2470588235" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lembrete de realizar a missão" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="w1R-Jn-6Ww">
+                                                        <rect key="frame" x="0.0" y="0.0" width="178.5" height="48"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
+                                                        <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="Vm8-bp-mRj">
-                                                        <rect key="frame" x="198.5" y="0.0" width="89.5" height="50"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="89.666666666666671" id="lqR-9O-eGB"/>
-                                                            <constraint firstAttribute="height" constant="50" id="mGL-NY-iHT"/>
-                                                        </constraints>
-                                                        <connections>
-                                                            <action selector="finishSchedule:" destination="IgX-Lf-JwG" eventType="valueChanged" id="SlK-fe-ePd"/>
-                                                        </connections>
-                                                    </datePicker>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ex: &quot;Essa é uma boa hora pra fazer a missão&quot;" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBb-Ju-0dw">
+                                                        <rect key="frame" x="0.0" y="48" width="234" height="15.5"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="11"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="Vm8-bp-mRj" firstAttribute="top" secondItem="CH5-s3-Egr" secondAttribute="topMargin" id="caN-Kt-31g"/>
-                                                </constraints>
                                             </stackView>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gJE-6D-w1l">
+                                                <rect key="frame" x="239" y="16" width="51" height="31"/>
+                                                <color key="tintColor" systemColor="systemBlueColor"/>
+                                                <color key="onTintColor" red="0.93333333330000001" green="0.69411764710000001" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="rememberSwitch:" destination="IgX-Lf-JwG" eventType="valueChanged" id="Jsp-jn-BiA"/>
+                                                </connections>
+                                            </switch>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="IYa-S6-25g" userLabel="Stack View Realizar">
-                                        <rect key="frame" x="0.0" y="225.5" width="288" height="101.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="l6a-qv-XOe" userLabel="Stack View Realizar horario">
+                                        <rect key="frame" x="0.0" y="63.5" width="288" height="59"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Xh4-g9-TXb">
-                                                <rect key="frame" x="0.0" y="0.0" width="288" height="42.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horário" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ck-rZ-vcu">
+                                                <rect key="frame" x="0.0" y="19.5" width="51" height="20"/>
+                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                                                <color key="textColor" red="0.24313725489999999" green="0.2470588235" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="Cad-HE-hdm">
+                                                <rect key="frame" x="198.5" y="0.0" width="89.5" height="59"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="59" id="EHE-rA-s9j"/>
+                                                    <constraint firstAttribute="width" constant="89.666666666666671" id="gsN-p0-9Zi"/>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="rememberSchedule:" destination="IgX-Lf-JwG" eventType="valueChanged" id="f3W-ch-g75"/>
+                                                </connections>
+                                            </datePicker>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="YaJ-ya-b2O" userLabel="Stack View Aceitar">
+                                <rect key="frame" x="16" y="64" width="288" height="139"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="QFb-jd-0nZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="69"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="jhA-qh-TiX" userLabel="Stack View Labels">
+                                                <rect key="frame" x="0.0" y="0.0" width="234" height="69"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Xdp-pQ-MMZ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="244.5" height="42.5"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lembrete de realizar a missão" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="w1R-Jn-6Ww">
-                                                                <rect key="frame" x="0.0" y="0.0" width="244.5" height="24"/>
-                                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ex: &quot;Essa é uma boa hora pra fazer a missão&quot;" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBb-Ju-0dw">
-                                                                <rect key="frame" x="0.0" y="27" width="244.5" height="15.5"/>
-                                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="11"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                    </stackView>
-                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gJE-6D-w1l">
-                                                        <rect key="frame" x="249.5" y="6" width="40.5" height="31"/>
-                                                        <color key="tintColor" systemColor="systemBlueColor"/>
-                                                        <color key="onTintColor" red="0.93333333330000001" green="0.69411764710000001" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <connections>
-                                                            <action selector="rememberSwitch:" destination="IgX-Lf-JwG" eventType="valueChanged" id="Jsp-jn-BiA"/>
-                                                        </connections>
-                                                    </switch>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="l6a-qv-XOe" userLabel="Stack View Realizar horario">
-                                                <rect key="frame" x="0.0" y="42.5" width="288" height="59"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horário" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ck-rZ-vcu">
-                                                        <rect key="frame" x="0.0" y="19.5" width="51" height="20"/>
-                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
-                                                        <color key="textColor" red="0.24313725489999999" green="0.2470588235" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aceitar uma missão" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i6i-jZ-Mn6">
+                                                        <rect key="frame" x="0.0" y="0.0" width="171.5" height="30"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
+                                                        <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="Cad-HE-hdm">
-                                                        <rect key="frame" x="198.5" y="0.0" width="89.5" height="59"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="59" id="EHE-rA-s9j"/>
-                                                            <constraint firstAttribute="width" constant="89.666666666666671" id="gsN-p0-9Zi"/>
-                                                        </constraints>
-                                                        <connections>
-                                                            <action selector="rememberSchedule:" destination="IgX-Lf-JwG" eventType="valueChanged" id="f3W-ch-g75"/>
-                                                        </connections>
-                                                    </datePicker>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ex: &quot;Você ainda não aceitou nenhuma missão hoje&quot;" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dw1-IH-VvP">
+                                                        <rect key="frame" x="0.0" y="38" width="211.5" height="31"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="11"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                             </stackView>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xQL-GD-2TC">
+                                                <rect key="frame" x="239" y="19" width="51" height="31"/>
+                                                <color key="tintColor" systemColor="systemBlueColor"/>
+                                                <color key="onTintColor" red="0.93333333330000001" green="0.69411764710000001" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="acceptSwitch:" destination="IgX-Lf-JwG" eventType="valueChanged" id="cqQ-YP-IB8"/>
+                                                </connections>
+                                            </switch>
                                         </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="W2L-5J-96m" userLabel="Stack View Aceitar Horario">
+                                        <rect key="frame" x="0.0" y="89" width="288" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horário" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="aIW-ya-1aS">
+                                                <rect key="frame" x="0.0" y="15" width="51" height="20"/>
+                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                                                <color key="textColor" red="0.24313725489999999" green="0.2470588235" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="K5E-c9-CRw">
+                                                <rect key="frame" x="198.5" y="0.0" width="89.5" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="0p2-gk-xE1"/>
+                                                    <constraint firstAttribute="width" constant="89.666666666666671" id="BlS-hl-Tef"/>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="acceptSchedule:" destination="IgX-Lf-JwG" eventType="valueChanged" id="2ux-U9-201"/>
+                                                </connections>
+                                            </datePicker>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="K5E-c9-CRw" firstAttribute="top" secondItem="W2L-5J-96m" secondAttribute="topMargin" id="wF9-e9-Oh2"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                             </stackView>
@@ -499,9 +494,15 @@
                         <viewLayoutGuide key="safeArea" id="E3M-gj-Yy0"/>
                         <color key="backgroundColor" red="0.99607843139999996" green="0.96078431369999995" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="ezn-lP-lPq" firstAttribute="centerX" secondItem="E3M-gj-Yy0" secondAttribute="centerX" id="8Ph-uE-g3P"/>
-                            <constraint firstItem="ezn-lP-lPq" firstAttribute="top" secondItem="E3M-gj-Yy0" secondAttribute="top" constant="40" id="ENn-fQ-Fvq"/>
-                            <constraint firstItem="ezn-lP-lPq" firstAttribute="width" secondItem="GGu-WX-JW3" secondAttribute="width" multiplier="0.9" id="EqY-CB-FE9"/>
+                            <constraint firstItem="QBz-rV-lVi" firstAttribute="centerX" secondItem="E3M-gj-Yy0" secondAttribute="centerX" id="Am1-X2-RTp"/>
+                            <constraint firstItem="YaJ-ya-b2O" firstAttribute="centerX" secondItem="E3M-gj-Yy0" secondAttribute="centerX" id="F7a-JO-RJ7"/>
+                            <constraint firstItem="IYa-S6-25g" firstAttribute="width" secondItem="GGu-WX-JW3" secondAttribute="width" multiplier="0.9" id="KBI-gW-nPL"/>
+                            <constraint firstItem="QBz-rV-lVi" firstAttribute="width" secondItem="GGu-WX-JW3" secondAttribute="width" multiplier="0.9" id="PrM-0a-5zn"/>
+                            <constraint firstItem="IYa-S6-25g" firstAttribute="centerX" secondItem="E3M-gj-Yy0" secondAttribute="centerX" id="UIn-lt-3zv"/>
+                            <constraint firstItem="YaJ-ya-b2O" firstAttribute="top" secondItem="E3M-gj-Yy0" secondAttribute="top" constant="20" id="faJ-QN-UY6"/>
+                            <constraint firstItem="YaJ-ya-b2O" firstAttribute="width" secondItem="GGu-WX-JW3" secondAttribute="width" multiplier="0.9" id="kwH-hM-6Dj"/>
+                            <constraint firstItem="QBz-rV-lVi" firstAttribute="top" secondItem="YaJ-ya-b2O" secondAttribute="bottom" constant="20" id="lkV-8Y-hai"/>
+                            <constraint firstItem="IYa-S6-25g" firstAttribute="top" secondItem="QBz-rV-lVi" secondAttribute="bottom" constant="20" id="x9c-TH-3q3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="uwV-Gn-buz"/>
@@ -516,14 +517,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aN7-46-cRL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5766.666666666667" y="-494.19642857142856"/>
+            <point key="canvasLocation" x="5765.625" y="-495"/>
         </scene>
         <!--Siri Shortcuts View Controller-->
         <scene sceneID="qpt-p9-o8J">
             <objects>
                 <viewController id="TjS-aE-C72" customClass="SiriShortcutsViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mC3-QS-9lG">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Nv3-5Y-3tC"/>
                         <color key="backgroundColor" red="0.99607843139999996" green="0.96078431369999995" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -539,11 +540,11 @@
             <objects>
                 <viewController id="fcX-VI-Z2p" customClass="EditIslandsViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JBh-8O-s83">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xoW-ZE-w8F">
-                                <rect key="frame" x="41.5" y="142" width="237" height="284"/>
+                                <rect key="frame" x="41.5" y="98" width="237" height="284"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aye-mV-1di">
                                         <rect key="frame" x="0.0" y="0.0" width="237" height="63.5"/>
@@ -588,7 +589,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quais áreas vamos cuidar?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="EuY-xz-ayQ">
-                                <rect key="frame" x="40" y="65.5" width="240" height="53"/>
+                                <rect key="frame" x="40" y="37" width="240" height="45"/>
                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="34"/>
                                 <color key="textColor" red="0.2077606618" green="0.20445087549999999" blue="0.22035497430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
