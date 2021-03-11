@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		12D13CF0256C2D130013E511 /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D13CEF256C2D130013E511 /* PerfilViewController.swift */; };
-		1834972EEB6285E47FABD0A3 /* Pods_Bloomy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57CA3E352B06C25017BE1E66 /* Pods_Bloomy.framework */; };
-		75C430483B507584722F9116 /* Pods_BloomyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E49591F99200B6D647E55B /* Pods_BloomyTests.framework */; };
+		585D677544102487CB45C36B /* Pods_BloomieTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4268C32CC311EBAA11E56546 /* Pods_BloomieTests.framework */; };
 		7D192271257ABA0E00D26450 /* ComoVaiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D192270257ABA0E00D26450 /* ComoVaiViewController.swift */; };
 		7D267544256EDB97000C57A3 /* Reward.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D267543256EDB97000C57A3 /* Reward.swift */; };
 		7D2BEFC625685E48006AFD8C /* Island.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2BEFC525685E48006AFD8C /* Island.swift */; };
@@ -67,12 +66,13 @@
 		BED0527C2576B8940035EB18 /* Islands.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BED0527B2576B8940035EB18 /* Islands.storyboard */; };
 		BEDD7A4A25630ADF005BA4F9 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEDD7A4925630ADF005BA4F9 /* Home.storyboard */; };
 		BEF24E532566C24800D408A8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF24E522566C24800D408A8 /* HomeViewController.swift */; };
-		BFE8F27E98A9FA5E51C8958C /* Pods_Bloomy_BloomyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33CC4FDD39B2F278DD2B4375 /* Pods_Bloomy_BloomyUITests.framework */; };
 		D61D03E825701C2F005BA187 /* Canela.ttc in Resources */ = {isa = PBXBuildFile; fileRef = D61D03D925701B8C005BA187 /* Canela.ttc */; };
 		D64B4F6325756F2000D818EB /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D64B4F6225756F2000D818EB /* Onboarding.storyboard */; };
 		D64B4F812575923B00D818EB /* ComoSeChamaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64B4F802575923B00D818EB /* ComoSeChamaViewController.swift */; };
 		D6DFCE3B258148AF0013E8D1 /* reward.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D6DFCE3A258148AF0013E8D1 /* reward.mp3 */; };
 		D6DFCE472581500E0013E8D1 /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D6DFCE462581500E0013E8D1 /* background.mp3 */; };
+		DB75B682C4091598FFEA9DEF /* Pods_Bloomie_BloomieUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 456516263E051272932084D7 /* Pods_Bloomie_BloomieUITests.framework */; };
+		F30D649B6BB23A9FFC05E8C3 /* Pods_Bloomie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 362EA7EFBEA926926EE3CF61 /* Pods_Bloomie.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,10 +96,14 @@
 		12D13CEF256C2D130013E511 /* PerfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilViewController.swift; sourceTree = "<group>"; };
 		12EA556A2583FE6E00DF9FFA /* Bloomy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Bloomy.entitlements; sourceTree = "<group>"; };
 		31B686F7D2FE3B59608E26C9 /* Pods-Bloomy-BloomyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bloomy-BloomyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Bloomy-BloomyUITests/Pods-Bloomy-BloomyUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		33CC4FDD39B2F278DD2B4375 /* Pods_Bloomy_BloomyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bloomy_BloomyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		362EA7EFBEA926926EE3CF61 /* Pods_Bloomie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bloomie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		369F14DF579FC84A0B42AB62 /* Pods-Bloomy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bloomy.debug.xcconfig"; path = "Target Support Files/Pods-Bloomy/Pods-Bloomy.debug.xcconfig"; sourceTree = "<group>"; };
 		3C16641237BD639CA3DB2A3C /* Pods-Bloomy-BloomyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bloomy-BloomyUITests.release.xcconfig"; path = "Target Support Files/Pods-Bloomy-BloomyUITests/Pods-Bloomy-BloomyUITests.release.xcconfig"; sourceTree = "<group>"; };
-		57CA3E352B06C25017BE1E66 /* Pods_Bloomy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bloomy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4268C32CC311EBAA11E56546 /* Pods_BloomieTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BloomieTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		456516263E051272932084D7 /* Pods_Bloomie_BloomieUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bloomie_BloomieUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		70CF41876D3BFE602C1AB435 /* Pods-Bloomie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bloomie.debug.xcconfig"; path = "Target Support Files/Pods-Bloomie/Pods-Bloomie.debug.xcconfig"; sourceTree = "<group>"; };
+		73F3A735F5F08B7BD7F59DBC /* Pods-Bloomie-BloomieUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bloomie-BloomieUITests.debug.xcconfig"; path = "Target Support Files/Pods-Bloomie-BloomieUITests/Pods-Bloomie-BloomieUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7AE7DB7EA51D352BC1365DF9 /* Pods-Bloomie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bloomie.release.xcconfig"; path = "Target Support Files/Pods-Bloomie/Pods-Bloomie.release.xcconfig"; sourceTree = "<group>"; };
 		7D192270257ABA0E00D26450 /* ComoVaiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ComoVaiViewController.swift; path = Bloomy/View/ComoVaiViewController.swift; sourceTree = SOURCE_ROOT; };
 		7D267543256EDB97000C57A3 /* Reward.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reward.swift; sourceTree = "<group>"; };
 		7D2BEFC525685E48006AFD8C /* Island.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Island.swift; sourceTree = "<group>"; };
@@ -142,7 +146,6 @@
 		89E69E0925E9827000E4704C /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		89ED4BB725824CCD00A18B29 /* SiriShortcutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriShortcutsViewController.swift; sourceTree = "<group>"; };
 		910E7EF4AA3E30A07B9A2743 /* Pods-Bloomy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bloomy.release.xcconfig"; path = "Target Support Files/Pods-Bloomy/Pods-Bloomy.release.xcconfig"; sourceTree = "<group>"; };
-		94E49591F99200B6D647E55B /* Pods_BloomyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BloomyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25879A5F40F669187A291F0 /* Pods-BloomyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BloomyTests.debug.xcconfig"; path = "Target Support Files/Pods-BloomyTests/Pods-BloomyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BE2742B525C0E5A3006699E6 /* JourneyPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyPopUpViewController.swift; sourceTree = "<group>"; };
 		BE4BE73625A74995002AB66E /* IslandsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IslandsViewController.swift; sourceTree = "<group>"; };
@@ -171,11 +174,14 @@
 		BED052D52577EC070035EB18 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		BEDD7A4925630ADF005BA4F9 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		BEF24E522566C24800D408A8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D0D36FBF4832F02F88C6F5BD /* Pods-Bloomie-BloomieUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bloomie-BloomieUITests.release.xcconfig"; path = "Target Support Files/Pods-Bloomie-BloomieUITests/Pods-Bloomie-BloomieUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D61D03D925701B8C005BA187 /* Canela.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Canela.ttc; sourceTree = "<group>"; };
 		D64B4F6225756F2000D818EB /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		D64B4F802575923B00D818EB /* ComoSeChamaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComoSeChamaViewController.swift; sourceTree = "<group>"; };
 		D6DFCE3A258148AF0013E8D1 /* reward.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = reward.mp3; sourceTree = "<group>"; };
 		D6DFCE462581500E0013E8D1 /* background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background.mp3; sourceTree = "<group>"; };
+		E30EFA5C3AEDB431AC5D12E6 /* Pods-BloomieTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BloomieTests.release.xcconfig"; path = "Target Support Files/Pods-BloomieTests/Pods-BloomieTests.release.xcconfig"; sourceTree = "<group>"; };
+		E5AEC3851D57C33D59D1EB91 /* Pods-BloomieTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BloomieTests.debug.xcconfig"; path = "Target Support Files/Pods-BloomieTests/Pods-BloomieTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F1EA232AA2FD2DE50426D9E6 /* Pods-BloomyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BloomyTests.release.xcconfig"; path = "Target Support Files/Pods-BloomyTests/Pods-BloomyTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -184,7 +190,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1834972EEB6285E47FABD0A3 /* Pods_Bloomy.framework in Frameworks */,
+				F30D649B6BB23A9FFC05E8C3 /* Pods_Bloomie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,7 +198,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75C430483B507584722F9116 /* Pods_BloomyTests.framework in Frameworks */,
+				585D677544102487CB45C36B /* Pods_BloomieTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,7 +206,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFE8F27E98A9FA5E51C8958C /* Pods_Bloomy_BloomyUITests.framework in Frameworks */,
+				DB75B682C4091598FFEA9DEF /* Pods_Bloomie_BloomieUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +222,12 @@
 				3C16641237BD639CA3DB2A3C /* Pods-Bloomy-BloomyUITests.release.xcconfig */,
 				A25879A5F40F669187A291F0 /* Pods-BloomyTests.debug.xcconfig */,
 				F1EA232AA2FD2DE50426D9E6 /* Pods-BloomyTests.release.xcconfig */,
+				70CF41876D3BFE602C1AB435 /* Pods-Bloomie.debug.xcconfig */,
+				7AE7DB7EA51D352BC1365DF9 /* Pods-Bloomie.release.xcconfig */,
+				73F3A735F5F08B7BD7F59DBC /* Pods-Bloomie-BloomieUITests.debug.xcconfig */,
+				D0D36FBF4832F02F88C6F5BD /* Pods-Bloomie-BloomieUITests.release.xcconfig */,
+				E5AEC3851D57C33D59D1EB91 /* Pods-BloomieTests.debug.xcconfig */,
+				E30EFA5C3AEDB431AC5D12E6 /* Pods-BloomieTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -297,9 +309,9 @@
 		AE4F409CCC5D9A13F9027B38 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				57CA3E352B06C25017BE1E66 /* Pods_Bloomy.framework */,
-				33CC4FDD39B2F278DD2B4375 /* Pods_Bloomy_BloomyUITests.framework */,
-				94E49591F99200B6D647E55B /* Pods_BloomyTests.framework */,
+				362EA7EFBEA926926EE3CF61 /* Pods_Bloomie.framework */,
+				456516263E051272932084D7 /* Pods_Bloomie_BloomieUITests.framework */,
+				4268C32CC311EBAA11E56546 /* Pods_BloomieTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -604,7 +616,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Bloomy-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Bloomie-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -626,7 +638,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Bloomy-BloomyUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Bloomie-BloomieUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -665,7 +677,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BloomyTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-BloomieTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -891,7 +903,7 @@
 		};
 		BEC461F0255DABDB003C1D1A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 369F14DF579FC84A0B42AB62 /* Pods-Bloomy.debug.xcconfig */;
+			baseConfigurationReference = 70CF41876D3BFE602C1AB435 /* Pods-Bloomie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -916,7 +928,7 @@
 		};
 		BEC461F1255DABDB003C1D1A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 910E7EF4AA3E30A07B9A2743 /* Pods-Bloomy.release.xcconfig */;
+			baseConfigurationReference = 7AE7DB7EA51D352BC1365DF9 /* Pods-Bloomie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -941,7 +953,7 @@
 		};
 		BEC461F3255DABDB003C1D1A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A25879A5F40F669187A291F0 /* Pods-BloomyTests.debug.xcconfig */;
+			baseConfigurationReference = E5AEC3851D57C33D59D1EB91 /* Pods-BloomieTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -964,7 +976,7 @@
 		};
 		BEC461F4255DABDB003C1D1A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F1EA232AA2FD2DE50426D9E6 /* Pods-BloomyTests.release.xcconfig */;
+			baseConfigurationReference = E30EFA5C3AEDB431AC5D12E6 /* Pods-BloomieTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -987,7 +999,7 @@
 		};
 		BEC461F6255DABDB003C1D1A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 31B686F7D2FE3B59608E26C9 /* Pods-Bloomy-BloomyUITests.debug.xcconfig */;
+			baseConfigurationReference = 73F3A735F5F08B7BD7F59DBC /* Pods-Bloomie-BloomieUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1008,7 +1020,7 @@
 		};
 		BEC461F7255DABDB003C1D1A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3C16641237BD639CA3DB2A3C /* Pods-Bloomy-BloomyUITests.release.xcconfig */;
+			baseConfigurationReference = D0D36FBF4832F02F88C6F5BD /* Pods-Bloomie-BloomieUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
