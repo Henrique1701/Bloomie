@@ -40,12 +40,10 @@
 		89566A682581B27F00784DF3 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89566A672581B27F00784DF3 /* SettingsTableViewController.swift */; };
 		89566A702581B4DE00784DF3 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89566A6F2581B4DE00784DF3 /* UserViewController.swift */; };
 		898441302587E6D4001F4185 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8984412F2587E6D4001F4185 /* Poppins-Medium.ttf */; };
-		8984E40B257FF16D002A5A72 /* TabBarDesafiosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8984E40A257FF16D002A5A72 /* TabBarDesafiosViewController.swift */; };
-		89A9F33225F17EC8000DAF39 /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A9F33125F17EC8000DAF39 /* OnboardingContainerViewController.swift */; };
-		89AA1D4925825E0200137F50 /* DesafiosVazioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AA1D4825825E0200137F50 /* DesafiosVazioView.swift */; };
-		89D9D46625EED27A0024FAC6 /* Onboarding2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D9D46525EED27A0024FAC6 /* Onboarding2.swift */; };
 		8986C2C025B8BC310027B78E /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8986C2BF25B8BC310027B78E /* ModalViewController.swift */; };
+		89A9F33225F17EC8000DAF39 /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A9F33125F17EC8000DAF39 /* OnboardingContainerViewController.swift */; };
 		89C1DAB625B6083600EB700E /* Journey.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89C1DAB525B6083600EB700E /* Journey.storyboard */; };
+		89D9D46625EED27A0024FAC6 /* Onboarding2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D9D46525EED27A0024FAC6 /* Onboarding2.swift */; };
 		89DD872F2570243200DB1C13 /* SeedDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DD872E2570243200DB1C13 /* SeedDataBase.swift */; };
 		89E69E0A25E9827000E4704C /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E69E0925E9827000E4704C /* Onboarding.swift */; };
 		89ED4BB825824CCD00A18B29 /* SiriShortcutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89ED4BB725824CCD00A18B29 /* SiriShortcutsViewController.swift */; };
@@ -135,12 +133,11 @@
 		89566A672581B27F00784DF3 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		89566A6F2581B4DE00784DF3 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		8984412F2587E6D4001F4185 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
-		8984E40A257FF16D002A5A72 /* TabBarDesafiosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarDesafiosViewController.swift; sourceTree = "<group>"; };
+		8986C2BF25B8BC310027B78E /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 		89A9F33125F17EC8000DAF39 /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
 		89AA1D4825825E0200137F50 /* DesafiosVazioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafiosVazioView.swift; sourceTree = "<group>"; };
-		89D9D46525EED27A0024FAC6 /* Onboarding2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding2.swift; sourceTree = "<group>"; };
-		8986C2BF25B8BC310027B78E /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 		89C1DAB525B6083600EB700E /* Journey.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Journey.storyboard; sourceTree = "<group>"; };
+		89D9D46525EED27A0024FAC6 /* Onboarding2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding2.swift; sourceTree = "<group>"; };
 		89DD872E2570243200DB1C13 /* SeedDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeedDataBase.swift; sourceTree = "<group>"; };
 		89E69E0925E9827000E4704C /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		89ED4BB725824CCD00A18B29 /* SiriShortcutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriShortcutsViewController.swift; sourceTree = "<group>"; };
@@ -155,7 +152,7 @@
 		BE91BB15258016DF00CC83D0 /* LovedsIsland.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = LovedsIsland.sks; sourceTree = "<group>"; };
 		BE91BB1A2580179B00CC83D0 /* MindfulnessIsland.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MindfulnessIsland.sks; sourceTree = "<group>"; };
 		BEBD260E2583DB25002263BD /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
-		BEC461C2255DABD8003C1D1A /* Bloomy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bloomy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEC461C2255DABD8003C1D1A /* Bloomie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bloomie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEC461C5255DABD8003C1D1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEC461C7255DABD8003C1D1A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BEC461C9255DABD8003C1D1A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -164,10 +161,10 @@
 		BEC461D1255DABDA003C1D1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BEC461D4255DABDA003C1D1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BEC461D6255DABDA003C1D1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BEC461DB255DABDB003C1D1A /* BloomyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BloomyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEC461DB255DABDB003C1D1A /* BloomieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BloomieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEC461DF255DABDB003C1D1A /* BloomyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloomyTests.swift; sourceTree = "<group>"; };
 		BEC461E1255DABDB003C1D1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BEC461E6255DABDB003C1D1A /* BloomyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BloomyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEC461E6255DABDB003C1D1A /* BloomieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BloomieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEC461EA255DABDB003C1D1A /* BloomyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloomyUITests.swift; sourceTree = "<group>"; };
 		BEC461EC255DABDB003C1D1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BED0527B2576B8940035EB18 /* Islands.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Islands.storyboard; sourceTree = "<group>"; };
@@ -322,9 +319,9 @@
 		BEC461C3255DABD8003C1D1A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BEC461C2255DABD8003C1D1A /* Bloomy.app */,
-				BEC461DB255DABDB003C1D1A /* BloomyTests.xctest */,
-				BEC461E6255DABDB003C1D1A /* BloomyUITests.xctest */,
+				BEC461C2255DABD8003C1D1A /* Bloomie.app */,
+				BEC461DB255DABDB003C1D1A /* BloomieTests.xctest */,
+				BEC461E6255DABDB003C1D1A /* BloomieUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -381,7 +378,6 @@
 				89249D54257ED12E002747A3 /* PopUps.storyboard */,
 				D64B4F6225756F2000D818EB /* Onboarding.storyboard */,
 				7DAA428225A8D17700C1CFF5 /* Desafios.storyboard */,
-				896273AA257FF381002FAD99 /* ContentView.swift */,
 				89AA1D4825825E0200137F50 /* DesafiosVazioView.swift */,
 				89E69E0925E9827000E4704C /* Onboarding.swift */,
 				89D9D46525EED27A0024FAC6 /* Onboarding2.swift */,
@@ -448,9 +444,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BEC461C1255DABD8003C1D1A /* Bloomy */ = {
+		BEC461C1255DABD8003C1D1A /* Bloomie */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BEC461EF255DABDB003C1D1A /* Build configuration list for PBXNativeTarget "Bloomy" */;
+			buildConfigurationList = BEC461EF255DABDB003C1D1A /* Build configuration list for PBXNativeTarget "Bloomie" */;
 			buildPhases = (
 				443FD7544BED4755C39FB27D /* [CP] Check Pods Manifest.lock */,
 				BEC461BE255DABD8003C1D1A /* Sources */,
@@ -462,14 +458,14 @@
 			);
 			dependencies = (
 			);
-			name = Bloomy;
+			name = Bloomie;
 			productName = Bloomy;
-			productReference = BEC461C2255DABD8003C1D1A /* Bloomy.app */;
+			productReference = BEC461C2255DABD8003C1D1A /* Bloomie.app */;
 			productType = "com.apple.product-type.application";
 		};
-		BEC461DA255DABDB003C1D1A /* BloomyTests */ = {
+		BEC461DA255DABDB003C1D1A /* BloomieTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BEC461F2255DABDB003C1D1A /* Build configuration list for PBXNativeTarget "BloomyTests" */;
+			buildConfigurationList = BEC461F2255DABDB003C1D1A /* Build configuration list for PBXNativeTarget "BloomieTests" */;
 			buildPhases = (
 				D3EB0DE1352053A37EAFD6F6 /* [CP] Check Pods Manifest.lock */,
 				BEC461D7255DABDB003C1D1A /* Sources */,
@@ -481,14 +477,14 @@
 			dependencies = (
 				BEC461DD255DABDB003C1D1A /* PBXTargetDependency */,
 			);
-			name = BloomyTests;
+			name = BloomieTests;
 			productName = BloomyTests;
-			productReference = BEC461DB255DABDB003C1D1A /* BloomyTests.xctest */;
+			productReference = BEC461DB255DABDB003C1D1A /* BloomieTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		BEC461E5255DABDB003C1D1A /* BloomyUITests */ = {
+		BEC461E5255DABDB003C1D1A /* BloomieUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BEC461F5255DABDB003C1D1A /* Build configuration list for PBXNativeTarget "BloomyUITests" */;
+			buildConfigurationList = BEC461F5255DABDB003C1D1A /* Build configuration list for PBXNativeTarget "BloomieUITests" */;
 			buildPhases = (
 				8F2819E96855B7018BE2A486 /* [CP] Check Pods Manifest.lock */,
 				BEC461E2255DABDB003C1D1A /* Sources */,
@@ -500,9 +496,9 @@
 			dependencies = (
 				BEC461E8255DABDB003C1D1A /* PBXTargetDependency */,
 			);
-			name = BloomyUITests;
+			name = BloomieUITests;
 			productName = BloomyUITests;
-			productReference = BEC461E6255DABDB003C1D1A /* BloomyUITests.xctest */;
+			productReference = BEC461E6255DABDB003C1D1A /* BloomieUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -527,7 +523,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BEC461BD255DABD8003C1D1A /* Build configuration list for PBXProject "Bloomy" */;
+			buildConfigurationList = BEC461BD255DABD8003C1D1A /* Build configuration list for PBXProject "Bloomie" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -540,9 +536,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BEC461C1255DABD8003C1D1A /* Bloomy */,
-				BEC461DA255DABDB003C1D1A /* BloomyTests */,
-				BEC461E5255DABDB003C1D1A /* BloomyUITests */,
+				BEC461C1255DABD8003C1D1A /* Bloomie */,
+				BEC461DA255DABDB003C1D1A /* BloomieTests */,
+				BEC461E5255DABDB003C1D1A /* BloomieUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -705,7 +701,6 @@
 				8915339A25B8A35700DB7FE8 /* JourneyCollectionViewController.swift in Sources */,
 				BEC461C6255DABD8003C1D1A /* AppDelegate.swift in Sources */,
 				7DD0195425B0BADE00024BD1 /* DesafiosVazioViewController.swift in Sources */,
-				896273AB257FF381002FAD99 /* ContentView.swift in Sources */,
 				89E69E0A25E9827000E4704C /* Onboarding.swift in Sources */,
 				89ED4BB825824CCD00A18B29 /* SiriShortcutsViewController.swift in Sources */,
 				89566A682581B27F00784DF3 /* SettingsTableViewController.swift in Sources */,
@@ -748,12 +743,12 @@
 /* Begin PBXTargetDependency section */
 		BEC461DD255DABDB003C1D1A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BEC461C1255DABD8003C1D1A /* Bloomy */;
+			target = BEC461C1255DABD8003C1D1A /* Bloomie */;
 			targetProxy = BEC461DC255DABDB003C1D1A /* PBXContainerItemProxy */;
 		};
 		BEC461E8255DABDB003C1D1A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BEC461C1255DABD8003C1D1A /* Bloomy */;
+			target = BEC461C1255DABD8003C1D1A /* Bloomie */;
 			targetProxy = BEC461E7255DABDB003C1D1A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -903,15 +898,15 @@
 				CODE_SIGN_ENTITLEMENTS = Bloomy/Bloomy.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 23WSBM7T82;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = MWUZ9DKMH6;
 				INFOPLIST_FILE = Bloomy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = academy.ufpe.br.bloomy;
+				PRODUCT_BUNDLE_IDENTIFIER = lso.academy.ufpe.br.bloomie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -928,15 +923,15 @@
 				CODE_SIGN_ENTITLEMENTS = Bloomy/Bloomy.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 23WSBM7T82;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = MWUZ9DKMH6;
 				INFOPLIST_FILE = Bloomy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = academy.ufpe.br.bloomy;
+				PRODUCT_BUNDLE_IDENTIFIER = lso.academy.ufpe.br.bloomie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -963,7 +958,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bloomy.app/Bloomy";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bloomie.app/Bloomie";
 			};
 			name = Debug;
 		};
@@ -986,7 +981,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bloomy.app/Bloomy";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bloomie.app/Bloomie";
 			};
 			name = Release;
 		};
@@ -1035,7 +1030,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BEC461BD255DABD8003C1D1A /* Build configuration list for PBXProject "Bloomy" */ = {
+		BEC461BD255DABD8003C1D1A /* Build configuration list for PBXProject "Bloomie" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BEC461ED255DABDB003C1D1A /* Debug */,
@@ -1044,7 +1039,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BEC461EF255DABDB003C1D1A /* Build configuration list for PBXNativeTarget "Bloomy" */ = {
+		BEC461EF255DABDB003C1D1A /* Build configuration list for PBXNativeTarget "Bloomie" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BEC461F0255DABDB003C1D1A /* Debug */,
@@ -1053,7 +1048,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BEC461F2255DABDB003C1D1A /* Build configuration list for PBXNativeTarget "BloomyTests" */ = {
+		BEC461F2255DABDB003C1D1A /* Build configuration list for PBXNativeTarget "BloomieTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BEC461F3255DABDB003C1D1A /* Debug */,
@@ -1062,7 +1057,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BEC461F5255DABDB003C1D1A /* Build configuration list for PBXNativeTarget "BloomyUITests" */ = {
+		BEC461F5255DABDB003C1D1A /* Build configuration list for PBXNativeTarget "BloomieUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BEC461F6255DABDB003C1D1A /* Debug */,
