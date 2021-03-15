@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Jornada Vazia View Controller-->
+        <scene sceneID="X4a-kl-ImW">
+            <objects>
+                <viewController storyboardIdentifier="JornadaVaziaViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7xt-6P-AH3" customClass="JornadaVaziaViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="idR-m7-Yb6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="garota_onboarding" translatesAutoresizingMaskIntoConstraints="NO" id="paG-lK-qPs">
+                                <rect key="frame" x="19.5" y="151.5" width="375" height="403"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você ainda não concluiu nenhuma missão. Que tal concluir uma missão agora? (:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cGX-HB-Hzq">
+                                <rect key="frame" x="20" y="586.5" width="374" height="171.5"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CRZ-Lt-nA5"/>
+                        <color key="backgroundColor" red="0.99188667539999997" green="0.96103912589999996" blue="0.94118171930000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="paG-lK-qPs" firstAttribute="width" secondItem="CRZ-Lt-nA5" secondAttribute="width" multiplier="0.905797" id="6H4-Ws-qT6"/>
+                            <constraint firstItem="paG-lK-qPs" firstAttribute="centerX" secondItem="CRZ-Lt-nA5" secondAttribute="centerX" id="K8w-Ca-QHe"/>
+                            <constraint firstItem="cGX-HB-Hzq" firstAttribute="height" secondItem="CRZ-Lt-nA5" secondAttribute="height" multiplier="0.288264" constant="-64.272088000000025" id="NKs-dl-f2r"/>
+                            <constraint firstItem="paG-lK-qPs" firstAttribute="height" secondItem="CRZ-Lt-nA5" secondAttribute="height" multiplier="0.492665" id="Oe7-tC-x4n"/>
+                            <constraint firstItem="cGX-HB-Hzq" firstAttribute="top" secondItem="paG-lK-qPs" secondAttribute="bottom" constant="32" id="QsU-9T-cqP"/>
+                            <constraint firstItem="paG-lK-qPs" firstAttribute="centerY" secondItem="CRZ-Lt-nA5" secondAttribute="centerY" constant="-100" id="Tc5-JV-Liw"/>
+                            <constraint firstItem="cGX-HB-Hzq" firstAttribute="width" secondItem="CRZ-Lt-nA5" secondAttribute="width" constant="-40" id="caP-tA-OOA"/>
+                            <constraint firstItem="cGX-HB-Hzq" firstAttribute="centerX" secondItem="idR-m7-Yb6" secondAttribute="centerX" id="nGT-NB-GI9"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sAc-el-lgK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2021.7391304347827" y="142.63392857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="garota_onboarding" width="375" height="403"/>
+    </resources>
+</document>

@@ -50,6 +50,12 @@ class JourneyCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
+        
+        if (self.doneChallenges.isEmpty) {
+            self.collectionView.setEmptyMessage()
+        } else {
+            self.collectionView.restore()
+        }
         return doneChallenges.count
     }
 
@@ -129,4 +135,17 @@ class JourneyCollectionViewController: UICollectionViewController {
     }
 
 
+}
+
+extension UICollectionView {
+
+    func setEmptyMessage() {
+        let noJourneyviewController: UIViewController = UIStoryboard(name: "JornadaVazia", bundle: nil).instantiateViewController(withIdentifier: "JornadaVaziaViewController") as UIViewController
+        
+        self.backgroundView = noJourneyviewController.view
+    }
+
+    func restore() {
+        self.backgroundView = nil
+    }
 }
