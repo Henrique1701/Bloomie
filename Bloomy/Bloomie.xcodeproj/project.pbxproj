@@ -67,6 +67,7 @@
 		BEC461EB255DABDB003C1D1A /* BloomyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC461EA255DABDB003C1D1A /* BloomyUITests.swift */; };
 		BED0527C2576B8940035EB18 /* Islands.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BED0527B2576B8940035EB18 /* Islands.storyboard */; };
 		BEDD7A4A25630ADF005BA4F9 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEDD7A4925630ADF005BA4F9 /* Home.storyboard */; };
+		BEF03795260024460035D1F3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BEF03794260024460035D1F3 /* GoogleService-Info.plist */; };
 		BEF24E532566C24800D408A8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF24E522566C24800D408A8 /* HomeViewController.swift */; };
 		D61D03E825701C2F005BA187 /* Canela.ttc in Resources */ = {isa = PBXBuildFile; fileRef = D61D03D925701B8C005BA187 /* Canela.ttc */; };
 		D64B4F6325756F2000D818EB /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D64B4F6225756F2000D818EB /* Onboarding.storyboard */; };
@@ -177,6 +178,7 @@
 		BED0527B2576B8940035EB18 /* Islands.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Islands.storyboard; sourceTree = "<group>"; };
 		BED052D52577EC070035EB18 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		BEDD7A4925630ADF005BA4F9 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		BEF03794260024460035D1F3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BEF24E522566C24800D408A8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D0D36FBF4832F02F88C6F5BD /* Pods-Bloomie-BloomieUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bloomie-BloomieUITests.release.xcconfig"; path = "Target Support Files/Pods-Bloomie-BloomieUITests/Pods-Bloomie-BloomieUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D61D03D925701B8C005BA187 /* Canela.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Canela.ttc; sourceTree = "<group>"; };
@@ -351,6 +353,7 @@
 				BEDD7A412562F3B8005BA4F9 /* View */,
 				BEDD7A422562F3C3005BA4F9 /* Controller */,
 				BEC461D6255DABDA003C1D1A /* Info.plist */,
+				BEF03794260024460035D1F3 /* GoogleService-Info.plist */,
 			);
 			path = Bloomy;
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 				BEC461BF255DABD8003C1D1A /* Frameworks */,
 				BEC461C0255DABD8003C1D1A /* Resources */,
 				BEC46205255DBAEA003C1D1A /* ShellScript */,
+				1BCC4C19DC9FBD585AB34366 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -508,6 +512,7 @@
 				BEC461E2255DABDB003C1D1A /* Sources */,
 				BEC461E3255DABDB003C1D1A /* Frameworks */,
 				BEC461E4255DABDB003C1D1A /* Resources */,
+				6F8AB3D894EABE4D9CCA627D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -585,6 +590,7 @@
 				BEC461D2255DABDA003C1D1A /* Assets.xcassets in Resources */,
 				BE91BB112580163C00CC83D0 /* LeisureIsland.sks in Resources */,
 				D64B4F6325756F2000D818EB /* Onboarding.storyboard in Resources */,
+				BEF03795260024460035D1F3 /* GoogleService-Info.plist in Resources */,
 				7DB41C00257AC36300BBFAEA /* Poppins-Bold.ttf in Resources */,
 				BEC461CD255DABD8003C1D1A /* Main.storyboard in Resources */,
 				BEDD7A4A25630ADF005BA4F9 /* Home.storyboard in Resources */,
@@ -608,6 +614,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1BCC4C19DC9FBD585AB34366 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bloomie/Pods-Bloomie-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bloomie/Pods-Bloomie-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bloomie/Pods-Bloomie-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		443FD7544BED4755C39FB27D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -628,6 +651,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F8AB3D894EABE4D9CCA627D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bloomie-BloomieUITests/Pods-Bloomie-BloomieUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bloomie-BloomieUITests/Pods-Bloomie-BloomieUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bloomie-BloomieUITests/Pods-Bloomie-BloomieUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8F2819E96855B7018BE2A486 /* [CP] Check Pods Manifest.lock */ = {
