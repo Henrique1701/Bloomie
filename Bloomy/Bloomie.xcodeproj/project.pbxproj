@@ -14,6 +14,8 @@
 		7D2BEFC625685E48006AFD8C /* Island.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2BEFC525685E48006AFD8C /* Island.swift */; };
 		7D2BEFE8256D86B0006AFD8C /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2BEFE6256D86B0006AFD8C /* User+CoreDataClass.swift */; };
 		7D2BEFE9256D86B0006AFD8C /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2BEFE7256D86B0006AFD8C /* User+CoreDataProperties.swift */; };
+		7D86D6BB25FFE9D800AE0928 /* JornadaVazia.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D86D6BA25FFE9D800AE0928 /* JornadaVazia.storyboard */; };
+		7D86D6C325FFF55100AE0928 /* JornadaVaziaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86D6C225FFF55100AE0928 /* JornadaVaziaViewController.swift */; };
 		7DAA427425A8D0A600C1CFF5 /* DesafiosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAA427325A8D0A600C1CFF5 /* DesafiosViewController.swift */; };
 		7DAA427925A8D0C100C1CFF5 /* DesafiosPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAA427825A8D0C100C1CFF5 /* DesafiosPageViewController.swift */; };
 		7DAA427E25A8D0DD00C1CFF5 /* DesafiosDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAA427D25A8D0DD00C1CFF5 /* DesafiosDataViewController.swift */; };
@@ -109,6 +111,8 @@
 		7D2BEFC525685E48006AFD8C /* Island.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Island.swift; sourceTree = "<group>"; };
 		7D2BEFE6256D86B0006AFD8C /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		7D2BEFE7256D86B0006AFD8C /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		7D86D6BA25FFE9D800AE0928 /* JornadaVazia.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = JornadaVazia.storyboard; sourceTree = "<group>"; };
+		7D86D6C225FFF55100AE0928 /* JornadaVaziaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JornadaVaziaViewController.swift; path = Bloomy/Controller/JornadaVaziaViewController.swift; sourceTree = SOURCE_ROOT; };
 		7DAA427325A8D0A600C1CFF5 /* DesafiosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafiosViewController.swift; sourceTree = "<group>"; };
 		7DAA427825A8D0C100C1CFF5 /* DesafiosPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafiosPageViewController.swift; sourceTree = "<group>"; };
 		7DAA427D25A8D0DD00C1CFF5 /* DesafiosDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafiosDataViewController.swift; sourceTree = "<group>"; };
@@ -390,6 +394,7 @@
 				89249D54257ED12E002747A3 /* PopUps.storyboard */,
 				D64B4F6225756F2000D818EB /* Onboarding.storyboard */,
 				7DAA428225A8D17700C1CFF5 /* Desafios.storyboard */,
+				7D86D6BA25FFE9D800AE0928 /* JornadaVazia.storyboard */,
 				89AA1D4825825E0200137F50 /* DesafiosVazioView.swift */,
 				89E69E0925E9827000E4704C /* Onboarding.swift */,
 				89D9D46525EED27A0024FAC6 /* Onboarding2.swift */,
@@ -423,6 +428,7 @@
 				7DAA427D25A8D0DD00C1CFF5 /* DesafiosDataViewController.swift */,
 				BE4BE74A25A78556002AB66E /* EditIslandsViewController.swift */,
 				89A9F33125F17EC8000DAF39 /* OnboardingContainerViewController.swift */,
+				7D86D6C225FFF55100AE0928 /* JornadaVaziaViewController.swift */,
 				89249D3E257E9F2F002747A3 /* PopUps */,
 				89FE691825B753E0002A0D2B /* Settings */,
 			);
@@ -564,6 +570,7 @@
 				89566A632581AADA00784DF3 /* TelaPerfil.storyboard in Resources */,
 				D6DFCE472581500E0013E8D1 /* background.mp3 in Resources */,
 				D61D03E825701C2F005BA187 /* Canela.ttc in Resources */,
+				7D86D6BB25FFE9D800AE0928 /* JornadaVazia.storyboard in Resources */,
 				89249D55257ED12E002747A3 /* PopUps.storyboard in Resources */,
 				BED0527C2576B8940035EB18 /* Islands.storyboard in Resources */,
 				7DAA428325A8D17700C1CFF5 /* Desafios.storyboard in Resources */,
@@ -693,6 +700,7 @@
 			files = (
 				BEF24E532566C24800D408A8 /* HomeViewController.swift in Sources */,
 				8915339F25B8A36C00DB7FE8 /* JourneyCollectionViewCell.swift in Sources */,
+				7D86D6C325FFF55100AE0928 /* JornadaVaziaViewController.swift in Sources */,
 				89566A702581B4DE00784DF3 /* UserViewController.swift in Sources */,
 				8905E6D7257E65D80015ECAC /* DonePopUpViewController.swift in Sources */,
 				BEC461CA255DABD8003C1D1A /* ViewController.swift in Sources */,
