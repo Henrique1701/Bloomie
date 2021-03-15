@@ -48,7 +48,7 @@
                                         </constraints>
                                         <state key="normal" image="perfil_saude"/>
                                         <connections>
-                                            <segue destination="xsX-N9-PIP" kind="show" identifier="healthToJourney" id="oCr-vV-Ayb"/>
+                                            <action selector="touchedHealthButton:" destination="XCZ-zc-2Tt" eventType="touchUpInside" id="ZMN-0j-4rY"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qTm-fl-V37">
@@ -58,7 +58,7 @@
                                         </constraints>
                                         <state key="normal" image="perfil_lazer"/>
                                         <connections>
-                                            <segue destination="xsX-N9-PIP" kind="show" identifier="leisureToJourney" id="9QA-hq-cAL"/>
+                                            <action selector="touchedLeisureButton:" destination="XCZ-zc-2Tt" eventType="touchUpInside" id="EMn-jE-cnH"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fdu-dr-hBT">
@@ -68,7 +68,7 @@
                                         </constraints>
                                         <state key="normal" image="perfil_atencao_plena"/>
                                         <connections>
-                                            <segue destination="xsX-N9-PIP" kind="show" identifier="mindfulnessToJourney" id="sfM-p3-Rqh"/>
+                                            <action selector="touchedMindfulnessButton:" destination="XCZ-zc-2Tt" eventType="touchUpInside" id="kaI-UJ-PY1"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vie-FK-jjr">
@@ -78,7 +78,7 @@
                                         </constraints>
                                         <state key="normal" image="perfil_pessoas_queridas"/>
                                         <connections>
-                                            <segue destination="xsX-N9-PIP" kind="show" identifier="lovedsToJourney" id="CEU-aU-W89"/>
+                                            <action selector="touchedLovedButton:" destination="XCZ-zc-2Tt" eventType="touchUpInside" id="oJ5-p6-JtQ"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -154,16 +154,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XHD-A3-o3T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4186.9565217391309" y="-94.419642857142847"/>
-        </scene>
-        <!--Journey-->
-        <scene sceneID="M3b-cP-0I1">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Journey" id="xsX-N9-PIP" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="OmP-cK-8lJ"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wxR-bv-yb1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4182" y="390"/>
         </scene>
         <!--Configurações-->
         <scene sceneID="br8-Ug-7zX">
@@ -572,9 +562,6 @@
             <point key="canvasLocation" x="6538" y="-53"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="CEU-aU-W89"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="avatar" width="77" height="77"/>
         <image name="botao_atencao_plena" width="306" height="82"/>
