@@ -31,3 +31,7 @@ extension Notification.Name {
     static let islandsChange = Notification.Name("islandsChange")
     static let callHome = Notification.Name("callHome")
 }
+
+enum DefaultsConstants: String {
+    case auxiliarToRootWindow = "userSelectedIslands"
+}
