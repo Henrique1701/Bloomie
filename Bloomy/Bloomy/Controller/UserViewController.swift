@@ -13,6 +13,7 @@ class UserViewController: UIViewController {
     @IBOutlet var leisureButton: UIButton!
     @IBOutlet var mindfulnessButton: UIButton!
     @IBOutlet var lovedsButton: UIButton!
+    @IBOutlet weak var stackView: UIStackView!
     let defaults = UserDefaults.standard
     
     override func viewDidLoad() {
@@ -24,6 +25,7 @@ class UserViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.buttonsToShow()
+        self.organizePositionButtons()
     }
     
     func showAlert(islandName: String) {
@@ -72,7 +74,6 @@ class UserViewController: UIViewController {
         }
     }
     
-    
     func setupNavigationController() {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -104,6 +105,29 @@ class UserViewController: UIViewController {
             self.lovedsButton.alpha = 1
         } else {
             self.lovedsButton.alpha = 0.6
+        }
+    }
+    
+    func organizePositionButtons() {
+        var buttons = stackView.arrangedSubviews
+        var index = 0
+        var control = 0
+        while(index < buttons.count) {
+            print(buttons[index].alpha)
+            if buttons[index].alpha != 1 {
+                print(" Entrou")
+                let viewRemove = self.stackView.arrangedSubviews[index]
+                self.stackView.removeArrangedSubview(viewRemove)
+                self.stackView.addArrangedSubview(viewRemove)
+                buttons = stackView.arrangedSubviews
+            } else {
+                index += 1
+            }
+            if control == buttons.count-1 {
+                index = buttons.count
+            } else {
+                control += 1
+            }
         }
     }
 }

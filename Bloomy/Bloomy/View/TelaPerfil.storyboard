@@ -148,6 +148,7 @@
                         <outlet property="leisureButton" destination="qTm-fl-V37" id="jdx-Sx-ZX3"/>
                         <outlet property="lovedsButton" destination="vie-FK-jjr" id="Md6-29-zAn"/>
                         <outlet property="mindfulnessButton" destination="Fdu-dr-hBT" id="eId-Na-5vQ"/>
+                        <outlet property="stackView" destination="KRp-RJ-KO6" id="3Qk-5A-L7l"/>
                         <outlet property="userNameLabel" destination="n1b-ml-mBg" id="tsF-ZG-phX"/>
                     </connections>
                 </viewController>
