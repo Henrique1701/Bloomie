@@ -17,7 +17,7 @@ struct Onboarding2: View {
         if (UserManager.shared.getUser() != nil) {
             _ = UserManager.shared.deleteUser()
             _ = UserManager.shared.newUser(withName: userName)
-        } else{
+        } else {
             _ = UserManager.shared.newUser(withName: userName)
         }
     }
@@ -34,12 +34,14 @@ struct Onboarding2: View {
                         .foregroundColor(.white)
                 }.frame(width: geometry.size.width * 0.9, alignment: .leading)
                 
+                Spacer()
+                    .frame(height: geometry.size.height * 0.03)
+                
                 Text("Como posso te chamar?")
                     .font(.custom("Poppins-Medium", size: 30))
                     .foregroundColor(Color("cor_fonte"))
                     .padding(.trailing)
                     .frame(width: geometry.size.width * 0.9, alignment: .leading)
-                
                 
                 TextField("Aninha", text: $textFieldInput)
                     .frame(width: geometry.size.width * 0.9, alignment: .leading)
@@ -49,10 +51,8 @@ struct Onboarding2: View {
                     .opacity(0.4)
                     //.position(x: geometry.size.width * 0.30)
                     .frame(width: geometry.size.width * 0.9, height: 3, alignment: .leading) //0.75
-                    
                 
-                
-                Spacer ()
+                Spacer()
                 
                 if textFieldInput == "" {
                     Button(action: {}) {
@@ -85,6 +85,7 @@ struct Onboarding2: View {
                 
             }
             .padding(.bottom, geometry.size.height * 0.05)
+            .padding(.top, geometry.size.height * 0.025)
             .frame(width: geometry.size.width)
             
         }.background(Color("cor_fundo").edgesIgnoringSafeArea(.all))
@@ -92,12 +93,10 @@ struct Onboarding2: View {
     }
 }
 
-
 struct Onboarding2_Previews: PreviewProvider {
     static var previews: some View {
         
         Onboarding2()
-            .previewDevice("iPhone 11")
         Onboarding2()
             .previewDevice("iPhone 12 Pro Max")
         Onboarding2()

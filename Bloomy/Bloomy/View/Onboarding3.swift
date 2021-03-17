@@ -79,6 +79,9 @@ struct Onboarding3: View {
                         .foregroundColor(.white)
                 }.frame(width: geometry.size.width * 0.9, alignment: .leading)
                 
+                Spacer()
+                    .frame(height: geometry.size.height * 0.03)
+                
                 Text("Quais áreas vamos cuidar?")
                     .font(.custom("Poppins-Medium", size: 30))
                     .foregroundColor(Color("cor_fonte"))
@@ -175,7 +178,7 @@ struct Onboarding3: View {
                     Button(action: {
                         self.createIslands()
                         self.setIslansInUserDefaults()
-                        print(self.selectedCount)
+                        self.defaults.set(true, forKey: DefaultsConstants.auxiliarToRootWindow.rawValue)
                         //Chama o storyboard
                         NotificationCenter.default.post(name: Notification.Name("callHome"), object: nil)
                     }) {
@@ -191,6 +194,7 @@ struct Onboarding3: View {
 
             }
             .padding(.bottom, geometry.size.height * 0.05)
+            .padding(.top, geometry.size.height * 0.025)
             .frame(width: geometry.size.width)
         }
         .background(Color("cor_fundo").edgesIgnoringSafeArea(.all))
