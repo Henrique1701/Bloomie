@@ -103,9 +103,11 @@ class IslandsViewController: UIViewController {
         if segue.identifier == "toChallengePopUpViewControllerSegue" {
             let popup = segue.destination as? ChallengePopUpViewController
             popup!.summary = island.dailyChallenge?.summary ?? ""
+            popup!.islandName = island.name!
         } else if (segue.identifier == "toDonePopUpViewControllerSegue") {
             let popup = segue.destination as? DonePopUpViewController
             popup!.summary = island.dailyChallenge?.summary ?? ""
+            popup!.islandName = island.name!
         }
     }
     
