@@ -12,7 +12,7 @@ struct Onboarding: View {
         NavigationView {
             
             GeometryReader { geometry in
-                VStack() {
+                VStack(alignment: .center) {
                     
                     Image("garota_onboarding")
                         .resizable()
@@ -50,9 +50,10 @@ struct Onboarding: View {
 
                 }
                 .padding(.bottom, geometry.size.height * 0.05)
+                .position(x: geometry.frame(in: .global).maxX/2, y: geometry.frame(in: .global).maxY/2) // Certifies that VStack is in the center of its super view
             }.background(Color("cor_fundo").edgesIgnoringSafeArea(.all))
             .navigationBarHidden(true)
-        }
+        }.navigationViewStyle(StackNavigationViewStyle())
         
     }
 }
@@ -62,7 +63,7 @@ struct Onboarding_Previews: PreviewProvider {
         Group {
             Onboarding()
             Onboarding()
-                .previewDevice("iPhone SE (2nd generation)")
+                .previewDevice("iPhone 8 Plus")
             Onboarding()
                 .previewDevice("iPod touch (7th generation)")
             
