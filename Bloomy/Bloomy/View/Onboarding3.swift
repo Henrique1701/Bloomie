@@ -79,6 +79,9 @@ struct Onboarding3: View {
                         .foregroundColor(.white)
                 }.frame(width: geometry.size.width * 0.9, alignment: .leading)
                 
+                Spacer()
+                    .frame(height: geometry.size.height * 0.03)
+                
                 Text("Quais áreas vamos cuidar?")
                     .font(.custom("Poppins-Medium", size: 30))
                     .foregroundColor(Color("cor_fonte"))
@@ -191,6 +194,7 @@ struct Onboarding3: View {
 
             }
             .padding(.bottom, geometry.size.height * 0.05)
+            .padding(.top, geometry.size.height * 0.025)
             .frame(width: geometry.size.width)
         }
         .background(Color("cor_fundo").edgesIgnoringSafeArea(.all))
