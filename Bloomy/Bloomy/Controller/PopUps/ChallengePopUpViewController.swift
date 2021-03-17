@@ -38,10 +38,9 @@ class ChallengePopUpViewController: UIViewController {
     func configureIslandName() {
         let islandsNamesPT = ["Atenção Plena", "Saúde", "Pessoas Queridas", "Lazer"]
         let islandsNames = ["Mindfulness", "Health", "Loveds", "Leisure"]
-        for index in 0..<islandsNamesPT.count {
-            if islandsNamesPT[index] == self.islandName {
-                self.islandName = islandsNames[index]
-            }
+        for index in 0..<islandsNamesPT.count where
+            islandsNamesPT[index] == self.islandName {
+            self.islandName = islandsNames[index]
         }
     }
     
