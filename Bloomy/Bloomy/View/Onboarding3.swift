@@ -175,7 +175,7 @@ struct Onboarding3: View {
                     Button(action: {
                         self.createIslands()
                         self.setIslansInUserDefaults()
-                        print(self.selectedCount)
+                        self.defaults.set(true, forKey: DefaultsConstants.auxiliarToRootWindow.rawValue)
                         //Chama o storyboard
                         NotificationCenter.default.post(name: Notification.Name("callHome"), object: nil)
                     }) {
