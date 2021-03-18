@@ -9,13 +9,14 @@ import UIKit
 import SpriteKit
 import GameplayKit
 import StoreKit
+import Firebase
 
 class IslandsViewController: UIViewController {
     @IBOutlet weak var challengeDayButton: UIButton!
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var acceptedFeedbackMessage: UIImageView!
     @IBOutlet var doneFeedbackMessage: UIImageView!
-
+    
     var island = Island()
     var challengeObserver: NSObjectProtocol?
     var doneObserver: NSObjectProtocol?
@@ -261,15 +262,53 @@ class IslandsViewController: UIViewController {
         self.requestReviewIfPossible()
     }
     
+    fileprivate func presentFirstAlert() {
+        let alert = UIAlertController(title: "Curtindo o Bloomie?", message: "", preferredStyle: .alert)
+        let yesButton = UIAlertAction(title: "Sim", style: .default, handler: { _ in
+            self.requestReview()
+        })
+        let noButton = UIAlertAction(title: "Não", style: .cancel, handler: { _ in
+            self.presentFeedbackAlert()
+        })
+        alert.addAction(noButton)
+        alert.addAction(yesButton)
+        alert.preferredAction = yesButton
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    fileprivate func presentFeedbackAlert() {
+        let alert = UIAlertController(title: "Enviar feedback", message: "Você poderia nos dar um feedback?\nAssim, podemos melhorar a rede Bloomie (:", preferredStyle: .alert)
+        alert.addTextField(configurationHandler: nil)
+        let sendButton = UIAlertAction(title: "Enviar", style: .default, handler: { _ in
+            let userFeedback = (alert.textFields![0].text ?? "") as String
+            if (userFeedback != "") {
+                Analytics.logEvent("user_feedback", parameters: [
+                    "feedback_from_user" : NSString(string: userFeedback)
+                ])
+            }
+            self.dismiss(animated: true, completion: nil)
+        })
+        let noButton = UIAlertAction(title: "Não", style: .cancel, handler: { _ in
+            alert.dismiss(animated: true, completion: nil)
+        })
+        alert.addAction(sendButton)
+        alert.addAction(noButton)
+        alert.preferredAction = sendButton
+        self.present(alert, animated: true, completion: nil)
+        print(alert.textFields![0])
+    }
+    
     private func requestReviewIfPossible() {
         let userDaysActivity = UserDefaults.standard.integer(forKey: DefaultsConstants.userDays.rawValue)
         let didReviewPrompted = UserDefaults.standard.bool(forKey: DefaultsConstants.review.rawValue)
-
+        
         if (userDaysActivity == 3 && !didReviewPrompted) {
             UserDefaults.standard.setValue(true, forKey: DefaultsConstants.review.rawValue)
+    
             DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
-                self.requestReview()
+                self.presentFirstAlert()
             }
+            
         }
     }
     
@@ -281,11 +320,12 @@ class IslandsViewController: UIViewController {
         } else {
             SKStoreReviewController.requestReview()
         }
+        
     }
     
     @objc func handlePinch(sender: UIPinchGestureRecognizer) {
         guard sender.view != nil else { return }
- 
+        
         if sender.state == .began || sender.state == .changed {
             
             let transformA = (sender.view?.transform.a)!
