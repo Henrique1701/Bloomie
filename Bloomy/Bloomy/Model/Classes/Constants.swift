@@ -34,4 +34,5 @@ extension Notification.Name {
 
 enum DefaultsConstants: String {
     case auxiliarToRootWindow = "userSelectedIslands"
+    case userDays = "userDaysOfActivation"
 }
