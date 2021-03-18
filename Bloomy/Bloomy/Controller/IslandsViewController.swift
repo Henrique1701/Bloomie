@@ -267,7 +267,9 @@ class IslandsViewController: UIViewController {
 
         if (userDaysActivity == 3 && !didReviewPrompted) {
             UserDefaults.standard.setValue(true, forKey: DefaultsConstants.review.rawValue)
-            self.requestReview()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+                self.requestReview()
+            }
         }
     }
     
