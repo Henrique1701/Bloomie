@@ -261,8 +261,11 @@ class IslandsViewController: UIViewController {
         //TODO: Colocar uma variável para ver se já foi pedido o review pelo sistema
         print("O valor é: ")
         print(UserDefaults.standard.integer(forKey: DefaultsConstants.userDays.rawValue))
-        if (UserDefaults.standard.integer(forKey: DefaultsConstants.userDays.rawValue) == 3) {
-            print(UserDefaults.standard.integer(forKey: DefaultsConstants.userDays.rawValue))
+        let userDaysActivity = UserDefaults.standard.integer(forKey: DefaultsConstants.userDays.rawValue)
+        let didReviewPrompted = UserDefaults.standard.bool(forKey: "reviewPrompted")
+        
+        if (userDaysActivity == 1 && !didReviewPrompted) {
+            UserDefaults.standard.setValue(true, forKey: "reviewPrompted")
             self.requestReview()
         }
     }
