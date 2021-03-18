@@ -258,14 +258,15 @@ class IslandsViewController: UIViewController {
         let sequentialAction = SKAction.sequence([waitAction, concurrentAction])
         
         node?.run(sequentialAction)
-        //TODO: Colocar uma variável para ver se já foi pedido o review pelo sistema
-        print("O valor é: ")
-        print(UserDefaults.standard.integer(forKey: DefaultsConstants.userDays.rawValue))
+        self.requestReviewIfPossible()
+    }
+    
+    private func requestReviewIfPossible() {
         let userDaysActivity = UserDefaults.standard.integer(forKey: DefaultsConstants.userDays.rawValue)
-        let didReviewPrompted = UserDefaults.standard.bool(forKey: "reviewPrompted")
-        
-        if (userDaysActivity == 1 && !didReviewPrompted) {
-            UserDefaults.standard.setValue(true, forKey: "reviewPrompted")
+        let didReviewPrompted = UserDefaults.standard.bool(forKey: DefaultsConstants.review.rawValue)
+
+        if (userDaysActivity == 3 && !didReviewPrompted) {
+            UserDefaults.standard.setValue(true, forKey: DefaultsConstants.review.rawValue)
             self.requestReview()
         }
     }
