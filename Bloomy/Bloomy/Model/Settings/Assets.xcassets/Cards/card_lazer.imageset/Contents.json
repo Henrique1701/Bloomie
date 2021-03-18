@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "CardLazer.png",
+      "filename" : "card_lazer.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "CardLazer@2x.png",
+      "filename" : "card_lazer@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "CardLazer@3x.png",
+      "filename" : "card_lazer@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
