@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "CardAtencaoPlena.png",
+      "filename" : "card_atencao_plena.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "CardAtencaoPlena@2x.png",
+      "filename" : "card_atencao_plena@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "CardAtencaoPlena@3x.png",
+      "filename" : "card_atencao_plena@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
