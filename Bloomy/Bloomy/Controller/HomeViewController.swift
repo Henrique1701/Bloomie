@@ -56,7 +56,7 @@ class HomeViewController: UIViewController {
         }
         //Observa se já carregou os challenges para aquele dia
         if (!isSameDay(userDate: userManager.getLastSeen() ?? Date(), actualDate: Date())) {
-            print(userManager.getLastSeen())
+            self.daysOfUserActivation()
             setDailyChallenges()
         }
         //Atualiza o último visto do usuário para data atual do sistema
@@ -156,7 +156,11 @@ class HomeViewController: UIViewController {
         }
     }
     
-    
+    private func daysOfUserActivation() {
+        var daysOfUserActivation = defaults.integer(forKey: DefaultsConstants.userDays.rawValue)
+        daysOfUserActivation += 1
+        defaults.set(daysOfUserActivation, forKey: DefaultsConstants.userDays.rawValue)
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destination = segue.destination as? IslandsViewController
