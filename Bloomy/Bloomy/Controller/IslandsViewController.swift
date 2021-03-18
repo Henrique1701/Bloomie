@@ -281,7 +281,6 @@ class IslandsViewController: UIViewController {
         alert.addTextField(configurationHandler: nil)
         let sendButton = UIAlertAction(title: "Enviar", style: .default, handler: { _ in
             let userFeedback = (alert.textFields![0].text ?? "") as String
-            print("Feedback do usuário: \(userFeedback)")
             if (userFeedback != "") {
                 Analytics.logEvent("user_feedback", parameters: [
                     "feedback_from_user" : NSString(string: userFeedback)
@@ -303,7 +302,7 @@ class IslandsViewController: UIViewController {
         let userDaysActivity = UserDefaults.standard.integer(forKey: DefaultsConstants.userDays.rawValue)
         let didReviewPrompted = UserDefaults.standard.bool(forKey: DefaultsConstants.review.rawValue)
         
-        if (true/*userDaysActivity == 3 && !didReviewPrompted*/) {
+        if (userDaysActivity == 3 && !didReviewPrompted) {
             UserDefaults.standard.setValue(true, forKey: DefaultsConstants.review.rawValue)
     
             DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
