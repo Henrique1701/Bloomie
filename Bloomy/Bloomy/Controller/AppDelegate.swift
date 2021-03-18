@@ -44,7 +44,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         // Conecta o Firebase quando o app for inicializado
-        FirebaseApp.configure()
+        // Descomentar a linha a baixo para enviar informações para o Firebase
+        // FirebaseApp.configure()
         
         return true
     }
