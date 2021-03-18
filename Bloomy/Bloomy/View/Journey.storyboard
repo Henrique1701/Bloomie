@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sH8-7B-71Y">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -16,20 +16,20 @@
         <!--Journey Collection View Controller-->
         <scene sceneID="GgA-jg-Lys">
             <objects>
-                <collectionViewController storyboardIdentifier="JourneyCollectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sH8-7B-71Y" customClass="JourneyCollectionViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="JourneyCollectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sH8-7B-71Y" customClass="JourneyCollectionViewController" customModule="Bloomie" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="rPN-ui-Yfo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="cor_fundo"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="16" minimumInteritemSpacing="16" id="gcM-bY-0DX">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="16" minimumInteritemSpacing="16" sectionInsetReference="layoutMargins" id="gcM-bY-0DX">
                             <size key="itemSize" width="327" height="118"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="32" maxX="0.0" maxY="0.0"/>
+                            <inset key="sectionInset" minX="50" minY="32" maxX="50" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" reuseIdentifier="JourneyCollectionViewCell" id="cJi-v9-0ow" customClass="JourneyCollectionViewCell" customModule="Bloomy" customModuleProvider="target">
-                                <rect key="frame" x="43.5" y="32" width="327" height="118"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" reuseIdentifier="JourneyCollectionViewCell" id="cJi-v9-0ow" customClass="JourneyCollectionViewCell" customModule="Bloomie" customModuleProvider="target">
+                                <rect key="frame" x="24" y="40" width="327" height="118"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bIA-Wm-X8P">
                                     <rect key="frame" x="0.0" y="0.0" width="327" height="118"/>
@@ -62,6 +62,30 @@
                                     <outlet property="rewardImageView" destination="0Ad-4K-V4X" id="Ra2-pK-2k3"/>
                                     <outlet property="summaryLabel" destination="fpF-VK-eCr" id="CHO-HJ-hwA"/>
                                 </connections>
+                            </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="q4H-K5-jZa">
+                                <rect key="frame" x="24" y="174" width="327" height="118"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gIy-9a-cKY">
+                                    <rect key="frame" x="0.0" y="0.0" width="327" height="118"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionViewCellContentView>
+                            </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gvl-Ji-t0y">
+                                <rect key="frame" x="24" y="308" width="327" height="118"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ecc-J5-rqK">
+                                    <rect key="frame" x="0.0" y="0.0" width="327" height="118"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionViewCellContentView>
+                            </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Slg-NP-IgY">
+                                <rect key="frame" x="24" y="442" width="327" height="118"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="fjO-QI-j8M">
+                                    <rect key="frame" x="0.0" y="0.0" width="327" height="118"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionViewCellContentView>
                             </collectionViewCell>
                         </cells>
                         <connections>
