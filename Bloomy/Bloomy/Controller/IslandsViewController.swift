@@ -8,6 +8,7 @@
 import UIKit
 import SpriteKit
 import GameplayKit
+import StoreKit
 
 class IslandsViewController: UIViewController {
     @IBOutlet weak var challengeDayButton: UIButton!
@@ -257,6 +258,23 @@ class IslandsViewController: UIViewController {
         let sequentialAction = SKAction.sequence([waitAction, concurrentAction])
         
         node?.run(sequentialAction)
+        //TODO: Colocar uma variável para ver se já foi pedido o review pelo sistema
+        print("O valor é: ")
+        print(UserDefaults.standard.integer(forKey: DefaultsConstants.userDays.rawValue))
+        if (UserDefaults.standard.integer(forKey: DefaultsConstants.userDays.rawValue) == 3) {
+            print(UserDefaults.standard.integer(forKey: DefaultsConstants.userDays.rawValue))
+            self.requestReview()
+        }
+    }
+    
+    private func requestReview() {
+        if #available(iOS 14.0, *) {
+            if let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
+                SKStoreReviewController.requestReview(in: scene)
+            }
+        } else {
+            SKStoreReviewController.requestReview()
+        }
     }
     
     @objc func handlePinch(sender: UIPinchGestureRecognizer) {
