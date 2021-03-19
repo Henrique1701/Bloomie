@@ -20,7 +20,7 @@
         <!--Perfil-->
         <scene sceneID="JV3-35-oEM">
             <objects>
-                <viewController storyboardIdentifier="Perfil" title="Perfil" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XCZ-zc-2Tt" customClass="UserViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Perfil" title="Perfil" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XCZ-zc-2Tt" customClass="UserViewController" customModule="Bloomie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r0P-bO-81l">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -168,7 +168,7 @@
         <!--Configurações-->
         <scene sceneID="br8-Ug-7zX">
             <objects>
-                <tableViewController title="Configurações" modalPresentationStyle="fullScreen" id="LCt-ex-JkX" customClass="SettingsTableViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Configurações" modalPresentationStyle="fullScreen" id="LCt-ex-JkX" customClass="SettingsTableViewController" customModule="Bloomie" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="6Ln-LZ-e2S">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -188,7 +188,7 @@
                         <sections>
                             <tableViewSection headerTitle="Ajustes" footerTitle="⠀" id="Fza-jA-nLi">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="Zxm-Gr-trn" customClass="TableViewCell" customModule="Bloomy" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="Zxm-Gr-trn" customClass="TableViewCell" customModule="Bloomie" customModuleProvider="target">
                                         <rect key="frame" x="16" y="55.5" width="288" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Zxm-Gr-trn" id="fzE-X1-M1o">
@@ -208,7 +208,7 @@
                                             <segue destination="IgX-Lf-JwG" kind="show" id="LtP-HO-d6B"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="0Tz-kP-UMN" customClass="TableViewCell" customModule="Bloomy" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="0Tz-kP-UMN" customClass="TableViewCell" customModule="Bloomie" customModuleProvider="target">
                                         <rect key="frame" x="16" y="99" width="288" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0Tz-kP-UMN" id="GGZ-k5-Icb">
@@ -301,7 +301,7 @@
         <!--Notifications View Controller-->
         <scene sceneID="7o0-id-bJe">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="IgX-Lf-JwG" customClass="NotificationsViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="IgX-Lf-JwG" customClass="NotificationsViewController" customModule="Bloomie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GGu-WX-JW3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -473,7 +473,7 @@
         <!--Siri Shortcuts View Controller-->
         <scene sceneID="qpt-p9-o8J">
             <objects>
-                <viewController id="TjS-aE-C72" customClass="SiriShortcutsViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="TjS-aE-C72" customClass="SiriShortcutsViewController" customModule="Bloomie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mC3-QS-9lG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -489,7 +489,7 @@
         <!--Edit Islands View Controller-->
         <scene sceneID="AFn-j8-uOS">
             <objects>
-                <viewController id="fcX-VI-Z2p" customClass="EditIslandsViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fcX-VI-Z2p" customClass="EditIslandsViewController" customModule="Bloomie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JBh-8O-s83">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -56,6 +56,7 @@ class HomeViewController: UIViewController {
         }
         //Observa se já carregou os challenges para aquele dia
         if (!isSameDay(userDate: userManager.getLastSeen() ?? Date(), actualDate: Date())) {
+            print(userManager.getLastSeen())
             setDailyChallenges()
         }
         //Atualiza o último visto do usuário para data atual do sistema
@@ -86,7 +87,10 @@ class HomeViewController: UIViewController {
     }
     
     func isSameDay(userDate: Date, actualDate: Date) -> Bool {
-        let diff = Calendar.current.dateComponents([.day], from: userDate, to: actualDate)
+        let calendar = Calendar.current
+        let userDateMidnight = calendar.startOfDay(for: userDate)
+        let actualDateMidnight = calendar.startOfDay(for: actualDate)
+        let diff = calendar.dateComponents([.day], from: userDateMidnight, to: actualDateMidnight)
         
         if diff.day == 0 {
             return true
