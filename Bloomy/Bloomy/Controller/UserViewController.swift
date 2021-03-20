@@ -8,17 +8,25 @@
 import UIKit
 
 class UserViewController: UIViewController {
+    @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet var healthButton: UIButton!
     @IBOutlet var leisureButton: UIButton!
     @IBOutlet var mindfulnessButton: UIButton!
     @IBOutlet var lovedsButton: UIButton!
     @IBOutlet weak var stackView: UIStackView!
+    //@IBOutlet var profileImageButton: UIButton!
+    @IBOutlet weak var profileImageButton: UIButton!
+    var imagePicker: ImagePicker!
     let defaults = UserDefaults.standard
+    
+    @IBOutlet weak var editProfileImageButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.imagePicker = ImagePicker(presentationController: self, delegate: self)
+        //se nao tiver imagem salva no core data, a imagem de perfil é a da menina do onbording
+        //se tiver, a imagem salva no core data é a imagem de perfil
         self.userNameLabel.text = UserManager.shared.getUserName()
         self.setupNavigationController()
     }
@@ -74,6 +82,14 @@ class UserViewController: UIViewController {
         }
     }
     
+    @IBAction func editProfileImage(_ sender: UIButton) {
+        print("quero editar a imagem de perfil")
+        self.imagePicker.present(from: sender)
+    }
+    
+    @IBAction func showImagePicker(_ sender: UIButton) {
+        self.imagePicker.present(from: sender)
+    }
     func setupNavigationController() {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -129,5 +145,25 @@ class UserViewController: UIViewController {
                 control += 1
             }
         }
+    }
+}
+
+extension UserViewController: ImagePickerDelegate {
+    
+    func didSelect(image: UIImage?) {
+        self.profileImage.image = image
+        profileImage.layer.cornerRadius = (profileImage.frame.size.width)/2
+        profileImage.clipsToBounds = true
+        profileImage.contentMode = .scaleAspectFit
+        profileImage.layoutIfNeeded()
+    }
+}
+
+extension UIImageView {
+    public func maskCircle(anyImage: UIImage) {
+        self.contentMode = UIView.ContentMode.scaleAspectFill
+        self.layer.cornerRadius = self.frame.height / 2
+        self.layer.masksToBounds = false
+        self.clipsToBounds = true
     }
 }
