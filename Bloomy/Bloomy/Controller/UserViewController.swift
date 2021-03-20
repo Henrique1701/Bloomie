@@ -25,8 +25,19 @@ class UserViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.imagePicker = ImagePicker(presentationController: self, delegate: self)
-        //se nao tiver imagem salva no core data, a imagem de perfil é a da menina do onbording
-        //se tiver, a imagem salva no core data é a imagem de perfil
+        
+        let savedImage:UIImage? = UserManager.shared.getUserImage()
+        if(savedImage != nil){
+            self.profileImage.image = savedImage
+//            self.profileImage.layer.cornerRadius = (profileImage.frame.size.width)/2
+//            self.profileImage.clipsToBounds = true
+//            self.profileImage.contentMode = .scaleAspectFit
+//            self.profileImage.layoutIfNeeded()
+            profileImage.maskCircle(anyImage: savedImage!)
+        } else {
+            self.profileImage.image = #imageLiteral(resourceName: "avatar")
+        }
+        
         self.userNameLabel.text = UserManager.shared.getUserName()
         self.setupNavigationController()
     }
@@ -87,9 +98,6 @@ class UserViewController: UIViewController {
         self.imagePicker.present(from: sender)
     }
     
-    @IBAction func showImagePicker(_ sender: UIButton) {
-        self.imagePicker.present(from: sender)
-    }
     func setupNavigationController() {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -151,17 +159,21 @@ class UserViewController: UIViewController {
 extension UserViewController: ImagePickerDelegate {
     
     func didSelect(image: UIImage?) {
-        self.profileImage.image = image
-        profileImage.layer.cornerRadius = (profileImage.frame.size.width)/2
-        profileImage.clipsToBounds = true
-        profileImage.contentMode = .scaleAspectFit
-        profileImage.layoutIfNeeded()
+        if(image != nil){
+            self.profileImage.image = image
+            self.profileImage.layer.cornerRadius = (profileImage.frame.size.width)/2
+            self.profileImage.clipsToBounds = true
+            self.profileImage.contentMode = .scaleAspectFit
+            self.profileImage.layoutIfNeeded()
+        }
+        
+        UserManager.shared.updateUserImage(to: image ?? #imageLiteral(resourceName: "plant"))
     }
 }
 
 extension UIImageView {
     public func maskCircle(anyImage: UIImage) {
-        self.contentMode = UIView.ContentMode.scaleAspectFill
+        self.contentMode = UIView.ContentMode.scaleAspectFit
         self.layer.cornerRadius = self.frame.height / 2
         self.layer.masksToBounds = false
         self.clipsToBounds = true

@@ -1,8 +1,8 @@
 //
 //  User+CoreDataClass.swift
-//  Bloomy
+//  Bloomie
 //
-//  Created by Mayara Mendonça de Souza on 24/11/20.
+//  Created by Mayara Mendonça de Souza on 20/03/21.
 //
 //
 
