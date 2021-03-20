@@ -44,19 +44,17 @@ open class ImagePicker: NSObject {
 
     public func present(from sourceView: UIView) {
 
-        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let alertController = UIAlertController(title: "Imagem do perfil", message: nil, preferredStyle: .actionSheet)
 
-        if let action = self.action(for: .camera, title: "Take photo") {
+        if let action = self.action(for: .camera, title: "Tirar uma foto") {
             alertController.addAction(action)
         }
-        if let action = self.action(for: .savedPhotosAlbum, title: "Camera roll") {
-            alertController.addAction(action)
-        }
-        if let action = self.action(for: .photoLibrary, title: "Photo library") {
+        
+        if let action = self.action(for: .photoLibrary, title: "Escolher imagem") {
             alertController.addAction(action)
         }
 
-        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alertController.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
 
         if UIDevice.current.userInterfaceIdiom == .pad {
             alertController.popoverPresentationController?.sourceView = sourceView
@@ -87,6 +85,7 @@ extension ImagePicker: UIImagePickerControllerDelegate {
         }
         self.pickerController(picker, didSelect: image)
     }
+   
 }
 
 extension ImagePicker: UINavigationControllerDelegate {
