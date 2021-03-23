@@ -28,12 +28,18 @@ class UserViewController: UIViewController {
         
         let savedImage:UIImage? = UserManager.shared.getUserImage()
         if(savedImage != nil){
+            let width = defaults.double(forKey: "width")
+            let height = defaults.double(forKey: "height")
+            self.profileImage.frame = CGRect(x: 0, y: 0, width: width, height: height)
             self.profileImage.image = savedImage
-//            self.profileImage.layer.cornerRadius = (profileImage.frame.size.width)/2
-//            self.profileImage.clipsToBounds = true
-//            self.profileImage.contentMode = .scaleAspectFit
-//            self.profileImage.layoutIfNeeded()
-            profileImage.maskCircle(anyImage: savedImage!)
+            self.profileImage.layer.cornerRadius = (profileImage.frame.width)/2
+            print("WIDTH = \(width)")
+            print("HEIGHT = \(height)")
+            self.profileImage.layer.masksToBounds = false
+            self.profileImage.clipsToBounds = true
+            self.profileImage.contentMode = .scaleAspectFill
+            self.profileImage.layoutIfNeeded()
+            //profileImage.maskCircle(anyImage: savedImage!)
         } else {
             self.profileImage.image = #imageLiteral(resourceName: "avatar")
         }
@@ -165,6 +171,14 @@ extension UserViewController: ImagePickerDelegate {
             self.profileImage.clipsToBounds = true
             self.profileImage.contentMode = .scaleAspectFit
             self.profileImage.layoutIfNeeded()
+            
+            let width = profileImage.frame.width
+            defaults.set(width, forKey: "width")
+            let height = profileImage.frame.height
+            defaults.set(height, forKey: "height")
+            print("WIDTH = \(width)")
+            print("HEIGHT = \(height)")
+            
         }
         
         UserManager.shared.updateUserImage(to: image ?? #imageLiteral(resourceName: "plant"))
@@ -173,7 +187,8 @@ extension UserViewController: ImagePickerDelegate {
 
 extension UIImageView {
     public func maskCircle(anyImage: UIImage) {
-        self.contentMode = UIView.ContentMode.scaleAspectFit
+        //self.frame = CGRect(x: 0, y: 0, width: 160, height: 160)
+        self.contentMode = UIView.ContentMode.scaleAspectFill
         self.layer.cornerRadius = self.frame.height / 2
         self.layer.masksToBounds = false
         self.clipsToBounds = true
