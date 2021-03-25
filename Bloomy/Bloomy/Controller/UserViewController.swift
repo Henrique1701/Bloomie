@@ -113,9 +113,7 @@ class UserViewController: UIViewController {
         var index = 0
         var control = 0
         while(index < buttons.count) {
-            print(buttons[index].alpha)
             if buttons[index].alpha != 1 {
-                print(" Entrou")
                 let viewRemove = self.stackView.arrangedSubviews[index]
                 self.stackView.removeArrangedSubview(viewRemove)
                 self.stackView.addArrangedSubview(viewRemove)
