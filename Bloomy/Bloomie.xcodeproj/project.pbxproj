@@ -8,40 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		12D13CF0256C2D130013E511 /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D13CEF256C2D130013E511 /* PerfilViewController.swift */; };
-		585D677544102487CB45C36B /* Pods_BloomieTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4268C32CC311EBAA11E56546 /* Pods_BloomieTests.framework */; };
-		7D192271257ABA0E00D26450 /* ComoVaiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D192270257ABA0E00D26450 /* ComoVaiViewController.swift */; };
 		7D267544256EDB97000C57A3 /* Reward.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D267543256EDB97000C57A3 /* Reward.swift */; };
 		7D2BEFC625685E48006AFD8C /* Island.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2BEFC525685E48006AFD8C /* Island.swift */; };
 		7D2BEFE8256D86B0006AFD8C /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2BEFE6256D86B0006AFD8C /* User+CoreDataClass.swift */; };
 		7D2BEFE9256D86B0006AFD8C /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2BEFE7256D86B0006AFD8C /* User+CoreDataProperties.swift */; };
 		7D86D6BB25FFE9D800AE0928 /* JornadaVazia.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D86D6BA25FFE9D800AE0928 /* JornadaVazia.storyboard */; };
-		7D86D6C325FFF55100AE0928 /* JornadaVaziaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86D6C225FFF55100AE0928 /* JornadaVaziaViewController.swift */; };
 		7DAA427425A8D0A600C1CFF5 /* DesafiosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAA427325A8D0A600C1CFF5 /* DesafiosViewController.swift */; };
 		7DAA427925A8D0C100C1CFF5 /* DesafiosPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAA427825A8D0C100C1CFF5 /* DesafiosPageViewController.swift */; };
 		7DAA427E25A8D0DD00C1CFF5 /* DesafiosDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAA427D25A8D0DD00C1CFF5 /* DesafiosDataViewController.swift */; };
 		7DAA428325A8D17700C1CFF5 /* Desafios.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DAA428225A8D17700C1CFF5 /* Desafios.storyboard */; };
-		7DAE80212575877000B17FB8 /* AreasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAE80202575877000B17FB8 /* AreasViewController.swift */; };
 		7DB41BFA257AC31900BBFAEA /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DB41BF8257AC31900BBFAEA /* Poppins-Regular.ttf */; };
-		7DB41BFB257AC31900BBFAEA /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DB41BF9257AC31900BBFAEA /* Poppins-SemiBold.ttf */; };
-		7DB41C00257AC36300BBFAEA /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DB41BFF257AC36300BBFAEA /* Poppins-Bold.ttf */; };
 		7DD0195425B0BADE00024BD1 /* DesafiosVazioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD0195325B0BADE00024BD1 /* DesafiosVazioViewController.swift */; };
 		890079A125F002AE00F54028 /* Onboarding3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890079A025F002AE00F54028 /* Onboarding3.swift */; };
 		8905E6C3257961660015ECAC /* ChallengePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8905E6C2257961660015ECAC /* ChallengePopUpViewController.swift */; };
 		8905E6D7257E65D80015ECAC /* DonePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8905E6D6257E65D80015ECAC /* DonePopUpViewController.swift */; };
 		8915339A25B8A35700DB7FE8 /* JourneyCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8915339925B8A35700DB7FE8 /* JourneyCollectionViewController.swift */; };
-		8915339F25B8A36C00DB7FE8 /* JourneyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8915339E25B8A36C00DB7FE8 /* JourneyCollectionViewCell.swift */; };
 		891D2E47256ED7B200AC961A /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891D2E46256ED7B200AC961A /* Challenge.swift */; };
 		89249D4B257EA004002747A3 /* RewardPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89249D4A257EA004002747A3 /* RewardPopUpViewController.swift */; };
 		89249D55257ED12E002747A3 /* PopUps.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89249D54257ED12E002747A3 /* PopUps.storyboard */; };
 		8928F54B25670DD10089BE0E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8928F54A25670DD10089BE0E /* User.swift */; };
 		8928F56325670EEE0089BE0E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8928F56225670EEE0089BE0E /* Constants.swift */; };
+		8942E2BA260D09E100ADC7DB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8942E2B9260D09E100ADC7DB /* GoogleService-Info.plist */; };
+		8942E2E5260D0FD600ADC7DB /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8942E2E4260D0FD600ADC7DB /* Poppins-Bold.ttf */; };
+		8942E2ED260D0FF900ADC7DB /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8942E2EC260D0FF800ADC7DB /* Poppins-SemiBold.ttf */; };
+		8942E2F5260D100700ADC7DB /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8942E2F4260D100700ADC7DB /* Poppins-SemiBold.ttf */; };
 		89566A562581A8FE00784DF3 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 89566A552581A8FE00784DF3 /* Intents.intentdefinition */; };
 		89566A5B2581A90B00784DF3 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89566A5A2581A90B00784DF3 /* NotificationsViewController.swift */; };
 		89566A632581AADA00784DF3 /* TelaPerfil.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89566A622581AADA00784DF3 /* TelaPerfil.storyboard */; };
 		89566A682581B27F00784DF3 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89566A672581B27F00784DF3 /* SettingsTableViewController.swift */; };
 		89566A702581B4DE00784DF3 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89566A6F2581B4DE00784DF3 /* UserViewController.swift */; };
 		898441302587E6D4001F4185 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8984412F2587E6D4001F4185 /* Poppins-Medium.ttf */; };
-		8986C2C025B8BC310027B78E /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8986C2BF25B8BC310027B78E /* ModalViewController.swift */; };
 		89A9F33225F17EC8000DAF39 /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A9F33125F17EC8000DAF39 /* OnboardingContainerViewController.swift */; };
 		89C1DAB625B6083600EB700E /* Journey.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89C1DAB525B6083600EB700E /* Journey.storyboard */; };
 		89D9D46625EED27A0024FAC6 /* Onboarding2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D9D46525EED27A0024FAC6 /* Onboarding2.swift */; };
@@ -51,9 +47,6 @@
 		BE2742B625C0E5A3006699E6 /* JourneyPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2742B525C0E5A3006699E6 /* JourneyPopUpViewController.swift */; };
 		BE4BE73725A74995002AB66E /* IslandsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4BE73625A74995002AB66E /* IslandsViewController.swift */; };
 		BE4BE74B25A78556002AB66E /* EditIslandsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4BE74A25A78556002AB66E /* EditIslandsViewController.swift */; };
-		BE74C63A260A5D3000396141 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE74C639260A5D3000396141 /* GoogleService-Info.plist */; };
-		BE74C63B260A5D3000396141 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE74C639260A5D3000396141 /* GoogleService-Info.plist */; };
-		BE74C63C260A5D3000396141 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE74C639260A5D3000396141 /* GoogleService-Info.plist */; };
 		BE91BADC257FFF2000CC83D0 /* HealthIsland.sks in Resources */ = {isa = PBXBuildFile; fileRef = BE91BADB257FFF2000CC83D0 /* HealthIsland.sks */; };
 		BE91BB112580163C00CC83D0 /* LeisureIsland.sks in Resources */ = {isa = PBXBuildFile; fileRef = BE91BB102580163C00CC83D0 /* LeisureIsland.sks */; };
 		BE91BB16258016DF00CC83D0 /* LovedsIsland.sks in Resources */ = {isa = PBXBuildFile; fileRef = BE91BB15258016DF00CC83D0 /* LovedsIsland.sks */; };
@@ -61,102 +54,64 @@
 		BEBD260F2583DB25002263BD /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBD260E2583DB25002263BD /* MusicPlayer.swift */; };
 		BEC461C6255DABD8003C1D1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC461C5255DABD8003C1D1A /* AppDelegate.swift */; };
 		BEC461C8255DABD8003C1D1A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC461C7255DABD8003C1D1A /* SceneDelegate.swift */; };
-		BEC461CA255DABD8003C1D1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC461C9255DABD8003C1D1A /* ViewController.swift */; };
-		BEC461CD255DABD8003C1D1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEC461CB255DABD8003C1D1A /* Main.storyboard */; };
 		BEC461D0255DABD8003C1D1A /* Bloomy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BEC461CE255DABD8003C1D1A /* Bloomy.xcdatamodeld */; };
 		BEC461D2255DABDA003C1D1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEC461D1255DABDA003C1D1A /* Assets.xcassets */; };
 		BEC461D5255DABDA003C1D1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEC461D3255DABDA003C1D1A /* LaunchScreen.storyboard */; };
-		BEC461E0255DABDB003C1D1A /* BloomyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC461DF255DABDB003C1D1A /* BloomyTests.swift */; };
-		BEC461EB255DABDB003C1D1A /* BloomyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC461EA255DABDB003C1D1A /* BloomyUITests.swift */; };
 		BED0527C2576B8940035EB18 /* Islands.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BED0527B2576B8940035EB18 /* Islands.storyboard */; };
 		BEDD7A4A25630ADF005BA4F9 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEDD7A4925630ADF005BA4F9 /* Home.storyboard */; };
 		BEF24E532566C24800D408A8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF24E522566C24800D408A8 /* HomeViewController.swift */; };
-		D61D03E825701C2F005BA187 /* Canela.ttc in Resources */ = {isa = PBXBuildFile; fileRef = D61D03D925701B8C005BA187 /* Canela.ttc */; };
-		D64B4F6325756F2000D818EB /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D64B4F6225756F2000D818EB /* Onboarding.storyboard */; };
-		D64B4F812575923B00D818EB /* ComoSeChamaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64B4F802575923B00D818EB /* ComoSeChamaViewController.swift */; };
 		D6DFCE3B258148AF0013E8D1 /* reward.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D6DFCE3A258148AF0013E8D1 /* reward.mp3 */; };
 		D6DFCE472581500E0013E8D1 /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D6DFCE462581500E0013E8D1 /* background.mp3 */; };
-		DB75B682C4091598FFEA9DEF /* Pods_Bloomie_BloomieUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 456516263E051272932084D7 /* Pods_Bloomie_BloomieUITests.framework */; };
 		F30D649B6BB23A9FFC05E8C3 /* Pods_Bloomie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 362EA7EFBEA926926EE3CF61 /* Pods_Bloomie.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		BEC461DC255DABDB003C1D1A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BEC461BA255DABD8003C1D1A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BEC461C1255DABD8003C1D1A;
-			remoteInfo = Bloomy;
-		};
-		BEC461E7255DABDB003C1D1A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BEC461BA255DABD8003C1D1A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BEC461C1255DABD8003C1D1A;
-			remoteInfo = Bloomy;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		12D13CEF256C2D130013E511 /* PerfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilViewController.swift; sourceTree = "<group>"; };
 		12EA556A2583FE6E00DF9FFA /* Bloomy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Bloomy.entitlements; sourceTree = "<group>"; };
-		31B686F7D2FE3B59608E26C9 /* Pods-Bloomy-BloomyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bloomy-BloomyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Bloomy-BloomyUITests/Pods-Bloomy-BloomyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		362EA7EFBEA926926EE3CF61 /* Pods_Bloomie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bloomie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		369F14DF579FC84A0B42AB62 /* Pods-Bloomy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bloomy.debug.xcconfig"; path = "Target Support Files/Pods-Bloomy/Pods-Bloomy.debug.xcconfig"; sourceTree = "<group>"; };
-		3C16641237BD639CA3DB2A3C /* Pods-Bloomy-BloomyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bloomy-BloomyUITests.release.xcconfig"; path = "Target Support Files/Pods-Bloomy-BloomyUITests/Pods-Bloomy-BloomyUITests.release.xcconfig"; sourceTree = "<group>"; };
-		4268C32CC311EBAA11E56546 /* Pods_BloomieTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BloomieTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		456516263E051272932084D7 /* Pods_Bloomie_BloomieUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bloomie_BloomieUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70CF41876D3BFE602C1AB435 /* Pods-Bloomie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bloomie.debug.xcconfig"; path = "Target Support Files/Pods-Bloomie/Pods-Bloomie.debug.xcconfig"; sourceTree = "<group>"; };
 		73F3A735F5F08B7BD7F59DBC /* Pods-Bloomie-BloomieUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bloomie-BloomieUITests.debug.xcconfig"; path = "Target Support Files/Pods-Bloomie-BloomieUITests/Pods-Bloomie-BloomieUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7AE7DB7EA51D352BC1365DF9 /* Pods-Bloomie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bloomie.release.xcconfig"; path = "Target Support Files/Pods-Bloomie/Pods-Bloomie.release.xcconfig"; sourceTree = "<group>"; };
-		7D192270257ABA0E00D26450 /* ComoVaiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ComoVaiViewController.swift; path = Bloomy/View/ComoVaiViewController.swift; sourceTree = SOURCE_ROOT; };
 		7D267543256EDB97000C57A3 /* Reward.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reward.swift; sourceTree = "<group>"; };
 		7D2BEFC525685E48006AFD8C /* Island.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Island.swift; sourceTree = "<group>"; };
 		7D2BEFE6256D86B0006AFD8C /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		7D2BEFE7256D86B0006AFD8C /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		7D86D6BA25FFE9D800AE0928 /* JornadaVazia.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = JornadaVazia.storyboard; sourceTree = "<group>"; };
-		7D86D6C225FFF55100AE0928 /* JornadaVaziaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JornadaVaziaViewController.swift; path = Bloomy/Controller/JornadaVaziaViewController.swift; sourceTree = SOURCE_ROOT; };
 		7DAA427325A8D0A600C1CFF5 /* DesafiosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafiosViewController.swift; sourceTree = "<group>"; };
 		7DAA427825A8D0C100C1CFF5 /* DesafiosPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafiosPageViewController.swift; sourceTree = "<group>"; };
 		7DAA427D25A8D0DD00C1CFF5 /* DesafiosDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafiosDataViewController.swift; sourceTree = "<group>"; };
 		7DAA428225A8D17700C1CFF5 /* Desafios.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Desafios.storyboard; sourceTree = "<group>"; };
-		7DAE80202575877000B17FB8 /* AreasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AreasViewController.swift; path = Bloomy/View/AreasViewController.swift; sourceTree = SOURCE_ROOT; };
 		7DB41BF8257AC31900BBFAEA /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
-		7DB41BF9257AC31900BBFAEA /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
-		7DB41BFF257AC36300BBFAEA /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		7DD0195325B0BADE00024BD1 /* DesafiosVazioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DesafiosVazioViewController.swift; path = Bloomy/View/DesafiosVazioViewController.swift; sourceTree = SOURCE_ROOT; };
 		890079A025F002AE00F54028 /* Onboarding3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding3.swift; sourceTree = "<group>"; };
 		8905E6C2257961660015ECAC /* ChallengePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengePopUpViewController.swift; sourceTree = "<group>"; };
 		8905E6D6257E65D80015ECAC /* DonePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonePopUpViewController.swift; sourceTree = "<group>"; };
 		8915339925B8A35700DB7FE8 /* JourneyCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyCollectionViewController.swift; sourceTree = "<group>"; };
-		8915339E25B8A36C00DB7FE8 /* JourneyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyCollectionViewCell.swift; sourceTree = "<group>"; };
 		891D2E46256ED7B200AC961A /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		89249D39257E6C32002747A3 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		89249D4A257EA004002747A3 /* RewardPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardPopUpViewController.swift; sourceTree = "<group>"; };
-		89249D4F257EA18F002747A3 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		89249D54257ED12E002747A3 /* PopUps.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PopUps.storyboard; sourceTree = "<group>"; };
 		8928F54A25670DD10089BE0E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8928F56225670EEE0089BE0E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8942E2B9260D09E100ADC7DB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8942E2E4260D0FD600ADC7DB /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		8942E2EC260D0FF800ADC7DB /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		8942E2F4260D100700ADC7DB /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		89566A552581A8FE00784DF3 /* Intents.intentdefinition */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
 		89566A5A2581A90B00784DF3 /* NotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		89566A622581AADA00784DF3 /* TelaPerfil.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TelaPerfil.storyboard; sourceTree = "<group>"; };
 		89566A672581B27F00784DF3 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		89566A6F2581B4DE00784DF3 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		8984412F2587E6D4001F4185 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
-		8986C2BF25B8BC310027B78E /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 		89A9F33125F17EC8000DAF39 /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
-		89AA1D4825825E0200137F50 /* DesafiosVazioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafiosVazioView.swift; sourceTree = "<group>"; };
 		89C1DAB525B6083600EB700E /* Journey.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Journey.storyboard; sourceTree = "<group>"; };
 		89D9D46525EED27A0024FAC6 /* Onboarding2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding2.swift; sourceTree = "<group>"; };
 		89DD872E2570243200DB1C13 /* SeedDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeedDataBase.swift; sourceTree = "<group>"; };
 		89E69E0925E9827000E4704C /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		89ED4BB725824CCD00A18B29 /* SiriShortcutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriShortcutsViewController.swift; sourceTree = "<group>"; };
-		910E7EF4AA3E30A07B9A2743 /* Pods-Bloomy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bloomy.release.xcconfig"; path = "Target Support Files/Pods-Bloomy/Pods-Bloomy.release.xcconfig"; sourceTree = "<group>"; };
-		A25879A5F40F669187A291F0 /* Pods-BloomyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BloomyTests.debug.xcconfig"; path = "Target Support Files/Pods-BloomyTests/Pods-BloomyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BE2742B525C0E5A3006699E6 /* JourneyPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyPopUpViewController.swift; sourceTree = "<group>"; };
 		BE4BE73625A74995002AB66E /* IslandsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IslandsViewController.swift; sourceTree = "<group>"; };
 		BE4BE74A25A78556002AB66E /* EditIslandsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditIslandsViewController.swift; sourceTree = "<group>"; };
-		BE74C639260A5D3000396141 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BE91BADB257FFF2000CC83D0 /* HealthIsland.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = HealthIsland.sks; sourceTree = "<group>"; };
 		BE91BB102580163C00CC83D0 /* LeisureIsland.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = LeisureIsland.sks; sourceTree = "<group>"; };
 		BE91BB15258016DF00CC83D0 /* LovedsIsland.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = LovedsIsland.sks; sourceTree = "<group>"; };
@@ -165,31 +120,18 @@
 		BEC461C2255DABD8003C1D1A /* Bloomie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bloomie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEC461C5255DABD8003C1D1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEC461C7255DABD8003C1D1A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BEC461C9255DABD8003C1D1A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BEC461CC255DABD8003C1D1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BEC461CF255DABD8003C1D1A /* Bloomy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bloomy.xcdatamodel; sourceTree = "<group>"; };
-		BEC461D1255DABDA003C1D1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BEC461D1255DABDA003C1D1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Settings/Assets.xcassets; sourceTree = "<group>"; };
 		BEC461D4255DABDA003C1D1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BEC461D6255DABDA003C1D1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BEC461DB255DABDB003C1D1A /* BloomieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BloomieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BEC461DF255DABDB003C1D1A /* BloomyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloomyTests.swift; sourceTree = "<group>"; };
-		BEC461E1255DABDB003C1D1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BEC461E6255DABDB003C1D1A /* BloomieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BloomieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BEC461EA255DABDB003C1D1A /* BloomyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloomyUITests.swift; sourceTree = "<group>"; };
-		BEC461EC255DABDB003C1D1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BED0527B2576B8940035EB18 /* Islands.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Islands.storyboard; sourceTree = "<group>"; };
-		BED052D52577EC070035EB18 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		BEDD7A4925630ADF005BA4F9 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		BEF24E522566C24800D408A8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D0D36FBF4832F02F88C6F5BD /* Pods-Bloomie-BloomieUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bloomie-BloomieUITests.release.xcconfig"; path = "Target Support Files/Pods-Bloomie-BloomieUITests/Pods-Bloomie-BloomieUITests.release.xcconfig"; sourceTree = "<group>"; };
-		D61D03D925701B8C005BA187 /* Canela.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Canela.ttc; sourceTree = "<group>"; };
-		D64B4F6225756F2000D818EB /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
-		D64B4F802575923B00D818EB /* ComoSeChamaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComoSeChamaViewController.swift; sourceTree = "<group>"; };
 		D6DFCE3A258148AF0013E8D1 /* reward.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = reward.mp3; sourceTree = "<group>"; };
 		D6DFCE462581500E0013E8D1 /* background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background.mp3; sourceTree = "<group>"; };
 		E30EFA5C3AEDB431AC5D12E6 /* Pods-BloomieTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BloomieTests.release.xcconfig"; path = "Target Support Files/Pods-BloomieTests/Pods-BloomieTests.release.xcconfig"; sourceTree = "<group>"; };
 		E5AEC3851D57C33D59D1EB91 /* Pods-BloomieTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BloomieTests.debug.xcconfig"; path = "Target Support Files/Pods-BloomieTests/Pods-BloomieTests.debug.xcconfig"; sourceTree = "<group>"; };
-		F1EA232AA2FD2DE50426D9E6 /* Pods-BloomyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BloomyTests.release.xcconfig"; path = "Target Support Files/Pods-BloomyTests/Pods-BloomyTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,34 +143,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BEC461D8255DABDB003C1D1A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				585D677544102487CB45C36B /* Pods_BloomieTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BEC461E3255DABDB003C1D1A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DB75B682C4091598FFEA9DEF /* Pods_Bloomie_BloomieUITests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		5F9B40125D2170FE714BBB46 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				369F14DF579FC84A0B42AB62 /* Pods-Bloomy.debug.xcconfig */,
-				910E7EF4AA3E30A07B9A2743 /* Pods-Bloomy.release.xcconfig */,
-				31B686F7D2FE3B59608E26C9 /* Pods-Bloomy-BloomyUITests.debug.xcconfig */,
-				3C16641237BD639CA3DB2A3C /* Pods-Bloomy-BloomyUITests.release.xcconfig */,
-				A25879A5F40F669187A291F0 /* Pods-BloomyTests.debug.xcconfig */,
-				F1EA232AA2FD2DE50426D9E6 /* Pods-BloomyTests.release.xcconfig */,
 				70CF41876D3BFE602C1AB435 /* Pods-Bloomie.debug.xcconfig */,
 				7AE7DB7EA51D352BC1365DF9 /* Pods-Bloomie.release.xcconfig */,
 				73F3A735F5F08B7BD7F59DBC /* Pods-Bloomie-BloomieUITests.debug.xcconfig */,
@@ -263,7 +183,6 @@
 		895637172577C7FD00CA8D3B /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				BEC461D1255DABDA003C1D1A /* Assets.xcassets */,
 				D6DFCE392581489C0013E8D1 /* Sounds */,
 				D61D03D825701B6F005BA187 /* Fonts */,
 			);
@@ -303,22 +222,10 @@
 			path = SKScenes;
 			sourceTree = "<group>";
 		};
-		89FE691825B753E0002A0D2B /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				8915339925B8A35700DB7FE8 /* JourneyCollectionViewController.swift */,
-				8915339E25B8A36C00DB7FE8 /* JourneyCollectionViewCell.swift */,
-				8986C2BF25B8BC310027B78E /* ModalViewController.swift */,
-			);
-			path = Settings;
-			sourceTree = "<group>";
-		};
 		AE4F409CCC5D9A13F9027B38 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				362EA7EFBEA926926EE3CF61 /* Pods_Bloomie.framework */,
-				456516263E051272932084D7 /* Pods_Bloomie_BloomieUITests.framework */,
-				4268C32CC311EBAA11E56546 /* Pods_BloomieTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -327,8 +234,6 @@
 			isa = PBXGroup;
 			children = (
 				BEC461C4255DABD8003C1D1A /* Bloomy */,
-				BEC461DE255DABDB003C1D1A /* BloomyTests */,
-				BEC461E9255DABDB003C1D1A /* BloomyUITests */,
 				BEC461C3255DABD8003C1D1A /* Products */,
 				5F9B40125D2170FE714BBB46 /* Pods */,
 				AE4F409CCC5D9A13F9027B38 /* Frameworks */,
@@ -339,8 +244,6 @@
 			isa = PBXGroup;
 			children = (
 				BEC461C2255DABD8003C1D1A /* Bloomie.app */,
-				BEC461DB255DABDB003C1D1A /* BloomieTests.xctest */,
-				BEC461E6255DABDB003C1D1A /* BloomieUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -348,8 +251,10 @@
 		BEC461C4255DABD8003C1D1A /* Bloomy */ = {
 			isa = PBXGroup;
 			children = (
-				BE74C639260A5D3000396141 /* GoogleService-Info.plist */,
+				8942E2B9260D09E100ADC7DB /* GoogleService-Info.plist */,
 				12EA556A2583FE6E00DF9FFA /* Bloomy.entitlements */,
+				BEC461C5255DABD8003C1D1A /* AppDelegate.swift */,
+				BEC461C7255DABD8003C1D1A /* SceneDelegate.swift */,
 				BEDD7A402562F3AB005BA4F9 /* Model */,
 				BEDD7A412562F3B8005BA4F9 /* View */,
 				BEDD7A422562F3C3005BA4F9 /* Controller */,
@@ -358,27 +263,10 @@
 			path = Bloomy;
 			sourceTree = "<group>";
 		};
-		BEC461DE255DABDB003C1D1A /* BloomyTests */ = {
-			isa = PBXGroup;
-			children = (
-				BEC461DF255DABDB003C1D1A /* BloomyTests.swift */,
-				BEC461E1255DABDB003C1D1A /* Info.plist */,
-			);
-			path = BloomyTests;
-			sourceTree = "<group>";
-		};
-		BEC461E9255DABDB003C1D1A /* BloomyUITests */ = {
-			isa = PBXGroup;
-			children = (
-				BEC461EA255DABDB003C1D1A /* BloomyUITests.swift */,
-				BEC461EC255DABDB003C1D1A /* Info.plist */,
-			);
-			path = BloomyUITests;
-			sourceTree = "<group>";
-		};
 		BEDD7A402562F3AB005BA4F9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BEC461D1255DABDA003C1D1A /* Assets.xcassets */,
 				895637192577C80900CA8D3B /* Classes */,
 				895637182577C80300CA8D3B /* Database */,
 				895637172577C7FD00CA8D3B /* Settings */,
@@ -389,20 +277,17 @@
 		BEDD7A412562F3B8005BA4F9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BEC461CB255DABD8003C1D1A /* Main.storyboard */,
 				BEC461D3255DABDA003C1D1A /* LaunchScreen.storyboard */,
 				89566A622581AADA00784DF3 /* TelaPerfil.storyboard */,
 				BEDD7A4925630ADF005BA4F9 /* Home.storyboard */,
 				BED0527B2576B8940035EB18 /* Islands.storyboard */,
 				89249D54257ED12E002747A3 /* PopUps.storyboard */,
-				D64B4F6225756F2000D818EB /* Onboarding.storyboard */,
 				7DAA428225A8D17700C1CFF5 /* Desafios.storyboard */,
 				7D86D6BA25FFE9D800AE0928 /* JornadaVazia.storyboard */,
-				89AA1D4825825E0200137F50 /* DesafiosVazioView.swift */,
+				89C1DAB525B6083600EB700E /* Journey.storyboard */,
 				89E69E0925E9827000E4704C /* Onboarding.swift */,
 				89D9D46525EED27A0024FAC6 /* Onboarding2.swift */,
 				890079A025F002AE00F54028 /* Onboarding3.swift */,
-				89C1DAB525B6083600EB700E /* Journey.storyboard */,
 				89ED4BC625824E6800A18B29 /* SKScenes */,
 			);
 			path = View;
@@ -412,28 +297,21 @@
 			isa = PBXGroup;
 			children = (
 				7DD0195325B0BADE00024BD1 /* DesafiosVazioViewController.swift */,
-				7D192270257ABA0E00D26450 /* ComoVaiViewController.swift */,
-				7DAE80202575877000B17FB8 /* AreasViewController.swift */,
-				BEC461C5255DABD8003C1D1A /* AppDelegate.swift */,
-				BEC461C7255DABD8003C1D1A /* SceneDelegate.swift */,
-				BEC461C9255DABD8003C1D1A /* ViewController.swift */,
 				12D13CEF256C2D130013E511 /* PerfilViewController.swift */,
 				BEF24E522566C24800D408A8 /* HomeViewController.swift */,
-				D64B4F802575923B00D818EB /* ComoSeChamaViewController.swift */,
 				89566A5A2581A90B00784DF3 /* NotificationsViewController.swift */,
 				89566A672581B27F00784DF3 /* SettingsTableViewController.swift */,
 				89566A6F2581B4DE00784DF3 /* UserViewController.swift */,
 				89ED4BB725824CCD00A18B29 /* SiriShortcutsViewController.swift */,
 				BE4BE73625A74995002AB66E /* IslandsViewController.swift */,
-				89566A552581A8FE00784DF3 /* Intents.intentdefinition */,
 				7DAA427325A8D0A600C1CFF5 /* DesafiosViewController.swift */,
 				7DAA427825A8D0C100C1CFF5 /* DesafiosPageViewController.swift */,
 				7DAA427D25A8D0DD00C1CFF5 /* DesafiosDataViewController.swift */,
 				BE4BE74A25A78556002AB66E /* EditIslandsViewController.swift */,
 				89A9F33125F17EC8000DAF39 /* OnboardingContainerViewController.swift */,
-				7D86D6C225FFF55100AE0928 /* JornadaVaziaViewController.swift */,
+				89566A552581A8FE00784DF3 /* Intents.intentdefinition */,
+				8915339925B8A35700DB7FE8 /* JourneyCollectionViewController.swift */,
 				89249D3E257E9F2F002747A3 /* PopUps */,
-				89FE691825B753E0002A0D2B /* Settings */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -441,14 +319,12 @@
 		D61D03D825701B6F005BA187 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				89249D4F257EA18F002747A3 /* Poppins-Bold.ttf */,
 				8984412F2587E6D4001F4185 /* Poppins-Medium.ttf */,
+				8942E2EC260D0FF800ADC7DB /* Poppins-SemiBold.ttf */,
 				89249D39257E6C32002747A3 /* Poppins-Regular.ttf */,
-				BED052D52577EC070035EB18 /* Poppins-SemiBold.ttf */,
+				8942E2F4260D100700ADC7DB /* Poppins-SemiBold.ttf */,
+				8942E2E4260D0FD600ADC7DB /* Poppins-Bold.ttf */,
 				7DB41BF8257AC31900BBFAEA /* Poppins-Regular.ttf */,
-				7DB41BFF257AC36300BBFAEA /* Poppins-Bold.ttf */,
-				7DB41BF9257AC31900BBFAEA /* Poppins-SemiBold.ttf */,
-				D61D03D925701B8C005BA187 /* Canela.ttc */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -485,45 +361,6 @@
 			productReference = BEC461C2255DABD8003C1D1A /* Bloomie.app */;
 			productType = "com.apple.product-type.application";
 		};
-		BEC461DA255DABDB003C1D1A /* BloomieTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BEC461F2255DABDB003C1D1A /* Build configuration list for PBXNativeTarget "BloomieTests" */;
-			buildPhases = (
-				D3EB0DE1352053A37EAFD6F6 /* [CP] Check Pods Manifest.lock */,
-				BEC461D7255DABDB003C1D1A /* Sources */,
-				BEC461D8255DABDB003C1D1A /* Frameworks */,
-				BEC461D9255DABDB003C1D1A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BEC461DD255DABDB003C1D1A /* PBXTargetDependency */,
-			);
-			name = BloomieTests;
-			productName = BloomyTests;
-			productReference = BEC461DB255DABDB003C1D1A /* BloomieTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		BEC461E5255DABDB003C1D1A /* BloomieUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BEC461F5255DABDB003C1D1A /* Build configuration list for PBXNativeTarget "BloomieUITests" */;
-			buildPhases = (
-				8F2819E96855B7018BE2A486 /* [CP] Check Pods Manifest.lock */,
-				BEC461E2255DABDB003C1D1A /* Sources */,
-				BEC461E3255DABDB003C1D1A /* Frameworks */,
-				BEC461E4255DABDB003C1D1A /* Resources */,
-				6F8AB3D894EABE4D9CCA627D /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BEC461E8255DABDB003C1D1A /* PBXTargetDependency */,
-			);
-			name = BloomieUITests;
-			productName = BloomyUITests;
-			productReference = BEC461E6255DABDB003C1D1A /* BloomieUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -535,14 +372,6 @@
 				TargetAttributes = {
 					BEC461C1255DABD8003C1D1A = {
 						CreatedOnToolsVersion = 12.1;
-					};
-					BEC461DA255DABDB003C1D1A = {
-						CreatedOnToolsVersion = 12.1;
-						TestTargetID = BEC461C1255DABD8003C1D1A;
-					};
-					BEC461E5255DABDB003C1D1A = {
-						CreatedOnToolsVersion = 12.1;
-						TestTargetID = BEC461C1255DABD8003C1D1A;
 					};
 				};
 			};
@@ -560,8 +389,6 @@
 			projectRoot = "";
 			targets = (
 				BEC461C1255DABD8003C1D1A /* Bloomie */,
-				BEC461DA255DABDB003C1D1A /* BloomieTests */,
-				BEC461E5255DABDB003C1D1A /* BloomieUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -574,42 +401,24 @@
 				BEC461D5255DABDA003C1D1A /* LaunchScreen.storyboard in Resources */,
 				89566A632581AADA00784DF3 /* TelaPerfil.storyboard in Resources */,
 				D6DFCE472581500E0013E8D1 /* background.mp3 in Resources */,
-				D61D03E825701C2F005BA187 /* Canela.ttc in Resources */,
 				7D86D6BB25FFE9D800AE0928 /* JornadaVazia.storyboard in Resources */,
 				89249D55257ED12E002747A3 /* PopUps.storyboard in Resources */,
 				BED0527C2576B8940035EB18 /* Islands.storyboard in Resources */,
 				7DAA428325A8D17700C1CFF5 /* Desafios.storyboard in Resources */,
 				7DB41BFA257AC31900BBFAEA /* Poppins-Regular.ttf in Resources */,
 				D6DFCE3B258148AF0013E8D1 /* reward.mp3 in Resources */,
-				7DB41BFB257AC31900BBFAEA /* Poppins-SemiBold.ttf in Resources */,
 				89C1DAB625B6083600EB700E /* Journey.storyboard in Resources */,
 				898441302587E6D4001F4185 /* Poppins-Medium.ttf in Resources */,
 				BE91BB1B2580179B00CC83D0 /* MindfulnessIsland.sks in Resources */,
 				BE91BADC257FFF2000CC83D0 /* HealthIsland.sks in Resources */,
 				BE91BB16258016DF00CC83D0 /* LovedsIsland.sks in Resources */,
+				8942E2ED260D0FF900ADC7DB /* Poppins-SemiBold.ttf in Resources */,
+				8942E2F5260D100700ADC7DB /* Poppins-SemiBold.ttf in Resources */,
 				BEC461D2255DABDA003C1D1A /* Assets.xcassets in Resources */,
+				8942E2E5260D0FD600ADC7DB /* Poppins-Bold.ttf in Resources */,
 				BE91BB112580163C00CC83D0 /* LeisureIsland.sks in Resources */,
-				D64B4F6325756F2000D818EB /* Onboarding.storyboard in Resources */,
-				BE74C63A260A5D3000396141 /* GoogleService-Info.plist in Resources */,
-				7DB41C00257AC36300BBFAEA /* Poppins-Bold.ttf in Resources */,
-				BEC461CD255DABD8003C1D1A /* Main.storyboard in Resources */,
+				8942E2BA260D09E100ADC7DB /* GoogleService-Info.plist in Resources */,
 				BEDD7A4A25630ADF005BA4F9 /* Home.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BEC461D9255DABDB003C1D1A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BE74C63B260A5D3000396141 /* GoogleService-Info.plist in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BEC461E4255DABDB003C1D1A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BE74C63C260A5D3000396141 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -655,45 +464,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6F8AB3D894EABE4D9CCA627D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Bloomie-BloomieUITests/Pods-Bloomie-BloomieUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Bloomie-BloomieUITests/Pods-Bloomie-BloomieUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bloomie-BloomieUITests/Pods-Bloomie-BloomieUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8F2819E96855B7018BE2A486 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Bloomie-BloomieUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		BEC46205255DBAEA003C1D1A /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -711,28 +481,6 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n${PODS_ROOT}/SwiftLint/swiftlint\n";
 		};
-		D3EB0DE1352053A37EAFD6F6 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BloomieTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -741,14 +489,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEF24E532566C24800D408A8 /* HomeViewController.swift in Sources */,
-				8915339F25B8A36C00DB7FE8 /* JourneyCollectionViewCell.swift in Sources */,
-				7D86D6C325FFF55100AE0928 /* JornadaVaziaViewController.swift in Sources */,
 				89566A702581B4DE00784DF3 /* UserViewController.swift in Sources */,
 				8905E6D7257E65D80015ECAC /* DonePopUpViewController.swift in Sources */,
-				BEC461CA255DABD8003C1D1A /* ViewController.swift in Sources */,
 				89566A562581A8FE00784DF3 /* Intents.intentdefinition in Sources */,
 				890079A125F002AE00F54028 /* Onboarding3.swift in Sources */,
-				8986C2C025B8BC310027B78E /* ModalViewController.swift in Sources */,
 				7DAA427E25A8D0DD00C1CFF5 /* DesafiosDataViewController.swift in Sources */,
 				89D9D46625EED27A0024FAC6 /* Onboarding2.swift in Sources */,
 				BEC461D0255DABD8003C1D1A /* Bloomy.xcdatamodeld in Sources */,
@@ -759,7 +503,6 @@
 				7DAA427925A8D0C100C1CFF5 /* DesafiosPageViewController.swift in Sources */,
 				8905E6C3257961660015ECAC /* ChallengePopUpViewController.swift in Sources */,
 				BEBD260F2583DB25002263BD /* MusicPlayer.swift in Sources */,
-				7DAE80212575877000B17FB8 /* AreasViewController.swift in Sources */,
 				8915339A25B8A35700DB7FE8 /* JourneyCollectionViewController.swift in Sources */,
 				BEC461C6255DABD8003C1D1A /* AppDelegate.swift in Sources */,
 				7DD0195425B0BADE00024BD1 /* DesafiosVazioViewController.swift in Sources */,
@@ -777,53 +520,14 @@
 				89249D4B257EA004002747A3 /* RewardPopUpViewController.swift in Sources */,
 				7D2BEFE9256D86B0006AFD8C /* User+CoreDataProperties.swift in Sources */,
 				8928F56325670EEE0089BE0E /* Constants.swift in Sources */,
-				7D192271257ABA0E00D26450 /* ComoVaiViewController.swift in Sources */,
 				89DD872F2570243200DB1C13 /* SeedDataBase.swift in Sources */,
 				89A9F33225F17EC8000DAF39 /* OnboardingContainerViewController.swift in Sources */,
-				D64B4F812575923B00D818EB /* ComoSeChamaViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BEC461D7255DABDB003C1D1A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BEC461E0255DABDB003C1D1A /* BloomyTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BEC461E2255DABDB003C1D1A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BEC461EB255DABDB003C1D1A /* BloomyUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		BEC461DD255DABDB003C1D1A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BEC461C1255DABD8003C1D1A /* Bloomie */;
-			targetProxy = BEC461DC255DABDB003C1D1A /* PBXContainerItemProxy */;
-		};
-		BEC461E8255DABDB003C1D1A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BEC461C1255DABD8003C1D1A /* Bloomie */;
-			targetProxy = BEC461E7255DABDB003C1D1A /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		BEC461CB255DABD8003C1D1A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BEC461CC255DABD8003C1D1A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BEC461D3255DABDA003C1D1A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1001,94 +705,6 @@
 			};
 			name = Release;
 		};
-		BEC461F3255DABDB003C1D1A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E5AEC3851D57C33D59D1EB91 /* Pods-BloomieTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 23WSBM7T82;
-				INFOPLIST_FILE = BloomyTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = jhfs.cin.ufpe.br.BloomyTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bloomie.app/Bloomie";
-			};
-			name = Debug;
-		};
-		BEC461F4255DABDB003C1D1A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E30EFA5C3AEDB431AC5D12E6 /* Pods-BloomieTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 23WSBM7T82;
-				INFOPLIST_FILE = BloomyTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = jhfs.cin.ufpe.br.BloomyTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bloomie.app/Bloomie";
-			};
-			name = Release;
-		};
-		BEC461F6255DABDB003C1D1A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 73F3A735F5F08B7BD7F59DBC /* Pods-Bloomie-BloomieUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 23WSBM7T82;
-				INFOPLIST_FILE = BloomyUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = jhfs.cin.ufpe.br.BloomyUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Bloomy;
-			};
-			name = Debug;
-		};
-		BEC461F7255DABDB003C1D1A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D0D36FBF4832F02F88C6F5BD /* Pods-Bloomie-BloomieUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 23WSBM7T82;
-				INFOPLIST_FILE = BloomyUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = jhfs.cin.ufpe.br.BloomyUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Bloomy;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1106,24 +722,6 @@
 			buildConfigurations = (
 				BEC461F0255DABDB003C1D1A /* Debug */,
 				BEC461F1255DABDB003C1D1A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BEC461F2255DABDB003C1D1A /* Build configuration list for PBXNativeTarget "BloomieTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BEC461F3255DABDB003C1D1A /* Debug */,
-				BEC461F4255DABDB003C1D1A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BEC461F5255DABDB003C1D1A /* Build configuration list for PBXNativeTarget "BloomieUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BEC461F6255DABDB003C1D1A /* Debug */,
-				BEC461F7255DABDB003C1D1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
