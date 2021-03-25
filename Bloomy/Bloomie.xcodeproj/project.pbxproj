@@ -28,7 +28,6 @@
 		89249D55257ED12E002747A3 /* PopUps.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89249D54257ED12E002747A3 /* PopUps.storyboard */; };
 		8928F54B25670DD10089BE0E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8928F54A25670DD10089BE0E /* User.swift */; };
 		8928F56325670EEE0089BE0E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8928F56225670EEE0089BE0E /* Constants.swift */; };
-		8942E2BA260D09E100ADC7DB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8942E2B9260D09E100ADC7DB /* GoogleService-Info.plist */; };
 		8942E2E5260D0FD600ADC7DB /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8942E2E4260D0FD600ADC7DB /* Poppins-Bold.ttf */; };
 		8942E2ED260D0FF900ADC7DB /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8942E2EC260D0FF800ADC7DB /* Poppins-SemiBold.ttf */; };
 		8942E2F5260D100700ADC7DB /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8942E2F4260D100700ADC7DB /* Poppins-SemiBold.ttf */; };
@@ -58,6 +57,7 @@
 		BEC461D2255DABDA003C1D1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEC461D1255DABDA003C1D1A /* Assets.xcassets */; };
 		BEC461D5255DABDA003C1D1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEC461D3255DABDA003C1D1A /* LaunchScreen.storyboard */; };
 		BED0527C2576B8940035EB18 /* Islands.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BED0527B2576B8940035EB18 /* Islands.storyboard */; };
+		BED1C399260D2BF300912AAC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BED1C398260D2BF300912AAC /* GoogleService-Info.plist */; };
 		BEDD7A4A25630ADF005BA4F9 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEDD7A4925630ADF005BA4F9 /* Home.storyboard */; };
 		BEF24E532566C24800D408A8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF24E522566C24800D408A8 /* HomeViewController.swift */; };
 		D6DFCE3B258148AF0013E8D1 /* reward.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D6DFCE3A258148AF0013E8D1 /* reward.mp3 */; };
@@ -93,7 +93,6 @@
 		89249D54257ED12E002747A3 /* PopUps.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PopUps.storyboard; sourceTree = "<group>"; };
 		8928F54A25670DD10089BE0E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8928F56225670EEE0089BE0E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		8942E2B9260D09E100ADC7DB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8942E2E4260D0FD600ADC7DB /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		8942E2EC260D0FF800ADC7DB /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		8942E2F4260D100700ADC7DB /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -125,6 +124,7 @@
 		BEC461D4255DABDA003C1D1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BEC461D6255DABDA003C1D1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BED0527B2576B8940035EB18 /* Islands.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Islands.storyboard; sourceTree = "<group>"; };
+		BED1C398260D2BF300912AAC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BEDD7A4925630ADF005BA4F9 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		BEF24E522566C24800D408A8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D0D36FBF4832F02F88C6F5BD /* Pods-Bloomie-BloomieUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bloomie-BloomieUITests.release.xcconfig"; path = "Target Support Files/Pods-Bloomie-BloomieUITests/Pods-Bloomie-BloomieUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -251,7 +251,7 @@
 		BEC461C4255DABD8003C1D1A /* Bloomy */ = {
 			isa = PBXGroup;
 			children = (
-				8942E2B9260D09E100ADC7DB /* GoogleService-Info.plist */,
+				BED1C398260D2BF300912AAC /* GoogleService-Info.plist */,
 				12EA556A2583FE6E00DF9FFA /* Bloomy.entitlements */,
 				BEC461C5255DABD8003C1D1A /* AppDelegate.swift */,
 				BEC461C7255DABD8003C1D1A /* SceneDelegate.swift */,
@@ -417,8 +417,8 @@
 				BEC461D2255DABDA003C1D1A /* Assets.xcassets in Resources */,
 				8942E2E5260D0FD600ADC7DB /* Poppins-Bold.ttf in Resources */,
 				BE91BB112580163C00CC83D0 /* LeisureIsland.sks in Resources */,
-				8942E2BA260D09E100ADC7DB /* GoogleService-Info.plist in Resources */,
 				BEDD7A4A25630ADF005BA4F9 /* Home.storyboard in Resources */,
+				BED1C399260D2BF300912AAC /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
