@@ -360,7 +360,6 @@ extension HomeViewController {
             self.healthLeftButton.isEnabled = false
             self.healthLeftButton.alpha = 0
         case "leisure":
-            print("Entrou no lazer direito")
             self.leisureStackView.isHidden = false
             self.leisureRightButton.isHidden = false
             self.leisureLeftButton.isHidden = false
@@ -379,7 +378,7 @@ extension HomeViewController {
             self.lovedsLeftButton.isEnabled = false
             self.lovedsLeftButton.alpha = 0
         default:
-            print("Entrou no caso default")
+            fatalError("Caso não existente")
         }
     }
     
@@ -392,7 +391,6 @@ extension HomeViewController {
             self.healthRightButton.isEnabled = false
             self.healthRightButton.alpha = 0
         case "leisure":
-            print("Entro no lazer esquerdo")
             self.leisureStackView.isHidden = false
             self.leisureRightButton.isHidden = false
             self.leisureLeftButton.isHidden = false
@@ -411,7 +409,7 @@ extension HomeViewController {
             self.lovedsRightButton.isEnabled = false
             self.lovedsRightButton.alpha = 0
         default:
-            print("Entrou no caso default")
+            fatalError("Caso não existente")
         }
     }
     
