@@ -126,14 +126,6 @@ class IslandsViewController: UIViewController {
         _ = IslandManager.shared.saveContext()
     }
     
-    func setupNavigationController() {
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.topItem?.title = ""
-        self.navigationController?.navigationBar.layoutIfNeeded()
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Poppins-Semibold", size: 18) ?? UIFont()]
-    }
-    
     func setupSKScene() {
         let islandView = SKView(frame: CGRect(x: self.view.center.x-(366/2), y: self.view.center.y-(364/2), width: 366, height: 364))
         islandView.backgroundColor = .black
@@ -167,8 +159,6 @@ class IslandsViewController: UIViewController {
         // Ajusta o tamaho do titulo do botão
         self.challengeDayButton.titleLabel?.adjustsFontSizeToFitWidth = true
         self.doneButton.titleLabel?.adjustsFontSizeToFitWidth = true
-        // Configura a navigation controller
-        //setupNavigationController()
     }
     
     func chooseButtonToShow() {

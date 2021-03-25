@@ -36,7 +36,6 @@ class DesafiosViewController: UIViewController {
         self.challengeImageDataSource = getChallengesIslandName()
         self.islandsNames = getIslandsNames()
         self.configurePageViewController()
-        self.setupNavigationController()
     }
     
     override func viewWillAppear(_ animated: Bool) {

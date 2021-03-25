@@ -20,7 +20,6 @@ class UserViewController: UIViewController {
         super.viewDidLoad()
 
         self.userNameLabel.text = UserManager.shared.getUserName()
-        self.setupNavigationController()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -72,14 +71,6 @@ class UserViewController: UIViewController {
         } else {
             showAlert(islandName: "pessoas queridas")
         }
-    }
-    
-    func setupNavigationController() {
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.topItem?.title = ""
-        self.navigationController?.navigationBar.layoutIfNeeded()
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Poppins-Semibold", size: 18) ?? UIFont()]
     }
     
     func buttonsToShow() {

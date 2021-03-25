@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let fontAttributes = [NSAttributedString.Key.font: UIFont(name: "Poppins-Regular", size: 12.0)!]
         UITabBarItem.appearance().setTitleTextAttributes(fontAttributes, for: .normal)
         
-        self.setNagivationBarStyle()
+        self.setupNagivationBarStyle()
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.makeKeyAndVisible()
@@ -52,10 +52,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    private func setNagivationBarStyle() {
+    private func setupNagivationBarStyle() {
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.clear], for: .normal)
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.clear], for: UIControl.State.highlighted)
         UINavigationBar.appearance().setBackgroundImage(UIImage(), for:.default)
         UINavigationBar.appearance().shadowImage = UIImage()
         UINavigationBar.appearance().topItem?.title = ""
+        UINavigationBar.appearance().backItem?.title = ""
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Poppins-Semibold", size: 18) ?? UIFont()]
     }
     

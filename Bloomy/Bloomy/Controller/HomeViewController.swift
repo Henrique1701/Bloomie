@@ -43,8 +43,6 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //self.hideIsland()
-        
         MusicPlayer.shared.startBackgroundMusic(backgroundMusicFileName: "background")
         
         quantityIslands = defaults.integer(forKey: "quantityIslands")

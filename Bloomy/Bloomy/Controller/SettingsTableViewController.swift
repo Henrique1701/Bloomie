@@ -23,16 +23,7 @@ public class SettingsTableViewController: UITableViewController {
         // Altera o estado do switch
         let stateSoundsSwitch = UserDefaults.standard.bool(forKey: "stateSoundsSwitch")
         self.soundsSwitch.setOn(stateSoundsSwitch, animated: true)
-        
-        self.setupNavigationController()
-    }
-    
-    func setupNavigationController() {
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.topItem?.title = ""
-        self.navigationController?.navigationBar.layoutIfNeeded()
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Poppins-Semibold", size: 18) ?? UIFont()]
+
     }
 
     @IBAction func touchedSoundsSwitch(_ sender: Any) {
