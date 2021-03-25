@@ -168,7 +168,7 @@ class IslandsViewController: UIViewController {
         self.challengeDayButton.titleLabel?.adjustsFontSizeToFitWidth = true
         self.doneButton.titleLabel?.adjustsFontSizeToFitWidth = true
         // Configura a navigation controller
-        setupNavigationController()
+        //setupNavigationController()
     }
     
     func chooseButtonToShow() {
@@ -295,7 +295,6 @@ class IslandsViewController: UIViewController {
         alert.addAction(noButton)
         alert.preferredAction = sendButton
         self.present(alert, animated: true, completion: nil)
-        print(alert.textFields![0])
     }
     
     private func requestReviewIfPossible() {
