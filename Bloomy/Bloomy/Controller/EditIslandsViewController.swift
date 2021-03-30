@@ -8,14 +8,14 @@
 import UIKit
 
 class EditIslandsViewController: UIViewController {
-
+    
     @IBOutlet weak var mindfulnessButton: UIButton!
     @IBOutlet weak var lovedsButton: UIButton!
     @IBOutlet weak var leisureButton: UIButton!
     @IBOutlet weak var healthButton: UIButton!
     var selectedMindfulness: Bool = false
     var selectedLoveds: Bool = false
-    var selectefLeisure: Bool = false
+    var selectedLeisure: Bool = false
     var selectedHealth: Bool = false
     var selectedCount: Int = 0
     
@@ -29,7 +29,7 @@ class EditIslandsViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         // Salva no User Default a quantidade de ilhas selecionadas
         userDefaults.set(selectedCount, forKey: UserDefaultsKeys.quantityIslands)
-
+        
         userDefaults.set(true, forKey: UserDefaultsKeys.islandsChange)
     }
     
@@ -50,7 +50,7 @@ class EditIslandsViewController: UIViewController {
     }
     
     @IBAction func tappedLeisureButton(_ sender: Any) {
-        if selectefLeisure == false {
+        if selectedLeisure == false {
             changeStateButtons(islandName: "leisure", selected: true)
         } else {
             changeStateButtons(islandName: "leisure", selected: false)
@@ -80,56 +80,83 @@ class EditIslandsViewController: UIViewController {
         }
     }
     
+    // MARK: - State Buttons status
+    
     func changeStateButtons(islandName: String, selected: Bool) {
         switch islandName {
         case "mindfulness":
             if selected == true {
-                selectedMindfulness = true
-                mindfulnessButton.setImage(UIImage(named: "botao_on_atencao_plena"), for: .normal)
-                selectedCount += 1
-                userDefaults.set(true, forKey: UserDefaultsKeys.selectedMindfulness)
+                self.setMindfulnessStatus(to: true)
             } else {
-                selectedMindfulness = false
-                mindfulnessButton.setImage(UIImage(named: "botao_atencao_plena"), for: .normal)
-                selectedCount -= 1
-                userDefaults.set(false, forKey: UserDefaultsKeys.selectedMindfulness)
+                self.setMindfulnessStatus(to: false)
             }
         case "loveds":
             if selected == true {
-                selectedLoveds = true
-                lovedsButton.setImage(UIImage(named: "botao_on_pessoas_queridas"), for: .normal)
-                selectedCount += 1
-                userDefaults.set(true, forKey: UserDefaultsKeys.selectedLoveds)
+                self.setLovedsStatus(to: true)
             } else {
-                selectedLoveds = false
-                lovedsButton.setImage(UIImage(named: "botao_pessoas_queridas"), for: .normal)
-                selectedCount -= 1
-                userDefaults.set(false, forKey: UserDefaultsKeys.selectedLoveds)
+                self.setLovedsStatus(to: false)
             }
         case "leisure":
             if selected == true {
-                selectefLeisure = true
-                leisureButton.setImage(UIImage(named: "botao_on_lazer"), for: .normal)
-                selectedCount += 1
-                userDefaults.set(true, forKey: UserDefaultsKeys.selectedLeisure)
+                self.setLeisureStatus(to: true)
             } else {
-                selectefLeisure = false
-                leisureButton.setImage(UIImage(named: "botao_lazer"), for: .normal)
-                selectedCount -= 1
-                userDefaults.set(false, forKey: UserDefaultsKeys.selectedLeisure)
+                self.setLeisureStatus(to: false)
             }
-        default: // "health"
+        case "health":
             if selected == true {
-                selectedHealth = true
-                healthButton.setImage(UIImage(named: "botao_on_saude"), for: .normal)
-                selectedCount += 1
-                userDefaults.set(true, forKey: UserDefaultsKeys.selectedHealth)
+                self.setHealthStatus(to: true)
             } else {
-                selectedHealth = false
-                healthButton.setImage(UIImage(named: "botao_saude"), for: .normal)
-                selectedCount -= 1
-                userDefaults.set(false, forKey: UserDefaultsKeys.selectedHealth)
+                self.setHealthStatus(to: false)
             }
+        default:
+            fatalError("Could not find Island \(islandName)")
+        }
+    }
+    
+    private func setMindfulnessStatus(to status: Bool) {
+        selectedMindfulness = status
+        selectedCount += 1
+        userDefaults.set(status, forKey: UserDefaultsKeys.selectedMindfulness)
+        if (status) {
+            mindfulnessButton.setImage(UIImage(named: "botao_on_atencao_plena"), for: .normal)
+        } else {
+            mindfulnessButton.setImage(UIImage(named: "botao_atencao_plena"), for: .normal)
+        }
+    }
+    
+    private func setLovedsStatus(to status: Bool) {
+        selectedLoveds = status
+        userDefaults.set(status, forKey: UserDefaultsKeys.selectedLoveds)
+        if (status) {
+            selectedCount += 1
+            lovedsButton.setImage(UIImage(named: "botao_on_pessoas_queridas"), for: .normal)
+        } else {
+            selectedCount -= 1
+            lovedsButton.setImage(UIImage(named: "botao_pessoas_queridas"), for: .normal)
+        }
+    }
+    
+    private func setLeisureStatus(to status: Bool) {
+        selectedLeisure = status
+        userDefaults.set(status, forKey: UserDefaultsKeys.selectedLeisure)
+        if (status) {
+            selectedCount += 1
+            leisureButton.setImage(UIImage(named: "botao_on_lazer"), for: .normal)
+        } else {
+            selectedCount -= 1
+            leisureButton.setImage(UIImage(named: "botao_lazer"), for: .normal)
+        }
+    }
+    
+    private func setHealthStatus(to status: Bool) {
+        selectedHealth = status
+        userDefaults.set(status, forKey: UserDefaultsKeys.selectedHealth)
+        if (status) {
+            selectedCount += 1
+            healthButton.setImage(UIImage(named: "botao_on_saude"), for: .normal)
+        } else {
+            selectedCount -= 1
+            healthButton.setImage(UIImage(named: "botao_saude"), for: .normal)
         }
     }
 }
