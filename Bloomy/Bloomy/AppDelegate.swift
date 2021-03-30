@@ -35,7 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.makeKeyAndVisible()
         
-        let didUserSelectedIslands = self.defaults.bool(forKey: DefaultsConstants.auxiliarToRootWindow.rawValue)
+        let didUserSelectedIslands = self.defaults.bool(forKey: UserDefaultsKeys.userSelectedIslands)
         
         if (UserManager.shared.getUser() == nil || !didUserSelectedIslands) {
             self.window?.rootViewController = OnboardingContainerViewController()
