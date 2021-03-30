@@ -29,7 +29,6 @@
 		8928F54B25670DD10089BE0E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8928F54A25670DD10089BE0E /* User.swift */; };
 		8928F56325670EEE0089BE0E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8928F56225670EEE0089BE0E /* Constants.swift */; };
 		8942E2E5260D0FD600ADC7DB /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8942E2E4260D0FD600ADC7DB /* Poppins-Bold.ttf */; };
-		8942E2ED260D0FF900ADC7DB /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8942E2EC260D0FF800ADC7DB /* Poppins-SemiBold.ttf */; };
 		8942E2F5260D100700ADC7DB /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8942E2F4260D100700ADC7DB /* Poppins-SemiBold.ttf */; };
 		89566A562581A8FE00784DF3 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 89566A552581A8FE00784DF3 /* Intents.intentdefinition */; };
 		89566A5B2581A90B00784DF3 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89566A5A2581A90B00784DF3 /* NotificationsViewController.swift */; };
@@ -94,7 +93,6 @@
 		8928F54A25670DD10089BE0E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8928F56225670EEE0089BE0E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8942E2E4260D0FD600ADC7DB /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
-		8942E2EC260D0FF800ADC7DB /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		8942E2F4260D100700ADC7DB /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		89566A552581A8FE00784DF3 /* Intents.intentdefinition */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
 		89566A5A2581A90B00784DF3 /* NotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +105,7 @@
 		89D9D46525EED27A0024FAC6 /* Onboarding2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding2.swift; sourceTree = "<group>"; };
 		89DD872E2570243200DB1C13 /* SeedDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeedDataBase.swift; sourceTree = "<group>"; };
 		89E69E0925E9827000E4704C /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
+		89E9E5042613C07F00DD670B /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		89ED4BB725824CCD00A18B29 /* SiriShortcutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriShortcutsViewController.swift; sourceTree = "<group>"; };
 		BE2742B525C0E5A3006699E6 /* JourneyPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyPopUpViewController.swift; sourceTree = "<group>"; };
 		BE4BE73625A74995002AB66E /* IslandsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IslandsViewController.swift; sourceTree = "<group>"; };
@@ -320,7 +319,7 @@
 			isa = PBXGroup;
 			children = (
 				8984412F2587E6D4001F4185 /* Poppins-Medium.ttf */,
-				8942E2EC260D0FF800ADC7DB /* Poppins-SemiBold.ttf */,
+				89E9E5042613C07F00DD670B /* Poppins-SemiBold.ttf */,
 				89249D39257E6C32002747A3 /* Poppins-Regular.ttf */,
 				8942E2F4260D100700ADC7DB /* Poppins-SemiBold.ttf */,
 				8942E2E4260D0FD600ADC7DB /* Poppins-Bold.ttf */,
@@ -412,7 +411,6 @@
 				BE91BB1B2580179B00CC83D0 /* MindfulnessIsland.sks in Resources */,
 				BE91BADC257FFF2000CC83D0 /* HealthIsland.sks in Resources */,
 				BE91BB16258016DF00CC83D0 /* LovedsIsland.sks in Resources */,
-				8942E2ED260D0FF900ADC7DB /* Poppins-SemiBold.ttf in Resources */,
 				8942E2F5260D100700ADC7DB /* Poppins-SemiBold.ttf in Resources */,
 				BEC461D2255DABDA003C1D1A /* Assets.xcassets in Resources */,
 				8942E2E5260D0FD600ADC7DB /* Poppins-Bold.ttf in Resources */,
