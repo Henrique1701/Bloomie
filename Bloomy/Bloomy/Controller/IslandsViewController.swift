@@ -288,11 +288,11 @@ class IslandsViewController: UIViewController {
     }
     
     private func requestReviewIfPossible() {
-        let userDaysActivity = UserDefaults.standard.integer(forKey: DefaultsConstants.userDays.rawValue)
-        let didReviewPrompted = UserDefaults.standard.bool(forKey: DefaultsConstants.review.rawValue)
+        let userDaysActivity = UserDefaults.standard.integer(forKey: UserDefaultsKeys.userDaysOfActivation)
+        let didReviewPrompted = UserDefaults.standard.bool(forKey: UserDefaultsKeys.reviewPrompted)
         
         if (userDaysActivity == 3 && !didReviewPrompted) {
-            UserDefaults.standard.setValue(true, forKey: DefaultsConstants.review.rawValue)
+            UserDefaults.standard.setValue(true, forKey: UserDefaultsKeys.reviewPrompted)
     
             DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
                 self.presentFirstAlert()
