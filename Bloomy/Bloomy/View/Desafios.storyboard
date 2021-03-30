@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7UQ-yZ-4gm">
-    <device id="ipad10_2" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <device id="ipad9_7" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,17 +22,38 @@
             <objects>
                 <viewController storyboardIdentifier="DesafiosViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7UQ-yZ-4gm" customClass="DesafiosViewController" customModule="Bloomie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yFV-Ur-e8E">
-                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0U4-AW-goP">
-                                <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="garota_onboarding" translatesAutoresizingMaskIntoConstraints="NO" id="OBd-iC-H3b">
+                                        <rect key="frame" x="36" y="160" width="696" height="504"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Por enquanto você não tem nenhuma missão para concluir.  Que tal checar suas ilhas e tentar selecionar uma nova missão? (:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gtL-Qf-oAr">
+                                        <rect key="frame" x="38.5" y="680" width="691" height="205"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="cor_fundo"/>
+                                <constraints>
+                                    <constraint firstItem="gtL-Qf-oAr" firstAttribute="width" secondItem="0U4-AW-goP" secondAttribute="width" multiplier="0.9" id="MJq-kV-dep"/>
+                                    <constraint firstItem="OBd-iC-H3b" firstAttribute="width" secondItem="0U4-AW-goP" secondAttribute="width" multiplier="0.906173" id="SAL-cx-oFf"/>
+                                    <constraint firstItem="gtL-Qf-oAr" firstAttribute="centerX" secondItem="0U4-AW-goP" secondAttribute="centerX" id="bjj-ME-DCG"/>
+                                    <constraint firstItem="OBd-iC-H3b" firstAttribute="height" secondItem="0U4-AW-goP" secondAttribute="height" multiplier="0.492593" id="hU3-WH-qkC"/>
+                                    <constraint firstItem="OBd-iC-H3b" firstAttribute="centerY" secondItem="0U4-AW-goP" secondAttribute="centerY" constant="-100" id="l5X-C2-BBU"/>
+                                    <constraint firstItem="OBd-iC-H3b" firstAttribute="centerX" secondItem="0U4-AW-goP" secondAttribute="centerX" id="moX-vk-csS"/>
+                                    <constraint firstItem="gtL-Qf-oAr" firstAttribute="top" secondItem="OBd-iC-H3b" secondAttribute="bottom" constant="16" id="ywN-2v-bNX"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rl5-d1-Ucm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="gtL-Qf-oAr" firstAttribute="height" secondItem="0U4-AW-goP" secondAttribute="height" multiplier="0.2" id="DYj-Z4-ddC"/>
                             <constraint firstItem="0U4-AW-goP" firstAttribute="leading" secondItem="rl5-d1-Ucm" secondAttribute="leading" id="dlX-wb-1fD"/>
                             <constraint firstItem="0U4-AW-goP" firstAttribute="top" secondItem="yFV-Ur-e8E" secondAttribute="top" id="fp5-vv-aFz"/>
                             <constraint firstAttribute="bottom" secondItem="0U4-AW-goP" secondAttribute="bottom" id="mXI-mR-frF"/>
@@ -53,20 +75,20 @@
             <objects>
                 <viewController storyboardIdentifier="DesafiosDataViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lDG-oy-4Cv" customClass="DesafiosDataViewController" customModule="Bloomie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BNU-NM-852">
-                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="card_atencao_plena" translatesAutoresizingMaskIntoConstraints="NO" id="yEx-zk-WcM">
-                                <rect key="frame" x="81" y="173" width="648" height="842"/>
+                                <rect key="frame" x="77" y="164" width="614" height="798.5"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summary" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8fo-6q-5J7">
-                                <rect key="frame" x="113.5" y="540" width="583" height="356.5"/>
+                                <rect key="frame" x="107.5" y="512" width="553" height="338"/>
                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jck-jC-yjZ">
-                                <rect key="frame" x="223" y="930.5" width="364.5" height="64.5"/>
+                                <rect key="frame" x="211" y="881" width="346" height="61.5"/>
                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="18"/>
                                 <state key="normal" title="concluir" backgroundImage="botao_desafio_do_dia">
                                     <color key="titleColor" red="0.1450980392" green="0.1450980392" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
@@ -127,48 +149,15 @@
             </objects>
             <point key="canvasLocation" x="1357" y="143"/>
         </scene>
-        <!--Desafios Vazio View Controller-->
-        <scene sceneID="bcV-gz-vAt">
-            <objects>
-                <viewController storyboardIdentifier="DesafiosVazioViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9jV-6Q-TgE" customClass="DesafiosVazioViewController" customModule="Bloomie" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="DOf-DA-zWh">
-                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="garota_onboarding" translatesAutoresizingMaskIntoConstraints="NO" id="CeT-rM-Dyj">
-                                <rect key="frame" x="38" y="174" width="734" height="532"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Por enquanto você não tem nenhuma missão para concluir.  Que tal checar suas ilhas e tentar selecionar uma nova missão? (:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="DYn-Dy-BK6">
-                                <rect key="frame" x="20" y="738" width="770" height="247"/>
-                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="p2C-9o-yjn"/>
-                        <color key="backgroundColor" red="0.99188667539999997" green="0.96103912589999996" blue="0.94118171930000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <constraints>
-                            <constraint firstItem="CeT-rM-Dyj" firstAttribute="width" secondItem="p2C-9o-yjn" secondAttribute="width" multiplier="0.905797" id="3tE-vA-CRM"/>
-                            <constraint firstItem="CeT-rM-Dyj" firstAttribute="height" secondItem="p2C-9o-yjn" secondAttribute="height" multiplier="0.492665" id="8K5-Ou-cqY"/>
-                            <constraint firstItem="DYn-Dy-BK6" firstAttribute="top" secondItem="CeT-rM-Dyj" secondAttribute="bottom" constant="32" id="ImF-9Y-OCZ"/>
-                            <constraint firstItem="DYn-Dy-BK6" firstAttribute="height" secondItem="p2C-9o-yjn" secondAttribute="height" multiplier="0.288264" constant="-64.272088000000025" id="af8-z1-sZG"/>
-                            <constraint firstItem="DYn-Dy-BK6" firstAttribute="width" secondItem="p2C-9o-yjn" secondAttribute="width" constant="-40" id="akE-H3-0T5"/>
-                            <constraint firstItem="CeT-rM-Dyj" firstAttribute="centerY" secondItem="p2C-9o-yjn" secondAttribute="centerY" constant="-100" id="c7d-AQ-MjT"/>
-                            <constraint firstItem="DYn-Dy-BK6" firstAttribute="centerX" secondItem="DOf-DA-zWh" secondAttribute="centerX" id="dbB-7q-am5"/>
-                            <constraint firstItem="CeT-rM-Dyj" firstAttribute="centerX" secondItem="p2C-9o-yjn" secondAttribute="centerX" id="e09-KX-fue"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XxK-wK-0g1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2021.7391304347827" y="142.63392857142856"/>
-        </scene>
     </scenes>
     <resources>
         <image name="botao_desafio_do_dia" width="191" height="48"/>
         <image name="card_atencao_plena" width="532" height="844"/>
         <image name="garota_onboarding" width="375" height="403"/>
         <image name="icone_acao" width="30" height="30"/>
+        <namedColor name="cor_fundo">
+            <color red="0.99599999189376831" green="0.96100002527236938" blue="0.94499999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
