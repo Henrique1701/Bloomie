@@ -115,11 +115,13 @@ class EditIslandsViewController: UIViewController {
     
     private func setMindfulnessStatus(to status: Bool) {
         selectedMindfulness = status
-        selectedCount += 1
+        
         userDefaults.set(status, forKey: UserDefaultsKeys.selectedMindfulness)
         if (status) {
+            selectedCount += 1
             mindfulnessButton.setImage(UIImage(named: "botao_on_atencao_plena"), for: .normal)
         } else {
+            selectedCount -= 1
             mindfulnessButton.setImage(UIImage(named: "botao_atencao_plena"), for: .normal)
         }
     }
