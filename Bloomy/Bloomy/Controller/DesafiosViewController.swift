@@ -11,12 +11,20 @@ import CoreData
 class DesafiosViewController: UIViewController {
 
     // MARK: Outlets
+    // UIView que irá exibir a View do PageViewController
     @IBOutlet weak var contentView: UIView!
     
     // MARK: Variáveis Globais
+    // Identificar quais desafios foram aceitos
     var challenges:[Challenge] = []
+    
+    // Identificar o texto dos desafios aceitos
     var challengeSummaryDataSource:[String] = []
+    
+    // Imagem dos desafios
     var challengeImageDataSource: [UIImage] = []
+    
+    // Nome das ilhas
     var islandsNames: [String] = []
     
     var currentViewControllerIndex = 0
@@ -28,21 +36,26 @@ class DesafiosViewController: UIViewController {
         self.challengeImageDataSource = getChallengesIslandName()
         self.islandsNames = getIslandsNames()
         self.configurePageViewController()
+        self.setupNavigationController()
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        // Atualiza o Data Source
         challenges = getAcceptedChallenges()
         challengeSummaryDataSource = getChallengeSummary()
         challengeImageDataSource = getChallengesIslandName()
         self.islandsNames = getIslandsNames()
+        // Reseta o delegate do Data Source
         hideContentController()
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        // Atualiza o contéudo Page View Controller
         configurePageViewController()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
+        // Reseta o indice do PageViewController caso esteja na última página
         currentViewControllerIndex = 0
     }
     
@@ -55,6 +68,7 @@ class DesafiosViewController: UIViewController {
     }
 
     // MARK: Page View Controller
+    // Lógica de inicialização do PageViewController
     func configurePageViewController() {
         
         guard let pageViewController = storyboard?.instantiateViewController(withIdentifier: String(describing:DesafiosPageViewController.self)) as? DesafiosPageViewController else {
@@ -65,23 +79,29 @@ class DesafiosViewController: UIViewController {
             return
         }
         
+        // Protocolos
         pageViewController.delegate = self
         pageViewController.dataSource = self
         
         addChild(pageViewController)
         pageViewController.didMove(toParent:self)
         
+        // Mudar cor do background
         pageViewController.view.backgroundColor = #colorLiteral(red: 0.9938541055, green: 0.9598969817, blue: 0.9428560138, alpha: 1)
         
+        // Adiciona a view do Page View Controller ao contentView (uma UIView que funciona como um container para o Page View Controller neste View Controller)
         if (challenges.isEmpty) {
             contentView.addSubview(noChallengeViewController.view)
         } else {
             contentView.addSubview(pageViewController.view)
             
+            // Autolayout
             pageViewController.view.translatesAutoresizingMaskIntoConstraints = false
             
+            // Dicionário para facilitar na hora que for criar as constraints de AutoLayout
             let views: [String: Any] = ["pageView": pageViewController.view as Any]
             
+            // A view do Page View Controller inicia no mesmo ponto que a contentView, que é a view que o contém
             contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[pageView]-0-|",
                                                                       options: NSLayoutConstraint.FormatOptions(rawValue: 0),
                                                                       metrics: nil,
@@ -98,6 +118,7 @@ class DesafiosViewController: UIViewController {
         }
     }
     
+    // Cria uma nova página do PageViewController (que é um View Controller do tipo DesafiosDataViewController em um determinado índice
     func detailViewControllerAt(index: Int) -> DesafiosDataViewController? {
         // Garantir que o Page view controller não ultrapasse o limite de páginas
         if (index >= challengeSummaryDataSource.count || challengeSummaryDataSource.isEmpty) {
@@ -108,12 +129,15 @@ class DesafiosViewController: UIViewController {
             return nil
         }
         
+        // Define os atributos do DesafiosDataViewController
+        // O index é o valor passado como parâmetro
         dataViewController.index = index
         dataViewController.summaryText = challengeSummaryDataSource[index]
         dataViewController.cardImage
             = challengeImageDataSource[index]
         dataViewController.islandName = islandsNames[index]
         
+        // Verifica se é a última tela
         if index == challengeSummaryDataSource.count-1 {
             dataViewController.lastScreen = true
         } else {
@@ -124,6 +148,7 @@ class DesafiosViewController: UIViewController {
     }
     
     // MARK: Dados que serão usados nas páginas do Page View Controller
+    // Converte o nome da ilha para o nome da imagem do card correspondente à ilha
     var islandNameToImage: [String:String] = [
         "Atenção Plena": "card_atencao_plena",
         "Saúde": "card_saude",
@@ -131,6 +156,7 @@ class DesafiosViewController: UIViewController {
         "Lazer": "card_lazer"
     ]
     
+    // Retorna do Core Data quais são os challenges aceitos que ainda não foram concluídos
     func getAcceptedChallenges() -> [Challenge] {
         var acceptedChallenges: [Challenge] = []
         let islands = getSortedIslands(islands: UserManager.shared.getIslands()!)
@@ -162,6 +188,7 @@ class DesafiosViewController: UIViewController {
         return sortedIslands
     }
     
+    //Retorna o nome das ilhas
     func getIslandsNames() -> [String] {
         var islandsNames: [String] = []
         for challenge in challenges {
@@ -170,6 +197,7 @@ class DesafiosViewController: UIViewController {
         return islandsNames
     }
     
+    // Retorna o texto dos challenges
     func getChallengeSummary() -> [String] {
         var challengeSummary: [String] = []
         for challenge in challenges {
@@ -178,6 +206,7 @@ class DesafiosViewController: UIViewController {
         return challengeSummary
     }
     
+    // Retorna os nomes das imagens correspondente à ilha de cada challenge
     func getChallengesIslandName() -> [UIImage] {
         var challengeIslandName: [UIImage] = []
         for challenge in challenges {

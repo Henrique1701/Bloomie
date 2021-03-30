@@ -59,8 +59,8 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="customSize" width="327" height="118"/>
                                 <connections>
-                                    <outlet property="rewardImageView" destination="0Ad-4K-V4X" id="QUj-sp-BTB"/>
-                                    <outlet property="summaryLabel" destination="fpF-VK-eCr" id="F4x-WS-7JD"/>
+                                    <outlet property="rewardImageView" destination="0Ad-4K-V4X" id="Ra2-pK-2k3"/>
+                                    <outlet property="summaryLabel" destination="fpF-VK-eCr" id="CHO-HJ-hwA"/>
                                 </connections>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="q4H-K5-jZa">

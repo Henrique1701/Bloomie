@@ -1,13 +1,13 @@
 //
-//  DesafiosVazioViewController.swift
-//  Bloomy
+//  JornadaVaziaViewController.swift
+//  Bloomie
 //
-//  Created by Mayara Mendonça de Souza on 14/01/21.
+//  Created by Mayara Mendonça de Souza on 15/03/21.
 //
 
 import UIKit
 
-class DesafiosVazioViewController: UIViewController {
+class JornadaVazia: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -24,6 +24,8 @@ class EditIslandsViewController: UIViewController {
         super.viewDidLoad()
         
         self.title = "Editar ilhas"
+        self.setupNavigationController()
+        
         self.configureSelectedIslandButtons()
     }
     
@@ -32,6 +34,14 @@ class EditIslandsViewController: UIViewController {
         defaults.set(selectedCount, forKey: "quantityIslands")
 
         defaults.set(true, forKey: "islandsChange")
+    }
+    
+    func setupNavigationController() {
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.topItem?.title = ""
+        self.navigationController?.navigationBar.layoutIfNeeded()
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Poppins-Semibold", size: 18) ?? UIFont()]
     }
     
     @IBAction func tappedMindfulnessButton(_ sender: Any) {

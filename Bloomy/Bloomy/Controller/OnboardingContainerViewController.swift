@@ -15,35 +15,35 @@ class OnboardingContainerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.setRootView()
-        self.setupConstraints()
+        self.selectRootView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    super.viewDidAppear(animated)
         
-        callHome()
+        self.homeObserver = NotificationCenter.default.addObserver(forName: .callHome, object: nil, queue: OperationQueue.main) { _ in
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
+            //let homeVC = storyBoard.instantiateViewController(withIdentifier: "HomeTabBar")
+            //Todo: Tirar a notification
+            //self.present(homeVC, animated: false)
+            let storyboard = UIStoryboard(name: "Home", bundle: nil)
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let initialViewController = storyboard.instantiateInitialViewController()!
+            appDelegate.window!.rootViewController = initialViewController
+        }
     }
     
-    func setRootView() {
+    func selectRootView() {
         addChild(onboardingView)
         view.addSubview(onboardingView.view)
+        setupOnboardingViewConstraints()
     }
     
-    func setupConstraints() {
+    func setupOnboardingViewConstraints() {
         self.onboardingView.view.translatesAutoresizingMaskIntoConstraints = false
         self.onboardingView.view.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         self.onboardingView.view.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         self.onboardingView.view.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         self.onboardingView.view.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-    }
-    
-    private func callHome() {
-        self.homeObserver = NotificationCenter.default.addObserver(forName: .callHome, object: nil, queue: OperationQueue.main) { _ in
-            let homeStoryboard = UIStoryboard(name: "Home", bundle: nil)
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            let homeViewController = homeStoryboard.instantiateInitialViewController()!
-            appDelegate.window!.rootViewController = homeViewController
-        }
     }
 }

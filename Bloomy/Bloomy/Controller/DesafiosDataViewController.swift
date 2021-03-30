@@ -9,15 +9,21 @@ import UIKit
 
 class DesafiosDataViewController: UIViewController {
     
+    // Esse View Controller define como serão as páginas do PageViewController
+    
+    // MARK: Variáveis Globais
     var islandName: String?
+    
+    // Outlets
+    @IBOutlet weak var card: UIImageView!
+    @IBOutlet weak var summaryLabel: UILabel!
+    @IBOutlet weak var concluirButtonOutlet: UIButton!
+    
+    // Global variables
     var cardImage: UIImage!
     var summaryText: String!
     var index: Int?
     var lastScreen: Bool?
-    
-    @IBOutlet weak var card: UIImageView!
-    @IBOutlet weak var summaryLabel: UILabel!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +31,11 @@ class DesafiosDataViewController: UIViewController {
         card.image = cardImage
         card.clipsToBounds = true
         card.layer.cornerRadius = 20
+    }
+    
+    // Botão concluir missão
+    @IBAction func concluirButton(_ sender: Any) {
+        print("meu nome é \(islandName ?? "Sem nome")")
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

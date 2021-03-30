@@ -26,6 +26,7 @@
 	<array>
 		<string>Poppins-Bold.ttf</string>
 		<string>Poppins-Regular.ttf</string>
+		<string>Canela.ttc</string>
 		<string>Poppins-SemiBold.ttf</string>
 	</array>
 	<key>UIApplicationSupportsIndirectInputEvents</key>

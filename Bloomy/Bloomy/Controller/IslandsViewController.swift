@@ -56,11 +56,13 @@ class IslandsViewController: UIViewController {
             self.showRewardPopUp()
             self.loadViewIfNeeded()
         }
-
+        
+        // Espera uma notificação para ativar animação da recompensa
         animationObserver = NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "animationObserver"), object: nil, queue: OperationQueue.main) { _ in
             self.rewardAnimation()
         }
         
+        // Exibe o popup de concluir quando chamado por DesafiosDataViewController
         if (senderWasDesafios) {
             self.performSegue(withIdentifier: "toDonePopUpViewControllerSegue" , sender: self)
             self.senderWasDesafios = false
@@ -124,10 +126,19 @@ class IslandsViewController: UIViewController {
         _ = IslandManager.shared.saveContext()
     }
     
+    func setupNavigationController() {
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.topItem?.title = ""
+        self.navigationController?.navigationBar.layoutIfNeeded()
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Poppins-Semibold", size: 18) ?? UIFont()]
+    }
+    
     func setupSKScene() {
         let islandView = SKView(frame: CGRect(x: self.view.center.x-(366/2), y: self.view.center.y-(364/2), width: 366, height: 364))
         islandView.backgroundColor = .black
         
+        // Configura gestos
         let pinch = UIPinchGestureRecognizer(target: self, action: #selector(handlePinch(sender:)))
         islandView.addGestureRecognizer(pinch)
         
@@ -153,8 +164,11 @@ class IslandsViewController: UIViewController {
     
     func setupStyle() {
         self.title = island.name
+        // Ajusta o tamaho do titulo do botão
         self.challengeDayButton.titleLabel?.adjustsFontSizeToFitWidth = true
         self.doneButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        // Configura a navigation controller
+        setupNavigationController()
     }
     
     func chooseButtonToShow() {
@@ -281,6 +295,7 @@ class IslandsViewController: UIViewController {
         alert.addAction(noButton)
         alert.preferredAction = sendButton
         self.present(alert, animated: true, completion: nil)
+        print(alert.textFields![0])
     }
     
     private func requestReviewIfPossible() {
@@ -337,10 +352,13 @@ class IslandsViewController: UIViewController {
             
         }
         if  sender.state == .began || sender.state == .changed {
+            //  Precisei multiplicar o translation.x e translation.y para acelerar movimentação da view
+            // quando o usuário dar zoom
             let translationX = translation.x * (sender.view?.frame.width)!/self.originalFrameFromIsland.width
             let translationY = translation.y * (sender.view?.frame.width)!/self.originalFrameFromIsland.width
             view.center = CGPoint(x: view.center.x + translationX, y: view.center.y + translationY)
             sender.setTranslation(CGPoint.zero, in: sender.view)
+            
         }
     }
 }

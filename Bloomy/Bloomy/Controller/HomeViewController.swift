@@ -43,6 +43,8 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //self.hideIsland()
+        
         MusicPlayer.shared.startBackgroundMusic(backgroundMusicFileName: "background")
         
         quantityIslands = defaults.integer(forKey: "quantityIslands")
@@ -358,6 +360,7 @@ extension HomeViewController {
             self.healthLeftButton.isEnabled = false
             self.healthLeftButton.alpha = 0
         case "leisure":
+            print("Entrou no lazer direito")
             self.leisureStackView.isHidden = false
             self.leisureRightButton.isHidden = false
             self.leisureLeftButton.isHidden = false
@@ -376,7 +379,7 @@ extension HomeViewController {
             self.lovedsLeftButton.isEnabled = false
             self.lovedsLeftButton.alpha = 0
         default:
-            fatalError("Caso não existente")
+            print("Entrou no caso default")
         }
     }
     
@@ -389,6 +392,7 @@ extension HomeViewController {
             self.healthRightButton.isEnabled = false
             self.healthRightButton.alpha = 0
         case "leisure":
+            print("Entro no lazer esquerdo")
             self.leisureStackView.isHidden = false
             self.leisureRightButton.isHidden = false
             self.leisureLeftButton.isHidden = false
@@ -407,7 +411,7 @@ extension HomeViewController {
             self.lovedsRightButton.isEnabled = false
             self.lovedsRightButton.alpha = 0
         default:
-            fatalError("Caso não existente")
+            print("Entrou no caso default")
         }
     }
     
