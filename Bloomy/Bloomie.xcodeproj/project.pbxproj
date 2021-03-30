@@ -124,7 +124,7 @@
 		BEC461D4255DABDA003C1D1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BEC461D6255DABDA003C1D1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BED0527B2576B8940035EB18 /* Islands.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Islands.storyboard; sourceTree = "<group>"; };
-		BED1C398260D2BF300912AAC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BED1C398260D2BF300912AAC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BEDD7A4925630ADF005BA4F9 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		BEF24E522566C24800D408A8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D0D36FBF4832F02F88C6F5BD /* Pods-Bloomie-BloomieUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bloomie-BloomieUITests.release.xcconfig"; path = "Target Support Files/Pods-Bloomie-BloomieUITests/Pods-Bloomie-BloomieUITests.release.xcconfig"; sourceTree = "<group>"; };
