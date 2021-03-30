@@ -22,7 +22,7 @@ class MusicPlayer {
                 audioPlayer.numberOfLoops = -1
                 backgroundAudioPlayer?.volume = 0.5
                 
-                let stateSoundsSwitch = UserDefaults.standard.bool(forKey: "stateSoundsSwitch")
+                let stateSoundsSwitch = UserDefaults.standard.bool(forKey: UserDefaultsKeys.stateSoundsSwitch)
                 if stateSoundsSwitch {
                     audioPlayer.play()
                 }
