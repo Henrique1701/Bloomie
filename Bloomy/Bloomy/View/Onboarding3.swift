@@ -57,16 +57,15 @@ struct Onboarding3: View {
     
     func setIslansInUserDefaults() {
         // Adiciona quantidade de ilhas selecionadas ao user default
-        defaults.set(self.selectedCount, forKey: "quantityIslands")
+        defaults.set(self.selectedCount, forKey: UserDefaultsKeys.quantityIslands)
         
         // Configura ilhas selecionadas no user default
-        defaults.set(self.isMindfulnessSelected, forKey: "selectedMindfulness")
-        defaults.set(self.isLeisureSelected, forKey: "selectedLeisure")
-        defaults.set(self.isHealthSelected, forKey: "selectedHealth")
-        defaults.set(self.isLovedsSelected, forKey: "selectedLoveds")
+        defaults.set(self.isMindfulnessSelected, forKey: UserDefaultsKeys.selectedMindfulness)
+        defaults.set(self.isLeisureSelected, forKey: UserDefaultsKeys.selectedLeisure)
+        defaults.set(self.isHealthSelected, forKey: UserDefaultsKeys.selectedHealth)
+        defaults.set(self.isLovedsSelected, forKey: UserDefaultsKeys.selectedLoveds)
     }
 
-    
     var body: some View {
         
         GeometryReader { geometry in
@@ -178,7 +177,7 @@ struct Onboarding3: View {
                     Button(action: {
                         self.createIslands()
                         self.setIslansInUserDefaults()
-                        self.defaults.set(true, forKey: DefaultsConstants.auxiliarToRootWindow.rawValue)
+                        self.defaults.set(true, forKey: UserDefaultsKeys.userSelectedIslands)
                         //Chama o storyboard
                         NotificationCenter.default.post(name: Notification.Name("callHome"), object: nil)
                     }) {
