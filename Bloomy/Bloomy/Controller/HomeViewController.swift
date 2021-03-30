@@ -45,7 +45,7 @@ class HomeViewController: UIViewController {
         
         MusicPlayer.shared.startBackgroundMusic(backgroundMusicFileName: "background")
         
-        quantityIslands = defaults.integer(forKey: "quantityIslands")
+        quantityIslands = defaults.integer(forKey: UserDefaultsKeys.quantityIslands)
         setUpIslandsDisplay(quantityIslands: self.quantityIslands)
         
         //Escolher os challenges depois do onboarding
@@ -70,8 +70,8 @@ class HomeViewController: UIViewController {
         // Inicia a animação das nuvens
         self.moveCloudsToRight()
         
-        if defaults.bool(forKey: "islandsChange") {
-            defaults.set(false, forKey: "islandsChange")
+        if defaults.bool(forKey: UserDefaultsKeys.islandsChange) {
+            defaults.set(false, forKey: UserDefaultsKeys.islandsChange)
             self.updateIslandsView()
         }
     }
@@ -155,9 +155,9 @@ class HomeViewController: UIViewController {
     }
     
     private func daysOfUserActivation() {
-        var daysOfUserActivation = defaults.integer(forKey: DefaultsConstants.userDays.rawValue)
+        var daysOfUserActivation = defaults.integer(forKey: UserDefaultsKeys.userDaysOfActivation)
         daysOfUserActivation += 1
-        defaults.set(daysOfUserActivation, forKey: DefaultsConstants.userDays.rawValue)
+        defaults.set(daysOfUserActivation, forKey: UserDefaultsKeys.userDaysOfActivation)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -228,7 +228,7 @@ extension HomeViewController {
         DispatchQueue.main.async {
             self.hideIsland()
             self.enableIslandButtons()
-            self.quantityIslands = self.defaults.integer(forKey: "quantityIslands")
+            self.quantityIslands = self.defaults.integer(forKey: UserDefaultsKeys.quantityIslands)
             self.setUpIslandsDisplay(quantityIslands: self.quantityIslands)
         }
     }
@@ -249,16 +249,16 @@ extension HomeViewController {
     }
     
     func setUpDisplayOneIsland() {
-        if defaults.bool(forKey: "selectedMindfulness") {
+        if defaults.bool(forKey: UserDefaultsKeys.selectedMindfulness) {
             mindfulnessStackView.isHidden = false
             mindfulnessRightButton.isHidden = false
-        } else if defaults.bool(forKey: "selectedLeisure") {
+        } else if defaults.bool(forKey: UserDefaultsKeys.selectedLeisure) {
             leisureStackView.isHidden = false
             leisureRightButton.isHidden = false
-        } else if defaults.bool(forKey: "selectedHealth") {
+        } else if defaults.bool(forKey: UserDefaultsKeys.selectedHealth) {
             healthStackView.isHidden = false
             healthRightButton.isHidden = false
-        } else if defaults.bool(forKey: "selectedLoveds") {
+        } else if defaults.bool(forKey: UserDefaultsKeys.selectedLoveds) {
             lovedsStackView.isHidden = false
             lovedsRightButton.isHidden = false
         } else {
@@ -268,29 +268,29 @@ extension HomeViewController {
     }
     
     func setUpDisplayTwoIsland() {
-        if defaults.bool(forKey: "selectedMindfulness") {
+        if defaults.bool(forKey: UserDefaultsKeys.selectedMindfulness) {
             mindfulnessStackView.isHidden = false
             mindfulnessRightButton.isHidden = false
         }
-        if defaults.bool(forKey: "selectedLeisure") {
+        if defaults.bool(forKey: UserDefaultsKeys.selectedLeisure) {
             leisureStackView.isHidden = false
             leisureRightButton.isHidden = false
         }
-        if defaults.bool(forKey: "selectedHealth") {
+        if defaults.bool(forKey: UserDefaultsKeys.selectedHealth) {
             healthStackView.isHidden = false
             healthRightButton.isHidden = false
         }
-        if defaults.bool(forKey: "selectedLoveds") {
+        if defaults.bool(forKey: UserDefaultsKeys.selectedLoveds) {
             lovedsStackView.isHidden = false
             lovedsRightButton.isHidden = false
         }
     }
     
     func setUpDisplayThreeIsland() {
-        var selectedMindfulness = defaults.bool(forKey: "selectedMindfulness")
-        var selectedLoveds = defaults.bool(forKey: "selectedLoveds")
-        var selectedLeisure = defaults.bool(forKey: "selectedLeisure")
-        var selectedHealth = defaults.bool(forKey: "selectedHealth")
+        var selectedMindfulness = defaults.bool(forKey: UserDefaultsKeys.selectedMindfulness)
+        var selectedLoveds = defaults.bool(forKey: UserDefaultsKeys.selectedLoveds)
+        var selectedLeisure = defaults.bool(forKey: UserDefaultsKeys.selectedLeisure)
+        var selectedHealth = defaults.bool(forKey: UserDefaultsKeys.selectedHealth)
         
         for index in 1...3 {
             if index%2 == 0 {
