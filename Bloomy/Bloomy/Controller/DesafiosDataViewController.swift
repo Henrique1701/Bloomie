@@ -17,8 +17,7 @@ class DesafiosDataViewController: UIViewController {
     
     @IBOutlet weak var card: UIImageView!
     @IBOutlet weak var summaryLabel: UILabel!
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         summaryLabel.text = summaryText
