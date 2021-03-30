@@ -37,3 +37,51 @@ enum DefaultsConstants: String {
     case userDays = "userDaysOfActivation"
     case review = "reviewPrompted"
 }
+
+class UserDefaultsKeys {
+    
+    class var userSelectedIslands: String {
+        return "userSelectedIslands"
+    }
+    
+    class var userDaysOfActivation: String {
+        return "userDaysOfActivation"
+    }
+    
+    class var reviewPrompted: String {
+        return "reviewPrompted"
+    }
+    
+    class var quantityIslands: String {
+        return "quantityIslands"
+    }
+    
+    class var stateSoundsSwitch: String {
+        return "stateSoundsSwitch"
+    }
+    
+    class var selectedMindfulness: String {
+        return "selectedMindfulness"
+    }
+    
+    class var selectedLeisure: String {
+        return "selectedLeisure"
+    }
+    
+    class var selectedHealth: String {
+        return "selectedHealth"
+    }
+    
+    class var selectedLoveds: String {
+        return "selectedLoveds"
+    }
+    
+    class var islandsChange: String {
+        return "islandsChange"
+    }
+    
+    class var dateWasAccepted: String {
+        return "dateWasAccepted"
+    }
+    
+}
