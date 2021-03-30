@@ -56,13 +56,11 @@ class IslandsViewController: UIViewController {
             self.showRewardPopUp()
             self.loadViewIfNeeded()
         }
-        
-        // Espera uma notificação para ativar animação da recompensa
+
         animationObserver = NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "animationObserver"), object: nil, queue: OperationQueue.main) { _ in
             self.rewardAnimation()
         }
         
-        // Exibe o popup de concluir quando chamado por DesafiosDataViewController
         if (senderWasDesafios) {
             self.performSegue(withIdentifier: "toDonePopUpViewControllerSegue" , sender: self)
             self.senderWasDesafios = false
@@ -130,7 +128,6 @@ class IslandsViewController: UIViewController {
         let islandView = SKView(frame: CGRect(x: self.view.center.x-(366/2), y: self.view.center.y-(364/2), width: 366, height: 364))
         islandView.backgroundColor = .black
         
-        // Configura gestos
         let pinch = UIPinchGestureRecognizer(target: self, action: #selector(handlePinch(sender:)))
         islandView.addGestureRecognizer(pinch)
         
@@ -156,7 +153,6 @@ class IslandsViewController: UIViewController {
     
     func setupStyle() {
         self.title = island.name
-        // Ajusta o tamaho do titulo do botão
         self.challengeDayButton.titleLabel?.adjustsFontSizeToFitWidth = true
         self.doneButton.titleLabel?.adjustsFontSizeToFitWidth = true
     }
@@ -341,13 +337,10 @@ class IslandsViewController: UIViewController {
             
         }
         if  sender.state == .began || sender.state == .changed {
-            //  Precisei multiplicar o translation.x e translation.y para acelerar movimentação da view
-            // quando o usuário dar zoom
             let translationX = translation.x * (sender.view?.frame.width)!/self.originalFrameFromIsland.width
             let translationY = translation.y * (sender.view?.frame.width)!/self.originalFrameFromIsland.width
             view.center = CGPoint(x: view.center.x + translationX, y: view.center.y + translationY)
             sender.setTranslation(CGPoint.zero, in: sender.view)
-            
         }
     }
 }

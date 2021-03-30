@@ -309,8 +309,8 @@
 				7DAA427D25A8D0DD00C1CFF5 /* DesafiosDataViewController.swift */,
 				BE4BE74A25A78556002AB66E /* EditIslandsViewController.swift */,
 				89A9F33125F17EC8000DAF39 /* OnboardingContainerViewController.swift */,
-				89566A552581A8FE00784DF3 /* Intents.intentdefinition */,
 				8915339925B8A35700DB7FE8 /* JourneyCollectionViewController.swift */,
+				89566A552581A8FE00784DF3 /* Intents.intentdefinition */,
 				89249D3E257E9F2F002747A3 /* PopUps */,
 			);
 			path = Controller;

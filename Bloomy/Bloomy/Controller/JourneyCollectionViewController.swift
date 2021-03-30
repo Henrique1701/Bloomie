@@ -56,7 +56,7 @@ class JourneyCollectionViewController: UICollectionViewController {
         let rewardID = doneChallenges[indexPath.row].reward?.id
         let image = UIImage(named: rewardID!)
         let summary = doneChallenges[indexPath.row].summary
-        // Configura a data
+    
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-MM-yyyy"
         let dateString = dateFormatter.string(from: doneChallenges[indexPath.row].time!)
