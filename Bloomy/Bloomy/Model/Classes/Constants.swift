@@ -8,6 +8,8 @@
 import UIKit
 import CoreData
 
+let userDefaults = UserDefaults.standard
+
 let coreDataContext: NSManagedObjectContext = {
     guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
         fatalError("")

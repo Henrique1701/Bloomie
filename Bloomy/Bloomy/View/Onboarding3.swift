@@ -19,8 +19,6 @@ struct Onboarding3: View {
     // Gerenciadores das funções CRUD de Ilha e Usuário
     let user = UserManager()
     let island = IslandManager()
-    // User default
-    let defaults = UserDefaults.standard
     
     func increaseOrDiacreaseCount(forStatus: Bool) {
         if (forStatus) {
@@ -57,13 +55,13 @@ struct Onboarding3: View {
     
     func setIslansInUserDefaults() {
         // Adiciona quantidade de ilhas selecionadas ao user default
-        defaults.set(self.selectedCount, forKey: UserDefaultsKeys.quantityIslands)
+        userDefaults.set(self.selectedCount, forKey: UserDefaultsKeys.quantityIslands)
         
         // Configura ilhas selecionadas no user default
-        defaults.set(self.isMindfulnessSelected, forKey: UserDefaultsKeys.selectedMindfulness)
-        defaults.set(self.isLeisureSelected, forKey: UserDefaultsKeys.selectedLeisure)
-        defaults.set(self.isHealthSelected, forKey: UserDefaultsKeys.selectedHealth)
-        defaults.set(self.isLovedsSelected, forKey: UserDefaultsKeys.selectedLoveds)
+        userDefaults.set(self.isMindfulnessSelected, forKey: UserDefaultsKeys.selectedMindfulness)
+        userDefaults.set(self.isLeisureSelected, forKey: UserDefaultsKeys.selectedLeisure)
+        userDefaults.set(self.isHealthSelected, forKey: UserDefaultsKeys.selectedHealth)
+        userDefaults.set(self.isLovedsSelected, forKey: UserDefaultsKeys.selectedLoveds)
     }
 
     var body: some View {
@@ -177,7 +175,7 @@ struct Onboarding3: View {
                     Button(action: {
                         self.createIslands()
                         self.setIslansInUserDefaults()
-                        self.defaults.set(true, forKey: UserDefaultsKeys.userSelectedIslands)
+                        userDefaults.set(true, forKey: UserDefaultsKeys.userSelectedIslands)
                         //Chama o storyboard
                         NotificationCenter.default.post(name: Notification.Name("callHome"), object: nil)
                     }) {

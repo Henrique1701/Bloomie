@@ -18,7 +18,6 @@ class EditIslandsViewController: UIViewController {
     var selectefLeisure: Bool = false
     var selectedHealth: Bool = false
     var selectedCount: Int = 0
-    let defaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,9 +28,9 @@ class EditIslandsViewController: UIViewController {
     
     override func viewDidDisappear(_ animated: Bool) {
         // Salva no User Default a quantidade de ilhas selecionadas
-        defaults.set(selectedCount, forKey: UserDefaultsKeys.quantityIslands)
+        userDefaults.set(selectedCount, forKey: UserDefaultsKeys.quantityIslands)
 
-        defaults.set(true, forKey: UserDefaultsKeys.islandsChange)
+        userDefaults.set(true, forKey: UserDefaultsKeys.islandsChange)
     }
     
     @IBAction func tappedMindfulnessButton(_ sender: Any) {
@@ -67,16 +66,16 @@ class EditIslandsViewController: UIViewController {
     }
     
     func configureSelectedIslandButtons() {
-        if defaults.bool(forKey: UserDefaultsKeys.selectedMindfulness) == true {
+        if userDefaults.bool(forKey: UserDefaultsKeys.selectedMindfulness) == true {
             changeStateButtons(islandName: "mindfulness", selected: true)
         }
-        if defaults.bool(forKey: UserDefaultsKeys.selectedLoveds) == true {
+        if userDefaults.bool(forKey: UserDefaultsKeys.selectedLoveds) == true {
             changeStateButtons(islandName: "loveds", selected: true)
         }
-        if defaults.bool(forKey: UserDefaultsKeys.selectedLeisure) == true {
+        if userDefaults.bool(forKey: UserDefaultsKeys.selectedLeisure) == true {
             changeStateButtons(islandName: "leisure", selected: true)
         }
-        if defaults.bool(forKey: UserDefaultsKeys.selectedHealth) == true {
+        if userDefaults.bool(forKey: UserDefaultsKeys.selectedHealth) == true {
             changeStateButtons(islandName: "health", selected: true)
         }
     }
@@ -88,48 +87,48 @@ class EditIslandsViewController: UIViewController {
                 selectedMindfulness = true
                 mindfulnessButton.setImage(UIImage(named: "botao_on_atencao_plena"), for: .normal)
                 selectedCount += 1
-                defaults.set(true, forKey: UserDefaultsKeys.selectedMindfulness)
+                userDefaults.set(true, forKey: UserDefaultsKeys.selectedMindfulness)
             } else {
                 selectedMindfulness = false
                 mindfulnessButton.setImage(UIImage(named: "botao_atencao_plena"), for: .normal)
                 selectedCount -= 1
-                defaults.set(false, forKey: UserDefaultsKeys.selectedMindfulness)
+                userDefaults.set(false, forKey: UserDefaultsKeys.selectedMindfulness)
             }
         case "loveds":
             if selected == true {
                 selectedLoveds = true
                 lovedsButton.setImage(UIImage(named: "botao_on_pessoas_queridas"), for: .normal)
                 selectedCount += 1
-                defaults.set(true, forKey: UserDefaultsKeys.selectedLoveds)
+                userDefaults.set(true, forKey: UserDefaultsKeys.selectedLoveds)
             } else {
                 selectedLoveds = false
                 lovedsButton.setImage(UIImage(named: "botao_pessoas_queridas"), for: .normal)
                 selectedCount -= 1
-                defaults.set(false, forKey: UserDefaultsKeys.selectedLoveds)
+                userDefaults.set(false, forKey: UserDefaultsKeys.selectedLoveds)
             }
         case "leisure":
             if selected == true {
                 selectefLeisure = true
                 leisureButton.setImage(UIImage(named: "botao_on_lazer"), for: .normal)
                 selectedCount += 1
-                defaults.set(true, forKey: UserDefaultsKeys.selectedLeisure)
+                userDefaults.set(true, forKey: UserDefaultsKeys.selectedLeisure)
             } else {
                 selectefLeisure = false
                 leisureButton.setImage(UIImage(named: "botao_lazer"), for: .normal)
                 selectedCount -= 1
-                defaults.set(false, forKey: UserDefaultsKeys.selectedLeisure)
+                userDefaults.set(false, forKey: UserDefaultsKeys.selectedLeisure)
             }
         default: // "health"
             if selected == true {
                 selectedHealth = true
                 healthButton.setImage(UIImage(named: "botao_on_saude"), for: .normal)
                 selectedCount += 1
-                defaults.set(true, forKey: UserDefaultsKeys.selectedHealth)
+                userDefaults.set(true, forKey: UserDefaultsKeys.selectedHealth)
             } else {
                 selectedHealth = false
                 healthButton.setImage(UIImage(named: "botao_saude"), for: .normal)
                 selectedCount -= 1
-                defaults.set(false, forKey: UserDefaultsKeys.selectedHealth)
+                userDefaults.set(false, forKey: UserDefaultsKeys.selectedHealth)
             }
         }
     }

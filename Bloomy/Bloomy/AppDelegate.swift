@@ -12,7 +12,6 @@ import Firebase
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
-    let defaults = UserDefaults.standard
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -35,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.makeKeyAndVisible()
         
-        let didUserSelectedIslands = self.defaults.bool(forKey: UserDefaultsKeys.userSelectedIslands)
+        let didUserSelectedIslands = userDefaults.bool(forKey: UserDefaultsKeys.userSelectedIslands)
         
         if (UserManager.shared.getUser() == nil || !didUserSelectedIslands) {
             self.window?.rootViewController = OnboardingContainerViewController()

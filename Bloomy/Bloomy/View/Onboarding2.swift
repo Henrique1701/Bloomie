@@ -20,7 +20,7 @@ struct Onboarding2: View {
         } else {
             _ = UserManager.shared.newUser(withName: userName)
         }
-        UserDefaults.standard.set(0, forKey: UserDefaultsKeys.userDaysOfActivation)
+        userDefaults.set(0, forKey: UserDefaultsKeys.userDaysOfActivation)
     }
     
     var body: some View {

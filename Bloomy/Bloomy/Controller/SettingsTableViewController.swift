@@ -21,14 +21,14 @@ public class SettingsTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
         // Altera o estado do switch
-        let stateSoundsSwitch = UserDefaults.standard.bool(forKey: UserDefaultsKeys.stateSoundsSwitch)
+        let stateSoundsSwitch = userDefaults.bool(forKey: UserDefaultsKeys.stateSoundsSwitch)
         self.soundsSwitch.setOn(stateSoundsSwitch, animated: true)
 
     }
 
     @IBAction func touchedSoundsSwitch(_ sender: Any) {
         let stateSoundsSwitch = self.soundsSwitch.isOn
-        UserDefaults.standard.set(stateSoundsSwitch, forKey: UserDefaultsKeys.stateSoundsSwitch)
+        userDefaults.set(stateSoundsSwitch, forKey: UserDefaultsKeys.stateSoundsSwitch)
         MusicPlayer.shared.changeStatePlayer(state: stateSoundsSwitch)
     }
     // MARK: - Table view data source
