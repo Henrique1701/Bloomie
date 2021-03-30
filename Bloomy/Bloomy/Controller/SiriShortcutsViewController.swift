@@ -8,58 +8,30 @@
 import UIKit
 import IntentsUI
 
-class SiriShortcutsViewController: UIViewController{
-
+class SiriShortcutsViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = "Atalhos da Siri"
-        self.setupNavigationController()
+        self.setupSiriButton()
     }
     
-    func setupNavigationController() {
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.topItem?.title = ""
-        self.navigationController?.navigationBar.layoutIfNeeded()
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Poppins-Semibold", size: 18) ?? UIFont()]
+    func setupSiriButton() {
         
         if #available(iOS 12.0, *) {
             let button = INUIAddVoiceShortcutButton(style: .whiteOutline)
-                button.shortcut = INShortcut(intent: intent )
-                button.delegate = self
-                button.translatesAutoresizingMaskIntoConstraints = false
-                view.addSubview(button)
-                view.centerXAnchor.constraint(equalTo: button.centerXAnchor).isActive = true
-                view.centerYAnchor.constraint(equalTo: button.centerYAnchor).isActive = true
-                
-            }
+            button.shortcut = INShortcut(intent: intent )
+            button.delegate = self
+            button.translatesAutoresizingMaskIntoConstraints = false
+            view.addSubview(button)
+            view.centerXAnchor.constraint(equalTo: button.centerXAnchor).isActive = true
+            view.centerYAnchor.constraint(equalTo: button.centerYAnchor).isActive = true
+        }
     }
-    
-//    func addSiriButton(to view: UIView) {
-//    if #available(iOS 12.0, *) {
-//        let button = INUIAddVoiceShortcutButton(style: .whiteOutline)
-//            button.shortcut = INShortcut(intent: intent )
-//            button.delegate = self
-//            button.translatesAutoresizingMaskIntoConstraints = false
-//            view.addSubview(button)
-//            view.centerXAnchor.constraint(equalTo: button.centerXAnchor).isActive = true
-//            view.centerYAnchor.constraint(equalTo: button.centerYAnchor).isActive = true
-//        }
-//    
-//    }
-    
-    /*
-    func showMessage() {
-        let alert = UIAlertController(title: "Done!", message: "This is your first shortcut action!", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
-    }
-    */
-
 }
 
- extension SiriShortcutsViewController {
+extension SiriShortcutsViewController {
     @available(iOS 12.0, *)
     public var intent: DoSomethingIntent {
         let testIntent = DoSomethingIntent()
@@ -113,5 +85,5 @@ extension SiriShortcutsViewController: INUIEditVoiceShortcutViewControllerDelega
     func editVoiceShortcutViewControllerDidCancel(_ controller: INUIEditVoiceShortcutViewController) {
         controller.dismiss(animated: true, completion: nil)
     }
-
+    
 }

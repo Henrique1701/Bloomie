@@ -20,7 +20,6 @@ class UserViewController: UIViewController {
         super.viewDidLoad()
 
         self.userNameLabel.text = UserManager.shared.getUserName()
-        self.setupNavigationController()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -74,14 +73,6 @@ class UserViewController: UIViewController {
         }
     }
     
-    func setupNavigationController() {
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.topItem?.title = ""
-        self.navigationController?.navigationBar.layoutIfNeeded()
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Poppins-Semibold", size: 18) ?? UIFont()]
-    }
-    
     func buttonsToShow() {
         if (defaults.bool(forKey: "selectedHealth")) {
             self.healthButton.alpha = 1
@@ -113,9 +104,7 @@ class UserViewController: UIViewController {
         var index = 0
         var control = 0
         while(index < buttons.count) {
-            print(buttons[index].alpha)
             if buttons[index].alpha != 1 {
-                print(" Entrou")
                 let viewRemove = self.stackView.arrangedSubviews[index]
                 self.stackView.removeArrangedSubview(viewRemove)
                 self.stackView.addArrangedSubview(viewRemove)
