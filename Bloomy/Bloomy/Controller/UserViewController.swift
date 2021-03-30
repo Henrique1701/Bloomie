@@ -14,7 +14,6 @@ class UserViewController: UIViewController {
     @IBOutlet var mindfulnessButton: UIButton!
     @IBOutlet var lovedsButton: UIButton!
     @IBOutlet weak var stackView: UIStackView!
-    let defaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +41,7 @@ class UserViewController: UIViewController {
     }
     
     @IBAction func touchedHealthButton(_ sender: Any) {
-        if defaults.bool(forKey: "selectedHealth") {
+        if userDefaults.bool(forKey: UserDefaultsKeys.selectedHealth) {
             showJourney(islandName: IslandsNames.health.rawValue)
         } else {
             showAlert(islandName: "saúde")
@@ -50,7 +49,7 @@ class UserViewController: UIViewController {
     }
     
     @IBAction func touchedLeisureButton(_ sender: Any) {
-        if defaults.bool(forKey: "selectedLeisure") {
+        if userDefaults.bool(forKey: UserDefaultsKeys.selectedLeisure) {
             showJourney(islandName: IslandsNames.leisure.rawValue)
         } else {
             showAlert(islandName: "lazer")
@@ -58,7 +57,7 @@ class UserViewController: UIViewController {
     }
     
     @IBAction func touchedMindfulnessButton(_ sender: Any) {
-        if defaults.bool(forKey: "selectedMindfulness") {
+        if userDefaults.bool(forKey: UserDefaultsKeys.selectedMindfulness) {
             showJourney(islandName: IslandsNames.mindfulness.rawValue)
         } else {
             showAlert(islandName: "atenção plena")
@@ -66,7 +65,7 @@ class UserViewController: UIViewController {
     }
     
     @IBAction func touchedLovedButton(_ sender: Any) {
-        if defaults.bool(forKey: "selectedLoveds") {
+        if userDefaults.bool(forKey: UserDefaultsKeys.selectedLoveds) {
             showJourney(islandName: IslandsNames.loveds.rawValue)
         } else {
             showAlert(islandName: "pessoas queridas")
@@ -74,25 +73,25 @@ class UserViewController: UIViewController {
     }
     
     func buttonsToShow() {
-        if (defaults.bool(forKey: "selectedHealth")) {
+        if (userDefaults.bool(forKey: UserDefaultsKeys.selectedHealth)) {
             self.healthButton.alpha = 1
         } else {
             self.healthButton.alpha = 0.6
         }
         
-        if (defaults.bool(forKey: "selectedLeisure")) {
+        if (userDefaults.bool(forKey: UserDefaultsKeys.selectedLeisure)) {
             self.leisureButton.alpha = 1
         } else {
             self.leisureButton.alpha = 0.6
         }
         
-        if (defaults.bool(forKey: "selectedMindfulness")) {
+        if (userDefaults.bool(forKey: UserDefaultsKeys.selectedMindfulness)) {
             self.mindfulnessButton.alpha = 1
         } else {
             self.mindfulnessButton.alpha = 0.6
         }
         
-        if (defaults.bool(forKey: "selectedLoveds")) {
+        if (userDefaults.bool(forKey: UserDefaultsKeys.selectedLoveds)) {
             self.lovedsButton.alpha = 1
         } else {
             self.lovedsButton.alpha = 0.6

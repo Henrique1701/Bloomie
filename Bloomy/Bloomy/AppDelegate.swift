@@ -24,7 +24,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          * Conecta o Firebase quando o app for inicializado
          * Descomentar a linha a baixo para enviar informações para o Firebase
          */
-        
         //FirebaseApp.configure()
         
         return true
@@ -89,8 +88,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - Window auxiliars
     
     private func setInitalViewController() {
-        let defaults = UserDefaults.standard
-        let didUserSelectedIslands = defaults.bool(forKey: DefaultsConstants.auxiliarToRootWindow.rawValue)
+        let didUserSelectedIslands = userDefaults.bool(forKey: UserDefaultsKeys.userSelectedIslands)
         
         if (UserManager.shared.getUser() == nil || !didUserSelectedIslands) {
             self.window?.rootViewController = OnboardingContainerViewController()

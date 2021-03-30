@@ -18,7 +18,6 @@ struct Onboarding3: View {
     
     let user = UserManager()
     let island = IslandManager()
-    let defaults = UserDefaults.standard
     
     func increaseOrDiacreaseCount(forStatus: Bool) {
         if (forStatus) {
@@ -53,15 +52,13 @@ struct Onboarding3: View {
     }
     
     func setIslansInUserDefaults() {
-        defaults.set(self.selectedCount, forKey: "quantityIslands")
-        
-        defaults.set(self.isMindfulnessSelected, forKey: "selectedMindfulness")
-        defaults.set(self.isLeisureSelected, forKey: "selectedLeisure")
-        defaults.set(self.isHealthSelected, forKey: "selectedHealth")
-        defaults.set(self.isLovedsSelected, forKey: "selectedLoveds")
+        userDefaults.set(self.selectedCount, forKey: UserDefaultsKeys.quantityIslands)
+        userDefaults.set(self.isMindfulnessSelected, forKey: UserDefaultsKeys.selectedMindfulness)
+        userDefaults.set(self.isLeisureSelected, forKey: UserDefaultsKeys.selectedLeisure)
+        userDefaults.set(self.isHealthSelected, forKey: UserDefaultsKeys.selectedHealth)
+        userDefaults.set(self.isLovedsSelected, forKey: UserDefaultsKeys.selectedLoveds)
     }
 
-    
     var body: some View {
         
         GeometryReader { geometry in
@@ -173,7 +170,7 @@ struct Onboarding3: View {
                     Button(action: {
                         self.createIslands()
                         self.setIslansInUserDefaults()
-                        self.defaults.set(true, forKey: DefaultsConstants.auxiliarToRootWindow.rawValue)
+                        userDefaults.set(true, forKey: UserDefaultsKeys.userSelectedIslands)
                         //Chama o storyboard
                         NotificationCenter.default.post(name: Notification.Name("callHome"), object: nil)
                     }) {

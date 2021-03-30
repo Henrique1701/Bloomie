@@ -77,7 +77,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="concluirButton:" destination="lDG-oy-4Cv" eventType="touchUpInside" id="BZC-1H-AfB"/>
                                     <segue destination="gjZ-vG-k0s" kind="show" id="bms-Zx-AhB"/>
                                 </connections>
                             </button>
@@ -101,7 +100,6 @@
                     </view>
                     <connections>
                         <outlet property="card" destination="yEx-zk-WcM" id="e4G-fF-cYv"/>
-                        <outlet property="concluirButtonOutlet" destination="jck-jC-yjZ" id="PdK-WN-GII"/>
                         <outlet property="summaryLabel" destination="8fo-6q-5J7" id="uLM-gT-39o"/>
                     </connections>
                 </viewController>
@@ -117,7 +115,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W2L-Me-Gfo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="730" y="578"/>
+            <point key="canvasLocation" x="703" y="574"/>
         </scene>
         <!--Desafios Page View Controller-->
         <scene sceneID="xIZ-7F-cUg">

@@ -48,7 +48,7 @@ class DonePopUpViewController: UIViewController {
     
     func sendDateCompletionForAnalytics() {
         configureIslandName()
-        let dateWasAccepted = UserDefaults.standard.value(forKey: "dateWasAccepted\(islandName)") as! Date
+        let dateWasAccepted = userDefaults.value(forKey: UserDefaultsKeys.dateWasAccepted+"\(islandName)") as! Date
         let dateWasAcceptedTreated = dateWasAccepted.timeIntervalSince1970
         let dateWasDone = Date()
         let dateWasDoneTreated = dateWasDone.timeIntervalSince1970
