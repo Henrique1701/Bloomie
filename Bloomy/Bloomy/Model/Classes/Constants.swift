@@ -34,12 +34,6 @@ extension Notification.Name {
     static let callHome = Notification.Name("callHome")
 }
 
-enum DefaultsConstants: String {
-    case auxiliarToRootWindow = "userSelectedIslands"
-    case userDays = "userDaysOfActivation"
-    case review = "reviewPrompted"
-}
-
 class UserDefaultsKeys {
     
     class var userSelectedIslands: String {
