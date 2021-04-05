@@ -11,7 +11,7 @@ import Firebase
 class DonePopUpViewController: UIViewController {
     var summary: String = ""
     var islandName: String = ""
-    let hapitcs = UINotificationFeedbackGenerator()
+    let haptics = UINotificationFeedbackGenerator()
     
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var summaryLabel: UILabel!
@@ -36,7 +36,7 @@ class DonePopUpViewController: UIViewController {
         sendDateCompletionForAnalytics()
         dismiss(animated: false)
         NotificationCenter.default.post(name: .doneChallenge, object: self)
-        hapitcs.notificationOccurred(.success)
+        haptics.notificationOccurred(.success)
     }
     
     func configureIslandName() {

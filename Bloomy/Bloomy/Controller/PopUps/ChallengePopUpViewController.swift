@@ -10,7 +10,7 @@ import UIKit
 class ChallengePopUpViewController: UIViewController {
     var summary: String = ""
     var islandName: String = ""
-    let hapitcs = UINotificationFeedbackGenerator()
+    let haptics = UINotificationFeedbackGenerator()
     
     @IBOutlet weak var acceptButton: UIButton!
     @IBOutlet weak var summaryLabel: UILabel!
@@ -34,7 +34,7 @@ class ChallengePopUpViewController: UIViewController {
         NotificationCenter.default.post(name: .acceptChallenge, object: self)
         getDateWasAccepted()
         dismiss(animated: true)
-        hapitcs.notificationOccurred(.success)
+        haptics.notificationOccurred(.success)
     }
     
     func configureIslandName() {
