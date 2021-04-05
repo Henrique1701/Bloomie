@@ -1,13 +1,14 @@
 //
 //  User+CoreDataProperties.swift
-//  Bloomy
+//  Bloomie
 //
-//  Created by Mayara Mendonça de Souza on 24/11/20.
+//  Created by Mayara Mendonça de Souza on 20/03/21.
 //
 //
 
 import Foundation
 import CoreData
+
 
 extension User {
 
@@ -16,10 +17,27 @@ extension User {
     }
 
     @NSManaged public var image: Data?
-    @NSManaged public var name: String?
-    @NSManaged public var userToIsland: NSSet?
     @NSManaged public var lastSeen: Date?
+    @NSManaged public var name: String?
     @NSManaged public var dailyChallenges: NSSet?
+    @NSManaged public var userToIsland: NSSet?
+
+}
+
+// MARK: Generated accessors for dailyChallenges
+extension User {
+
+    @objc(addDailyChallengesObject:)
+    @NSManaged public func addToDailyChallenges(_ value: Challenge)
+
+    @objc(removeDailyChallengesObject:)
+    @NSManaged public func removeFromDailyChallenges(_ value: Challenge)
+
+    @objc(addDailyChallenges:)
+    @NSManaged public func addToDailyChallenges(_ values: NSSet)
+
+    @objc(removeDailyChallenges:)
+    @NSManaged public func removeFromDailyChallenges(_ values: NSSet)
 
 }
 

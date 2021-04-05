@@ -8,16 +8,37 @@
 import UIKit
 
 class UserViewController: UIViewController {
+    @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet var healthButton: UIButton!
     @IBOutlet var leisureButton: UIButton!
     @IBOutlet var mindfulnessButton: UIButton!
     @IBOutlet var lovedsButton: UIButton!
     @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var profileImageButton: UIButton!
+    var imagePicker: ImagePicker!
+    
+    @IBOutlet weak var editProfileImageButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.imagePicker = ImagePicker(presentationController: self, delegate: self)
+        
+        let savedImage:UIImage? = UserManager.shared.getUserImage()
+        if(savedImage != nil){
+            let width = userDefaults.double(forKey: "width")
+            let height = userDefaults.double(forKey: "height")
+            self.profileImage.frame = CGRect(x: 0, y: 0, width: width, height: height)
+            self.profileImage.image = savedImage
+            self.profileImage.layer.cornerRadius = (profileImage.frame.width)/2
+            self.profileImage.layer.masksToBounds = false
+            self.profileImage.clipsToBounds = true
+            self.profileImage.contentMode = .scaleAspectFill
+            self.profileImage.layoutIfNeeded()
+        } else {
+            self.profileImage.image = #imageLiteral(resourceName: "avatar")
+        }
+        
         self.userNameLabel.text = UserManager.shared.getUserName()
     }
     
@@ -72,6 +93,18 @@ class UserViewController: UIViewController {
         }
     }
     
+    @IBAction func editProfileImage(_ sender: UIButton) {
+        self.imagePicker.present(from: sender)
+    }
+    
+    func setupNavigationController() {
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.topItem?.title = ""
+        self.navigationController?.navigationBar.layoutIfNeeded()
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Poppins-Semibold", size: 18) ?? UIFont()]
+    }
+    
     func buttonsToShow() {
         if (userDefaults.bool(forKey: UserDefaultsKeys.selectedHealth)) {
             self.healthButton.alpha = 1
@@ -117,5 +150,28 @@ class UserViewController: UIViewController {
                 control += 1
             }
         }
+    }
+}
+
+extension UserViewController: ImagePickerDelegate {
+    
+    func didSelect(image: UIImage?) {
+        if(image != nil){
+            self.profileImage.image = image
+            self.profileImage.layer.cornerRadius = (profileImage.frame.size.width)/2
+            self.profileImage.clipsToBounds = true
+            self.profileImage.contentMode = .scaleAspectFit
+            self.profileImage.layoutIfNeeded()
+            
+            let width = profileImage.frame.width
+            userDefaults.set(width, forKey: "width")
+            let height = profileImage.frame.height
+            userDefaults.set(height, forKey: "height")
+            print("WIDTH = \(width)")
+            print("HEIGHT = \(height)")
+            
+        }
+        
+        UserManager.shared.updateUserImage(to: image ?? #imageLiteral(resourceName: "plant"))
     }
 }

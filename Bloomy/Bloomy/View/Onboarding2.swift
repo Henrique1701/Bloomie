@@ -17,8 +17,10 @@ struct Onboarding2: View {
         if (UserManager.shared.getUser() != nil) {
             _ = UserManager.shared.deleteUser()
             _ = UserManager.shared.newUser(withName: userName)
+            UserManager.shared.updateUserImage(to: #imageLiteral(resourceName: "avatar"))
         } else {
             _ = UserManager.shared.newUser(withName: userName)
+            UserManager.shared.updateUserImage(to: #imageLiteral(resourceName: "avatar"))
         }
         userDefaults.set(0, forKey: UserDefaultsKeys.userDaysOfActivation)
     }
