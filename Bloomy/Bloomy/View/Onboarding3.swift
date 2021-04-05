@@ -16,10 +16,8 @@ struct Onboarding3: View {
     @State var isHealthSelected = false
     @State var selectedCount: Int = 0
     
-    // Gerenciadores das funções CRUD de Ilha e Usuário
     let user = UserManager()
     let island = IslandManager()
-    // User default
     let defaults = UserDefaults.standard
     
     func increaseOrDiacreaseCount(forStatus: Bool) {
@@ -31,9 +29,8 @@ struct Onboarding3: View {
     }
     
     func createIslands() {
-        //Retorna o usuario criado
         let usuario = self.user.getUser()
-        //Cria as ilhas
+    
         guard self.island.newIsland(withName: "Lazer") != nil else { return }
         _ = self.island.setUser(islandName: "Lazer", user: usuario!)
         SeedDataBase.shared.createLeisureChallenges()
@@ -56,10 +53,8 @@ struct Onboarding3: View {
     }
     
     func setIslansInUserDefaults() {
-        // Adiciona quantidade de ilhas selecionadas ao user default
         defaults.set(self.selectedCount, forKey: "quantityIslands")
         
-        // Configura ilhas selecionadas no user default
         defaults.set(self.isMindfulnessSelected, forKey: "selectedMindfulness")
         defaults.set(self.isLeisureSelected, forKey: "selectedLeisure")
         defaults.set(self.isHealthSelected, forKey: "selectedHealth")

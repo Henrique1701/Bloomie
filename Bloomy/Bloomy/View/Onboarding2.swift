@@ -52,7 +52,6 @@ struct Onboarding2: View {
                 Rectangle()
                     .background(Color("cor_fonte"))
                     .opacity(0.4)
-                    //.position(x: geometry.size.width * 0.30)
                     .frame(width: geometry.size.width * 0.9, height: 3, alignment: .leading) //0.75
                 
                 Spacer()

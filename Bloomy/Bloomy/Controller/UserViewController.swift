@@ -15,7 +15,6 @@ class UserViewController: UIViewController {
     @IBOutlet var mindfulnessButton: UIButton!
     @IBOutlet var lovedsButton: UIButton!
     @IBOutlet weak var stackView: UIStackView!
-    //@IBOutlet var profileImageButton: UIButton!
     @IBOutlet weak var profileImageButton: UIButton!
     var imagePicker: ImagePicker!
     let defaults = UserDefaults.standard
@@ -45,7 +44,6 @@ class UserViewController: UIViewController {
         }
         
         self.userNameLabel.text = UserManager.shared.getUserName()
-        self.setupNavigationController()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -100,7 +98,6 @@ class UserViewController: UIViewController {
     }
     
     @IBAction func editProfileImage(_ sender: UIButton) {
-        print("quero editar a imagem de perfil")
         self.imagePicker.present(from: sender)
     }
     
@@ -143,9 +140,7 @@ class UserViewController: UIViewController {
         var index = 0
         var control = 0
         while(index < buttons.count) {
-            print(buttons[index].alpha)
             if buttons[index].alpha != 1 {
-                print(" Entrou")
                 let viewRemove = self.stackView.arrangedSubviews[index]
                 self.stackView.removeArrangedSubview(viewRemove)
                 self.stackView.addArrangedSubview(viewRemove)
