@@ -17,7 +17,6 @@ class UserViewController: UIViewController {
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var profileImageButton: UIButton!
     var imagePicker: ImagePicker!
-    let defaults = UserDefaults.standard
     
     @IBOutlet weak var editProfileImageButton: UIButton!
     
@@ -27,18 +26,15 @@ class UserViewController: UIViewController {
         
         let savedImage:UIImage? = UserManager.shared.getUserImage()
         if(savedImage != nil){
-            let width = defaults.double(forKey: "width")
-            let height = defaults.double(forKey: "height")
+            let width = userDefaults.double(forKey: "width")
+            let height = userDefaults.double(forKey: "height")
             self.profileImage.frame = CGRect(x: 0, y: 0, width: width, height: height)
             self.profileImage.image = savedImage
             self.profileImage.layer.cornerRadius = (profileImage.frame.width)/2
-            print("WIDTH = \(width)")
-            print("HEIGHT = \(height)")
             self.profileImage.layer.masksToBounds = false
             self.profileImage.clipsToBounds = true
             self.profileImage.contentMode = .scaleAspectFill
             self.profileImage.layoutIfNeeded()
-            //profileImage.maskCircle(anyImage: savedImage!)
         } else {
             self.profileImage.image = #imageLiteral(resourceName: "avatar")
         }
@@ -66,7 +62,7 @@ class UserViewController: UIViewController {
     }
     
     @IBAction func touchedHealthButton(_ sender: Any) {
-        if defaults.bool(forKey: "selectedHealth") {
+        if userDefaults.bool(forKey: UserDefaultsKeys.selectedHealth) {
             showJourney(islandName: IslandsNames.health.rawValue)
         } else {
             showAlert(islandName: "saúde")
@@ -74,7 +70,7 @@ class UserViewController: UIViewController {
     }
     
     @IBAction func touchedLeisureButton(_ sender: Any) {
-        if defaults.bool(forKey: "selectedLeisure") {
+        if userDefaults.bool(forKey: UserDefaultsKeys.selectedLeisure) {
             showJourney(islandName: IslandsNames.leisure.rawValue)
         } else {
             showAlert(islandName: "lazer")
@@ -82,7 +78,7 @@ class UserViewController: UIViewController {
     }
     
     @IBAction func touchedMindfulnessButton(_ sender: Any) {
-        if defaults.bool(forKey: "selectedMindfulness") {
+        if userDefaults.bool(forKey: UserDefaultsKeys.selectedMindfulness) {
             showJourney(islandName: IslandsNames.mindfulness.rawValue)
         } else {
             showAlert(islandName: "atenção plena")
@@ -90,7 +86,7 @@ class UserViewController: UIViewController {
     }
     
     @IBAction func touchedLovedButton(_ sender: Any) {
-        if defaults.bool(forKey: "selectedLoveds") {
+        if userDefaults.bool(forKey: UserDefaultsKeys.selectedLoveds) {
             showJourney(islandName: IslandsNames.loveds.rawValue)
         } else {
             showAlert(islandName: "pessoas queridas")
@@ -110,25 +106,25 @@ class UserViewController: UIViewController {
     }
     
     func buttonsToShow() {
-        if (defaults.bool(forKey: "selectedHealth")) {
+        if (userDefaults.bool(forKey: UserDefaultsKeys.selectedHealth)) {
             self.healthButton.alpha = 1
         } else {
             self.healthButton.alpha = 0.6
         }
         
-        if (defaults.bool(forKey: "selectedLeisure")) {
+        if (userDefaults.bool(forKey: UserDefaultsKeys.selectedLeisure)) {
             self.leisureButton.alpha = 1
         } else {
             self.leisureButton.alpha = 0.6
         }
         
-        if (defaults.bool(forKey: "selectedMindfulness")) {
+        if (userDefaults.bool(forKey: UserDefaultsKeys.selectedMindfulness)) {
             self.mindfulnessButton.alpha = 1
         } else {
             self.mindfulnessButton.alpha = 0.6
         }
         
-        if (defaults.bool(forKey: "selectedLoveds")) {
+        if (userDefaults.bool(forKey: UserDefaultsKeys.selectedLoveds)) {
             self.lovedsButton.alpha = 1
         } else {
             self.lovedsButton.alpha = 0.6
@@ -168,24 +164,14 @@ extension UserViewController: ImagePickerDelegate {
             self.profileImage.layoutIfNeeded()
             
             let width = profileImage.frame.width
-            defaults.set(width, forKey: "width")
+            userDefaults.set(width, forKey: "width")
             let height = profileImage.frame.height
-            defaults.set(height, forKey: "height")
+            userDefaults.set(height, forKey: "height")
             print("WIDTH = \(width)")
             print("HEIGHT = \(height)")
             
         }
         
         UserManager.shared.updateUserImage(to: image ?? #imageLiteral(resourceName: "plant"))
-    }
-}
-
-extension UIImageView {
-    public func maskCircle(anyImage: UIImage) {
-        //self.frame = CGRect(x: 0, y: 0, width: 160, height: 160)
-        self.contentMode = UIView.ContentMode.scaleAspectFill
-        self.layer.cornerRadius = self.frame.height / 2
-        self.layer.masksToBounds = false
-        self.clipsToBounds = true
     }
 }

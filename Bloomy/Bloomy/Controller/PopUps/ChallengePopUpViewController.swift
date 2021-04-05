@@ -49,7 +49,7 @@ class ChallengePopUpViewController: UIViewController {
     func getDateWasAccepted() {
         configureIslandName()
         let dateWasAccepted = Date()
-        UserDefaults.standard.setValue(dateWasAccepted, forKey: "dateWasAccepted\(islandName)")
+        userDefaults.setValue(dateWasAccepted, forKey: UserDefaultsKeys.dateWasAccepted+"\(islandName)")
     }
     
     func setupStyle() {

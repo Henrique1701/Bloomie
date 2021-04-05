@@ -14,13 +14,14 @@ public class SettingsTableViewController: UITableViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         
-        let stateSoundsSwitch = UserDefaults.standard.bool(forKey: "stateSoundsSwitch")
+        // Altera o estado do switch
+        let stateSoundsSwitch = userDefaults.bool(forKey: UserDefaultsKeys.stateSoundsSwitch)
         self.soundsSwitch.setOn(stateSoundsSwitch, animated: true)
     }
 
     @IBAction func touchedSoundsSwitch(_ sender: Any) {
         let stateSoundsSwitch = self.soundsSwitch.isOn
-        UserDefaults.standard.set(stateSoundsSwitch, forKey: "stateSoundsSwitch")
+        userDefaults.set(stateSoundsSwitch, forKey: UserDefaultsKeys.stateSoundsSwitch)
         MusicPlayer.shared.changeStatePlayer(state: stateSoundsSwitch)
     }
     

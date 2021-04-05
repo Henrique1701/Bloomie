@@ -22,7 +22,7 @@ struct Onboarding2: View {
             _ = UserManager.shared.newUser(withName: userName)
             UserManager.shared.updateUserImage(to: #imageLiteral(resourceName: "avatar"))
         }
-        UserDefaults.standard.set(0, forKey: DefaultsConstants.userDays.rawValue)
+        userDefaults.set(0, forKey: UserDefaultsKeys.userDaysOfActivation)
     }
     
     var body: some View {

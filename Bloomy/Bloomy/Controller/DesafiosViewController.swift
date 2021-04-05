@@ -61,10 +61,6 @@ class DesafiosViewController: UIViewController {
             return
         }
         
-        guard let noChallengeViewController = storyboard?.instantiateViewController(withIdentifier: String(describing:DesafiosVazioViewController.self)) as? DesafiosVazioViewController else {
-            return
-        }
-        
         pageViewController.delegate = self
         pageViewController.dataSource = self
         
@@ -73,9 +69,7 @@ class DesafiosViewController: UIViewController {
         
         pageViewController.view.backgroundColor = #colorLiteral(red: 0.9938541055, green: 0.9598969817, blue: 0.9428560138, alpha: 1)
         
-        if (challenges.isEmpty) {
-            contentView.addSubview(noChallengeViewController.view)
-        } else {
+        if (!challenges.isEmpty) {
             contentView.addSubview(pageViewController.view)
             
             pageViewController.view.translatesAutoresizingMaskIntoConstraints = false
