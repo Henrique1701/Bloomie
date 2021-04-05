@@ -45,7 +45,7 @@ struct UserManager {
     
     public func getUserImage() -> UIImage? {
         guard let user = getUser() else {fatalError("Could not find User")}
-        if let userImage = UIImage(data: user.image!) {
+        if let userImage = UIImage(data: (user.image)!) {
             return userImage
         }
         return nil
