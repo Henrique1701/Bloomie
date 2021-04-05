@@ -988,7 +988,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = 23WSBM7T82;
+				DEVELOPMENT_TEAM = QH8HG84VQM;
 				INFOPLIST_FILE = Bloomy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
