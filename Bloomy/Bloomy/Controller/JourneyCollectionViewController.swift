@@ -58,7 +58,7 @@ class JourneyCollectionViewController: UICollectionViewController {
         let summary = doneChallenges[indexPath.row].summary
     
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd-MM-yyyy"
+        dateFormatter.dateFormat = "dd/MM/yyyy"
         let dateString = dateFormatter.string(from: doneChallenges[indexPath.row].time!)
         
         showPopUp(image: image!, summary: summary!, date: dateString)
