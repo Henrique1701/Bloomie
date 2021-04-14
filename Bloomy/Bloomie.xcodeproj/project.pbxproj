@@ -22,6 +22,7 @@
 		890079A125F002AE00F54028 /* Onboarding3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890079A025F002AE00F54028 /* Onboarding3.swift */; };
 		8905E6C3257961660015ECAC /* ChallengePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8905E6C2257961660015ECAC /* ChallengePopUpViewController.swift */; };
 		8905E6D7257E65D80015ECAC /* DonePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8905E6D6257E65D80015ECAC /* DonePopUpViewController.swift */; };
+		8910749E262761500014C3E0 /* DelayedMissionPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8910749D262761500014C3E0 /* DelayedMissionPopUpViewController.swift */; };
 		8915339A25B8A35700DB7FE8 /* JourneyCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8915339925B8A35700DB7FE8 /* JourneyCollectionViewController.swift */; };
 		891D2E47256ED7B200AC961A /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891D2E46256ED7B200AC961A /* Challenge.swift */; };
 		89249D4B257EA004002747A3 /* RewardPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89249D4A257EA004002747A3 /* RewardPopUpViewController.swift */; };
@@ -86,6 +87,7 @@
 		890079A025F002AE00F54028 /* Onboarding3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding3.swift; sourceTree = "<group>"; };
 		8905E6C2257961660015ECAC /* ChallengePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengePopUpViewController.swift; sourceTree = "<group>"; };
 		8905E6D6257E65D80015ECAC /* DonePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonePopUpViewController.swift; sourceTree = "<group>"; };
+		8910749D262761500014C3E0 /* DelayedMissionPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelayedMissionPopUpViewController.swift; sourceTree = "<group>"; };
 		8915339925B8A35700DB7FE8 /* JourneyCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyCollectionViewController.swift; sourceTree = "<group>"; };
 		891D2E46256ED7B200AC961A /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		89249D39257E6C32002747A3 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				8905E6D6257E65D80015ECAC /* DonePopUpViewController.swift */,
 				89249D4A257EA004002747A3 /* RewardPopUpViewController.swift */,
 				BE2742B525C0E5A3006699E6 /* JourneyPopUpViewController.swift */,
+				8910749D262761500014C3E0 /* DelayedMissionPopUpViewController.swift */,
 			);
 			path = PopUps;
 			sourceTree = "<group>";
@@ -511,6 +514,7 @@
 				89E69E0A25E9827000E4704C /* Onboarding.swift in Sources */,
 				89ED4BB825824CCD00A18B29 /* SiriShortcutsViewController.swift in Sources */,
 				89566A682581B27F00784DF3 /* SettingsTableViewController.swift in Sources */,
+				8910749E262761500014C3E0 /* DelayedMissionPopUpViewController.swift in Sources */,
 				BE4BE74B25A78556002AB66E /* EditIslandsViewController.swift in Sources */,
 				7DBB75F02606A8A400CB4C9B /* User+CoreDataClass.swift in Sources */,
 				12D13CF0256C2D130013E511 /* PerfilViewController.swift in Sources */,
