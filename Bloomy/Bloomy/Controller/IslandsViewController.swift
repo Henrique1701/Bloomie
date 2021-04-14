@@ -27,7 +27,7 @@ class IslandsViewController: UIViewController {
     var originalFrameFromIsland = CGRect()
     var sceneName = ""
     var senderWasDesafios = false
-    var dailyChallenge: Challenge?
+    //var dailyChallenge: Challenge?
     let dailyMissionsManager = DailyMissionsManager.shared
     
     fileprivate func showAlert(_ lastChallenge: Challenge) {
@@ -82,8 +82,8 @@ class IslandsViewController: UIViewController {
             self.doneChallenge()
             self.chooseButtonToShow()
             self.showRewardPopUp()
-            self.senderWasDesafios = false
-            self.dailyChallenge = nil
+            //self.senderWasDesafios = false
+           // self.dailyChallenge = nil
             self.loadViewIfNeeded()
         }
         
@@ -112,8 +112,8 @@ class IslandsViewController: UIViewController {
             NotificationCenter.default.removeObserver(animationObserver!)
         }
         
-        self.senderWasDesafios = false
-        self.dailyChallenge = nil
+        //self.senderWasDesafios = false
+        //self.dailyChallenge = nil
     }
     
     override var shouldAutorotate: Bool {
@@ -139,7 +139,8 @@ class IslandsViewController: UIViewController {
             popup!.islandName = island.name!
         } else if (segue.identifier == "toDonePopUpViewControllerSegue") {
             let popup = segue.destination as? DonePopUpViewController
-            popup!.summary = self.dailyChallenge?.summary ?? self.island.dailyChallenge?.summary ?? ""
+            popup!.summary = self.island.dailyChallenge?.summary ?? ""
+            //popup!.summary = self.dailyChallenge?.summary ?? self.island.dailyChallenge?.summary ?? ""
             popup!.islandName = island.name!
         }
     }
