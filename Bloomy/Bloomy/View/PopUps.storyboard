@@ -22,7 +22,7 @@
         <!--Challenge Pop Up View Controller-->
         <scene sceneID="NdD-RS-qAJ">
             <objects>
-                <viewController storyboardIdentifier="ChallengePopUp" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="4gS-XJ-ah1" customClass="ChallengePopUpViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChallengePopUp" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="4gS-XJ-ah1" customClass="ChallengePopUpViewController" customModule="Bloomie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6nj-zd-k93">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -108,7 +108,7 @@
         <!--Done Pop Up View Controller-->
         <scene sceneID="2WN-FH-dUb">
             <objects>
-                <viewController storyboardIdentifier="DonePopUp" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="cd6-hB-nrB" customClass="DonePopUpViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DonePopUp" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="cd6-hB-nrB" customClass="DonePopUpViewController" customModule="Bloomie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OID-2I-tql">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -205,7 +205,7 @@
         <!--Reward Pop Up View Controller-->
         <scene sceneID="XcC-5V-2Ag">
             <objects>
-                <viewController storyboardIdentifier="RewardPopUp" modalPresentationStyle="overCurrentContext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DBh-4h-gf3" customClass="RewardPopUpViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RewardPopUp" modalPresentationStyle="overCurrentContext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DBh-4h-gf3" customClass="RewardPopUpViewController" customModule="Bloomie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Dg-KW-ltq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -308,7 +308,7 @@
         <!--Journey Pop Up View Controller-->
         <scene sceneID="H3C-gf-cEC">
             <objects>
-                <viewController storyboardIdentifier="JourneyPopUp" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="2Om-li-Mfm" customClass="JourneyPopUpViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="JourneyPopUp" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="2Om-li-Mfm" customClass="JourneyPopUpViewController" customModule="Bloomie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZN3-S1-ZhE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -395,6 +395,82 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="igD-5p-H9i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3105.7971014492755" y="-525"/>
+        </scene>
+        <!--Delayed Mission Pop Up View Controller-->
+        <scene sceneID="8if-bE-UL4">
+            <objects>
+                <viewController storyboardIdentifier="DelayedMissionPopUp" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XPo-XY-GwM" customClass="DelayedMissionPopUpViewController" customModule="Bloomie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8kZ-x9-eF4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3As-yh-hEk">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="L1Q-3l-Y6G">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <blurEffect style="extraLight"/>
+                            </visualEffectView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mwv-nr-5aa">
+                                <rect key="frame" x="41" y="243" width="331" height="409"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Missão em aberto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2I-P2-vko">
+                                        <rect key="frame" x="97" y="23" width="136" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Você conseguiu concluí-la?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alZ-Bp-Ehb">
+                                        <rect key="frame" x="61" y="52" width="209" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Missão atrasada" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FVE-Xu-gEf">
+                                        <rect key="frame" x="23" y="125" width="286" height="196"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZVM-qA-XEY">
+                                        <rect key="frame" x="211" y="352" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Sim"/>
+                                        <connections>
+                                            <action selector="doneMission:" destination="XPo-XY-GwM" eventType="touchUpInside" id="d9k-nd-Gmn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izC-7x-M2Q">
+                                        <rect key="frame" x="90" y="352" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Não"/>
+                                        <connections>
+                                            <action selector="dismissMission:" destination="XPo-XY-GwM" eventType="touchUpInside" id="6JL-CU-uMJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fd9-B3-0Zd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="dismissMissionButton" destination="izC-7x-M2Q" id="3Ij-DD-hBf"/>
+                        <outlet property="doneMissionButton" destination="ZVM-qA-XEY" id="Pao-6U-xsI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kNV-z2-F2j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3989.8550724637685" y="-525"/>
         </scene>
     </scenes>
     <resources>
