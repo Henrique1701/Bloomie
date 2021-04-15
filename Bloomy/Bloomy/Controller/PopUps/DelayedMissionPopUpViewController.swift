@@ -11,6 +11,7 @@ class DelayedMissionPopUpViewController: UIViewController {
     @IBOutlet weak var missionLabel: UILabel!
     @IBOutlet weak var doneMissionButton: UIButton!
     @IBOutlet weak var dismissMissionButton: UIButton!
+    @IBOutlet weak var contentView: UIView!
     
     var challenge: Challenge?
     let dailyMissionManager = DailyMissionsManager.shared
@@ -18,10 +19,15 @@ class DelayedMissionPopUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setupContentViewStyle()
         self.setupMissionLabelStyle()
     }
     
     // MARK: - Style
+    
+    private func setupContentViewStyle() {
+        self.contentView.layer.cornerRadius = 35
+    }
     
     private func setupMissionLabelStyle() {
         self.missionLabel.text = challenge?.summary
