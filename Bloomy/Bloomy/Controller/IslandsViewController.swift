@@ -28,24 +28,7 @@ class IslandsViewController: UIViewController {
     var originalFrameFromIsland = CGRect()
     var sceneName = ""
     var senderWasDesafios = false
-    //var dailyChallenge: Challenge?
     let dailyMissionsManager = DailyMissionsManager.shared
-    
-    fileprivate func setNewDailyChallenge() {
-        
-        if let dateAsDaily =  self.island.dailyChallenge?.dateAsDaily {
-            if (!isSameDay(userDate: dateAsDaily, actualDate: Date())) {
-                if let lastChallenge = self.dailyMissionsManager.updateDailyMission(forIsland: island.name!) {
-                    if (lastChallenge.accepted && !lastChallenge.done) {
-                        self.showDelayedMissionPopUp(withChallenge: lastChallenge)
-                    }
-                }
-            }
-        } else {
-            _ = self.dailyMissionsManager.updateDailyMission(forIsland: island.name!)
-        }
-        
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,11 +55,9 @@ class IslandsViewController: UIViewController {
         }
         
         doneObserver = NotificationCenter.default.addObserver(forName: .doneChallenge, object: nil, queue: OperationQueue.main) { _ in
-            self.doneChallenge()
+            self.dailyMissionsManager.setDoneStatus(forChallenge: self.island.dailyChallenge)
             self.chooseButtonToShow()
             self.showRewardPopUp(toChallenge: self.island.dailyChallenge)
-            //self.senderWasDesafios = false
-           // self.dailyChallenge = nil
             self.loadViewIfNeeded()
         }
         
@@ -112,9 +93,6 @@ class IslandsViewController: UIViewController {
         if delayedObserver != nil {
             NotificationCenter.default.removeObserver(delayedObserver!)
         }
-        
-        //self.senderWasDesafios = false
-        //self.dailyChallenge = nil
     }
     
     override var shouldAutorotate: Bool {
@@ -144,6 +122,22 @@ class IslandsViewController: UIViewController {
             //popup!.summary = self.dailyChallenge?.summary ?? self.island.dailyChallenge?.summary ?? ""
             popup!.islandName = island.name!
         }
+    }
+    
+    private func setNewDailyChallenge() {
+        
+        if let dateAsDaily =  self.island.dailyChallenge?.dateAsDaily {
+            if (!isSameDay(userDate: dateAsDaily, actualDate: Date())) {
+                if let lastChallenge = self.dailyMissionsManager.updateDailyMission(forIsland: island.name!) {
+                    if (lastChallenge.accepted && !lastChallenge.done) {
+                        self.showDelayedMissionPopUp(withChallenge: lastChallenge)
+                    }
+                }
+            }
+        } else {
+            _ = self.dailyMissionsManager.updateDailyMission(forIsland: island.name!)
+        }
+        
     }
     
     func acceptChallenge() {
