@@ -22,37 +22,13 @@ class IslandsViewController: UIViewController {
     var doneObserver: NSObjectProtocol?
     var scene = SKScene()
     var animationObserver: NSObjectProtocol?
+    var delayedObserver: NSObjectProtocol?
     var rewardIdToAnimate = ""
     var originalScaleFromIsland = CGAffineTransform()
     var originalFrameFromIsland = CGRect()
     var sceneName = ""
     var senderWasDesafios = false
-    //var dailyChallenge: Challenge?
     let dailyMissionsManager = DailyMissionsManager.shared
-    
-    fileprivate func showAlert(_ lastChallenge: Challenge) {
-        let alert = UIAlertController(title: "Você tem missão em aberto nessa ilha", message: "Missão: \(String(describing: lastChallenge.summary))", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
-            NSLog("The \"OK\" alert occured.")
-        }))
-        self.present(alert, animated: true, completion: nil)
-    }
-    
-    fileprivate func setNewDailyChallenge() {
-        
-        if let dateAsDaily =  self.island.dailyChallenge?.dateAsDaily {
-            if (!isSameDay(userDate: dateAsDaily, actualDate: Date())) {
-                if let lastChallenge = self.dailyMissionsManager.updateDailyMission(forIsland: island.name!) {
-                    if (lastChallenge.accepted && !lastChallenge.done) {
-                        self.showAlert(lastChallenge)
-                    }
-                }
-            }
-        } else {
-            _ = self.dailyMissionsManager.updateDailyMission(forIsland: island.name!)
-        }
-        
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,7 +36,6 @@ class IslandsViewController: UIViewController {
         scene = SKScene(fileNamed: sceneName)!
         
         self.setNewDailyChallenge()
-        
         self.setupStyle()
         self.setupSKScene()
         self.chooseButtonToShow()
@@ -79,16 +54,18 @@ class IslandsViewController: UIViewController {
         }
         
         doneObserver = NotificationCenter.default.addObserver(forName: .doneChallenge, object: nil, queue: OperationQueue.main) { _ in
-            self.doneChallenge()
+            self.dailyMissionsManager.setDoneStatus(forChallenge: self.island.dailyChallenge)
             self.chooseButtonToShow()
-            self.showRewardPopUp()
-            //self.senderWasDesafios = false
-           // self.dailyChallenge = nil
+            self.showRewardPopUp(toChallenge: self.island.dailyChallenge)
             self.loadViewIfNeeded()
         }
         
         animationObserver = NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "animationObserver"), object: nil, queue: OperationQueue.main) { _ in
             self.rewardAnimation()
+        }
+        
+        delayedObserver = NotificationCenter.default.addObserver(forName: .delayedMissionToIslands, object: nil, queue: OperationQueue.main) { _ in
+            self.showRewardPopUp(toChallenge: self.island.lastDailyChallenge)
         }
         
         if (senderWasDesafios) {
@@ -112,8 +89,9 @@ class IslandsViewController: UIViewController {
             NotificationCenter.default.removeObserver(animationObserver!)
         }
         
-        //self.senderWasDesafios = false
-        //self.dailyChallenge = nil
+        if delayedObserver != nil {
+            NotificationCenter.default.removeObserver(delayedObserver!)
+        }
     }
     
     override var shouldAutorotate: Bool {
@@ -140,8 +118,23 @@ class IslandsViewController: UIViewController {
         } else if (segue.identifier == "toDonePopUpViewControllerSegue") {
             let popup = segue.destination as? DonePopUpViewController
             popup!.summary = self.island.dailyChallenge?.summary ?? ""
-            //popup!.summary = self.dailyChallenge?.summary ?? self.island.dailyChallenge?.summary ?? ""
             popup!.islandName = island.name!
+        }
+    }
+    
+    private func setNewDailyChallenge() {
+        if let dateAsDaily =  self.island.dailyChallenge?.dateAsDaily {
+            if (!isSameDay(firstDate: dateAsDaily, secondDate: Date())) {
+                if let lastChallenge = self.dailyMissionsManager.updateDailyMission(forIsland: island.name!) {
+                    if (lastChallenge.accepted && !lastChallenge.done) {
+                        self.showDelayedMissionPopUp(withChallenge: lastChallenge)
+                    }
+                } else {
+                    self.showFinishedAllMissionsAlert()
+                }
+            }
+        } else {
+            _ = self.dailyMissionsManager.updateDailyMission(forIsland: island.name!)
         }
     }
     
@@ -218,7 +211,7 @@ class IslandsViewController: UIViewController {
         } 
     }
     
-    func showRewardPopUp() {
+    func showRewardPopUp(toChallenge challenge: Challenge?) {
         let storyBoard: UIStoryboard = UIStoryboard(name: "PopUps", bundle: nil)
         let popup = storyBoard.instantiateViewController(identifier: "RewardPopUp") as? RewardPopUpViewController
         let rewards = IslandManager.shared.getRewards(fromIsland: island.name!)!
@@ -229,11 +222,18 @@ class IslandsViewController: UIViewController {
             self.rewardIdToAnimate = availableReward.id!
             self.present(popup!, animated: true)
             availableReward.isShown = true
-            availableReward.rewardToChallenge = self.island.dailyChallenge
+            availableReward.rewardToChallenge = challenge
             _ = RewardManager.shared.saveContext()
         } else {
             fatalError("There is no available reward")
         }
+    }
+    
+    func showDelayedMissionPopUp(withChallenge challenge: Challenge?) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "PopUps", bundle: nil)
+        let popup = storyBoard.instantiateViewController(identifier: "DelayedMissionPopUp") as? DelayedMissionPopUpViewController
+        popup!.challenge = challenge
+        self.present(popup!, animated:true)
     }
     
     func getAvailableReward(inRewards rewards: [Reward]) -> Reward? {
@@ -310,6 +310,14 @@ class IslandsViewController: UIViewController {
         alert.addAction(sendButton)
         alert.addAction(noButton)
         alert.preferredAction = sendButton
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    private func showFinishedAllMissionsAlert() {
+        let alert = UIAlertController(title: "Acabou missão para ilha \(String(island.name!))", message: "Parabéns! Você concluiu todas missões da ilha \(String(island.name!)). Como você está se sentindo?\n Em breve, teremos mais missões nessa ilha (:", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+            NSLog("The \"OK\" alert occured.")
+        }))
         self.present(alert, animated: true, completion: nil)
     }
     

@@ -32,11 +32,18 @@ struct DailyMissionsManager {
             newDailyChallenge?.dateAsDaily = Date()
             _ = self.islandsManager.updateDailyChallenge(forIsland: islandName, toChallenge: newDailyChallenge!)
         } else {
-            // Fazer algo para caso não tenha mais missão
             return nil
         }
         
         return lastDailyChallenge
+    }
+    
+    /// Set to true the done attribute for the challenge and set the time attribute of this challenge to the actual date
+    /// - Parameter forChallenge: Challenge that will be modified
+    public func setDoneStatus(forChallenge challenge: Challenge?) {
+        challenge?.done = true
+        challenge?.time = Date()
+        _ = ChallengeManager.shared.saveContext()
     }
 
     /// Muda o status de done para os desafios que foram aceitos mas não foram concluídos
@@ -52,12 +59,12 @@ struct DailyMissionsManager {
         return thereIsUndoneChallenge
     }
     
-    func getAvailableChallenge(forIsland islandName: String) -> Challenge? {
+    private func getAvailableChallenge(forIsland islandName: String) -> Challenge? {
         let islandChallenges = islandsManager.getChallenges(fromIsland: islandName)!
         var challengesCount = islandChallenges.count //Auxiliar para garantir saída do while
         var randomIndex = getRandomNumber(maximum: challengesCount)
         
-        while(islandChallenges[randomIndex].accepted && challengesCount > 0) {
+        while (islandChallenges[randomIndex].accepted && challengesCount > 0) {
             challengesCount -= 1
             randomIndex = (randomIndex + 1) % islandChallenges.count
         }
