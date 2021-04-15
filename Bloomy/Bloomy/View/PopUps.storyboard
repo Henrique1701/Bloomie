@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,7 +23,7 @@
         <!--Challenge Pop Up View Controller-->
         <scene sceneID="NdD-RS-qAJ">
             <objects>
-                <viewController storyboardIdentifier="ChallengePopUp" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="4gS-XJ-ah1" customClass="ChallengePopUpViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChallengePopUp" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="4gS-XJ-ah1" customClass="ChallengePopUpViewController" customModule="Bloomie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6nj-zd-k93">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -108,7 +109,7 @@
         <!--Done Pop Up View Controller-->
         <scene sceneID="2WN-FH-dUb">
             <objects>
-                <viewController storyboardIdentifier="DonePopUp" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="cd6-hB-nrB" customClass="DonePopUpViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DonePopUp" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="cd6-hB-nrB" customClass="DonePopUpViewController" customModule="Bloomie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OID-2I-tql">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -205,7 +206,7 @@
         <!--Reward Pop Up View Controller-->
         <scene sceneID="XcC-5V-2Ag">
             <objects>
-                <viewController storyboardIdentifier="RewardPopUp" modalPresentationStyle="overCurrentContext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DBh-4h-gf3" customClass="RewardPopUpViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RewardPopUp" modalPresentationStyle="overCurrentContext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DBh-4h-gf3" customClass="RewardPopUpViewController" customModule="Bloomie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Dg-KW-ltq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -223,13 +224,13 @@
                                 <rect key="frame" x="41.5" y="243.5" width="331" height="409"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parabéns!" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Hgg-be-DOJ">
-                                        <rect key="frame" x="8" y="40" width="315" height="42"/>
+                                        <rect key="frame" x="8" y="44" width="315" height="42"/>
                                         <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Essa é a sua recompensa:" textAlignment="center" lineBreakMode="clip" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="d3L-xo-TEp">
-                                        <rect key="frame" x="39" y="68" width="253" height="70"/>
+                                        <rect key="frame" x="39" y="74.5" width="253" height="70"/>
                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -252,7 +253,7 @@
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iq9-ot-6Zn">
-                                        <rect key="frame" x="75.5" y="145" width="180" height="180"/>
+                                        <rect key="frame" x="79" y="152" width="173" height="173"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="iq9-ot-6Zn" secondAttribute="height" multiplier="1:1" id="BxO-Vf-LLk"/>
                                         </constraints>
@@ -264,7 +265,7 @@
                                     <constraint firstItem="jQC-af-OXo" firstAttribute="centerX" secondItem="PlC-KE-XjA" secondAttribute="centerX" id="4Ky-9B-nQe"/>
                                     <constraint firstItem="iq9-ot-6Zn" firstAttribute="centerX" secondItem="PlC-KE-XjA" secondAttribute="centerX" id="52x-ap-yzH"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="jyN-ZF-4go" secondAttribute="trailing" multiplier="1.05" id="CyP-iE-P7I"/>
-                                    <constraint firstItem="Hgg-be-DOJ" firstAttribute="top" secondItem="jyN-ZF-4go" secondAttribute="bottom" constant="1.5" id="H3n-xd-T0D"/>
+                                    <constraint firstItem="Hgg-be-DOJ" firstAttribute="top" secondItem="jyN-ZF-4go" secondAttribute="bottom" multiplier="1.1" constant="1.5" id="H3n-xd-T0D"/>
                                     <constraint firstItem="Hgg-be-DOJ" firstAttribute="height" secondItem="PlC-KE-XjA" secondAttribute="height" multiplier="0.102689" id="JUG-8L-JLm"/>
                                     <constraint firstItem="Hgg-be-DOJ" firstAttribute="centerX" secondItem="PlC-KE-XjA" secondAttribute="centerX" id="MCR-5z-s1H"/>
                                     <constraint firstAttribute="bottom" secondItem="jQC-af-OXo" secondAttribute="bottom" constant="14" id="Tem-uo-PKl"/>
@@ -308,7 +309,7 @@
         <!--Journey Pop Up View Controller-->
         <scene sceneID="H3C-gf-cEC">
             <objects>
-                <viewController storyboardIdentifier="JourneyPopUp" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="2Om-li-Mfm" customClass="JourneyPopUpViewController" customModule="Bloomy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="JourneyPopUp" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="2Om-li-Mfm" customClass="JourneyPopUpViewController" customModule="Bloomie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZN3-S1-ZhE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -328,7 +329,10 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ui-Pf-WIz">
                                         <rect key="frame" x="287.5" y="16" width="20" height="22"/>
-                                        <state key="normal" image="closeButton"/>
+                                        <color key="tintColor" name="cor_fonte"/>
+                                        <state key="normal" image="xmark" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="18" weight="bold"/>
+                                        </state>
                                         <connections>
                                             <action selector="touchedCloseButton:" destination="2Om-li-Mfm" eventType="touchUpInside" id="izL-kb-P7L"/>
                                         </connections>
@@ -349,6 +353,16 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9im-0t-q3J">
+                                        <rect key="frame" x="22" y="15" width="21" height="24"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="square.and.arrow.up" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="16" weight="bold"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="touchedShareButton:" destination="2Om-li-Mfm" eventType="touchUpInside" id="XRi-Wb-XqO"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -357,16 +371,20 @@
                                     <constraint firstItem="M7M-h4-2nI" firstAttribute="height" secondItem="LyY-9f-iOM" secondAttribute="height" multiplier="0.261614" id="EO1-Ur-Lck"/>
                                     <constraint firstItem="9Ui-Pf-WIz" firstAttribute="width" secondItem="LyY-9f-iOM" secondAttribute="width" multiplier="0.060423" id="FU5-K0-5Ou"/>
                                     <constraint firstItem="vIX-7w-2UK" firstAttribute="top" secondItem="M7M-h4-2nI" secondAttribute="bottom" constant="8" symbolic="YES" id="JbM-9z-pJ2"/>
+                                    <constraint firstItem="9im-0t-q3J" firstAttribute="height" secondItem="LyY-9f-iOM" secondAttribute="height" multiplier="0.0586797" id="O5K-Gl-LJ3"/>
                                     <constraint firstItem="M7M-h4-2nI" firstAttribute="centerX" secondItem="LyY-9f-iOM" secondAttribute="centerX" id="PbI-FB-cTl"/>
                                     <constraint firstItem="M7M-h4-2nI" firstAttribute="width" secondItem="LyY-9f-iOM" secondAttribute="width" multiplier="0.287009" id="Ta2-tM-Wlh"/>
+                                    <constraint firstItem="9im-0t-q3J" firstAttribute="leading" secondItem="LyY-9f-iOM" secondAttribute="leading" constant="22" id="V0e-Og-ULr"/>
                                     <constraint firstItem="9Ui-Pf-WIz" firstAttribute="height" secondItem="LyY-9f-iOM" secondAttribute="height" multiplier="0.0537897" id="VwS-mX-FHW"/>
                                     <constraint firstItem="vIX-7w-2UK" firstAttribute="centerX" secondItem="LyY-9f-iOM" secondAttribute="centerX" id="abV-6e-inN"/>
                                     <constraint firstItem="fqW-9r-M2O" firstAttribute="height" secondItem="LyY-9f-iOM" secondAttribute="height" multiplier="0.0635697" id="d5H-nc-5Se"/>
                                     <constraint firstAttribute="bottom" secondItem="fqW-9r-M2O" secondAttribute="bottom" constant="20" id="dth-Yo-3K9"/>
                                     <constraint firstItem="fqW-9r-M2O" firstAttribute="width" secondItem="LyY-9f-iOM" secondAttribute="width" multiplier="0.456193" id="erm-6o-afK"/>
                                     <constraint firstItem="9Ui-Pf-WIz" firstAttribute="top" secondItem="LyY-9f-iOM" secondAttribute="topMargin" multiplier="2" id="etb-Yp-JaR"/>
+                                    <constraint firstItem="9im-0t-q3J" firstAttribute="width" secondItem="LyY-9f-iOM" secondAttribute="width" multiplier="0.0634441" id="f2L-KC-3y9"/>
                                     <constraint firstItem="vIX-7w-2UK" firstAttribute="width" secondItem="LyY-9f-iOM" secondAttribute="width" multiplier="0.873112" id="mJe-6O-dMb"/>
                                     <constraint firstItem="M7M-h4-2nI" firstAttribute="top" secondItem="LyY-9f-iOM" secondAttribute="topMargin" multiplier="4" id="qxe-eq-0Vh"/>
+                                    <constraint firstItem="9im-0t-q3J" firstAttribute="centerY" secondItem="9Ui-Pf-WIz" secondAttribute="centerY" id="rV4-xI-fZi"/>
                                     <constraint firstItem="fqW-9r-M2O" firstAttribute="centerX" secondItem="LyY-9f-iOM" secondAttribute="centerX" id="zlY-2L-MHR"/>
                                 </constraints>
                             </view>
@@ -400,6 +418,11 @@
     <resources>
         <image name="botao_desafio_do_dia" width="191" height="48"/>
         <image name="closeButton" width="19.5" height="19"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <namedColor name="cor_fonte">
+            <color red="0.14499999582767487" green="0.14499999582767487" blue="0.15299999713897705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
