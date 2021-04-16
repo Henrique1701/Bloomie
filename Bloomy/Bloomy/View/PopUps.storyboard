@@ -399,7 +399,7 @@
         <!--Delayed Mission Pop Up View Controller-->
         <scene sceneID="8if-bE-UL4">
             <objects>
-                <viewController storyboardIdentifier="DelayedMissionPopUp" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XPo-XY-GwM" customClass="DelayedMissionPopUpViewController" customModule="Bloomie" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DelayedMissionPopUp" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XPo-XY-GwM" customClass="DelayedMissionPopUpViewController" customModule="Bloomie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8kZ-x9-eF4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -466,6 +466,7 @@
                     <connections>
                         <outlet property="dismissMissionButton" destination="izC-7x-M2Q" id="3Ij-DD-hBf"/>
                         <outlet property="doneMissionButton" destination="ZVM-qA-XEY" id="Pao-6U-xsI"/>
+                        <outlet property="missionLabel" destination="FVE-Xu-gEf" id="8g7-sL-qRq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kNV-z2-F2j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
