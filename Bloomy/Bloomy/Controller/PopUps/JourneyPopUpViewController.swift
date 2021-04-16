@@ -50,7 +50,8 @@ class JourneyPopUpViewController: UIViewController {
         let buttonCancel = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
         
         let buttonInsta = UIAlertAction(title: "Instagram", style: .default) { _ in
-            self.shareInstagram()
+            let share = StructsForShare(text: self.summary!)
+            share.shareInstagram()
         }
         
         let buttonTwitter = UIAlertAction(title: "Twitter", style: .default) { _ in
@@ -70,32 +71,5 @@ class JourneyPopUpViewController: UIViewController {
         
     }
     
-    func shareInstagram() {
-        UIGraphicsBeginImageContextWithOptions(
-            CGSize(width: self.view.bounds.width, height: self.view.bounds.height),
-            false,
-            2
-        )
-        
-        self.view.layer.render(in: UIGraphicsGetCurrentContext()!)
-        let screenshot = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
-        
-        if let urlScheme = URL(string: "instagram-stories://share") {
-            
-            if UIApplication.shared.canOpenURL(urlScheme) {
-                
-                let image = UIImage(named: "AA1")
-                
-                let imageData: Data = screenshot.pngData()!
-                
-                let items = [["com.instagram.sharedSticker.backgroundImage, "com.instagram.sharedSticker.stickerImage": imageData]]
-                let pasteboardOptions = [UIPasteboard.OptionsKey.expirationDate: Date().addingTimeInterval(60*5)]
-                
-                UIPasteboard.general.setItems(items, options: pasteboardOptions)
-                
-                UIApplication.shared.open(urlScheme, options: [:], completionHandler: nil)
-            }
-        }
-    }
+    
 }
