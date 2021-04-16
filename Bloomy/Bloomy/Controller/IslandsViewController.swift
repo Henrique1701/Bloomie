@@ -30,21 +30,13 @@ class IslandsViewController: UIViewController {
     //var dailyChallenge: Challenge?
     let dailyMissionsManager = DailyMissionsManager.shared
     
-    fileprivate func showAlert(_ lastChallenge: Challenge) {
-        let alert = UIAlertController(title: "Você tem missão em aberto nessa ilha", message: "Missão: \(String(describing: lastChallenge.summary))", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
-            NSLog("The \"OK\" alert occured.")
-        }))
-        self.present(alert, animated: true, completion: nil)
-    }
-    
     fileprivate func setNewDailyChallenge() {
         
         if let dateAsDaily =  self.island.dailyChallenge?.dateAsDaily {
             if (!isSameDay(userDate: dateAsDaily, actualDate: Date())) {
                 if let lastChallenge = self.dailyMissionsManager.updateDailyMission(forIsland: island.name!) {
                     if (lastChallenge.accepted && !lastChallenge.done) {
-                        self.showAlert(lastChallenge)
+                        self.showDelayedMissionPopUp(withChallenge: lastChallenge)
                     }
                 }
             }
@@ -234,6 +226,13 @@ class IslandsViewController: UIViewController {
         } else {
             fatalError("There is no available reward")
         }
+    }
+    
+    func showDelayedMissionPopUp(withChallenge challenge: Challenge?) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "PopUps", bundle: nil)
+        let popup = storyBoard.instantiateViewController(identifier: "DelayedMissionPopUp") as? DelayedMissionPopUpViewController
+        popup!.challenge = challenge
+        self.present(popup!, animated:true)
     }
     
     func getAvailableReward(inRewards rewards: [Reward]) -> Reward? {
