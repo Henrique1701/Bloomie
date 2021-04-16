@@ -44,6 +44,15 @@ class JourneyPopUpViewController: UIViewController {
     }
 
     @IBAction func touchedShareButton(_ sender: Any) {
+        
+        let image = UIImage(named: "instagram")
+        let custom = CustomActivity(title: "Stories")
+        StructsForShare.shared.setTextForImage(text: self.summary!)
+        let activity = UIActivityViewController(activityItems: [image!], applicationActivities: [custom])
+        
+        present(activity, animated: true, completion: nil)
+        
+        /*
         let alert = UIAlertController(title: "Compartilhar", message: nil, preferredStyle: .actionSheet)
         alert.view.tintColor = .black
         
@@ -68,7 +77,7 @@ class JourneyPopUpViewController: UIViewController {
         alert.addAction(buttonCancel)
         
         present(alert, animated: true, completion: nil)
-        
+        */
     }
     
     

@@ -10,9 +10,10 @@ import UIKit
 
 struct StructsForShare {
     
-    var textForImage: String = ""
+    static var shared = StructsForShare()
+    private var textForImage: String = ""
     
-    init(text: String) {
+    mutating func setTextForImage(text: String) {
         self.textForImage = text
     }
     
@@ -34,7 +35,7 @@ struct StructsForShare {
         }
     }
     
-    func getImageForShare() -> UIImage {
+    private func getImageForShare() -> UIImage {
         let scale = UIScreen.main.scale
         UIGraphicsBeginImageContextWithOptions(
             CGSize(width: 330, height: 370),
