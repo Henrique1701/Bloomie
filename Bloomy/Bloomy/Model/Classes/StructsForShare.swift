@@ -19,7 +19,7 @@ struct StructsForShare {
     
     func shareInstagram() {
         let background = UIImage(named: "background_stories")
-        let image = getImageForShare()
+        let image = getPopupImage()
         
         if let urlScheme = URL(string: "instagram-stories://share") {
             
@@ -35,7 +35,38 @@ struct StructsForShare {
         }
     }
     
-    private func getImageForShare() -> UIImage {
+    func getImageForShare() -> UIImage {
+        let scale = UIScreen.main.scale
+        UIGraphicsBeginImageContextWithOptions(
+            CGSize(width: 450, height: 600),
+            false,
+            scale
+        )
+        
+        // View
+        let view = UIView()
+        view.frame = CGRect(x: 0, y: 0, width: 450, height: 600)
+        
+        // Background
+        let backgroundImage = UIImage(named: "background_share_image")
+        let background = UIImageView(image: backgroundImage)
+        background.frame = view.frame
+        view.addSubview(background)
+        
+        // Popup
+        let popupImage = self.getPopupImage()
+        let popup = UIImageView(image: popupImage)
+        popup.frame = CGRect(x: 60, y: 115, width: 330, height: 370)
+        view.addSubview(popup)
+        
+        view.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let screenshot = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        
+        return screenshot
+    }
+    
+    private func getPopupImage() -> UIImage {
         let scale = UIScreen.main.scale
         UIGraphicsBeginImageContextWithOptions(
             CGSize(width: 330, height: 370),

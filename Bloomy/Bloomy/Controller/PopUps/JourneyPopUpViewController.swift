@@ -44,40 +44,13 @@ class JourneyPopUpViewController: UIViewController {
     }
 
     @IBAction func touchedShareButton(_ sender: Any) {
-        
-        let image = UIImage(named: "instagram")
-        let custom = CustomActivity(title: "Stories")
         StructsForShare.shared.setTextForImage(text: self.summary!)
-        let activity = UIActivityViewController(activityItems: [image!], applicationActivities: [custom])
+        let image = StructsForShare.shared.getImageForShare()
+        let custom = CustomActivity(title: "Stories")
+        let activity = UIActivityViewController(activityItems: [image], applicationActivities: [custom])
         
         present(activity, animated: true, completion: nil)
         
-        /*
-        let alert = UIAlertController(title: "Compartilhar", message: nil, preferredStyle: .actionSheet)
-        alert.view.tintColor = .black
-        
-        let buttonCancel = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
-        
-        let buttonInsta = UIAlertAction(title: "Instagram", style: .default) { _ in
-            let share = StructsForShare(text: self.summary!)
-            share.shareInstagram()
-        }
-        
-        let buttonTwitter = UIAlertAction(title: "Twitter", style: .default) { _ in
-            // TODO: Criar função para compartilhar no Twitter
-        }
-        
-        let buttonSave = UIAlertAction(title: "Salvar", style: .default) { _ in
-            // TODO: Criar função para salvar imagem na galeria
-        }
-        
-        alert.addAction(buttonInsta)
-        alert.addAction(buttonTwitter)
-        alert.addAction(buttonSave)
-        alert.addAction(buttonCancel)
-        
-        present(alert, animated: true, completion: nil)
-        */
     }
     
     
