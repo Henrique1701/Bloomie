@@ -41,7 +41,10 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZRT-RR-n1f">
                                         <rect key="frame" x="289.5" y="16" width="18" height="22.5"/>
-                                        <state key="normal" image="closeButton"/>
+                                        <color key="tintColor" name="cor_fonte"/>
+                                        <state key="normal" image="xmark" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="18" weight="bold"/>
+                                        </state>
                                         <connections>
                                             <action selector="close:" destination="4gS-XJ-ah1" eventType="touchUpInside" id="eJj-l7-5Ma"/>
                                         </connections>
@@ -63,15 +66,29 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0fV-XE-rG8">
+                                        <rect key="frame" x="23" y="16.5" width="19" height="22"/>
+                                        <color key="tintColor" name="cor_fonte"/>
+                                        <state key="normal" image="square.and.arrow.up" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="16" weight="bold"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tappedShareButton:" destination="4gS-XJ-ah1" eventType="touchUpInside" id="4PV-7M-jqq"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="RrP-TH-xKw" firstAttribute="centerX" secondItem="57R-6n-8wW" secondAttribute="centerX" id="Bfy-KJ-Jcy"/>
                                     <constraint firstItem="ZRT-RR-n1f" firstAttribute="height" secondItem="57R-6n-8wW" secondAttribute="height" multiplier="0.0550122" id="NSp-Zh-2ay"/>
+                                    <constraint firstItem="0fV-XE-rG8" firstAttribute="leading" secondItem="57R-6n-8wW" secondAttribute="leading" constant="23" id="UuO-0L-rHM"/>
                                     <constraint firstItem="RrP-TH-xKw" firstAttribute="height" secondItem="57R-6n-8wW" secondAttribute="height" multiplier="0.599022" id="XPU-Ev-RmV"/>
+                                    <constraint firstItem="0fV-XE-rG8" firstAttribute="width" secondItem="57R-6n-8wW" secondAttribute="width" multiplier="0.0574018" id="a8g-L4-mF4"/>
                                     <constraint firstItem="RrP-TH-xKw" firstAttribute="leading" secondItem="57R-6n-8wW" secondAttribute="leading" constant="13" id="qqU-iW-HSg"/>
                                     <constraint firstAttribute="bottom" secondItem="09F-T9-CzD" secondAttribute="bottom" constant="14" id="s5b-IZ-6iG"/>
+                                    <constraint firstItem="0fV-XE-rG8" firstAttribute="height" secondItem="57R-6n-8wW" secondAttribute="height" multiplier="0.0537897" id="tCu-u3-EEG"/>
                                     <constraint firstItem="ZRT-RR-n1f" firstAttribute="width" secondItem="57R-6n-8wW" secondAttribute="width" multiplier="0.0543807" id="u9r-3I-5US"/>
+                                    <constraint firstItem="0fV-XE-rG8" firstAttribute="centerY" secondItem="ZRT-RR-n1f" secondAttribute="centerY" id="uBE-On-XKU"/>
                                     <constraint firstAttribute="trailing" secondItem="RrP-TH-xKw" secondAttribute="trailing" constant="13" id="wEq-J3-cb9"/>
                                     <constraint firstItem="RrP-TH-xKw" firstAttribute="centerY" secondItem="57R-6n-8wW" secondAttribute="centerY" id="xCC-eB-Rww"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="ZRT-RR-n1f" secondAttribute="trailing" multiplier="1.05" id="yM6-kP-Pdb"/>
@@ -137,7 +154,10 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gkJ-Lj-7u4">
                                         <rect key="frame" x="289.5" y="16" width="18" height="22.5"/>
-                                        <state key="normal" image="closeButton"/>
+                                        <color key="tintColor" name="cor_fonte"/>
+                                        <state key="normal" image="xmark" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="18" weight="bold"/>
+                                        </state>
                                         <connections>
                                             <action selector="close:" destination="cd6-hB-nrB" eventType="touchUpInside" id="1MX-eK-RQb"/>
                                         </connections>
@@ -155,6 +175,16 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qI1-b6-g1J">
+                                        <rect key="frame" x="23" y="16.5" width="19" height="22"/>
+                                        <color key="tintColor" name="cor_fonte"/>
+                                        <state key="normal" image="square.and.arrow.up" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="16" weight="bold"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tappedShareButton:" destination="cd6-hB-nrB" eventType="touchUpInside" id="ZDp-Ak-xUg"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -168,10 +198,14 @@
                                     <constraint firstItem="VZu-jz-pSL" firstAttribute="height" secondItem="c5d-6q-Xtw" secondAttribute="height" multiplier="0.200489" id="Oot-0l-o9r"/>
                                     <constraint firstItem="WG7-Rt-fph" firstAttribute="bottom" secondItem="piH-OW-3rQ" secondAttribute="bottom" multiplier="1.2" id="P48-XP-JIM"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="gkJ-Lj-7u4" secondAttribute="trailing" multiplier="1.05" id="PIN-Qk-Kf4"/>
+                                    <constraint firstItem="qI1-b6-g1J" firstAttribute="leading" secondItem="c5d-6q-Xtw" secondAttribute="leading" constant="23" id="ULm-R3-EgJ"/>
                                     <constraint firstAttribute="bottom" secondItem="WG7-Rt-fph" secondAttribute="bottom" constant="14" id="VoN-gv-ksG"/>
                                     <constraint firstItem="gkJ-Lj-7u4" firstAttribute="height" secondItem="c5d-6q-Xtw" secondAttribute="height" multiplier="0.0550122" id="a3N-Wc-0yB"/>
+                                    <constraint firstItem="qI1-b6-g1J" firstAttribute="centerY" secondItem="gkJ-Lj-7u4" secondAttribute="centerY" id="cff-AU-46f"/>
+                                    <constraint firstItem="qI1-b6-g1J" firstAttribute="width" secondItem="c5d-6q-Xtw" secondAttribute="width" multiplier="0.0574018" id="gue-8t-hfV"/>
                                     <constraint firstItem="VZu-jz-pSL" firstAttribute="centerX" secondItem="c5d-6q-Xtw" secondAttribute="centerX" id="m7E-gb-12Z"/>
                                     <constraint firstAttribute="trailing" secondItem="piH-OW-3rQ" secondAttribute="trailing" constant="13" id="p1f-Su-xXi"/>
+                                    <constraint firstItem="qI1-b6-g1J" firstAttribute="height" secondItem="c5d-6q-Xtw" secondAttribute="height" multiplier="0.0537897" id="rBt-WL-ez5"/>
                                     <constraint firstItem="WG7-Rt-fph" firstAttribute="centerX" secondItem="c5d-6q-Xtw" secondAttribute="centerX" id="zCE-4R-8ck"/>
                                 </constraints>
                             </view>
@@ -247,7 +281,10 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jyN-ZF-4go">
                                         <rect key="frame" x="289.5" y="16" width="18" height="22.5"/>
-                                        <state key="normal" image="closeButton"/>
+                                        <color key="tintColor" name="cor_fonte"/>
+                                        <state key="normal" image="xmark" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="18" weight="bold"/>
+                                        </state>
                                         <connections>
                                             <action selector="close:" destination="DBh-4h-gf3" eventType="touchUpInside" id="D2M-bl-KGX"/>
                                         </connections>
@@ -354,7 +391,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9im-0t-q3J">
-                                        <rect key="frame" x="22" y="15" width="21" height="24"/>
+                                        <rect key="frame" x="23" y="15" width="21" height="24"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" image="square.and.arrow.up" catalog="system">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="16" weight="bold"/>
@@ -374,7 +411,7 @@
                                     <constraint firstItem="9im-0t-q3J" firstAttribute="height" secondItem="LyY-9f-iOM" secondAttribute="height" multiplier="0.0586797" id="O5K-Gl-LJ3"/>
                                     <constraint firstItem="M7M-h4-2nI" firstAttribute="centerX" secondItem="LyY-9f-iOM" secondAttribute="centerX" id="PbI-FB-cTl"/>
                                     <constraint firstItem="M7M-h4-2nI" firstAttribute="width" secondItem="LyY-9f-iOM" secondAttribute="width" multiplier="0.287009" id="Ta2-tM-Wlh"/>
-                                    <constraint firstItem="9im-0t-q3J" firstAttribute="leading" secondItem="LyY-9f-iOM" secondAttribute="leading" constant="22" id="V0e-Og-ULr"/>
+                                    <constraint firstItem="9im-0t-q3J" firstAttribute="leading" secondItem="LyY-9f-iOM" secondAttribute="leading" constant="23" id="V0e-Og-ULr"/>
                                     <constraint firstItem="9Ui-Pf-WIz" firstAttribute="height" secondItem="LyY-9f-iOM" secondAttribute="height" multiplier="0.0537897" id="VwS-mX-FHW"/>
                                     <constraint firstItem="vIX-7w-2UK" firstAttribute="centerX" secondItem="LyY-9f-iOM" secondAttribute="centerX" id="abV-6e-inN"/>
                                     <constraint firstItem="fqW-9r-M2O" firstAttribute="height" secondItem="LyY-9f-iOM" secondAttribute="height" multiplier="0.0635697" id="d5H-nc-5Se"/>
@@ -417,7 +454,6 @@
     </scenes>
     <resources>
         <image name="botao_desafio_do_dia" width="191" height="48"/>
-        <image name="closeButton" width="19.5" height="19"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="cor_fonte">

@@ -50,8 +50,5 @@ class JourneyPopUpViewController: UIViewController {
         let activity = UIActivityViewController(activityItems: [image], applicationActivities: [custom])
         
         present(activity, animated: true, completion: nil)
-        
     }
-    
-    
 }
