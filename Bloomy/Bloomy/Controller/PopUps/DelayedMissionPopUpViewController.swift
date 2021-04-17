@@ -19,11 +19,20 @@ class DelayedMissionPopUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setupStyles()
+    }
+    
+    // MARK: - Style
+    
+    private func setupStyles() {
+        self.setupDoneMissionButtonStyle()
         self.setupContentViewStyle()
         self.setupMissionLabelStyle()
     }
     
-    // MARK: - Style
+    private func setupDoneMissionButtonStyle() {
+        self.doneMissionButton.layer.cornerRadius = 35
+    }
     
     private func setupContentViewStyle() {
         self.contentView.layer.cornerRadius = 35
@@ -34,6 +43,7 @@ class DelayedMissionPopUpViewController: UIViewController {
     }
     
     // MARK: - Actions
+    
     @IBAction func doneMission(_ sender: Any) {
         dailyMissionManager.setDoneStatus(forChallenge: self.challenge)
         self.dismiss(animated: true, completion: nil)
