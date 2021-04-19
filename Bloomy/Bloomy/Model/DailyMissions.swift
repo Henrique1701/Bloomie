@@ -32,7 +32,6 @@ struct DailyMissionsManager {
             newDailyChallenge?.dateAsDaily = Date()
             _ = self.islandsManager.updateDailyChallenge(forIsland: islandName, toChallenge: newDailyChallenge!)
         } else {
-            // Fazer algo para caso não tenha mais missão
             return nil
         }
         
