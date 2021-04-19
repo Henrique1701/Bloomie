@@ -31,6 +31,7 @@ class DelayedMissionPopUpViewController: UIViewController {
     @IBAction func doneMission(_ sender: Any) {
         dailyMissionManager.setDoneStatus(forChallenge: self.challenge)
         self.dismiss(animated: true, completion: nil)
+        NotificationCenter.default.post(name: .delayedMissionToIslands, object: self)
         haptics.notificationOccurred(.success)
     }
     
