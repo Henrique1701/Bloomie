@@ -22,6 +22,7 @@ class IslandsViewController: UIViewController {
     var doneObserver: NSObjectProtocol?
     var scene = SKScene()
     var animationObserver: NSObjectProtocol?
+    var delayedObserver: NSObjectProtocol?
     var rewardIdToAnimate = ""
     var originalScaleFromIsland = CGAffineTransform()
     var originalFrameFromIsland = CGRect()
@@ -73,7 +74,7 @@ class IslandsViewController: UIViewController {
         doneObserver = NotificationCenter.default.addObserver(forName: .doneChallenge, object: nil, queue: OperationQueue.main) { _ in
             self.doneChallenge()
             self.chooseButtonToShow()
-            self.showRewardPopUp()
+            self.showRewardPopUp(toChallenge: self.island.dailyChallenge)
             //self.senderWasDesafios = false
            // self.dailyChallenge = nil
             self.loadViewIfNeeded()
@@ -81,6 +82,10 @@ class IslandsViewController: UIViewController {
         
         animationObserver = NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "animationObserver"), object: nil, queue: OperationQueue.main) { _ in
             self.rewardAnimation()
+        }
+        
+        delayedObserver = NotificationCenter.default.addObserver(forName: .delayedMissionToIslands, object: nil, queue: OperationQueue.main) { _ in
+            self.showRewardPopUp(toChallenge: self.island.lastDailyChallenge)
         }
         
         if (senderWasDesafios) {
@@ -102,6 +107,10 @@ class IslandsViewController: UIViewController {
         
         if animationObserver != nil {
             NotificationCenter.default.removeObserver(animationObserver!)
+        }
+        
+        if delayedObserver != nil {
+            NotificationCenter.default.removeObserver(delayedObserver!)
         }
         
         //self.senderWasDesafios = false
@@ -210,7 +219,7 @@ class IslandsViewController: UIViewController {
         } 
     }
     
-    func showRewardPopUp() {
+    func showRewardPopUp(toChallenge challenge: Challenge?) {
         let storyBoard: UIStoryboard = UIStoryboard(name: "PopUps", bundle: nil)
         let popup = storyBoard.instantiateViewController(identifier: "RewardPopUp") as? RewardPopUpViewController
         let rewards = IslandManager.shared.getRewards(fromIsland: island.name!)!
@@ -221,7 +230,7 @@ class IslandsViewController: UIViewController {
             self.rewardIdToAnimate = availableReward.id!
             self.present(popup!, animated: true)
             availableReward.isShown = true
-            availableReward.rewardToChallenge = self.island.dailyChallenge
+            availableReward.rewardToChallenge = challenge
             _ = RewardManager.shared.saveContext()
         } else {
             fatalError("There is no available reward")
