@@ -124,7 +124,7 @@ class IslandsViewController: UIViewController {
     
     private func setNewDailyChallenge() {
         if let dateAsDaily =  self.island.dailyChallenge?.dateAsDaily {
-            if (!isSameDay(userDate: dateAsDaily, actualDate: Date())) {
+            if (!isSameDay(firstDate: dateAsDaily, secondDate: Date())) {
                 if let lastChallenge = self.dailyMissionsManager.updateDailyMission(forIsland: island.name!) {
                     if (lastChallenge.accepted && !lastChallenge.done) {
                         self.showDelayedMissionPopUp(withChallenge: lastChallenge)

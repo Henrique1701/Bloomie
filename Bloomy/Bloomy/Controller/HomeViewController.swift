@@ -48,7 +48,7 @@ class HomeViewController: UIViewController {
         setUpIslandsDisplay(quantityIslands: self.quantityIslands)
         
         //Observa se já carregou os challenges para aquele dia
-        if (!isSameDay(userDate: userManager.getLastSeen() ?? Date(), actualDate: Date())) {
+        if (!isSameDay(firstDate: userManager.getLastSeen() ?? Date(), secondDate: Date())) {
             self.daysOfUserActivation()
         }
     }
