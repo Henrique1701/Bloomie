@@ -36,7 +36,6 @@ class IslandsViewController: UIViewController {
         scene = SKScene(fileNamed: sceneName)!
         
         self.setNewDailyChallenge()
-        
         self.setupStyle()
         self.setupSKScene()
         self.chooseButtonToShow()
@@ -119,25 +118,24 @@ class IslandsViewController: UIViewController {
         } else if (segue.identifier == "toDonePopUpViewControllerSegue") {
             let popup = segue.destination as? DonePopUpViewController
             popup!.summary = self.island.dailyChallenge?.summary ?? ""
-            //popup!.summary = self.dailyChallenge?.summary ?? self.island.dailyChallenge?.summary ?? ""
             popup!.islandName = island.name!
         }
     }
     
     private func setNewDailyChallenge() {
-        
         if let dateAsDaily =  self.island.dailyChallenge?.dateAsDaily {
             if (!isSameDay(userDate: dateAsDaily, actualDate: Date())) {
                 if let lastChallenge = self.dailyMissionsManager.updateDailyMission(forIsland: island.name!) {
                     if (lastChallenge.accepted && !lastChallenge.done) {
                         self.showDelayedMissionPopUp(withChallenge: lastChallenge)
                     }
+                } else {
+                    self.showFinishedAllMissionsAlert()
                 }
             }
         } else {
             _ = self.dailyMissionsManager.updateDailyMission(forIsland: island.name!)
         }
-        
     }
     
     func acceptChallenge() {
@@ -312,6 +310,14 @@ class IslandsViewController: UIViewController {
         alert.addAction(sendButton)
         alert.addAction(noButton)
         alert.preferredAction = sendButton
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    private func showFinishedAllMissionsAlert() {
+        let alert = UIAlertController(title: "Acabou missão para ilha \(String(island.name!))", message: "Parabéns! Você concluiu todas missões da ilha \(String(island.name!)). Como você está se sentindo?\n Em breve, teremos mais missões nessa ilha (:", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+            NSLog("The \"OK\" alert occured.")
+        }))
         self.present(alert, animated: true, completion: nil)
     }
     
