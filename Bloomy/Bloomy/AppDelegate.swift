@@ -8,6 +8,7 @@
 import UIKit
 import CoreData
 import Firebase
+import UserNotifications
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.makeKeyAndVisible()
         self.setInitalViewController()
+        //Se o usuário já tiver aceito notificações
+        self.callNotificationFunctions()
         
         /*
          * Conecta o Firebase quando o app for inicializado
@@ -56,6 +59,62 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let nserror = error as NSError
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
+        }
+    }
+    
+    // MARK: - Remember to use the app Notification
+    
+    private func callNotificationFunctions() {
+        let center = UNUserNotificationCenter.current()
+        
+        center.getNotificationSettings(completionHandler: { settings in
+          switch settings.authorizationStatus {
+          case .authorized, .provisional:
+            print("authorized")
+            self.removeRememberToUserNotification()
+            self.rememberUserToUseNotification()
+          case .denied:
+            print("denied")
+          case .notDetermined:
+            print("not determined, ask user for permission now")
+          case .ephemeral:
+            print("Ephemeral")
+          @unknown default:
+            print("unknown")
+          }
+        })
+        
+    }
+    
+    private func removeRememberToUserNotification() {
+        //Se já tem notificaçõe liberado
+        let uuidString = userDefaults.string(forKey: UserDefaultsKeys.rememberNotificationUUID) ?? ""
+        let notificationCenter = UNUserNotificationCenter.current()
+        notificationCenter.removePendingNotificationRequests(withIdentifiers: [uuidString])
+    }
+    
+    private func rememberUserToUseNotification() {
+        let center = UNUserNotificationCenter.current()
+        
+        let content = UNMutableNotificationContent()
+        content.title = "sentimos sua falta!"
+        content.body = "vamos florescer suas ilhas juntos?"
+        content.sound = .default
+        
+        let currentDate = Date()
+        var dateComponents = DateComponents()
+        dateComponents.day = 2
+        let twoDaysFromNow = Calendar.current.date(byAdding: dateComponents, to: currentDate)
+        dateComponents = Calendar.current.dateComponents([.day, .hour], from: twoDaysFromNow!)
+        
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+        
+        let uuidString = UUID().uuidString
+        userDefaults.set(uuidString, forKey: UserDefaultsKeys.rememberNotificationUUID)
+        let request = UNNotificationRequest(identifier: uuidString,
+                    content: content, trigger: trigger)
+        
+        center.add(request) { _ in
         }
     }
     
