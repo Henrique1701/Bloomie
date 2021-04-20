@@ -22,6 +22,7 @@
 		890079A125F002AE00F54028 /* Onboarding3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890079A025F002AE00F54028 /* Onboarding3.swift */; };
 		8905E6C3257961660015ECAC /* ChallengePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8905E6C2257961660015ECAC /* ChallengePopUpViewController.swift */; };
 		8905E6D7257E65D80015ECAC /* DonePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8905E6D6257E65D80015ECAC /* DonePopUpViewController.swift */; };
+		8910749E262761500014C3E0 /* DelayedMissionPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8910749D262761500014C3E0 /* DelayedMissionPopUpViewController.swift */; };
 		8915339A25B8A35700DB7FE8 /* JourneyCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8915339925B8A35700DB7FE8 /* JourneyCollectionViewController.swift */; };
 		891D2E47256ED7B200AC961A /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891D2E46256ED7B200AC961A /* Challenge.swift */; };
 		89249D4B257EA004002747A3 /* RewardPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89249D4A257EA004002747A3 /* RewardPopUpViewController.swift */; };
@@ -30,6 +31,7 @@
 		8928F56325670EEE0089BE0E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8928F56225670EEE0089BE0E /* Constants.swift */; };
 		8942E2E5260D0FD600ADC7DB /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8942E2E4260D0FD600ADC7DB /* Poppins-Bold.ttf */; };
 		8942E2F5260D100700ADC7DB /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8942E2F4260D100700ADC7DB /* Poppins-SemiBold.ttf */; };
+		8944509C2624C6E300E4CF7C /* DailyMissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8944509B2624C6E300E4CF7C /* DailyMissions.swift */; };
 		89566A562581A8FE00784DF3 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 89566A552581A8FE00784DF3 /* Intents.intentdefinition */; };
 		89566A5B2581A90B00784DF3 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89566A5A2581A90B00784DF3 /* NotificationsViewController.swift */; };
 		89566A632581AADA00784DF3 /* TelaPerfil.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89566A622581AADA00784DF3 /* TelaPerfil.storyboard */; };
@@ -87,6 +89,7 @@
 		890079A025F002AE00F54028 /* Onboarding3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding3.swift; sourceTree = "<group>"; };
 		8905E6C2257961660015ECAC /* ChallengePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengePopUpViewController.swift; sourceTree = "<group>"; };
 		8905E6D6257E65D80015ECAC /* DonePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonePopUpViewController.swift; sourceTree = "<group>"; };
+		8910749D262761500014C3E0 /* DelayedMissionPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelayedMissionPopUpViewController.swift; sourceTree = "<group>"; };
 		8915339925B8A35700DB7FE8 /* JourneyCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyCollectionViewController.swift; sourceTree = "<group>"; };
 		891D2E46256ED7B200AC961A /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		89249D39257E6C32002747A3 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
@@ -96,6 +99,7 @@
 		8928F56225670EEE0089BE0E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8942E2E4260D0FD600ADC7DB /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		8942E2F4260D100700ADC7DB /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		8944509B2624C6E300E4CF7C /* DailyMissions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMissions.swift; sourceTree = "<group>"; };
 		89566A552581A8FE00784DF3 /* Intents.intentdefinition */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
 		89566A5A2581A90B00784DF3 /* NotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		89566A622581AADA00784DF3 /* TelaPerfil.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TelaPerfil.storyboard; sourceTree = "<group>"; };
@@ -169,6 +173,7 @@
 				8905E6D6257E65D80015ECAC /* DonePopUpViewController.swift */,
 				89249D4A257EA004002747A3 /* RewardPopUpViewController.swift */,
 				BE2742B525C0E5A3006699E6 /* JourneyPopUpViewController.swift */,
+				8910749D262761500014C3E0 /* DelayedMissionPopUpViewController.swift */,
 			);
 			path = PopUps;
 			sourceTree = "<group>";
@@ -275,6 +280,7 @@
 				895637192577C80900CA8D3B /* Classes */,
 				895637182577C80300CA8D3B /* Database */,
 				895637172577C7FD00CA8D3B /* Settings */,
+				8944509B2624C6E300E4CF7C /* DailyMissions.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -503,6 +509,7 @@
 				7DAA427E25A8D0DD00C1CFF5 /* DesafiosDataViewController.swift in Sources */,
 				89D9D46625EED27A0024FAC6 /* Onboarding2.swift in Sources */,
 				BEC461D0255DABD8003C1D1A /* Bloomy.xcdatamodeld in Sources */,
+				8944509C2624C6E300E4CF7C /* DailyMissions.swift in Sources */,
 				7D2BEFC625685E48006AFD8C /* Island.swift in Sources */,
 				7D267544256EDB97000C57A3 /* Reward.swift in Sources */,
 				891D2E47256ED7B200AC961A /* Challenge.swift in Sources */,
@@ -515,6 +522,7 @@
 				89E69E0A25E9827000E4704C /* Onboarding.swift in Sources */,
 				89ED4BB825824CCD00A18B29 /* SiriShortcutsViewController.swift in Sources */,
 				89566A682581B27F00784DF3 /* SettingsTableViewController.swift in Sources */,
+				8910749E262761500014C3E0 /* DelayedMissionPopUpViewController.swift in Sources */,
 				BE4BE74B25A78556002AB66E /* EditIslandsViewController.swift in Sources */,
 				7DBB75F02606A8A400CB4C9B /* User+CoreDataClass.swift in Sources */,
 				12D13CF0256C2D130013E511 /* PerfilViewController.swift in Sources */,

@@ -14,6 +14,7 @@ class DesafiosDataViewController: UIViewController {
     var summaryText: String!
     var index: Int?
     var lastScreen: Bool?
+    var islandsManager = IslandManager.shared
     
     @IBOutlet weak var card: UIImageView!
     @IBOutlet weak var summaryLabel: UILabel!

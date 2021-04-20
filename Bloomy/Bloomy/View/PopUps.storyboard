@@ -451,11 +451,122 @@
             </objects>
             <point key="canvasLocation" x="3105.7971014492755" y="-525"/>
         </scene>
+        <!--Delayed Mission Pop Up View Controller-->
+        <scene sceneID="8if-bE-UL4">
+            <objects>
+                <viewController storyboardIdentifier="DelayedMissionPopUp" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XPo-XY-GwM" customClass="DelayedMissionPopUpViewController" customModule="Bloomie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8kZ-x9-eF4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3As-yh-hEk">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="L1Q-3l-Y6G">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <blurEffect style="extraLight"/>
+                            </visualEffectView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mwv-nr-5aa">
+                                <rect key="frame" x="41.5" y="243.5" width="331" height="409"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Missão em aberto" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="g2I-P2-vko">
+                                        <rect key="frame" x="65" y="30.5" width="201" height="31"/>
+                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você conseguiu concluí-la?" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="alZ-Bp-Ehb">
+                                        <rect key="frame" x="61" y="65.5" width="209" height="21"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="WsG-4n-36F">
+                                        <rect key="frame" x="21" y="100.5" width="289" height="227.5"/>
+                                        <string key="text">Feche os olhos e imagine que você está escaneando o seu corpo, da cabeça até os pés. Preste atenção nas sensações. Relaxe as áreas do seu corpo que você sentir que estão tensionadas.</string>
+                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZVM-qA-XEY">
+                                        <rect key="frame" x="172" y="342" width="128" height="53"/>
+                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="18"/>
+                                        <state key="normal" title="sim" backgroundImage="botao_sim_popup">
+                                            <color key="titleColor" name="cor_fonte"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="doneMission:" destination="XPo-XY-GwM" eventType="touchUpInside" id="d9k-nd-Gmn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izC-7x-M2Q">
+                                        <rect key="frame" x="31" y="342" width="128" height="53"/>
+                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="18"/>
+                                        <state key="normal" title="não" backgroundImage="botao_nao_popup">
+                                            <color key="titleColor" name="cor_fonte"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="dismissMission:" destination="XPo-XY-GwM" eventType="touchUpInside" id="6JL-CU-uMJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="WsG-4n-36F" firstAttribute="width" secondItem="Mwv-nr-5aa" secondAttribute="width" multiplier="0.873112" id="1kN-0a-h79"/>
+                                    <constraint firstItem="g2I-P2-vko" firstAttribute="centerX" secondItem="Mwv-nr-5aa" secondAttribute="centerX" id="2Lu-lQ-UFN"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZVM-qA-XEY" secondAttribute="bottom" constant="14" id="3ec-XV-Rw0"/>
+                                    <constraint firstItem="g2I-P2-vko" firstAttribute="width" secondItem="Mwv-nr-5aa" secondAttribute="width" multiplier="0.607251" id="9LP-xq-hdA"/>
+                                    <constraint firstItem="ZVM-qA-XEY" firstAttribute="width" secondItem="Mwv-nr-5aa" secondAttribute="width" multiplier="0.386707" id="E0v-UR-INy"/>
+                                    <constraint firstItem="izC-7x-M2Q" firstAttribute="height" secondItem="Mwv-nr-5aa" secondAttribute="height" multiplier="0.129584" id="EZp-Eh-JAE"/>
+                                    <constraint firstItem="alZ-Bp-Ehb" firstAttribute="centerX" secondItem="Mwv-nr-5aa" secondAttribute="centerX" id="Jw3-NG-zrG"/>
+                                    <constraint firstItem="g2I-P2-vko" firstAttribute="height" secondItem="Mwv-nr-5aa" secondAttribute="height" multiplier="0.0757946" id="LcW-lt-BTI"/>
+                                    <constraint firstItem="WsG-4n-36F" firstAttribute="top" secondItem="alZ-Bp-Ehb" secondAttribute="bottom" constant="14" id="LcZ-oN-Yam"/>
+                                    <constraint firstItem="alZ-Bp-Ehb" firstAttribute="width" secondItem="Mwv-nr-5aa" secondAttribute="width" multiplier="0.63142" id="PRn-Wi-f3u"/>
+                                    <constraint firstItem="izC-7x-M2Q" firstAttribute="width" secondItem="Mwv-nr-5aa" secondAttribute="width" multiplier="0.386707" id="W8b-4b-ENb"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZVM-qA-XEY" secondAttribute="trailing" constant="31" id="X4E-iu-kfx"/>
+                                    <constraint firstItem="alZ-Bp-Ehb" firstAttribute="top" secondItem="g2I-P2-vko" secondAttribute="bottom" constant="4" id="YYq-Xf-zqv"/>
+                                    <constraint firstItem="WsG-4n-36F" firstAttribute="centerX" secondItem="Mwv-nr-5aa" secondAttribute="centerX" id="ZUw-TS-25m"/>
+                                    <constraint firstItem="ZVM-qA-XEY" firstAttribute="top" secondItem="WsG-4n-36F" secondAttribute="bottom" constant="14" id="ccu-Bk-Tpx"/>
+                                    <constraint firstAttribute="bottom" secondItem="izC-7x-M2Q" secondAttribute="bottom" constant="14" id="fxr-jF-Rlg"/>
+                                    <constraint firstItem="izC-7x-M2Q" firstAttribute="leading" secondItem="Mwv-nr-5aa" secondAttribute="leading" priority="750" constant="31" id="kHX-Dj-4fX"/>
+                                    <constraint firstItem="g2I-P2-vko" firstAttribute="top" secondItem="Mwv-nr-5aa" secondAttribute="topMargin" multiplier="3.8" id="txK-KC-W0l"/>
+                                    <constraint firstItem="ZVM-qA-XEY" firstAttribute="height" secondItem="Mwv-nr-5aa" secondAttribute="height" multiplier="0.129584" id="uge-8L-3Xw"/>
+                                    <constraint firstItem="alZ-Bp-Ehb" firstAttribute="height" secondItem="Mwv-nr-5aa" secondAttribute="height" multiplier="0.0513447" id="wLd-zd-yL6"/>
+                                    <constraint firstItem="ZVM-qA-XEY" firstAttribute="leading" secondItem="izC-7x-M2Q" secondAttribute="trailing" constant="13" id="wPj-li-yk6"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fd9-B3-0Zd"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Mwv-nr-5aa" firstAttribute="height" secondItem="8kZ-x9-eF4" secondAttribute="height" multiplier="0.456473" id="5rD-jp-AtO"/>
+                            <constraint firstItem="Mwv-nr-5aa" firstAttribute="centerX" secondItem="8kZ-x9-eF4" secondAttribute="centerX" id="5z2-DF-n8r"/>
+                            <constraint firstItem="3As-yh-hEk" firstAttribute="height" secondItem="8kZ-x9-eF4" secondAttribute="height" id="ANg-Eh-ROB"/>
+                            <constraint firstItem="3As-yh-hEk" firstAttribute="width" secondItem="8kZ-x9-eF4" secondAttribute="width" id="SXt-KZ-ZKi"/>
+                            <constraint firstItem="3As-yh-hEk" firstAttribute="centerX" secondItem="8kZ-x9-eF4" secondAttribute="centerX" id="cPw-OI-iCn"/>
+                            <constraint firstItem="Mwv-nr-5aa" firstAttribute="width" secondItem="8kZ-x9-eF4" secondAttribute="width" multiplier="0.799517" id="i67-IG-f8W"/>
+                            <constraint firstItem="3As-yh-hEk" firstAttribute="centerY" secondItem="8kZ-x9-eF4" secondAttribute="centerY" id="qOM-8D-Twd"/>
+                            <constraint firstItem="Mwv-nr-5aa" firstAttribute="centerY" secondItem="8kZ-x9-eF4" secondAttribute="centerY" id="sVu-Sa-pll"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentView" destination="Mwv-nr-5aa" id="DRw-3b-W8C"/>
+                        <outlet property="dismissMissionButton" destination="izC-7x-M2Q" id="3Ij-DD-hBf"/>
+                        <outlet property="doneMissionButton" destination="ZVM-qA-XEY" id="Pao-6U-xsI"/>
+                        <outlet property="missionLabel" destination="WsG-4n-36F" id="OxW-mV-UqJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kNV-z2-F2j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3989.8550724637685" y="-525"/>
+        </scene>
     </scenes>
     <resources>
         <image name="botao_desafio_do_dia" width="191" height="48"/>
-        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
-        <image name="xmark" catalog="system" width="128" height="113"/>
+        <image name="botao_nao_popup" width="128" height="53"/>
+        <image name="botao_sim_popup" width="128" height="53"/>
+        <image name="closeButton" width="19.5" height="19"/>
         <namedColor name="cor_fonte">
             <color red="0.14499999582767487" green="0.14499999582767487" blue="0.15299999713897705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -29,6 +29,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
+    func applicationWillTerminate(_ application: UIApplication) {
+        _ = UserManager.shared.updateLastSeen(to: Date())
+    }
+    
     // MARK: - Core Data stack
     
     lazy var persistentContainer: NSPersistentContainer = {

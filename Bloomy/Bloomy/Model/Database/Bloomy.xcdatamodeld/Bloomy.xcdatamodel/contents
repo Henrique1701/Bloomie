@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20C69" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D91" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Challenge" representedClassName="Challenge" syncable="YES" codeGenerationType="class">
-        <attribute name="accepted" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
-        <attribute name="done" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="accepted" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="dateAsDaily" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="done" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="id" optional="YES" attributeType="String"/>
         <attribute name="summary" optional="YES" attributeType="String"/>
         <attribute name="time" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <relationship name="challengeToIsland" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Island" inverseName="islandToChallenge" inverseEntity="Island"/>
         <relationship name="daily" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Island" inverseName="dailyChallenge" inverseEntity="Island"/>
         <relationship name="dailyUser" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="dailyChallenges" inverseEntity="User"/>
+        <relationship name="lastDaily" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Island" inverseName="lastDailyChallenge" inverseEntity="Island"/>
         <relationship name="reward" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Reward" inverseName="rewardToChallenge" inverseEntity="Reward"/>
     </entity>
     <entity name="Island" representedClassName="Island" syncable="YES" codeGenerationType="class">
@@ -18,6 +20,7 @@
         <relationship name="islandToChallenge" toMany="YES" deletionRule="Nullify" destinationEntity="Challenge" inverseName="challengeToIsland" inverseEntity="Challenge"/>
         <relationship name="islandToReward" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Reward" inverseName="rewardToIsland" inverseEntity="Reward"/>
         <relationship name="islandToUser" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="userToIsland" inverseEntity="User"/>
+        <relationship name="lastDailyChallenge" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Challenge" inverseName="lastDaily" inverseEntity="Challenge"/>
     </entity>
     <entity name="Reward" representedClassName="Reward" syncable="YES" codeGenerationType="class">
         <attribute name="id" optional="YES" attributeType="String"/>
@@ -33,8 +36,8 @@
         <relationship name="userToIsland" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Island" inverseName="islandToUser" inverseEntity="Island"/>
     </entity>
     <elements>
-        <element name="Challenge" positionX="176.03515625" positionY="-403.1953125" width="128" height="164"/>
-        <element name="Island" positionX="184.1875" positionY="-191.41796875" width="128" height="133"/>
+        <element name="Challenge" positionX="176.03515625" positionY="-403.1953125" width="128" height="194"/>
+        <element name="Island" positionX="184.1875" positionY="-191.41796875" width="128" height="134"/>
         <element name="Reward" positionX="475.3359375" positionY="-174.11328125" width="128" height="89"/>
         <element name="User" positionX="-122.3046875" positionY="-177.93359375" width="128" height="104"/>
     </elements>

@@ -91,6 +91,19 @@ struct ChallengeManager {
         return nil
     }
     
+    public func getDateAsDaily(forChallenge withID: String) -> Date? {
+        let dateAsDaily: Date?
+        
+        if let challenge = getChallenge(withID: withID) {
+            dateAsDaily = challenge.dateAsDaily
+        } else {
+            dateAsDaily = nil
+            print("The \(withID) challenge was not set as daily")
+        }
+        
+        return dateAsDaily
+    }
+    
     //publicFunc
     // MARK: Update
     public func updateSummary(withID: String, to newSummary: String) -> Bool {
@@ -119,6 +132,12 @@ struct ChallengeManager {
         challenge.time = newDate
         
         return self.saveContext()
+    }
+    
+    public func setDateAsDaily(withID: String, to newDAte: Date) {
+        guard let challenge = getChallenge(withID: withID) else { fatalError("Coud not find \(withID) Challenge") }
+        challenge.dateAsDaily = newDAte
+        _ = self.saveContext()
     }
     
     public func setIsland(toChallenge withID: String, island: Island) -> Bool {

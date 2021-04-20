@@ -32,6 +32,7 @@ extension Notification.Name {
     static let doneChallenge = Notification.Name("doneChallenge")
     static let islandsChange = Notification.Name("islandsChange")
     static let callHome = Notification.Name("callHome")
+    static let delayedMissionToIslands = Notification.Name("rewardsDelayedMission")
 }
 
 class UserDefaultsKeys {
@@ -80,4 +81,22 @@ class UserDefaultsKeys {
         return "dateWasAccepted"
     }
     
+}
+
+func getRandomNumber(maximum: Int) -> Int {
+    let randomInt = Int.random(in: 0..<maximum)
+    return randomInt
+}
+
+func isSameDay(firstDate: Date, secondDate: Date) -> Bool {
+    let calendar = Calendar.current
+    let firstDateMidnight = calendar.startOfDay(for: firstDate)
+    let secondDateMidnight = calendar.startOfDay(for: secondDate)
+    let diff = calendar.dateComponents([.day], from: firstDateMidnight, to: secondDateMidnight)
+    
+    if diff.day == 0 {
+        return true
+    }
+
+    return false
 }

@@ -71,8 +71,7 @@ struct Onboarding2: View {
                 } else {
                     NavigationLink(
                         destination: Onboarding3().onAppear(perform: {
-                            self.setUser()
-                            print(UserManager.shared.getUserName()!)
+                            self.setUser() 
                         }),
                         label: {
                             Text("continuar")
