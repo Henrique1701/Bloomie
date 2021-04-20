@@ -43,4 +43,12 @@ class JourneyPopUpViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
 
+    @IBAction func touchedShareButton(_ sender: Any) {
+        StructsForShare.shared.setTextForImage(text: self.summary!)
+        let image = StructsForShare.shared.getImageForShare()
+        let custom = CustomActivity(title: "Stories")
+        let activity = UIActivityViewController(activityItems: [image], applicationActivities: [custom])
+        
+        present(activity, animated: true, completion: nil)
+    }
 }

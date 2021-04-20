@@ -37,6 +37,14 @@ class ChallengePopUpViewController: UIViewController {
         haptics.notificationOccurred(.success)
     }
     
+    @IBAction func tappedShareButton(_ sender: Any) {
+        StructsForShare.shared.setTextForImage(text: self.summary)
+        let image = StructsForShare.shared.getImageForShare()
+        let custom = CustomActivity(title: "Stories")
+        let activity = UIActivityViewController(activityItems: [image], applicationActivities: [custom])
+        present(activity, animated: true, completion: nil)
+    }
+    
     func configureIslandName() {
         let islandsNamesPT = ["Atenção Plena", "Saúde", "Pessoas Queridas", "Lazer"]
         let islandsNames = ["Mindfulness", "Health", "Loveds", "Leisure"]
