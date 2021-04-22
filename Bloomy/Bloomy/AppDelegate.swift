@@ -71,8 +71,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
           switch settings.authorizationStatus {
           case .authorized, .provisional:
             print("authorized")
-            self.removeRememberToUserNotification()
-            self.rememberUserToUseNotification()
+            if (userDefaults.bool(forKey: UserDefaultsKeys.rememberNotificationIsOn)) {
+                self.removeRememberToUserNotification()
+                self.rememberUserToUseNotification()
+            }
           case .denied:
             print("denied")
           case .notDetermined:
@@ -88,6 +90,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func removeRememberToUserNotification() {
         //Se já tem notificaçõe liberado
+        
+        
         let uuidString = userDefaults.string(forKey: UserDefaultsKeys.rememberNotificationUUID) ?? ""
         let notificationCenter = UNUserNotificationCenter.current()
         notificationCenter.removePendingNotificationRequests(withIdentifiers: [uuidString])
@@ -105,7 +109,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var dateComponents = DateComponents()
         dateComponents.day = 2
         let twoDaysFromNow = Calendar.current.date(byAdding: dateComponents, to: currentDate)
-        dateComponents = Calendar.current.dateComponents([.day, .hour], from: twoDaysFromNow!)
+        dateComponents = Calendar.current.dateComponents([.day, .month, .hour, .minute], from: twoDaysFromNow!)
+        print(twoDaysFromNow)
+        print(dateComponents)
         
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
         

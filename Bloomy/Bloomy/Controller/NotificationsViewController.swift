@@ -106,7 +106,7 @@ class NotificationsViewController: UIViewController {
     
     @IBAction func rememberSwitch(_ sender: UISwitch) {
         if rememberChallenge.isOn {
-            rememberFunc()
+            userDefaults.set(true, forKey: UserDefaultsKeys.rememberNotificationIsOn)
         }
     }
     

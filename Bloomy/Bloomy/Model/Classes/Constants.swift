@@ -85,6 +85,10 @@ class UserDefaultsKeys {
         return "rememberNotificationUUID"
     }
     
+    class var rememberNotificationIsOn: String {
+        return "rememberNotificationIsOn"
+    }
+    
 }
 
 func getRandomNumber(maximum: Int) -> Int {
