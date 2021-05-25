@@ -47,17 +47,10 @@ class HomeViewController: UIViewController {
         quantityIslands = userDefaults.integer(forKey: UserDefaultsKeys.quantityIslands)
         setUpIslandsDisplay(quantityIslands: self.quantityIslands)
         
-        //Escolher os challenges depois do onboarding
-        if (userManager.getLastSeen() == nil) {
-            setDailyChallenges()
-        }
         //Observa se já carregou os challenges para aquele dia
         if (!isSameDay(userDate: userManager.getLastSeen() ?? Date(), actualDate: Date())) {
             self.daysOfUserActivation()
-            setDailyChallenges()
         }
-        //Atualiza o último visto do usuário para data atual do sistema
-        _ = userManager.updateLastSeen(to: Date())
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -82,77 +75,7 @@ class HomeViewController: UIViewController {
         // Para a animação das nuvens
         self.stopAnimation = true
     }
-    
-    func isSameDay(userDate: Date, actualDate: Date) -> Bool {
-        let calendar = Calendar.current
-        let userDateMidnight = calendar.startOfDay(for: userDate)
-        let actualDateMidnight = calendar.startOfDay(for: actualDate)
-        let diff = calendar.dateComponents([.day], from: userDateMidnight, to: actualDateMidnight)
-        
-        if diff.day == 0 {
-            return true
-        }
-    
-        return false
-    }
-    
-    func randomNumber(maximum: Int) -> Int {
-        let randomInt = Int.random(in: 0..<maximum)
-        return randomInt
-    }
-    
-    /// Muda o status de done para os desafios que foram aceitos mas não foram concluídos
-    /// - Parameter withName: String com o nome da ilha
-    /// - Returns: Bool que indica se alguma ilha mudou o status
-    func refreshDoneStatus(forIsland withName: String) -> Bool {
-        var thereIsUndoneChallenge = false
-        guard let islandChallenges = IslandManager.shared.getChallenges(fromIsland: withName) else { return false}
-        for challenge in islandChallenges where challenge.accepted && !challenge.done {
-            thereIsUndoneChallenge = true
-            challenge.accepted = false
-        }
-        return thereIsUndoneChallenge
-    }
-    
-    func setDailyChallenges() {
-        //Coleta as ilhas do usuário
-        guard let userIslands = userManager.getIslands() else {
-            fatalError("Usuário não tem ilhas associadas")
-        }
-        
-        //Seleciona algum challenge que ainda não foi aceito
-        for island in userIslands {
-            guard let islandChallenges = islandsManager.getChallenges(fromIsland: island.name ?? "") else { return }
-            if let availableChallenge = searchForAvailableChallenge(inChallenges: islandChallenges) {
-                _ = islandsManager.updateDailyChallenge(forIsland: island.name ?? "", toChallenge: availableChallenge)
-            } else if (refreshDoneStatus(forIsland: island.name ?? "")) {
-                setDailyChallenges()
-            } else {
-                let alert = UIAlertController(title: "Acabou missão para ilha \(String(island.name!))", message: "Parabéns! Você concluiu todas missões da ilha \(String(island.name!)). Como você está se sentindo?\n Em breve, teremos mais missões nessa ilha (:", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
-                NSLog("The \"OK\" alert occured.")
-                }))
-                self.present(alert, animated: true, completion: nil)
-            }
-        }
-    }
-    
-    func searchForAvailableChallenge(inChallenges challenges: [Challenge]) -> Challenge? {
-        var randomIndex = randomNumber(maximum: challenges.count)
-        var challengesCount = challenges.count //Auxiliar para garantir saída do while
-        
-        while(challenges[randomIndex].accepted && challengesCount > 0) {
-            challengesCount -= 1
-            randomIndex = (randomIndex + 1) % challenges.count
-        }
-        
-        if (!challenges[randomIndex].accepted) {
-            return challenges[randomIndex]
-        } else {
-            return nil
-        }
-    }
-    
+
     private func daysOfUserActivation() {
         var daysOfUserActivation = userDefaults.integer(forKey: UserDefaultsKeys.userDaysOfActivation)
         daysOfUserActivation += 1
