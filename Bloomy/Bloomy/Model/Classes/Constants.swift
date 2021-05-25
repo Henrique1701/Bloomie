@@ -81,3 +81,21 @@ class UserDefaultsKeys {
     }
     
 }
+
+func getRandomNumber(maximum: Int) -> Int {
+    let randomInt = Int.random(in: 0..<maximum)
+    return randomInt
+}
+
+func isSameDay(userDate: Date, actualDate: Date) -> Bool {
+    let calendar = Calendar.current
+    let userDateMidnight = calendar.startOfDay(for: userDate)
+    let actualDateMidnight = calendar.startOfDay(for: actualDate)
+    let diff = calendar.dateComponents([.day], from: userDateMidnight, to: actualDateMidnight)
+    
+    if diff.day == 0 {
+        return true
+    }
+
+    return false
+}
