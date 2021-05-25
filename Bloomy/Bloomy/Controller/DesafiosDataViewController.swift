@@ -14,6 +14,7 @@ class DesafiosDataViewController: UIViewController {
     var summaryText: String!
     var index: Int?
     var lastScreen: Bool?
+    var islandsManager = IslandManager.shared
     
     @IBOutlet weak var card: UIImageView!
     @IBOutlet weak var summaryLabel: UILabel!
@@ -29,6 +30,7 @@ class DesafiosDataViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destination = segue.destination as? IslandsViewController
         destination?.senderWasDesafios = true
+        destination?.dailyChallenge = self.islandsManager.getDailyChallenge(fromIsland: islandName!)
         
         if islandName == IslandsNames.health.rawValue {
             destination?.island = IslandManager.shared.getIsland(withName: IslandsNames.health.rawValue)!
