@@ -27,11 +27,39 @@ class IslandsViewController: UIViewController {
     var originalFrameFromIsland = CGRect()
     var sceneName = ""
     var senderWasDesafios = false
+    var dailyChallenge: Challenge?
+    let dailyMissionsManager = DailyMissionsManager.shared
+    
+    fileprivate func showAlert(_ lastChallenge: Challenge) {
+        let alert = UIAlertController(title: "Você tem missão em aberto nessa ilha", message: "Missão: \(String(describing: lastChallenge.summary))", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+            NSLog("The \"OK\" alert occured.")
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    fileprivate func setNewDailyChallenge() {
+        
+        if let dateAsDaily =  self.island.dailyChallenge?.dateAsDaily {
+            if (!isSameDay(userDate: dateAsDaily, actualDate: Date())) {
+                if let lastChallenge = self.dailyMissionsManager.updateDailyMission(forIsland: island.name!) {
+                    if (lastChallenge.accepted && !lastChallenge.done) {
+                        self.showAlert(lastChallenge)
+                    }
+                }
+            }
+        } else {
+            _ = self.dailyMissionsManager.updateDailyMission(forIsland: island.name!)
+        }
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         scene = SKScene(fileNamed: sceneName)!
+        
+        self.setNewDailyChallenge()
         
         self.setupStyle()
         self.setupSKScene()
@@ -54,9 +82,11 @@ class IslandsViewController: UIViewController {
             self.doneChallenge()
             self.chooseButtonToShow()
             self.showRewardPopUp()
+            self.senderWasDesafios = false
+            self.dailyChallenge = nil
             self.loadViewIfNeeded()
         }
-
+        
         animationObserver = NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "animationObserver"), object: nil, queue: OperationQueue.main) { _ in
             self.rewardAnimation()
         }
@@ -81,6 +111,9 @@ class IslandsViewController: UIViewController {
         if animationObserver != nil {
             NotificationCenter.default.removeObserver(animationObserver!)
         }
+        
+        self.senderWasDesafios = false
+        self.dailyChallenge = nil
     }
     
     override var shouldAutorotate: Bool {
@@ -106,7 +139,7 @@ class IslandsViewController: UIViewController {
             popup!.islandName = island.name!
         } else if (segue.identifier == "toDonePopUpViewControllerSegue") {
             let popup = segue.destination as? DonePopUpViewController
-            popup!.summary = island.dailyChallenge?.summary ?? ""
+            popup!.summary = self.dailyChallenge?.summary ?? self.island.dailyChallenge?.summary ?? ""
             popup!.islandName = island.name!
         }
     }
@@ -158,21 +191,8 @@ class IslandsViewController: UIViewController {
     }
     
     func chooseButtonToShow() {
-        if (!(self.island.dailyChallenge?.accepted)!) {
-            //se o desafio não foi aceito
-            self.doneButton.isHidden = true
-            self.challengeDayButton.isHidden = false
-            self.challengeDayButton.isEnabled = true
-            self.challengeDayButton.alpha = 1
-            self.acceptedFeedbackMessage.isHidden = true
-            self.doneFeedbackMessage.isHidden = true
-        } else if ((self.island.dailyChallenge?.accepted)! && !(self.island.dailyChallenge?.done)!) {
-            //se o desafio foi aceito mas n foi concluído
-            self.challengeDayButton.isHidden = true
-            self.doneButton.isHidden = false
-            self.acceptedFeedbackMessage.isHidden = false
-            self.doneFeedbackMessage.isHidden = true
-        } else {
+        let dailyChallenge = self.island.dailyChallenge
+        if ((dailyChallenge?.accepted)! && (dailyChallenge?.done)!) {
             //desafio aceito e concluído
             self.challengeDayButton.isHidden = false
             self.challengeDayButton.alpha = 0.5
@@ -180,7 +200,21 @@ class IslandsViewController: UIViewController {
             self.doneButton.isHidden = true
             self.acceptedFeedbackMessage.isHidden = true
             self.doneFeedbackMessage.isHidden = false
-        }
+        } else if ((dailyChallenge?.accepted)! && !(dailyChallenge?.done)!) {
+            //se o desafio foi aceito mas n foi concluído
+            self.challengeDayButton.isHidden = true
+            self.doneButton.isHidden = false
+            self.acceptedFeedbackMessage.isHidden = false
+            self.doneFeedbackMessage.isHidden = true
+        } else if (!(self.island.dailyChallenge?.accepted)!) {
+            //se o desafio não foi aceito
+            self.doneButton.isHidden = true
+            self.challengeDayButton.isHidden = false
+            self.challengeDayButton.isEnabled = true
+            self.challengeDayButton.alpha = 1
+            self.acceptedFeedbackMessage.isHidden = true
+            self.doneFeedbackMessage.isHidden = true
+        } 
     }
     
     func showRewardPopUp() {
@@ -201,13 +235,8 @@ class IslandsViewController: UIViewController {
         }
     }
     
-    func randomNumber(maximum: Int) -> Int {
-        let randomInt = Int.random(in: 0..<maximum)
-        return randomInt
-    }
-    
     func getAvailableReward(inRewards rewards: [Reward]) -> Reward? {
-        var randomIndex = randomNumber(maximum: rewards.count)
+        var randomIndex = getRandomNumber(maximum: rewards.count)
         var rewardsCount = rewards.count //Auxiliar para garantir saída do while
         
         while(rewards[randomIndex].isShown && rewardsCount > 0) {
@@ -289,7 +318,7 @@ class IslandsViewController: UIViewController {
         
         if (userDaysActivity == 3 && !didReviewPrompted) {
             userDefaults.setValue(true, forKey: UserDefaultsKeys.reviewPrompted)
-    
+            
             DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
                 self.presentFirstAlert()
             }
